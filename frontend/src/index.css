@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Apple-inspired ultra-minimal palette */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+
+    --primary: 0 0% 7%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 211 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 93%;
+    --input: 0 0% 93%;
+    --ring: 0 0% 7%;
+
+    --radius: 1rem;
+
+    --success: 142 70% 45%;
+    --warning: 38 92% 50%;
+    
+    /* Apple-style soft shadows */
+    --shadow-xs: 0 1px 2px hsl(0 0% 0% / 0.02);
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.03);
+    --shadow-md: 0 4px 20px hsl(0 0% 0% / 0.04);
+    --shadow-lg: 0 8px 40px hsl(0 0% 0% / 0.05);
+    --shadow-xl: 0 20px 60px hsl(0 0% 0% / 0.08);
+    
+    /* Apple-style ambient gradients */
+    --gradient-ambient: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(0 0% 96%), transparent);
+    --gradient-soft: linear-gradient(135deg, hsl(0 0% 98%), hsl(0 0% 100%));
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 0 0% 7%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 97%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 93%;
+    --sidebar-ring: 0 0% 7%;
+  }
+
+  .dark {
+    /* Apple-inspired dark mode */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 7%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 211 100% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 95%;
+    
+    /* Dark mode shadows */
+    --shadow-xs: 0 1px 2px hsl(0 0% 0% / 0.2);
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 20px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 8px 40px hsl(0 0% 0% / 0.5);
+    --shadow-xl: 0 20px 60px hsl(0 0% 0% / 0.6);
+    
+    --gradient-ambient: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(0 0% 15%), transparent);
+    --gradient-soft: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 10%));
+    
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 0% 95%;
+    --sidebar-primary-foreground: 0 0% 7%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 0 0% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  /* Apple-style glass morphism */
+  .glass {
+    @apply bg-card/70 backdrop-blur-2xl border border-border/30;
+  }
+  
+  .glass-strong {
+    @apply bg-card/85 backdrop-blur-3xl border border-border/40;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Premium animations */
+  .animate-breathe {
+    animation: breathe 12s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .animate-pulse-subtle {
+    animation: pulse-subtle 3s ease-in-out infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+  
+  .animate-rotate-subtle {
+    animation: rotate-subtle 8s ease-in-out infinite;
+  }
+  
+  .animate-gradient-shift {
+    animation: gradient-shift 10s ease infinite;
+    background-size: 200% 200%;
+  }
+
+  /* Apple-style hover effects */
+  .hover-lift {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-1.5;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+  
+  /* Apple-style focus states */
+  .apple-focus {
+    @apply focus:outline-none focus:ring-2 focus:ring-foreground/10 focus:ring-offset-4 focus:ring-offset-background;
+  }
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.95;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate-subtle {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/30;
+}
+
+/* Hide scrollbar utility */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

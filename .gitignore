@@ -1,0 +1,16 @@
+# Environment files
+.env
+backend/.env
+frontend/.env
+
+# Python virtual environments
+backend/venv/
+
+# Node modules
+frontend/node_modules/
+
+# Build artifacts
+dist/
+frontend/dist/
+
+
