@@ -1,6 +1,10 @@
 # Python bytecode / caches
 __pycache__/
-./app/__pycache__/        
+backend/app/__pycache__/
+app/__pycache__/      
+./app/__pycache__/      
+./app/public/uploads/catalogs/
+./app/public/uploads/catalogs_images/
 *.py[cod]
 *.pyo
 *.pyd
