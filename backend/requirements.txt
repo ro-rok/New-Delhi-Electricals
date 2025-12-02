@@ -11,3 +11,11 @@ pyotp
 httpx
 cloudinary
 
+# PDF parsing & OCR
+pdfplumber
+PyMuPDF
+pytesseract
+Pillow
+camelot-py[cv]
+pandas
+

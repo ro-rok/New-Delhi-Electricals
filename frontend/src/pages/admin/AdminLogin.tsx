@@ -7,6 +7,9 @@ import { Eye, EyeOff, Lock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 
+const API_BASE =
+  import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000';
+
 const AdminLogin = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
@@ -18,18 +21,40 @@ const AdminLogin = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Mock auth - in production, use proper auth
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    if (username === 'admin' && password === 'admin123') {
+    try {
+      const body = new URLSearchParams();
+      body.append('username', username);
+      body.append('password', password);
+      body.append('grant_type', '');
+      body.append('scope', '');
+      body.append('client_id', '');
+      body.append('client_secret', '');
+
+      const res = await fetch(`${API_BASE}/auth/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body,
+      });
+
+      if (!res.ok) {
+        toast.error('Invalid credentials');
+        setIsLoading(false);
+        return;
+      }
+
+      const data = await res.json();
       localStorage.setItem('admin_auth', 'true');
+      localStorage.setItem('admin_token', data.access_token);
       toast.success('Welcome back!');
       navigate('/admin');
-    } else {
-      toast.error('Invalid credentials');
+    } catch (error) {
+      console.error(error);
+      toast.error('Unable to sign in. Please try again.');
+    } finally {
+      setIsLoading(false);
     }
-    
-    setIsLoading(false);
   };
 
   return (
@@ -87,10 +112,6 @@ const AdminLogin = () => {
             {isLoading ? 'Signing in...' : 'Sign In'}
           </Button>
         </form>
-
-        <p className="text-center text-xs text-muted-foreground mt-6">
-          Demo: admin / admin123
-        </p>
       </motion.div>
     </div>
   );

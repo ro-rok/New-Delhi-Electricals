@@ -23,7 +23,7 @@ import {
 } from '@/components/ui/dialog';
 import { toast } from 'sonner';
 import { motion, AnimatePresence } from 'framer-motion';
-import { mockParseCatalog } from '@/api/catalog';
+import { uploadCatalogPdf, getCatalogPreview, CatalogPreviewLog, CatalogPreviewResponse } from '@/api/catalog';
 
 interface ParsedProduct {
   tempId: string;
@@ -45,6 +45,8 @@ const AdminImport = () => {
   const [parsedProducts, setParsedProducts] = useState<ParsedProduct[]>([]);
   const [showPreview, setShowPreview] = useState(false);
   const [importId, setImportId] = useState<string | null>(null);
+  const [previewImport, setPreviewImport] = useState<CatalogPreviewResponse['import'] | null>(null);
+  const [previewLogs, setPreviewLogs] = useState<CatalogPreviewLog[]>([]);
 
   const handleDragOver = useCallback((e: any) => {
     e.preventDefault();
@@ -72,37 +74,38 @@ const AdminImport = () => {
     setIsParsing(true);
     setParseProgress(0);
 
-    // Simulate parsing progress
-    const interval = setInterval(() => {
-      setParseProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          return 100;
-        }
-        return prev + 10;
-      });
-    }, 200);
-
     try {
-      // TODO: replace with real upload+parse flow
-      const data = await mockParseCatalog();
-      setImportId(data.importId);
+      // In v1 we assume a valid admin JWT token is stored in localStorage
+      const token = localStorage.getItem('admin_token');
+      if (!token) {
+        throw new Error('Admin not authenticated');
+      }
+
+      const uploadRes = await uploadCatalogPdf(file, token);
+      setImportId(uploadRes.catalog_import_id);
+
+      // Poll once immediately for preview data (could be extended to polling loop)
+      const preview = await getCatalogPreview(uploadRes.catalog_import_id, token);
+      setPreviewImport(preview.import);
+      setPreviewLogs(preview.logs ?? []);
       setParsedProducts(
-        data.rows.map((row) => ({
-          tempId: row.tempId,
-          sku: row.sku,
-          name: row.name,
+        (preview.rows ?? []).map((row: any) => ({
+          tempId: row.row_id ?? row._id ?? String(row.id ?? ''),
+          sku: row.sku ?? '',
+          name: row.name ?? '',
           series: row.series ?? '',
-          listPrice: row.listPrice,
-          page: row.page,
-          confidence: row.confidence,
-          selected: row.confidence >= 0.6,
-          imageUrl: row.imageUrl,
+          listPrice: Number(row.list_price ?? 0),
+          page: Number(row.page ?? row.page_no ?? 0),
+          confidence: Number(row.confidence ?? row.confidence_score ?? 0),
+          selected: Number(row.confidence ?? row.confidence_score ?? 0) >= 0.6,
+          imageUrl: (row.chosen_image_urls && row.chosen_image_urls[0]) || (row.image_candidates && row.image_candidates[0]?.url) || '',
         })),
       );
+
+      setParseProgress(100);
       setIsParsing(false);
       setShowPreview(true);
-      toast.success(`Parsed ${data.rows.length} products from ${data.fileName}`);
+      toast.success(`Parsed ${preview.rows.length} products from ${preview.import.file_name}`);
     } catch (err) {
       console.error(err);
       setIsParsing(false);
@@ -227,29 +230,73 @@ const AdminImport = () => {
       <Dialog open={showPreview} onOpenChange={setShowPreview}>
         <DialogContent className="max-w-5xl max-h-[85vh] overflow-hidden flex flex-col">
           <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              <FileText className="h-5 w-5" />
-              Imported Products Preview
+            <DialogTitle className="flex items-center gap-2 justify-between">
+              <span className="flex items-center gap-2">
+                <FileText className="h-5 w-5" />
+                Imported Products Preview
+              </span>
+              {previewImport && (
+                <span className="text-xs text-muted-foreground">
+                  {previewImport.file_name} • Status: {previewImport.status}
+                </span>
+              )}
             </DialogTitle>
           </DialogHeader>
 
-          <div className="flex items-center justify-between py-4 border-b border-border">
-            <div className="flex items-center gap-4">
-              <Checkbox
-                checked={parsedProducts.length > 0 && parsedProducts.every(p => p.selected)}
-                onCheckedChange={(checked) => toggleAll(!!checked)}
-                aria-label="Select all parsed products"
-              />
-              <span className="text-sm text-muted-foreground">
-                {parsedProducts.filter(p => p.selected).length} of {parsedProducts.length} selected
-              </span>
+          <div className="flex flex-col gap-3 py-4 border-b border-border">
+            <div className="flex items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <Checkbox
+                  checked={parsedProducts.length > 0 && parsedProducts.every(p => p.selected)}
+                  onCheckedChange={(checked) => toggleAll(!!checked)}
+                  aria-label="Select all parsed products"
+                />
+                <span className="text-sm text-muted-foreground">
+                  {parsedProducts.filter(p => p.selected).length} of {parsedProducts.length} selected
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Badge variant="outline" className="gap-1">
+                  <AlertCircle className="h-3 w-3 text-warning" />
+                  {parsedProducts.filter(p => p.confidence < 0.7).length} need review
+                </Badge>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <Badge variant="outline" className="gap-1">
-                <AlertCircle className="h-3 w-3 text-warning" />
-                {parsedProducts.filter(p => p.confidence < 0.7).length} need review
-              </Badge>
-            </div>
+
+            {previewImport && (
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 text-xs text-muted-foreground bg-muted/40 border border-border/60 rounded-lg px-3 py-2">
+                <div className="flex flex-wrap gap-3">
+                  <span>
+                    Parsed rows:{' '}
+                    <span className="font-medium">
+                      {(previewImport.parsing_summary as any)?.total_rows ?? parsedProducts.length}
+                    </span>
+                  </span>
+                  <span>
+                    Pages:{' '}
+                    <span className="font-medium">
+                      {(previewImport.parsing_summary as any)?.pages ?? '-'}
+                    </span>
+                  </span>
+                  {previewImport.parsing_summary && (previewImport.parsing_summary as any).error && (
+                    <span className="text-destructive">
+                      Error: {(previewImport.parsing_summary as any).error as string}
+                    </span>
+                  )}
+                </div>
+                {previewLogs.length > 0 && (
+                  <div className="flex-1 md:text-right">
+                    <span className="font-medium">Recent logs:</span>{' '}
+                    <span>
+                      {previewLogs
+                        .slice(0, 3)
+                        .map((log) => `${new Date(log.created_at).toLocaleTimeString()} ${log.action}`)
+                        .join(' • ')}
+                    </span>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           <div className="flex-1 overflow-auto">

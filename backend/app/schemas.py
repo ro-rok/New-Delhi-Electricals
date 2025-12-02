@@ -29,6 +29,7 @@ class ProductBase(BaseModel):
     datasheet_url: Optional[str] = None
     specs: Dict[str, Any] = {}
     description: Optional[str] = None
+    # Free-form source metadata so we can store file/page/confidence/import ids
     catalog_source: Optional[Dict[str, Any]] = None
 
 
@@ -60,7 +61,19 @@ class ProductListResponse(BaseModel):
     page_size: int = Field(..., alias="pageSize")
 
 
+class ImageCandidate(BaseModel):
+    url: str
+    source: str = Field(
+        ...,
+        description="pdf_page | pdf_inline | web_stub | manual | upload",
+    )
+    score: float = 0.0
+
+
 class CatalogImportRow(BaseModel):
+    id: Optional[str] = Field(default=None, alias="_id")
+    import_id: str
+    row_id: str
     sku: str
     name: str
     brand: Optional[str] = None
@@ -68,21 +81,31 @@ class CatalogImportRow(BaseModel):
     series: Optional[str] = None
     list_price: int
     currency: str = "INR"
-    page: int
-    confidence: float
-    image_url: Optional[str] = None
+    page_no: int = Field(..., alias="page")
+    confidence_score: float = Field(..., alias="confidence")
     raw_text: Optional[str] = None
+    specs: Dict[str, Any] = {}
+    image_candidates: List[ImageCandidate] = []
+    chosen_image_urls: List[str] = []
+    variant_group_key: Optional[str] = None
+    last_decision: Optional[str] = Field(
+        default=None, description="created | updated | ignored | failed"
+    )
 
 
 class CatalogImport(BaseModel):
     id: str | None = Field(default=None, alias="_id")
     file_name: str
+    cloudinary_pdf_url: Optional[str] = None
+    local_pdf_path: Optional[str] = None
     brand: Optional[str] = None
-    status: str = "pending"
-    rows: List[CatalogImportRow] = []
-    meta: Dict[str, Any] = {}
+    status: str = Field(
+        default="pending", description="pending | processing | done | failed"
+    )
     created_at: datetime
-    created_by: str
+    updated_at: Optional[datetime] = None
+    admin_id: str
+    parsing_summary: Dict[str, Any] = {}
 
 
 class Inquiry(BaseModel):

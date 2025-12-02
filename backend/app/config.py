@@ -15,8 +15,9 @@ class Settings(BaseSettings):
     JWT_ALGORITHM: str = "HS256"
     JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 8
 
-    ADMIN_EMAIL: str
-    ADMIN_PASSWORD_HASH: str | None = None  # optional pre-seeded hash
+    # Admin credentials (stored in .env as plain text for this project)
+    ADMIN_USERNAME: str
+    ADMIN_PASSWORD: str
 
     CLOUDINARY_CLOUD_NAME: str | None = None
     CLOUDINARY_API_KEY: str | None = None
