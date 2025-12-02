@@ -9,5 +9,5 @@ python-jose[cryptography]
 passlib[bcrypt]
 pyotp
 httpx
-
+cloudinary
 
