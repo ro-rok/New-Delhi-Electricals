@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Plus, Search, Filter, MoreHorizontal, Edit, Trash2, 
+import {
+  Plus, Search, Filter, MoreHorizontal, Edit, Trash2,
   Eye, Copy, ChevronLeft, ChevronRight
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -35,7 +35,7 @@ const AdminProducts = () => {
 
   const filteredProducts = useMemo(() => {
     return products.filter(product => {
-      const matchesSearch = 
+      const matchesSearch =
         product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         product.sku.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory = categoryFilter === 'all' || product.category === categoryFilter;
@@ -62,9 +62,11 @@ const AdminProducts = () => {
           <h1 className="text-2xl font-semibold mb-2">Products</h1>
           <p className="text-muted-foreground">{products.length} total products</p>
         </div>
-        <Button className="gap-2">
-          <Plus className="h-4 w-4" />
-          Add Product
+        <Button className="gap-2" asChild>
+          <Link to="/admin/products/add">
+            <Plus className="h-4 w-4" />
+            Add Product
+          </Link>
         </Button>
       </div>
 
@@ -135,8 +137,8 @@ const AdminProducts = () => {
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-lg bg-secondary overflow-hidden">
                         {product.images[0] && (
-                          <img 
-                            src={product.images[0]} 
+                          <img
+                            src={product.images[0]}
                             alt={product.name}
                             className="w-full h-full object-cover"
                           />
@@ -149,7 +151,7 @@ const AdminProducts = () => {
                     </div>
                   </td>
                   <td className="p-4">
-                    <button 
+                    <button
                       onClick={() => handleCopySKU(product.sku)}
                       className="flex items-center gap-1 text-sm font-mono hover:text-primary transition-colors"
                     >
