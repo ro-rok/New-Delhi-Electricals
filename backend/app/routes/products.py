@@ -3,9 +3,9 @@ from typing import Any, List
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from motor.motor_asyncio import AsyncIOMotorDatabase
 
-from .db import get_db_dep
-from .schemas import ProductCreate, ProductUpdate, ProductInDB, ProductListResponse
-from .security import get_current_admin
+from ..db import get_db_dep
+from ..schemas import ProductCreate, ProductUpdate, ProductInDB, ProductListResponse
+from ..security import get_current_admin
 
 
 router = APIRouter(prefix="/products", tags=["products"])
@@ -81,6 +81,4 @@ async def delete_product(
 ) -> None:
     await db.products.delete_one({"_id": product_id})
     return None
-
-
 

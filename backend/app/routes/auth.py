@@ -3,9 +3,9 @@ from datetime import timedelta
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 
-from .config import settings
-from .schemas import Token
-from .security import create_access_token
+from ..config import settings
+from ..schemas import Token
+from ..security import create_access_token
 
 
 router = APIRouter(prefix="/auth", tags=["auth"])
@@ -40,5 +40,4 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()) -> Token:
 async def me() -> dict:
     # Keep response minimal; subject is the username we used when creating the token
     return {"username": settings.ADMIN_USERNAME}
-
 

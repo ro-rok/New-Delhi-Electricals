@@ -130,4 +130,3 @@ class AdminLog(BaseModel):
     admin_email: str
     created_at: datetime
 
-

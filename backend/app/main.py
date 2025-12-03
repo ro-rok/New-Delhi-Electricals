@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from .config import settings
 from .db import get_db_dep
-from . import routes_auth, routes_products, routes_catalog_import
+from .routes import auth, catalog_import, products
 
 
 app = FastAPI(title=settings.APP_NAME)
@@ -19,10 +19,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(routes_auth.router)
-app.include_router(routes_products.router)
-app.include_router(routes_catalog_import.router)
-app.include_router(routes_catalog_import.cloudinary_router)
+app.include_router(auth.router)
+app.include_router(products.router)
+app.include_router(catalog_import.router)
+app.include_router(catalog_import.cloudinary_router)
 
 
 @app.get("/health", tags=["system"])
