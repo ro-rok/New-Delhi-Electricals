@@ -1,0 +1,188 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Switch Product",
+    "type": "object",
+    "required": [
+        "sku",
+        "name",
+        "product_family",
+        "category",
+        "subcategory",
+        "brand",
+        "specs",
+        "pricing",
+        "media",
+        "seo",
+        "status"
+    ],
+    "properties": {
+        "sku": {
+            "type": "string",
+            "description": "Unique product identifier"
+        },
+        "name": {
+            "type": "string",
+            "description": "Product name"
+        },
+        "product_family": {
+            "type": "string",
+            "description": "Product family (e.g., ENCONNECT)"
+        },
+        "category": {
+            "type": "string",
+            "const": "Switches"
+        },
+        "subcategory": {
+            "type": "string",
+            "description": "Product subcategory"
+        },
+        "brand": {
+            "type": "string",
+            "description": "Brand name"
+        },
+        "specs": {
+            "type": "object",
+            "properties": {
+                "ampere": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "description": "Current rating in Amperes"
+                },
+                "color": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "Product color"
+                },
+                "mw": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "description": "Module width"
+                },
+                "has_indicator": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "description": "Whether the switch has an indicator"
+                },
+                "type_detail": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "Specific type detail (e.g., 2 Channel, Power Load)"
+                }
+            },
+            "required": []
+        },
+        "variant": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "List of SKUs for product variants"
+        },
+        "pricing": {
+            "type": "object",
+            "required": [
+                "mrp",
+                "std_pack"
+            ],
+            "properties": {
+                "mrp": {
+                    "type": "number",
+                    "description": "Maximum Retail Price"
+                },
+                "discount": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "description": "Discount percentage or amount"
+                },
+                "selling_price": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "description": "Final selling price"
+                },
+                "std_pack": {
+                    "type": "string",
+                    "description": "Standard pack quantity"
+                }
+            }
+        },
+        "media": {
+            "type": "object",
+            "properties": {
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string"
+                            },
+                            "label": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "url",
+                            "label"
+                        ]
+                    }
+                },
+                "documents": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "seo": {
+            "type": "object",
+            "required": [
+                "slug",
+                "meta_description"
+            ],
+            "properties": {
+                "slug": {
+                    "type": "string",
+                    "description": "URL-friendly slug"
+                },
+                "keywords": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "meta_description": {
+                    "type": "string",
+                    "description": "SEO meta description"
+                }
+            }
+        },
+        "status": {
+            "type": "object",
+            "properties": {
+                "is_active": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "is_featured": {
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        }
+    }
+}

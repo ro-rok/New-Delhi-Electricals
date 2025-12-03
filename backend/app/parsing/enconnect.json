@@ -1,0 +1,1028 @@
+[
+    {
+        "sku": "CB94602SM02",
+        "name": "Wi-fi Switch 2 Channel - Mountain Grey",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Switch",
+        "specs": {
+            "ampere": null,
+            "color": "Mountain Grey",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "2 Channel"
+        },
+        "variant": [
+            "CB94602SB02",
+            "CB94602SL02"
+        ],
+        "pricing": {
+            "mrp": 7500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-switch-2-channel-mountain-grey",
+            "keywords": [
+                "Wi-fi Switch",
+                "2 Channel",
+                "Mountain Grey",
+                "Smart Switch"
+            ],
+            "meta_description": "Buy Wi-fi Switch 2 Channel Mountain Grey online at New Delhi Electricals. Smart home automation switch."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602SB02",
+        "name": "Wi-fi Switch 2 Channel - Sparkle Black",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Switch",
+        "specs": {
+            "ampere": null,
+            "color": "Sparkle Black",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "2 Channel"
+        },
+        "variant": [
+            "CB94602SM02",
+            "CB94602SL02"
+        ],
+        "pricing": {
+            "mrp": 7500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-switch-2-channel-sparkle-black",
+            "keywords": [
+                "Wi-fi Switch",
+                "2 Channel",
+                "Sparkle Black",
+                "Smart Switch"
+            ],
+            "meta_description": "Buy Wi-fi Switch 2 Channel Sparkle Black online at New Delhi Electricals. Smart home automation switch."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602SL02",
+        "name": "Wi-fi Switch 2 Channel - Black Glass",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Switch",
+        "specs": {
+            "ampere": null,
+            "color": "Black Glass",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "2 Channel"
+        },
+        "variant": [
+            "CB94602SM02",
+            "CB94602SB02"
+        ],
+        "pricing": {
+            "mrp": 7900,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-switch-2-channel-black-glass",
+            "keywords": [
+                "Wi-fi Switch",
+                "2 Channel",
+                "Black Glass",
+                "Smart Switch"
+            ],
+            "meta_description": "Buy Wi-fi Switch 2 Channel Black Glass online at New Delhi Electricals. Premium smart home automation switch."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602SM04",
+        "name": "Wi-fi Switch 4 Channel - Mountain Grey",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Switch",
+        "specs": {
+            "ampere": null,
+            "color": "Mountain Grey",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "4 Channel"
+        },
+        "variant": [
+            "CB94602SB04",
+            "CB94602SL04"
+        ],
+        "pricing": {
+            "mrp": 9500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-switch-4-channel-mountain-grey",
+            "keywords": [
+                "Wi-fi Switch",
+                "4 Channel",
+                "Mountain Grey",
+                "Smart Switch"
+            ],
+            "meta_description": "Buy Wi-fi Switch 4 Channel Mountain Grey online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602SB04",
+        "name": "Wi-fi Switch 4 Channel - Sparkle Black",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Switch",
+        "specs": {
+            "ampere": null,
+            "color": "Sparkle Black",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "4 Channel"
+        },
+        "variant": [
+            "CB94602SM04",
+            "CB94602SL04"
+        ],
+        "pricing": {
+            "mrp": 9500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-switch-4-channel-sparkle-black",
+            "keywords": [
+                "Wi-fi Switch",
+                "4 Channel",
+                "Sparkle Black",
+                "Smart Switch"
+            ],
+            "meta_description": "Buy Wi-fi Switch 4 Channel Sparkle Black online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602SL04",
+        "name": "Wi-fi Switch 4 Channel - Black Glass",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Switch",
+        "specs": {
+            "ampere": null,
+            "color": "Black Glass",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "4 Channel"
+        },
+        "variant": [
+            "CB94602SM04",
+            "CB94602SB04"
+        ],
+        "pricing": {
+            "mrp": 9900,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-switch-4-channel-black-glass",
+            "keywords": [
+                "Wi-fi Switch",
+                "4 Channel",
+                "Black Glass",
+                "Smart Switch"
+            ],
+            "meta_description": "Buy Wi-fi Switch 4 Channel Black Glass online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602SM20",
+        "name": "Wi-fi Switch 20A for Power Load - Mountain Grey",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Power Switch",
+        "specs": {
+            "ampere": 20,
+            "color": "Mountain Grey",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "Power Load"
+        },
+        "variant": [
+            "CB94602SB20",
+            "CB94602SL20"
+        ],
+        "pricing": {
+            "mrp": 9500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-switch-20a-for-power-load-mountain-grey",
+            "keywords": [
+                "Wi-fi Switch",
+                "20A",
+                "Power Load",
+                "Mountain Grey"
+            ],
+            "meta_description": "Buy Wi-fi Switch 20A for Power Load Mountain Grey online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602SB20",
+        "name": "Wi-fi Switch 20A for Power Load - Sparkle Black",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Power Switch",
+        "specs": {
+            "ampere": 20,
+            "color": "Sparkle Black",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "Power Load"
+        },
+        "variant": [
+            "CB94602SM20",
+            "CB94602SL20"
+        ],
+        "pricing": {
+            "mrp": 9500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-switch-20a-for-power-load-sparkle-black",
+            "keywords": [
+                "Wi-fi Switch",
+                "20A",
+                "Power Load",
+                "Sparkle Black"
+            ],
+            "meta_description": "Buy Wi-fi Switch 20A for Power Load Sparkle Black online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602SL20",
+        "name": "Wi-fi Switch 20A for Power Load - Black Glass",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Power Switch",
+        "specs": {
+            "ampere": 20,
+            "color": "Black Glass",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "Power Load"
+        },
+        "variant": [
+            "CB94602SM20",
+            "CB94602SB20"
+        ],
+        "pricing": {
+            "mrp": 9900,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-switch-20a-for-power-load-black-glass",
+            "keywords": [
+                "Wi-fi Switch",
+                "20A",
+                "Power Load",
+                "Black Glass"
+            ],
+            "meta_description": "Buy Wi-fi Switch 20A for Power Load Black Glass online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94702SM20",
+        "name": "Wi-fi Switch 20A with Energy Monitoring - Mountain Grey",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Power Switch",
+        "specs": {
+            "ampere": 20,
+            "color": "Mountain Grey",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "Energy Monitoring"
+        },
+        "variant": [
+            "CB94702SB20",
+            "CB94702SL20"
+        ],
+        "pricing": {
+            "mrp": 9700,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-switch-20a-with-energy-monitoring-mountain-grey",
+            "keywords": [
+                "Wi-fi Switch",
+                "20A",
+                "Energy Monitoring",
+                "Mountain Grey"
+            ],
+            "meta_description": "Buy Wi-fi Switch 20A with Energy Monitoring Mountain Grey online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94702SB20",
+        "name": "Wi-fi Switch 20A with Energy Monitoring - Sparkle Black",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Power Switch",
+        "specs": {
+            "ampere": 20,
+            "color": "Sparkle Black",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "Energy Monitoring"
+        },
+        "variant": [
+            "CB94702SM20",
+            "CB94702SL20"
+        ],
+        "pricing": {
+            "mrp": 9700,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-switch-20a-with-energy-monitoring-sparkle-black",
+            "keywords": [
+                "Wi-fi Switch",
+                "20A",
+                "Energy Monitoring",
+                "Sparkle Black"
+            ],
+            "meta_description": "Buy Wi-fi Switch 20A with Energy Monitoring Sparkle Black online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94702SL20",
+        "name": "Wi-fi Switch 20A with Energy Monitoring - Black Glass",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Power Switch",
+        "specs": {
+            "ampere": 20,
+            "color": "Black Glass",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "Energy Monitoring"
+        },
+        "variant": [
+            "CB94702SM20",
+            "CB94702SB20"
+        ],
+        "pricing": {
+            "mrp": 10100,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-switch-20a-with-energy-monitoring-black-glass",
+            "keywords": [
+                "Wi-fi Switch",
+                "20A",
+                "Energy Monitoring",
+                "Black Glass"
+            ],
+            "meta_description": "Buy Wi-fi Switch 20A with Energy Monitoring Black Glass online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602FM00",
+        "name": "Wi-fi Fan Regulator 5 Step - Mountain Grey",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Fan Regulator",
+        "specs": {
+            "ampere": null,
+            "color": "Mountain Grey",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "5 Step"
+        },
+        "variant": [
+            "CB94602FB00",
+            "CB94602FL00"
+        ],
+        "pricing": {
+            "mrp": 9500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-fan-regulator-5-step-mountain-grey",
+            "keywords": [
+                "Wi-fi Fan Regulator",
+                "5 Step",
+                "Mountain Grey",
+                "Smart Fan Control"
+            ],
+            "meta_description": "Buy Wi-fi Fan Regulator 5 Step Mountain Grey online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602FB00",
+        "name": "Wi-fi Fan Regulator 5 Step - Sparkle Black",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Fan Regulator",
+        "specs": {
+            "ampere": null,
+            "color": "Sparkle Black",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "5 Step"
+        },
+        "variant": [
+            "CB94602FM00",
+            "CB94602FL00"
+        ],
+        "pricing": {
+            "mrp": 9500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-fan-regulator-5-step-sparkle-black",
+            "keywords": [
+                "Wi-fi Fan Regulator",
+                "5 Step",
+                "Sparkle Black",
+                "Smart Fan Control"
+            ],
+            "meta_description": "Buy Wi-fi Fan Regulator 5 Step Sparkle Black online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602FL00",
+        "name": "Wi-fi Fan Regulator 5 Step - Black Glass",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Fan Regulator",
+        "specs": {
+            "ampere": null,
+            "color": "Black Glass",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "5 Step"
+        },
+        "variant": [
+            "CB94602FM00",
+            "CB94602FB00"
+        ],
+        "pricing": {
+            "mrp": 9900,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-fan-regulator-5-step-black-glass",
+            "keywords": [
+                "Wi-fi Fan Regulator",
+                "5 Step",
+                "Black Glass",
+                "Smart Fan Control"
+            ],
+            "meta_description": "Buy Wi-fi Fan Regulator 5 Step Black Glass online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602DM00",
+        "name": "Wi-fi Light Dimmer 5 Step - Mountain Grey",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Light Dimmer",
+        "specs": {
+            "ampere": null,
+            "color": "Mountain Grey",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "5 Step"
+        },
+        "variant": [
+            "CB94602DB00",
+            "CB94602DL00"
+        ],
+        "pricing": {
+            "mrp": 9500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-light-dimmer-5-step-mountain-grey",
+            "keywords": [
+                "Wi-fi Light Dimmer",
+                "5 Step",
+                "Mountain Grey",
+                "Smart Dimmer"
+            ],
+            "meta_description": "Buy Wi-fi Light Dimmer 5 Step Mountain Grey online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602DB00",
+        "name": "Wi-fi Light Dimmer 5 Step - Sparkle Black",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Light Dimmer",
+        "specs": {
+            "ampere": null,
+            "color": "Sparkle Black",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "5 Step"
+        },
+        "variant": [
+            "CB94602DM00",
+            "CB94602DL00"
+        ],
+        "pricing": {
+            "mrp": 9500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-light-dimmer-5-step-sparkle-black",
+            "keywords": [
+                "Wi-fi Light Dimmer",
+                "5 Step",
+                "Sparkle Black",
+                "Smart Dimmer"
+            ],
+            "meta_description": "Buy Wi-fi Light Dimmer 5 Step Sparkle Black online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602DL00",
+        "name": "Wi-fi Light Dimmer 5 Step - Black Glass",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Light Dimmer",
+        "specs": {
+            "ampere": null,
+            "color": "Black Glass",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "5 Step"
+        },
+        "variant": [
+            "CB94602DM00",
+            "CB94602DB00"
+        ],
+        "pricing": {
+            "mrp": 9900,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-light-dimmer-5-step-black-glass",
+            "keywords": [
+                "Wi-fi Light Dimmer",
+                "5 Step",
+                "Black Glass",
+                "Smart Dimmer"
+            ],
+            "meta_description": "Buy Wi-fi Light Dimmer 5 Step Black Glass online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602CM00",
+        "name": "Wi-fi Curtain Controller - Mountain Grey",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Curtain Controller",
+        "specs": {
+            "ampere": null,
+            "color": "Mountain Grey",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "Curtain Controller"
+        },
+        "variant": [
+            "CB94602CB00",
+            "CB94602CL00"
+        ],
+        "pricing": {
+            "mrp": 9500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-curtain-controller-mountain-grey",
+            "keywords": [
+                "Wi-fi Curtain Controller",
+                "Mountain Grey",
+                "Smart Curtain"
+            ],
+            "meta_description": "Buy Wi-fi Curtain Controller Mountain Grey online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602CB00",
+        "name": "Wi-fi Curtain Controller - Sparkle Black",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Curtain Controller",
+        "specs": {
+            "ampere": null,
+            "color": "Sparkle Black",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "Curtain Controller"
+        },
+        "variant": [
+            "CB94602CM00",
+            "CB94602CL00"
+        ],
+        "pricing": {
+            "mrp": 9500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-curtain-controller-sparkle-black",
+            "keywords": [
+                "Wi-fi Curtain Controller",
+                "Sparkle Black",
+                "Smart Curtain"
+            ],
+            "meta_description": "Buy Wi-fi Curtain Controller Sparkle Black online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602CL00",
+        "name": "Wi-fi Curtain Controller - Black Glass",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Curtain Controller",
+        "specs": {
+            "ampere": null,
+            "color": "Black Glass",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "Curtain Controller"
+        },
+        "variant": [
+            "CB94602CM00",
+            "CB94602CB00"
+        ],
+        "pricing": {
+            "mrp": 9900,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-curtain-controller-black-glass",
+            "keywords": [
+                "Wi-fi Curtain Controller",
+                "Black Glass",
+                "Smart Curtain"
+            ],
+            "meta_description": "Buy Wi-fi Curtain Controller Black Glass online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602SM00",
+        "name": "Wi-fi Scene Controller - Mountain Grey",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Scene Controller",
+        "specs": {
+            "ampere": null,
+            "color": "Mountain Grey",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "Scene Controller"
+        },
+        "variant": [
+            "CB94602SB00",
+            "CB94602SL00"
+        ],
+        "pricing": {
+            "mrp": 9500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-scene-controller-mountain-grey",
+            "keywords": [
+                "Wi-fi Scene Controller",
+                "Mountain Grey",
+                "Smart Scene"
+            ],
+            "meta_description": "Buy Wi-fi Scene Controller Mountain Grey online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602SB00",
+        "name": "Wi-fi Scene Controller - Sparkle Black",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Scene Controller",
+        "specs": {
+            "ampere": null,
+            "color": "Sparkle Black",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "Scene Controller"
+        },
+        "variant": [
+            "CB94602SM00",
+            "CB94602SL00"
+        ],
+        "pricing": {
+            "mrp": 9500,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-scene-controller-sparkle-black",
+            "keywords": [
+                "Wi-fi Scene Controller",
+                "Sparkle Black",
+                "Smart Scene"
+            ],
+            "meta_description": "Buy Wi-fi Scene Controller Sparkle Black online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    },
+    {
+        "sku": "CB94602SL00",
+        "name": "Wi-fi Scene Controller - Black Glass",
+        "product_family": "ENCONNECT",
+        "category": "Switches",
+        "subcategory": "Wi-fi Scene Controller",
+        "specs": {
+            "ampere": null,
+            "color": "Black Glass",
+            "mw": 2,
+            "has_indicator": true,
+            "type_detail": "Scene Controller"
+        },
+        "variant": [
+            "CB94602SM00",
+            "CB94602SB00"
+        ],
+        "pricing": {
+            "mrp": 9900,
+            "discount": null,
+            "selling_price": null,
+            "std_pack": "1"
+        },
+        "media": {
+            "images": [],
+            "documents": []
+        },
+        "seo": {
+            "slug": "wi-fi-scene-controller-black-glass",
+            "keywords": [
+                "Wi-fi Scene Controller",
+                "Black Glass",
+                "Smart Scene"
+            ],
+            "meta_description": "Buy Wi-fi Scene Controller Black Glass online at New Delhi Electricals."
+        },
+        "status": {
+            "is_active": true,
+            "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+    }
+]
