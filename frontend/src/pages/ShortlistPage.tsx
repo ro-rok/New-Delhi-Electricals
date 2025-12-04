@@ -1,21 +1,41 @@
-import { useMemo } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFab from '@/components/WhatsAppFab';
 import { Button } from '@/components/ui/button';
-import { getProductById } from '@/data/mockData';
+import { useEffect, useState } from 'react';
+import { getProductById } from '@/api/products';
+import { Product } from '@/types/product';
 import { useApp } from '@/contexts/AppContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Trash2, MessageCircle, ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { getProductUrl } from '@/lib/utils';
 
 const ShortlistPage = () => {
   const { shortlist, removeFromShortlist, trackWhatsAppClick } = useApp();
+  const [products, setProducts] = useState<(Product | null)[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const products = useMemo(() => 
-    shortlist.map(id => getProductById(id)).filter(Boolean),
-    [shortlist]
-  );
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setLoading(true);
+      try {
+        const productPromises = shortlist.map(id => getProductById(id));
+        const fetchedProducts = await Promise.all(productPromises);
+        setProducts(fetchedProducts);
+      } catch (error) {
+        console.error('Failed to fetch products:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    if (shortlist.length > 0) {
+      fetchProducts();
+    } else {
+      setProducts([]);
+      setLoading(false);
+    }
+  }, [shortlist]);
 
   const handleSendAll = () => {
     trackWhatsAppClick();
@@ -73,7 +93,7 @@ const ShortlistPage = () => {
                     </div>
                     
                     <div className="flex-1 min-w-0">
-                      <Link to={`/product/${product!.id}`} className="hover:text-accent transition-colors">
+                      <Link to={getProductUrl(product!)} className="hover:text-accent transition-colors">
                         <h3 className="font-medium truncate">{product!.name}</h3>
                       </Link>
                       <p className="text-sm text-muted-foreground">{product!.brand} · {product!.sku}</p>

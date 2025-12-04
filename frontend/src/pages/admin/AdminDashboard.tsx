@@ -5,24 +5,50 @@ import {
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { products, categories, brands } from '@/data/mockData';
+import { useEffect, useState } from 'react';
+import { getProducts, getCategories, getBrands } from '@/api/products';
 import { motion } from 'framer-motion';
 
-const stats = [
-  { label: 'Total Products', value: products.length, icon: Package, href: '/admin/products' },
-  { label: 'Categories', value: categories.length, icon: FolderOpen, href: '/admin/categories' },
-  { label: 'Brands', value: brands.length, icon: Tags, href: '/admin/brands' },
-  { label: 'Inquiries', value: 12, icon: MessageSquare, href: '/admin/inquiries' },
-];
-
-const recentActivity = [
-  { action: 'Product added', item: 'MCB SP 16A', time: '2 hours ago' },
-  { action: 'Inquiry received', item: 'Bulk wiring quote', time: '4 hours ago' },
-  { action: 'Catalog imported', item: 'ABB_2024.pdf', time: '1 day ago' },
-  { action: 'Product updated', item: 'Polycab 4mm Wire', time: '2 days ago' },
-];
-
 const AdminDashboard = () => {
+  const [productsCount, setProductsCount] = useState(0);
+  const [categoriesCount, setCategoriesCount] = useState(0);
+  const [brandsCount, setBrandsCount] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const [productsResponse, catsList, brandsList] = await Promise.all([
+          getProducts({ pageSize: 1 }),
+          getCategories(),
+          getBrands(),
+        ]);
+        setProductsCount(productsResponse.total);
+        setCategoriesCount(catsList.length);
+        setBrandsCount(brandsList.length);
+      } catch (error) {
+        console.error('Failed to fetch dashboard data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const stats = [
+    { label: 'Total Products', value: productsCount, icon: Package, href: '/admin/products' },
+    { label: 'Categories', value: categoriesCount, icon: FolderOpen, href: '/admin/categories' },
+    { label: 'Brands', value: brandsCount, icon: Tags, href: '/admin/brands' },
+    { label: 'Inquiries', value: 0, icon: MessageSquare, href: '/admin/inquiries' },
+  ];
+
+  const recentActivity = [
+    { action: 'Product added', item: 'MCB SP 16A', time: '2 hours ago' },
+    { action: 'Inquiry received', item: 'Bulk wiring quote', time: '4 hours ago' },
+    { action: 'Catalog imported', item: 'ABB_2024.pdf', time: '1 day ago' },
+    { action: 'Product updated', item: 'Polycab 4mm Wire', time: '2 days ago' },
+  ];
   return (
     <div className="space-y-8">
       <div>

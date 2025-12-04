@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Plus, Edit, Trash2, MoreHorizontal, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -18,15 +18,38 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { brands, products } from '@/data/mockData';
+import { getBrands, getProducts } from '@/api/products';
+import { Brand, Product } from '@/types/product';
 import { toast } from 'sonner';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const AdminBrands = () => {
   const [showAddModal, setShowAddModal] = useState(false);
-  const [editingBrand, setEditingBrand] = useState<typeof brands[0] | null>(null);
+  const [editingBrand, setEditingBrand] = useState<Brand | null>(null);
   const [formData, setFormData] = useState({ name: '', description: '', logoUrl: '' });
+  const [brands, setBrands] = useState<Brand[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const [brandsList, productsResponse] = await Promise.all([
+          getBrands(),
+          getProducts({ pageSize: 1000 }),
+        ]);
+        setBrands(brandsList);
+        setProducts(productsResponse.items);
+      } catch (error) {
+        console.error('Failed to fetch brands:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
   const getProductCount = (brandName: string) => {
     return products.filter(p => p.brand === brandName).length;
@@ -43,7 +66,7 @@ const AdminBrands = () => {
     setFormData({ name: '', description: '', logoUrl: '' });
   };
 
-  const handleDelete = (brand: typeof brands[0]) => {
+  const handleDelete = (brand: Brand) => {
     toast.success(`Deleted ${brand.name}`);
   };
 

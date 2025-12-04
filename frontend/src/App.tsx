@@ -11,8 +11,10 @@ import AboutPage from "./pages/AboutPage";
 import CategoryPage from "./pages/CategoryPage";
 import BrandPage from "./pages/BrandPage";
 import ProductPage from "./pages/ProductPage";
+import ProductSlugPage from "./pages/ProductSlugPage";
 import ShortlistPage from "./pages/ShortlistPage";
 import ComparePage from "./pages/ComparePage";
+import CartPage from "./pages/CartPage";
 import BrandsListPage from "./pages/BrandsListPage";
 import CategoriesListPage from "./pages/CategoriesListPage";
 import NotFound from "./pages/NotFound";
@@ -56,7 +58,12 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter>
+          <BrowserRouter
+            future={{
+              v7_startTransition: true,
+              v7_relativeSplatPath: true,
+            }}
+          >
             <GlobalShortcuts />
             <Routes>
               <Route path="/" element={<Home />} />
@@ -65,9 +72,11 @@ const App = () => (
               <Route path="/category/:slug" element={<CategoryPage />} />
               <Route path="/brands" element={<BrandsListPage />} />
               <Route path="/brand/:slug" element={<BrandPage />} />
+              <Route path="/product/:brand/:product_family/:slug" element={<ProductSlugPage />} />
               <Route path="/product/:id" element={<ProductPage />} />
               <Route path="/shortlist" element={<ShortlistPage />} />
               <Route path="/compare" element={<ComparePage />} />
+              <Route path="/cart" element={<CartPage />} />
 
               {/* Admin Routes */}
               <Route path="/admin/login" element={<AdminLogin />} />

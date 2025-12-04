@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Product } from '@/types/product';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFab from '@/components/WhatsAppFab';
@@ -7,12 +8,12 @@ import ProductCard from '@/components/catalog/ProductCard';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { getProductById, products } from '@/data/mockData';
+import { getProductById, getProducts } from '@/api/products';
 import { useApp } from '@/contexts/AppContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MessageCircle, Heart, GitCompare, Copy, Check, FileText, 
-  Camera, ChevronLeft, ChevronRight, ZoomIn, Download, Share2
+  Camera, ChevronLeft, ChevronRight, ZoomIn, Download, Share2, ShoppingCart
 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
@@ -40,12 +41,47 @@ const generatePlaceholderImages = (count: number, brandChar: string) => {
 
 const ProductPage = () => {
   const { id } = useParams();
-  const { addToRecentlyViewed, trackProductView, toggleShortlist, isInShortlist, toggleComparison, isInComparison, trackWhatsAppClick } = useApp();
+  const location = useLocation();
+  const { addToRecentlyViewed, trackProductView, toggleShortlist, isInShortlist, toggleComparison, isInComparison, trackWhatsAppClick, addToCart, isInCart } = useApp();
   const [copiedSku, setCopiedSku] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showZoom, setShowZoom] = useState(false);
+  const [product, setProduct] = useState<Product | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [similarProducts, setSimilarProducts] = useState<Product[]>([]);
 
-  const product = getProductById(id || '');
+  useEffect(() => {
+    // Reset state immediately when route params change
+    setProduct(null);
+    setSimilarProducts([]);
+    setCurrentImageIndex(0);
+    setLoading(true);
+
+    const fetchProduct = async () => {
+      if (!id) {
+        setLoading(false);
+        return;
+      }
+      try {
+        const prod = await getProductById(id);
+        setProduct(prod);
+        if (prod) {
+          // Fetch similar products
+          const response = await getProducts({ pageSize: 20 });
+          const similar = response.items
+            .filter(p => p.id !== prod.id && (p.category === prod.category || p.brand === prod.brand))
+            .slice(0, 4);
+          setSimilarProducts(similar);
+        }
+      } catch (error) {
+        console.error('Failed to fetch product:', error);
+        setProduct(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProduct();
+  }, [id, location.key]);
   
   // Generate multiple images for carousel demo
   const productImages = useMemo(() => {
@@ -53,12 +89,6 @@ const ProductPage = () => {
     return generatePlaceholderImages(4, product.brand.charAt(0));
   }, [product]);
 
-  const similarProducts = useMemo(() => {
-    if (!product) return [];
-    return products
-      .filter(p => p.id !== product.id && (p.category === product.category || p.brand === product.brand))
-      .slice(0, 4);
-  }, [product]);
 
   useEffect(() => {
     if (product) {
@@ -109,6 +139,17 @@ const ProductPage = () => {
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + productImages.length) % productImages.length);
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main className="pt-24 container">
+          <p className="text-center text-muted-foreground">Loading...</p>
+        </main>
+      </div>
+    );
+  }
 
   if (!product) {
     return (
@@ -279,6 +320,25 @@ const ProductPage = () => {
                 <Button
                   size="lg"
                   variant="outline"
+                  className={cn(
+                    "w-full gap-2",
+                    isInCart(product.id) && "bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800"
+                  )}
+                  onClick={() => {
+                    addToCart(product, 1);
+                    toast({ description: 'Product added to cart' });
+                  }}
+                >
+                  <ShoppingCart className={cn(
+                    "h-5 w-5",
+                    isInCart(product.id) && "fill-current"
+                  )} />
+                  {isInCart(product.id) ? 'In Cart' : 'Add to Cart'}
+                </Button>
+                
+                <Button
+                  size="lg"
+                  variant="outline"
                   className="w-full gap-2"
                   onClick={handlePhotoInquiry}
                 >
@@ -323,7 +383,9 @@ const ProductPage = () => {
                           idx !== Object.entries(product.specs).length - 1 && 'border-b border-border'
                         )}
                       >
-                        <span className="text-sm text-muted-foreground capitalize">{key}</span>
+                        <span className="text-sm text-muted-foreground capitalize">
+                          {key.replace(/_/g, ' ').replace(/\bMW\b/gi, 'Module Width')}
+                        </span>
                         <span className="text-sm font-medium">{value}</span>
                       </div>
                     ))}

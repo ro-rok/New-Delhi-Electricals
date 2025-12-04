@@ -1,4 +1,6 @@
-import { getFeaturedProducts, brands } from '@/data/mockData';
+import { useEffect, useState } from 'react';
+import { getFeaturedProducts, getBrands } from '@/api/products';
+import { Brand, Product } from '@/types/product';
 import ProductCard from './ProductCard';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -11,8 +13,31 @@ import wireImage from '@/assets/product-wire-premium.jpg';
 const featuredImages = [switchImage, mcbImage, wireImage];
 
 const FeaturedProducts = () => {
-  const featuredBrands = brands.filter(b => b.featured).slice(0, 3);
+  const [brands, setBrands] = useState<Brand[]>([]);
+  const [brandProducts, setBrandProducts] = useState<Record<string, Product[]>>({});
   const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const brandsList = await getBrands();
+        const featured = brandsList.filter(b => b.featured).slice(0, 3);
+        setBrands(featured);
+        
+        const productsMap: Record<string, Product[]> = {};
+        for (const brand of featured) {
+          const products = await getFeaturedProducts(brand.name);
+          productsMap[brand.name] = products;
+        }
+        setBrandProducts(productsMap);
+      } catch (error) {
+        console.error('Failed to fetch featured products:', error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const featuredBrands = brands;
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -26,8 +51,8 @@ const FeaturedProducts = () => {
     <section ref={sectionRef} className="py-32 bg-secondary/20">
       <div className="container max-w-7xl mx-auto px-6 lg:px-12">
         {featuredBrands.map((brand, brandIdx) => {
-          const brandProducts = getFeaturedProducts(brand.name);
-          if (brandProducts.length === 0) return null;
+          const products = brandProducts[brand.name] || [];
+          if (products.length === 0) return null;
 
           return (
             <motion.div
@@ -83,7 +108,7 @@ const FeaturedProducts = () => {
 
               {/* Products Grid */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-6">
-                {brandProducts.slice(0, 5).map((product, idx) => (
+                {products.slice(0, 5).map((product, idx) => (
                   <ProductCard key={product.id} product={product} index={idx} />
                 ))}
               </div>

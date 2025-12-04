@@ -3,10 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { Search, X } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
-import { searchProducts, products } from '@/data/mockData';
+import { searchProducts, getProducts } from '@/api/products';
 import { Product } from '@/types/product';
 import { useApp } from '@/contexts/AppContext';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getProductUrl } from '@/lib/utils';
 
 interface SearchModalProps {
   open: boolean;
@@ -21,31 +22,41 @@ const SearchModal = ({ open, onOpenChange }: SearchModalProps) => {
   const { trackSearch } = useApp();
 
   useEffect(() => {
-    if (query.length > 1) {
-      const found = searchProducts(query).slice(0, 6);
-      setResults(found);
-      
-      // Generate suggestions from SKUs and names
-      const skuSuggestions = products
-        .filter(p => p.sku.toLowerCase().includes(query.toLowerCase()))
-        .map(p => p.sku)
-        .slice(0, 3);
-      const nameSuggestions = products
-        .filter(p => p.name.toLowerCase().includes(query.toLowerCase()))
-        .map(p => p.name)
-        .slice(0, 3);
-      setSuggestions([...new Set([...skuSuggestions, ...nameSuggestions])].slice(0, 4));
-    } else {
-      setResults([]);
-      setSuggestions([]);
-    }
+    const fetchResults = async () => {
+      if (query.length > 1) {
+        try {
+          const found = await searchProducts(query);
+          setResults(found.slice(0, 6));
+          
+          // Generate suggestions from SKUs and names
+          const allProducts = await getProducts({ pageSize: 100 });
+          const skuSuggestions = allProducts.items
+            .filter(p => p.sku.toLowerCase().includes(query.toLowerCase()))
+            .map(p => p.sku)
+            .slice(0, 3);
+          const nameSuggestions = allProducts.items
+            .filter(p => p.name.toLowerCase().includes(query.toLowerCase()))
+            .map(p => p.name)
+            .slice(0, 3);
+          setSuggestions([...new Set([...skuSuggestions, ...nameSuggestions])].slice(0, 4));
+        } catch (error) {
+          console.error('Failed to search products:', error);
+          setResults([]);
+          setSuggestions([]);
+        }
+      } else {
+        setResults([]);
+        setSuggestions([]);
+      }
+    };
+    fetchResults();
   }, [query]);
 
   const handleSelect = useCallback((product: Product) => {
     trackSearch(query);
     onOpenChange(false);
     setQuery('');
-    navigate(`/product/${product.id}`);
+    navigate(getProductUrl(product));
   }, [navigate, onOpenChange, query, trackSearch]);
 
   const handleSuggestionClick = (suggestion: string) => {

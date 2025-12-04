@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import { Search, X, ArrowRight, Clock, TrendingUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
-import { searchProducts, products } from '@/data/mockData';
+import { searchProducts } from '@/api/products';
 import { Product } from '@/types/product';
 
 const FloatingSearchBar = () => {
@@ -27,13 +27,21 @@ const FloatingSearchBar = () => {
 
   // Update suggestions based on query
   useEffect(() => {
-    if (query.length >= 2) {
-      const results = searchProducts(query).slice(0, 6);
-      setSuggestions(results);
-      setSelectedIndex(-1);
-    } else {
-      setSuggestions([]);
-    }
+    const fetchSuggestions = async () => {
+      if (query.length >= 2) {
+        try {
+          const results = await searchProducts(query);
+          setSuggestions(results.slice(0, 6));
+          setSelectedIndex(-1);
+        } catch (error) {
+          console.error('Failed to search products:', error);
+          setSuggestions([]);
+        }
+      } else {
+        setSuggestions([]);
+      }
+    };
+    fetchSuggestions();
   }, [query]);
 
   const handleSearch = (searchQuery: string) => {
@@ -52,7 +60,7 @@ const FloatingSearchBar = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (selectedIndex >= 0 && suggestions[selectedIndex]) {
-      navigate(`/product/${suggestions[selectedIndex].id}`);
+      navigate(getProductUrl(suggestions[selectedIndex]));
       setQuery('');
       setIsFocused(false);
     } else {
@@ -154,7 +162,7 @@ const FloatingSearchBar = () => {
                     {suggestions.map((product, idx) => (
                       <Link
                         key={product.id}
-                        to={`/product/${product.id}`}
+                        to={getProductUrl(product)}
                         onClick={() => {
                           setQuery('');
                           setIsFocused(false);

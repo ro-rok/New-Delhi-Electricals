@@ -1,15 +1,26 @@
+import { useEffect, useState } from 'react';
 import { useApp } from '@/contexts/AppContext';
-import { getProductById } from '@/data/mockData';
+import { getProductById } from '@/api/products';
 import ProductCard from './ProductCard';
 import { motion } from 'framer-motion';
+import { Product } from '@/types/product';
 
 const RecentlyViewed = () => {
   const { recentlyViewed } = useApp();
-  
-  const products = recentlyViewed
-    .map(id => getProductById(id))
-    .filter(Boolean)
-    .slice(0, 5);
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const productPromises = recentlyViewed.map(id => getProductById(id));
+      const fetchedProducts = await Promise.all(productPromises);
+      setProducts(fetchedProducts.filter(Boolean) as Product[]);
+    };
+    if (recentlyViewed.length > 0) {
+      fetchProducts();
+    } else {
+      setProducts([]);
+    }
+  }, [recentlyViewed]);
 
   if (products.length === 0) return null;
 

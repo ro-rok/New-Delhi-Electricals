@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Plus, Edit, Trash2, MoreHorizontal, FolderOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -17,14 +17,37 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { categories, products } from '@/data/mockData';
+import { getCategories, getProducts } from '@/api/products';
+import { Category, Product } from '@/types/product';
 import { toast } from 'sonner';
 import { motion } from 'framer-motion';
 
 const AdminCategories = () => {
   const [showAddModal, setShowAddModal] = useState(false);
-  const [editingCategory, setEditingCategory] = useState<typeof categories[0] | null>(null);
+  const [editingCategory, setEditingCategory] = useState<Category | null>(null);
   const [categoryName, setCategoryName] = useState('');
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const [catsList, productsResponse] = await Promise.all([
+          getCategories(),
+          getProducts({ pageSize: 1000 }),
+        ]);
+        setCategories(catsList);
+        setProducts(productsResponse.items);
+      } catch (error) {
+        console.error('Failed to fetch categories:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
   const getProductCount = (categoryName: string) => {
     return products.filter(p => p.category === categoryName).length;
@@ -41,7 +64,7 @@ const AdminCategories = () => {
     setCategoryName('');
   };
 
-  const handleDelete = (category: typeof categories[0]) => {
+  const handleDelete = (category: Category) => {
     toast.success(`Deleted ${category.name}`);
   };
 

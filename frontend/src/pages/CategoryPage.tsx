@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useParams, useSearchParams, useLocation } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFab from '@/components/WhatsAppFab';
@@ -24,15 +24,91 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { categories, products, brands } from '@/data/mockData';
+import { getCategories, getProducts, getBrands } from '@/api/products';
+import { Category, Product, Brand } from '@/types/product';
 import { useApp } from '@/contexts/AppContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SlidersHorizontal, Grid, List, X, Search, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ToggleRight, Cable, Zap, Lightbulb, Fan, Smartphone, Package } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 type SortOption = 'name-asc' | 'name-desc' | 'price-asc' | 'price-desc' | 'newest';
 
+// Category Card Component with image error handling
+const CategoryCard = ({ cat, isActive, iconMap, Package }: { 
+  cat: Category; 
+  isActive: boolean; 
+  iconMap: Record<string, LucideIcon>; 
+  Package: LucideIcon;
+}) => {
+  const [imageError, setImageError] = useState(false);
+  const IconComponent = iconMap[cat.icon] || Package;
+  const categoryImage = cat.image || `/category-images/${cat.slug}.jpg`;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -4 }}
+    >
+      <Link
+        to={`/category/${cat.slug}`}
+        className={cn(
+          "block group relative bg-white dark:bg-black rounded-2xl p-8 border transition-all duration-300 overflow-hidden",
+          isActive
+            ? "border-gray-900 dark:border-white shadow-lg"
+            : "border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 hover:shadow-xl"
+        )}
+      >
+        {/* Category Image */}
+        <div className={cn(
+          "w-full h-32 rounded-xl mb-6 overflow-hidden bg-gray-100 dark:bg-gray-900 flex items-center justify-center transition-all",
+          isActive && "ring-2 ring-gray-900 dark:ring-white"
+        )}>
+          {!imageError && categoryImage ? (
+            <img
+              src={categoryImage}
+              alt={cat.name}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              onError={() => setImageError(true)}
+            />
+          ) : (
+            <div className={cn(
+              "w-full h-full flex items-center justify-center transition-colors",
+              isActive
+                ? "bg-gray-900 dark:bg-white"
+                : "bg-gray-100 dark:bg-gray-900 group-hover:bg-gray-200 dark:group-hover:bg-gray-800"
+            )}>
+              <IconComponent className={cn(
+                "h-12 w-12 transition-colors",
+                isActive
+                  ? "text-white dark:text-black"
+                  : "text-gray-600 dark:text-gray-400"
+              )} />
+            </div>
+          )}
+        </div>
+        <h3 className={cn(
+          "text-lg font-medium mb-2 transition-colors",
+          isActive
+            ? "text-gray-900 dark:text-white"
+            : "text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-400"
+        )}>
+          {cat.name}
+        </h3>
+        <p className="text-sm text-gray-500 dark:text-gray-500">
+          {cat.productCount || 0} {(cat.productCount || 0) === 1 ? 'product' : 'products'}
+        </p>
+      </Link>
+    </motion.div>
+  );
+};
+
 const CategoryPage = () => {
   const { slug } = useParams();
+  const location = useLocation();
   const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
   const { trackCategoryView } = useApp();
@@ -44,8 +120,55 @@ const CategoryPage = () => {
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
   const [sortBy, setSortBy] = useState<SortOption>('name-asc');
   const [localSearch, setLocalSearch] = useState(searchQuery);
+  const [category, setCategory] = useState<Category | null>(null);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [brands, setBrands] = useState<Brand[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const category = categories.find(c => c.slug === slug);
+  const iconMap: Record<string, LucideIcon> = {
+    ToggleRight,
+    Cable,
+    Zap,
+    Lightbulb,
+    Fan,
+    Smartphone,
+    Package,
+  };
+
+  useEffect(() => {
+    // Reset state immediately when route params change
+    setCategory(null);
+    setProducts([]);
+    setBrands([]);
+    setLoading(true);
+
+    const fetchData = async () => {
+      if (!slug) {
+        setLoading(false);
+        return;
+      }
+      try {
+        const [catsList, productsResponse, brandsList] = await Promise.all([
+          getCategories(),
+          getProducts({ pageSize: 1000 }),
+          getBrands(),
+        ]);
+        const foundCategory = catsList.find(c => c.slug === slug);
+        setCategory(foundCategory || null);
+        setCategories(catsList);
+        setProducts(productsResponse.items);
+        setBrands(brandsList);
+      } catch (error) {
+        console.error('Failed to fetch category data:', error);
+        setCategory(null);
+        setProducts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, [slug, location.key]);
   
   // Get price bounds for the category
   const priceBounds = useMemo(() => {
@@ -262,27 +385,71 @@ const CategoryPage = () => {
     </div>
   );
 
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white dark:bg-black">
       <Header />
       <main className="pt-24 pb-16">
-        <div className="container">
+        <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-8"
+            className="mb-16 text-center"
           >
-            <h1 className="text-3xl md:text-4xl font-semibold mb-2">
+            <h1 className="text-5xl md:text-6xl font-light text-gray-900 dark:text-white mb-4">
               {category?.name || 'All Products'}
             </h1>
-            <p className="text-muted-foreground">
+            <p className="text-xl text-gray-600 dark:text-gray-400 font-light max-w-2xl mx-auto">
               {category?.description || 'Browse our complete catalog'}
             </p>
           </motion.div>
 
+          {/* All Categories Showcase */}
+          <motion.section
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="mb-24"
+          >
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-light text-gray-900 dark:text-white mb-2">
+                All Categories
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400">
+                Explore our complete range of product categories
+              </p>
+            </div>
+            {categories.length > 0 ? (
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {categories.map((cat, idx) => (
+                  <motion.div
+                    key={cat.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.05 }}
+                  >
+                    <CategoryCard 
+                      cat={cat} 
+                      isActive={category?.slug === cat.slug} 
+                      iconMap={iconMap}
+                      Package={Package}
+                    />
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <p className="text-gray-500 dark:text-gray-400">No categories found</p>
+              </div>
+            )}
+          </motion.section>
+
+          {/* Divider */}
+          <div className="border-t border-gray-200 dark:border-gray-800 my-16"></div>
+
           {/* Toolbar */}
-          <div className="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-border">
+          <div className="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-gray-200 dark:border-gray-800">
             <div className="flex items-center gap-2 flex-wrap">
               {/* Desktop Filters Toggle */}
               <Button

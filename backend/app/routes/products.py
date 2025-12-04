@@ -8,14 +8,14 @@ from ..schemas import ProductCreate, ProductUpdate, ProductInDB, ProductListResp
 from ..security import get_current_admin
 
 
-router = APIRouter(prefix="/products", tags=["products"])
+router = APIRouter(prefix="/api/products", tags=["products"])
 
 
 @router.get("", response_model=ProductListResponse)
 async def list_products(
     q: str | None = Query(default=None, description="Search query"),
     page: int = Query(1, ge=1),
-    page_size: int = Query(20, ge=1, le=100, alias="pageSize"),
+    page_size: int = Query(20, ge=1, le=10000, alias="pageSize"),
     db: AsyncIOMotorDatabase = Depends(get_db_dep),
 ) -> Any:
     skip = (page - 1) * page_size
@@ -40,6 +40,111 @@ async def create_product(
     doc = payload.model_dump(by_alias=True)
     res = await db.products.insert_one(doc)
     doc["_id"] = str(res.inserted_id)
+    return ProductInDB(**doc)
+
+
+@router.get("/categories", response_model=List[dict])
+async def get_categories(
+    db: AsyncIOMotorDatabase = Depends(get_db_dep),
+) -> Any:
+    """Get all unique categories from products with product counts"""
+    pipeline = [
+        {
+            "$group": {
+                "_id": "$category",
+                "count": {"$sum": 1}
+            }
+        },
+        {
+            "$project": {
+                "_id": 0,
+                "name": "$_id",
+                "productCount": "$count"
+            }
+        },
+        {
+            "$sort": {"name": 1}
+        }
+    ]
+    
+    categories = []
+    async for doc in db.products.aggregate(pipeline):
+        slug = doc["name"].lower().replace(" ", "-").replace("/", "-").replace("(", "").replace(")", "")
+        categories.append({
+            "id": slug,
+            "name": doc["name"],
+            "slug": slug,
+            "description": f"{doc['name']} products",
+            "icon": "Package",
+            "image": f"/category-images/{slug}.jpg",
+            "productCount": doc["productCount"]
+        })
+    
+    return categories
+
+
+@router.get("/brands", response_model=List[dict])
+async def get_brands(
+    db: AsyncIOMotorDatabase = Depends(get_db_dep),
+) -> Any:
+    """Get all unique brands from products with product counts"""
+    pipeline = [
+        {
+            "$group": {
+                "_id": "$brand",
+                "count": {"$sum": 1}
+            }
+        },
+        {
+            "$project": {
+                "_id": 0,
+                "name": "$_id",
+                "productCount": "$count"
+            }
+        },
+        {
+            "$sort": {"name": 1}
+        }
+    ]
+    
+    brands = []
+    async for doc in db.products.aggregate(pipeline):
+        slug = doc["name"].lower().replace(" ", "-").replace("/", "-").replace("(", "").replace(")", "")
+        brands.append({
+            "id": slug,
+            "name": doc["name"],
+            "slug": slug,
+            "logo": f"/brands/{slug}.svg",
+            "description": f"{doc['name']} products",
+            "featured": False,
+            "productCount": doc["productCount"]
+        })
+    
+    return brands
+
+
+@router.get("/slug/{slug}", response_model=ProductInDB)
+async def get_product_by_slug(slug: str, db: AsyncIOMotorDatabase = Depends(get_db_dep)) -> Any:
+    """Fetch product by SEO slug. Checks multiple possible locations for the slug"""
+    # Try multiple possible locations for the slug
+    # Based on how products are transformed, slug can be in:
+    # - catalog_source.seo.slug (most common - from transform_product)
+    # - catalog_source.slug (from upload_mcb_products)
+    # - specs.slug (from upload_mcb_products)
+    # - seo.slug (if stored at top level)
+    # - slug (if stored at top level)
+    doc = await db.products.find_one({
+        "$or": [
+            {"catalog_source.seo.slug": slug},
+            {"catalog_source.slug": slug},
+            {"specs.slug": slug},
+            {"seo.slug": slug},
+            {"slug": slug},
+        ]
+    })
+    if not doc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
+    doc["_id"] = str(doc["_id"])
     return ProductInDB(**doc)
 
 

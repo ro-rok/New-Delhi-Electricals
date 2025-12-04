@@ -38,82 +38,8 @@ interface ActivityLog {
   metadata?: Record<string, string | number>;
 }
 
-const mockLogs: ActivityLog[] = [
-  {
-    id: '1',
-    action: 'import',
-    entity: 'catalog',
-    entityName: 'LK_PriceList_May2024.pdf',
-    details: 'Imported 156 products from catalog',
-    user: 'admin',
-    timestamp: '2024-01-15T10:30:00Z',
-    metadata: { productsAdded: 156, productsUpdated: 12, errors: 0 }
-  },
-  {
-    id: '2',
-    action: 'create',
-    entity: 'product',
-    entityName: 'Entice 3 Way Switch',
-    details: 'Created new product SKU: LK-ENT-SW-03',
-    user: 'admin',
-    timestamp: '2024-01-15T09:15:00Z',
-  },
-  {
-    id: '3',
-    action: 'update',
-    entity: 'product',
-    entityName: 'MCB Single Pole 16A',
-    details: 'Updated price from ₹350 to ₹385',
-    user: 'admin',
-    timestamp: '2024-01-14T16:45:00Z',
-  },
-  {
-    id: '4',
-    action: 'delete',
-    entity: 'product',
-    entityName: 'Old Switch Model',
-    details: 'Deleted discontinued product',
-    user: 'admin',
-    timestamp: '2024-01-14T14:20:00Z',
-  },
-  {
-    id: '5',
-    action: 'export',
-    entity: 'inquiry',
-    entityName: 'Inquiries Export',
-    details: 'Exported 47 inquiries to CSV',
-    user: 'admin',
-    timestamp: '2024-01-14T11:00:00Z',
-  },
-  {
-    id: '6',
-    action: 'create',
-    entity: 'brand',
-    entityName: 'Vion Lights',
-    details: 'Added new brand to catalog',
-    user: 'admin',
-    timestamp: '2024-01-13T15:30:00Z',
-  },
-  {
-    id: '7',
-    action: 'import',
-    entity: 'catalog',
-    entityName: 'ABB_Catalog_2024.pdf',
-    details: 'Imported 89 products from catalog',
-    user: 'admin',
-    timestamp: '2024-01-13T10:00:00Z',
-    metadata: { productsAdded: 89, productsUpdated: 5, errors: 2 }
-  },
-  {
-    id: '8',
-    action: 'update',
-    entity: 'category',
-    entityName: 'Switches',
-    details: 'Updated category description',
-    user: 'admin',
-    timestamp: '2024-01-12T17:15:00Z',
-  },
-];
+// TODO: Replace with API call when backend endpoint is available
+const mockLogs: ActivityLog[] = [];
 
 const actionIcons: Record<LogAction, typeof FileUp> = {
   import: FileUp,

@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Plus, Search, Filter, MoreHorizontal, Edit, Trash2,
@@ -21,9 +21,11 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
-import { products, categories, brands } from '@/data/mockData';
+import { getProducts, getCategories, getBrands } from '@/api/products';
+import { Product, Category, Brand } from '@/types/product';
 import { toast } from 'sonner';
 import { motion } from 'framer-motion';
+import { getProductUrl } from '@/lib/utils';
 
 const ITEMS_PER_PAGE = 10;
 
@@ -32,6 +34,31 @@ const AdminProducts = () => {
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [brandFilter, setBrandFilter] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [brands, setBrands] = useState<Brand[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const [productsResponse, catsList, brandsList] = await Promise.all([
+          getProducts({ pageSize: 1000 }),
+          getCategories(),
+          getBrands(),
+        ]);
+        setProducts(productsResponse.items);
+        setCategories(catsList);
+        setBrands(brandsList);
+      } catch (error) {
+        console.error('Failed to fetch products:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
   const filteredProducts = useMemo(() => {
     return products.filter(product => {
@@ -42,7 +69,7 @@ const AdminProducts = () => {
       const matchesBrand = brandFilter === 'all' || product.brand === brandFilter;
       return matchesSearch && matchesCategory && matchesBrand;
     });
-  }, [searchQuery, categoryFilter, brandFilter]);
+  }, [products, searchQuery, categoryFilter, brandFilter]);
 
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
   const paginatedProducts = filteredProducts.slice(
@@ -178,7 +205,7 @@ const AdminProducts = () => {
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
                         <DropdownMenuItem asChild>
-                          <Link to={`/product/${product.id}`}>
+                          <Link to={getProductUrl(product)}>
                             <Eye className="h-4 w-4 mr-2" />
                             View
                           </Link>

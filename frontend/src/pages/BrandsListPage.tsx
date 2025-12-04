@@ -2,11 +2,42 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFab from '@/components/WhatsAppFab';
-import { brands } from '@/data/mockData';
+import { useEffect, useState } from 'react';
+import { getBrands } from '@/api/products';
+import { Brand } from '@/types/product';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 const BrandsListPage = () => {
+  const [brands, setBrands] = useState<Brand[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const brandsList = await getBrands();
+        setBrands(brandsList);
+      } catch (error) {
+        console.error('Failed to fetch brands:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main className="pt-24 container">
+          <p className="text-center text-muted-foreground">Loading...</p>
+        </main>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background">
       <Header />

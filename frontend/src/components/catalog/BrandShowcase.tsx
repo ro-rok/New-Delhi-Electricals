@@ -1,11 +1,25 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { brands } from '@/data/mockData';
+import { getBrands } from '@/api/products';
+import { Brand } from '@/types/product';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
 const BrandShowcase = () => {
-  const featuredBrands = brands.filter(b => b.featured);
+  const [featuredBrands, setFeaturedBrands] = useState<Brand[]>([]);
   const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const fetchBrands = async () => {
+      try {
+        const brandsList = await getBrands();
+        setFeaturedBrands(brandsList.filter(b => b.featured));
+      } catch (error) {
+        console.error('Failed to fetch brands:', error);
+      }
+    };
+    fetchBrands();
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,

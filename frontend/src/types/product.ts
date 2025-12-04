@@ -12,9 +12,14 @@ export interface Product {
   specs: Record<string, string>;
   description: string;
   badge?: 'popular' | 'best-value' | 'new';
+  slug?: string;
   catalogSource?: {
     file: string;
     page: number;
+    slug?: string;
+    seo?: {
+      slug?: string;
+    };
   };
 }
 
@@ -25,6 +30,7 @@ export interface Category {
   description: string;
   icon: string;
   image?: string;
+  productCount?: number;
 }
 
 export interface Brand {
@@ -35,6 +41,7 @@ export interface Brand {
   description: string;
   catalogUrl?: string;
   featured: boolean;
+  productCount?: number;
 }
 
 export interface Inquiry {

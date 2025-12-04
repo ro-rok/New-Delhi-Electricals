@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Product } from '@/types/product';
 import { useApp } from '@/contexts/AppContext';
 import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
+import { cn, getProductUrl } from '@/lib/utils';
 import { useMagneticEffect } from '@/hooks/useMagneticEffect';
 
 interface ProductCardProps {
@@ -46,7 +46,7 @@ const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardPro
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.05 }}
     >
-      <Link to={`/product/${product.id}`} className="block group">
+      <Link to={getProductUrl(product)} className="block group">
         <div className="relative bg-background rounded-3xl border border-border/50 overflow-hidden transition-all duration-500 hover:shadow-md hover:-translate-y-2 hover:border-foreground/10">
           {/* Image */}
           <div className="relative aspect-square bg-secondary/20 overflow-hidden">

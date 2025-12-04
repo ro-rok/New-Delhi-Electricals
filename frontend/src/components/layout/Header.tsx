@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Heart, GitCompare, Menu, X, Sun, Moon } from 'lucide-react';
+import { Search, Heart, GitCompare, Menu, X, Sun, Moon, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useApp } from '@/contexts/AppContext';
 import { useTheme } from 'next-themes';
@@ -9,7 +9,7 @@ import SearchModal from '@/components/catalog/SearchModal';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const { shortlistCount, comparisonCount } = useApp();
+  const { shortlistCount, comparisonCount, cartCount } = useApp();
   const { theme, setTheme } = useTheme();
 
   return (
@@ -86,6 +86,21 @@ const Header = () => {
                   )}
                 </Button>
               </Link>
+
+              <Link to="/cart">
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  className="rounded-full h-10 w-10 hover:bg-foreground/5 relative"
+                >
+                  <ShoppingCart className="h-[18px] w-[18px]" strokeWidth={1.5} />
+                  {cartCount > 0 && (
+                    <span className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-foreground text-background text-[10px] font-semibold flex items-center justify-center">
+                      {cartCount > 9 ? '9+' : cartCount}
+                    </span>
+                  )}
+                </Button>
+              </Link>
               
               <Button
                 variant="ghost"
@@ -133,6 +148,14 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
+              </Link>
+              <Link
+                to="/cart"
+                className="px-4 py-3 text-sm font-medium hover:bg-foreground/5 rounded-xl transition-colors flex items-center gap-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <ShoppingCart className="h-4 w-4" />
+                Cart {cartCount > 0 && `(${cartCount})`}
               </Link>
             </nav>
           </div>

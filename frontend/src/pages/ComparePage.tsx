@@ -1,22 +1,41 @@
-import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFab from '@/components/WhatsAppFab';
 import { Button } from '@/components/ui/button';
-import { getProductById } from '@/data/mockData';
+import { useEffect, useState } from 'react';
+import { getProductById } from '@/api/products';
+import { Product } from '@/types/product';
 import { useApp } from '@/contexts/AppContext';
 import { motion } from 'framer-motion';
 import { GitCompare, X, Plus } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn, getProductUrl } from '@/lib/utils';
 
 const ComparePage = () => {
   const { comparison, removeFromComparison, maxItems } = useApp();
+  const [products, setProducts] = useState<(Product | null)[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const products = useMemo(() => 
-    comparison.map(id => getProductById(id)).filter(Boolean),
-    [comparison]
-  );
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setLoading(true);
+      try {
+        const productPromises = comparison.map(id => getProductById(id));
+        const fetchedProducts = await Promise.all(productPromises);
+        setProducts(fetchedProducts);
+      } catch (error) {
+        console.error('Failed to fetch products:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    if (comparison.length > 0) {
+      fetchProducts();
+    } else {
+      setProducts([]);
+      setLoading(false);
+    }
+  }, [comparison]);
 
   // Get all unique spec keys
   const allSpecs = useMemo(() => {
@@ -75,7 +94,7 @@ const ComparePage = () => {
                       </span>
                     </div>
                     
-                    <Link to={`/product/${product!.id}`} className="hover:text-accent transition-colors">
+                    <Link to={getProductUrl(product!)} className="hover:text-accent transition-colors">
                       <h3 className="font-medium text-sm mb-1 line-clamp-2">{product!.name}</h3>
                     </Link>
                     <p className="text-xs text-muted-foreground mb-2">{product!.brand}</p>

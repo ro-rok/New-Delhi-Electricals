@@ -36,42 +36,8 @@ interface Inquiry {
   createdAt: string;
 }
 
-const mockInquiries: Inquiry[] = [
-  {
-    id: '1',
-    name: 'Rajesh Kumar',
-    company: 'Kumar Constructions',
-    email: 'rajesh@kumar.com',
-    phone: '+91 98765 43210',
-    productSku: 'LK-ENT-SW-01',
-    message: 'Need bulk quote for 200 units of Entice switches for upcoming project',
-    source: 'form',
-    status: 'new',
-    createdAt: '2024-01-15T10:30:00Z'
-  },
-  {
-    id: '2',
-    name: 'Priya Sharma',
-    company: 'Home Interiors',
-    email: 'priya@homeint.com',
-    phone: '+91 87654 32109',
-    message: 'Looking for complete electrical solution for 3BHK apartment',
-    source: 'whatsapp',
-    status: 'contacted',
-    createdAt: '2024-01-14T15:45:00Z'
-  },
-  {
-    id: '3',
-    name: 'Amit Patel',
-    company: 'Patel Electricals',
-    email: 'amit@patel.com',
-    phone: '+91 76543 21098',
-    message: 'Photo order attached - please match and quote',
-    source: 'photo',
-    status: 'quoted',
-    createdAt: '2024-01-13T09:15:00Z'
-  },
-];
+// TODO: Replace with API call when backend endpoint is available
+const mockInquiries: Inquiry[] = [];
 
 const statusColors = {
   new: 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300',
