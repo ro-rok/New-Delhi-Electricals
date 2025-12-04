@@ -15,14 +15,15 @@ from .main import (
     Token,
 )
 from .product import (
+    CircuitProtectionSpecs,
+    CoverPlateSpecs,
     MediaImage,
     Product,
     ProductMedia,
     ProductPricing,
     ProductSEO,
-    ProductSpecs,
     ProductStatus,
-    ProductVariant,
+    SwitchSpecs,
 )
 
 __all__ = [
@@ -39,12 +40,13 @@ __all__ = [
     "Inquiry",
     "AdminLog",
     "Product",
-    "ProductSpecs",
+    "SwitchSpecs",
+    "CircuitProtectionSpecs",
+    "CoverPlateSpecs",
     "ProductPricing",
     "ProductMedia",
     "MediaImage",
     "ProductSEO",
     "ProductStatus",
-    "ProductVariant",
 ]
 

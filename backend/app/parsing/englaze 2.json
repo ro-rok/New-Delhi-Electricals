@@ -1,1066 +1,1056 @@
 [
-    {
-      "sku": "CB92402SW20",
-      "name": "Switch 20A DP with Indicator 2M - Snow White",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 20,
-        "color": "Snow White",
-        "mw": 2,
-        "has_indicator": true,
-        "type_detail": "20A DP 1-way"
-      },
-      "variant": [
-        "CB92402SM20"
-      ],
-      "pricing": {
-        "mrp": 847,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-20a-dp-indicator-2m-snow-white",
-        "keywords": [
-          "Switch",
-          "20A",
-          "DP",
-          "1-way",
-          "Indicator",
-          "2M",
-          "Snow White",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 20A DP with Indicator 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch with indicator."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+  {
+    "sku": "CB92402SW20",
+    "name": "Switch 20A DP with Indicator 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 20,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "20A DP 1-way"
     },
-    {
-      "sku": "CB92402SM20",
-      "name": "Switch 20A DP with Indicator 2M - Mountain Grey",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 20,
-        "color": "Mountain Grey",
-        "mw": 2,
-        "has_indicator": true,
-        "type_detail": "20A DP 1-way"
-      },
-      "variant": [
-        "CB92402SW20"
-      ],
-      "pricing": {
-        "mrp": 1062,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-20a-dp-indicator-2m-mountain-grey",
-        "keywords": [
-          "Switch",
-          "20A",
-          "DP",
-          "1-way",
-          "Indicator",
-          "2M",
-          "Mountain Grey",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 20A DP with Indicator 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch with indicator."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "variant": [
+      "CB92402SM20"
+    ],
+    "pricing": {
+      "mrp": 847,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
     },
-  
-    {
-      "sku": "CB92402SW32",
-      "name": "Switch 32A DP with Indicator 2M - Snow White",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 32,
-        "color": "Snow White",
-        "mw": 2,
-        "has_indicator": true,
-        "type_detail": "32A DP 1-way"
-      },
-      "variant": [
-        "CB92402SM32",
-        "CB92402SB32"
-      ],
-      "pricing": {
-        "mrp": 1014,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-32a-dp-indicator-2m-snow-white",
-        "keywords": [
-          "Switch",
-          "32A",
-          "DP",
-          "1-way",
-          "Indicator",
-          "2M",
-          "Snow White",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 32A DP with Indicator 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch with indicator."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "media": {
+      "images": [],
+      "documents": []
     },
-    {
-      "sku": "CB92402SM32",
-      "name": "Switch 32A DP with Indicator 2M - Mountain Grey",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 32,
-        "color": "Mountain Grey",
-        "mw": 2,
-        "has_indicator": true,
-        "type_detail": "32A DP 1-way"
-      },
-      "variant": [
-        "CB92402SW32",
-        "CB92402SB32"
+    "seo": {
+      "slug": "switch-20a-dp-indicator-2m-snow-white",
+      "keywords": [
+        "Switch",
+        "20A",
+        "DP",
+        "1-way",
+        "Indicator",
+        "2M",
+        "Snow White",
+        "Mega Switch",
+        "ENGLAZE"
       ],
-      "pricing": {
-        "mrp": 1268,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-32a-dp-indicator-2m-mountain-grey",
-        "keywords": [
-          "Switch",
-          "32A",
-          "DP",
-          "1-way",
-          "Indicator",
-          "2M",
-          "Mountain Grey",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 32A DP with Indicator 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch with indicator."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+      "meta_description": "Buy Switch 20A DP with Indicator 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch with indicator."
     },
-    {
-      "sku": "CB92402SB32",
-      "name": "Switch 32A DP with Indicator 2M - Sparkle Black",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 32,
-        "color": "Sparkle Black",
-        "mw": 2,
-        "has_indicator": true,
-        "type_detail": "32A DP 1-way"
-      },
-      "variant": [
-        "CB92402SW32",
-        "CB92402SM32"
-      ],
-      "pricing": {
-        "mrp": 1268,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-32a-dp-indicator-2m-sparkle-black",
-        "keywords": [
-          "Switch",
-          "32A",
-          "DP",
-          "1-way",
-          "Indicator",
-          "2M",
-          "Sparkle Black",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 32A DP with Indicator 2M Sparkle Black online at New Delhi Electricals. ENGLAZE mega switch with indicator."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "status": {
+      "is_active": true,
+      "is_featured": false
     },
-  
-    {
-      "sku": "CB92102SW10",
-      "name": "Switch 10AX 1-way 2M - Snow White",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 10,
-        "color": "Snow White",
-        "mw": 2,
-        "has_indicator": false,
-        "type_detail": "10AX 1-way"
-      },
-      "variant": [
-        "CB92102SM10"
-      ],
-      "pricing": {
-        "mrp": 351,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-10ax-1-way-2m-snow-white",
-        "keywords": [
-          "Switch",
-          "10AX",
-          "1-way",
-          "2M",
-          "Snow White",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 10AX 1-way 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92402SM20",
+    "name": "Switch 20A DP with Indicator 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 20,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "20A DP 1-way"
     },
-    {
-      "sku": "CB92102SM10",
-      "name": "Switch 10AX 1-way 2M - Mountain Grey",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 10,
-        "color": "Mountain Grey",
-        "mw": 2,
-        "has_indicator": false,
-        "type_detail": "10AX 1-way"
-      },
-      "variant": [
-        "CB92102SW10"
-      ],
-      "pricing": {
-        "mrp": 439,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-10ax-1-way-2m-mountain-grey",
-        "keywords": [
-          "Switch",
-          "10AX",
-          "1-way",
-          "2M",
-          "Mountain Grey",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 10AX 1-way 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "variant": [
+      "CB92402SW20"
+    ],
+    "pricing": {
+      "mrp": 1062,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
     },
-  
-    {
-      "sku": "CB92302SW10",
-      "name": "Switch 10AX 1-way with Indicator 2M - Snow White",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 10,
-        "color": "Snow White",
-        "mw": 2,
-        "has_indicator": true,
-        "type_detail": "10AX 1-way"
-      },
-      "variant": [
-        "CB92302SM10"
-      ],
-      "pricing": {
-        "mrp": 469,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-10ax-1-way-indicator-2m-snow-white",
-        "keywords": [
-          "Switch",
-          "10AX",
-          "1-way",
-          "Indicator",
-          "2M",
-          "Snow White",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 10AX 1-way with Indicator 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch with indicator."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "media": {
+      "images": [],
+      "documents": []
     },
-    {
-      "sku": "CB92302SM10",
-      "name": "Switch 10AX 1-way with Indicator 2M - Mountain Grey",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 10,
-        "color": "Mountain Grey",
-        "mw": 2,
-        "has_indicator": true,
-        "type_detail": "10AX 1-way"
-      },
-      "variant": [
-        "CB92302SW10"
+    "seo": {
+      "slug": "switch-20a-dp-indicator-2m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "20A",
+        "DP",
+        "1-way",
+        "Indicator",
+        "2M",
+        "Mountain Grey",
+        "Mega Switch",
+        "ENGLAZE"
       ],
-      "pricing": {
-        "mrp": 591,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-10ax-1-way-indicator-2m-mountain-grey",
-        "keywords": [
-          "Switch",
-          "10AX",
-          "1-way",
-          "Indicator",
-          "2M",
-          "Mountain Grey",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 10AX 1-way with Indicator 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch with indicator."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+      "meta_description": "Buy Switch 20A DP with Indicator 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch with indicator."
     },
-  
-    {
-      "sku": "CB92202SW10",
-      "name": "Switch 10AX 2-way 2M - Snow White",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 10,
-        "color": "Snow White",
-        "mw": 2,
-        "has_indicator": false,
-        "type_detail": "10AX 2-way"
-      },
-      "variant": [
-        "CB92202SM10"
-      ],
-      "pricing": {
-        "mrp": 424,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-10ax-2-way-2m-snow-white",
-        "keywords": [
-          "Switch",
-          "10AX",
-          "2-way",
-          "2M",
-          "Snow White",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 10AX 2-way 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "status": {
+      "is_active": true,
+      "is_featured": false
     },
-    {
-      "sku": "CB92202SM10",
-      "name": "Switch 10AX 2-way 2M - Mountain Grey",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 10,
-        "color": "Mountain Grey",
-        "mw": 2,
-        "has_indicator": false,
-        "type_detail": "10AX 2-way"
-      },
-      "variant": [
-        "CB92202SW10"
-      ],
-      "pricing": {
-        "mrp": 533,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-10ax-2-way-2m-mountain-grey",
-        "keywords": [
-          "Switch",
-          "10AX",
-          "2-way",
-          "2M",
-          "Mountain Grey",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 10AX 2-way 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92402SW32",
+    "name": "Switch 32A DP with Indicator 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 32,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "32A DP 1-way"
     },
-  
-    {
-      "sku": "CB92102SW16",
-      "name": "Switch 16AX 1-way 2M - Snow White",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 16,
-        "color": "Snow White",
-        "mw": 2,
-        "has_indicator": false,
-        "type_detail": "16AX 1-way"
-      },
-      "variant": [
-        "CB92102SM16"
-      ],
-      "pricing": {
-        "mrp": 524,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-16ax-1-way-2m-snow-white",
-        "keywords": [
-          "Switch",
-          "16AX",
-          "1-way",
-          "2M",
-          "Snow White",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 16AX 1-way 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "variant": [
+      "CB92402SM32",
+      "CB92402SB32"
+    ],
+    "pricing": {
+      "mrp": 1014,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
     },
-    {
-      "sku": "CB92102SM16",
-      "name": "Switch 16AX 1-way 2M - Mountain Grey",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 16,
-        "color": "Mountain Grey",
-        "mw": 2,
-        "has_indicator": false,
-        "type_detail": "16AX 1-way"
-      },
-      "variant": [
-        "CB92102SW16"
-      ],
-      "pricing": {
-        "mrp": 654,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-16ax-1-way-2m-mountain-grey",
-        "keywords": [
-          "Switch",
-          "16AX",
-          "1-way",
-          "2M",
-          "Mountain Grey",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 16AX 1-way 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "media": {
+      "images": [],
+      "documents": []
     },
-  
-    {
-      "sku": "CB92302SW16",
-      "name": "Switch 16AX 1-way with Indicator 2M - Snow White",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 16,
-        "color": "Snow White",
-        "mw": 2,
-        "has_indicator": true,
-        "type_detail": "16AX 1-way"
-      },
-      "variant": [
-        "CB92302SM16"
+    "seo": {
+      "slug": "switch-32a-dp-indicator-2m-snow-white",
+      "keywords": [
+        "Switch",
+        "32A",
+        "DP",
+        "1-way",
+        "Indicator",
+        "2M",
+        "Snow White",
+        "Mega Switch",
+        "ENGLAZE"
       ],
-      "pricing": {
-        "mrp": 631,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-16ax-1-way-indicator-2m-snow-white",
-        "keywords": [
-          "Switch",
-          "16AX",
-          "1-way",
-          "Indicator",
-          "2M",
-          "Snow White",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 16AX 1-way with Indicator 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch with indicator."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+      "meta_description": "Buy Switch 32A DP with Indicator 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch with indicator."
     },
-    {
-      "sku": "CB92302SM16",
-      "name": "Switch 16AX 1-way with Indicator 2M - Mountain Grey",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 16,
-        "color": "Mountain Grey",
-        "mw": 2,
-        "has_indicator": true,
-        "type_detail": "16AX 1-way"
-      },
-      "variant": [
-        "CB92302SW16"
-      ],
-      "pricing": {
-        "mrp": 789,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-16ax-1-way-indicator-2m-mountain-grey",
-        "keywords": [
-          "Switch",
-          "16AX",
-          "1-way",
-          "Indicator",
-          "2M",
-          "Mountain Grey",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 16AX 1-way with Indicator 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch with indicator."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "status": {
+      "is_active": true,
+      "is_featured": false
     },
-  
-    {
-      "sku": "CB92202SW16",
-      "name": "Switch 16AX 2-way 2M - Snow White",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 16,
-        "color": "Snow White",
-        "mw": 2,
-        "has_indicator": false,
-        "type_detail": "16AX 2-way"
-      },
-      "variant": [
-        "CB92202SM16"
-      ],
-      "pricing": {
-        "mrp": 601,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-16ax-2-way-2m-snow-white",
-        "keywords": [
-          "Switch",
-          "16AX",
-          "2-way",
-          "2M",
-          "Snow White",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 16AX 2-way 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92402SM32",
+    "name": "Switch 32A DP with Indicator 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 32,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "32A DP 1-way"
     },
-    {
-      "sku": "CB92202SM16",
-      "name": "Switch 16AX 2-way 2M - Mountain Grey",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 16,
-        "color": "Mountain Grey",
-        "mw": 2,
-        "has_indicator": false,
-        "type_detail": "16AX 2-way"
-      },
-      "variant": [
-        "CB92202SW16"
-      ],
-      "pricing": {
-        "mrp": 751,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-16ax-2-way-2m-mountain-grey",
-        "keywords": [
-          "Switch",
-          "16AX",
-          "2-way",
-          "2M",
-          "Mountain Grey",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 16AX 2-way 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "variant": [
+      "CB92402SW32",
+      "CB92402SB32"
+    ],
+    "pricing": {
+      "mrp": 1268,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
     },
-  
-    {
-      "sku": "CB92102SW20",
-      "name": "Switch 20A 1-way 2M - Snow White",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 20,
-        "color": "Snow White",
-        "mw": 2,
-        "has_indicator": false,
-        "type_detail": "20A 1-way"
-      },
-      "variant": [
-        "CB92102SM20"
-      ],
-      "pricing": {
-        "mrp": 653,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-20a-1-way-2m-snow-white",
-        "keywords": [
-          "Switch",
-          "20A",
-          "1-way",
-          "2M",
-          "Snow White",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 20A 1-way 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "media": {
+      "images": [],
+      "documents": []
     },
-    {
-      "sku": "CB92102SM20",
-      "name": "Switch 20A 1-way 2M - Mountain Grey",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 20,
-        "color": "Mountain Grey",
-        "mw": 2,
-        "has_indicator": false,
-        "type_detail": "20A 1-way"
-      },
-      "variant": [
-        "CB92102SW20"
+    "seo": {
+      "slug": "switch-32a-dp-indicator-2m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "32A",
+        "DP",
+        "1-way",
+        "Indicator",
+        "2M",
+        "Mountain Grey",
+        "Mega Switch",
+        "ENGLAZE"
       ],
-      "pricing": {
-        "mrp": 816,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-20a-1-way-2m-mountain-grey",
-        "keywords": [
-          "Switch",
-          "20A",
-          "1-way",
-          "2M",
-          "Mountain Grey",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 20A 1-way 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+      "meta_description": "Buy Switch 32A DP with Indicator 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch with indicator."
     },
-  
-    {
-      "sku": "CB92302SW20",
-      "name": "Switch 20A 1-way with Indicator 2M - Snow White",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 20,
-        "color": "Snow White",
-        "mw": 2,
-        "has_indicator": true,
-        "type_detail": "20A 1-way"
-      },
-      "variant": [
-        "CB92302SM20"
-      ],
-      "pricing": {
-        "mrp": 789,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-20a-1-way-indicator-2m-snow-white",
-        "keywords": [
-          "Switch",
-          "20A",
-          "1-way",
-          "Indicator",
-          "2M",
-          "Snow White",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 20A 1-way with Indicator 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch with indicator."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "status": {
+      "is_active": true,
+      "is_featured": false
     },
-    {
-      "sku": "CB92302SM20",
-      "name": "Switch 20A 1-way with Indicator 2M - Mountain Grey",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 20,
-        "color": "Mountain Grey",
-        "mw": 2,
-        "has_indicator": true,
-        "type_detail": "20A 1-way"
-      },
-      "variant": [
-        "CB92302SW20"
-      ],
-      "pricing": {
-        "mrp": 987,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-20a-1-way-indicator-2m-mountain-grey",
-        "keywords": [
-          "Switch",
-          "20A",
-          "1-way",
-          "Indicator",
-          "2M",
-          "Mountain Grey",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 20A 1-way with Indicator 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch with indicator."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92402SB32",
+    "name": "Switch 32A DP with Indicator 2M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 32,
+      "color": "Sparkle Black",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "32A DP 1-way"
     },
-  
-    {
-      "sku": "CB92202SW20",
-      "name": "Switch 20A 2-way 2M - Snow White",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 20,
-        "color": "Snow White",
-        "mw": 2,
-        "has_indicator": false,
-        "type_detail": "20A 2-way"
-      },
-      "variant": [
-        "CB92202SM20"
-      ],
-      "pricing": {
-        "mrp": 751,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-20a-2-way-2m-snow-white",
-        "keywords": [
-          "Switch",
-          "20A",
-          "2-way",
-          "2M",
-          "Snow White",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 20A 2-way 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
+    "variant": [
+      "CB92402SW32",
+      "CB92402SM32"
+    ],
+    "pricing": {
+      "mrp": 1268,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
     },
-    {
-      "sku": "CB92202SM20",
-      "name": "Switch 20A 2-way 2M - Mountain Grey",
-      "product_family": "ENGLAZE",
-      "category": "Switches",
-      "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
-      "specs": {
-        "ampere": 20,
-        "color": "Mountain Grey",
-        "mw": 2,
-        "has_indicator": false,
-        "type_detail": "20A 2-way"
-      },
-      "variant": [
-        "CB92202SW20"
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-32a-dp-indicator-2m-sparkle-black",
+      "keywords": [
+        "Switch",
+        "32A",
+        "DP",
+        "1-way",
+        "Indicator",
+        "2M",
+        "Sparkle Black",
+        "Mega Switch",
+        "ENGLAZE"
       ],
-      "pricing": {
-        "mrp": 940,
-        "discount": null,
-        "selling_price": null,
-        "std_pack": "10"
-      },
-      "media": {
-        "images": [],
-        "documents": []
-      },
-      "seo": {
-        "slug": "switch-20a-2-way-2m-mountain-grey",
-        "keywords": [
-          "Switch",
-          "20A",
-          "2-way",
-          "2M",
-          "Mountain Grey",
-          "Mega Switch",
-          "ENGLAZE"
-        ],
-        "meta_description": "Buy Switch 20A 2-way 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch."
-      },
-      "status": {
-        "is_active": true,
-        "is_featured": false
-      },
-      "brand": "Lauritz Knudsen"
-    }
-  ]
+      "meta_description": "Buy Switch 32A DP with Indicator 2M Sparkle Black online at New Delhi Electricals. ENGLAZE mega switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92102SW10",
+    "name": "Switch 10AX 1-way 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 10,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "10AX 1-way"
+    },
+    "variant": [
+      "CB92102SM10"
+    ],
+    "pricing": {
+      "mrp": 351,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-1-way-2m-snow-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "1-way",
+        "2M",
+        "Snow White",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 1-way 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92102SM10",
+    "name": "Switch 10AX 1-way 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 10,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "10AX 1-way"
+    },
+    "variant": [
+      "CB92102SW10"
+    ],
+    "pricing": {
+      "mrp": 439,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-1-way-2m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "1-way",
+        "2M",
+        "Mountain Grey",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 1-way 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92302SW10",
+    "name": "Switch 10AX 1-way with Indicator 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 10,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "10AX 1-way"
+    },
+    "variant": [
+      "CB92302SM10"
+    ],
+    "pricing": {
+      "mrp": 469,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-1-way-indicator-2m-snow-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "1-way",
+        "Indicator",
+        "2M",
+        "Snow White",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 1-way with Indicator 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92302SM10",
+    "name": "Switch 10AX 1-way with Indicator 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 10,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "10AX 1-way"
+    },
+    "variant": [
+      "CB92302SW10"
+    ],
+    "pricing": {
+      "mrp": 591,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-1-way-indicator-2m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "1-way",
+        "Indicator",
+        "2M",
+        "Mountain Grey",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 1-way with Indicator 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92202SW10",
+    "name": "Switch 10AX 2-way 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 10,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "10AX 2-way"
+    },
+    "variant": [
+      "CB92202SM10"
+    ],
+    "pricing": {
+      "mrp": 424,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-2-way-2m-snow-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "2-way",
+        "2M",
+        "Snow White",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 2-way 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92202SM10",
+    "name": "Switch 10AX 2-way 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 10,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "10AX 2-way"
+    },
+    "variant": [
+      "CB92202SW10"
+    ],
+    "pricing": {
+      "mrp": 533,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-2-way-2m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "2-way",
+        "2M",
+        "Mountain Grey",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 2-way 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92102SW16",
+    "name": "Switch 16AX 1-way 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 16,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB92102SM16"
+    ],
+    "pricing": {
+      "mrp": 524,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-2m-snow-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "2M",
+        "Snow White",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92102SM16",
+    "name": "Switch 16AX 1-way 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 16,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB92102SW16"
+    ],
+    "pricing": {
+      "mrp": 654,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-2m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "2M",
+        "Mountain Grey",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92302SW16",
+    "name": "Switch 16AX 1-way with Indicator 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 16,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB92302SM16"
+    ],
+    "pricing": {
+      "mrp": 631,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-indicator-2m-snow-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "Indicator",
+        "2M",
+        "Snow White",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way with Indicator 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92302SM16",
+    "name": "Switch 16AX 1-way with Indicator 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 16,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB92302SW16"
+    ],
+    "pricing": {
+      "mrp": 789,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-indicator-2m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "Indicator",
+        "2M",
+        "Mountain Grey",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way with Indicator 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92202SW16",
+    "name": "Switch 16AX 2-way 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 16,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "16AX 2-way"
+    },
+    "variant": [
+      "CB92202SM16"
+    ],
+    "pricing": {
+      "mrp": 601,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-2-way-2m-snow-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "2-way",
+        "2M",
+        "Snow White",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 2-way 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92202SM16",
+    "name": "Switch 16AX 2-way 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 16,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "16AX 2-way"
+    },
+    "variant": [
+      "CB92202SW16"
+    ],
+    "pricing": {
+      "mrp": 751,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-2-way-2m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "2-way",
+        "2M",
+        "Mountain Grey",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 2-way 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92102SW20",
+    "name": "Switch 20A 1-way 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 20,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "20A 1-way"
+    },
+    "variant": [
+      "CB92102SM20"
+    ],
+    "pricing": {
+      "mrp": 653,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-20a-1-way-2m-snow-white",
+      "keywords": [
+        "Switch",
+        "20A",
+        "1-way",
+        "2M",
+        "Snow White",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 20A 1-way 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92102SM20",
+    "name": "Switch 20A 1-way 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 20,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "20A 1-way"
+    },
+    "variant": [
+      "CB92102SW20"
+    ],
+    "pricing": {
+      "mrp": 816,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-20a-1-way-2m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "20A",
+        "1-way",
+        "2M",
+        "Mountain Grey",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 20A 1-way 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92302SW20",
+    "name": "Switch 20A 1-way with Indicator 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 20,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "20A 1-way"
+    },
+    "variant": [
+      "CB92302SM20"
+    ],
+    "pricing": {
+      "mrp": 789,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-20a-1-way-indicator-2m-snow-white",
+      "keywords": [
+        "Switch",
+        "20A",
+        "1-way",
+        "Indicator",
+        "2M",
+        "Snow White",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 20A 1-way with Indicator 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92302SM20",
+    "name": "Switch 20A 1-way with Indicator 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 20,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "20A 1-way"
+    },
+    "variant": [
+      "CB92302SW20"
+    ],
+    "pricing": {
+      "mrp": 987,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-20a-1-way-indicator-2m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "20A",
+        "1-way",
+        "Indicator",
+        "2M",
+        "Mountain Grey",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 20A 1-way with Indicator 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92202SW20",
+    "name": "Switch 20A 2-way 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 20,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "20A 2-way"
+    },
+    "variant": [
+      "CB92202SM20"
+    ],
+    "pricing": {
+      "mrp": 751,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-20a-2-way-2m-snow-white",
+      "keywords": [
+        "Switch",
+        "20A",
+        "2-way",
+        "2M",
+        "Snow White",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 20A 2-way 2M Snow White online at New Delhi Electricals. ENGLAZE mega switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92202SM20",
+    "name": "Switch 20A 2-way 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "SWITCHES - 2 MODULE (Mega Switches)",
+    "specs": {
+      "ampere": 20,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "20A 2-way"
+    },
+    "variant": [
+      "CB92202SW20"
+    ],
+    "pricing": {
+      "mrp": 940,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-20a-2-way-2m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "20A",
+        "2-way",
+        "2M",
+        "Mountain Grey",
+        "Mega Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 20A 2-way 2M Mountain Grey online at New Delhi Electricals. ENGLAZE mega switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  }
+]

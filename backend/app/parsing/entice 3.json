@@ -9,7 +9,8 @@
       "color": "White",
       "mw": 1,
       "type_detail": "1 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -50,7 +51,8 @@
       "color": "White",
       "mw": 2,
       "type_detail": "2 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -91,7 +93,8 @@
       "color": "White",
       "mw": 3,
       "type_detail": "3 Module Cover Plate with Grid Frame",
-      "dimensions": "125 x 90 x 14 mm"
+      "dimensions": "125 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -132,7 +135,8 @@
       "color": "White",
       "mw": 4,
       "type_detail": "4 Module Cover Plate with Grid Frame",
-      "dimensions": "157 x 90 x 14 mm"
+      "dimensions": "157 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -173,7 +177,8 @@
       "color": "White",
       "mw": 6,
       "type_detail": "6 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 90 x 14 mm"
+      "dimensions": "228 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -215,7 +220,8 @@
       "mw": 8,
       "type_detail": "8 Module Cover Plate Horizontal with Grid Frame",
       "dimensions": "262 x 90 x 14 mm",
-      "orientation": "Horizontal"
+      "orientation": "Horizontal",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -258,7 +264,8 @@
       "mw": 8,
       "type_detail": "8 Module Cover Plate Square with Grid Frame",
       "dimensions": "157 x 157 x 14 mm",
-      "orientation": "Square"
+      "orientation": "Square",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -302,7 +309,8 @@
       "type_detail": "8 Module Cover Plate with Grid Frame - Small Size",
       "dimensions": "262 x 90 x 18 mm",
       "orientation": "Horizontal",
-      "suitable_for": "Oris 10M Boxes"
+      "suitable_for": "Oris 10M Boxes",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -345,7 +353,8 @@
       "color": "White",
       "mw": 12,
       "type_detail": "12 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 157 x 14 mm"
+      "dimensions": "228 x 157 x 14 mm",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -386,7 +395,8 @@
       "color": "White",
       "mw": 16,
       "type_detail": "16 Module Cover Plate with Grid Frame",
-      "dimensions": "248 x 156 x 18 mm"
+      "dimensions": "248 x 156 x 18 mm",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -427,7 +437,8 @@
       "color": "White",
       "mw": 18,
       "type_detail": "18 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 226 x 14 mm"
+      "dimensions": "228 x 226 x 14 mm",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -467,7 +478,8 @@
     "specs": {
       "color": "Charcoal Grey",
       "mw": 1,
-      "type_detail": "1 Module Cover Plate"
+      "type_detail": "1 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91101FE11",
@@ -513,7 +525,8 @@
     "specs": {
       "color": "Eco Grey",
       "mw": 1,
-      "type_detail": "1 Module Cover Plate"
+      "type_detail": "1 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91101FG11",
@@ -559,7 +572,8 @@
     "specs": {
       "color": "Gold Rush",
       "mw": 1,
-      "type_detail": "1 Module Cover Plate"
+      "type_detail": "1 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91101FG11",
@@ -605,7 +619,8 @@
     "specs": {
       "color": "Ice Silver",
       "mw": 1,
-      "type_detail": "1 Module Cover Plate"
+      "type_detail": "1 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91101FG11",
@@ -651,7 +666,8 @@
     "specs": {
       "color": "Black Beauty",
       "mw": 1,
-      "type_detail": "1 Module Cover Plate"
+      "type_detail": "1 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91101FG11",
@@ -697,7 +713,8 @@
     "specs": {
       "color": "Bottle Green",
       "mw": 1,
-      "type_detail": "1 Module Cover Plate"
+      "type_detail": "1 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91101FG11",
@@ -734,7 +751,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91102FG11",
     "name": "2 Module Cover Plate - Charcoal Grey (Vivid)",
@@ -744,7 +760,8 @@
     "specs": {
       "color": "Charcoal Grey",
       "mw": 2,
-      "type_detail": "2 Module Cover Plate"
+      "type_detail": "2 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91102FE11",
@@ -790,7 +807,8 @@
     "specs": {
       "color": "Eco Grey",
       "mw": 2,
-      "type_detail": "2 Module Cover Plate"
+      "type_detail": "2 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91102FG11",
@@ -836,7 +854,8 @@
     "specs": {
       "color": "Gold Rush",
       "mw": 2,
-      "type_detail": "2 Module Cover Plate"
+      "type_detail": "2 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91102FG11",
@@ -882,7 +901,8 @@
     "specs": {
       "color": "Ice Silver",
       "mw": 2,
-      "type_detail": "2 Module Cover Plate"
+      "type_detail": "2 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91102FG11",
@@ -928,7 +948,8 @@
     "specs": {
       "color": "Black Beauty",
       "mw": 2,
-      "type_detail": "2 Module Cover Plate"
+      "type_detail": "2 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91102FG11",
@@ -974,7 +995,8 @@
     "specs": {
       "color": "Bottle Green",
       "mw": 2,
-      "type_detail": "2 Module Cover Plate"
+      "type_detail": "2 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91102FG11",
@@ -1011,7 +1033,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91103FG11",
     "name": "3 Module Cover Plate - Charcoal Grey (Vivid)",
@@ -1021,7 +1042,8 @@
     "specs": {
       "color": "Charcoal Grey",
       "mw": 3,
-      "type_detail": "3 Module Cover Plate"
+      "type_detail": "3 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91103FE11",
@@ -1067,7 +1089,8 @@
     "specs": {
       "color": "Eco Grey",
       "mw": 3,
-      "type_detail": "3 Module Cover Plate"
+      "type_detail": "3 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91103FG11",
@@ -1113,7 +1136,8 @@
     "specs": {
       "color": "Gold Rush",
       "mw": 3,
-      "type_detail": "3 Module Cover Plate"
+      "type_detail": "3 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91103FG11",
@@ -1159,7 +1183,8 @@
     "specs": {
       "color": "Ice Silver",
       "mw": 3,
-      "type_detail": "3 Module Cover Plate"
+      "type_detail": "3 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91103FG11",
@@ -1205,7 +1230,8 @@
     "specs": {
       "color": "Black Beauty",
       "mw": 3,
-      "type_detail": "3 Module Cover Plate"
+      "type_detail": "3 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91103FG11",
@@ -1251,7 +1277,8 @@
     "specs": {
       "color": "Bottle Green",
       "mw": 3,
-      "type_detail": "3 Module Cover Plate"
+      "type_detail": "3 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91103FG11",
@@ -1288,7 +1315,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91104FG11",
     "name": "4 Module Cover Plate - Charcoal Grey (Vivid)",
@@ -1298,7 +1324,8 @@
     "specs": {
       "color": "Charcoal Grey",
       "mw": 4,
-      "type_detail": "4 Module Cover Plate"
+      "type_detail": "4 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91104FE11",
@@ -1344,7 +1371,8 @@
     "specs": {
       "color": "Eco Grey",
       "mw": 4,
-      "type_detail": "4 Module Cover Plate"
+      "type_detail": "4 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91104FG11",
@@ -1390,7 +1418,8 @@
     "specs": {
       "color": "Gold Rush",
       "mw": 4,
-      "type_detail": "4 Module Cover Plate"
+      "type_detail": "4 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91104FG11",
@@ -1436,7 +1465,8 @@
     "specs": {
       "color": "Ice Silver",
       "mw": 4,
-      "type_detail": "4 Module Cover Plate"
+      "type_detail": "4 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91104FG11",
@@ -1482,7 +1512,8 @@
     "specs": {
       "color": "Black Beauty",
       "mw": 4,
-      "type_detail": "4 Module Cover Plate"
+      "type_detail": "4 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91104FG11",
@@ -1528,7 +1559,8 @@
     "specs": {
       "color": "Bottle Green",
       "mw": 4,
-      "type_detail": "4 Module Cover Plate"
+      "type_detail": "4 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91104FG11",
@@ -1565,7 +1597,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91106FG11",
     "name": "6 Module Cover Plate - Charcoal Grey (Vivid)",
@@ -1575,7 +1606,8 @@
     "specs": {
       "color": "Charcoal Grey",
       "mw": 6,
-      "type_detail": "6 Module Cover Plate"
+      "type_detail": "6 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91106FE11",
@@ -1621,7 +1653,8 @@
     "specs": {
       "color": "Eco Grey",
       "mw": 6,
-      "type_detail": "6 Module Cover Plate"
+      "type_detail": "6 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91106FG11",
@@ -1667,7 +1700,8 @@
     "specs": {
       "color": "Gold Rush",
       "mw": 6,
-      "type_detail": "6 Module Cover Plate"
+      "type_detail": "6 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91106FG11",
@@ -1713,7 +1747,8 @@
     "specs": {
       "color": "Ice Silver",
       "mw": 6,
-      "type_detail": "6 Module Cover Plate"
+      "type_detail": "6 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91106FG11",
@@ -1759,7 +1794,8 @@
     "specs": {
       "color": "Black Beauty",
       "mw": 6,
-      "type_detail": "6 Module Cover Plate"
+      "type_detail": "6 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91106FG11",
@@ -1805,7 +1841,8 @@
     "specs": {
       "color": "Bottle Green",
       "mw": 6,
-      "type_detail": "6 Module Cover Plate"
+      "type_detail": "6 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91106FG11",
@@ -1842,7 +1879,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91108FG11",
     "name": "8 Module Cover Plate Horizontal - Charcoal Grey (Vivid)",
@@ -1852,7 +1888,8 @@
     "specs": {
       "color": "Charcoal Grey",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Horizontal"
+      "type_detail": "8 Module Cover Plate Horizontal",
+      "Grid frame": false
     },
     "variant": [
       "CB91108FE11",
@@ -1899,7 +1936,8 @@
     "specs": {
       "color": "Eco Grey",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Horizontal"
+      "type_detail": "8 Module Cover Plate Horizontal",
+      "Grid frame": false
     },
     "variant": [
       "CB91108FG11",
@@ -1946,7 +1984,8 @@
     "specs": {
       "color": "Gold Rush",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Horizontal"
+      "type_detail": "8 Module Cover Plate Horizontal",
+      "Grid frame": false
     },
     "variant": [
       "CB91108FG11",
@@ -1993,7 +2032,8 @@
     "specs": {
       "color": "Ice Silver",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Horizontal"
+      "type_detail": "8 Module Cover Plate Horizontal",
+      "Grid frame": false
     },
     "variant": [
       "CB91108FG11",
@@ -2040,7 +2080,8 @@
     "specs": {
       "color": "Black Beauty",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Horizontal"
+      "type_detail": "8 Module Cover Plate Horizontal",
+      "Grid frame": false
     },
     "variant": [
       "CB91108FG11",
@@ -2087,7 +2128,8 @@
     "specs": {
       "color": "Bottle Green",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Horizontal"
+      "type_detail": "8 Module Cover Plate Horizontal",
+      "Grid frame": false
     },
     "variant": [
       "CB91108FG11",
@@ -2125,7 +2167,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91208FG11",
     "name": "8 Module Cover Plate Square - Charcoal Grey (Vivid)",
@@ -2135,7 +2176,8 @@
     "specs": {
       "color": "Charcoal Grey",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Square"
+      "type_detail": "8 Module Cover Plate Square",
+      "Grid frame": false
     },
     "variant": [
       "CB91208FE11",
@@ -2182,7 +2224,8 @@
     "specs": {
       "color": "Eco Grey",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Square"
+      "type_detail": "8 Module Cover Plate Square",
+      "Grid frame": false
     },
     "variant": [
       "CB91208FG11",
@@ -2229,7 +2272,8 @@
     "specs": {
       "color": "Gold Rush",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Square"
+      "type_detail": "8 Module Cover Plate Square",
+      "Grid frame": false
     },
     "variant": [
       "CB91208FG11",
@@ -2276,7 +2320,8 @@
     "specs": {
       "color": "Ice Silver",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Square"
+      "type_detail": "8 Module Cover Plate Square",
+      "Grid frame": false
     },
     "variant": [
       "CB91208FG11",
@@ -2323,7 +2368,8 @@
     "specs": {
       "color": "Black Beauty",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Square"
+      "type_detail": "8 Module Cover Plate Square",
+      "Grid frame": false
     },
     "variant": [
       "CB91208FG11",
@@ -2370,7 +2416,8 @@
     "specs": {
       "color": "Bottle Green",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Square"
+      "type_detail": "8 Module Cover Plate Square",
+      "Grid frame": false
     },
     "variant": [
       "CB91208FG11",
@@ -2408,7 +2455,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91112FG11",
     "name": "12 Module Cover Plate - Charcoal Grey (Vivid)",
@@ -2418,7 +2464,8 @@
     "specs": {
       "color": "Charcoal Grey",
       "mw": 12,
-      "type_detail": "12 Module Cover Plate"
+      "type_detail": "12 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91112FE11",
@@ -2464,7 +2511,8 @@
     "specs": {
       "color": "Eco Grey",
       "mw": 12,
-      "type_detail": "12 Module Cover Plate"
+      "type_detail": "12 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91112FG11",
@@ -2510,7 +2558,8 @@
     "specs": {
       "color": "Gold Rush",
       "mw": 12,
-      "type_detail": "12 Module Cover Plate"
+      "type_detail": "12 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91112FG11",
@@ -2556,7 +2605,8 @@
     "specs": {
       "color": "Ice Silver",
       "mw": 12,
-      "type_detail": "12 Module Cover Plate"
+      "type_detail": "12 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91112FG11",
@@ -2602,7 +2652,8 @@
     "specs": {
       "color": "Black Beauty",
       "mw": 12,
-      "type_detail": "12 Module Cover Plate"
+      "type_detail": "12 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91112FG11",
@@ -2648,7 +2699,8 @@
     "specs": {
       "color": "Bottle Green",
       "mw": 12,
-      "type_detail": "12 Module Cover Plate"
+      "type_detail": "12 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91112FG11",
@@ -2685,7 +2737,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91116FG11",
     "name": "16 Module Cover Plate - Charcoal Grey (Vivid)",
@@ -2695,7 +2746,8 @@
     "specs": {
       "color": "Charcoal Grey",
       "mw": 16,
-      "type_detail": "16 Module Cover Plate"
+      "type_detail": "16 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91116FE11",
@@ -2741,7 +2793,8 @@
     "specs": {
       "color": "Eco Grey",
       "mw": 16,
-      "type_detail": "16 Module Cover Plate"
+      "type_detail": "16 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91116FG11",
@@ -2787,7 +2840,8 @@
     "specs": {
       "color": "Gold Rush",
       "mw": 16,
-      "type_detail": "16 Module Cover Plate"
+      "type_detail": "16 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91116FG11",
@@ -2833,7 +2887,8 @@
     "specs": {
       "color": "Ice Silver",
       "mw": 16,
-      "type_detail": "16 Module Cover Plate"
+      "type_detail": "16 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91116FG11",
@@ -2879,7 +2934,8 @@
     "specs": {
       "color": "Black Beauty",
       "mw": 16,
-      "type_detail": "16 Module Cover Plate"
+      "type_detail": "16 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91116FG11",
@@ -2925,7 +2981,8 @@
     "specs": {
       "color": "Bottle Green",
       "mw": 16,
-      "type_detail": "16 Module Cover Plate"
+      "type_detail": "16 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91116FG11",
@@ -2962,7 +3019,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91118FG11",
     "name": "18 Module Cover Plate - Charcoal Grey (Vivid)",
@@ -2972,7 +3028,8 @@
     "specs": {
       "color": "Charcoal Grey",
       "mw": 18,
-      "type_detail": "18 Module Cover Plate"
+      "type_detail": "18 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91118FE11",
@@ -3018,7 +3075,8 @@
     "specs": {
       "color": "Eco Grey",
       "mw": 18,
-      "type_detail": "18 Module Cover Plate"
+      "type_detail": "18 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91118FG11",
@@ -3064,7 +3122,8 @@
     "specs": {
       "color": "Gold Rush",
       "mw": 18,
-      "type_detail": "18 Module Cover Plate"
+      "type_detail": "18 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91118FG11",
@@ -3110,7 +3169,8 @@
     "specs": {
       "color": "Ice Silver",
       "mw": 18,
-      "type_detail": "18 Module Cover Plate"
+      "type_detail": "18 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91118FG11",
@@ -3156,7 +3216,8 @@
     "specs": {
       "color": "Black Beauty",
       "mw": 18,
-      "type_detail": "18 Module Cover Plate"
+      "type_detail": "18 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91118FG11",
@@ -3202,7 +3263,8 @@
     "specs": {
       "color": "Bottle Green",
       "mw": 18,
-      "type_detail": "18 Module Cover Plate"
+      "type_detail": "18 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91118FG11",
@@ -3248,7 +3310,8 @@
     "specs": {
       "color": "Rustic Gold",
       "mw": 1,
-      "type_detail": "1 Module Cover Plate"
+      "type_detail": "1 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91101FM11",
@@ -3292,7 +3355,8 @@
     "specs": {
       "color": "Metallic Grey",
       "mw": 1,
-      "type_detail": "1 Module Cover Plate"
+      "type_detail": "1 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91101FR11",
@@ -3336,7 +3400,8 @@
     "specs": {
       "color": "Firestorm Orange",
       "mw": 1,
-      "type_detail": "1 Module Cover Plate"
+      "type_detail": "1 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91101FR11",
@@ -3380,7 +3445,8 @@
     "specs": {
       "color": "Rose Gold",
       "mw": 1,
-      "type_detail": "1 Module Cover Plate"
+      "type_detail": "1 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91101FR11",
@@ -3415,7 +3481,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91102FR11",
     "name": "2 Module Cover Plate - Rustic Gold (Vibrant)",
@@ -3425,7 +3490,8 @@
     "specs": {
       "color": "Rustic Gold",
       "mw": 2,
-      "type_detail": "2 Module Cover Plate"
+      "type_detail": "2 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91102FM11",
@@ -3469,7 +3535,8 @@
     "specs": {
       "color": "Metallic Grey",
       "mw": 2,
-      "type_detail": "2 Module Cover Plate"
+      "type_detail": "2 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91102FR11",
@@ -3513,7 +3580,8 @@
     "specs": {
       "color": "Firestorm Orange",
       "mw": 2,
-      "type_detail": "2 Module Cover Plate"
+      "type_detail": "2 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91102FR11",
@@ -3557,7 +3625,8 @@
     "specs": {
       "color": "Rose Gold",
       "mw": 2,
-      "type_detail": "2 Module Cover Plate"
+      "type_detail": "2 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91102FR11",
@@ -3592,7 +3661,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91103FR11",
     "name": "3 Module Cover Plate - Rustic Gold (Vibrant)",
@@ -3602,7 +3670,8 @@
     "specs": {
       "color": "Rustic Gold",
       "mw": 3,
-      "type_detail": "3 Module Cover Plate"
+      "type_detail": "3 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91103FM11",
@@ -3646,7 +3715,8 @@
     "specs": {
       "color": "Metallic Grey",
       "mw": 3,
-      "type_detail": "3 Module Cover Plate"
+      "type_detail": "3 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91103FR11",
@@ -3690,7 +3760,8 @@
     "specs": {
       "color": "Firestorm Orange",
       "mw": 3,
-      "type_detail": "3 Module Cover Plate"
+      "type_detail": "3 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91103FR11",
@@ -3734,7 +3805,8 @@
     "specs": {
       "color": "Rose Gold",
       "mw": 3,
-      "type_detail": "3 Module Cover Plate"
+      "type_detail": "3 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91103FR11",
@@ -3769,7 +3841,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91104FR11",
     "name": "4 Module Cover Plate - Rustic Gold (Vibrant)",
@@ -3779,7 +3850,8 @@
     "specs": {
       "color": "Rustic Gold",
       "mw": 4,
-      "type_detail": "4 Module Cover Plate"
+      "type_detail": "4 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91104FM11",
@@ -3823,7 +3895,8 @@
     "specs": {
       "color": "Metallic Grey",
       "mw": 4,
-      "type_detail": "4 Module Cover Plate"
+      "type_detail": "4 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91104FR11",
@@ -3867,7 +3940,8 @@
     "specs": {
       "color": "Firestorm Orange",
       "mw": 4,
-      "type_detail": "4 Module Cover Plate"
+      "type_detail": "4 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91104FR11",
@@ -3911,7 +3985,8 @@
     "specs": {
       "color": "Rose Gold",
       "mw": 4,
-      "type_detail": "4 Module Cover Plate"
+      "type_detail": "4 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91104FR11",
@@ -3946,7 +4021,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91106FR11",
     "name": "6 Module Cover Plate - Rustic Gold (Vibrant)",
@@ -3956,7 +4030,8 @@
     "specs": {
       "color": "Rustic Gold",
       "mw": 6,
-      "type_detail": "6 Module Cover Plate"
+      "type_detail": "6 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91106FM11",
@@ -4000,7 +4075,8 @@
     "specs": {
       "color": "Metallic Grey",
       "mw": 6,
-      "type_detail": "6 Module Cover Plate"
+      "type_detail": "6 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91106FR11",
@@ -4044,7 +4120,8 @@
     "specs": {
       "color": "Firestorm Orange",
       "mw": 6,
-      "type_detail": "6 Module Cover Plate"
+      "type_detail": "6 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91106FR11",
@@ -4088,7 +4165,8 @@
     "specs": {
       "color": "Rose Gold",
       "mw": 6,
-      "type_detail": "6 Module Cover Plate"
+      "type_detail": "6 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91106FR11",
@@ -4123,7 +4201,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91108FR11",
     "name": "8 Module Cover Plate Horizontal - Rustic Gold (Vibrant)",
@@ -4133,7 +4210,8 @@
     "specs": {
       "color": "Rustic Gold",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Horizontal"
+      "type_detail": "8 Module Cover Plate Horizontal",
+      "Grid frame": false
     },
     "variant": [
       "CB91108FM11",
@@ -4178,7 +4256,8 @@
     "specs": {
       "color": "Metallic Grey",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Horizontal"
+      "type_detail": "8 Module Cover Plate Horizontal",
+      "Grid frame": false
     },
     "variant": [
       "CB91108FR11",
@@ -4223,7 +4302,8 @@
     "specs": {
       "color": "Firestorm Orange",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Horizontal"
+      "type_detail": "8 Module Cover Plate Horizontal",
+      "Grid frame": false
     },
     "variant": [
       "CB91108FR11",
@@ -4268,7 +4348,8 @@
     "specs": {
       "color": "Rose Gold",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Horizontal"
+      "type_detail": "8 Module Cover Plate Horizontal",
+      "Grid frame": false
     },
     "variant": [
       "CB91108FR11",
@@ -4304,7 +4385,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91208FR11",
     "name": "8 Module Cover Plate Square - Rustic Gold (Vibrant)",
@@ -4314,7 +4394,8 @@
     "specs": {
       "color": "Rustic Gold",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Square"
+      "type_detail": "8 Module Cover Plate Square",
+      "Grid frame": false
     },
     "variant": [
       "CB91208FM11",
@@ -4359,7 +4440,8 @@
     "specs": {
       "color": "Metallic Grey",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Square"
+      "type_detail": "8 Module Cover Plate Square",
+      "Grid frame": false
     },
     "variant": [
       "CB91208FR11",
@@ -4404,7 +4486,8 @@
     "specs": {
       "color": "Firestorm Orange",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Square"
+      "type_detail": "8 Module Cover Plate Square",
+      "Grid frame": false
     },
     "variant": [
       "CB91208FR11",
@@ -4449,7 +4532,8 @@
     "specs": {
       "color": "Rose Gold",
       "mw": 8,
-      "type_detail": "8 Module Cover Plate Square"
+      "type_detail": "8 Module Cover Plate Square",
+      "Grid frame": false
     },
     "variant": [
       "CB91208FR11",
@@ -4485,7 +4569,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91112FR11",
     "name": "12 Module Cover Plate - Rustic Gold (Vibrant)",
@@ -4495,7 +4578,8 @@
     "specs": {
       "color": "Rustic Gold",
       "mw": 12,
-      "type_detail": "12 Module Cover Plate"
+      "type_detail": "12 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91112FM11",
@@ -4539,7 +4623,8 @@
     "specs": {
       "color": "Metallic Grey",
       "mw": 12,
-      "type_detail": "12 Module Cover Plate"
+      "type_detail": "12 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91112FR11",
@@ -4583,7 +4668,8 @@
     "specs": {
       "color": "Firestorm Orange",
       "mw": 12,
-      "type_detail": "12 Module Cover Plate"
+      "type_detail": "12 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91112FR11",
@@ -4627,7 +4713,8 @@
     "specs": {
       "color": "Rose Gold",
       "mw": 12,
-      "type_detail": "12 Module Cover Plate"
+      "type_detail": "12 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91112FR11",
@@ -4662,7 +4749,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91116FR11",
     "name": "16 Module Cover Plate - Rustic Gold (Vibrant)",
@@ -4672,7 +4758,8 @@
     "specs": {
       "color": "Rustic Gold",
       "mw": 16,
-      "type_detail": "16 Module Cover Plate"
+      "type_detail": "16 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91116FM11",
@@ -4716,7 +4803,8 @@
     "specs": {
       "color": "Metallic Grey",
       "mw": 16,
-      "type_detail": "16 Module Cover Plate"
+      "type_detail": "16 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91116FR11",
@@ -4760,7 +4848,8 @@
     "specs": {
       "color": "Firestorm Orange",
       "mw": 16,
-      "type_detail": "16 Module Cover Plate"
+      "type_detail": "16 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91116FR11",
@@ -4804,7 +4893,8 @@
     "specs": {
       "color": "Rose Gold",
       "mw": 16,
-      "type_detail": "16 Module Cover Plate"
+      "type_detail": "16 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91116FR11",
@@ -4839,7 +4929,6 @@
     },
     "brand": "Lauritz Knudsen"
   },
-
   {
     "sku": "CB91118FR11",
     "name": "18 Module Cover Plate - Rustic Gold (Vibrant)",
@@ -4849,7 +4938,8 @@
     "specs": {
       "color": "Rustic Gold",
       "mw": 18,
-      "type_detail": "18 Module Cover Plate"
+      "type_detail": "18 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91118FM11",
@@ -4893,7 +4983,8 @@
     "specs": {
       "color": "Metallic Grey",
       "mw": 18,
-      "type_detail": "18 Module Cover Plate"
+      "type_detail": "18 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91118FR11",
@@ -4937,7 +5028,8 @@
     "specs": {
       "color": "Firestorm Orange",
       "mw": 18,
-      "type_detail": "18 Module Cover Plate"
+      "type_detail": "18 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91118FR11",
@@ -4981,7 +5073,8 @@
     "specs": {
       "color": "Rose Gold",
       "mw": 18,
-      "type_detail": "18 Module Cover Plate"
+      "type_detail": "18 Module Cover Plate",
+      "Grid frame": false
     },
     "variant": [
       "CB91118FR11",
@@ -5017,5 +5110,3 @@
     "brand": "Lauritz Knudsen"
   }
 ]
-
-

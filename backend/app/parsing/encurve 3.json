@@ -4,12 +4,13 @@
     "name": "1 Module Cover Plate with Grid Frame - White",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "White",
       "mw": 1,
       "type_detail": "1 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95101FG01",
@@ -51,12 +52,13 @@
     "name": "1 Module Cover Plate with Grid Frame - Magnesium Grey",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Magnesium Grey",
       "mw": 1,
       "type_detail": "1 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95101FW00",
@@ -98,12 +100,13 @@
     "name": "1 Module Cover Plate with Grid Frame - Desert Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Desert Gold",
       "mw": 1,
       "type_detail": "1 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95101FW00",
@@ -145,12 +148,13 @@
     "name": "1 Module Cover Plate with Grid Frame - Vintage Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Vintage Gold",
       "mw": 1,
       "type_detail": "1 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95101FW00",
@@ -192,12 +196,13 @@
     "name": "1 Module Cover Plate with Grid Frame - Nebula Black",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Nebula Black",
       "mw": 1,
       "type_detail": "1 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95101FW00",
@@ -239,12 +244,13 @@
     "name": "1 Module Cover Plate with Grid Frame - Antique Bronze",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Antique Bronze",
       "mw": 1,
       "type_detail": "1 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95101FW00",
@@ -286,12 +292,13 @@
     "name": "2 Module Cover Plate with Grid Frame - White",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "White",
       "mw": 2,
       "type_detail": "2 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95102FG01",
@@ -333,12 +340,13 @@
     "name": "2 Module Cover Plate with Grid Frame - Magnesium Grey",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Magnesium Grey",
       "mw": 2,
       "type_detail": "2 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95102FW00",
@@ -380,12 +388,13 @@
     "name": "2 Module Cover Plate with Grid Frame - Desert Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Desert Gold",
       "mw": 2,
       "type_detail": "2 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95102FW00",
@@ -427,12 +436,13 @@
     "name": "2 Module Cover Plate with Grid Frame - Vintage Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Vintage Gold",
       "mw": 2,
       "type_detail": "2 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95102FW00",
@@ -474,12 +484,13 @@
     "name": "2 Module Cover Plate with Grid Frame - Nebula Black",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Nebula Black",
       "mw": 2,
       "type_detail": "2 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95102FW00",
@@ -521,12 +532,13 @@
     "name": "2 Module Cover Plate with Grid Frame - Antique Bronze",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Antique Bronze",
       "mw": 2,
       "type_detail": "2 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95102FW00",
@@ -568,12 +580,13 @@
     "name": "2 Module Cover Plate with Grid Frame - Vintage Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Vintage Gold",
       "mw": 2,
       "type_detail": "2 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95102FW00",
@@ -615,12 +628,13 @@
     "name": "2 Module Cover Plate with Grid Frame - Nebula Black",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Nebula Black",
       "mw": 2,
       "type_detail": "2 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95102FW00",
@@ -662,12 +676,13 @@
     "name": "2 Module Cover Plate with Grid Frame - Antique Bronze",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Antique Bronze",
       "mw": 2,
       "type_detail": "2 Module Cover Plate with Grid Frame",
-      "dimensions": "97 x 90 x 14 mm"
+      "dimensions": "97 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95102FW00",
@@ -1783,12 +1798,13 @@
     "name": "3 Module Cover Plate with Grid Frame - White",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "White",
       "mw": 3,
       "type_detail": "3 Module Cover Plate with Grid Frame",
-      "dimensions": "125 x 90 x 14 mm"
+      "dimensions": "125 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95103FG01",
@@ -1830,12 +1846,13 @@
     "name": "3 Module Cover Plate with Grid Frame - Magnesium Grey",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Magnesium Grey",
       "mw": 3,
       "type_detail": "3 Module Cover Plate with Grid Frame",
-      "dimensions": "125 x 90 x 14 mm"
+      "dimensions": "125 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95103FW00",
@@ -1877,12 +1894,13 @@
     "name": "3 Module Cover Plate with Grid Frame - Desert Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Desert Gold",
       "mw": 3,
       "type_detail": "3 Module Cover Plate with Grid Frame",
-      "dimensions": "125 x 90 x 14 mm"
+      "dimensions": "125 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95103FW00",
@@ -1924,12 +1942,13 @@
     "name": "3 Module Cover Plate with Grid Frame - Vintage Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Vintage Gold",
       "mw": 3,
       "type_detail": "3 Module Cover Plate with Grid Frame",
-      "dimensions": "125 x 90 x 14 mm"
+      "dimensions": "125 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95103FW00",
@@ -1971,12 +1990,13 @@
     "name": "3 Module Cover Plate with Grid Frame - Nebula Black",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Nebula Black",
       "mw": 3,
       "type_detail": "3 Module Cover Plate with Grid Frame",
-      "dimensions": "125 x 90 x 14 mm"
+      "dimensions": "125 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95103FW00",
@@ -2018,12 +2038,13 @@
     "name": "3 Module Cover Plate with Grid Frame - Antique Bronze",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Antique Bronze",
       "mw": 3,
       "type_detail": "3 Module Cover Plate with Grid Frame",
-      "dimensions": "125 x 90 x 14 mm"
+      "dimensions": "125 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95103FW00",
@@ -2060,18 +2081,18 @@
     },
     "brand": "Lauritz Knudsen"
   },
-  
   {
     "sku": "CB95104FW00",
     "name": "4 Module Cover Plate with Grid Frame - White",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "White",
       "mw": 4,
       "type_detail": "4 Module Cover Plate with Grid Frame",
-      "dimensions": "157 x 90 x 14 mm"
+      "dimensions": "157 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95104FG01",
@@ -2113,12 +2134,13 @@
     "name": "4 Module Cover Plate with Grid Frame - Magnesium Grey",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Magnesium Grey",
       "mw": 4,
       "type_detail": "4 Module Cover Plate with Grid Frame",
-      "dimensions": "157 x 90 x 14 mm"
+      "dimensions": "157 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95104FW00",
@@ -2160,12 +2182,13 @@
     "name": "4 Module Cover Plate with Grid Frame - Desert Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Desert Gold",
       "mw": 4,
       "type_detail": "4 Module Cover Plate with Grid Frame",
-      "dimensions": "157 x 90 x 14 mm"
+      "dimensions": "157 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95104FW00",
@@ -2207,12 +2230,13 @@
     "name": "4 Module Cover Plate with Grid Frame - Vintage Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Vintage Gold",
       "mw": 4,
       "type_detail": "4 Module Cover Plate with Grid Frame",
-      "dimensions": "157 x 90 x 14 mm"
+      "dimensions": "157 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95104FW00",
@@ -2254,12 +2278,13 @@
     "name": "4 Module Cover Plate with Grid Frame - Nebula Black",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Nebula Black",
       "mw": 4,
       "type_detail": "4 Module Cover Plate with Grid Frame",
-      "dimensions": "157 x 90 x 14 mm"
+      "dimensions": "157 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95104FW00",
@@ -2301,12 +2326,13 @@
     "name": "4 Module Cover Plate with Grid Frame - Antique Bronze",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Antique Bronze",
       "mw": 4,
       "type_detail": "4 Module Cover Plate with Grid Frame",
-      "dimensions": "157 x 90 x 14 mm"
+      "dimensions": "157 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95104FW00",
@@ -2343,18 +2369,18 @@
     },
     "brand": "Lauritz Knudsen"
   },
-  
   {
     "sku": "CB95106FW00",
     "name": "6 Module Cover Plate with Grid Frame - White",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "White",
       "mw": 6,
       "type_detail": "6 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 90 x 14 mm"
+      "dimensions": "228 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95106FG01",
@@ -2396,12 +2422,13 @@
     "name": "6 Module Cover Plate with Grid Frame - Magnesium Grey",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Magnesium Grey",
       "mw": 6,
       "type_detail": "6 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 90 x 14 mm"
+      "dimensions": "228 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95106FW00",
@@ -2443,12 +2470,13 @@
     "name": "6 Module Cover Plate with Grid Frame - Desert Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Desert Gold",
       "mw": 6,
       "type_detail": "6 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 90 x 14 mm"
+      "dimensions": "228 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95106FW00",
@@ -2490,12 +2518,13 @@
     "name": "6 Module Cover Plate with Grid Frame - Vintage Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Vintage Gold",
       "mw": 6,
       "type_detail": "6 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 90 x 14 mm"
+      "dimensions": "228 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95106FW00",
@@ -2537,12 +2566,13 @@
     "name": "6 Module Cover Plate with Grid Frame - Nebula Black",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Nebula Black",
       "mw": 6,
       "type_detail": "6 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 90 x 14 mm"
+      "dimensions": "228 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95106FW00",
@@ -2584,12 +2614,13 @@
     "name": "6 Module Cover Plate with Grid Frame - Antique Bronze",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Antique Bronze",
       "mw": 6,
       "type_detail": "6 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 90 x 14 mm"
+      "dimensions": "228 x 90 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95106FW00",
@@ -2626,19 +2657,19 @@
     },
     "brand": "Lauritz Knudsen"
   },
-  
   {
     "sku": "CB95108FW00",
     "name": "8 Module Cover Plate Horizontal with Grid Frame - White",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "White",
       "mw": 8,
       "type_detail": "8 Module Cover Plate Horizontal with Grid Frame",
       "dimensions": "262 x 90 x 14 mm",
-      "orientation": "Horizontal"
+      "orientation": "Horizontal",
+      "Grid frame": true
     },
     "variant": [
       "CB95108FG01",
@@ -2681,13 +2712,14 @@
     "name": "8 Module Cover Plate Horizontal with Grid Frame - Magnesium Grey",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Magnesium Grey",
       "mw": 8,
       "type_detail": "8 Module Cover Plate Horizontal with Grid Frame",
       "dimensions": "262 x 90 x 14 mm",
-      "orientation": "Horizontal"
+      "orientation": "Horizontal",
+      "Grid frame": true
     },
     "variant": [
       "CB95108FW00",
@@ -2730,13 +2762,14 @@
     "name": "8 Module Cover Plate Horizontal with Grid Frame - Desert Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Desert Gold",
       "mw": 8,
       "type_detail": "8 Module Cover Plate Horizontal with Grid Frame",
       "dimensions": "262 x 90 x 14 mm",
-      "orientation": "Horizontal"
+      "orientation": "Horizontal",
+      "Grid frame": true
     },
     "variant": [
       "CB95108FW00",
@@ -2779,13 +2812,14 @@
     "name": "8 Module Cover Plate Horizontal with Grid Frame - Vintage Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Vintage Gold",
       "mw": 8,
       "type_detail": "8 Module Cover Plate Horizontal with Grid Frame",
       "dimensions": "262 x 90 x 14 mm",
-      "orientation": "Horizontal"
+      "orientation": "Horizontal",
+      "Grid frame": true
     },
     "variant": [
       "CB95108FW00",
@@ -2828,13 +2862,14 @@
     "name": "8 Module Cover Plate Horizontal with Grid Frame - Nebula Black",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Nebula Black",
       "mw": 8,
       "type_detail": "8 Module Cover Plate Horizontal with Grid Frame",
       "dimensions": "262 x 90 x 14 mm",
-      "orientation": "Horizontal"
+      "orientation": "Horizontal",
+      "Grid frame": true
     },
     "variant": [
       "CB95108FW00",
@@ -2877,13 +2912,14 @@
     "name": "8 Module Cover Plate Horizontal with Grid Frame - Antique Bronze",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Antique Bronze",
       "mw": 8,
       "type_detail": "8 Module Cover Plate Horizontal with Grid Frame",
       "dimensions": "262 x 90 x 14 mm",
-      "orientation": "Horizontal"
+      "orientation": "Horizontal",
+      "Grid frame": true
     },
     "variant": [
       "CB95108FW00",
@@ -2921,19 +2957,19 @@
     },
     "brand": "Lauritz Knudsen"
   },
-  
   {
     "sku": "CB95208FW00",
     "name": "8 Module Cover Plate Square with Grid Frame - White",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "White",
       "mw": 8,
       "type_detail": "8 Module Cover Plate Square with Grid Frame",
       "dimensions": "157 x 157 x 14 mm",
-      "orientation": "Square"
+      "orientation": "Square",
+      "Grid frame": true
     },
     "variant": [
       "CB95208FG01",
@@ -2976,13 +3012,14 @@
     "name": "8 Module Cover Plate Square with Grid Frame - Magnesium Grey",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Magnesium Grey",
       "mw": 8,
       "type_detail": "8 Module Cover Plate Square with Grid Frame",
       "dimensions": "157 x 157 x 14 mm",
-      "orientation": "Square"
+      "orientation": "Square",
+      "Grid frame": true
     },
     "variant": [
       "CB95208FW00",
@@ -3025,13 +3062,14 @@
     "name": "8 Module Cover Plate Square with Grid Frame - Desert Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Desert Gold",
       "mw": 8,
       "type_detail": "8 Module Cover Plate Square with Grid Frame",
       "dimensions": "157 x 157 x 14 mm",
-      "orientation": "Square"
+      "orientation": "Square",
+      "Grid frame": true
     },
     "variant": [
       "CB95208FW00",
@@ -3074,13 +3112,14 @@
     "name": "8 Module Cover Plate Square with Grid Frame - Vintage Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Vintage Gold",
       "mw": 8,
       "type_detail": "8 Module Cover Plate Square with Grid Frame",
       "dimensions": "157 x 157 x 14 mm",
-      "orientation": "Square"
+      "orientation": "Square",
+      "Grid frame": true
     },
     "variant": [
       "CB95208FW00",
@@ -3123,13 +3162,14 @@
     "name": "8 Module Cover Plate Square with Grid Frame - Nebula Black",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Nebula Black",
       "mw": 8,
       "type_detail": "8 Module Cover Plate Square with Grid Frame",
       "dimensions": "157 x 157 x 14 mm",
-      "orientation": "Square"
+      "orientation": "Square",
+      "Grid frame": true
     },
     "variant": [
       "CB95208FW00",
@@ -3172,13 +3212,14 @@
     "name": "8 Module Cover Plate Square with Grid Frame - Antique Bronze",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Antique Bronze",
       "mw": 8,
       "type_detail": "8 Module Cover Plate Square with Grid Frame",
       "dimensions": "157 x 157 x 14 mm",
-      "orientation": "Square"
+      "orientation": "Square",
+      "Grid frame": true
     },
     "variant": [
       "CB95208FW00",
@@ -3216,18 +3257,18 @@
     },
     "brand": "Lauritz Knudsen"
   },
-  
   {
     "sku": "CB95109FW00",
     "name": "9 Module Cover Plate Horizontal with Grid Frame - White",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "White",
       "mw": 9,
       "type_detail": "9 Module Cover Plate Horizontal with Grid Frame",
-      "orientation": "Horizontal"
+      "orientation": "Horizontal",
+      "Grid frame": true
     },
     "variant": [
       "CB95109FG01",
@@ -3270,12 +3311,13 @@
     "name": "9 Module Cover Plate Horizontal with Grid Frame - Magnesium Grey",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Magnesium Grey",
       "mw": 9,
       "type_detail": "9 Module Cover Plate Horizontal with Grid Frame",
-      "orientation": "Horizontal"
+      "orientation": "Horizontal",
+      "Grid frame": true
     },
     "variant": [
       "CB95109FW00",
@@ -3318,12 +3360,13 @@
     "name": "9 Module Cover Plate Horizontal with Grid Frame - Desert Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Desert Gold",
       "mw": 9,
       "type_detail": "9 Module Cover Plate Horizontal with Grid Frame",
-      "orientation": "Horizontal"
+      "orientation": "Horizontal",
+      "Grid frame": true
     },
     "variant": [
       "CB95109FW00",
@@ -3366,12 +3409,13 @@
     "name": "9 Module Cover Plate Horizontal with Grid Frame - Vintage Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Vintage Gold",
       "mw": 9,
       "type_detail": "9 Module Cover Plate Horizontal with Grid Frame",
-      "orientation": "Horizontal"
+      "orientation": "Horizontal",
+      "Grid frame": true
     },
     "variant": [
       "CB95109FW00",
@@ -3414,12 +3458,13 @@
     "name": "9 Module Cover Plate Horizontal with Grid Frame - Nebula Black",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Nebula Black",
       "mw": 9,
       "type_detail": "9 Module Cover Plate Horizontal with Grid Frame",
-      "orientation": "Horizontal"
+      "orientation": "Horizontal",
+      "Grid frame": true
     },
     "variant": [
       "CB95109FW00",
@@ -3462,12 +3507,13 @@
     "name": "9 Module Cover Plate Horizontal with Grid Frame - Antique Bronze",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Antique Bronze",
       "mw": 9,
       "type_detail": "9 Module Cover Plate Horizontal with Grid Frame",
-      "orientation": "Horizontal"
+      "orientation": "Horizontal",
+      "Grid frame": true
     },
     "variant": [
       "CB95109FW00",
@@ -3505,18 +3551,18 @@
     },
     "brand": "Lauritz Knudsen"
   },
-  
   {
     "sku": "CB95112FW00",
     "name": "12 Module Cover Plate with Grid Frame - White",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "White",
       "mw": 12,
       "type_detail": "12 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 157 x 14 mm"
+      "dimensions": "228 x 157 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95112FG01",
@@ -3558,12 +3604,13 @@
     "name": "12 Module Cover Plate with Grid Frame - Magnesium Grey",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Magnesium Grey",
       "mw": 12,
       "type_detail": "12 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 157 x 14 mm"
+      "dimensions": "228 x 157 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95112FW00",
@@ -3605,12 +3652,13 @@
     "name": "12 Module Cover Plate with Grid Frame - Desert Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Desert Gold",
       "mw": 12,
       "type_detail": "12 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 157 x 14 mm"
+      "dimensions": "228 x 157 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95112FW00",
@@ -3652,12 +3700,13 @@
     "name": "12 Module Cover Plate with Grid Frame - Vintage Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Vintage Gold",
       "mw": 12,
       "type_detail": "12 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 157 x 14 mm"
+      "dimensions": "228 x 157 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95112FW00",
@@ -3699,12 +3748,13 @@
     "name": "12 Module Cover Plate with Grid Frame - Nebula Black",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Nebula Black",
       "mw": 12,
       "type_detail": "12 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 157 x 14 mm"
+      "dimensions": "228 x 157 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95112FW00",
@@ -3746,12 +3796,13 @@
     "name": "12 Module Cover Plate with Grid Frame - Antique Bronze",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Antique Bronze",
       "mw": 12,
       "type_detail": "12 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 157 x 14 mm"
+      "dimensions": "228 x 157 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95112FW00",
@@ -3788,18 +3839,18 @@
     },
     "brand": "Lauritz Knudsen"
   },
-  
   {
     "sku": "CB95116FW00",
     "name": "16 Module Cover Plate with Grid Frame - White",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "White",
       "mw": 16,
       "type_detail": "16 Module Cover Plate with Grid Frame",
-      "dimensions": "248 x 156 x 18 mm"
+      "dimensions": "248 x 156 x 18 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95116FG01",
@@ -3841,12 +3892,13 @@
     "name": "16 Module Cover Plate with Grid Frame - Magnesium Grey",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Magnesium Grey",
       "mw": 16,
       "type_detail": "16 Module Cover Plate with Grid Frame",
-      "dimensions": "248 x 156 x 18 mm"
+      "dimensions": "248 x 156 x 18 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95116FW00",
@@ -3888,12 +3940,13 @@
     "name": "16 Module Cover Plate with Grid Frame - Desert Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Desert Gold",
       "mw": 16,
       "type_detail": "16 Module Cover Plate with Grid Frame",
-      "dimensions": "248 x 156 x 18 mm"
+      "dimensions": "248 x 156 x 18 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95116FW00",
@@ -3935,12 +3988,13 @@
     "name": "16 Module Cover Plate with Grid Frame - Vintage Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Vintage Gold",
       "mw": 16,
       "type_detail": "16 Module Cover Plate with Grid Frame",
-      "dimensions": "248 x 156 x 18 mm"
+      "dimensions": "248 x 156 x 18 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95116FW00",
@@ -3982,12 +4036,13 @@
     "name": "16 Module Cover Plate with Grid Frame - Nebula Black",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Nebula Black",
       "mw": 16,
       "type_detail": "16 Module Cover Plate with Grid Frame",
-      "dimensions": "248 x 156 x 18 mm"
+      "dimensions": "248 x 156 x 18 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95116FW00",
@@ -4029,12 +4084,13 @@
     "name": "16 Module Cover Plate with Grid Frame - Antique Bronze",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Antique Bronze",
       "mw": 16,
       "type_detail": "16 Module Cover Plate with Grid Frame",
-      "dimensions": "248 x 156 x 18 mm"
+      "dimensions": "248 x 156 x 18 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95116FW00",
@@ -4071,18 +4127,18 @@
     },
     "brand": "Lauritz Knudsen"
   },
-  
   {
     "sku": "CB95118FW00",
     "name": "18 Module Cover Plate with Grid Frame - White",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "White",
       "mw": 18,
       "type_detail": "18 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 226 x 14 mm"
+      "dimensions": "228 x 226 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95118FG01",
@@ -4124,12 +4180,13 @@
     "name": "18 Module Cover Plate with Grid Frame - Magnesium Grey",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Magnesium Grey",
       "mw": 18,
       "type_detail": "18 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 226 x 14 mm"
+      "dimensions": "228 x 226 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95118FW00",
@@ -4171,12 +4228,13 @@
     "name": "18 Module Cover Plate with Grid Frame - Desert Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Desert Gold",
       "mw": 18,
       "type_detail": "18 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 226 x 14 mm"
+      "dimensions": "228 x 226 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95118FW00",
@@ -4218,12 +4276,13 @@
     "name": "18 Module Cover Plate with Grid Frame - Vintage Gold",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Vintage Gold",
       "mw": 18,
       "type_detail": "18 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 226 x 14 mm"
+      "dimensions": "228 x 226 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95118FW00",
@@ -4265,12 +4324,13 @@
     "name": "18 Module Cover Plate with Grid Frame - Nebula Black",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Nebula Black",
       "mw": 18,
       "type_detail": "18 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 226 x 14 mm"
+      "dimensions": "228 x 226 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95118FW00",
@@ -4312,12 +4372,13 @@
     "name": "18 Module Cover Plate with Grid Frame - Antique Bronze",
     "product_family": "ENCURVE",
     "category": "Plates",
-    "subcategory": "Cover Plates with grid frames",
+    "subcategory": "PVC Cover Plates with Grid Frame",
     "specs": {
       "color": "Antique Bronze",
       "mw": 18,
       "type_detail": "18 Module Cover Plate with Grid Frame",
-      "dimensions": "228 x 226 x 14 mm"
+      "dimensions": "228 x 226 x 14 mm",
+      "Grid frame": true
     },
     "variant": [
       "CB95118FW00",
@@ -4355,4 +4416,3 @@
     "brand": "Lauritz Knudsen"
   }
 ]
-

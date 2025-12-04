@@ -13,7 +13,8 @@
         "Wood"
       ],
       "cutout_dimensions_mm": "52 x 55",
-      "installation": "Furniture"
+      "installation": "Furniture",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -59,7 +60,8 @@
         "Wood"
       ],
       "cutout_dimensions_mm": "80 x 66",
-      "installation": "Furniture"
+      "installation": "Furniture",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -105,7 +107,8 @@
         "Wood"
       ],
       "cutout_dimensions_mm": "119 x 55",
-      "installation": "Furniture"
+      "installation": "Furniture",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -151,7 +154,8 @@
         "Wood"
       ],
       "cutout_dimensions_mm": "178 x 61",
-      "installation": "Furniture"
+      "installation": "Furniture",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -198,7 +202,8 @@
         "Wood"
       ],
       "cutout_dimensions_mm": "222 x 68",
-      "installation": "Furniture"
+      "installation": "Furniture",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -246,7 +251,8 @@
         "Wood"
       ],
       "cutout_dimensions_mm": "113 x 120",
-      "installation": "Furniture"
+      "installation": "Furniture",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -293,7 +299,8 @@
         "Wood"
       ],
       "cutout_dimensions_mm": "173 x 120",
-      "installation": "Furniture"
+      "installation": "Furniture",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -339,7 +346,8 @@
         "Wood"
       ],
       "cutout_dimensions_mm": "203 x 126",
-      "installation": "Furniture"
+      "installation": "Furniture",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -385,7 +393,8 @@
         "Wood"
       ],
       "cutout_dimensions_mm": "173 x 185",
-      "installation": "Furniture"
+      "installation": "Furniture",
+      "Grid frame": true
     },
     "variant": [],
     "pricing": {
@@ -774,4 +783,3 @@
     "brand": "Lauritz Knudsen"
   }
 ]
-

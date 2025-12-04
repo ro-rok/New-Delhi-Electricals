@@ -54,6 +54,10 @@ class SwitchSpecs(BaseModel):
     material_compatibility: Optional[List[str]] = None
     cutout_dimensions_mm: Optional[str] = None
     dimensions_mm: Optional[str] = None
+    dimensions: Optional[str] = Field(
+        default=None,
+        description="Product dimensions as a string (e.g. '97 x 90 x 14 mm'). Used for cover plates."
+    )
 
     # Installation / mounting details (e.g. Furniture, Flush, Surface)
     installation: Optional[str] = None
@@ -76,6 +80,60 @@ class SwitchSpecs(BaseModel):
 
     # High‑level control type (e.g. \"Touch IR Switch\", \"Smart Wi‑Fi Switch\")
     control_type: Optional[str] = None
+
+
+class CoverPlateSpecs(BaseModel):
+    """
+    Technical specifications for cover plates and grid frames.
+    
+    This model covers:
+    - PVC Cover Plates with Grid Frame
+    - Glass Cover Plates with Grid Frame
+    - Cover Plates without grid frames
+    - Various materials and finishes
+    """
+
+    # Visual / finish details (e.g. White, Onyx Black, Magnesium Grey)
+    color: Optional[str] = None
+
+    # Module width (1M, 2M, 3M, etc.) represented as numeric count
+    mw: Optional[float] = None
+
+    # Product dimensions as a string (e.g. '97 x 90 x 14 mm')
+    dimensions: Optional[str] = Field(
+        default=None,
+        description="Product dimensions as a string (e.g. '97 x 90 x 14 mm')"
+    )
+
+    # Alternative dimension fields for structured data
+    dimensions_mm: Optional[str] = None
+    cutout_dimensions_mm: Optional[str] = None
+
+    # Material type (e.g. PVC, Glass, etc.)
+    material: Optional[str] = None
+
+    # Material compatibility list
+    material_compatibility: Optional[List[str]] = None
+
+    # Short free‑form type detail (e.g. "1 Module Cover Plate with Grid Frame")
+    type_detail: Optional[str] = None
+
+    # Grid frame indicator (true if plate has grid frame, false otherwise)
+    grid_frame: Optional[bool] = Field(
+        default=None,
+        alias="Grid frame",
+        description="Indicates whether the cover plate includes a grid frame. True if product name contains 'Grid frame', false otherwise."
+    )
+
+    # Installation / mounting details (e.g. Furniture, Flush, Surface)
+    installation: Optional[str] = None
+    mounting_type: Optional[str] = None
+
+    # Orientation where relevant (e.g. Horizontal, Vertical, Square)
+    orientation: Optional[str] = None
+
+    # Explicit module size label when provided in catalogs (e.g. "2M")
+    module_size: Optional[str] = None
 
 
 class CircuitProtectionSpecs(BaseModel):
@@ -110,7 +168,7 @@ class Product(BaseModel):
     category: str
     subcategory: str
     brand: str
-    specs: Union[SwitchSpecs, CircuitProtectionSpecs]
+    specs: Union[SwitchSpecs, CircuitProtectionSpecs, CoverPlateSpecs]
     variant: List[str] = []
     pricing: ProductPricing
     media: ProductMedia
