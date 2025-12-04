@@ -1,0 +1,1836 @@
+[
+  {
+    "sku": "CB95101SW06",
+    "name": "Switch 6AX 1-way 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "6AX 1-way"
+    },
+    "variant": [
+      "CB95101SG06"
+    ],
+    "pricing": {
+      "mrp": 84,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-6ax-1-way-1m-white",
+      "keywords": [
+        "Switch",
+        "6AX",
+        "1-way",
+        "1M",
+        "White",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 6AX 1-way 1M White online at New Delhi Electricals. Encurve switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101SG06",
+    "name": "Switch 6AX 1-way 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "6AX 1-way"
+    },
+    "variant": [
+      "CB95101SW06"
+    ],
+    "pricing": {
+      "mrp": 99,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-6ax-1-way-1m-magnesium-grey",
+      "keywords": [
+        "Switch",
+        "6AX",
+        "1-way",
+        "1M",
+        "Magnesium Grey",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 6AX 1-way 1M Magnesium Grey online at New Delhi Electricals. Encurve switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95301SW06",
+    "name": "Switch 6AX 1-way with Indicator 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "6AX 1-way"
+    },
+    "variant": [
+      "CB95301SG06"
+    ],
+    "pricing": {
+      "mrp": 210,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-6ax-1-way-indicator-1m-white",
+      "keywords": [
+        "Switch",
+        "6AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "White",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 6AX 1-way with Indicator 1M White online at New Delhi Electricals. Encurve switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95301SG06",
+    "name": "Switch 6AX 1-way with Indicator 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "6AX 1-way"
+    },
+    "variant": [
+      "CB95301SW06"
+    ],
+    "pricing": {
+      "mrp": 263,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-6ax-1-way-indicator-1m-magnesium-grey",
+      "keywords": [
+        "Switch",
+        "6AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Magnesium Grey",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 6AX 1-way with Indicator 1M Magnesium Grey online at New Delhi Electricals. Encurve switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95201SW06",
+    "name": "Switch 6AX 2-way 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "6AX 2-way"
+    },
+    "variant": [
+      "CB95201SG06"
+    ],
+    "pricing": {
+      "mrp": 201,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-6ax-2-way-1m-white",
+      "keywords": [
+        "Switch",
+        "6AX",
+        "2-way",
+        "1M",
+        "White",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 6AX 2-way 1M White online at New Delhi Electricals. Encurve switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95201SG06",
+    "name": "Switch 6AX 2-way 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "6AX 2-way"
+    },
+    "variant": [
+      "CB95201SW06"
+    ],
+    "pricing": {
+      "mrp": 252,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-6ax-2-way-1m-magnesium-grey",
+      "keywords": [
+        "Switch",
+        "6AX",
+        "2-way",
+        "1M",
+        "Magnesium Grey",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 6AX 2-way 1M Magnesium Grey online at New Delhi Electricals. Encurve switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101SW16",
+    "name": "Switch 16AX 1-way 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB95101SG16"
+    ],
+    "pricing": {
+      "mrp": 186,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-1m-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "1M",
+        "White",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way 1M White online at New Delhi Electricals. Encurve switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101SG16",
+    "name": "Switch 16AX 1-way 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB95101SW16"
+    ],
+    "pricing": {
+      "mrp": 223,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-1m-magnesium-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "1M",
+        "Magnesium Grey",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way 1M Magnesium Grey online at New Delhi Electricals. Encurve switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95301SW16",
+    "name": "Switch 16AX 1-way with Indicator 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB95301SG16"
+    ],
+    "pricing": {
+      "mrp": 256,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-indicator-1m-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "White",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way with Indicator 1M White online at New Delhi Electricals. Encurve switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95301SG16",
+    "name": "Switch 16AX 1-way with Indicator 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB95301SW16"
+    ],
+    "pricing": {
+      "mrp": 308,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-indicator-1m-magnesium-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Magnesium Grey",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way with Indicator 1M Magnesium Grey online at New Delhi Electricals. Encurve switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95201SW16",
+    "name": "Switch 16AX 2-way 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX 2-way"
+    },
+    "variant": [
+      "CB95201SG16"
+    ],
+    "pricing": {
+      "mrp": 282,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-2-way-1m-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "2-way",
+        "1M",
+        "White",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 16AX 2-way 1M White online at New Delhi Electricals. Encurve switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95201SG16",
+    "name": "Switch 16AX 2-way 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX 2-way"
+    },
+    "variant": [
+      "CB95201SW16"
+    ],
+    "pricing": {
+      "mrp": 352,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-2-way-1m-magnesium-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "2-way",
+        "1M",
+        "Magnesium Grey",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 16AX 2-way 1M Magnesium Grey online at New Delhi Electricals. Encurve switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101SW25",
+    "name": "Switch 25A 1-way 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "25A 1-way"
+    },
+    "variant": [
+      "CB95101SG25"
+    ],
+    "pricing": {
+      "mrp": 237,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-25a-1-way-1m-white",
+      "keywords": [
+        "Switch",
+        "25A",
+        "1-way",
+        "1M",
+        "White",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 25A 1-way 1M White online at New Delhi Electricals. Encurve switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101SG25",
+    "name": "Switch 25A 1-way 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "25A 1-way"
+    },
+    "variant": [
+      "CB95101SW25"
+    ],
+    "pricing": {
+      "mrp": 296,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-25a-1-way-1m-magnesium-grey",
+      "keywords": [
+        "Switch",
+        "25A",
+        "1-way",
+        "1M",
+        "Magnesium Grey",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 25A 1-way 1M Magnesium Grey online at New Delhi Electricals. Encurve switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95301SW25",
+    "name": "Switch 25A 1-way with Indicator 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "25A 1-way"
+    },
+    "variant": [
+      "CB95301SG25"
+    ],
+    "pricing": {
+      "mrp": 321,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-25a-1-way-indicator-1m-white",
+      "keywords": [
+        "Switch",
+        "25A",
+        "1-way",
+        "Indicator",
+        "1M",
+        "White",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 25A 1-way with Indicator 1M White online at New Delhi Electricals. Encurve switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95301SG25",
+    "name": "Switch 25A 1-way with Indicator 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "25A 1-way"
+    },
+    "variant": [
+      "CB95301SW25"
+    ],
+    "pricing": {
+      "mrp": 403,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-25a-1-way-indicator-1m-magnesium-grey",
+      "keywords": [
+        "Switch",
+        "25A",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Magnesium Grey",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 25A 1-way with Indicator 1M Magnesium Grey online at New Delhi Electricals. Encurve switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95402SW32",
+    "name": "Switch 32A DP with Indicator 2M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 2 Module",
+    "specs": {
+      "ampere": 32,
+      "color": "White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "32A DP with Indicator"
+    },
+    "variant": [
+      "CB95402SG32"
+    ],
+    "pricing": {
+      "mrp": 510,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-32a-dp-indicator-2m-white",
+      "keywords": [
+        "Switch",
+        "32A",
+        "DP",
+        "Indicator",
+        "2M",
+        "White",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 32A DP with Indicator 2M White online at New Delhi Electricals. Encurve switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95402SG32",
+    "name": "Switch 32A DP with Indicator 2M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Switches & Bell Push - 2 Module",
+    "specs": {
+      "ampere": 32,
+      "color": "Magnesium Grey",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "32A DP with Indicator"
+    },
+    "variant": [
+      "CB95402SW32"
+    ],
+    "pricing": {
+      "mrp": 637,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-32a-dp-indicator-2m-magnesium-grey",
+      "keywords": [
+        "Switch",
+        "32A",
+        "DP",
+        "Indicator",
+        "2M",
+        "Magnesium Grey",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Switch 32A DP with Indicator 2M Magnesium Grey online at New Delhi Electricals. Encurve switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101BW06",
+    "name": "Bell Push 6A 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Bell Push",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Bell Push 6A"
+    },
+    "variant": [
+      "CB95101BG06"
+    ],
+    "pricing": {
+      "mrp": 223,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-6a-1m-white",
+      "keywords": [
+        "Bell Push",
+        "6A",
+        "1M",
+        "White",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Bell Push 6A 1M White online at New Delhi Electricals. Encurve bell push."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101BG06",
+    "name": "Bell Push 6A 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Bell Push",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Bell Push 6A"
+    },
+    "variant": [
+      "CB95101BW06"
+    ],
+    "pricing": {
+      "mrp": 279,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-6a-1m-magnesium-grey",
+      "keywords": [
+        "Bell Push",
+        "6A",
+        "1M",
+        "Magnesium Grey",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Bell Push 6A 1M Magnesium Grey online at New Delhi Electricals. Encurve bell push."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95301BW06",
+    "name": "Bell Push 6A 1M with Indicator 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Bell Push",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bell Push 6A with Indicator"
+    },
+    "variant": [
+      "CB95301BG06"
+    ],
+    "pricing": {
+      "mrp": 249,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-6a-1m-indicator-1m-white",
+      "keywords": [
+        "Bell Push",
+        "6A",
+        "Indicator",
+        "1M",
+        "White",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Bell Push 6A 1M with Indicator 1M White online at New Delhi Electricals. Encurve bell push with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95301BG06",
+    "name": "Bell Push 6A 1M with Indicator 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Bell Push",
+    "subcategory": "Switches & Bell Push - 1 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bell Push 6A with Indicator"
+    },
+    "variant": [
+      "CB95301BW06"
+    ],
+    "pricing": {
+      "mrp": 310,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-6a-1m-indicator-1m-magnesium-grey",
+      "keywords": [
+        "Bell Push",
+        "6A",
+        "Indicator",
+        "1M",
+        "Magnesium Grey",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Bell Push 6A 1M with Indicator 1M Magnesium Grey online at New Delhi Electricals. Encurve bell push with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95302BW06",
+    "name": "Bell Push 6A with Indicator 2M - White",
+    "product_family": "ENCURVE",
+    "category": "Bell Push",
+    "subcategory": "Switches & Bell Push - 2 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "Bell Push 6A with Indicator"
+    },
+    "variant": [
+      "CB95302BG06"
+    ],
+    "pricing": {
+      "mrp": 331,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-6a-indicator-2m-white",
+      "keywords": [
+        "Bell Push",
+        "6A",
+        "Indicator",
+        "2M",
+        "White",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Bell Push 6A with Indicator 2M White online at New Delhi Electricals. Encurve bell push with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95302BG06",
+    "name": "Bell Push 6A with Indicator 2M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Bell Push",
+    "subcategory": "Switches & Bell Push - 2 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "Magnesium Grey",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "Bell Push 6A with Indicator"
+    },
+    "variant": [
+      "CB95302BW06"
+    ],
+    "pricing": {
+      "mrp": 414,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-6a-indicator-2m-magnesium-grey",
+      "keywords": [
+        "Bell Push",
+        "6A",
+        "Indicator",
+        "2M",
+        "Magnesium Grey",
+        "Switches & Bell Push",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Bell Push 6A with Indicator 2M Magnesium Grey online at New Delhi Electricals. Encurve bell push with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101TW11",
+    "name": "RJ 11 Socket 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 11 Socket 1M"
+    },
+    "variant": [
+      "CB95101TG11"
+    ],
+    "pricing": {
+      "mrp": 209,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj11-socket-1m-white-encurve",
+      "keywords": [
+        "Data Socket",
+        "RJ11",
+        "Socket",
+        "1M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy RJ 11 Socket 1M White online at New Delhi Electricals. ENCURVE data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101TG11",
+    "name": "RJ 11 Socket 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 11 Socket 1M"
+    },
+    "variant": [
+      "CB95101TW11"
+    ],
+    "pricing": {
+      "mrp": 259,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj11-socket-1m-magnesium-grey-encurve",
+      "keywords": [
+        "Data Socket",
+        "RJ11",
+        "Socket",
+        "1M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy RJ 11 Socket 1M Magnesium Grey online at New Delhi Electricals. ENCURVE data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95301TW45",
+    "name": "RJ 45 Cat 6A Socket 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 45 Cat 6A Socket 1M"
+    },
+    "variant": [
+      "CB95301TG45"
+    ],
+    "pricing": {
+      "mrp": 798,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj45-cat6a-socket-1m-white-encurve",
+      "keywords": [
+        "Data Socket",
+        "RJ45",
+        "Cat 6A",
+        "Socket",
+        "1M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy RJ 45 Cat 6A Socket 1M White online at New Delhi Electricals. ENCURVE data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95301TG45",
+    "name": "RJ 45 Cat 6A Socket 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 45 Cat 6A Socket 1M"
+    },
+    "variant": [
+      "CB95301TW45"
+    ],
+    "pricing": {
+      "mrp": 998,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj45-cat6a-socket-1m-magnesium-grey-encurve",
+      "keywords": [
+        "Data Socket",
+        "RJ45",
+        "Cat 6A",
+        "Socket",
+        "1M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy RJ 45 Cat 6A Socket 1M Magnesium Grey online at New Delhi Electricals. ENCURVE data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101TW00",
+    "name": "TV Socket 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "TV Socket 1M"
+    },
+    "variant": [
+      "CB95101TG00"
+    ],
+    "pricing": {
+      "mrp": 204,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "tv-socket-1m-white-encurve",
+      "keywords": [
+        "Data Socket",
+        "TV Socket",
+        "1M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy TV Socket 1M White online at New Delhi Electricals. ENCURVE TV/data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101TG00",
+    "name": "TV Socket 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "TV Socket 1M"
+    },
+    "variant": [
+      "CB95101TW00"
+    ],
+    "pricing": {
+      "mrp": 254,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "tv-socket-1m-magnesium-grey-encurve",
+      "keywords": [
+        "Data Socket",
+        "TV Socket",
+        "1M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy TV Socket 1M Magnesium Grey online at New Delhi Electricals. ENCURVE TV/data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101AW00",
+    "name": "Cable Outlet 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Cable Outlet 1M"
+    },
+    "variant": [
+      "CB95101AG00"
+    ],
+    "pricing": {
+      "mrp": 164,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cable-outlet-1m-white-encurve",
+      "keywords": [
+        "Accessories",
+        "Cable Outlet",
+        "1M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Cable Outlet 1M White online at New Delhi Electricals. ENCURVE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101AG00",
+    "name": "Cable Outlet 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Cable Outlet 1M"
+    },
+    "variant": [
+      "CB95101AW00"
+    ],
+    "pricing": {
+      "mrp": 206,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cable-outlet-1m-magnesium-grey-encurve",
+      "keywords": [
+        "Accessories",
+        "Cable Outlet",
+        "1M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Cable Outlet 1M Magnesium Grey online at New Delhi Electricals. ENCURVE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95201AW00",
+    "name": "Blank off unit 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Blank off unit 1M"
+    },
+    "variant": [
+      "CB95201AG00"
+    ],
+    "pricing": {
+      "mrp": 43,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "blank-off-unit-1m-white-encurve",
+      "keywords": [
+        "Accessories",
+        "Blank Off Unit",
+        "1M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Blank off unit 1M White online at New Delhi Electricals. ENCURVE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95201AG00",
+    "name": "Blank off unit 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Blank off unit 1M"
+    },
+    "variant": [
+      "CB95201AW00"
+    ],
+    "pricing": {
+      "mrp": 54,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "blank-off-unit-1m-magnesium-grey-encurve",
+      "keywords": [
+        "Accessories",
+        "Blank Off Unit",
+        "1M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Blank off unit 1M Magnesium Grey online at New Delhi Electricals. ENCURVE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95102LW00",
+    "name": "LED Foot Light 2M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "LED Foot Light 2M"
+    },
+    "variant": [
+      "CB95102LG00"
+    ],
+    "pricing": {
+      "mrp": 980,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-foot-light-2m-white-encurve",
+      "keywords": [
+        "Accessories",
+        "LED Foot Light",
+        "2M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy LED Foot Light 2M White online at New Delhi Electricals. ENCURVE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95102LG00",
+    "name": "LED Foot Light 2M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Magnesium Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "LED Foot Light 2M"
+    },
+    "variant": [
+      "CB95102LW00"
+    ],
+    "pricing": {
+      "mrp": 1224,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-foot-light-2m-magnesium-grey-encurve",
+      "keywords": [
+        "Accessories",
+        "LED Foot Light",
+        "2M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy LED Foot Light 2M Magnesium Grey online at New Delhi Electricals. ENCURVE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101AW02",
+    "name": "USB Charger 2A 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": 2,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "USB Charger 2A 1M"
+    },
+    "variant": [
+      "CB95101AG02"
+    ],
+    "pricing": {
+      "mrp": 1358,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-2a-1m-white-encurve",
+      "keywords": [
+        "Accessories",
+        "USB Charger",
+        "2A",
+        "1M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy USB Charger 2A 1M White online at New Delhi Electricals. ENCURVE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101AG02",
+    "name": "USB Charger 2A 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": 2,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "USB Charger 2A 1M"
+    },
+    "variant": [
+      "CB95101AW02"
+    ],
+    "pricing": {
+      "mrp": 1630,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-2a-1m-magnesium-grey-encurve",
+      "keywords": [
+        "Accessories",
+        "USB Charger",
+        "2A",
+        "1M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy USB Charger 2A 1M Magnesium Grey online at New Delhi Electricals. ENCURVE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101AW18",
+    "name": "USB Charger 18W Type A & Type C Combi 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "wattage": 18,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "USB Charger 18W Type A & Type C Combi 1M"
+    },
+    "variant": [
+      "CB95101AG18"
+    ],
+    "pricing": {
+      "mrp": 2450,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-18w-type-a-c-combi-1m-white-encurve",
+      "keywords": [
+        "Accessories",
+        "USB Charger",
+        "18W",
+        "Type A",
+        "Type C",
+        "Combi",
+        "1M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy USB Charger 18W Type A & Type C Combi 1M White online at New Delhi Electricals. ENCURVE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101AG18",
+    "name": "USB Charger 18W Type A & Type C Combi 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "wattage": 18,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "USB Charger 18W Type A & Type C Combi 1M"
+    },
+    "variant": [
+      "CB95101AW18"
+    ],
+    "pricing": {
+      "mrp": 2750,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-18w-type-a-c-combi-1m-magnesium-grey-encurve",
+      "keywords": [
+        "Accessories",
+        "USB Charger",
+        "18W",
+        "Type A",
+        "Type C",
+        "Combi",
+        "1M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy USB Charger 18W Type A & Type C Combi 1M Magnesium Grey online at New Delhi Electricals. ENCURVE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95401AW00",
+    "name": "LED Phase Indicator 1M Full Glow - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "LED Phase Indicator 1M Full Glow"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 247,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-phase-indicator-1m-full-glow-white-encurve",
+      "keywords": [
+        "Accessories",
+        "LED Phase Indicator",
+        "1M",
+        "Full Glow",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy LED Phase Indicator 1M Full Glow White online at New Delhi Electricals. ENCURVE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  }
+]

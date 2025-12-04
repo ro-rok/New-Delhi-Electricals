@@ -1,0 +1,537 @@
+[
+  {
+    "sku": "CB95102MW25",
+    "name": "Motor Starter 25A 2M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "25A Motor Starter"
+    },
+    "variant": [
+      "CB95102MG25"
+    ],
+    "pricing": {
+      "mrp": 979,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-25a-2m-white",
+      "keywords": [
+        "Motor Starter",
+        "25A",
+        "2M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Motor Starter 25A 2M White online at New Delhi Electricals. Encurve motor starter."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95102MG25",
+    "name": "Motor Starter 25A 2M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "Magnesium Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "25A Motor Starter"
+    },
+    "variant": [
+      "CB95102MW25"
+    ],
+    "pricing": {
+      "mrp": 1150,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-25a-2m-magnesium-grey",
+      "keywords": [
+        "Motor Starter",
+        "25A",
+        "2M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Motor Starter 25A 2M Magnesium Grey online at New Delhi Electricals. Encurve motor starter."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95602CW06",
+    "name": "Socket 6A 3 Pin with ISI 2M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "6A 3 Pin with ISI"
+    },
+    "variant": [
+      "CB95602CG06"
+    ],
+    "pricing": {
+      "mrp": 150,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-3-pin-isi-2m-white",
+      "keywords": [
+        "Socket",
+        "6A",
+        "3 Pin",
+        "ISI",
+        "2M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Socket 6A 3 Pin with ISI 2M White online at New Delhi Electricals. Encurve power socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95602CG06",
+    "name": "Socket 6A 3 Pin with ISI 2M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "Magnesium Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "6A 3 Pin with ISI"
+    },
+    "variant": [
+      "CB95602CW06"
+    ],
+    "pricing": {
+      "mrp": 192,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-3-pin-isi-2m-magnesium-grey",
+      "keywords": [
+        "Socket",
+        "6A",
+        "3 Pin",
+        "ISI",
+        "2M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Socket 6A 3 Pin with ISI 2M Magnesium Grey online at New Delhi Electricals. Encurve power socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95302CW16",
+    "name": "Socket 6A/16A 3 Pin Combi with ISI 2M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "6A/16A 3 Pin Combi with ISI"
+    },
+    "variant": [
+      "CB95302CG16"
+    ],
+    "pricing": {
+      "mrp": 247,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6-16a-3-pin-combi-isi-2m-white",
+      "keywords": [
+        "Socket",
+        "6A",
+        "16A",
+        "3 Pin",
+        "Combi",
+        "ISI",
+        "2M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Socket 6A/16A 3 Pin Combi with ISI 2M (tested up to 25A rating) White online at New Delhi Electricals. Encurve power socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95302CG16",
+    "name": "Socket 6A/16A 3 Pin Combi with ISI 2M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Magnesium Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "6A/16A 3 Pin Combi with ISI"
+    },
+    "variant": [
+      "CB95302CW16"
+    ],
+    "pricing": {
+      "mrp": 308,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6-16a-3-pin-combi-isi-2m-magnesium-grey",
+      "keywords": [
+        "Socket",
+        "6A",
+        "16A",
+        "3 Pin",
+        "Combi",
+        "ISI",
+        "2M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Socket 6A/16A 3 Pin Combi with ISI 2M (tested up to 25A rating) Magnesium Grey online at New Delhi Electricals. Encurve power socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101DW04",
+    "name": "Dimmer 400W 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Fan Regulators & Dimmers - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Dimmer 400W"
+    },
+    "variant": [
+      "CB95101DG04"
+    ],
+    "pricing": {
+      "mrp": 739,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dimmer-400w-1m-white",
+      "keywords": [
+        "Dimmer",
+        "400W",
+        "1M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Dimmer 400W 1M White online at New Delhi Electricals. Encurve dimmer."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101DG04",
+    "name": "Dimmer 400W 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Fan Regulators & Dimmers - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Dimmer 400W"
+    },
+    "variant": [
+      "CB95101DW04"
+    ],
+    "pricing": {
+      "mrp": 923,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dimmer-400w-1m-magnesium-grey",
+      "keywords": [
+        "Dimmer",
+        "400W",
+        "1M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Dimmer 400W 1M Magnesium Grey online at New Delhi Electricals. Encurve dimmer."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101RW01",
+    "name": "Fan Regulator 4-Step 80W 1M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Fan Regulators & Dimmers - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Fan Regulator 4-Step 80W"
+    },
+    "variant": [
+      "CB95101RG01"
+    ],
+    "pricing": {
+      "mrp": 509,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "fan-regulator-4-step-80w-1m-white",
+      "keywords": [
+        "Fan Regulator",
+        "4-Step",
+        "80W",
+        "1M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Fan Regulator 4-Step 80W 1M White online at New Delhi Electricals. Encurve fan regulator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95101RG01",
+    "name": "Fan Regulator 4-Step 80W 1M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Fan Regulators & Dimmers - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Magnesium Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Fan Regulator 4-Step 80W"
+    },
+    "variant": [
+      "CB95101RW01"
+    ],
+    "pricing": {
+      "mrp": 612,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "fan-regulator-4-step-80w-1m-magnesium-grey",
+      "keywords": [
+        "Fan Regulator",
+        "4-Step",
+        "80W",
+        "1M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Fan Regulator 4-Step 80W 1M Magnesium Grey online at New Delhi Electricals. Encurve fan regulator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95102RW02",
+    "name": "Fan Regulator 5-Step 120W with ISI 2M - White",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Fan Regulators & Dimmers - 2 Module",
+    "specs": {
+      "ampere": null,
+      "color": "White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "Fan Regulator 5-Step 120W with ISI"
+    },
+    "variant": [
+      "CB95102RG02"
+    ],
+    "pricing": {
+      "mrp": 658,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "fan-regulator-5-step-120w-isi-2m-white",
+      "keywords": [
+        "Fan Regulator",
+        "5-Step",
+        "120W",
+        "ISI",
+        "2M",
+        "White",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Fan Regulator 5-Step 120W with ISI 2M White online at New Delhi Electricals. Encurve fan regulator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB95102RG02",
+    "name": "Fan Regulator 5-Step 120W with ISI 2M - Magnesium Grey",
+    "product_family": "ENCURVE",
+    "category": "Switches",
+    "subcategory": "Fan Regulators & Dimmers - 2 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Magnesium Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "Fan Regulator 5-Step 120W with ISI"
+    },
+    "variant": [
+      "CB95102RW02"
+    ],
+    "pricing": {
+      "mrp": 758,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "fan-regulator-5-step-120w-isi-2m-magnesium-grey",
+      "keywords": [
+        "Fan Regulator",
+        "5-Step",
+        "120W",
+        "ISI",
+        "2M",
+        "Magnesium Grey",
+        "ENCURVE"
+      ],
+      "meta_description": "Buy Fan Regulator 5-Step 120W with ISI 2M Magnesium Grey online at New Delhi Electricals. Encurve fan regulator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  }
+]
+

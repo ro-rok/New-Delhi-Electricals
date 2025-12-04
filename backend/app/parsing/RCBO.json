@@ -1,0 +1,1916 @@
+[
+  {
+    "sku": "AUF3C200603",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 6A 30mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 6,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5405,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rcbo-6a-30ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "6A",
+        "30mA",
+        "Double Pole",
+        "AUF3C200603",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 6A 30mA Double Pole RCBO (AUF3C200603) from New Delhi Electricals. Residual current circuit breaker with over current protection for reliable safety."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C200610",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 6A 100mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 6,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5515,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-6a-100ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "6A",
+        "100mA",
+        "Double Pole",
+        "AUF3C200610",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 6A 100mA Double Pole RCBO (AUF3C200610) from New Delhi Electricals. Residual current circuit breaker with over current protection for reliable safety."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C200630",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 6A 300mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 6,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5580,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-6a-300ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "6A",
+        "300mA",
+        "Double Pole",
+        "AUF3C200630",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 6A 300mA Double Pole RCBO (AUF3C200630) from New Delhi Electricals. Residual current circuit breaker with over current protection for reliable safety."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C201003",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 10A 30mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 10,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5405,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-10a-30ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "10A",
+        "30mA",
+        "Double Pole",
+        "AUF3C201003",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 10A 30mA Double Pole RCBO (AUF3C201003) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C201010",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 10A 100mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 10,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5515,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-10a-100ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "10A",
+        "100mA",
+        "Double Pole",
+        "AUF3C201010",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 10A 100mA Double Pole RCBO (AUF3C201010) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C201030",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 10A 300mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 10,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5580,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-10a-300ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "10A",
+        "300mA",
+        "Double Pole",
+        "AUF3C201030",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 10A 300mA Double Pole RCBO (AUF3C201030) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C201603",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 16A 30mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 16,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5405,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-16a-30ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "16A",
+        "30mA",
+        "Double Pole",
+        "AUF3C201603",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 16A 30mA Double Pole RCBO (AUF3C201603) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C201610",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 16A 100mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 16,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5515,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-16a-100ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "16A",
+        "100mA",
+        "Double Pole",
+        "AUF3C201610",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 16A 100mA Double Pole RCBO (AUF3C201610) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C201630",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 16A 300mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 16,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5580,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-16a-300ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "16A",
+        "300mA",
+        "Double Pole",
+        "AUF3C201630",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 16A 300mA Double Pole RCBO (AUF3C201630) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C202003",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 20A 30mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 20,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5405,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-20a-30ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "20A",
+        "30mA",
+        "Double Pole",
+        "AUF3C202003",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 20A 30mA Double Pole RCBO (AUF3C202003) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C202010",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 20A 100mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 20,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5515,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-20a-100ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "20A",
+        "100mA",
+        "Double Pole",
+        "AUF3C202010",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 20A 100mA Double Pole RCBO (AUF3C202010) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C202030",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 20A 300mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 20,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5580,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-20a-300ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "20A",
+        "300mA",
+        "Double Pole",
+        "AUF3C202030",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 20A 300mA Double Pole RCBO (AUF3C202030) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C202503",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 25A 30mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 25,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5405,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-25a-30ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "25A",
+        "30mA",
+        "Double Pole",
+        "AUF3C202503",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 25A 30mA Double Pole RCBO (AUF3C202503) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C202510",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 25A 100mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 25,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5515,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-25a-100ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "25A",
+        "100mA",
+        "Double Pole",
+        "AUF3C202510",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 25A 100mA Double Pole RCBO (AUF3C202510) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C202530",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 25A 300mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 25,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5580,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-25a-300ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "25A",
+        "300mA",
+        "Double Pole",
+        "AUF3C202530",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 25A 300mA Double Pole RCBO (AUF3C202530) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C203203",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 32A 30mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 32,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5405,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-32a-30ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "32A",
+        "30mA",
+        "Double Pole",
+        "AUF3C203203",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 32A 30mA Double Pole RCBO (AUF3C203203) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C203210",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 32A 100mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 32,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5515,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-32a-100ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "32A",
+        "100mA",
+        "Double Pole",
+        "AUF3C203210",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 32A 100mA Double Pole RCBO (AUF3C203210) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C203230",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 32A 300mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 32,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5580,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-32a-300ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "32A",
+        "300mA",
+        "Double Pole",
+        "AUF3C203230",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 32A 300mA Double Pole RCBO (AUF3C203230) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C204003",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 40A 30mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 40,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5405,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-40a-30ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "40A",
+        "30mA",
+        "Double Pole",
+        "AUF3C204003",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 40A 30mA Double Pole RCBO (AUF3C204003) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C204010",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 40A 100mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 40,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5515,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-40a-100ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "40A",
+        "100mA",
+        "Double Pole",
+        "AUF3C204010",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 40A 100mA Double Pole RCBO (AUF3C204010) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C204030",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 40A 300mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 40,
+      "curve": null,
+      "poles": 2,
+      "mw": 2,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5580,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-40a-300ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "40A",
+        "300mA",
+        "Double Pole",
+        "AUF3C204030",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 40A 300mA Double Pole RCBO (AUF3C204030) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C206303",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 63A 30mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 63,
+      "curve": null,
+      "poles": 2,
+      "mw": 4,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6415,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-63a-30ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "63A",
+        "30mA",
+        "Double Pole",
+        "AUF3C206303",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 63A 30mA Double Pole RCBO (AUF3C206303) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C206310",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 63A 100mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 63,
+      "curve": null,
+      "poles": 2,
+      "mw": 4,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6805,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-63a-100ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "63A",
+        "100mA",
+        "Double Pole",
+        "AUF3C206310",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 63A 100mA Double Pole RCBO (AUF3C206310) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C206330",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 63A 300mA Double Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 63,
+      "curve": null,
+      "poles": 2,
+      "mw": 4,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6860,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-63a-300ma-double-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "63A",
+        "300mA",
+        "Double Pole",
+        "AUF3C206330",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 63A 300mA Double Pole RCBO (AUF3C206330) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C401603",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C16A 30mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 16,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5800,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c16a-30ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C16A",
+        "16A",
+        "30mA",
+        "Four Pole",
+        "AUF3C401603",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C16A 30mA Four Pole RCBO (AUF3C401603) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C401610",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C16A 100mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 16,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6460,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c16a-100ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C16A",
+        "16A",
+        "100mA",
+        "Four Pole",
+        "AUF3C401610",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C16A 100mA Four Pole RCBO (AUF3C401610) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C401630",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C16A 300mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 16,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6590,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c16a-300ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C16A",
+        "16A",
+        "300mA",
+        "Four Pole",
+        "AUF3C401630",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C16A 300mA Four Pole RCBO (AUF3C401630) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C402003",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C20A 30mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 20,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5800,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c20a-30ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C20A",
+        "20A",
+        "30mA",
+        "Four Pole",
+        "AUF3C402003",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C20A 30mA Four Pole RCBO (AUF3C402003) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C402010",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C20A 100mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 20,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6460,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c20a-100ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C20A",
+        "20A",
+        "100mA",
+        "Four Pole",
+        "AUF3C402010",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C20A 100mA Four Pole RCBO (AUF3C402010) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C402030",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C20A 300mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 20,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6590,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c20a-300ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C20A",
+        "20A",
+        "300mA",
+        "Four Pole",
+        "AUF3C402030",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C20A 300mA Four Pole RCBO (AUF3C402030) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C402503",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C25A 30mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 25,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5800,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c25a-30ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C25A",
+        "25A",
+        "30mA",
+        "Four Pole",
+        "AUF3C402503",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C25A 30mA Four Pole RCBO (AUF3C402503) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C402510",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C25A 100mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 25,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6460,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c25a-100ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C25A",
+        "25A",
+        "100mA",
+        "Four Pole",
+        "AUF3C402510",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C25A 100mA Four Pole RCBO (AUF3C402510) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C402530",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C25A 300mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 25,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6590,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c25a-300ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C25A",
+        "25A",
+        "300mA",
+        "Four Pole",
+        "AUF3C402530",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C25A 300mA Four Pole RCBO (AUF3C402530) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C403203",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C32A 30mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 32,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 5990,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c32a-30ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C32A",
+        "32A",
+        "30mA",
+        "Four Pole",
+        "AUF3C403203",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C32A 30mA Four Pole RCBO (AUF3C403203) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C403210",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C32A 100mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 32,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6465,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c32a-100ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C32A",
+        "32A",
+        "100mA",
+        "Four Pole",
+        "AUF3C403210",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C32A 100mA Four Pole RCBO (AUF3C403210) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C403230",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C32A 300mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 32,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6605,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c32a-300ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C32A",
+        "32A",
+        "300mA",
+        "Four Pole",
+        "AUF3C403230",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C32A 300mA Four Pole RCBO (AUF3C403230) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C404003",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C40A 30mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 40,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6085,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c40a-30ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C40A",
+        "40A",
+        "30mA",
+        "Four Pole",
+        "AUF3C404003",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C40A 30mA Four Pole RCBO (AUF3C404003) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C404010",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C40A 100mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 40,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6465,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c40a-100ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C40A",
+        "40A",
+        "100mA",
+        "Four Pole",
+        "AUF3C404010",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C40A 100mA Four Pole RCBO (AUF3C404010) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C404030",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C40A 300mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 40,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 6625,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c40a-300ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C40A",
+        "40A",
+        "300mA",
+        "Four Pole",
+        "AUF3C404030",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C40A 300mA Four Pole RCBO (AUF3C404030) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C406303",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C63A 30mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 63,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 7290,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c63a-30ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C63A",
+        "63A",
+        "30mA",
+        "Four Pole",
+        "AUF3C406303",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C63A 30mA Four Pole RCBO (AUF3C406303) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C406310",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C63A 100mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 63,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 7425,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c63a-100ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C63A",
+        "63A",
+        "100mA",
+        "Four Pole",
+        "AUF3C406310",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C63A 100mA Four Pole RCBO (AUF3C406310) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C406330",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C63A 300mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 63,
+      "curve": "C",
+      "poles": 4,
+      "mw": 7.5,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 7425,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c63a-300ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C63A",
+        "63A",
+        "300mA",
+        "Four Pole",
+        "AUF3C406330",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C63A 300mA Four Pole RCBO (AUF3C406330) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C408003",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C80A 30mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 80,
+      "curve": "C",
+      "poles": 4,
+      "mw": 12,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 27740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c80a-30ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C80A",
+        "80A",
+        "30mA",
+        "Four Pole",
+        "AUF3C408003",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C80A 30mA Four Pole RCBO (AUF3C408003) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C408010",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C80A 100mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 80,
+      "curve": "C",
+      "poles": 4,
+      "mw": 12,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 28360,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c80a-100ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C80A",
+        "80A",
+        "100mA",
+        "Four Pole",
+        "AUF3C408010",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C80A 100mA Four Pole RCBO (AUF3C408010) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C408030",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C80A 300mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 80,
+      "curve": "C",
+      "poles": 4,
+      "mw": 12,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 28360,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c80a-300ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C80A",
+        "80A",
+        "300mA",
+        "Four Pole",
+        "AUF3C408030",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C80A 300mA Four Pole RCBO (AUF3C408030) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "AUF3C410003",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C100A 30mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 100,
+      "curve": "C",
+      "poles": 4,
+      "mw": 12,
+      "sensitivity_ma": 30
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 29655,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c100a-30ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C100A",
+        "100A",
+        "30mA",
+        "Four Pole",
+        "AUF3C410003",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C100A 30mA Four Pole RCBO (AUF3C410003) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C410010",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C100A 100mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 100,
+      "curve": "C",
+      "poles": 4,
+      "mw": 12,
+      "sensitivity_ma": 100
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 30365,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c100a-100ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C100A",
+        "100A",
+        "100mA",
+        "Four Pole",
+        "AUF3C410010",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C100A 100mA Four Pole RCBO (AUF3C410010) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUF3C410030",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C100A 300mA Four Pole RCBO",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+    "specs": {
+      "ampere": 100,
+      "curve": "C",
+      "poles": 4,
+      "mw": 12,
+      "sensitivity_ma": 300
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 30365,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": { "images": [], "documents": [] },
+    "seo": {
+      "slug": "rcbo-c100a-300ma-four-pole",
+      "keywords": [
+        "RCBO",
+        "Residual Current Circuit Breaker",
+        "Over Current Protection",
+        "C100A",
+        "100A",
+        "300mA",
+        "Four Pole",
+        "AUF3C410030",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy C100A 300mA Four Pole RCBO (AUF3C410030) from New Delhi Electricals. Residual current circuit breaker with over current protection."
+    },
+    "status": { "is_active": true, "is_featured": false },
+    "brand": "Lauritz Knudsen"
+  }
+]

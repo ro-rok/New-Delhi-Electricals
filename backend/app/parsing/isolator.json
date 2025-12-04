@@ -1,0 +1,372 @@
+
+[
+  {
+    "sku": "BE204000",
+    "name": "Isolator 40A Double Pole",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Isolators",
+    "specs": {
+      "ampere": 40,
+      "curve": null,
+      "poles": 2,
+      "mw": 2
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 505,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "isolator-40a-double-pole",
+      "keywords": [
+        "Isolator",
+        "40A",
+        "Double Pole",
+        "BE204000",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 40A Double Pole Isolator (BE204000) from New Delhi Electricals. Premium quality isolator for safe electrical isolation."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "BE304000",
+    "name": "Isolator 40A Three Pole",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Isolators",
+    "specs": {
+      "ampere": 40,
+      "curve": null,
+      "poles": 3,
+      "mw": 3
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 875,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/4"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "isolator-40a-three-pole",
+      "keywords": [
+        "Isolator",
+        "40A",
+        "Three Pole",
+        "BE304000",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 40A Three Pole Isolator (BE304000) from New Delhi Electricals. Premium quality isolator for safe electrical isolation."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "BE404000",
+    "name": "Isolator 40A Four Pole",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Isolators",
+    "specs": {
+      "ampere": 40,
+      "curve": null,
+      "poles": 4,
+      "mw": 4
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1130,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "isolator-40a-four-pole",
+      "keywords": [
+        "Isolator",
+        "40A",
+        "Four Pole",
+        "BE404000",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 40A Four Pole Isolator (BE404000) from New Delhi Electricals. Premium quality isolator for safe electrical isolation."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "BE206300",
+    "name": "Isolator 63A Double Pole",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Isolators",
+    "specs": {
+      "ampere": 63,
+      "curve": null,
+      "poles": 2,
+      "mw": 2
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 630,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "isolator-63a-double-pole",
+      "keywords": [
+        "Isolator",
+        "63A",
+        "Double Pole",
+        "BE206300",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 63A Double Pole Isolator (BE206300) from New Delhi Electricals. Premium quality isolator for safe electrical isolation."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "BE306300",
+    "name": "Isolator 63A Three Pole",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Isolators",
+    "specs": {
+      "ampere": 63,
+      "curve": null,
+      "poles": 3,
+      "mw": 3
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1000,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/4"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "isolator-63a-three-pole",
+      "keywords": [
+        "Isolator",
+        "63A",
+        "Three Pole",
+        "BE306300",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 63A Three Pole Isolator (BE306300) from New Delhi Electricals. Premium quality isolator for safe electrical isolation."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "BE406300",
+    "name": "Isolator 63A Four Pole",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Isolators",
+    "specs": {
+      "ampere": 63,
+      "curve": null,
+      "poles": 4,
+      "mw": 4
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1170,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "isolator-63a-four-pole",
+      "keywords": [
+        "Isolator",
+        "63A",
+        "Four Pole",
+        "BE406300",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 63A Four Pole Isolator (BE406300) from New Delhi Electricals. Premium quality isolator for safe electrical isolation."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "BE210000",
+    "name": "Isolator 100A Double Pole",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Isolators",
+    "specs": {
+      "ampere": 100,
+      "curve": null,
+      "poles": 2,
+      "mw": 2
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 855,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "isolator-100a-double-pole",
+      "keywords": [
+        "Isolator",
+        "100A",
+        "Double Pole",
+        "BE210000",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 100A Double Pole Isolator (BE210000) from New Delhi Electricals. Premium quality isolator for safe electrical isolation."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "BE310000",
+    "name": "Isolator 100A Three Pole",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Isolators",
+    "specs": {
+      "ampere": 100,
+      "curve": null,
+      "poles": 3,
+      "mw": 3
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1185,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/4"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "isolator-100a-three-pole",
+      "keywords": [
+        "Isolator",
+        "100A",
+        "Three Pole",
+        "BE310000",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 100A Three Pole Isolator (BE310000) from New Delhi Electricals. Premium quality isolator for safe electrical isolation."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "BE410000",
+    "name": "Isolator 100A Four Pole",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Isolators",
+    "specs": {
+      "ampere": 100,
+      "curve": null,
+      "poles": 4,
+      "mw": 4
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1415,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "isolator-100a-four-pole",
+      "keywords": [
+        "Isolator",
+        "100A",
+        "Four Pole",
+        "BE410000",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 100A Four Pole Isolator (BE410000) from New Delhi Electricals. Premium quality isolator for safe electrical isolation."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  }
+]

@@ -1,0 +1,357 @@
+
+[
+  {
+    "sku": "AUCL03032032",
+    "name": "Three Phase Automatic Changeover with Current Limiter 32A/32A",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Three Phase Automatic Changeover with Current Limiter (3Ph ACCL)",
+    "specs": {
+      "ampere": 32,
+      "poles": 4,
+      "mw": 4,
+      "eb_current_ampere": 32,
+      "dg_current_limit_ampere": 32
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 12295,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "three-phase-automatic-changeover-with-current-limiter-32a-32a",
+      "keywords": [
+        "3Ph ACCL",
+        "Three Phase ACCL",
+        "Automatic Changeover",
+        "Current Limiter",
+        "32A",
+        "AUCL03032032",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 32A/32A Three Phase Automatic Changeover with Current Limiter (AUCL03032032) from New Delhi Electricals. Reliable three phase EB/DG changeover with current limiting."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUCL03040032",
+    "name": "Three Phase Automatic Changeover with Current Limiter 40A/32A",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Three Phase Automatic Changeover with Current Limiter (3Ph ACCL)",
+    "specs": {
+      "ampere": 40,
+      "poles": 4,
+      "mw": 4,
+      "eb_current_ampere": 40,
+      "dg_current_limit_ampere": 32
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 12670,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "three-phase-automatic-changeover-with-current-limiter-40a-32a",
+      "keywords": [
+        "3Ph ACCL",
+        "Three Phase ACCL",
+        "Automatic Changeover",
+        "Current Limiter",
+        "40A",
+        "32A",
+        "AUCL03040032",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 40A/32A Three Phase Automatic Changeover with Current Limiter (AUCL03040032) from New Delhi Electricals. Reliable three phase EB/DG changeover with current limiting."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUCL03040040",
+    "name": "Three Phase Automatic Changeover with Current Limiter 40A/40A",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Three Phase Automatic Changeover with Current Limiter (3Ph ACCL)",
+    "specs": {
+      "ampere": 40,
+      "poles": 4,
+      "mw": 4,
+      "eb_current_ampere": 40,
+      "dg_current_limit_ampere": 40
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 13715,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "three-phase-automatic-changeover-with-current-limiter-40a-40a",
+      "keywords": [
+        "3Ph ACCL",
+        "Three Phase ACCL",
+        "Automatic Changeover",
+        "Current Limiter",
+        "40A",
+        "AUCL03040040",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 40A/40A Three Phase Automatic Changeover with Current Limiter (AUCL03040040) from New Delhi Electricals. Reliable three phase EB/DG changeover with current limiting."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUCL03050050",
+    "name": "Three Phase Automatic Changeover with Current Limiter 50A/50A",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Three Phase Automatic Changeover with Current Limiter (3Ph ACCL)",
+    "specs": {
+      "ampere": 50,
+      "poles": 4,
+      "mw": 4,
+      "eb_current_ampere": 50,
+      "dg_current_limit_ampere": 50
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 19545,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "three-phase-automatic-changeover-with-current-limiter-50a-50a",
+      "keywords": [
+        "3Ph ACCL",
+        "Three Phase ACCL",
+        "Automatic Changeover",
+        "Current Limiter",
+        "50A",
+        "AUCL03050050",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 50A/50A Three Phase Automatic Changeover with Current Limiter (AUCL03050050) from New Delhi Electricals. Reliable three phase EB/DG changeover with current limiting."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUCL03063050",
+    "name": "Three Phase Automatic Changeover with Current Limiter 63A/50A",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Three Phase Automatic Changeover with Current Limiter (3Ph ACCL)",
+    "specs": {
+      "ampere": 63,
+      "poles": 4,
+      "mw": 4,
+      "eb_current_ampere": 63,
+      "dg_current_limit_ampere": 50
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 21570,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "three-phase-automatic-changeover-with-current-limiter-63a-50a",
+      "keywords": [
+        "3Ph ACCL",
+        "Three Phase ACCL",
+        "Automatic Changeover",
+        "Current Limiter",
+        "63A",
+        "50A",
+        "AUCL03063050",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 63A/50A Three Phase Automatic Changeover with Current Limiter (AUCL03063050) from New Delhi Electricals. Reliable three phase EB/DG changeover with current limiting."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUCL03063063",
+    "name": "Three Phase Automatic Changeover with Current Limiter 63A/63A",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Three Phase Automatic Changeover with Current Limiter (3Ph ACCL)",
+    "specs": {
+      "ampere": 63,
+      "poles": 4,
+      "mw": 4,
+      "eb_current_ampere": 63,
+      "dg_current_limit_ampere": 63
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 24430,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "three-phase-automatic-changeover-with-current-limiter-63a-63a",
+      "keywords": [
+        "3Ph ACCL",
+        "Three Phase ACCL",
+        "Automatic Changeover",
+        "Current Limiter",
+        "63A",
+        "AUCL03063063",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 63A/63A Three Phase Automatic Changeover with Current Limiter (AUCL03063063) from New Delhi Electricals. Reliable three phase EB/DG changeover with current limiting."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUCL03080080",
+    "name": "Three Phase Automatic Changeover with Current Limiter 80A/80A",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Three Phase Automatic Changeover with Current Limiter (3Ph ACCL)",
+    "specs": {
+      "ampere": 80,
+      "poles": 4,
+      "mw": 4,
+      "eb_current_ampere": 80,
+      "dg_current_limit_ampere": 80
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 37235,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "three-phase-automatic-changeover-with-current-limiter-80a-80a",
+      "keywords": [
+        "3Ph ACCL",
+        "Three Phase ACCL",
+        "Automatic Changeover",
+        "Current Limiter",
+        "80A",
+        "AUCL03080080",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 80A/80A Three Phase Automatic Changeover with Current Limiter (AUCL03080080) from New Delhi Electricals. Reliable three phase EB/DG changeover with current limiting."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "AUCL03125125",
+    "name": "Three Phase Automatic Changeover with Current Limiter 125A/125A",
+    "product_family": "Tripper",
+    "category": "Circuit Protection",
+    "subcategory": "Three Phase Automatic Changeover with Current Limiter (3Ph ACCL)",
+    "specs": {
+      "ampere": 125,
+      "poles": 4,
+      "mw": 4,
+      "eb_current_ampere": 125,
+      "dg_current_limit_ampere": 125
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 62680,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1/1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "three-phase-automatic-changeover-with-current-limiter-125a-125a",
+      "keywords": [
+        "3Ph ACCL",
+        "Three Phase ACCL",
+        "Automatic Changeover",
+        "Current Limiter",
+        "125A",
+        "AUCL03125125",
+        "New Delhi Electricals",
+        "Electrical Products"
+      ],
+      "meta_description": "Buy 125A/125A Three Phase Automatic Changeover with Current Limiter (AUCL03125125) from New Delhi Electricals. Reliable three phase EB/DG changeover with current limiting."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  }
+]

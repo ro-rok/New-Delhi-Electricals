@@ -1,0 +1,394 @@
+[
+  {
+    "sku": "CB92102GB00",
+    "name": "1/2 Module Grid Frame",
+    "product_family": "ENGLAZE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 0.5,
+      "material_compatibility": [
+        "Glass",
+        "Metal",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "71 x 60",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 92,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "half-module-grid-frame",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "1/2 Module",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 1/2 Module Grid Frame (CB92102GB00) compatible with all plate materials at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92103GB00",
+    "name": "3 Module Grid Frame",
+    "product_family": "ENGLAZE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 3,
+      "material_compatibility": [
+        "Glass",
+        "Metal",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "86 x 60",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 117,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "3-module-grid-frame",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "3 Module",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 3 Module Grid Frame (CB92103GB00) compatible with glass, metal and wood plates at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92104GB00",
+    "name": "4 Module Grid Frame",
+    "product_family": "ENGLAZE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 4,
+      "material_compatibility": [
+        "Glass",
+        "Metal",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "110 x 60",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 139,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "4-module-grid-frame",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "4 Module",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 4 Module Grid Frame (CB92104GB00) for all plate materials at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92106GB00",
+    "name": "6 Module Grid Frame",
+    "product_family": "ENGLAZE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 6,
+      "material_compatibility": [
+        "Glass",
+        "Metal",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "156 x 60",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 216,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "6-module-grid-frame",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "6 Module",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 6 Module Grid Frame (CB92106GB00) for seamless furniture cut-outs at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92108GB00",
+    "name": "8 Module Grid Frame Horizontal",
+    "product_family": "ENGLAZE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 8,
+      "orientation": "Horizontal",
+      "material_compatibility": [
+        "Glass",
+        "Metal",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "206 x 68",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 256,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "4"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "8-module-grid-frame-horizontal",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "8 Module",
+        "Horizontal",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 8 Module Horizontal Grid Frame (CB92108GB00) for furniture cut-outs at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92208GB00",
+    "name": "8 Module Grid Frame Square",
+    "product_family": "ENGLAZE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 8,
+      "orientation": "Square",
+      "material_compatibility": [
+        "Glass",
+        "Metal",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "109 x 125",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 256,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "8-module-grid-frame-square",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "8 Module",
+        "Square",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 8 Module Square Grid Frame (CB92208GB00) compatible with all plate materials at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92112GB00",
+    "name": "12 Module Grid Frame",
+    "product_family": "ENGLAZE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 12,
+      "material_compatibility": [
+        "Glass",
+        "Metal",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "168 x 126",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 350,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "12-module-grid-frame",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "12 Module",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 12 Module Grid Frame (CB92112GB00) for furniture cut-outs across material plates at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92116GB00",
+    "name": "16 Module Grid Frame",
+    "product_family": "ENGLAZE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 16,
+      "material_compatibility": [
+        "Glass",
+        "Metal",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "191 x 136",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 454,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "4"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "16-module-grid-frame",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "16 Module",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 16 Module Grid Frame (CB92116GB00) compatible with glass, metal and wood plates at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92118GB00",
+    "name": "18 Module Grid Frame",
+    "product_family": "ENGLAZE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 18,
+      "material_compatibility": [
+        "Glass",
+        "Metal",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "156 x 193",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 505,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "18-module-grid-frame",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "18 Module",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 18 Module Grid Frame (CB92118GB00) for furniture cut-outs covering all material plates at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  }
+]
+

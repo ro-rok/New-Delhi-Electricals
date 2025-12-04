@@ -1,0 +1,3478 @@
+[
+    {
+        "sku": "CB92202HW20",
+        "name": "Mech Key Tag Switch 20A 2M - Snow White",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": 20,
+          "color": "Snow White",
+          "mw": 2,
+          "has_indicator": false,
+          "type_detail": "Mech Key Tag Switch 20A 2M"
+        },
+        "variant": [
+          "CB92202HM20",
+          "CB92202HB20"
+        ],
+        "pricing": {
+          "mrp": 1319,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "5"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "mech-key-tag-switch-20a-2m-snow-white",
+          "keywords": [
+            "Hospitality",
+            "Key Tag Switch",
+            "20A",
+            "2M",
+            "Snow White",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy Mech Key Tag Switch 20A 2M Snow White online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      {
+        "sku": "CB92202HM20",
+        "name": "Mech Key Tag Switch 20A 2M - Mountain Grey",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": 20,
+          "color": "Mountain Grey",
+          "mw": 2,
+          "has_indicator": false,
+          "type_detail": "Mech Key Tag Switch 20A 2M"
+        },
+        "variant": [
+          "CB92202HW20",
+          "CB92202HB20"
+        ],
+        "pricing": {
+          "mrp": 1650,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "5"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "mech-key-tag-switch-20a-2m-mountain-grey",
+          "keywords": [
+            "Hospitality",
+            "Key Tag Switch",
+            "20A",
+            "2M",
+            "Mountain Grey",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy Mech Key Tag Switch 20A 2M Mountain Grey online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      {
+        "sku": "CB92202HB20",
+        "name": "Mech Key Tag Switch 20A 2M - Sparkle Black",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": 20,
+          "color": "Sparkle Black",
+          "mw": 2,
+          "has_indicator": false,
+          "type_detail": "Mech Key Tag Switch 20A 2M"
+        },
+        "variant": [
+          "CB92202HW20",
+          "CB92202HM20"
+        ],
+        "pricing": {
+          "mrp": 1650,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "5"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "mech-key-tag-switch-20a-2m-sparkle-black",
+          "keywords": [
+            "Hospitality",
+            "Key Tag Switch",
+            "20A",
+            "2M",
+            "Sparkle Black",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy Mech Key Tag Switch 20A 2M Sparkle Black online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      
+      {
+        "sku": "CB92302HW32",
+        "name": "Mech Key Tag Switch 32A 2M - Snow White",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": 32,
+          "color": "Snow White",
+          "mw": 2,
+          "has_indicator": false,
+          "type_detail": "Mech Key Tag Switch 32A 2M"
+        },
+        "variant": [
+          "CB92302HM32",
+          "CB92302HB32"
+        ],
+        "pricing": {
+          "mrp": 1493,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "5"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "mech-key-tag-switch-32a-2m-snow-white",
+          "keywords": [
+            "Hospitality",
+            "Key Tag Switch",
+            "32A",
+            "2M",
+            "Snow White",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy Mech Key Tag Switch 32A 2M Snow White online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      {
+        "sku": "CB92302HM32",
+        "name": "Mech Key Tag Switch 32A 2M - Mountain Grey",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": 32,
+          "color": "Mountain Grey",
+          "mw": 2,
+          "has_indicator": false,
+          "type_detail": "Mech Key Tag Switch 32A 2M"
+        },
+        "variant": [
+          "CB92302HW32",
+          "CB92302HB32"
+        ],
+        "pricing": {
+          "mrp": 1867,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "5"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "mech-key-tag-switch-32a-2m-mountain-grey",
+          "keywords": [
+            "Hospitality",
+            "Key Tag Switch",
+            "32A",
+            "2M",
+            "Mountain Grey",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy Mech Key Tag Switch 32A 2M Mountain Grey online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      {
+        "sku": "CB92302HB32",
+        "name": "Mech Key Tag Switch 32A 2M - Sparkle Black",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": 32,
+          "color": "Sparkle Black",
+          "mw": 2,
+          "has_indicator": false,
+          "type_detail": "Mech Key Tag Switch 32A 2M"
+        },
+        "variant": [
+          "CB92302HW32",
+          "CB92302HM32"
+        ],
+        "pricing": {
+          "mrp": 1867,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "5"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "mech-key-tag-switch-32a-2m-sparkle-black",
+          "keywords": [
+            "Hospitality",
+            "Key Tag Switch",
+            "32A",
+            "2M",
+            "Sparkle Black",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy Mech Key Tag Switch 32A 2M Sparkle Black online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      
+      {
+        "sku": "CB92302HW00",
+        "name": "Spare Key for Mech Key Tag - Snow White",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": null,
+          "color": "Snow White",
+          "mw": null,
+          "has_indicator": false,
+          "type_detail": "Spare Key for Mech Key Tag"
+        },
+        "variant": [
+          "CB92302HM00",
+          "CB92302HB00"
+        ],
+        "pricing": {
+          "mrp": 129,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "10"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "spare-key-mech-key-tag-snow-white",
+          "keywords": [
+            "Hospitality",
+            "Spare Key",
+            "Mech Key Tag",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy Spare Key for Mech Key Tag Snow White online at New Delhi Electricals. ENGLAZE hospitality range accessory."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      {
+        "sku": "CB92302HM00",
+        "name": "Spare Key for Mech Key Tag - Mountain Grey",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": null,
+          "color": "Mountain Grey",
+          "mw": null,
+          "has_indicator": false,
+          "type_detail": "Spare Key for Mech Key Tag"
+        },
+        "variant": [
+          "CB92302HW00",
+          "CB92302HB00"
+        ],
+        "pricing": {
+          "mrp": 144,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "10"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "spare-key-mech-key-tag-mountain-grey",
+          "keywords": [
+            "Hospitality",
+            "Spare Key",
+            "Mech Key Tag",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy Spare Key for Mech Key Tag Mountain Grey online at New Delhi Electricals. ENGLAZE hospitality range accessory."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      {
+        "sku": "CB92302HB00",
+        "name": "Spare Key for Mech Key Tag - Sparkle Black",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": null,
+          "color": "Sparkle Black",
+          "mw": null,
+          "has_indicator": false,
+          "type_detail": "Spare Key for Mech Key Tag"
+        },
+        "variant": [
+          "CB92302HW00",
+          "CB92302HM00"
+        ],
+        "pricing": {
+          "mrp": 144,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "10"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "spare-key-mech-key-tag-sparkle-black",
+          "keywords": [
+            "Hospitality",
+            "Spare Key",
+            "Mech Key Tag",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy Spare Key for Mech Key Tag Sparkle Black online at New Delhi Electricals. ENGLAZE hospitality range accessory."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      
+      {
+        "sku": "CB92403HW20",
+        "name": "Electronic Key Tag 20A 3M - Snow White",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": 20,
+          "color": "Snow White",
+          "mw": 3,
+          "has_indicator": false,
+          "type_detail": "Electronic Key Tag 20A 3M"
+        },
+        "variant": [
+          "CB92403HM20",
+          "CB92403HB20"
+        ],
+        "pricing": {
+          "mrp": 5886,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "2"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "electronic-key-tag-20a-3m-snow-white",
+          "keywords": [
+            "Hospitality",
+            "Electronic Key Tag",
+            "20A",
+            "3M",
+            "Snow White",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy Electronic Key Tag 20A 3M Snow White online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      {
+        "sku": "CB92403HM20",
+        "name": "Electronic Key Tag 20A 3M - Mountain Grey",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": 20,
+          "color": "Mountain Grey",
+          "mw": 3,
+          "has_indicator": false,
+          "type_detail": "Electronic Key Tag 20A 3M"
+        },
+        "variant": [
+          "CB92403HW20",
+          "CB92403HB20"
+        ],
+        "pricing": {
+          "mrp": 7356,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "2"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "electronic-key-tag-20a-3m-mountain-grey",
+          "keywords": [
+            "Hospitality",
+            "Electronic Key Tag",
+            "20A",
+            "3M",
+            "Mountain Grey",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy Electronic Key Tag 20A 3M Mountain Grey online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      {
+        "sku": "CB92403HB20",
+        "name": "Electronic Key Tag 20A 3M - Sparkle Black",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": 20,
+          "color": "Sparkle Black",
+          "mw": 3,
+          "has_indicator": false,
+          "type_detail": "Electronic Key Tag 20A 3M"
+        },
+        "variant": [
+          "CB92403HW20",
+          "CB92403HM20"
+        ],
+        "pricing": {
+          "mrp": 7356,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "2"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "electronic-key-tag-20a-3m-sparkle-black",
+          "keywords": [
+            "Hospitality",
+            "Electronic Key Tag",
+            "20A",
+            "3M",
+            "Sparkle Black",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy Electronic Key Tag 20A 3M Sparkle Black online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      
+      {
+        "sku": "CB92502HW10",
+        "name": "DND-MMR Inside Room Unit 2M - Snow White",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": null,
+          "color": "Snow White",
+          "mw": 2,
+          "has_indicator": false,
+          "type_detail": "DND-MMR Inside Room Unit 2M"
+        },
+        "variant": [
+          "CB92502HM10",
+          "CB92502HB10"
+        ],
+        "pricing": {
+          "mrp": 1361,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "10"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "dnd-mmr-inside-room-unit-2m-snow-white",
+          "keywords": [
+            "Hospitality",
+            "DND",
+            "MMR",
+            "Inside Room Unit",
+            "2M",
+            "Snow White",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy DND-MMR Inside Room Unit 2M Snow White online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      {
+        "sku": "CB92502HM10",
+        "name": "DND-MMR Inside Room Unit 2M - Mountain Grey",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": null,
+          "color": "Mountain Grey",
+          "mw": 2,
+          "has_indicator": false,
+          "type_detail": "DND-MMR Inside Room Unit 2M"
+        },
+        "variant": [
+          "CB92502HW10",
+          "CB92502HB10"
+        ],
+        "pricing": {
+          "mrp": 1702,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "10"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "dnd-mmr-inside-room-unit-2m-mountain-grey",
+          "keywords": [
+            "Hospitality",
+            "DND",
+            "MMR",
+            "Inside Room Unit",
+            "2M",
+            "Mountain Grey",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy DND-MMR Inside Room Unit 2M Mountain Grey online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      {
+        "sku": "CB92502HB10",
+        "name": "DND-MMR Inside Room Unit 2M - Sparkle Black",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": null,
+          "color": "Sparkle Black",
+          "mw": 2,
+          "has_indicator": false,
+          "type_detail": "DND-MMR Inside Room Unit 2M"
+        },
+        "variant": [
+          "CB92502HW10",
+          "CB92502HM10"
+        ],
+        "pricing": {
+          "mrp": 1702,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "10"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "dnd-mmr-inside-room-unit-2m-sparkle-black",
+          "keywords": [
+            "Hospitality",
+            "DND",
+            "MMR",
+            "Inside Room Unit",
+            "2M",
+            "Sparkle Black",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy DND-MMR Inside Room Unit 2M Sparkle Black online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      
+      {
+        "sku": "CB92602HW10",
+        "name": "DND-MMR Outside Room Unit 2M - Snow White",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": null,
+          "color": "Snow White",
+          "mw": 2,
+          "has_indicator": false,
+          "type_detail": "DND-MMR Outside Room Unit 2M"
+        },
+        "variant": [
+          "CB92602HM10",
+          "CB92602HB10"
+        ],
+        "pricing": {
+          "mrp": 966,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "10"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "dnd-mmr-outside-room-unit-2m-snow-white",
+          "keywords": [
+            "Hospitality",
+            "DND",
+            "MMR",
+            "Outside Room Unit",
+            "2M",
+            "Snow White",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy DND-MMR Outside Room Unit 2M Snow White online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      {
+        "sku": "CB92602HM10",
+        "name": "DND-MMR Outside Room Unit 2M - Mountain Grey",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": null,
+          "color": "Mountain Grey",
+          "mw": 2,
+          "has_indicator": false,
+          "type_detail": "DND-MMR Outside Room Unit 2M"
+        },
+        "variant": [
+          "CB92602HW10",
+          "CB92602HB10"
+        ],
+        "pricing": {
+          "mrp": 1207,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "10"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "dnd-mmr-outside-room-unit-2m-mountain-grey",
+          "keywords": [
+            "Hospitality",
+            "DND",
+            "MMR",
+            "Outside Room Unit",
+            "2M",
+            "Mountain Grey",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy DND-MMR Outside Room Unit 2M Mountain Grey online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+      {
+        "sku": "CB92602HB10",
+        "name": "DND-MMR Outside Room Unit 2M - Sparkle Black",
+        "product_family": "ENGLAZE",
+        "category": "Switches",
+        "subcategory": "Hospitality Range",
+        "specs": {
+          "ampere": null,
+          "color": "Sparkle Black",
+          "mw": 2,
+          "has_indicator": false,
+          "type_detail": "DND-MMR Outside Room Unit 2M"
+        },
+        "variant": [
+          "CB92602HW10",
+          "CB92602HM10"
+        ],
+        "pricing": {
+          "mrp": 1207,
+          "discount": null,
+          "selling_price": null,
+          "std_pack": "10"
+        },
+        "media": {
+          "images": [],
+          "documents": []
+        },
+        "seo": {
+          "slug": "dnd-mmr-outside-room-unit-2m-sparkle-black",
+          "keywords": [
+            "Hospitality",
+            "DND",
+            "MMR",
+            "Outside Room Unit",
+            "2M",
+            "Sparkle Black",
+            "ENGLAZE"
+          ],
+          "meta_description": "Buy DND-MMR Outside Room Unit 2M Sparkle Black online at New Delhi Electricals. ENGLAZE hospitality range."
+        },
+        "status": {
+          "is_active": true,
+          "is_featured": false
+        },
+        "brand": "Lauritz Knudsen"
+      },
+  {
+    "sku": "CB92101TW11",
+    "name": "RJ 11 Socket with Shutter 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Data Sockets - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 11 Socket with Shutter"
+    },
+    "variant": [
+      "CB92101TM11",
+      "CB92101TB11"
+    ],
+    "pricing": {
+      "mrp": 351,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj11-socket-shutter-1m-snow-white",
+      "keywords": [
+        "Data Socket",
+        "RJ11",
+        "Socket",
+        "Shutter",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy RJ 11 Socket with Shutter 1M Snow White online at New Delhi Electricals. ENGLAZE data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101TM11",
+    "name": "RJ 11 Socket with Shutter 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Data Sockets - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 11 Socket with Shutter"
+    },
+    "variant": [
+      "CB92101TW11",
+      "CB92101TB11"
+    ],
+    "pricing": {
+      "mrp": 439,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj11-socket-shutter-1m-mountain-grey",
+      "keywords": [
+        "Data Socket",
+        "RJ11",
+        "Socket",
+        "Shutter",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy RJ 11 Socket with Shutter 1M Mountain Grey online at New Delhi Electricals. ENGLAZE data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101TB11",
+    "name": "RJ 11 Socket with Shutter 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Data Sockets - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 11 Socket with Shutter"
+    },
+    "variant": [
+      "CB92101TW11",
+      "CB92101TM11"
+    ],
+    "pricing": {
+      "mrp": 439,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj11-socket-shutter-1m-sparkle-black",
+      "keywords": [
+        "Data Socket",
+        "RJ11",
+        "Socket",
+        "Shutter",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy RJ 11 Socket with Shutter 1M Sparkle Black online at New Delhi Electricals. ENGLAZE data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92301TW45",
+    "name": "RJ 45 Cat 6A Socket with Shutter 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Data Sockets - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 45 Cat 6A Socket with Shutter"
+    },
+    "variant": [
+      "CB92301TM45",
+      "CB92301TB45"
+    ],
+    "pricing": {
+      "mrp": 1259,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj45-cat6a-socket-shutter-1m-snow-white",
+      "keywords": [
+        "Data Socket",
+        "RJ45",
+        "Cat 6A",
+        "Socket",
+        "Shutter",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy RJ 45 Cat 6A Socket with Shutter 1M Snow White online at New Delhi Electricals. ENGLAZE data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92301TM45",
+    "name": "RJ 45 Cat 6A Socket with Shutter 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Data Sockets - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 45 Cat 6A Socket with Shutter"
+    },
+    "variant": [
+      "CB92301TW45",
+      "CB92301TB45"
+    ],
+    "pricing": {
+      "mrp": 1570,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj45-cat6a-socket-shutter-1m-mountain-grey",
+      "keywords": [
+        "Data Socket",
+        "RJ45",
+        "Cat 6A",
+        "Socket",
+        "Shutter",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy RJ 45 Cat 6A Socket with Shutter 1M Mountain Grey online at New Delhi Electricals. ENGLAZE data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92301TB45",
+    "name": "RJ 45 Cat 6A Socket with Shutter 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Data Sockets - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 45 Cat 6A Socket with Shutter"
+    },
+    "variant": [
+      "CB92301TW45",
+      "CB92301TM45"
+    ],
+    "pricing": {
+      "mrp": 1570,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj45-cat6a-socket-shutter-1m-sparkle-black",
+      "keywords": [
+        "Data Socket",
+        "RJ45",
+        "Cat 6A",
+        "Socket",
+        "Shutter",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy RJ 45 Cat 6A Socket with Shutter 1M Sparkle Black online at New Delhi Electricals. ENGLAZE data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101TW00",
+    "name": "TV Socket 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Data Sockets - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "TV Socket"
+    },
+    "variant": [
+      "CB92101TM00",
+      "CB92101TB00"
+    ],
+    "pricing": {
+      "mrp": 342,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "tv-socket-1m-snow-white",
+      "keywords": [
+        "Data Socket",
+        "TV Socket",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy TV Socket 1M Snow White online at New Delhi Electricals. ENGLAZE TV/data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101TM00",
+    "name": "TV Socket 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Data Sockets - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "TV Socket"
+    },
+    "variant": [
+      "CB92101TW00",
+      "CB92101TB00"
+    ],
+    "pricing": {
+      "mrp": 427,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "tv-socket-1m-mountain-grey",
+      "keywords": [
+        "Data Socket",
+        "TV Socket",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy TV Socket 1M Mountain Grey online at New Delhi Electricals. ENGLAZE TV/data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101TB00",
+    "name": "TV Socket 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Data Sockets - 1 Module",
+    "specs": {
+      "ampere": null,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "TV Socket"
+    },
+    "variant": [
+      "CB92101TW00",
+      "CB92101TM00"
+    ],
+    "pricing": {
+      "mrp": 427,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "tv-socket-1m-sparkle-black",
+      "keywords": [
+        "Data Socket",
+        "TV Socket",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy TV Socket 1M Sparkle Black online at New Delhi Electricals. ENGLAZE TV/data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92102AW00",
+    "name": "Buzzer 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "Buzzer 2M"
+    },
+    "variant": [
+      "CB92102AM00",
+      "CB92102AB00"
+    ],
+    "pricing": {
+      "mrp": 805,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "buzzer-2m-snow-white",
+      "keywords": [
+        "Accessories",
+        "Buzzer",
+        "2M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Buzzer 2M Snow White online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92102AM00",
+    "name": "Buzzer 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "Buzzer 2M"
+    },
+    "variant": [
+      "CB92102AW00",
+      "CB92102AB00"
+    ],
+    "pricing": {
+      "mrp": 980,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "buzzer-2m-mountain-grey",
+      "keywords": [
+        "Accessories",
+        "Buzzer",
+        "2M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Buzzer 2M Mountain Grey online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92102AB00",
+    "name": "Buzzer 2M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Sparkle Black",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "Buzzer 2M"
+    },
+    "variant": [
+      "CB92102AW00",
+      "CB92102AM00"
+    ],
+    "pricing": {
+      "mrp": 980,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "buzzer-2m-sparkle-black",
+      "keywords": [
+        "Accessories",
+        "Buzzer",
+        "2M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Buzzer 2M Sparkle Black online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101AW00",
+    "name": "Cable Outlet 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Cable Outlet 1M"
+    },
+    "variant": [
+      "CB92101AM00",
+      "CB92101AB00"
+    ],
+    "pricing": {
+      "mrp": 273,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cable-outlet-1m-snow-white",
+      "keywords": [
+        "Accessories",
+        "Cable Outlet",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Cable Outlet 1M Snow White online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101AM00",
+    "name": "Cable Outlet 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Cable Outlet 1M"
+    },
+    "variant": [
+      "CB92101AW00",
+      "CB92101AB00"
+    ],
+    "pricing": {
+      "mrp": 333,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cable-outlet-1m-mountain-grey",
+      "keywords": [
+        "Accessories",
+        "Cable Outlet",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Cable Outlet 1M Mountain Grey online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101AB00",
+    "name": "Cable Outlet 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Cable Outlet 1M"
+    },
+    "variant": [
+      "CB92101AW00",
+      "CB92101AM00"
+    ],
+    "pricing": {
+      "mrp": 333,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cable-outlet-1m-sparkle-black",
+      "keywords": [
+        "Accessories",
+        "Cable Outlet",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Cable Outlet 1M Sparkle Black online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92201AW00",
+    "name": "Blank off unit 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Blank off unit 1M"
+    },
+    "variant": [
+      "CB92201AM00",
+      "CB92201AB00"
+    ],
+    "pricing": {
+      "mrp": 71,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "blank-off-unit-1m-snow-white",
+      "keywords": [
+        "Accessories",
+        "Blank Off Unit",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Blank off unit 1M Snow White online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92201AM00",
+    "name": "Blank off unit 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Blank off unit 1M"
+    },
+    "variant": [
+      "CB92201AW00",
+      "CB92201AB00"
+    ],
+    "pricing": {
+      "mrp": 86,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "blank-off-unit-1m-mountain-grey",
+      "keywords": [
+        "Accessories",
+        "Blank Off Unit",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Blank off unit 1M Mountain Grey online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92201AB00",
+    "name": "Blank off unit 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Blank off unit 1M"
+    },
+    "variant": [
+      "CB92201AW00",
+      "CB92201AM00"
+    ],
+    "pricing": {
+      "mrp": 86,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "blank-off-unit-1m-sparkle-black",
+      "keywords": [
+        "Accessories",
+        "Blank Off Unit",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Blank off unit 1M Sparkle Black online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92102LW00",
+    "name": "LED Foot Light 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "LED Foot Light 2M"
+    },
+    "variant": [
+      "CB92102LM00",
+      "CB92102LB00"
+    ],
+    "pricing": {
+      "mrp": 1619,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-foot-light-2m-snow-white",
+      "keywords": [
+        "Accessories",
+        "LED Foot Light",
+        "2M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy LED Foot Light 2M Snow White online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92102LM00",
+    "name": "LED Foot Light 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "LED Foot Light 2M"
+    },
+    "variant": [
+      "CB92102LW00",
+      "CB92102LB00"
+    ],
+    "pricing": {
+      "mrp": 1976,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-foot-light-2m-mountain-grey",
+      "keywords": [
+        "Accessories",
+        "LED Foot Light",
+        "2M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy LED Foot Light 2M Mountain Grey online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92102LB00",
+    "name": "LED Foot Light 2M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Sparkle Black",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "LED Foot Light 2M"
+    },
+    "variant": [
+      "CB92102LW00",
+      "CB92102LM00"
+    ],
+    "pricing": {
+      "mrp": 1976,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-foot-light-2m-sparkle-black",
+      "keywords": [
+        "Accessories",
+        "LED Foot Light",
+        "2M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy LED Foot Light 2M Sparkle Black online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101AW02",
+    "name": "USB Charger 2A 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": 2,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "USB Charger 2A 1M"
+    },
+    "variant": [
+      "CB92101AM02",
+      "CB92101AB02"
+    ],
+    "pricing": {
+      "mrp": 1984,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-2a-1m-snow-white",
+      "keywords": [
+        "Accessories",
+        "USB Charger",
+        "2A",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy USB Charger 2A 1M Snow White online at New Delhi Electricals. ENGLAZE USB charger."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101AM02",
+    "name": "USB Charger 2A 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": 2,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "USB Charger 2A 1M"
+    },
+    "variant": [
+      "CB92101AW02",
+      "CB92101AB02"
+    ],
+    "pricing": {
+      "mrp": 2762,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-2a-1m-mountain-grey",
+      "keywords": [
+        "Accessories",
+        "USB Charger",
+        "2A",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy USB Charger 2A 1M Mountain Grey online at New Delhi Electricals. ENGLAZE USB charger."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101AB02",
+    "name": "USB Charger 2A 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": 2,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "USB Charger 2A 1M"
+    },
+    "variant": [
+      "CB92101AW02",
+      "CB92101AM02"
+    ],
+    "pricing": {
+      "mrp": 2762,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-2a-1m-sparkle-black",
+      "keywords": [
+        "Accessories",
+        "USB Charger",
+        "2A",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy USB Charger 2A 1M Sparkle Black online at New Delhi Electricals. ENGLAZE USB charger."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101AW18",
+    "name": "USB Type A Quick Charger 18W 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "USB Type A Quick Charger 18W 1M"
+    },
+    "variant": [
+      "CB92101AM18",
+      "CB92101AB18"
+    ],
+    "pricing": {
+      "mrp": 2550,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-type-a-quick-charger-18w-1m-snow-white",
+      "keywords": [
+        "Accessories",
+        "USB Charger",
+        "Type A",
+        "Quick Charger",
+        "18W",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy USB Type A Quick Charger 18W 1M Snow White online at New Delhi Electricals. ENGLAZE USB charger."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101AM18",
+    "name": "USB Type A Quick Charger 18W 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "USB Type A Quick Charger 18W 1M"
+    },
+    "variant": [
+      "CB92101AW18",
+      "CB92101AB18"
+    ],
+    "pricing": {
+      "mrp": 2850,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-type-a-quick-charger-18w-1m-mountain-grey",
+      "keywords": [
+        "Accessories",
+        "USB Charger",
+        "Type A",
+        "Quick Charger",
+        "18W",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy USB Type A Quick Charger 18W 1M Mountain Grey online at New Delhi Electricals. ENGLAZE USB charger."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101AB18",
+    "name": "USB Type A Quick Charger 18W 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "USB Type A Quick Charger 18W 1M"
+    },
+    "variant": [
+      "CB92101AW18",
+      "CB92101AM18"
+    ],
+    "pricing": {
+      "mrp": 2850,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-type-a-quick-charger-18w-1m-sparkle-black",
+      "keywords": [
+        "Accessories",
+        "USB Charger",
+        "Type A",
+        "Quick Charger",
+        "18W",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy USB Type A Quick Charger 18W 1M Sparkle Black online at New Delhi Electricals. ENGLAZE USB charger."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92201AW18",
+    "name": "USB Type C PD Charger 18W 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "USB Type C PD Charger 18W 1M"
+    },
+    "variant": [
+      "CB92201AM18",
+      "CB92201AB18"
+    ],
+    "pricing": {
+      "mrp": 3350,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-type-c-pd-charger-18w-1m-snow-white",
+      "keywords": [
+        "Accessories",
+        "USB Charger",
+        "Type C",
+        "PD Charger",
+        "18W",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy USB Type C PD Charger 18W 1M Snow White online at New Delhi Electricals. ENGLAZE USB charger."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92201AM18",
+    "name": "USB Type C PD Charger 18W 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "USB Type C PD Charger 18W 1M"
+    },
+    "variant": [
+      "CB92201AW18",
+      "CB92201AB18"
+    ],
+    "pricing": {
+      "mrp": 3650,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-type-c-pd-charger-18w-1m-mountain-grey",
+      "keywords": [
+        "Accessories",
+        "USB Charger",
+        "Type C",
+        "PD Charger",
+        "18W",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy USB Type C PD Charger 18W 1M Mountain Grey online at New Delhi Electricals. ENGLAZE USB charger."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92201AB18",
+    "name": "USB Type C PD Charger 18W 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "USB Type C PD Charger 18W 1M"
+    },
+    "variant": [
+      "CB92201AW18",
+      "CB92201AM18"
+    ],
+    "pricing": {
+      "mrp": 3650,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-type-c-pd-charger-18w-1m-sparkle-black",
+      "keywords": [
+        "Accessories",
+        "USB Charger",
+        "Type C",
+        "PD Charger",
+        "18W",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy USB Type C PD Charger 18W 1M Sparkle Black online at New Delhi Electricals. ENGLAZE USB charger."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92401AW00",
+    "name": "LED Phase Indicator 1M - Full Glow",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": null,
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "LED Phase Indicator 1M - Full Glow"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 453,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-phase-indicator-1m-full-glow",
+      "keywords": [
+        "Accessories",
+        "LED Phase Indicator",
+        "Full Glow",
+        "1M",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy LED Phase Indicator 1M - Full Glow online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92402AW00",
+    "name": "Electronic Ding Dong Bell 2M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "Electronic Ding Dong Bell 2M"
+    },
+    "variant": [
+      "CB92402AM00",
+      "CB92402AB00"
+    ],
+    "pricing": {
+      "mrp": 1273,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "electronic-ding-dong-bell-2m-snow-white",
+      "keywords": [
+        "Accessories",
+        "Ding Dong Bell",
+        "Electronic",
+        "2M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Electronic Ding Dong Bell 2M Snow White online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92402AM00",
+    "name": "Electronic Ding Dong Bell 2M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "Electronic Ding Dong Bell 2M"
+    },
+    "variant": [
+      "CB92402AW00",
+      "CB92402AB00"
+    ],
+    "pricing": {
+      "mrp": 1590,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "electronic-ding-dong-bell-2m-mountain-grey",
+      "keywords": [
+        "Accessories",
+        "Ding Dong Bell",
+        "Electronic",
+        "2M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Electronic Ding Dong Bell 2M Mountain Grey online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92402AB00",
+    "name": "Electronic Ding Dong Bell 2M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Accessories",
+    "specs": {
+      "ampere": null,
+      "color": "Sparkle Black",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "Electronic Ding Dong Bell 2M"
+    },
+    "variant": [
+      "CB92402AW00",
+      "CB92402AM00"
+    ],
+    "pricing": {
+      "mrp": 1590,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "electronic-ding-dong-bell-2m-sparkle-black",
+      "keywords": [
+        "Accessories",
+        "Ding Dong Bell",
+        "Electronic",
+        "2M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Electronic Ding Dong Bell 2M Sparkle Black online at New Delhi Electricals. ENGLAZE accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KW06",
+    "name": "6A SP Mini MCB 3kA 1M with LED Indicator - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 6,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "6A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KM06",
+      "CB92101KB06"
+    ],
+    "pricing": {
+      "mrp": 635,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "6a-sp-mini-mcb-3ka-1m-led-snow-white",
+      "keywords": [
+        "Mini MCB",
+        "6A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 6A SP Mini MCB 3kA 1M with LED Indicator Snow White online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KM06",
+    "name": "6A SP Mini MCB 3kA 1M with LED Indicator - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 6,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "6A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KW06",
+      "CB92101KB06"
+    ],
+    "pricing": {
+      "mrp": 740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "6a-sp-mini-mcb-3ka-1m-led-mountain-grey",
+      "keywords": [
+        "Mini MCB",
+        "6A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 6A SP Mini MCB 3kA 1M with LED Indicator Mountain Grey online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KB06",
+    "name": "6A SP Mini MCB 3kA 1M with LED Indicator - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 6,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "6A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KW06",
+      "CB92101KM06"
+    ],
+    "pricing": {
+      "mrp": 740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "6a-sp-mini-mcb-3ka-1m-led-sparkle-black",
+      "keywords": [
+        "Mini MCB",
+        "6A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 6A SP Mini MCB 3kA 1M with LED Indicator Sparkle Black online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KW10",
+    "name": "10A SP Mini MCB 3kA 1M with LED Indicator - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 10,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "10A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KM10",
+      "CB92101KB10"
+    ],
+    "pricing": {
+      "mrp": 635,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "10a-sp-mini-mcb-3ka-1m-led-snow-white",
+      "keywords": [
+        "Mini MCB",
+        "10A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 10A SP Mini MCB 3kA 1M with LED Indicator Snow White online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KM10",
+    "name": "10A SP Mini MCB 3kA 1M with LED Indicator - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 10,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "10A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KW10",
+      "CB92101KB10"
+    ],
+    "pricing": {
+      "mrp": 740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "10a-sp-mini-mcb-3ka-1m-led-mountain-grey",
+      "keywords": [
+        "Mini MCB",
+        "10A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 10A SP Mini MCB 3kA 1M with LED Indicator Mountain Grey online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KB10",
+    "name": "10A SP Mini MCB 3kA 1M with LED Indicator - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 10,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "10A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KW10",
+      "CB92101KM10"
+    ],
+    "pricing": {
+      "mrp": 740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "10a-sp-mini-mcb-3ka-1m-led-sparkle-black",
+      "keywords": [
+        "Mini MCB",
+        "10A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 10A SP Mini MCB 3kA 1M with LED Indicator Sparkle Black online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KW16",
+    "name": "16A SP Mini MCB 3kA 1M with LED Indicator - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 16,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "16A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KM16",
+      "CB92101KB16"
+    ],
+    "pricing": {
+      "mrp": 635,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "16a-sp-mini-mcb-3ka-1m-led-snow-white",
+      "keywords": [
+        "Mini MCB",
+        "16A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 16A SP Mini MCB 3kA 1M with LED Indicator Snow White online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KM16",
+    "name": "16A SP Mini MCB 3kA 1M with LED Indicator - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 16,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "16A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KW16",
+      "CB92101KB16"
+    ],
+    "pricing": {
+      "mrp": 740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "16a-sp-mini-mcb-3ka-1m-led-mountain-grey",
+      "keywords": [
+        "Mini MCB",
+        "16A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 16A SP Mini MCB 3kA 1M with LED Indicator Mountain Grey online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KB16",
+    "name": "16A SP Mini MCB 3kA 1M with LED Indicator - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 16,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "16A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KW16",
+      "CB92101KM16"
+    ],
+    "pricing": {
+      "mrp": 740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "16a-sp-mini-mcb-3ka-1m-led-sparkle-black",
+      "keywords": [
+        "Mini MCB",
+        "16A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 16A SP Mini MCB 3kA 1M with LED Indicator Sparkle Black online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KW20",
+    "name": "20A SP Mini MCB 3kA 1M with LED Indicator - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 20,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "20A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KM20",
+      "CB92101KB20"
+    ],
+    "pricing": {
+      "mrp": 635,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "20a-sp-mini-mcb-3ka-1m-led-snow-white",
+      "keywords": [
+        "Mini MCB",
+        "20A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 20A SP Mini MCB 3kA 1M with LED Indicator Snow White online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KM20",
+    "name": "20A SP Mini MCB 3kA 1M with LED Indicator - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 20,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "20A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KW20",
+      "CB92101KB20"
+    ],
+    "pricing": {
+      "mrp": 740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "20a-sp-mini-mcb-3ka-1m-led-mountain-grey",
+      "keywords": [
+        "Mini MCB",
+        "20A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 20A SP Mini MCB 3kA 1M with LED Indicator Mountain Grey online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KB20",
+    "name": "20A SP Mini MCB 3kA 1M with LED Indicator - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 20,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "20A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KW20",
+      "CB92101KM20"
+    ],
+    "pricing": {
+      "mrp": 740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "20a-sp-mini-mcb-3ka-1m-led-sparkle-black",
+      "keywords": [
+        "Mini MCB",
+        "20A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 20A SP Mini MCB 3kA 1M with LED Indicator Sparkle Black online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KW25",
+    "name": "25A SP Mini MCB 3kA 1M with LED Indicator - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 25,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "25A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KM25",
+      "CB92101KB25"
+    ],
+    "pricing": {
+      "mrp": 635,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "25a-sp-mini-mcb-3ka-1m-led-snow-white",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 25A SP Mini MCB 3kA 1M with LED Indicator Snow White online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KM25",
+    "name": "25A SP Mini MCB 3kA 1M with LED Indicator - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 25,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "25A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KW25",
+      "CB92101KB25"
+    ],
+    "pricing": {
+      "mrp": 740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "25a-sp-mini-mcb-3ka-1m-led-mountain-grey",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 25A SP Mini MCB 3kA 1M with LED Indicator Mountain Grey online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KB25",
+    "name": "25A SP Mini MCB 3kA 1M with LED Indicator - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 25,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "25A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KW25",
+      "CB92101KM25"
+    ],
+    "pricing": {
+      "mrp": 740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "25a-sp-mini-mcb-3ka-1m-led-sparkle-black",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 25A SP Mini MCB 3kA 1M with LED Indicator Sparkle Black online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KW32",
+    "name": "32A SP Mini MCB 3kA 1M with LED Indicator - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 32,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "32A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KM32",
+      "CB92101KB32"
+    ],
+    "pricing": {
+      "mrp": 635,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "32a-sp-mini-mcb-3ka-1m-led-snow-white",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 32A SP Mini MCB 3kA 1M with LED Indicator Snow White online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KM32",
+    "name": "32A SP Mini MCB 3kA 1M with LED Indicator - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 32,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "32A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KW32",
+      "CB92101KB32"
+    ],
+    "pricing": {
+      "mrp": 740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "32a-sp-mini-mcb-3ka-1m-led-mountain-grey",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 32A SP Mini MCB 3kA 1M with LED Indicator Mountain Grey online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92101KB32",
+    "name": "32A SP Mini MCB 3kA 1M with LED Indicator - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 32,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "32A SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92101KW32",
+      "CB92101KM32"
+    ],
+    "pricing": {
+      "mrp": 740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "32a-sp-mini-mcb-3ka-1m-led-sparkle-black",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "SP",
+        "3kA",
+        "LED Indicator",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 32A SP Mini MCB 3kA 1M with LED Indicator Sparkle Black online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92202KW25",
+    "name": "25A DP Mini MCB 3kA 2M with LED Indicator - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 25,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "25A DP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92202KM25",
+      "CB92202KB25"
+    ],
+    "pricing": {
+      "mrp": 1277,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "25a-dp-mini-mcb-3ka-2m-led-snow-white",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "DP",
+        "3kA",
+        "LED Indicator",
+        "2M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 25A DP Mini MCB 3kA 2M with LED Indicator Snow White online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92202KM25",
+    "name": "25A DP Mini MCB 3kA 2M with LED Indicator - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 25,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "25A DP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92202KW25",
+      "CB92202KB25"
+    ],
+    "pricing": {
+      "mrp": 1477,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "25a-dp-mini-mcb-3ka-2m-led-mountain-grey",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "DP",
+        "3kA",
+        "LED Indicator",
+        "2M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 25A DP Mini MCB 3kA 2M with LED Indicator Mountain Grey online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92202KB25",
+    "name": "25A DP Mini MCB 3kA 2M with LED Indicator - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 25,
+      "color": "Sparkle Black",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "25A DP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92202KW25",
+      "CB92202KM25"
+    ],
+    "pricing": {
+      "mrp": 1477,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "25a-dp-mini-mcb-3ka-2m-led-sparkle-black",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "DP",
+        "3kA",
+        "LED Indicator",
+        "2M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 25A DP Mini MCB 3kA 2M with LED Indicator Sparkle Black online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92202KW32",
+    "name": "32A DP Mini MCB 3kA 2M with LED Indicator - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 32,
+      "color": "Snow White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "32A DP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92202KM32",
+      "CB92202KB32"
+    ],
+    "pricing": {
+      "mrp": 1277,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "32a-dp-mini-mcb-3ka-2m-led-snow-white",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "DP",
+        "3kA",
+        "LED Indicator",
+        "2M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 32A DP Mini MCB 3kA 2M with LED Indicator Snow White online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92202KM32",
+    "name": "32A DP Mini MCB 3kA 2M with LED Indicator - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 32,
+      "color": "Mountain Grey",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "32A DP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92202KW32",
+      "CB92202KB32"
+    ],
+    "pricing": {
+      "mrp": 1477,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "32a-dp-mini-mcb-3ka-2m-led-mountain-grey",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "DP",
+        "3kA",
+        "LED Indicator",
+        "2M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 32A DP Mini MCB 3kA 2M with LED Indicator Mountain Grey online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92202KB32",
+    "name": "32A DP Mini MCB 3kA 2M with LED Indicator - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs with LED Indicator",
+    "specs": {
+      "ampere": 32,
+      "color": "Sparkle Black",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "32A DP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB92202KW32",
+      "CB92202KM32"
+    ],
+    "pricing": {
+      "mrp": 1477,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "32a-dp-mini-mcb-3ka-2m-led-sparkle-black",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "DP",
+        "3kA",
+        "LED Indicator",
+        "2M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy 32A DP Mini MCB 3kA 2M with LED Indicator Sparkle Black online at New Delhi Electricals. ENGLAZE mini MCB with LED."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  }
+]
+

@@ -1,0 +1,777 @@
+[
+  {
+    "sku": "CB91102GB00",
+    "name": "1/2 Module Grid Frame",
+    "product_family": "ENTICE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 0.5,
+      "material_compatibility": [
+        "Vivid",
+        "Vibrant",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "52 x 55",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 69,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "15"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "half-module-grid-frame-entice",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "1/2 Module",
+        "Vivid Plates",
+        "Vibrant Plates",
+        "Wood Cover Plates",
+        "ENTICE"
+      ],
+      "meta_description": "Buy 1/2 Module Grid Frame (CB91102GB00) for Vivid, Vibrant and Wood cover plates at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91103GB00",
+    "name": "3 Module Grid Frame",
+    "product_family": "ENTICE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 3,
+      "material_compatibility": [
+        "Vivid",
+        "Vibrant",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "80 x 66",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 80,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "3-module-grid-frame-entice",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "3 Module",
+        "Vivid Plates",
+        "Vibrant Plates",
+        "Wood Cover Plates",
+        "ENTICE"
+      ],
+      "meta_description": "Buy 3 Module Grid Frame (CB91103GB00) for Vivid, Vibrant and Wood cover plates at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91104GB00",
+    "name": "4 Module Grid Frame",
+    "product_family": "ENTICE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 4,
+      "material_compatibility": [
+        "Vivid",
+        "Vibrant",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "119 x 55",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 103,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "4-module-grid-frame-entice",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "4 Module",
+        "Vivid Plates",
+        "Vibrant Plates",
+        "Wood Cover Plates",
+        "ENTICE"
+      ],
+      "meta_description": "Buy 4 Module Grid Frame (CB91104GB00) for Vivid, Vibrant and Wood cover plates at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91106GB00",
+    "name": "6 Module Grid Frame",
+    "product_family": "ENTICE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 6,
+      "material_compatibility": [
+        "Vivid",
+        "Vibrant",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "178 x 61",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 162,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "6-module-grid-frame-entice",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "6 Module",
+        "Vivid Plates",
+        "Vibrant Plates",
+        "Wood Cover Plates",
+        "ENTICE"
+      ],
+      "meta_description": "Buy 6 Module Grid Frame (CB91106GB00) for Vivid, Vibrant and Wood cover plates at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91108GB00",
+    "name": "8 Module Grid Frame Horizontal",
+    "product_family": "ENTICE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 8,
+      "orientation": "Horizontal",
+      "material_compatibility": [
+        "Vivid",
+        "Vibrant",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "222 x 68",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 192,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "8-module-grid-frame-horizontal-entice",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "8 Module",
+        "Horizontal",
+        "Vivid Plates",
+        "Vibrant Plates",
+        "Wood Cover Plates",
+        "ENTICE"
+      ],
+      "meta_description": "Buy 8 Module Horizontal Grid Frame (CB91108GB00) for Vivid, Vibrant and Wood cover plates at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91208GB00",
+    "name": "8 Module Grid Frame Square",
+    "product_family": "ENTICE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 8,
+      "orientation": "Square",
+      "material_compatibility": [
+        "Vivid",
+        "Vibrant",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "113 x 120",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 192,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "8-module-grid-frame-square-entice",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "8 Module",
+        "Square",
+        "Vivid Plates",
+        "Vibrant Plates",
+        "Wood Cover Plates",
+        "ENTICE"
+      ],
+      "meta_description": "Buy 8 Module Square Grid Frame (CB91208GB00) for Vivid, Vibrant and Wood cover plates at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91112GB00",
+    "name": "12 Module Grid Frame",
+    "product_family": "ENTICE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 12,
+      "material_compatibility": [
+        "Vivid",
+        "Vibrant",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "173 x 120",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 263,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "12-module-grid-frame-entice",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "12 Module",
+        "Vivid Plates",
+        "Vibrant Plates",
+        "Wood Cover Plates",
+        "ENTICE"
+      ],
+      "meta_description": "Buy 12 Module Grid Frame (CB91112GB00) for Vivid, Vibrant and Wood cover plates at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91116GB00",
+    "name": "16 Module Grid Frame",
+    "product_family": "ENTICE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 16,
+      "material_compatibility": [
+        "Vivid",
+        "Vibrant",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "203 x 126",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 439,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "4"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "16-module-grid-frame-entice",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "16 Module",
+        "Vivid Plates",
+        "Vibrant Plates",
+        "Wood Cover Plates",
+        "ENTICE"
+      ],
+      "meta_description": "Buy 16 Module Grid Frame (CB91116GB00) for Vivid, Vibrant and Wood cover plates at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91118GB00",
+    "name": "18 Module Grid Frame",
+    "product_family": "ENTICE",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "mw": 18,
+      "material_compatibility": [
+        "Vivid",
+        "Vibrant",
+        "Wood"
+      ],
+      "cutout_dimensions_mm": "173 x 185",
+      "installation": "Furniture"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 454,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "18-module-grid-frame-entice",
+      "keywords": [
+        "Grid Frame",
+        "Furniture Installation",
+        "18 Module",
+        "Vivid Plates",
+        "Vibrant Plates",
+        "Wood Cover Plates",
+        "ENTICE"
+      ],
+      "meta_description": "Buy 18 Module Grid Frame (CB91118GB00) for Vivid, Vibrant and Wood cover plates at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91102WM00",
+    "name": "GI Metal Box - 1 & 2 Module",
+    "product_family": "ENTICE",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": "1-2",
+      "dimensions_mm": "77 x 76 x 53",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 106,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "60"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-1-2-module-entice",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "1 Module",
+        "2 Module",
+        "ENTICE"
+      ],
+      "meta_description": "Buy GI Metal Box 1 & 2 Module (CB91102WM00) for ENTICE mounting applications at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91103WM00",
+    "name": "GI Metal Box - 3 Module",
+    "product_family": "ENTICE",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 3,
+      "dimensions_mm": "103 x 76 x 53",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 147,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "45"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-3-module-entice",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "3 Module",
+        "ENTICE"
+      ],
+      "meta_description": "Buy GI Metal Box 3 Module (CB91103WM00) for ENTICE mounting applications at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91104WM00",
+    "name": "GI Metal Box - 4 Module",
+    "product_family": "ENTICE",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 4,
+      "dimensions_mm": "136 x 76 x 53",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 168,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "30"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-4-module-entice",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "4 Module",
+        "ENTICE"
+      ],
+      "meta_description": "Buy GI Metal Box 4 Module (CB91104WM00) for ENTICE mounting applications at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91106WM00",
+    "name": "GI Metal Box - 6 Module",
+    "product_family": "ENTICE",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 6,
+      "dimensions_mm": "210 x 76 x 53",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 237,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-6-module-entice",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "6 Module",
+        "ENTICE"
+      ],
+      "meta_description": "Buy GI Metal Box 6 Module (CB91106WM00) for ENTICE mounting applications at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91108WM00",
+    "name": "GI Metal Box - 8 Module Horizontal",
+    "product_family": "ENTICE",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 8,
+      "orientation": "Horizontal",
+      "dimensions_mm": "227 x 82 x 53",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 301,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "15"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-8-module-horizontal-entice",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "8 Module",
+        "Horizontal",
+        "ENTICE"
+      ],
+      "meta_description": "Buy GI Metal Box 8 Module Horizontal (CB91108WM00) for ENTICE mounting applications at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91208WM00",
+    "name": "GI Metal Box - 8 Module Square",
+    "product_family": "ENTICE",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 8,
+      "orientation": "Square",
+      "dimensions_mm": "136 x 132 x 58",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 301,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "24"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-8-module-square-entice",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "8 Module",
+        "Square",
+        "ENTICE"
+      ],
+      "meta_description": "Buy GI Metal Box 8 Module Square (CB91208WM00) for ENTICE mounting applications at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91112WM00",
+    "name": "GI Metal Box - 12 Module",
+    "product_family": "ENTICE",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 12,
+      "dimensions_mm": "210 x 132 x 61",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 443,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "16"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-12-module-entice",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "12 Module",
+        "ENTICE"
+      ],
+      "meta_description": "Buy GI Metal Box 12 Module (CB91112WM00) for ENTICE mounting applications at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91116WM00",
+    "name": "GI Metal Box - 16 Module",
+    "product_family": "ENTICE",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 16,
+      "dimensions_mm": "227 x 146 x 61",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 510,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-16-module-entice",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "16 Module",
+        "ENTICE"
+      ],
+      "meta_description": "Buy GI Metal Box 16 Module (CB91116WM00) for ENTICE mounting applications at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91118WM00",
+    "name": "GI Metal Box - 18 Module",
+    "product_family": "ENTICE",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 18,
+      "dimensions_mm": "212 x 210 x 61",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 553,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-18-module-entice",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "18 Module",
+        "ENTICE"
+      ],
+      "meta_description": "Buy GI Metal Box 18 Module (CB91118WM00) for ENTICE mounting applications at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  }
+]
+

@@ -1,0 +1,1122 @@
+[
+  {
+    "sku": "CB92601SW10",
+    "name": "Switch 10AX 1-way 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX 1-way"
+    },
+    "variant": [
+      "CB92601SM10",
+      "CB92601SB10"
+    ],
+    "pricing": {
+      "mrp": 215,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-1-way-1m-snow-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "1-way",
+        "1M",
+        "Snow White",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 1-way 1M Snow White online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92601SM10",
+    "name": "Switch 10AX 1-way 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX 1-way"
+    },
+    "variant": [
+      "CB92601SW10",
+      "CB92601SB10"
+    ],
+    "pricing": {
+      "mrp": 246,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-1-way-1m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "1-way",
+        "1M",
+        "Mountain Grey",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 1-way 1M Mountain Grey online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92601SB10",
+    "name": "Switch 10AX 1-way 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX 1-way"
+    },
+    "variant": [
+      "CB92601SW10",
+      "CB92601SM10"
+    ],
+    "pricing": {
+      "mrp": 246,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-1-way-1m-sparkle-black",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "1-way",
+        "1M",
+        "Sparkle Black",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 1-way 1M Sparkle Black online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "CB92801SW10",
+    "name": "Switch 10AX 1-way with Indicator 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "10AX 1-way"
+    },
+    "variant": [
+      "CB92801SM10",
+      "CB92801SB10"
+    ],
+    "pricing": {
+      "mrp": 411,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-1-way-indicator-1m-snow-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Snow White",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 1-way with Indicator 1M Snow White online at New Delhi Electricals. Soft feel switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92801SM10",
+    "name": "Switch 10AX 1-way with Indicator 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "10AX 1-way"
+    },
+    "variant": [
+      "CB92801SW10",
+      "CB92801SB10"
+    ],
+    "pricing": {
+      "mrp": 516,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-1-way-indicator-1m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Mountain Grey",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 1-way with Indicator 1M Mountain Grey online at New Delhi Electricals. Soft feel switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92801SB10",
+    "name": "Switch 10AX 1-way with Indicator 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "10AX 1-way"
+    },
+    "variant": [
+      "CB92801SW10",
+      "CB92801SM10"
+    ],
+    "pricing": {
+      "mrp": 516,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-1-way-indicator-1m-sparkle-black",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Sparkle Black",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 1-way with Indicator 1M Sparkle Black online at New Delhi Electricals. Soft feel switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "CB92701SW10",
+    "name": "Switch 10AX 2-way 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX 2-way"
+    },
+    "variant": [
+      "CB92701SM10",
+      "CB92701SB10"
+    ],
+    "pricing": {
+      "mrp": 392,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-2-way-1m-snow-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "2-way",
+        "1M",
+        "Snow White",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 2-way 1M Snow White online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92701SM10",
+    "name": "Switch 10AX 2-way 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX 2-way"
+    },
+    "variant": [
+      "CB92701SW10",
+      "CB92701SB10"
+    ],
+    "pricing": {
+      "mrp": 487,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-2-way-1m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "2-way",
+        "1M",
+        "Mountain Grey",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 2-way 1M Mountain Grey online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92701SB10",
+    "name": "Switch 10AX 2-way 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX 2-way"
+    },
+    "variant": [
+      "CB92701SW10",
+      "CB92701SM10"
+    ],
+    "pricing": {
+      "mrp": 487,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-2-way-1m-sparkle-black",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "2-way",
+        "1M",
+        "Sparkle Black",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 10AX 2-way 1M Sparkle Black online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "CB92601SW16",
+    "name": "Switch 16AX 1-way 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB92601SM16",
+      "CB92601SB16"
+    ],
+    "pricing": {
+      "mrp": 416,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-1m-snow-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "1M",
+        "Snow White",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way 1M Snow White online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92601SM16",
+    "name": "Switch 16AX 1-way 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB92601SW16",
+      "CB92601SB16"
+    ],
+    "pricing": {
+      "mrp": 519,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-1m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "1M",
+        "Mountain Grey",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way 1M Mountain Grey online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92601SB16",
+    "name": "Switch 16AX 1-way 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB92601SW16",
+      "CB92601SM16"
+    ],
+    "pricing": {
+      "mrp": 519,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-1m-sparkle-black",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "1M",
+        "Sparkle Black",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way 1M Sparkle Black online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "CB92801SW16",
+    "name": "Switch 16AX 1-way with Indicator 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB92801SM16",
+      "CB92801SB16"
+    ],
+    "pricing": {
+      "mrp": 499,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-indicator-1m-snow-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Snow White",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way with Indicator 1M Snow White online at New Delhi Electricals. Soft feel switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92801SM16",
+    "name": "Switch 16AX 1-way with Indicator 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB92801SW16",
+      "CB92801SB16"
+    ],
+    "pricing": {
+      "mrp": 625,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-indicator-1m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Mountain Grey",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way with Indicator 1M Mountain Grey online at New Delhi Electricals. Soft feel switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92801SB16",
+    "name": "Switch 16AX 1-way with Indicator 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "16AX 1-way"
+    },
+    "variant": [
+      "CB92801SW16",
+      "CB92801SM16"
+    ],
+    "pricing": {
+      "mrp": 625,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-indicator-1m-sparkle-black",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Sparkle Black",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way with Indicator 1M Sparkle Black online at New Delhi Electricals. Soft feel switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "CB92701SW16",
+    "name": "Switch 16AX 2-way 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX 2-way"
+    },
+    "variant": [
+      "CB92701SM16",
+      "CB92701SB16"
+    ],
+    "pricing": {
+      "mrp": 499,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-2-way-1m-snow-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "2-way",
+        "1M",
+        "Snow White",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 2-way 1M Snow White online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92701SM16",
+    "name": "Switch 16AX 2-way 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX 2-way"
+    },
+    "variant": [
+      "CB92701SW16",
+      "CB92701SB16"
+    ],
+    "pricing": {
+      "mrp": 625,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-2-way-1m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "2-way",
+        "1M",
+        "Mountain Grey",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 2-way 1M Mountain Grey online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92701SB16",
+    "name": "Switch 16AX 2-way 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX 2-way"
+    },
+    "variant": [
+      "CB92701SW16",
+      "CB92701SM16"
+    ],
+    "pricing": {
+      "mrp": 625,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-2-way-1m-sparkle-black",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "2-way",
+        "1M",
+        "Sparkle Black",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 16AX 2-way 1M Sparkle Black online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "CB92601SW25",
+    "name": "Switch 25A 1-way 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "25A 1-way"
+    },
+    "variant": [
+      "CB92601SM25",
+      "CB92601SB25"
+    ],
+    "pricing": {
+      "mrp": 573,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-25a-1-way-1m-snow-white",
+      "keywords": [
+        "Switch",
+        "25A",
+        "1-way",
+        "1M",
+        "Snow White",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 25A 1-way 1M Snow White online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92601SM25",
+    "name": "Switch 25A 1-way 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "25A 1-way"
+    },
+    "variant": [
+      "CB92601SW25",
+      "CB92601SB25"
+    ],
+    "pricing": {
+      "mrp": 712,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-25a-1-way-1m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "25A",
+        "1-way",
+        "1M",
+        "Mountain Grey",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 25A 1-way 1M Mountain Grey online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92601SB25",
+    "name": "Switch 25A 1-way 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "25A 1-way"
+    },
+    "variant": [
+      "CB92601SW25",
+      "CB92601SM25"
+    ],
+    "pricing": {
+      "mrp": 712,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-25a-1-way-1m-sparkle-black",
+      "keywords": [
+        "Switch",
+        "25A",
+        "1-way",
+        "1M",
+        "Sparkle Black",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 25A 1-way 1M Sparkle Black online at New Delhi Electricals. Soft feel switch."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+
+  {
+    "sku": "CB92801SW25",
+    "name": "Switch 25A 1-way with Indicator 1M - Snow White",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "25A 1-way"
+    },
+    "variant": [
+      "CB92801SM25",
+      "CB92801SB25"
+    ],
+    "pricing": {
+      "mrp": 693,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-25a-1-way-indicator-1m-snow-white",
+      "keywords": [
+        "Switch",
+        "25A",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Snow White",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 25A 1-way with Indicator 1M Snow White online at New Delhi Electricals. Soft feel switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92801SM25",
+    "name": "Switch 25A 1-way with Indicator 1M - Mountain Grey",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "25A 1-way"
+    },
+    "variant": [
+      "CB92801SW25",
+      "CB92801SB25"
+    ],
+    "pricing": {
+      "mrp": 866,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-25a-1-way-indicator-1m-mountain-grey",
+      "keywords": [
+        "Switch",
+        "25A",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Mountain Grey",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 25A 1-way with Indicator 1M Mountain Grey online at New Delhi Electricals. Soft feel switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB92801SB25",
+    "name": "Switch 25A 1-way with Indicator 1M - Sparkle Black",
+    "product_family": "ENGLAZE",
+    "category": "Switches",
+    "subcategory": "Soft Feel Switches - 1 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "25A 1-way"
+    },
+    "variant": [
+      "CB92801SW25",
+      "CB92801SM25"
+    ],
+    "pricing": {
+      "mrp": 866,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-25a-1-way-indicator-1m-sparkle-black",
+      "keywords": [
+        "Switch",
+        "25A",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Sparkle Black",
+        "Soft Feel Switch",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy Switch 25A 1-way with Indicator 1M Sparkle Black online at New Delhi Electricals. Soft feel switch with indicator."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  }
+]
