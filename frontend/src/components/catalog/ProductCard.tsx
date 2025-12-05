@@ -7,6 +7,7 @@ import { useApp } from '@/contexts/AppContext';
 import { motion } from 'framer-motion';
 import { cn, getProductUrl } from '@/lib/utils';
 import { useMagneticEffect } from '@/hooks/useMagneticEffect';
+import { LazyImage } from '@/components/ui/LazyImage';
 
 interface ProductCardProps {
   product: Product;
@@ -50,21 +51,30 @@ const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardPro
         <div className="relative bg-background rounded-3xl border border-border/50 overflow-hidden transition-all duration-500 hover:shadow-md hover:-translate-y-2 hover:border-foreground/10">
           {/* Image */}
           <div className="relative aspect-square bg-secondary/20 overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-muted-foreground/20 text-6xl font-light">
-                {product.brand.charAt(0)}
-              </span>
-            </div>
+            {product.images && product.images.length > 0 && product.images[0] ? (
+              <LazyImage
+                src={product.images[0]}
+                alt={product.name}
+                className="w-full h-full object-contain"
+                placeholder={product.images[0]}
+              />
+            ) : (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-muted-foreground/20 text-6xl font-light">
+                  {product.brand.charAt(0)}
+                </span>
+              </div>
+            )}
             
             {/* Badge */}
             {product.badge && (
-              <Badge className={cn('absolute top-4 left-4 text-[10px] font-medium px-2.5 py-1', badgeConfig[product.badge].className)}>
+              <Badge className={cn('absolute top-4 left-4 z-10 text-[10px] font-medium px-2.5 py-1', badgeConfig[product.badge].className)}>
                 {badgeConfig[product.badge].label}
               </Badge>
             )}
 
             {/* Quick Actions */}
-            <div className="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+            <div className="absolute top-4 right-4 z-10 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
               <Button
                 ref={heartBtnRef as any}
                 variant="secondary"

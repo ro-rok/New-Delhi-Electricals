@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useCallback } from 'react';
 import { useParams, useSearchParams, useLocation } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
@@ -33,6 +33,9 @@ import { Link } from 'react-router-dom';
 import { ToggleRight, Cable, Zap, Lightbulb, Fan, Smartphone, Package } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useDebounce } from '@/hooks/useDebounce';
+import { ProductCardSkeleton } from '@/components/ui/SkeletonLoader';
+import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 
 type SortOption = 'name-asc' | 'name-desc' | 'price-asc' | 'price-desc' | 'newest';
 
@@ -125,6 +128,13 @@ const CategoryPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [loading, setLoading] = useState(true);
+  const [filterLoading, setFilterLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalProducts, setTotalProducts] = useState(0);
+  const [hasMore, setHasMore] = useState(false);
+  
+  // Debounce search input
+  const debouncedSearch = useDebounce(localSearch, 300);
 
   const iconMap: Record<string, LucideIcon> = {
     ToggleRight,
@@ -136,117 +146,128 @@ const CategoryPage = () => {
     Package,
   };
 
+  // Fetch category and brands on mount/route change
   useEffect(() => {
-    // Reset state immediately when route params change
-    setCategory(null);
-    setProducts([]);
-    setBrands([]);
-    setLoading(true);
-
-    const fetchData = async () => {
+    const fetchInitialData = async () => {
       if (!slug) {
         setLoading(false);
         return;
       }
       try {
-        const [catsList, productsResponse, brandsList] = await Promise.all([
+        const [catsList, brandsList] = await Promise.all([
           getCategories(),
-          getProducts({ pageSize: 1000 }),
           getBrands(),
         ]);
         const foundCategory = catsList.find(c => c.slug === slug);
         setCategory(foundCategory || null);
         setCategories(catsList);
-        setProducts(productsResponse.items);
         setBrands(brandsList);
+        
+        // Set initial price bounds if category found
+        if (foundCategory) {
+          // Fetch initial products to get price bounds
+          const initialResponse = await getProducts({ 
+            category: foundCategory.name,
+            pageSize: 100 
+          });
+          if (initialResponse.items.length > 0) {
+            const prices = initialResponse.items.map(p => p.listPrice);
+            const min = Math.min(...prices);
+            const max = Math.max(...prices);
+            setPriceRange([min, max]);
+          }
+        }
       } catch (error) {
-        console.error('Failed to fetch category data:', error);
-        setCategory(null);
-        setProducts([]);
+        console.error('Failed to fetch initial data:', error);
       } finally {
         setLoading(false);
       }
     };
-    fetchData();
+    fetchInitialData();
   }, [slug, location.key]);
-  
-  // Get price bounds for the category
-  const priceBounds = useMemo(() => {
-    const categoryProducts = products.filter(p => 
-      !category || p.category.toLowerCase().includes(category.name.toLowerCase())
-    );
-    if (categoryProducts.length === 0) return { min: 0, max: 10000 };
-    const prices = categoryProducts.map(p => p.listPrice);
-    return { min: Math.min(...prices), max: Math.max(...prices) };
-  }, [category]);
 
-  // Initialize price range
-  useEffect(() => {
-    setPriceRange([priceBounds.min, priceBounds.max]);
-  }, [priceBounds]);
-
-  // Get available series for the category
-  const availableSeries = useMemo(() => {
-    const seriesSet = new Set(
-      products
-        .filter(p => !category || p.category.toLowerCase().includes(category.name.toLowerCase()))
-        .map(p => p.series)
-    );
-    return Array.from(seriesSet).filter(Boolean).sort();
-  }, [category]);
-
-  // Get available brands for the category
-  const availableBrands = useMemo(() => {
-    const brandSet = new Set(
-      products
-        .filter(p => !category || p.category.toLowerCase().includes(category.name.toLowerCase()))
-        .map(p => p.brand)
-    );
-    return brands.filter(b => brandSet.has(b.name));
-  }, [category]);
-  
-  const filteredProducts = useMemo(() => {
-    let result = products.filter(p => {
-      // Category filter (if on category page)
-      const matchesCategory = !category || p.category.toLowerCase().includes(category.name.toLowerCase());
+  // Fetch products with backend filtering when filters change
+  const fetchFilteredProducts = useCallback(async (page: number = 1, append: boolean = false) => {
+    if (!category) return;
+    
+    setFilterLoading(true);
+    try {
+      const [sortField, sortOrder] = sortBy.split('-') as ['name' | 'price', 'asc' | 'desc'];
+      const pageSize = 20; // Load 20 products per page
       
-      // Search filter
-      const matchesSearch = !localSearch || 
-        p.name.toLowerCase().includes(localSearch.toLowerCase()) ||
-        p.sku.toLowerCase().includes(localSearch.toLowerCase()) ||
-        p.brand.toLowerCase().includes(localSearch.toLowerCase()) ||
-        p.series.toLowerCase().includes(localSearch.toLowerCase());
+      const response = await getProducts({
+        category: category.name,
+        brand: selectedBrands.length === 1 ? selectedBrands[0] : undefined,
+        series: selectedSeries.length === 1 ? selectedSeries[0] : undefined,
+        minPrice: priceRange[0],
+        maxPrice: priceRange[1],
+        sortBy: sortField,
+        sortOrder: sortOrder,
+        q: debouncedSearch || undefined,
+        page: page,
+        pageSize: pageSize,
+      });
       
-      // Brand filter
-      const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(p.brand);
+      if (append) {
+        setProducts(prev => [...prev, ...response.items]);
+      } else {
+        setProducts(response.items);
+      }
       
-      // Series filter
-      const matchesSeries = selectedSeries.length === 0 || selectedSeries.includes(p.series);
-      
-      // Price filter
-      const matchesPrice = p.listPrice >= priceRange[0] && p.listPrice <= priceRange[1];
-      
-      return matchesCategory && matchesSearch && matchesBrand && matchesSeries && matchesPrice;
-    });
-
-    // Sort
-    switch (sortBy) {
-      case 'name-asc':
-        result.sort((a, b) => a.name.localeCompare(b.name));
-        break;
-      case 'name-desc':
-        result.sort((a, b) => b.name.localeCompare(a.name));
-        break;
-      case 'price-asc':
-        result.sort((a, b) => a.listPrice - b.listPrice);
-        break;
-      case 'price-desc':
-        result.sort((a, b) => b.listPrice - a.listPrice);
-        break;
+      setTotalProducts(response.total);
+      setHasMore(response.items.length === pageSize && (page * pageSize) < response.total);
+    } catch (error) {
+      console.error('Failed to fetch filtered products:', error);
+      if (!append) {
+        setProducts([]);
+      }
+    } finally {
+      setFilterLoading(false);
     }
+  }, [category, selectedBrands, selectedSeries, priceRange, sortBy, debouncedSearch]);
 
-    return result;
-  }, [category, localSearch, selectedBrands, selectedSeries, priceRange, sortBy]);
+  // Fetch products when filters change (reset to page 1)
+  useEffect(() => {
+    if (category) {
+      setCurrentPage(1);
+      fetchFilteredProducts(1, false);
+    }
+  }, [category, selectedBrands, selectedSeries, priceRange, sortBy, debouncedSearch, fetchFilteredProducts]);
+
+  // Load more products for infinite scroll
+  const loadMore = useCallback(() => {
+    if (!filterLoading && hasMore) {
+      const nextPage = currentPage + 1;
+      setCurrentPage(nextPage);
+      fetchFilteredProducts(nextPage, true);
+    }
+  }, [currentPage, filterLoading, hasMore, fetchFilteredProducts]);
+  
+  // Get price bounds for the category (from initial fetch or products)
+  const priceBounds = useMemo(() => {
+    if (products.length === 0) return { min: 0, max: 10000 };
+    const prices = products.map(p => p.listPrice);
+    return { min: Math.min(...prices), max: Math.max(...prices) };
+  }, [products]);
+
+  // Get available series and brands from current products
+  const availableSeries = useMemo(() => {
+    const seriesSet = new Set(products.map(p => p.series).filter(Boolean));
+    return Array.from(seriesSet).sort();
+  }, [products]);
+
+  const availableBrands = useMemo(() => {
+    const brandSet = new Set(products.map(p => p.brand));
+    return brands.filter(b => brandSet.has(b.name));
+  }, [products, brands]);
+
+  // Infinite scroll hook
+  const { elementRef: loadMoreRef } = useInfiniteScroll({
+    hasMore,
+    loading: filterLoading,
+    onLoadMore: loadMore,
+    threshold: 300,
+  });
 
   useEffect(() => {
     if (category) {
@@ -264,6 +285,8 @@ const CategoryPage = () => {
         ? prev.filter(b => b !== brandName)
         : [...prev, brandName]
     );
+    // Smooth scroll to top when filter changes
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const toggleSeries = (seriesName: string) => {
@@ -272,17 +295,23 @@ const CategoryPage = () => {
         ? prev.filter(s => s !== seriesName)
         : [...prev, seriesName]
     );
+    // Smooth scroll to top when filter changes
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const clearFilters = () => {
     setSelectedBrands([]);
     setSelectedSeries([]);
-    setPriceRange([priceBounds.min, priceBounds.max]);
+    if (priceBounds.min !== undefined && priceBounds.max !== undefined) {
+      setPriceRange([priceBounds.min, priceBounds.max]);
+    }
     setLocalSearch('');
   };
 
   const hasActiveFilters = selectedBrands.length > 0 || selectedSeries.length > 0 || 
-    priceRange[0] > priceBounds.min || priceRange[1] < priceBounds.max || localSearch;
+    (priceBounds.min !== undefined && priceBounds.max !== undefined && 
+     (priceRange[0] > priceBounds.min || priceRange[1] < priceBounds.max)) || 
+    localSearch;
 
   const FilterContent = () => (
     <div className="space-y-6">
@@ -315,7 +344,7 @@ const CategoryPage = () => {
               />
               <span className="text-sm">{brand.name}</span>
               <span className="text-xs text-muted-foreground ml-auto">
-                ({products.filter(p => p.brand === brand.name && (!category || p.category.toLowerCase().includes(category.name.toLowerCase()))).length})
+                ({products.filter(p => p.brand === brand.name).length})
               </span>
             </label>
           ))}
@@ -356,7 +385,13 @@ const CategoryPage = () => {
           max={priceBounds.max}
           step={100}
           value={priceRange}
-          onValueChange={(value) => setPriceRange(value as [number, number])}
+          onValueChange={(value) => {
+            setPriceRange(value as [number, number]);
+            // Debounce scroll to top for price changes
+            setTimeout(() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 500);
+          }}
           className="w-full"
         />
         <div className="flex items-center gap-2">
@@ -378,219 +413,307 @@ const CategoryPage = () => {
 
       {/* Clear Filters */}
       {hasActiveFilters && (
-        <Button variant="outline" className="w-full" onClick={clearFilters}>
-          Clear All Filters
-        </Button>
+        <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+          <Button variant="outline" className="w-full" onClick={() => {
+            clearFilters();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}>
+            Clear All Filters
+          </Button>
+        </motion.div>
       )}
     </div>
   );
 
 
+  // Simplified Category List Item for Sidebar
+  const CategoryListItem = ({ cat, isActive }: { cat: Category; isActive: boolean }) => {
+    const IconComponent = iconMap[cat.icon] || Package;
+    
+    return (
+      <Link
+        to={`/category/${cat.slug}`}
+        className={cn(
+          "flex items-center gap-3 p-3 rounded-lg transition-all duration-200 group",
+          isActive
+            ? "bg-gray-900 dark:bg-white text-white dark:text-black font-medium"
+            : "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+        )}
+      >
+        <IconComponent className={cn(
+          "h-5 w-5 flex-shrink-0",
+          isActive
+            ? "text-white dark:text-black"
+            : "text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300"
+        )} />
+        <span className="flex-1 text-sm truncate">{cat.name}</span>
+        <span className={cn(
+          "text-xs px-2 py-0.5 rounded-full",
+          isActive
+            ? "bg-white/20 dark:bg-black/20"
+            : "bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400"
+        )}>
+          {cat.productCount || 0}
+        </span>
+      </Link>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       <Header />
       <main className="pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-4 md:px-6">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-16 text-center"
+            className="mb-8"
           >
-            <h1 className="text-5xl md:text-6xl font-light text-gray-900 dark:text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-light text-gray-900 dark:text-white mb-2">
               {category?.name || 'All Products'}
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 font-light max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-400 font-light">
               {category?.description || 'Browse our complete catalog'}
             </p>
           </motion.div>
 
-          {/* All Categories Showcase */}
-          <motion.section
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="mb-24"
-          >
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-light text-gray-900 dark:text-white mb-2">
-                All Categories
-              </h2>
-              <p className="text-gray-600 dark:text-gray-400">
-                Explore our complete range of product categories
-              </p>
-            </div>
-            {categories.length > 0 ? (
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {categories.map((cat, idx) => (
-                  <motion.div
-                    key={cat.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: idx * 0.05 }}
-                  >
-                    <CategoryCard 
-                      cat={cat} 
-                      isActive={category?.slug === cat.slug} 
-                      iconMap={iconMap}
-                      Package={Package}
-                    />
-                  </motion.div>
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-12">
-                <p className="text-gray-500 dark:text-gray-400">No categories found</p>
-              </div>
-            )}
-          </motion.section>
-
-          {/* Divider */}
-          <div className="border-t border-gray-200 dark:border-gray-800 my-16"></div>
-
-          {/* Toolbar */}
-          <div className="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-gray-200 dark:border-gray-800">
-            <div className="flex items-center gap-2 flex-wrap">
-              {/* Desktop Filters Toggle */}
-              <Button
-                variant={showFilters ? 'secondary' : 'ghost'}
-                size="sm"
-                onClick={() => setShowFilters(!showFilters)}
-                className="gap-2 hidden md:flex"
-              >
-                <SlidersHorizontal className="h-4 w-4" />
-                Filters
-                {hasActiveFilters && (
-                  <Badge variant="default" className="ml-1 h-5 w-5 p-0 flex items-center justify-center">
-                    {selectedBrands.length + selectedSeries.length + (localSearch ? 1 : 0)}
-                  </Badge>
-                )}
-              </Button>
-
-              {/* Mobile Filters Sheet */}
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="sm" className="gap-2 md:hidden">
-                    <SlidersHorizontal className="h-4 w-4" />
-                    Filters
-                    {hasActiveFilters && (
-                      <Badge variant="default" className="ml-1">
-                        {selectedBrands.length + selectedSeries.length}
-                      </Badge>
-                    )}
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="left" className="w-80">
-                  <SheetHeader>
-                    <SheetTitle>Filters</SheetTitle>
-                  </SheetHeader>
-                  <div className="mt-6">
-                    <FilterContent />
-                  </div>
-                </SheetContent>
-              </Sheet>
-              
-              {/* Active Filter Badges */}
-              <AnimatePresence>
-                {selectedBrands.map(brand => (
-                  <motion.div
-                    key={brand}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                  >
-                    <Button
-                      variant="secondary"
-                      size="sm"
-                      onClick={() => toggleBrand(brand)}
-                      className="gap-1.5"
-                    >
-                      {brand}
-                      <X className="h-3 w-3" />
-                    </Button>
-                  </motion.div>
-                ))}
-                {selectedSeries.map(series => (
-                  <motion.div
-                    key={series}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                  >
-                    <Button
-                      variant="secondary"
-                      size="sm"
-                      onClick={() => toggleSeries(series)}
-                      className="gap-1.5"
-                    >
-                      {series}
-                      <X className="h-3 w-3" />
-                    </Button>
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </div>
-
-            <div className="flex items-center gap-2">
-              {/* Sort */}
-              <Select value={sortBy} onValueChange={(value: SortOption) => setSortBy(value)}>
-                <SelectTrigger className="w-40 h-9 text-sm">
-                  <SelectValue placeholder="Sort by" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="name-asc">Name A-Z</SelectItem>
-                  <SelectItem value="name-desc">Name Z-A</SelectItem>
-                  <SelectItem value="price-asc">Price Low-High</SelectItem>
-                  <SelectItem value="price-desc">Price High-Low</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <span className="text-sm text-muted-foreground hidden sm:inline">
-                {filteredProducts.length} products
-              </span>
-              
-              {/* View Toggle */}
-              <div className="flex border border-border rounded-lg overflow-hidden">
-                <Button
-                  variant={view === 'grid' ? 'secondary' : 'ghost'}
-                  size="icon"
-                  className="h-9 w-9 rounded-none"
-                  onClick={() => setView('grid')}
-                >
-                  <Grid className="h-4 w-4" />
-                </Button>
-                <Button
-                  variant={view === 'list' ? 'secondary' : 'ghost'}
-                  size="icon"
-                  className="h-9 w-9 rounded-none"
-                  onClick={() => setView('list')}
-                >
-                  <List className="h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-          </div>
-
+          {/* Main Content Layout: Sidebar + Products */}
           <div className="flex gap-6">
-            {/* Filters Sidebar (Desktop) */}
-            <AnimatePresence>
-              {showFilters && (
-                <motion.aside
-                  initial={{ opacity: 0, width: 0 }}
-                  animate={{ opacity: 1, width: 280 }}
-                  exit={{ opacity: 0, width: 0 }}
-                  className="hidden md:block flex-shrink-0 overflow-hidden"
-                >
-                  <div className="sticky top-24 bg-card rounded-2xl border border-border p-5 w-[280px]">
-                    <FilterContent />
-                  </div>
-                </motion.aside>
-              )}
-            </AnimatePresence>
+            {/* Left Sidebar - Categories (Desktop) */}
+            <aside className="hidden lg:block w-64 flex-shrink-0">
+              <div className="sticky top-24 bg-card rounded-2xl border border-border p-5">
+                <h2 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
+                  Categories
+                </h2>
+                <div className="space-y-1 max-h-[calc(100vh-200px)] overflow-y-auto">
+                  {categories.length > 0 ? (
+                    categories.map((cat) => (
+                      <CategoryListItem
+                        key={cat.id}
+                        cat={cat}
+                        isActive={category?.slug === cat.slug}
+                      />
+                    ))
+                  ) : (
+                    <p className="text-sm text-gray-500 dark:text-gray-400 py-4">
+                      No categories found
+                    </p>
+                  )}
+                </div>
+              </div>
+            </aside>
 
-            {/* Products Grid */}
-            <div className="flex-1">
-              {filteredProducts.length > 0 ? (
+            {/* Right Side - Products Section */}
+            <div className="flex-1 min-w-0">
+              {/* Toolbar */}
+              <div className="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-gray-200 dark:border-gray-800">
+                <div className="flex items-center gap-2 flex-wrap">
+                  {/* Mobile Categories Sheet */}
+                  <Sheet>
+                    <SheetTrigger asChild>
+                      <Button variant="ghost" size="sm" className="gap-2 lg:hidden">
+                        <Package className="h-4 w-4" />
+                        Categories
+                      </Button>
+                    </SheetTrigger>
+                    <SheetContent side="left" className="w-80">
+                      <SheetHeader>
+                        <SheetTitle>Categories</SheetTitle>
+                      </SheetHeader>
+                      <div className="mt-6 space-y-1">
+                        {categories.length > 0 ? (
+                          categories.map((cat) => (
+                            <CategoryListItem
+                              key={cat.id}
+                              cat={cat}
+                              isActive={category?.slug === cat.slug}
+                            />
+                          ))
+                        ) : (
+                          <p className="text-sm text-gray-500 dark:text-gray-400 py-4">
+                            No categories found
+                          </p>
+                        )}
+                      </div>
+                    </SheetContent>
+                  </Sheet>
+
+                  {/* Desktop Filters Toggle */}
+                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                    <Button
+                      variant={showFilters ? 'secondary' : 'ghost'}
+                      size="sm"
+                      onClick={() => setShowFilters(!showFilters)}
+                      className="gap-2 hidden md:flex"
+                    >
+                      <motion.div
+                        animate={{ rotate: showFilters ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <SlidersHorizontal className="h-4 w-4" />
+                      </motion.div>
+                      Filters
+                      {hasActiveFilters && (
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                        >
+                          <Badge variant="default" className="ml-1 h-5 w-5 p-0 flex items-center justify-center">
+                            {selectedBrands.length + selectedSeries.length + (localSearch ? 1 : 0)}
+                          </Badge>
+                        </motion.div>
+                      )}
+                    </Button>
+                  </motion.div>
+
+                  {/* Mobile Filters Sheet */}
+                  <Sheet>
+                    <SheetTrigger asChild>
+                      <Button variant="ghost" size="sm" className="gap-2 md:hidden">
+                        <SlidersHorizontal className="h-4 w-4" />
+                        Filters
+                        {hasActiveFilters && (
+                          <Badge variant="default" className="ml-1">
+                            {selectedBrands.length + selectedSeries.length}
+                          </Badge>
+                        )}
+                      </Button>
+                    </SheetTrigger>
+                    <SheetContent side="left" className="w-80">
+                      <SheetHeader>
+                        <SheetTitle>Filters</SheetTitle>
+                      </SheetHeader>
+                      <div className="mt-6">
+                        <FilterContent />
+                      </div>
+                    </SheetContent>
+                  </Sheet>
+              
+                  {/* Active Filter Badges */}
+                  <AnimatePresence>
+                    {selectedBrands.map(brand => (
+                      <motion.div
+                        key={brand}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                      >
+                        <Button
+                          variant="secondary"
+                          size="sm"
+                          onClick={() => toggleBrand(brand)}
+                          className="gap-1.5"
+                        >
+                          {brand}
+                          <X className="h-3 w-3" />
+                        </Button>
+                      </motion.div>
+                    ))}
+                    {selectedSeries.map(series => (
+                      <motion.div
+                        key={series}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                      >
+                        <Button
+                          variant="secondary"
+                          size="sm"
+                          onClick={() => toggleSeries(series)}
+                          className="gap-1.5"
+                        >
+                          {series}
+                          <X className="h-3 w-3" />
+                        </Button>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  {/* Sort */}
+                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                    <Select value={sortBy} onValueChange={(value: SortOption) => {
+                      setSortBy(value);
+                      // Smooth scroll to top on sort change
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}>
+                      <SelectTrigger className="w-40 h-9 text-sm">
+                        <SelectValue placeholder="Sort by" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="name-asc">Name A-Z</SelectItem>
+                        <SelectItem value="name-desc">Name Z-A</SelectItem>
+                        <SelectItem value="price-asc">Price Low-High</SelectItem>
+                        <SelectItem value="price-desc">Price High-Low</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </motion.div>
+
+                  <span className="text-sm text-muted-foreground hidden sm:inline">
+                    {totalProducts > 0 ? `${products.length} of ${totalProducts}` : products.length} products
+                  </span>
+                  
+                  {/* View Toggle */}
+                  <div className="flex border border-border rounded-lg overflow-hidden">
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button
+                        variant={view === 'grid' ? 'secondary' : 'ghost'}
+                        size="icon"
+                        className="h-9 w-9 rounded-none"
+                        onClick={() => setView('grid')}
+                      >
+                        <Grid className="h-4 w-4" />
+                      </Button>
+                    </motion.div>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button
+                        variant={view === 'list' ? 'secondary' : 'ghost'}
+                        size="icon"
+                        className="h-9 w-9 rounded-none"
+                        onClick={() => setView('list')}
+                      >
+                        <List className="h-4 w-4" />
+                      </Button>
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                {/* Filters Sidebar (Desktop) */}
+                <AnimatePresence>
+                  {showFilters && (
+                    <motion.aside
+                      initial={{ opacity: 0, width: 0 }}
+                      animate={{ opacity: 1, width: 280 }}
+                      exit={{ opacity: 0, width: 0 }}
+                      className="hidden md:block flex-shrink-0 overflow-hidden"
+                    >
+                      <div className="sticky top-24 bg-card rounded-2xl border border-border p-5 w-[280px]">
+                        <FilterContent />
+                      </div>
+                    </motion.aside>
+                  )}
+                </AnimatePresence>
+
+                {/* Products Grid */}
+                <div className="flex-1">
+              {filterLoading ? (
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className={`grid gap-4 ${
+                    view === 'grid' 
+                      ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4' 
+                      : 'grid-cols-1'
+                  }`}
+                >
+                  <ProductCardSkeleton count={view === 'grid' ? 8 : 4} />
+                </motion.div>
+              ) : products.length > 0 ? (
                 <motion.div 
                   layout
                   className={`grid gap-4 ${
@@ -600,24 +723,55 @@ const CategoryPage = () => {
                   }`}
                 >
                   <AnimatePresence mode="popLayout">
-                    {filteredProducts.map((product, idx) => (
+                    {products.map((product, idx) => (
                       <motion.div
                         key={product.id}
                         layout
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.9 }}
-                        transition={{ delay: idx * 0.02 }}
+                        initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        exit={{ opacity: 0, scale: 0.9, y: -20 }}
+                        transition={{ 
+                          delay: idx * 0.02,
+                          duration: 0.3,
+                          ease: [0.25, 0.1, 0.25, 1]
+                        }}
                       >
                         <ProductCard product={product} index={idx} />
                       </motion.div>
                     ))}
                   </AnimatePresence>
+                  
+                  {/* Infinite scroll trigger */}
+                  {hasMore && (
+                    <div ref={loadMoreRef} className="col-span-full py-8">
+                      {filterLoading && (
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          className="flex justify-center"
+                        >
+                          <ProductCardSkeleton count={view === 'grid' ? 4 : 2} />
+                        </motion.div>
+                      )}
+                    </div>
+                  )}
+                  
+                  {/* End of results message */}
+                  {!hasMore && products.length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="col-span-full text-center py-8 text-sm text-muted-foreground"
+                    >
+                      Showing all {products.length} products
+                    </motion.div>
+                  )}
                 </motion.div>
               ) : (
                 <motion.div 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
                   className="text-center py-16"
                 >
                   <p className="text-muted-foreground mb-4">No products found matching your criteria</p>
@@ -626,6 +780,8 @@ const CategoryPage = () => {
                   </Button>
                 </motion.div>
               )}
+                </div>
+              </div>
             </div>
           </div>
         </div>

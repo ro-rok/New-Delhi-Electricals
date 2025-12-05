@@ -1,0 +1,436 @@
+[
+  {
+    "id": "accessories",
+    "name": "Accessories",
+    "slug": "accessories",
+    "description": "Accessories products",
+    "icon": "Package",
+    "image": "/category-images/accessories.jpg",
+    "productCount": 64,
+    "subcategories": [
+      {
+        "id": "blank-off-unit---1-module",
+        "name": "Blank Off Unit - 1 Module",
+        "slug": "blank-off-unit---1-module",
+        "productCount": 7
+      },
+      {
+        "id": "buzzer---2-module",
+        "name": "Buzzer - 2 Module",
+        "slug": "buzzer---2-module",
+        "productCount": 5
+      },
+      {
+        "id": "cable-outlet---1-module",
+        "name": "Cable Outlet - 1 Module",
+        "slug": "cable-outlet---1-module",
+        "productCount": 7
+      },
+      {
+        "id": "door-bells---2-module",
+        "name": "Door Bells - 2 Module",
+        "slug": "door-bells---2-module",
+        "productCount": 5
+      },
+      {
+        "id": "led-foot-light---2-module",
+        "name": "LED Foot Light - 2 Module",
+        "slug": "led-foot-light---2-module",
+        "productCount": 7
+      },
+      {
+        "id": "led-phase-indicator---1-module",
+        "name": "LED Phase Indicator - 1 Module",
+        "slug": "led-phase-indicator---1-module",
+        "productCount": 4
+      },
+      {
+        "id": "remotes",
+        "name": "Remotes",
+        "slug": "remotes",
+        "productCount": 1
+      },
+      {
+        "id": "usb-chargers---1-module",
+        "name": "USB Chargers - 1 Module",
+        "slug": "usb-chargers---1-module",
+        "productCount": 19
+      },
+      {
+        "id": "wi-fi-accessories",
+        "name": "Wi-fi Accessories",
+        "slug": "wi-fi-accessories",
+        "productCount": 9
+      }
+    ]
+  },
+  {
+    "id": "boxes",
+    "name": "Boxes",
+    "slug": "boxes",
+    "description": "Boxes products",
+    "icon": "Package",
+    "image": "/category-images/boxes.jpg",
+    "productCount": 9,
+    "subcategories": [
+      {
+        "id": "gi-metal-mounting-boxes",
+        "name": "GI Metal Mounting Boxes",
+        "slug": "gi-metal-mounting-boxes",
+        "productCount": 9
+      }
+    ]
+  },
+  {
+    "id": "circuit-protection",
+    "name": "Circuit Protection",
+    "slug": "circuit-protection",
+    "description": "Circuit Protection products",
+    "icon": "Package",
+    "image": "/category-images/circuit-protection.jpg",
+    "productCount": 188,
+    "subcategories": [
+      {
+        "id": "automatic-changeover-with-current-limiter-accl",
+        "name": "Automatic Changeover with Current Limiter (ACCL)",
+        "slug": "automatic-changeover-with-current-limiter-accl",
+        "productCount": 12
+      },
+      {
+        "id": "isolators",
+        "name": "Isolators",
+        "slug": "isolators",
+        "productCount": 9
+      },
+      {
+        "id": "mini-mcbs-3ka",
+        "name": "Mini MCBs 3kA",
+        "slug": "mini-mcbs-3ka",
+        "productCount": 16
+      },
+      {
+        "id": "mini-mcbs-with-led-indicator",
+        "name": "Mini MCBs with LED Indicator",
+        "slug": "mini-mcbs-with-led-indicator",
+        "productCount": 40
+      },
+      {
+        "id": "miniature-circuit-breakers-mcbs",
+        "name": "Miniature Circuit Breakers (MCBs)",
+        "slug": "miniature-circuit-breakers-mcbs",
+        "productCount": 32
+      },
+      {
+        "id": "modular-changeover-switches",
+        "name": "Modular Changeover Switches",
+        "slug": "modular-changeover-switches",
+        "productCount": 5
+      },
+      {
+        "id": "residual-current-circuit-breaker-with-over-current-protection-rcbos",
+        "name": "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+        "slug": "residual-current-circuit-breaker-with-over-current-protection-rcbos",
+        "productCount": 48
+      },
+      {
+        "id": "residual-current-circuit-breakers-rccbs-elcbs",
+        "name": "Residual Current Circuit Breakers (RCCBs/ELCBs)",
+        "slug": "residual-current-circuit-breakers-rccbs-elcbs",
+        "productCount": 18
+      },
+      {
+        "id": "three-phase-automatic-changeover-with-current-limiter-3ph-accl",
+        "name": "Three Phase Automatic Changeover with Current Limiter (3Ph ACCL)",
+        "slug": "three-phase-automatic-changeover-with-current-limiter-3ph-accl",
+        "productCount": 8
+      }
+    ]
+  },
+  {
+    "id": "data-sockets",
+    "name": "Data Sockets",
+    "slug": "data-sockets",
+    "description": "Data Sockets products",
+    "icon": "Package",
+    "image": "/category-images/data-sockets.jpg",
+    "productCount": 21,
+    "subcategories": [
+      {
+        "id": "lan-sockets---1-module",
+        "name": "LAN Sockets - 1 Module",
+        "slug": "lan-sockets---1-module",
+        "productCount": 7
+      },
+      {
+        "id": "tv-sockets---1-module",
+        "name": "TV Sockets - 1 Module",
+        "slug": "tv-sockets---1-module",
+        "productCount": 7
+      },
+      {
+        "id": "telephone-sockets---1-module",
+        "name": "Telephone Sockets - 1 Module",
+        "slug": "telephone-sockets---1-module",
+        "productCount": 7
+      }
+    ]
+  },
+  {
+    "id": "dimmers",
+    "name": "Dimmers",
+    "slug": "dimmers",
+    "description": "Dimmers products",
+    "icon": "Package",
+    "image": "/category-images/dimmers.jpg",
+    "productCount": 9,
+    "subcategories": [
+      {
+        "id": "dimmers---1-module",
+        "name": "Dimmers - 1 Module",
+        "slug": "dimmers---1-module",
+        "productCount": 7
+      },
+      {
+        "id": "modular-ir-dimmers",
+        "name": "Modular IR Dimmers",
+        "slug": "modular-ir-dimmers",
+        "productCount": 2
+      }
+    ]
+  },
+  {
+    "id": "fan-controls",
+    "name": "Fan Controls",
+    "slug": "fan-controls",
+    "description": "Fan Controls products",
+    "icon": "Package",
+    "image": "/category-images/fan-controls.jpg",
+    "productCount": 22,
+    "subcategories": [
+      {
+        "id": "fan-regulators---1-module",
+        "name": "Fan Regulators - 1 Module",
+        "slug": "fan-regulators---1-module",
+        "productCount": 7
+      },
+      {
+        "id": "fan-regulators---2-module",
+        "name": "Fan Regulators - 2 Module",
+        "slug": "fan-regulators---2-module",
+        "productCount": 10
+      },
+      {
+        "id": "modular-ir-fan-regulators",
+        "name": "Modular IR Fan Regulators",
+        "slug": "modular-ir-fan-regulators",
+        "productCount": 2
+      },
+      {
+        "id": "wi-fi-fan-regulators",
+        "name": "Wi-fi Fan Regulators",
+        "slug": "wi-fi-fan-regulators",
+        "productCount": 3
+      }
+    ]
+  },
+  {
+    "id": "hospitality",
+    "name": "Hospitality",
+    "slug": "hospitality",
+    "description": "Hospitality products",
+    "icon": "Package",
+    "image": "/category-images/hospitality.jpg",
+    "productCount": 36,
+    "subcategories": [
+      {
+        "id": "dnd-mmr-units",
+        "name": "DND-MMR Units",
+        "slug": "dnd-mmr-units",
+        "productCount": 14
+      },
+      {
+        "id": "key-tag-accessories",
+        "name": "Key Tag Accessories",
+        "slug": "key-tag-accessories",
+        "productCount": 7
+      },
+      {
+        "id": "mechanical-key-tag-switches",
+        "name": "Mechanical Key Tag Switches",
+        "slug": "mechanical-key-tag-switches",
+        "productCount": 15
+      }
+    ]
+  },
+  {
+    "id": "plates",
+    "name": "Plates",
+    "slug": "plates",
+    "description": "Plates products",
+    "icon": "Package",
+    "image": "/category-images/plates.jpg",
+    "productCount": 422,
+    "subcategories": [
+      {
+        "id": "cover-plates-with-grid-frames",
+        "name": "Cover Plates with grid frames",
+        "slug": "cover-plates-with-grid-frames",
+        "productCount": 81
+      },
+      {
+        "id": "cover-plates-without-grid-frames---vibrant-shades",
+        "name": "Cover Plates without grid frames - Vibrant Shades",
+        "slug": "cover-plates-without-grid-frames---vibrant-shades",
+        "productCount": 40
+      },
+      {
+        "id": "cover-plates-without-grid-frames---vivid-shades",
+        "name": "Cover Plates without grid frames - Vivid Shades",
+        "slug": "cover-plates-without-grid-frames---vivid-shades",
+        "productCount": 60
+      },
+      {
+        "id": "cover-plates-without-grid-frames---wooden-finishes",
+        "name": "Cover Plates without grid frames - Wooden Finishes",
+        "slug": "cover-plates-without-grid-frames---wooden-finishes",
+        "productCount": 20
+      },
+      {
+        "id": "glass-plates-with-grid-frames",
+        "name": "Glass Plates with grid frames",
+        "slug": "glass-plates-with-grid-frames",
+        "productCount": 50
+      },
+      {
+        "id": "glass-plates-without-grid-frames",
+        "name": "Glass Plates without grid frames",
+        "slug": "glass-plates-without-grid-frames",
+        "productCount": 7
+      },
+      {
+        "id": "grid-frames",
+        "name": "Grid Frames",
+        "slug": "grid-frames",
+        "productCount": 18
+      },
+      {
+        "id": "marble-finish-plates-with-grid-frames",
+        "name": "Marble finish plates with grid frames",
+        "slug": "marble-finish-plates-with-grid-frames",
+        "productCount": 20
+      },
+      {
+        "id": "metal-aluminium-plates-without-grid-frames",
+        "name": "Metal (Aluminium) Plates without grid frames",
+        "slug": "metal-aluminium-plates-without-grid-frames",
+        "productCount": 30
+      },
+      {
+        "id": "pvc-cover-plates-with-grid-frame",
+        "name": "PVC Cover Plates with Grid Frame",
+        "slug": "pvc-cover-plates-with-grid-frame",
+        "productCount": 66
+      },
+      {
+        "id": "wood-plates-without-grid-frames",
+        "name": "Wood Plates without grid frames",
+        "slug": "wood-plates-without-grid-frames",
+        "productCount": 30
+      }
+    ]
+  },
+  {
+    "id": "power-sockets",
+    "name": "Power Sockets",
+    "slug": "power-sockets",
+    "description": "Power Sockets products",
+    "icon": "Package",
+    "image": "/category-images/power-sockets.jpg",
+    "productCount": 16,
+    "subcategories": [
+      {
+        "id": "power-sockets---2-module",
+        "name": "Power Sockets - 2 Module",
+        "slug": "power-sockets---2-module",
+        "productCount": 16
+      }
+    ]
+  },
+  {
+    "id": "switches",
+    "name": "Switches",
+    "slug": "switches",
+    "description": "Switches products",
+    "icon": "Package",
+    "image": "/category-images/switches.jpg",
+    "productCount": 132,
+    "subcategories": [
+      {
+        "id": "bell-push---1-module",
+        "name": "Bell Push - 1 Module",
+        "slug": "bell-push---1-module",
+        "productCount": 8
+      },
+      {
+        "id": "bell-push---2-module",
+        "name": "Bell Push - 2 Module",
+        "slug": "bell-push---2-module",
+        "productCount": 4
+      },
+      {
+        "id": "dp-switches---2-module",
+        "name": "DP Switches - 2 Module",
+        "slug": "dp-switches---2-module",
+        "productCount": 6
+      },
+      {
+        "id": "modular-ir-touch-switches",
+        "name": "Modular IR Touch Switches",
+        "slug": "modular-ir-touch-switches",
+        "productCount": 10
+      },
+      {
+        "id": "motor-starters---2-module",
+        "name": "Motor Starters - 2 Module",
+        "slug": "motor-starters---2-module",
+        "productCount": 7
+      },
+      {
+        "id": "switches---2-module-mega-switches",
+        "name": "SWITCHES - 2 MODULE (Mega Switches)",
+        "slug": "switches---2-module-mega-switches",
+        "productCount": 23
+      },
+      {
+        "id": "soft-feel-bell-pushes---1-module",
+        "name": "Soft Feel Bell Pushes - 1 Module",
+        "slug": "soft-feel-bell-pushes---1-module",
+        "productCount": 6
+      },
+      {
+        "id": "soft-feel-switches---1-module",
+        "name": "Soft Feel Switches - 1 Module",
+        "slug": "soft-feel-switches---1-module",
+        "productCount": 24
+      },
+      {
+        "id": "switches---1-module",
+        "name": "Switches - 1 Module",
+        "slug": "switches---1-module",
+        "productCount": 32
+      },
+      {
+        "id": "wi-fi-power-switch",
+        "name": "Wi-fi Power Switch",
+        "slug": "wi-fi-power-switch",
+        "productCount": 6
+      },
+      {
+        "id": "wi-fi-switch",
+        "name": "Wi-fi Switch",
+        "slug": "wi-fi-switch",
+        "productCount": 6
+      }
+    ]
+  }
+]

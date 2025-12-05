@@ -1,11 +1,10 @@
-
 [
   {
     "sku": "CB93101SW06",
     "name": "Switch 6AX 1-way 1M - White",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 6,
       "color": "White",
@@ -27,17 +26,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-6ax-1-way-1m-white-engem",
+      "slug": "switch-6ax-1-way-1m-white",
       "keywords": [
-        "Switch",
-        "6AX",
         "1-way",
         "1M",
-        "White",
-        "Switches & Bell Push",
-        "ENGEM"
+        "6AX",
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches",
+        "White"
       ],
-      "meta_description": "Buy Switch 6AX 1-way 1M White online at New Delhi Electricals. Engem switch."
+      "meta_description": "Buy Switch 6AX 1-way 1M - White online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -50,7 +49,7 @@
     "name": "Switch 6AX 1-way 1M - Stone Grey",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 6,
       "color": "Stone Grey",
@@ -72,17 +71,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-6ax-1-way-1m-stone-grey-engem",
+      "slug": "switch-6ax-1-way-1m-stone-grey",
       "keywords": [
-        "Switch",
-        "6AX",
         "1-way",
         "1M",
+        "6AX",
         "Stone Grey",
-        "Switches & Bell Push",
-        "ENGEM"
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches"
       ],
-      "meta_description": "Buy Switch 6AX 1-way 1M Stone Grey online at New Delhi Electricals. Engem switch."
+      "meta_description": "Buy Switch 6AX 1-way 1M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -95,7 +94,7 @@
     "name": "Switch 6AX 1-way with Indicator 1M - White",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 6,
       "color": "White",
@@ -117,18 +116,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-6ax-1-way-indicator-1m-white-engem",
+      "slug": "switch-6ax-1-way-with-indicator-1m-white",
       "keywords": [
-        "Switch",
-        "6AX",
         "1-way",
-        "Indicator",
         "1M",
-        "White",
-        "Switches & Bell Push",
-        "ENGEM"
+        "6AX",
+        "Indicator",
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches",
+        "White"
       ],
-      "meta_description": "Buy Switch 6AX 1-way with Indicator 1M White online at New Delhi Electricals. Engem switch with indicator."
+      "meta_description": "Buy Switch 6AX 1-way with Indicator 1M - White online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -141,7 +140,7 @@
     "name": "Switch 6AX 1-way with Indicator 1M - Stone Grey",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 6,
       "color": "Stone Grey",
@@ -163,18 +162,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-6ax-1-way-indicator-1m-stone-grey-engem",
+      "slug": "switch-6ax-1-way-with-indicator-1m-stone-grey",
       "keywords": [
-        "Switch",
-        "6AX",
         "1-way",
-        "Indicator",
         "1M",
+        "6AX",
+        "Indicator",
         "Stone Grey",
-        "Switches & Bell Push",
-        "ENGEM"
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches"
       ],
-      "meta_description": "Buy Switch 6AX 1-way with Indicator 1M Stone Grey online at New Delhi Electricals. Engem switch with indicator."
+      "meta_description": "Buy Switch 6AX 1-way with Indicator 1M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -187,7 +186,7 @@
     "name": "Switch 6AX 2-way 1M - White",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 6,
       "color": "White",
@@ -209,17 +208,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-6ax-2-way-1m-white-engem",
+      "slug": "switch-6ax-2-way-1m-white",
       "keywords": [
-        "Switch",
+        "1M",
         "6AX",
         "2-way",
-        "1M",
-        "White",
-        "Switches & Bell Push",
-        "ENGEM"
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches",
+        "White"
       ],
-      "meta_description": "Buy Switch 6AX 2-way 1M White online at New Delhi Electricals. Engem switch."
+      "meta_description": "Buy Switch 6AX 2-way 1M - White online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -232,7 +231,7 @@
     "name": "Switch 6AX 2-way 1M - Stone Grey",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 6,
       "color": "Stone Grey",
@@ -254,17 +253,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-6ax-2-way-1m-stone-grey-engem",
+      "slug": "switch-6ax-2-way-1m-stone-grey",
       "keywords": [
-        "Switch",
-        "6AX",
-        "2-way",
         "1M",
+        "6AX",
         "Stone Grey",
-        "Switches & Bell Push",
-        "ENGEM"
+        "2-way",
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches"
       ],
-      "meta_description": "Buy Switch 6AX 2-way 1M Stone Grey online at New Delhi Electricals. Engem switch."
+      "meta_description": "Buy Switch 6AX 2-way 1M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -277,7 +276,7 @@
     "name": "Switch 16AX 1-way 1M - White",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 16,
       "color": "White",
@@ -299,17 +298,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-16ax-1-way-1m-white-engem",
+      "slug": "switch-16ax-1-way-1m-white",
       "keywords": [
-        "Switch",
-        "16AX",
         "1-way",
         "1M",
-        "White",
-        "Switches & Bell Push",
-        "ENGEM"
+        "16AX",
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches",
+        "White"
       ],
-      "meta_description": "Buy Switch 16AX 1-way 1M White online at New Delhi Electricals. Engem switch."
+      "meta_description": "Buy Switch 16AX 1-way 1M - White online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -322,7 +321,7 @@
     "name": "Switch 16AX 1-way 1M - Stone Grey",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 16,
       "color": "Stone Grey",
@@ -344,17 +343,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-16ax-1-way-1m-stone-grey-engem",
+      "slug": "switch-16ax-1-way-1m-stone-grey",
       "keywords": [
-        "Switch",
-        "16AX",
         "1-way",
         "1M",
+        "16AX",
         "Stone Grey",
-        "Switches & Bell Push",
-        "ENGEM"
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches"
       ],
-      "meta_description": "Buy Switch 16AX 1-way 1M Stone Grey online at New Delhi Electricals. Engem switch."
+      "meta_description": "Buy Switch 16AX 1-way 1M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -367,7 +366,7 @@
     "name": "Switch 16AX 1-way with Indicator 1M - White",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 16,
       "color": "White",
@@ -389,18 +388,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-16ax-1-way-indicator-1m-white-engem",
+      "slug": "switch-16ax-1-way-with-indicator-1m-white",
       "keywords": [
-        "Switch",
-        "16AX",
         "1-way",
-        "Indicator",
         "1M",
-        "White",
-        "Switches & Bell Push",
-        "ENGEM"
+        "Indicator",
+        "16AX",
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches",
+        "White"
       ],
-      "meta_description": "Buy Switch 16AX 1-way with Indicator 1M White online at New Delhi Electricals. Engem switch with indicator."
+      "meta_description": "Buy Switch 16AX 1-way with Indicator 1M - White online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -413,7 +412,7 @@
     "name": "Switch 16AX 1-way with Indicator 1M - Stone Grey",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 16,
       "color": "Stone Grey",
@@ -435,18 +434,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-16ax-1-way-indicator-1m-stone-grey-engem",
+      "slug": "switch-16ax-1-way-with-indicator-1m-stone-grey",
       "keywords": [
-        "Switch",
-        "16AX",
         "1-way",
-        "Indicator",
         "1M",
+        "16AX",
+        "Indicator",
         "Stone Grey",
-        "Switches & Bell Push",
-        "ENGEM"
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches"
       ],
-      "meta_description": "Buy Switch 16AX 1-way with Indicator 1M Stone Grey online at New Delhi Electricals. Engem switch with indicator."
+      "meta_description": "Buy Switch 16AX 1-way with Indicator 1M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -459,7 +458,7 @@
     "name": "Switch 16AX 2-way 1M - White",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 16,
       "color": "White",
@@ -481,17 +480,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-16ax-2-way-1m-white-engem",
+      "slug": "switch-16ax-2-way-1m-white",
       "keywords": [
-        "Switch",
+        "1M",
         "16AX",
         "2-way",
-        "1M",
-        "White",
-        "Switches & Bell Push",
-        "ENGEM"
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches",
+        "White"
       ],
-      "meta_description": "Buy Switch 16AX 2-way 1M White online at New Delhi Electricals. Engem switch."
+      "meta_description": "Buy Switch 16AX 2-way 1M - White online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -504,7 +503,7 @@
     "name": "Switch 16AX 2-way 1M - Stone Grey",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 16,
       "color": "Stone Grey",
@@ -526,17 +525,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-16ax-2-way-1m-stone-grey-engem",
+      "slug": "switch-16ax-2-way-1m-stone-grey",
       "keywords": [
-        "Switch",
-        "16AX",
-        "2-way",
         "1M",
+        "16AX",
         "Stone Grey",
-        "Switches & Bell Push",
-        "ENGEM"
+        "2-way",
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches"
       ],
-      "meta_description": "Buy Switch 16AX 2-way 1M Stone Grey online at New Delhi Electricals. Engem switch."
+      "meta_description": "Buy Switch 16AX 2-way 1M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -549,7 +548,7 @@
     "name": "Switch 20A 1-way 1M - White",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 20,
       "color": "White",
@@ -571,17 +570,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-20a-1-way-1m-white-engem",
+      "slug": "switch-20a-1-way-1m-white",
       "keywords": [
-        "Switch",
-        "20A",
         "1-way",
         "1M",
-        "White",
-        "Switches & Bell Push",
-        "ENGEM"
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches",
+        "20A",
+        "White"
       ],
-      "meta_description": "Buy Switch 20A 1-way 1M White online at New Delhi Electricals. Engem switch."
+      "meta_description": "Buy Switch 20A 1-way 1M - White online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -594,7 +593,7 @@
     "name": "Switch 20A 1-way 1M - Stone Grey",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 20,
       "color": "Stone Grey",
@@ -616,17 +615,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-20a-1-way-1m-stone-grey-engem",
+      "slug": "switch-20a-1-way-1m-stone-grey",
       "keywords": [
-        "Switch",
-        "20A",
         "1-way",
         "1M",
         "Stone Grey",
-        "Switches & Bell Push",
-        "ENGEM"
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches",
+        "20A"
       ],
-      "meta_description": "Buy Switch 20A 1-way 1M Stone Grey online at New Delhi Electricals. Engem switch."
+      "meta_description": "Buy Switch 20A 1-way 1M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -639,7 +638,7 @@
     "name": "Switch 20A 1-way with Indicator 1M - White",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 20,
       "color": "White",
@@ -661,18 +660,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-20a-1-way-indicator-1m-white-engem",
+      "slug": "switch-20a-1-way-with-indicator-1m-white",
       "keywords": [
-        "Switch",
-        "20A",
         "1-way",
-        "Indicator",
         "1M",
-        "White",
-        "Switches & Bell Push",
-        "ENGEM"
+        "Indicator",
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches",
+        "20A",
+        "White"
       ],
-      "meta_description": "Buy Switch 20A 1-way with Indicator 1M White online at New Delhi Electricals. Engem switch with indicator."
+      "meta_description": "Buy Switch 20A 1-way with Indicator 1M - White online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -685,7 +684,7 @@
     "name": "Switch 20A 1-way with Indicator 1M - Stone Grey",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "subcategory": "Switches - 1 Module",
     "specs": {
       "ampere": 20,
       "color": "Stone Grey",
@@ -707,18 +706,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-20a-1-way-indicator-1m-stone-grey-engem",
+      "slug": "switch-20a-1-way-with-indicator-1m-stone-grey",
       "keywords": [
-        "Switch",
-        "20A",
         "1-way",
-        "Indicator",
         "1M",
+        "Indicator",
         "Stone Grey",
-        "Switches & Bell Push",
-        "ENGEM"
+        "ENGEM",
+        "Switches - 1 Module",
+        "Switches",
+        "20A"
       ],
-      "meta_description": "Buy Switch 20A 1-way with Indicator 1M Stone Grey online at New Delhi Electricals. Engem switch with indicator."
+      "meta_description": "Buy Switch 20A 1-way with Indicator 1M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen switches - 1 module."
     },
     "status": {
       "is_active": true,
@@ -731,7 +730,7 @@
     "name": "Switch 32A DP with Indicator lamp 2M - White",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 2 Module",
+    "subcategory": "DP Switches - 2 Module",
     "specs": {
       "ampere": 32,
       "color": "White",
@@ -753,18 +752,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-32a-dp-indicator-lamp-2m-white-engem",
+      "slug": "switch-32a-dp-with-indicator-lamp-2m-white",
       "keywords": [
-        "Switch",
-        "32A",
-        "DP",
-        "Indicator",
         "2M",
-        "White",
-        "Switches & Bell Push",
-        "ENGEM"
+        "DP Switches - 2 Module",
+        "32A",
+        "Indicator",
+        "ENGEM",
+        "Switches",
+        "White"
       ],
-      "meta_description": "Buy Switch 32A DP with Indicator lamp 2M White online at New Delhi Electricals. Engem switch with indicator."
+      "meta_description": "Buy Switch 32A DP with Indicator lamp 2M - White online at New Delhi Electricals. Lauritz Knudsen dp switches - 2 module."
     },
     "status": {
       "is_active": true,
@@ -777,7 +775,7 @@
     "name": "Switch 32A DP with Indicator lamp 2M - Stone Grey",
     "product_family": "ENGEM",
     "category": "Switches",
-    "subcategory": "Switches & Bell Push - 2 Module",
+    "subcategory": "DP Switches - 2 Module",
     "specs": {
       "ampere": 32,
       "color": "Stone Grey",
@@ -799,18 +797,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "switch-32a-dp-indicator-lamp-2m-stone-grey-engem",
+      "slug": "switch-32a-dp-with-indicator-lamp-2m-stone-grey",
       "keywords": [
-        "Switch",
-        "32A",
-        "DP",
-        "Indicator",
         "2M",
+        "DP Switches - 2 Module",
+        "32A",
+        "Indicator",
         "Stone Grey",
-        "Switches & Bell Push",
-        "ENGEM"
+        "ENGEM",
+        "Switches"
       ],
-      "meta_description": "Buy Switch 32A DP with Indicator lamp 2M Stone Grey online at New Delhi Electricals. Engem switch with indicator."
+      "meta_description": "Buy Switch 32A DP with Indicator lamp 2M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen dp switches - 2 module."
     },
     "status": {
       "is_active": true,
@@ -822,8 +819,8 @@
     "sku": "CB93101BW06",
     "name": "Bell Push 6A 1M - White",
     "product_family": "ENGEM",
-    "category": "Bell Push",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
     "specs": {
       "ampere": 6,
       "color": "White",
@@ -845,16 +842,16 @@
       "documents": []
     },
     "seo": {
-      "slug": "bell-push-6a-1m-white-engem",
+      "slug": "bell-push-6a-1m-white",
       "keywords": [
-        "Bell Push",
-        "6A",
         "1M",
-        "White",
-        "Switches & Bell Push",
-        "ENGEM"
+        "6A",
+        "ENGEM",
+        "Switches",
+        "Bell Push - 1 Module",
+        "White"
       ],
-      "meta_description": "Buy Bell Push 6A 1M White online at New Delhi Electricals. Engem bell push."
+      "meta_description": "Buy Bell Push 6A 1M - White online at New Delhi Electricals. Lauritz Knudsen bell push - 1 module."
     },
     "status": {
       "is_active": true,
@@ -866,8 +863,8 @@
     "sku": "CB93101BS06",
     "name": "Bell Push 6A 1M - Stone Grey",
     "product_family": "ENGEM",
-    "category": "Bell Push",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
     "specs": {
       "ampere": 6,
       "color": "Stone Grey",
@@ -889,16 +886,16 @@
       "documents": []
     },
     "seo": {
-      "slug": "bell-push-6a-1m-stone-grey-engem",
+      "slug": "bell-push-6a-1m-stone-grey",
       "keywords": [
-        "Bell Push",
-        "6A",
         "1M",
         "Stone Grey",
-        "Switches & Bell Push",
-        "ENGEM"
+        "6A",
+        "ENGEM",
+        "Switches",
+        "Bell Push - 1 Module"
       ],
-      "meta_description": "Buy Bell Push 6A 1M Stone Grey online at New Delhi Electricals. Engem bell push."
+      "meta_description": "Buy Bell Push 6A 1M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen bell push - 1 module."
     },
     "status": {
       "is_active": true,
@@ -910,8 +907,8 @@
     "sku": "CB93301BW06",
     "name": "Bell Push 6A 1M with Indicator - White",
     "product_family": "ENGEM",
-    "category": "Bell Push",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
     "specs": {
       "ampere": 6,
       "color": "White",
@@ -933,17 +930,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "bell-push-6a-indicator-1m-white-engem",
+      "slug": "bell-push-6a-1m-with-indicator-white",
       "keywords": [
-        "Bell Push",
-        "6A",
-        "Indicator",
         "1M",
-        "White",
-        "Switches & Bell Push",
-        "ENGEM"
+        "Indicator",
+        "6A",
+        "ENGEM",
+        "Switches",
+        "Bell Push - 1 Module",
+        "White"
       ],
-      "meta_description": "Buy Bell Push 6A 1M with Indicator White online at New Delhi Electricals. Engem bell push with indicator."
+      "meta_description": "Buy Bell Push 6A 1M with Indicator - White online at New Delhi Electricals. Lauritz Knudsen bell push - 1 module."
     },
     "status": {
       "is_active": true,
@@ -955,8 +952,8 @@
     "sku": "CB93301BS06",
     "name": "Bell Push 6A 1M with Indicator - Stone Grey",
     "product_family": "ENGEM",
-    "category": "Bell Push",
-    "subcategory": "Switches & Bell Push - 1 Module",
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
     "specs": {
       "ampere": 6,
       "color": "Stone Grey",
@@ -978,17 +975,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "bell-push-6a-indicator-1m-stone-grey-engem",
+      "slug": "bell-push-6a-1m-with-indicator-stone-grey",
       "keywords": [
-        "Bell Push",
-        "6A",
-        "Indicator",
         "1M",
+        "Indicator",
         "Stone Grey",
-        "Switches & Bell Push",
-        "ENGEM"
+        "6A",
+        "ENGEM",
+        "Switches",
+        "Bell Push - 1 Module"
       ],
-      "meta_description": "Buy Bell Push 6A 1M with Indicator Stone Grey online at New Delhi Electricals. Engem bell push with indicator."
+      "meta_description": "Buy Bell Push 6A 1M with Indicator - Stone Grey online at New Delhi Electricals. Lauritz Knudsen bell push - 1 module."
     },
     "status": {
       "is_active": true,
@@ -1000,8 +997,8 @@
     "sku": "CB93302BW06",
     "name": "Bell Push 6A with Indicator 2M - White",
     "product_family": "ENGEM",
-    "category": "Bell Push",
-    "subcategory": "Switches & Bell Push - 2 Module",
+    "category": "Switches",
+    "subcategory": "Bell Push - 2 Module",
     "specs": {
       "ampere": 6,
       "color": "White",
@@ -1023,17 +1020,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "bell-push-6a-indicator-2m-white-engem",
+      "slug": "bell-push-6a-with-indicator-2m-white",
       "keywords": [
-        "Bell Push",
-        "6A",
-        "Indicator",
         "2M",
-        "White",
-        "Switches & Bell Push",
-        "ENGEM"
+        "Indicator",
+        "6A",
+        "Bell Push - 2 Module",
+        "ENGEM",
+        "Switches",
+        "White"
       ],
-      "meta_description": "Buy Bell Push 6A with Indicator 2M White online at New Delhi Electricals. Engem bell push with indicator."
+      "meta_description": "Buy Bell Push 6A with Indicator 2M - White online at New Delhi Electricals. Lauritz Knudsen bell push - 2 module."
     },
     "status": {
       "is_active": true,
@@ -1045,8 +1042,8 @@
     "sku": "CB93302BS06",
     "name": "Bell Push 6A with Indicator 2M - Stone Grey",
     "product_family": "ENGEM",
-    "category": "Bell Push",
-    "subcategory": "Switches & Bell Push - 2 Module",
+    "category": "Switches",
+    "subcategory": "Bell Push - 2 Module",
     "specs": {
       "ampere": 6,
       "color": "Stone Grey",
@@ -1068,17 +1065,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "bell-push-6a-indicator-2m-stone-grey-engem",
+      "slug": "bell-push-6a-with-indicator-2m-stone-grey",
       "keywords": [
-        "Bell Push",
-        "6A",
-        "Indicator",
         "2M",
+        "Indicator",
         "Stone Grey",
-        "Switches & Bell Push",
-        "ENGEM"
+        "6A",
+        "Bell Push - 2 Module",
+        "ENGEM",
+        "Switches"
       ],
-      "meta_description": "Buy Bell Push 6A with Indicator 2M Stone Grey online at New Delhi Electricals. Engem bell push with indicator."
+      "meta_description": "Buy Bell Push 6A with Indicator 2M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen bell push - 2 module."
     },
     "status": {
       "is_active": true,
@@ -1115,11 +1112,12 @@
     "seo": {
       "slug": "motor-starter-25a-2m-white-engem",
       "keywords": [
-        "Motor Starter",
-        "25A",
         "2M",
-        "White",
-        "ENGEM"
+        "ENGEM",
+        "Switches",
+        "25A",
+        "Motor Starters - 2 Module",
+        "White"
       ],
       "meta_description": "Buy Motor Starter 25A 2M White online at New Delhi Electricals. Engem motor starter."
     },
@@ -1158,11 +1156,12 @@
     "seo": {
       "slug": "motor-starter-25a-2m-stone-grey-engem",
       "keywords": [
-        "Motor Starter",
-        "25A",
         "2M",
         "Stone Grey",
-        "ENGEM"
+        "ENGEM",
+        "Switches",
+        "25A",
+        "Motor Starters - 2 Module"
       ],
       "meta_description": "Buy Motor Starter 25A 2M Stone Grey online at New Delhi Electricals. Engem motor starter."
     },
@@ -1176,7 +1175,7 @@
     "sku": "CB93602CW06",
     "name": "Socket 6A 3 Pin with ISI 2M - White",
     "product_family": "ENGEM",
-    "category": "Switches",
+    "category": "Power Sockets",
     "subcategory": "Power Sockets - 2 Module",
     "specs": {
       "ampere": 6,
@@ -1199,17 +1198,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "socket-6a-3-pin-isi-2m-white-engem",
+      "slug": "socket-6a-3-pin-with-isi-2m-white",
       "keywords": [
-        "Socket",
-        "6A",
-        "3 Pin",
         "ISI",
+        "Power Sockets",
         "2M",
-        "White",
-        "ENGEM"
+        "3 Pin",
+        "6A",
+        "Power Sockets - 2 Module",
+        "ENGEM",
+        "White"
       ],
-      "meta_description": "Buy Socket 6A 3 Pin with ISI 2M White online at New Delhi Electricals. Engem power socket."
+      "meta_description": "Buy Socket 6A 3 Pin with ISI 2M - White online at New Delhi Electricals. Lauritz Knudsen power sockets - 2 module."
     },
     "status": {
       "is_active": true,
@@ -1221,7 +1221,7 @@
     "sku": "CB93602CS06",
     "name": "Socket 6A 3 Pin with ISI 2M - Stone Grey",
     "product_family": "ENGEM",
-    "category": "Switches",
+    "category": "Power Sockets",
     "subcategory": "Power Sockets - 2 Module",
     "specs": {
       "ampere": 6,
@@ -1244,17 +1244,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "socket-6a-3-pin-isi-2m-stone-grey-engem",
+      "slug": "socket-6a-3-pin-with-isi-2m-stone-grey",
       "keywords": [
-        "Socket",
-        "6A",
-        "3 Pin",
         "ISI",
+        "Power Sockets",
         "2M",
+        "3 Pin",
         "Stone Grey",
+        "6A",
+        "Power Sockets - 2 Module",
         "ENGEM"
       ],
-      "meta_description": "Buy Socket 6A 3 Pin with ISI 2M Stone Grey online at New Delhi Electricals. Engem power socket."
+      "meta_description": "Buy Socket 6A 3 Pin with ISI 2M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen power sockets - 2 module."
     },
     "status": {
       "is_active": true,
@@ -1266,7 +1267,7 @@
     "sku": "CB93302CW16",
     "name": "Socket 6A/16A 3 Pin Combi with ISI 2M - White",
     "product_family": "ENGEM",
-    "category": "Switches",
+    "category": "Power Sockets",
     "subcategory": "Power Sockets - 2 Module",
     "specs": {
       "ampere": 16,
@@ -1289,19 +1290,20 @@
       "documents": []
     },
     "seo": {
-      "slug": "socket-6-16a-3-pin-combi-isi-2m-white-engem",
+      "slug": "socket-6a16a-3-pin-combi-with-isi-2m-white",
       "keywords": [
-        "Socket",
-        "6A",
-        "16A",
+        "ISI",
+        "Power Sockets",
+        "2M",
         "3 Pin",
         "Combi",
-        "ISI",
-        "2M",
-        "White",
-        "ENGEM"
+        "6A",
+        "Power Sockets - 2 Module",
+        "ENGEM",
+        "16A",
+        "White"
       ],
-      "meta_description": "Buy Socket 6A/16A 3 Pin Combi with ISI 2M (tested up to 25A rating) White online at New Delhi Electricals. Engem power socket."
+      "meta_description": "Buy Socket 6A/16A 3 Pin Combi with ISI 2M - White online at New Delhi Electricals. Lauritz Knudsen power sockets - 2 module."
     },
     "status": {
       "is_active": true,
@@ -1313,7 +1315,7 @@
     "sku": "CB93302CS16",
     "name": "Socket 6A/16A 3 Pin Combi with ISI 2M - Stone Grey",
     "product_family": "ENGEM",
-    "category": "Switches",
+    "category": "Power Sockets",
     "subcategory": "Power Sockets - 2 Module",
     "specs": {
       "ampere": 16,
@@ -1336,19 +1338,20 @@
       "documents": []
     },
     "seo": {
-      "slug": "socket-6-16a-3-pin-combi-isi-2m-stone-grey-engem",
+      "slug": "socket-6a16a-3-pin-combi-with-isi-2m-stone-grey",
       "keywords": [
-        "Socket",
-        "6A",
-        "16A",
+        "ISI",
+        "Power Sockets",
+        "2M",
         "3 Pin",
         "Combi",
-        "ISI",
-        "2M",
         "Stone Grey",
-        "ENGEM"
+        "6A",
+        "Power Sockets - 2 Module",
+        "ENGEM",
+        "16A"
       ],
-      "meta_description": "Buy Socket 6A/16A 3 Pin Combi with ISI 2M (tested up to 25A rating) Stone Grey online at New Delhi Electricals. Engem power socket."
+      "meta_description": "Buy Socket 6A/16A 3 Pin Combi with ISI 2M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen power sockets - 2 module."
     },
     "status": {
       "is_active": true,
@@ -1360,8 +1363,8 @@
     "sku": "CB93101DW04",
     "name": "Dimmer 400W 1M - White",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Fan Regulators & Dimmers - 1 Module",
+    "category": "Dimmers",
+    "subcategory": "Dimmers - 1 Module",
     "specs": {
       "ampere": null,
       "color": "White",
@@ -1383,15 +1386,16 @@
       "documents": []
     },
     "seo": {
-      "slug": "dimmer-400w-1m-white-engem",
+      "slug": "dimmer-400w-1m-white",
       "keywords": [
-        "Dimmer",
-        "400W",
+        "Dimmers - 1 Module",
         "1M",
-        "White",
-        "ENGEM"
+        "400W",
+        "ENGEM",
+        "Dimmers",
+        "White"
       ],
-      "meta_description": "Buy Dimmer 400W 1M White online at New Delhi Electricals. Engem dimmer."
+      "meta_description": "Buy Dimmer 400W 1M - White online at New Delhi Electricals. Lauritz Knudsen dimmers - 1 module."
     },
     "status": {
       "is_active": true,
@@ -1403,8 +1407,8 @@
     "sku": "CB93101DS04",
     "name": "Dimmer 400W 1M - Stone Grey",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Fan Regulators & Dimmers - 1 Module",
+    "category": "Dimmers",
+    "subcategory": "Dimmers - 1 Module",
     "specs": {
       "ampere": null,
       "color": "Stone Grey",
@@ -1426,15 +1430,16 @@
       "documents": []
     },
     "seo": {
-      "slug": "dimmer-400w-1m-stone-grey-engem",
+      "slug": "dimmer-400w-1m-stone-grey",
       "keywords": [
-        "Dimmer",
-        "400W",
+        "Dimmers - 1 Module",
         "1M",
+        "400W",
         "Stone Grey",
-        "ENGEM"
+        "ENGEM",
+        "Dimmers"
       ],
-      "meta_description": "Buy Dimmer 400W 1M Stone Grey online at New Delhi Electricals. Engem dimmer."
+      "meta_description": "Buy Dimmer 400W 1M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen dimmers - 1 module."
     },
     "status": {
       "is_active": true,
@@ -1446,8 +1451,8 @@
     "sku": "CB93101RW01",
     "name": "Fan Regulator 4-Step 80W 1M - White",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Fan Regulators & Dimmers - 1 Module",
+    "category": "Fan Controls",
+    "subcategory": "Fan Regulators - 1 Module",
     "specs": {
       "ampere": null,
       "color": "White",
@@ -1469,16 +1474,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "fan-regulator-4-step-80w-1m-white-engem",
+      "slug": "fan-regulator-4-step-80w-1m-white",
       "keywords": [
-        "Fan Regulator",
-        "4-Step",
-        "80W",
         "1M",
-        "White",
-        "ENGEM"
+        "Fan Controls",
+        "80W",
+        "4-Step",
+        "Fan Regulators - 1 Module",
+        "ENGEM",
+        "White"
       ],
-      "meta_description": "Buy Fan Regulator 4-Step 80W 1M White online at New Delhi Electricals. Engem fan regulator."
+      "meta_description": "Buy Fan Regulator 4-Step 80W 1M - White online at New Delhi Electricals. Lauritz Knudsen fan regulators - 1 module."
     },
     "status": {
       "is_active": true,
@@ -1490,8 +1496,8 @@
     "sku": "CB93101RS01",
     "name": "Fan Regulator 4-Step 80W 1M - Stone Grey",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Fan Regulators & Dimmers - 1 Module",
+    "category": "Fan Controls",
+    "subcategory": "Fan Regulators - 1 Module",
     "specs": {
       "ampere": null,
       "color": "Stone Grey",
@@ -1513,16 +1519,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "fan-regulator-4-step-80w-1m-stone-grey-engem",
+      "slug": "fan-regulator-4-step-80w-1m-stone-grey",
       "keywords": [
-        "Fan Regulator",
-        "4-Step",
-        "80W",
         "1M",
+        "Fan Controls",
+        "80W",
+        "4-Step",
+        "Fan Regulators - 1 Module",
         "Stone Grey",
         "ENGEM"
       ],
-      "meta_description": "Buy Fan Regulator 4-Step 80W 1M Stone Grey online at New Delhi Electricals. Engem fan regulator."
+      "meta_description": "Buy Fan Regulator 4-Step 80W 1M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen fan regulators - 1 module."
     },
     "status": {
       "is_active": true,
@@ -1534,8 +1541,8 @@
     "sku": "CB93102RW02",
     "name": "Fan Regulator 5-Step 120W with ISI 2M - White",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Fan Regulators & Dimmers - 2 Module",
+    "category": "Fan Controls",
+    "subcategory": "Fan Regulators - 2 Module",
     "specs": {
       "ampere": null,
       "color": "White",
@@ -1557,17 +1564,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "fan-regulator-5-step-120w-isi-2m-white-engem",
+      "slug": "fan-regulator-5-step-120w-with-isi-2m-white",
       "keywords": [
-        "Fan Regulator",
         "5-Step",
-        "120W",
         "ISI",
+        "120W",
         "2M",
-        "White",
-        "ENGEM"
+        "Fan Controls",
+        "ENGEM",
+        "Fan Regulators - 2 Module",
+        "White"
       ],
-      "meta_description": "Buy Fan Regulator 5-Step 120W with ISI 2M White online at New Delhi Electricals. Engem fan regulator."
+      "meta_description": "Buy Fan Regulator 5-Step 120W with ISI 2M - White online at New Delhi Electricals. Lauritz Knudsen fan regulators - 2 module."
     },
     "status": {
       "is_active": true,
@@ -1579,8 +1587,8 @@
     "sku": "CB93102RS02",
     "name": "Fan Regulator 5-Step 120W with ISI 2M - Stone Grey",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Fan Regulators & Dimmers - 2 Module",
+    "category": "Fan Controls",
+    "subcategory": "Fan Regulators - 2 Module",
     "specs": {
       "ampere": null,
       "color": "Stone Grey",
@@ -1602,17 +1610,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "fan-regulator-5-step-120w-isi-2m-stone-grey-engem",
+      "slug": "fan-regulator-5-step-120w-with-isi-2m-stone-grey",
       "keywords": [
-        "Fan Regulator",
         "5-Step",
-        "120W",
         "ISI",
+        "120W",
         "2M",
+        "Fan Controls",
         "Stone Grey",
-        "ENGEM"
+        "ENGEM",
+        "Fan Regulators - 2 Module"
       ],
-      "meta_description": "Buy Fan Regulator 5-Step 120W with ISI 2M Stone Grey online at New Delhi Electricals. Engem fan regulator."
+      "meta_description": "Buy Fan Regulator 5-Step 120W with ISI 2M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen fan regulators - 2 module."
     },
     "status": {
       "is_active": true,
@@ -1624,8 +1633,8 @@
     "sku": "CB93302HW32",
     "name": "Mech Key Tag 32A 2M - White",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Hospitality Range",
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches",
     "specs": {
       "ampere": 32,
       "color": "White",
@@ -1647,16 +1656,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "mech-key-tag-32a-2m-white-engem",
+      "slug": "mech-key-tag-32a-2m-white",
       "keywords": [
-        "Hospitality",
         "Mech Key Tag",
-        "32A",
         "2M",
-        "White",
-        "ENGEM"
+        "32A",
+        "Mechanical Key Tag Switches",
+        "ENGEM",
+        "Hospitality",
+        "White"
       ],
-      "meta_description": "Buy Mech Key Tag 32A 2M White online at New Delhi Electricals. Engem hospitality range."
+      "meta_description": "Buy Mech Key Tag 32A 2M - White online at New Delhi Electricals. Lauritz Knudsen mechanical key tag switches."
     },
     "status": {
       "is_active": true,
@@ -1668,8 +1678,8 @@
     "sku": "CB93302HS32",
     "name": "Mech Key Tag 32A 2M - Stone Grey",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Hospitality Range",
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches",
     "specs": {
       "ampere": 32,
       "color": "Stone Grey",
@@ -1691,16 +1701,17 @@
       "documents": []
     },
     "seo": {
-      "slug": "mech-key-tag-32a-2m-stone-grey-engem",
+      "slug": "mech-key-tag-32a-2m-stone-grey",
       "keywords": [
-        "Hospitality",
         "Mech Key Tag",
-        "32A",
         "2M",
+        "32A",
         "Stone Grey",
-        "ENGEM"
+        "Mechanical Key Tag Switches",
+        "ENGEM",
+        "Hospitality"
       ],
-      "meta_description": "Buy Mech Key Tag 32A 2M Stone Grey online at New Delhi Electricals. Engem hospitality range."
+      "meta_description": "Buy Mech Key Tag 32A 2M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen mechanical key tag switches."
     },
     "status": {
       "is_active": true,
@@ -1712,8 +1723,8 @@
     "sku": "CB93302HW00",
     "name": "Spare key for Mech Key Tag - White",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Hospitality Range",
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches",
     "specs": {
       "ampere": null,
       "color": "White",
@@ -1735,15 +1746,16 @@
       "documents": []
     },
     "seo": {
-      "slug": "spare-key-mech-key-tag-white-engem",
+      "slug": "spare-key-for-mech-key-tag-white",
       "keywords": [
-        "Hospitality",
         "Mech Key Tag",
         "Spare Key",
-        "White",
-        "ENGEM"
+        "Mechanical Key Tag Switches",
+        "ENGEM",
+        "Hospitality",
+        "White"
       ],
-      "meta_description": "Buy Spare Key for Mech Key Tag White online at New Delhi Electricals. Engem hospitality range."
+      "meta_description": "Buy Spare key for Mech Key Tag - White online at New Delhi Electricals. Lauritz Knudsen mechanical key tag switches."
     },
     "status": {
       "is_active": true,
@@ -1755,8 +1767,8 @@
     "sku": "CB93302HS00",
     "name": "Spare key for Mech Key Tag - Stone Grey",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Hospitality Range",
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches",
     "specs": {
       "ampere": null,
       "color": "Stone Grey",
@@ -1778,15 +1790,16 @@
       "documents": []
     },
     "seo": {
-      "slug": "spare-key-mech-key-tag-stone-grey-engem",
+      "slug": "spare-key-for-mech-key-tag-stone-grey",
       "keywords": [
-        "Hospitality",
-        "Mech Key Tag",
         "Spare Key",
+        "Mech Key Tag",
         "Stone Grey",
-        "ENGEM"
+        "Mechanical Key Tag Switches",
+        "ENGEM",
+        "Hospitality"
       ],
-      "meta_description": "Buy Spare Key for Mech Key Tag Stone Grey online at New Delhi Electricals. Engem hospitality range."
+      "meta_description": "Buy Spare key for Mech Key Tag - Stone Grey online at New Delhi Electricals. Lauritz Knudsen mechanical key tag switches."
     },
     "status": {
       "is_active": true,
@@ -1798,8 +1811,8 @@
     "sku": "CB93502HW10",
     "name": "DND-MMR Inside Room Unit 2M - White",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Hospitality Range",
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units",
     "specs": {
       "ampere": null,
       "color": "White",
@@ -1821,17 +1834,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "dnd-mmr-inside-room-unit-2m-white-engem",
+      "slug": "dnd-mmr-inside-room-unit-2m-white",
       "keywords": [
-        "Hospitality",
-        "DND",
+        "DND-MMR Units",
+        "ENGEM",
+        "2M",
         "MMR",
         "Inside Room Unit",
-        "2M",
-        "White",
-        "ENGEM"
+        "DND",
+        "Hospitality",
+        "White"
       ],
-      "meta_description": "Buy DND-MMR Inside Room Unit 2M White online at New Delhi Electricals. Engem hospitality range."
+      "meta_description": "Buy DND-MMR Inside Room Unit 2M - White online at New Delhi Electricals. Lauritz Knudsen dnd-mmr units."
     },
     "status": {
       "is_active": true,
@@ -1843,8 +1857,8 @@
     "sku": "CB93502HS10",
     "name": "DND-MMR Inside Room Unit 2M - Stone Grey",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Hospitality Range",
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units",
     "specs": {
       "ampere": null,
       "color": "Stone Grey",
@@ -1866,17 +1880,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "dnd-mmr-inside-room-unit-2m-stone-grey-engem",
+      "slug": "dnd-mmr-inside-room-unit-2m-stone-grey",
       "keywords": [
-        "Hospitality",
-        "DND",
-        "MMR",
-        "Inside Room Unit",
+        "DND-MMR Units",
+        "ENGEM",
         "2M",
+        "MMR",
         "Stone Grey",
-        "ENGEM"
+        "Inside Room Unit",
+        "DND",
+        "Hospitality"
       ],
-      "meta_description": "Buy DND-MMR Inside Room Unit 2M Stone Grey online at New Delhi Electricals. Engem hospitality range."
+      "meta_description": "Buy DND-MMR Inside Room Unit 2M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen dnd-mmr units."
     },
     "status": {
       "is_active": true,
@@ -1888,8 +1903,8 @@
     "sku": "CB93601HW10",
     "name": "DND-MMR Outside Room Unit 1M - White",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Hospitality Range",
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units",
     "specs": {
       "ampere": null,
       "color": "White",
@@ -1911,17 +1926,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "dnd-mmr-outside-room-unit-1m-white-engem",
+      "slug": "dnd-mmr-outside-room-unit-1m-white",
       "keywords": [
-        "Hospitality",
-        "DND",
+        "DND-MMR Units",
+        "ENGEM",
+        "1M",
         "MMR",
         "Outside Room Unit",
-        "1M",
-        "White",
-        "ENGEM"
+        "DND",
+        "Hospitality",
+        "White"
       ],
-      "meta_description": "Buy DND-MMR Outside Room Unit 1M White online at New Delhi Electricals. Engem hospitality range."
+      "meta_description": "Buy DND-MMR Outside Room Unit 1M - White online at New Delhi Electricals. Lauritz Knudsen dnd-mmr units."
     },
     "status": {
       "is_active": true,
@@ -1933,8 +1949,8 @@
     "sku": "CB93601HS10",
     "name": "DND-MMR Outside Room Unit 1M - Stone Grey",
     "product_family": "ENGEM",
-    "category": "Switches",
-    "subcategory": "Hospitality Range",
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units",
     "specs": {
       "ampere": null,
       "color": "Stone Grey",
@@ -1956,17 +1972,18 @@
       "documents": []
     },
     "seo": {
-      "slug": "dnd-mmr-outside-room-unit-1m-stone-grey-engem",
+      "slug": "dnd-mmr-outside-room-unit-1m-stone-grey",
       "keywords": [
-        "Hospitality",
-        "DND",
-        "MMR",
-        "Outside Room Unit",
+        "DND-MMR Units",
+        "ENGEM",
         "1M",
+        "MMR",
         "Stone Grey",
-        "ENGEM"
+        "Outside Room Unit",
+        "DND",
+        "Hospitality"
       ],
-      "meta_description": "Buy DND-MMR Outside Room Unit 1M Stone Grey online at New Delhi Electricals. Engem hospitality range."
+      "meta_description": "Buy DND-MMR Outside Room Unit 1M - Stone Grey online at New Delhi Electricals. Lauritz Knudsen dnd-mmr units."
     },
     "status": {
       "is_active": true,
@@ -1975,4 +1992,3 @@
     "brand": "Lauritz Knudsen"
   }
 ]
-

@@ -1,0 +1,2246 @@
+[
+  {
+    "sku": "ACWSXXW101",
+    "name": "Switch 10AX One way 1M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX One way"
+    },
+    "variant": [
+      "ACWSXXG101"
+    ],
+    "pricing": {
+      "mrp": 64,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-one-way-1m-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "One way",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX One way 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSXXG101",
+    "name": "Switch 10AX One way 1M - Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX One way"
+    },
+    "variant": [
+      "ACWSXXW101"
+    ],
+    "pricing": {
+      "mrp": 84,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-one-way-1m-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "One way",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX One way 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSXXW102",
+    "name": "Switch 10AX Two way 1M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX Two way"
+    },
+    "variant": [
+      "ACWSXXG102"
+    ],
+    "pricing": {
+      "mrp": 150,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-two-way-1m-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "Two way",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX Two way 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSXXG102",
+    "name": "Switch 10AX Two way 1M - Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX Two way"
+    },
+    "variant": [
+      "ACWSXXW102"
+    ],
+    "pricing": {
+      "mrp": 213,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-two-way-1m-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "Two way",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX Two way 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSBXW101",
+    "name": "Bell Push 10A 1M - White",
+    "product_family": "Signia",
+    "category": "Bell Push",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Bell Push 10A"
+    },
+    "variant": [
+      "ACWSBXG101"
+    ],
+    "pricing": {
+      "mrp": 174,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-10a-1m-white",
+      "keywords": [
+        "Bell Push",
+        "10A",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Bell Push 10A 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSBXG101",
+    "name": "Bell Push 10A 1M - Grey",
+    "product_family": "Signia",
+    "category": "Bell Push",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Bell Push 10A"
+    },
+    "variant": [
+      "ACWSBXW101"
+    ],
+    "pricing": {
+      "mrp": 248,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-10a-1m-grey",
+      "keywords": [
+        "Bell Push",
+        "10A",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Bell Push 10A 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSBIW101",
+    "name": "Bell Push 10A with Indicator 1M - White",
+    "product_family": "Signia",
+    "category": "Bell Push",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bell Push 10A"
+    },
+    "variant": [
+      "ACWSBIG101"
+    ],
+    "pricing": {
+      "mrp": 205,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-10a-indicator-1m-white",
+      "keywords": [
+        "Bell Push",
+        "Indicator",
+        "10A",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Bell Push 10A with Indicator 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSBIG101",
+    "name": "Bell Push 10A with Indicator 1M - Grey",
+    "product_family": "Signia",
+    "category": "Bell Push",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bell Push 10A"
+    },
+    "variant": [
+      "ACWSBIW101"
+    ],
+    "pricing": {
+      "mrp": 293,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-10a-indicator-1m-grey",
+      "keywords": [
+        "Bell Push",
+        "Indicator",
+        "10A",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Bell Push 10A with Indicator 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMBIW101",
+    "name": "Bell Push 10A Mega with Indicator 2M - White",
+    "product_family": "Signia",
+    "category": "Bell Push",
+    "subcategory": "Bell Push - 2 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "Bell Push 10A Mega"
+    },
+    "variant": [
+      "ACWMBIG101"
+    ],
+    "pricing": {
+      "mrp": 227,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-10a-mega-indicator-2m-white",
+      "keywords": [
+        "Bell Push",
+        "Mega",
+        "Indicator",
+        "10A",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Bell Push 10A Mega with Indicator 2M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMBIG101",
+    "name": "Bell Push 10A Mega with Indicator 2M - Grey",
+    "product_family": "Signia",
+    "category": "Bell Push",
+    "subcategory": "Bell Push - 2 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Grey",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "Bell Push 10A Mega"
+    },
+    "variant": [
+      "ACWMBIW101"
+    ],
+    "pricing": {
+      "mrp": 323,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-10a-mega-indicator-2m-grey",
+      "keywords": [
+        "Bell Push",
+        "Mega",
+        "Indicator",
+        "10A",
+        "2M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Bell Push 10A Mega with Indicator 2M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMXIW101",
+    "name": "Switch 10AX Mega with Indicator 2M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 2 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "10AX Mega"
+    },
+    "variant": [
+      "ACWMXIG101"
+    ],
+    "pricing": {
+      "mrp": 227,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-mega-indicator-2m-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "Mega",
+        "Indicator",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX Mega with Indicator 2M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMXIG101",
+    "name": "Switch 10AX Mega with Indicator 2M - Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 2 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Grey",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "10AX Mega"
+    },
+    "variant": [
+      "ACWMXIW101"
+    ],
+    "pricing": {
+      "mrp": 326,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-mega-indicator-2m-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "Mega",
+        "Indicator",
+        "2M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX Mega with Indicator 2M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMXXW102",
+    "name": "Switch 10AX Mega Two way 2M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 2 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "10AX Mega Two way"
+    },
+    "variant": [
+      "ACWMXXG102"
+    ],
+    "pricing": {
+      "mrp": 199,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-mega-two-way-2m-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "Mega",
+        "Two way",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX Mega Two way 2M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMXXG102",
+    "name": "Switch 10AX Mega Two way 2M - Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 2 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Grey",
+      "mw": 2,
+      "has_indicator": false,
+      "type_detail": "10AX Mega Two way"
+    },
+    "variant": [
+      "ACWMXXW102"
+    ],
+    "pricing": {
+      "mrp": 278,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-mega-two-way-2m-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "Mega",
+        "Two way",
+        "2M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX Mega Two way 2M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSXXW161",
+    "name": "Switch 16AX One way 1M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX One way"
+    },
+    "variant": [
+      "ACWSXXG161"
+    ],
+    "pricing": {
+      "mrp": 164,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-one-way-1m-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "One way",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX One way 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSXXG161",
+    "name": "Switch 16AX One way 1M - Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX One way"
+    },
+    "variant": [
+      "ACWSXXW161"
+    ],
+    "pricing": {
+      "mrp": 217,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-one-way-1m-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "One way",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX One way 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSXIW161",
+    "name": "Switch 16AX One way with Indicator 1M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "16AX One way"
+    },
+    "variant": [
+      "ACWSXIG161"
+    ],
+    "pricing": {
+      "mrp": 199,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-one-way-indicator-1m-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "One way",
+        "Indicator",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX One way with Indicator 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSXIG161",
+    "name": "Switch 16AX One way with Indicator 1M - Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "16AX One way"
+    },
+    "variant": [
+      "ACWSXIW161"
+    ],
+    "pricing": {
+      "mrp": 278,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-one-way-indicator-1m-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "One way",
+        "Indicator",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX One way with Indicator 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSXXW162",
+    "name": "Switch 16AX Two way 1M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX Two way"
+    },
+    "variant": [
+      "ACWSXXG162"
+    ],
+    "pricing": {
+      "mrp": 255,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-two-way-1m-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "Two way",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX Two way 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSXXG162",
+    "name": "Switch 16AX Two way 1M - Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX Two way"
+    },
+    "variant": [
+      "ACWSXXW162"
+    ],
+    "pricing": {
+      "mrp": 358,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-two-way-1m-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "Two way",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX Two way 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSDXW201",
+    "name": "Switch 20A DP with Indicator 2M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "DP Switches - 2 Module",
+    "specs": {
+      "ampere": 20,
+      "color": "White",
+      "mw": 2,
+      "poles": "DP",
+      "has_indicator": true,
+      "type_detail": "20A DP"
+    },
+    "variant": [
+      "ACWSDIG201"
+    ],
+    "pricing": {
+      "mrp": 285,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-20a-dp-indicator-2m-white",
+      "keywords": [
+        "Switch",
+        "20A",
+        "DP",
+        "Indicator",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 20A DP with Indicator 2M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSDIG201",
+    "name": "Switch 20A DP with Indicator 2M - Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "DP Switches - 2 Module",
+    "specs": {
+      "ampere": 20,
+      "color": "Grey",
+      "mw": 2,
+      "poles": "DP",
+      "has_indicator": true,
+      "type_detail": "20A DP"
+    },
+    "variant": [
+      "ACWSDXW201"
+    ],
+    "pricing": {
+      "mrp": 402,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-20a-dp-indicator-2m-grey",
+      "keywords": [
+        "Switch",
+        "20A",
+        "DP",
+        "Indicator",
+        "2M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 20A DP with Indicator 2M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSDXW321",
+    "name": "Switch 32A DP with Indicator 2M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "DP Switches - 2 Module",
+    "specs": {
+      "ampere": 32,
+      "color": "White",
+      "mw": 2,
+      "poles": "DP",
+      "has_indicator": true,
+      "type_detail": "32A DP"
+    },
+    "variant": [
+      "ACWSDIG321"
+    ],
+    "pricing": {
+      "mrp": 512,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-32a-dp-indicator-2m-white",
+      "keywords": [
+        "Switch",
+        "32A",
+        "DP",
+        "Indicator",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 32A DP with Indicator 2M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSDIG321",
+    "name": "Switch 32A DP with Indicator 2M - Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "DP Switches - 2 Module",
+    "specs": {
+      "ampere": 32,
+      "color": "Grey",
+      "mw": 2,
+      "poles": "DP",
+      "has_indicator": true,
+      "type_detail": "32A DP"
+    },
+    "variant": [
+      "ACWSDXW321"
+    ],
+    "pricing": {
+      "mrp": 726,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-32a-dp-indicator-2m-grey",
+      "keywords": [
+        "Switch",
+        "32A",
+        "DP",
+        "Indicator",
+        "2M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 32A DP with Indicator 2M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKPXW063",
+    "name": "Socket 6A 3 Pin Shuttered with ISI 2M - White",
+    "product_family": "Signia",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 6,
+      "pins": 3,
+      "color": "White",
+      "mw": 2,
+      "socket_type": "6A 3 Pin Shuttered",
+      "isi_marked": true,
+      "with_shutter": true
+    },
+    "variant": [
+      "ACWKPXG063"
+    ],
+    "pricing": {
+      "mrp": 158,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-3-pin-shuttered-isi-2m-white",
+      "keywords": [
+        "Socket",
+        "6A",
+        "3 Pin",
+        "Shuttered",
+        "ISI",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Socket 6A 3 Pin Shuttered with ISI 2M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKPXG063",
+    "name": "Socket 6A 3 Pin Shuttered with ISI 2M - Grey",
+    "product_family": "Signia",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 6,
+      "pins": 3,
+      "color": "Grey",
+      "mw": 2,
+      "socket_type": "6A 3 Pin Shuttered",
+      "isi_marked": true,
+      "with_shutter": true
+    },
+    "variant": [
+      "ACWKPXW063"
+    ],
+    "pricing": {
+      "mrp": 201,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-3-pin-shuttered-isi-2m-grey",
+      "keywords": [
+        "Socket",
+        "6A",
+        "3 Pin",
+        "Shuttered",
+        "ISI",
+        "2M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Socket 6A 3 Pin Shuttered with ISI 2M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKCXW163",
+    "name": "Socket 6A/16A 3 Pin Shuttered with ISI 2M - White",
+    "product_family": "Signia",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 16,
+      "min_ampere": 6,
+      "pins": 3,
+      "color": "White",
+      "mw": 2,
+      "socket_type": "6A/16A 3 Pin Shuttered",
+      "isi_marked": true,
+      "with_shutter": true
+    },
+    "variant": [
+      "ACWKCXG163"
+    ],
+    "pricing": {
+      "mrp": 250,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-16a-3-pin-shuttered-isi-2m-white",
+      "keywords": [
+        "Socket",
+        "6A/16A",
+        "3 Pin",
+        "Shuttered",
+        "ISI",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Socket 6A/16A 3 Pin Shuttered with ISI 2M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKCXG163",
+    "name": "Socket 6A/16A 3 Pin Shuttered with ISI 2M - Grey",
+    "product_family": "Signia",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 16,
+      "min_ampere": 6,
+      "pins": 3,
+      "color": "Grey",
+      "mw": 2,
+      "socket_type": "6A/16A 3 Pin Shuttered",
+      "isi_marked": true,
+      "with_shutter": true
+    },
+    "variant": [
+      "ACWKCXW163"
+    ],
+    "pricing": {
+      "mrp": 327,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-16a-3-pin-shuttered-isi-2m-grey",
+      "keywords": [
+        "Socket",
+        "6A/16A",
+        "3 Pin",
+        "Shuttered",
+        "ISI",
+        "2M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Socket 6A/16A 3 Pin Shuttered with ISI 2M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKRXW163",
+    "name": "Socket 6A/16A 3 Pin Shuttered with ISI Raised 2M - White",
+    "product_family": "Signia",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 16,
+      "min_ampere": 6,
+      "pins": 3,
+      "color": "White",
+      "mw": 2,
+      "socket_type": "6A/16A 3 Pin Shuttered",
+      "isi_marked": true,
+      "with_shutter": true,
+      "raised": true
+    },
+    "variant": [
+      "ACWKRXG163"
+    ],
+    "pricing": {
+      "mrp": 268,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-16a-3-pin-shuttered-isi-raised-2m-white",
+      "keywords": [
+        "Socket",
+        "6A/16A",
+        "3 Pin",
+        "Shuttered",
+        "ISI",
+        "Raised",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Socket 6A/16A 3 Pin Shuttered with ISI Raised 2M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKRXG163",
+    "name": "Socket 6A/16A 3 Pin Shuttered with ISI Raised 2M - Grey",
+    "product_family": "Signia",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 16,
+      "min_ampere": 6,
+      "pins": 3,
+      "color": "Grey",
+      "mw": 2,
+      "socket_type": "6A/16A 3 Pin Shuttered",
+      "isi_marked": true,
+      "with_shutter": true,
+      "raised": true
+    },
+    "variant": [
+      "ACWKRXW163"
+    ],
+    "pricing": {
+      "mrp": 327,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-16a-3-pin-shuttered-isi-raised-2m-grey",
+      "keywords": [
+        "Socket",
+        "6A/16A",
+        "3 Pin",
+        "Shuttered",
+        "ISI",
+        "Raised",
+        "2M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Socket 6A/16A 3 Pin Shuttered with ISI Raised 2M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKCXW253",
+    "name": "Socket 6A/16A 3 Pin Shuttered Heavy Duty with ISI 2M - White",
+    "product_family": "Signia",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 16,
+      "min_ampere": 6,
+      "pins": 3,
+      "color": "White",
+      "mw": 2,
+      "socket_type": "6A/16A 3 Pin Shuttered",
+      "isi_marked": true,
+      "with_shutter": true,
+      "heavy_duty": true
+    },
+    "variant": [
+      "ACWKCXG253"
+    ],
+    "pricing": {
+      "mrp": 297,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-16a-3-pin-shuttered-heavy-duty-isi-2m-white",
+      "keywords": [
+        "Socket",
+        "6A/16A",
+        "3 Pin",
+        "Shuttered",
+        "Heavy Duty",
+        "ISI",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Socket 6A/16A 3 Pin Shuttered Heavy Duty with ISI 2M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKCXG253",
+    "name": "Socket 6A/16A 3 Pin Shuttered Heavy Duty with ISI 2M - Grey",
+    "product_family": "Signia",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 16,
+      "min_ampere": 6,
+      "pins": 3,
+      "color": "Grey",
+      "mw": 2,
+      "socket_type": "6A/16A 3 Pin Shuttered",
+      "isi_marked": true,
+      "with_shutter": true,
+      "heavy_duty": true
+    },
+    "variant": [
+      "ACWKCXW253"
+    ],
+    "pricing": {
+      "mrp": 418,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-16a-3-pin-shuttered-heavy-duty-isi-2m-grey",
+      "keywords": [
+        "Socket",
+        "6A/16A",
+        "3 Pin",
+        "Shuttered",
+        "Heavy Duty",
+        "ISI",
+        "2M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Socket 6A/16A 3 Pin Shuttered Heavy Duty with ISI 2M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWRFXW004",
+    "name": "Fan Regulator 4-Step 1M - White",
+    "product_family": "Signia",
+    "category": "Fan Controls",
+    "subcategory": "Fan Regulators - 1 Module",
+    "specs": {
+      "steps": 4,
+      "color": "White",
+      "mw": 1,
+      "type_detail": "Fan Regulator 4-Step"
+    },
+    "variant": [
+      "ACWRFXG004"
+    ],
+    "pricing": {
+      "mrp": 478,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "fan-regulator-4-step-1m-white",
+      "keywords": [
+        "Fan Regulator",
+        "4-Step",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Fan Regulator 4-Step 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWRFXG004",
+    "name": "Fan Regulator 4-Step 1M - Grey",
+    "product_family": "Signia",
+    "category": "Fan Controls",
+    "subcategory": "Fan Regulators - 1 Module",
+    "specs": {
+      "steps": 4,
+      "color": "Grey",
+      "mw": 1,
+      "type_detail": "Fan Regulator 4-Step"
+    },
+    "variant": [
+      "ACWRFXW004"
+    ],
+    "pricing": {
+      "mrp": 625,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "fan-regulator-4-step-1m-grey",
+      "keywords": [
+        "Fan Regulator",
+        "4-Step",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Fan Regulator 4-Step 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWRFHW008",
+    "name": "Fan Regulator 8-Step 2M - White",
+    "product_family": "Signia",
+    "category": "Fan Controls",
+    "subcategory": "Fan Regulators - 2 Module",
+    "specs": {
+      "steps": 8,
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Fan Regulator 8-Step"
+    },
+    "variant": [
+      "ACWRFHG008"
+    ],
+    "pricing": {
+      "mrp": 495,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "fan-regulator-8-step-2m-white",
+      "keywords": [
+        "Fan Regulator",
+        "8-Step",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Fan Regulator 8-Step 2M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWRFHG008",
+    "name": "Fan Regulator 8-Step 2M - Grey",
+    "product_family": "Signia",
+    "category": "Fan Controls",
+    "subcategory": "Fan Regulators - 2 Module",
+    "specs": {
+      "steps": 8,
+      "color": "Grey",
+      "mw": 2,
+      "type_detail": "Fan Regulator 8-Step"
+    },
+    "variant": [
+      "ACWRFHW008"
+    ],
+    "pricing": {
+      "mrp": 666,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "fan-regulator-8-step-2m-grey",
+      "keywords": [
+        "Fan Regulator",
+        "8-Step",
+        "2M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Fan Regulator 8-Step 2M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWRFXW006",
+    "name": "BLDC Fan Regulator 2M - White",
+    "product_family": "Signia",
+    "category": "Fan Controls",
+    "subcategory": "Fan Regulators - 2 Module",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "BLDC Fan Regulator"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 575,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bldc-fan-regulator-2m-white",
+      "keywords": [
+        "Fan Regulator",
+        "BLDC",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy BLDC Fan Regulator 2M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKNWW111",
+    "name": "Telephone Socket RJ11 1M - White",
+    "product_family": "Signia",
+    "category": "Data Sockets",
+    "subcategory": "Telephone Sockets - 1 Module",
+    "specs": {
+      "type_detail": "RJ11",
+      "color": "White",
+      "mw": 1
+    },
+    "variant": [
+      "ACWKNWG111"
+    ],
+    "pricing": {
+      "mrp": 165,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "telephone-socket-rj11-1m-white",
+      "keywords": [
+        "Telephone Socket",
+        "RJ11",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Telephone Socket RJ11 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKNWG111",
+    "name": "Telephone Socket RJ11 1M - Grey",
+    "product_family": "Signia",
+    "category": "Data Sockets",
+    "subcategory": "Telephone Sockets - 1 Module",
+    "specs": {
+      "type_detail": "RJ11",
+      "color": "Grey",
+      "mw": 1
+    },
+    "variant": [
+      "ACWKNWW111"
+    ],
+    "pricing": {
+      "mrp": 272,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "telephone-socket-rj11-1m-grey",
+      "keywords": [
+        "Telephone Socket",
+        "RJ11",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Telephone Socket RJ11 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKRWW451",
+    "name": "Computer Jack RJ45 Cat6 1M - White",
+    "product_family": "Signia",
+    "category": "Data Sockets",
+    "subcategory": "LAN Sockets - 1 Module",
+    "specs": {
+      "type_detail": "RJ45 Cat6",
+      "color": "White",
+      "mw": 1
+    },
+    "variant": [
+      "ACWKRWG451"
+    ],
+    "pricing": {
+      "mrp": 528,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "computer-jack-rj45-cat6-1m-white",
+      "keywords": [
+        "Computer Jack",
+        "RJ45",
+        "Cat6",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Computer Jack RJ45 Cat6 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKRWG451",
+    "name": "Computer Jack RJ45 Cat6 1M - Grey",
+    "product_family": "Signia",
+    "category": "Data Sockets",
+    "subcategory": "LAN Sockets - 1 Module",
+    "specs": {
+      "type_detail": "RJ45 Cat6",
+      "color": "Grey",
+      "mw": 1
+    },
+    "variant": [
+      "ACWKRWW451"
+    ],
+    "pricing": {
+      "mrp": 864,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "computer-jack-rj45-cat6-1m-grey",
+      "keywords": [
+        "Computer Jack",
+        "RJ45",
+        "Cat6",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Computer Jack RJ45 Cat6 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKTXW001",
+    "name": "TV Socket 1M - White",
+    "product_family": "Signia",
+    "category": "Data Sockets",
+    "subcategory": "TV Sockets - 1 Module",
+    "specs": {
+      "type_detail": "TV Socket",
+      "color": "White",
+      "mw": 1
+    },
+    "variant": [
+      "ACWKTOG001"
+    ],
+    "pricing": {
+      "mrp": 153,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "tv-socket-1m-white",
+      "keywords": [
+        "TV Socket",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy TV Socket 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKTOG001",
+    "name": "TV Socket 1M - Grey",
+    "product_family": "Signia",
+    "category": "Data Sockets",
+    "subcategory": "TV Sockets - 1 Module",
+    "specs": {
+      "type_detail": "TV Socket",
+      "color": "Grey",
+      "mw": 1
+    },
+    "variant": [
+      "ACWKTXW001"
+    ],
+    "pricing": {
+      "mrp": 249,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "tv-socket-1m-grey",
+      "keywords": [
+        "TV Socket",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy TV Socket 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLBWX01",
+    "name": "Blank Plate 1M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Blank Off Unit - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "Blank Plate"
+    },
+    "variant": [
+      "ACWPLBGX01"
+    ],
+    "pricing": {
+      "mrp": 38,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "blank-plate-1m-white",
+      "keywords": [
+        "Blank Plate",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Blank Plate 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLBGX01",
+    "name": "Blank Plate 1M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Blank Off Unit - 1 Module",
+    "specs": {
+      "color": "Grey",
+      "mw": 1,
+      "type_detail": "Blank Plate"
+    },
+    "variant": [
+      "ACWPLBWX01"
+    ],
+    "pricing": {
+      "mrp": 51,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "blank-plate-1m-grey",
+      "keywords": [
+        "Blank Plate",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Blank Plate 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWIIIW060",
+    "name": "Indicator Lamp 1M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "LED Phase Indicator - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "Indicator Lamp"
+    },
+    "variant": [
+      "ACWIIIG060"
+    ],
+    "pricing": {
+      "mrp": 108,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "indicator-lamp-1m-white",
+      "keywords": [
+        "Indicator Lamp",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Indicator Lamp 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWIIIG060",
+    "name": "Indicator Lamp 1M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "LED Phase Indicator - 1 Module",
+    "specs": {
+      "color": "Grey",
+      "mw": 1,
+      "type_detail": "Indicator Lamp"
+    },
+    "variant": [
+      "ACWIIIW060"
+    ],
+    "pricing": {
+      "mrp": 150,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "indicator-lamp-1m-grey",
+      "keywords": [
+        "Indicator Lamp",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Indicator Lamp 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWBXXW002",
+    "name": "Buzzer 2M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Buzzer - 2 Module",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Buzzer"
+    },
+    "variant": [
+      "ACWBXXG002"
+    ],
+    "pricing": {
+      "mrp": 344,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "9"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "buzzer-2m-white",
+      "keywords": [
+        "Buzzer",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Buzzer 2M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWBXXG002",
+    "name": "Buzzer 2M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Buzzer - 2 Module",
+    "specs": {
+      "color": "Grey",
+      "mw": 2,
+      "type_detail": "Buzzer"
+    },
+    "variant": [
+      "ACWBXXW002"
+    ],
+    "pricing": {
+      "mrp": 561,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "9"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "buzzer-2m-grey",
+      "keywords": [
+        "Buzzer",
+        "2M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Buzzer 2M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWCEEW060",
+    "name": "Electronic Chime 2M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Door Bells - 2 Module",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Electronic Chime"
+    },
+    "variant": [
+      "ACWCEEG060"
+    ],
+    "pricing": {
+      "mrp": 565,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "electronic-chime-2m-white",
+      "keywords": [
+        "Electronic Chime",
+        "Door Bell",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Electronic Chime 2M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWCEEG060",
+    "name": "Electronic Chime 2M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Door Bells - 2 Module",
+    "specs": {
+      "color": "Grey",
+      "mw": 2,
+      "type_detail": "Electronic Chime"
+    },
+    "variant": [
+      "ACWCEEW060"
+    ],
+    "pricing": {
+      "mrp": 914,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "electronic-chime-2m-grey",
+      "keywords": [
+        "Electronic Chime",
+        "Door Bell",
+        "2M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Electronic Chime 2M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  }
+]
+

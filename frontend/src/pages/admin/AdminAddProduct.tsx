@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Save, Plus, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -15,10 +15,14 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
 import { toast } from 'sonner';
+import { getBrands } from '@/api/products';
+import { Brand } from '@/types/product';
 
 const AdminAddProduct = () => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
+    const [brands, setBrands] = useState<Brand[]>([]);
+    const [brandsLoading, setBrandsLoading] = useState(true);
 
     // Form State
     const [formData, setFormData] = useState({
@@ -27,7 +31,7 @@ const AdminAddProduct = () => {
         product_family: '',
         category: 'Switches', // Default
         subcategory: '',
-        brand: 'Lauritz Knudsen',
+        brand: '',
         mrp: '',
         std_pack: '',
         slug: '',
@@ -36,23 +40,64 @@ const AdminAddProduct = () => {
         is_featured: false,
     });
 
-    // Specs State
+    // Specs State - Expanded for SwitchSpecs schema
     const [specs, setSpecs] = useState({
         ampere: '',
         color: '',
         mw: '',
+        module_size: '',
         has_indicator: false,
         type_detail: '',
+        channels: '',
+        control_type: '',
+        material: '',
+        installation: '',
+        mounting_type: '',
+        orientation: '',
+        dimensions: '',
+        dimensions_mm: '',
+        cutout_dimensions_mm: '',
+        // Circuit Protection fields
         curve: '',
         poles: '',
+        sensitivity_ma: '',
     });
 
     // Keywords State
     const [keywordInput, setKeywordInput] = useState('');
     const [keywords, setKeywords] = useState<string[]>([]);
 
+    // Variants State
+    const [variantInput, setVariantInput] = useState('');
+    const [variants, setVariants] = useState<string[]>([]);
+
     // Media State
     const [imageUrl, setImageUrl] = useState('');
+    const [imageLabel, setImageLabel] = useState('Front View');
+
+    // Fetch brands on mount
+    useEffect(() => {
+        const fetchBrands = async () => {
+            try {
+                const brandsList = await getBrands();
+                setBrands(brandsList);
+                // Set default brand if available
+                if (brandsList.length > 0) {
+                    const lauritzKnudsen = brandsList.find(b => b.name === 'Lauritz Knudsen');
+                    setFormData(prev => ({ 
+                        ...prev, 
+                        brand: lauritzKnudsen ? lauritzKnudsen.name : brandsList[0].name 
+                    }));
+                }
+            } catch (error) {
+                console.error('Failed to fetch brands:', error);
+                toast.error('Failed to load brands');
+            } finally {
+                setBrandsLoading(false);
+            }
+        };
+        fetchBrands();
+    }, []);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -94,28 +139,83 @@ const AdminAddProduct = () => {
         setKeywords(keywords.filter(k => k !== keyword));
     };
 
+    const addVariant = (e: React.KeyboardEvent) => {
+        if (e.key === 'Enter' && variantInput.trim()) {
+            e.preventDefault();
+            if (!variants.includes(variantInput.trim())) {
+                setVariants([...variants, variantInput.trim()]);
+            }
+            setVariantInput('');
+        }
+    };
+
+    const removeVariant = (variant: string) => {
+        setVariants(variants.filter(v => v !== variant));
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        
+        if (!formData.brand) {
+            toast.error('Please select a brand');
+            return;
+        }
+
         setLoading(true);
 
-        // Construct the final JSON object
+        // Build specs object based on category
+        const specsObj: any = {};
+        
+        if (formData.category === 'Switches') {
+            // Switch specs
+            if (specs.ampere) specsObj.ampere = parseFloat(specs.ampere);
+            if (specs.color) specsObj.color = specs.color;
+            if (specs.mw) specsObj.mw = parseFloat(specs.mw);
+            if (specs.module_size) specsObj.module_size = specs.module_size;
+            if (specs.has_indicator !== undefined) specsObj.has_indicator = specs.has_indicator;
+            if (specs.type_detail) specsObj.type_detail = specs.type_detail;
+            if (specs.channels) specsObj.channels = parseInt(specs.channels);
+            if (specs.control_type) specsObj.control_type = specs.control_type;
+            if (specs.material) specsObj.material = specs.material;
+            if (specs.installation) specsObj.installation = specs.installation;
+            if (specs.mounting_type) specsObj.mounting_type = specs.mounting_type;
+            if (specs.orientation) specsObj.orientation = specs.orientation;
+            if (specs.dimensions) specsObj.dimensions = specs.dimensions;
+            if (specs.dimensions_mm) specsObj.dimensions_mm = specs.dimensions_mm;
+            if (specs.cutout_dimensions_mm) specsObj.cutout_dimensions_mm = specs.cutout_dimensions_mm;
+        } else if (formData.category === 'Circuit Protection') {
+            // Circuit Protection specs
+            if (specs.ampere) specsObj.ampere = parseFloat(specs.ampere);
+            if (specs.curve) specsObj.curve = specs.curve;
+            if (specs.poles) specsObj.poles = parseInt(specs.poles);
+            if (specs.mw) specsObj.mw = parseFloat(specs.mw);
+            if (specs.sensitivity_ma) specsObj.sensitivity_ma = parseFloat(specs.sensitivity_ma);
+        }
+
+        // Construct the final JSON object matching Lauritz Knudsen schema
         const finalProduct = {
-            ...formData,
-            mrp: parseFloat(formData.mrp),
-            specs: {
-                ...specs,
-                ampere: specs.ampere ? parseFloat(specs.ampere) : null,
-                mw: specs.mw ? parseFloat(specs.mw) : null,
-                poles: specs.poles ? parseFloat(specs.poles) : null,
-            },
-            seo: {
-                slug: formData.slug,
-                keywords: keywords,
-                meta_description: formData.meta_description,
+            sku: formData.sku,
+            name: formData.name,
+            product_family: formData.product_family,
+            category: formData.category,
+            subcategory: formData.subcategory,
+            brand: formData.brand,
+            specs: specsObj,
+            variant: variants,
+            pricing: {
+                mrp: parseFloat(formData.mrp),
+                discount: null,
+                selling_price: null,
+                std_pack: formData.std_pack,
             },
             media: {
-                images: imageUrl ? [{ url: imageUrl, label: 'Front View' }] : [],
+                images: imageUrl ? [{ url: imageUrl, label: imageLabel }] : [],
                 documents: [],
+            },
+            seo: {
+                slug: formData.slug || formData.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, ''),
+                keywords: keywords,
+                meta_description: formData.meta_description,
             },
             status: {
                 is_active: formData.is_active,
@@ -123,24 +223,31 @@ const AdminAddProduct = () => {
             }
         };
 
-        // Clean up specs based on category
-        if (formData.category === 'Switches') {
-            delete (finalProduct.specs as any).curve;
-            delete (finalProduct.specs as any).poles;
-        } else if (formData.category === 'Circuit Protection') {
-            delete (finalProduct.specs as any).color;
-            delete (finalProduct.specs as any).has_indicator;
-            delete (finalProduct.specs as any).type_detail;
+        console.log('Submitting Product:', JSON.stringify(finalProduct, null, 2));
+
+        try {
+            // TODO: Replace with actual API call
+            const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000';
+            const response = await fetch(`${API_BASE}/api/products`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(finalProduct),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to create product');
+            }
+
+            toast.success('Product added successfully!');
+            navigate('/admin/products');
+        } catch (error) {
+            console.error('Error creating product:', error);
+            toast.error('Failed to create product. Please try again.');
+        } finally {
+            setLoading(false);
         }
-
-        console.log('Submitting Product:', finalProduct);
-
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
-
-        toast.success('Product added successfully!');
-        setLoading(false);
-        navigate('/admin/products');
     };
 
     return (
@@ -186,13 +293,26 @@ const AdminAddProduct = () => {
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="brand">Brand</Label>
-                            <Input
-                                id="brand"
-                                name="brand"
-                                value={formData.brand}
-                                onChange={handleInputChange}
-                                disabled
-                            />
+                            {brandsLoading ? (
+                                <Input disabled placeholder="Loading brands..." />
+                            ) : (
+                                <Select
+                                    value={formData.brand}
+                                    onValueChange={(val) => setFormData(prev => ({ ...prev, brand: val }))}
+                                    required
+                                >
+                                    <SelectTrigger>
+                                        <SelectValue placeholder="Select Brand" />
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                        {brands.map((brand) => (
+                                            <SelectItem key={brand.id} value={brand.name}>
+                                                {brand.name}
+                                            </SelectItem>
+                                        ))}
+                                    </SelectContent>
+                                </Select>
+                            )}
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="product_family">Product Family</Label>
@@ -270,7 +390,17 @@ const AdminAddProduct = () => {
                                         name="color"
                                         value={specs.color}
                                         onChange={handleSpecChange}
-                                        placeholder="e.g. Mountain Grey"
+                                        placeholder="e.g. Mountain Grey, Snow White"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="module_size">Module Size</Label>
+                                    <Input
+                                        id="module_size"
+                                        name="module_size"
+                                        value={specs.module_size}
+                                        onChange={handleSpecChange}
+                                        placeholder="e.g. 2M, 3M"
                                     />
                                 </div>
                                 <div className="space-y-2">
@@ -280,7 +410,110 @@ const AdminAddProduct = () => {
                                         name="type_detail"
                                         value={specs.type_detail}
                                         onChange={handleSpecChange}
-                                        placeholder="e.g. 2 Channel"
+                                        placeholder="e.g. 2 Channel, 10AX 1-way"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="channels">Channels</Label>
+                                    <Input
+                                        id="channels"
+                                        name="channels"
+                                        type="number"
+                                        value={specs.channels}
+                                        onChange={handleSpecChange}
+                                        placeholder="e.g. 2 (for multi-channel switches)"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="control_type">Control Type</Label>
+                                    <Input
+                                        id="control_type"
+                                        name="control_type"
+                                        value={specs.control_type}
+                                        onChange={handleSpecChange}
+                                        placeholder="e.g. Touch IR Switch, Smart Wi-Fi Switch"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="material">Material</Label>
+                                    <Input
+                                        id="material"
+                                        name="material"
+                                        value={specs.material}
+                                        onChange={handleSpecChange}
+                                        placeholder="e.g. PVC, Glass"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="installation">Installation</Label>
+                                    <Select
+                                        value={specs.installation}
+                                        onValueChange={(val) => setSpecs(prev => ({ ...prev, installation: val }))}
+                                    >
+                                        <SelectTrigger>
+                                            <SelectValue placeholder="Select Installation" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            <SelectItem value="Furniture">Furniture</SelectItem>
+                                            <SelectItem value="Flush">Flush</SelectItem>
+                                            <SelectItem value="Surface">Surface</SelectItem>
+                                        </SelectContent>
+                                    </Select>
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="mounting_type">Mounting Type</Label>
+                                    <Input
+                                        id="mounting_type"
+                                        name="mounting_type"
+                                        value={specs.mounting_type}
+                                        onChange={handleSpecChange}
+                                        placeholder="e.g. Flush, Surface"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="orientation">Orientation</Label>
+                                    <Select
+                                        value={specs.orientation}
+                                        onValueChange={(val) => setSpecs(prev => ({ ...prev, orientation: val }))}
+                                    >
+                                        <SelectTrigger>
+                                            <SelectValue placeholder="Select Orientation" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            <SelectItem value="Horizontal">Horizontal</SelectItem>
+                                            <SelectItem value="Vertical">Vertical</SelectItem>
+                                            <SelectItem value="Square">Square</SelectItem>
+                                        </SelectContent>
+                                    </Select>
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="dimensions">Dimensions</Label>
+                                    <Input
+                                        id="dimensions"
+                                        name="dimensions"
+                                        value={specs.dimensions}
+                                        onChange={handleSpecChange}
+                                        placeholder="e.g. 97 x 90 x 14 mm"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="dimensions_mm">Dimensions (mm)</Label>
+                                    <Input
+                                        id="dimensions_mm"
+                                        name="dimensions_mm"
+                                        value={specs.dimensions_mm}
+                                        onChange={handleSpecChange}
+                                        placeholder="e.g. 97x90x14"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="cutout_dimensions_mm">Cutout Dimensions (mm)</Label>
+                                    <Input
+                                        id="cutout_dimensions_mm"
+                                        name="cutout_dimensions_mm"
+                                        value={specs.cutout_dimensions_mm}
+                                        onChange={handleSpecChange}
+                                        placeholder="e.g. 86x86"
                                     />
                                 </div>
                                 <div className="flex items-center justify-between p-4 border rounded-lg">
@@ -323,6 +556,17 @@ const AdminAddProduct = () => {
                                         placeholder="e.g. 2"
                                     />
                                 </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="sensitivity_ma">Sensitivity (mA)</Label>
+                                    <Input
+                                        id="sensitivity_ma"
+                                        name="sensitivity_ma"
+                                        type="number"
+                                        value={specs.sensitivity_ma}
+                                        onChange={handleSpecChange}
+                                        placeholder="e.g. 30, 100, 300 (for RCCB/RCBO)"
+                                    />
+                                </div>
                             </>
                         )}
                     </CardContent>
@@ -356,13 +600,22 @@ const AdminAddProduct = () => {
                                 required
                             />
                         </div>
-                        <div className="space-y-2 md:col-span-2">
+                        <div className="space-y-2">
                             <Label htmlFor="imageUrl">Image URL</Label>
                             <Input
                                 id="imageUrl"
                                 value={imageUrl}
                                 onChange={(e) => setImageUrl(e.target.value)}
                                 placeholder="https://..."
+                            />
+                        </div>
+                        <div className="space-y-2">
+                            <Label htmlFor="imageLabel">Image Label</Label>
+                            <Input
+                                id="imageLabel"
+                                value={imageLabel}
+                                onChange={(e) => setImageLabel(e.target.value)}
+                                placeholder="e.g. Front View, Side View"
                             />
                         </div>
                     </CardContent>
@@ -412,6 +665,28 @@ const AdminAddProduct = () => {
                                     </div>
                                 ))}
                             </div>
+                        </div>
+                        <div className="space-y-2">
+                            <Label>Variants (Press Enter to add SKU)</Label>
+                            <Input
+                                value={variantInput}
+                                onChange={(e) => setVariantInput(e.target.value)}
+                                onKeyDown={addVariant}
+                                placeholder="Add variant SKU..."
+                            />
+                            <div className="flex flex-wrap gap-2 mt-2">
+                                {variants.map((variant, index) => (
+                                    <div key={index} className="bg-secondary text-secondary-foreground px-2 py-1 rounded-md text-sm flex items-center gap-1">
+                                        {variant}
+                                        <button type="button" onClick={() => removeVariant(variant)} className="hover:text-destructive">
+                                            <X className="h-3 w-3" />
+                                        </button>
+                                    </div>
+                                ))}
+                            </div>
+                            <p className="text-xs text-muted-foreground mt-1">
+                                Add SKUs of variant products (e.g., different colors of the same switch)
+                            </p>
                         </div>
                         <div className="flex items-center gap-6 pt-4">
                             <div className="flex items-center gap-2">

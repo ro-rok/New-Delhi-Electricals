@@ -1,0 +1,1505 @@
+[
+  {
+    "sku": "ACWSPXW101",
+    "name": "Bottom Push Switch 10AX 1-way with Indicator 1M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 10AX 1-way"
+    },
+    "variant": [
+      "ACWSPXG101"
+    ],
+    "pricing": {
+      "mrp": 144,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-1-way-indicator-1m-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX 1-way with Indicator 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSPXG101",
+    "name": "Bottom Push Switch 10AX 1-way with Indicator 1M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 10AX 1-way"
+    },
+    "variant": [
+      "ACWSPXW101"
+    ],
+    "pricing": {
+      "mrp": 180,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-1-way-indicator-1m-charcoal-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Charcoal Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX 1-way with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSPXW102",
+    "name": "Bottom Push Switch 10AX 2-way with Indicator 1M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 10AX 2-way"
+    },
+    "variant": [
+      "ACWSPXG102"
+    ],
+    "pricing": {
+      "mrp": 214,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-2-way-indicator-1m-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "2-way",
+        "Indicator",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX 2-way with Indicator 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSPXG102",
+    "name": "Bottom Push Switch 10AX 2-way with Indicator 1M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 10AX 2-way"
+    },
+    "variant": [
+      "ACWSPXW102"
+    ],
+    "pricing": {
+      "mrp": 270,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-2-way-indicator-1m-charcoal-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "2-way",
+        "Indicator",
+        "1M",
+        "Charcoal Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX 2-way with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSPCW101",
+    "name": "Bottom Push Bell Push 10AX with Indicator 1M - White",
+    "product_family": "Signia",
+    "category": "Bell Push",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Bell Push 10AX"
+    },
+    "variant": [
+      "ACWSPCG101"
+    ],
+    "pricing": {
+      "mrp": 190,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-10ax-indicator-1m-white",
+      "keywords": [
+        "Bell Push",
+        "Indicator",
+        "10AX",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Bell Push 10AX with Indicator 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSPCG101",
+    "name": "Bottom Push Bell Push 10AX with Indicator 1M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Bell Push",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Bell Push 10AX"
+    },
+    "variant": [
+      "ACWSPCW101"
+    ],
+    "pricing": {
+      "mrp": 240,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-10ax-indicator-1m-charcoal-grey",
+      "keywords": [
+        "Bell Push",
+        "Indicator",
+        "10AX",
+        "1M",
+        "Charcoal Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Bell Push 10AX with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMPCW101",
+    "name": "Bottom Push Bell Push 10AX Mega with Indicator 1M - White",
+    "product_family": "Signia",
+    "category": "Bell Push",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Bell Push 10AX Mega"
+    },
+    "variant": [
+      "ACWMPCG101"
+    ],
+    "pricing": {
+      "mrp": 225,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-10ax-mega-indicator-1m-white",
+      "keywords": [
+        "Bell Push",
+        "Mega",
+        "Indicator",
+        "10AX",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Bell Push 10AX Mega with Indicator 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMPCG101",
+    "name": "Bottom Push Bell Push 10AX Mega with Indicator 1M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Bell Push",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Bell Push 10AX Mega"
+    },
+    "variant": [
+      "ACWMPCW101"
+    ],
+    "pricing": {
+      "mrp": 280,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-10ax-mega-indicator-1m-charcoal-grey",
+      "keywords": [
+        "Bell Push",
+        "Mega",
+        "Indicator",
+        "10AX",
+        "1M",
+        "Charcoal Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Bell Push 10AX Mega with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMPXW101",
+    "name": "Bottom Push Switch 10AX Mega 1-way with Indicator 1M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 10AX Mega 1-way"
+    },
+    "variant": [
+      "ACWMPXG101"
+    ],
+    "pricing": {
+      "mrp": 240,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-mega-1-way-indicator-1m-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "Mega",
+        "1-way",
+        "Indicator",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX Mega 1-way with Indicator 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMPXG101",
+    "name": "Bottom Push Switch 10AX Mega 1-way with Indicator 1M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 10AX Mega 1-way"
+    },
+    "variant": [
+      "ACWMPXW101"
+    ],
+    "pricing": {
+      "mrp": 300,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-mega-1-way-indicator-1m-charcoal-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "Mega",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Charcoal Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX Mega 1-way with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMPXW102",
+    "name": "Bottom Push Switch 10AX Mega 2-way with Indicator 1M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 10AX Mega 2-way"
+    },
+    "variant": [
+      "ACWMPXG102"
+    ],
+    "pricing": {
+      "mrp": 210,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-mega-2-way-indicator-1m-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "Mega",
+        "2-way",
+        "Indicator",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX Mega 2-way with Indicator 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMPXG102",
+    "name": "Bottom Push Switch 10AX Mega 2-way with Indicator 1M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 10AX Mega 2-way"
+    },
+    "variant": [
+      "ACWMPXW102"
+    ],
+    "pricing": {
+      "mrp": 265,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-mega-2-way-indicator-1m-charcoal-grey",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "Mega",
+        "2-way",
+        "Indicator",
+        "1M",
+        "Charcoal Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 10AX Mega 2-way with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSPXW161",
+    "name": "Bottom Push Switch 16AX 1-way with Indicator 1M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 16AX 1-way"
+    },
+    "variant": [
+      "ACWSPXG161"
+    ],
+    "pricing": {
+      "mrp": 216,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-indicator-1m-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way with Indicator 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSPXG161",
+    "name": "Bottom Push Switch 16AX 1-way with Indicator 1M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 16AX 1-way"
+    },
+    "variant": [
+      "ACWSPXW161"
+    ],
+    "pricing": {
+      "mrp": 270,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-1-way-indicator-1m-charcoal-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Charcoal Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX 1-way with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSPXW162",
+    "name": "Bottom Push Switch 16AX 2-way with Indicator 1M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 16AX 2-way"
+    },
+    "variant": [
+      "ACWSPXG162"
+    ],
+    "pricing": {
+      "mrp": 280,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-2-way-indicator-1m-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "2-way",
+        "Indicator",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX 2-way with Indicator 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSPXG162",
+    "name": "Bottom Push Switch 16AX 2-way with Indicator 1M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 16AX 2-way"
+    },
+    "variant": [
+      "ACWSPXW162"
+    ],
+    "pricing": {
+      "mrp": 350,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-2-way-indicator-1m-charcoal-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "2-way",
+        "Indicator",
+        "1M",
+        "Charcoal Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX 2-way with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMPXW161",
+    "name": "Bottom Push Switch 16AX Mega 1-way with Indicator 1M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 16AX Mega 1-way"
+    },
+    "variant": [
+      "ACWMPXG161"
+    ],
+    "pricing": {
+      "mrp": 248,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-mega-1-way-indicator-1m-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "Mega",
+        "1-way",
+        "Indicator",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX Mega 1-way with Indicator 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMPXG161",
+    "name": "Bottom Push Switch 16AX Mega 1-way with Indicator 1M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 16AX Mega 1-way"
+    },
+    "variant": [
+      "ACWMPXW161"
+    ],
+    "pricing": {
+      "mrp": 310,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-mega-1-way-indicator-1m-charcoal-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "Mega",
+        "1-way",
+        "Indicator",
+        "1M",
+        "Charcoal Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX Mega 1-way with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMPXW162",
+    "name": "Bottom Push Switch 16AX Mega 2-way with Indicator 1M - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 16AX Mega 2-way"
+    },
+    "variant": [
+      "ACWMPXG162"
+    ],
+    "pricing": {
+      "mrp": 290,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-mega-2-way-indicator-1m-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "Mega",
+        "2-way",
+        "Indicator",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX Mega 2-way with Indicator 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWMPXG162",
+    "name": "Bottom Push Switch 16AX Mega 2-way with Indicator 1M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Switch 16AX Mega 2-way"
+    },
+    "variant": [
+      "ACWMPXW162"
+    ],
+    "pricing": {
+      "mrp": 365,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-mega-2-way-indicator-1m-charcoal-grey",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "Mega",
+        "2-way",
+        "Indicator",
+        "1M",
+        "Charcoal Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Switch 16AX Mega 2-way with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSXDW002",
+    "name": "DND Switch 1M - White",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "DND Switches",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "DND Switch"
+    },
+    "variant": [
+      "ACWSXDG102"
+    ],
+    "pricing": {
+      "mrp": 317,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dnd-switch-1m-white",
+      "keywords": [
+        "DND Switch",
+        "1M",
+        "White",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy DND Switch 1M White hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSXDG102",
+    "name": "DND Switch 1M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "DND Switches",
+    "specs": {
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "type_detail": "DND Switch"
+    },
+    "variant": [
+      "ACWSXDW002"
+    ],
+    "pricing": {
+      "mrp": 515,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dnd-switch-1m-charcoal-grey",
+      "keywords": [
+        "DND Switch",
+        "1M",
+        "Charcoal Grey",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy DND Switch 1M Charcoal Grey hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWIPIW061",
+    "name": "MMR Switch 1M - White",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "MMR Switches",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "MMR Switch"
+    },
+    "variant": [
+      "ACWSXCG101"
+    ],
+    "pricing": {
+      "mrp": 268,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mmr-switch-1m-white",
+      "keywords": [
+        "MMR Switch",
+        "1M",
+        "White",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy MMR Switch 1M White hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSXCG101",
+    "name": "MMR Switch 1M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "MMR Switches",
+    "specs": {
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "type_detail": "MMR Switch"
+    },
+    "variant": [
+      "ACWIPIW061"
+    ],
+    "pricing": {
+      "mrp": 437,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mmr-switch-1m-charcoal-grey",
+      "keywords": [
+        "MMR Switch",
+        "1M",
+        "Charcoal Grey",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy MMR Switch 1M Charcoal Grey hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSIIW061",
+    "name": "DND and MMR Outdoor Panel 1M - White",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "DND and MMR Outdoor Panel"
+    },
+    "variant": [
+      "ACWSIIG061"
+    ],
+    "pricing": {
+      "mrp": 733,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dnd-mmr-outdoor-panel-1m-white",
+      "keywords": [
+        "DND",
+        "MMR",
+        "Outdoor Panel",
+        "1M",
+        "White",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy DND and MMR Outdoor Panel 1M White hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSIIG061",
+    "name": "DND and MMR Outdoor Panel 1M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units",
+    "specs": {
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "type_detail": "DND and MMR Outdoor Panel"
+    },
+    "variant": [
+      "ACWSIIW061"
+    ],
+    "pricing": {
+      "mrp": 1188,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dnd-mmr-outdoor-panel-1m-charcoal-grey",
+      "keywords": [
+        "DND",
+        "MMR",
+        "Outdoor Panel",
+        "1M",
+        "Charcoal Grey",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy DND and MMR Outdoor Panel 1M Charcoal Grey hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSEXW000",
+    "name": "Key Tag Mechanical Mono Block 32A 2M - White",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches",
+    "specs": {
+      "ampere": 32,
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Key Tag Mechanical Mono Block 32A"
+    },
+    "variant": [
+      "ACWSEIG321"
+    ],
+    "pricing": {
+      "mrp": 835,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "key-tag-mechanical-mono-block-32a-2m-white",
+      "keywords": [
+        "Key Tag",
+        "Mechanical",
+        "Mono Block",
+        "32A",
+        "2M",
+        "White",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy Key Tag Mechanical Mono Block 32A 2M White hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSEIG321",
+    "name": "Key Tag Mechanical Mono Block 32A 2M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches",
+    "specs": {
+      "ampere": 32,
+      "color": "Charcoal Grey",
+      "mw": 2,
+      "type_detail": "Key Tag Mechanical Mono Block 32A"
+    },
+    "variant": [
+      "ACWSEXW000"
+    ],
+    "pricing": {
+      "mrp": 1341,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "key-tag-mechanical-mono-block-32a-2m-charcoal-grey",
+      "keywords": [
+        "Key Tag",
+        "Mechanical",
+        "Mono Block",
+        "32A",
+        "2M",
+        "Charcoal Grey",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy Key Tag Mechanical Mono Block 32A 2M Charcoal Grey hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSEIW000",
+    "name": "Key Tag with Time Delay Electronic 30A 2M - White",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "Electronic Key Tag Switches",
+    "specs": {
+      "ampere": 30,
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Key Tag with Time Delay Electronic 30A"
+    },
+    "variant": [
+      "ACWSEIG201"
+    ],
+    "pricing": {
+      "mrp": 2179,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "key-tag-time-delay-electronic-30a-2m-white",
+      "keywords": [
+        "Key Tag",
+        "Time Delay",
+        "Electronic",
+        "30A",
+        "2M",
+        "White",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy Key Tag with Time Delay Electronic 30A 2M White hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSEIG201",
+    "name": "Key Tag with Time Delay Electronic 30A 2M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "Electronic Key Tag Switches",
+    "specs": {
+      "ampere": 30,
+      "color": "Charcoal Grey",
+      "mw": 2,
+      "type_detail": "Key Tag with Time Delay Electronic 30A"
+    },
+    "variant": [
+      "ACWSEIW000"
+    ],
+    "pricing": {
+      "mrp": 3487,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "key-tag-time-delay-electronic-30a-2m-charcoal-grey",
+      "keywords": [
+        "Key Tag",
+        "Time Delay",
+        "Electronic",
+        "30A",
+        "2M",
+        "Charcoal Grey",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy Key Tag with Time Delay Electronic 30A 2M Charcoal Grey hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKEXW162",
+    "name": "Shaver Unit Socket Mono Block 4M - White",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "Shaver Sockets",
+    "specs": {
+      "color": "White",
+      "mw": 4,
+      "type_detail": "Shaver Unit Socket Mono Block"
+    },
+    "variant": [
+      "ACWKEXG162"
+    ],
+    "pricing": {
+      "mrp": 1940,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "shaver-unit-socket-mono-block-4m-white",
+      "keywords": [
+        "Shaver Unit Socket",
+        "Mono Block",
+        "4M",
+        "White",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy Shaver Unit Socket Mono Block 4M White hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKEXG162",
+    "name": "Shaver Unit Socket Mono Block 4M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "Shaver Sockets",
+    "specs": {
+      "color": "Charcoal Grey",
+      "mw": 4,
+      "type_detail": "Shaver Unit Socket Mono Block"
+    },
+    "variant": [
+      "ACWKEXW162"
+    ],
+    "pricing": {
+      "mrp": 3145,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "shaver-unit-socket-mono-block-4m-charcoal-grey",
+      "keywords": [
+        "Shaver Unit Socket",
+        "Mono Block",
+        "4M",
+        "Charcoal Grey",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy Shaver Unit Socket Mono Block 4M Charcoal Grey hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPFCWV02",
+    "name": "LED Foot Light 2M - White",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "LED Foot Lights",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "LED Foot Light"
+    },
+    "variant": [
+      "ACWPFCGV02"
+    ],
+    "pricing": {
+      "mrp": 706,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-foot-light-2m-white",
+      "keywords": [
+        "LED Foot Light",
+        "2M",
+        "White",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy LED Foot Light 2M White hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPFCGV02",
+    "name": "LED Foot Light 2M - Charcoal Grey",
+    "product_family": "Signia",
+    "category": "Hospitality",
+    "subcategory": "LED Foot Lights",
+    "specs": {
+      "color": "Charcoal Grey",
+      "mw": 2,
+      "type_detail": "LED Foot Light"
+    },
+    "variant": [
+      "ACWPFCWV02"
+    ],
+    "pricing": {
+      "mrp": 951,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-foot-light-2m-charcoal-grey",
+      "keywords": [
+        "LED Foot Light",
+        "2M",
+        "Charcoal Grey",
+        "Hospitality",
+        "Signia"
+      ],
+      "meta_description": "Buy LED Foot Light 2M Charcoal Grey hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  }
+]
+

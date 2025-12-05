@@ -14,16 +14,53 @@ router = APIRouter(prefix="/api/products", tags=["products"])
 @router.get("", response_model=ProductListResponse)
 async def list_products(
     q: str | None = Query(default=None, description="Search query"),
+    category: str | None = Query(default=None, description="Filter by category name"),
+    brand: str | None = Query(default=None, description="Filter by brand name"),
+    series: str | None = Query(default=None, description="Filter by product series/family"),
+    min_price: float | None = Query(default=None, ge=0, description="Minimum price"),
+    max_price: float | None = Query(default=None, ge=0, description="Maximum price"),
+    sort_by: str | None = Query(default="name", description="Sort field: name or price"),
+    sort_order: str | None = Query(default="asc", description="Sort order: asc or desc"),
     page: int = Query(1, ge=1),
     page_size: int = Query(20, ge=1, le=10000, alias="pageSize"),
     db: AsyncIOMotorDatabase = Depends(get_db_dep),
 ) -> Any:
     skip = (page - 1) * page_size
     query: dict[str, Any] = {}
+    
+    # Build MongoDB query dynamically based on filters
     if q:
         query["$text"] = {"$search": q}
+    
+    if category:
+        query["category"] = {"$regex": category, "$options": "i"}
+    
+    if brand:
+        query["brand"] = brand
+    
+    if series:
+        # Check both series and product_family fields
+        query["$or"] = [
+            {"series": {"$regex": series, "$options": "i"}},
+            {"product_family": {"$regex": series, "$options": "i"}}
+        ]
+    
+    # Price range filtering
+    if min_price is not None or max_price is not None:
+        price_query: dict[str, Any] = {}
+        if min_price is not None:
+            price_query["$gte"] = min_price
+        if max_price is not None:
+            price_query["$lte"] = max_price
+        query["list_price"] = price_query
+    
+    # Build sort query
+    sort_field = "name" if sort_by == "name" else "list_price"
+    sort_direction = 1 if sort_order == "asc" else -1
+    sort_query = [(sort_field, sort_direction)]
+    
     total = await db.products.count_documents(query)
-    cursor = db.products.find(query).skip(skip).limit(page_size)
+    cursor = db.products.find(query).sort(sort_query).skip(skip).limit(page_size)
     items: List[ProductInDB] = []
     async for doc in cursor:
         doc["_id"] = str(doc["_id"])

@@ -1,0 +1,43 @@
+{
+  "total_categories": 7,
+  "total_families": 16,
+  "total_subcategories": 41,
+  "total_products": 149,
+  "categories": {
+    "Power Sockets": {
+      "families": 2,
+      "subcategories": 2,
+      "products": 10
+    },
+    "Fan Controls": {
+      "families": 3,
+      "subcategories": 5,
+      "products": 16
+    },
+    "Dimmers": {
+      "families": 2,
+      "subcategories": 2,
+      "products": 5
+    },
+    "Accessories": {
+      "families": 3,
+      "subcategories": 13,
+      "products": 45
+    },
+    "Switches": {
+      "families": 2,
+      "subcategories": 7,
+      "products": 32
+    },
+    "Data Sockets": {
+      "families": 2,
+      "subcategories": 6,
+      "products": 15
+    },
+    "Hospitality": {
+      "families": 2,
+      "subcategories": 6,
+      "products": 26
+    }
+  }
+}

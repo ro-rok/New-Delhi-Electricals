@@ -45,6 +45,7 @@ const BrandPage = () => {
         setBrands(brandsList);
         setCategories(catsList);
         if (foundBrand) {
+          // Use backend filtering for better performance
           const products = await getProductsByBrand(foundBrand.name);
           setBrandProducts(products);
         }

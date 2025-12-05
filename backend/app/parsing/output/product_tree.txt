@@ -1,0 +1,258 @@
+================================================================================
+PRODUCT TREE STRUCTURE
+================================================================================
+
+📁 Accessories (45 products)
+
+  └─ 📦 ENCONNECT (9 products)
+      └─ 📂 Wi-fi Accessories (9 products)
+          └─ • CB94602DM00: Wi-fi Light Dimmer 5 Step - Mountain Grey
+          └─ • CB94602DB00: Wi-fi Light Dimmer 5 Step - Sparkle Black
+          └─ • CB94602DL00: Wi-fi Light Dimmer 5 Step - Black Glass
+          └─ ... and 6 more products
+
+
+  └─ 📦 ENCURVE (11 products)
+      └─ 📂 Blank Off Unit - 1 Module (2 products)
+          └─ • CB95201AW00: Blank off unit 1M - White
+          └─ • CB95201AG00: Blank off unit 1M - Magnesium Grey
+
+      └─ 📂 Cable Outlet - 1 Module (2 products)
+          └─ • CB95101AW00: Cable Outlet 1M - White
+          └─ • CB95101AG00: Cable Outlet 1M - Magnesium Grey
+
+      └─ 📂 LED Foot Light - 2 Module (2 products)
+          └─ • CB95102LW00: LED Foot Light 2M - White
+          └─ • CB95102LG00: LED Foot Light 2M - Magnesium Grey
+
+      └─ 📂 LED Phase Indicator - 1 Module (1 products)
+          └─ • CB95401AW00: LED Phase Indicator 1M Full Glow - White
+
+      └─ 📂 USB Chargers - 1 Module (4 products)
+          └─ • CB95101AW02: USB Charger 2A 1M - White
+          └─ • CB95101AG02: USB Charger 2A 1M - Magnesium Grey
+          └─ • CB95101AW18: USB Charger 18W Type A & Type C Combi 1M - White
+          └─ ... and 1 more products
+
+
+  └─ 📦 ENGLAZE (25 products)
+      └─ 📂 Blank Off Unit - 1 Module (3 products)
+          └─ • CB92201AW00: Blank off unit 1M - Snow White
+          └─ • CB92201AM00: Blank off unit 1M - Mountain Grey
+          └─ • CB92201AB00: Blank off unit 1M - Sparkle Black
+
+      └─ 📂 Buzzer - 2 Module (3 products)
+          └─ • CB92102AW00: Buzzer 2M - Snow White
+          └─ • CB92102AM00: Buzzer 2M - Mountain Grey
+          └─ • CB92102AB00: Buzzer 2M - Sparkle Black
+
+      └─ 📂 Cable Outlet - 1 Module (3 products)
+          └─ • CB92101AW00: Cable Outlet 1M - Snow White
+          └─ • CB92101AM00: Cable Outlet 1M - Mountain Grey
+          └─ • CB92101AB00: Cable Outlet 1M - Sparkle Black
+
+      └─ 📂 Door Bells - 2 Module (3 products)
+          └─ • CB92402AW00: Electronic Ding Dong Bell 2M - Snow White
+          └─ • CB92402AM00: Electronic Ding Dong Bell 2M - Mountain Grey
+          └─ • CB92402AB00: Electronic Ding Dong Bell 2M - Sparkle Black
+
+      └─ 📂 LED Foot Light - 2 Module (3 products)
+          └─ • CB92102LW00: LED Foot Light 2M - Snow White
+          └─ • CB92102LM00: LED Foot Light 2M - Mountain Grey
+          └─ • CB92102LB00: LED Foot Light 2M - Sparkle Black
+
+      └─ 📂 LED Phase Indicator - 1 Module (1 products)
+          └─ • CB92401AW00: LED Phase Indicator 1M - Full Glow
+
+      └─ 📂 USB Chargers - 1 Module (9 products)
+          └─ • CB92101AW02: USB Charger 2A 1M - Snow White
+          └─ • CB92101AM02: USB Charger 2A 1M - Mountain Grey
+          └─ • CB92101AB02: USB Charger 2A 1M - Sparkle Black
+          └─ ... and 6 more products
+
+
+
+📁 Data Sockets (15 products)
+
+  └─ 📦 ENCURVE (6 products)
+      └─ 📂 LAN Sockets - 1 Module (2 products)
+          └─ • CB95301TW45: RJ 45 Cat 6A Socket 1M - White
+          └─ • CB95301TG45: RJ 45 Cat 6A Socket 1M - Magnesium Grey
+
+      └─ 📂 TV Sockets - 1 Module (2 products)
+          └─ • CB95101TW00: TV Socket 1M - White
+          └─ • CB95101TG00: TV Socket 1M - Magnesium Grey
+
+      └─ 📂 Telephone Sockets - 1 Module (2 products)
+          └─ • CB95101TW11: RJ 11 Socket 1M - White
+          └─ • CB95101TG11: RJ 11 Socket 1M - Magnesium Grey
+
+
+  └─ 📦 ENGLAZE (9 products)
+      └─ 📂 LAN Sockets - 1 Module (3 products)
+          └─ • CB92301TW45: RJ 45 Cat 6A Socket with Shutter 1M - Snow White
+          └─ • CB92301TM45: RJ 45 Cat 6A Socket with Shutter 1M - Mountain Grey
+          └─ • CB92301TB45: RJ 45 Cat 6A Socket with Shutter 1M - Sparkle Black
+
+      └─ 📂 TV Sockets - 1 Module (3 products)
+          └─ • CB92101TW00: TV Socket 1M - Snow White
+          └─ • CB92101TM00: TV Socket 1M - Mountain Grey
+          └─ • CB92101TB00: TV Socket 1M - Sparkle Black
+
+      └─ 📂 Telephone Sockets - 1 Module (3 products)
+          └─ • CB92101TW11: RJ 11 Socket with Shutter 1M - Snow White
+          └─ • CB92101TM11: RJ 11 Socket with Shutter 1M - Mountain Grey
+          └─ • CB92101TB11: RJ 11 Socket with Shutter 1M - Sparkle Black
+
+
+
+📁 Dimmers (5 products)
+
+  └─ 📦 ENCURVE (2 products)
+      └─ 📂 Dimmers - 1 Module (2 products)
+          └─ • CB95101DW04: Dimmer 400W 1M - White
+          └─ • CB95101DG04: Dimmer 400W 1M - Magnesium Grey
+
+
+  └─ 📦 ENGLAZE (3 products)
+      └─ 📂 Dimmers - 1 Module (3 products)
+          └─ • CB92101DW04: Dimmer 400W 1M - Snow White
+          └─ • CB92101DM04: Dimmer 400W 1M - Mountain Grey
+          └─ • CB92101DB04: Dimmer 400W 1M - Sparkle Black
+
+
+
+📁 Fan Controls (16 products)
+
+  └─ 📦 ENCONNECT (3 products)
+      └─ 📂 Wi-fi Fan Regulators (3 products)
+          └─ • CB94602FM00: Wi-fi Fan Regulator 5 Step - Mountain Grey
+          └─ • CB94602FB00: Wi-fi Fan Regulator 5 Step - Sparkle Black
+          └─ • CB94602FL00: Wi-fi Fan Regulator 5 Step - Black Glass
+
+
+  └─ 📦 ENCURVE (4 products)
+      └─ 📂 Fan Regulators - 1 Module (2 products)
+          └─ • CB95101RW01: Fan Regulator 4-Step 80W 1M - White
+          └─ • CB95101RG01: Fan Regulator 4-Step 80W 1M - Magnesium Grey
+
+      └─ 📂 Fan Regulators - 2 Module (2 products)
+          └─ • CB95102RW02: Fan Regulator 5-Step 120W with ISI 2M - White
+          └─ • CB95102RG02: Fan Regulator 5-Step 120W with ISI 2M - Magnesium Grey
+
+
+  └─ 📦 ENGLAZE (9 products)
+      └─ 📂 Fan Regulators - 1 Module (3 products)
+          └─ • CB92101RW01: Fan Regulator 4-Step 80W 1M - Snow White
+          └─ • CB92101RM01: Fan Regulator 4-Step 80W 1M - Mountain Grey
+          └─ • CB92101RB01: Fan Regulator 4-Step 80W 1M - Sparkle Black
+
+      └─ 📂 Fan Regulators - 2 Module (6 products)
+          └─ • CB92102RW02: Fan Regulator 5-Step 120W with ISI 2M - Snow White
+          └─ • CB92102RM02: Fan Regulator 5-Step 120W with ISI 2M - Mountain Grey
+          └─ • CB92102RB02: Fan Regulator 5-Step 120W with ISI 2M - Sparkle Black
+          └─ ... and 3 more products
+
+
+
+📁 Hospitality (26 products)
+
+  └─ 📦 ENCURVE (8 products)
+      └─ 📂 DND-MMR Units (4 products)
+          └─ • CB95502HW10: DND-MMR Inside Room Unit 2M - White
+          └─ • CB95502HG10: DND-MMR Inside Room Unit 2M - Magnesium Grey
+          └─ • CB95601HW10: DND-MMR Outside Room Unit 1M - White
+          └─ ... and 1 more products
+
+      └─ 📂 Key Tag Accessories (2 products)
+          └─ • CB95302HW00: Spare key for Mech Key Tag - White
+          └─ • CB95302HG00: Spare key for Mech Key Tag - Magnesium Grey
+
+      └─ 📂 Mechanical Key Tag Switches (2 products)
+          └─ • CB95302HW32: Mech Key Tag 32A 2M - White
+          └─ • CB95302HG32: Mech Key Tag 32A 2M - Magnesium Grey
+
+
+  └─ 📦 ENGLAZE (18 products)
+      └─ 📂 DND-MMR Units (6 products)
+          └─ • CB92502HW10: DND-MMR Inside Room Unit 2M - Snow White
+          └─ • CB92502HM10: DND-MMR Inside Room Unit 2M - Mountain Grey
+          └─ • CB92502HB10: DND-MMR Inside Room Unit 2M - Sparkle Black
+          └─ ... and 3 more products
+
+      └─ 📂 Key Tag Accessories (3 products)
+          └─ • CB92302HW00: Spare Key for Mech Key Tag - Snow White
+          └─ • CB92302HM00: Spare Key for Mech Key Tag - Mountain Grey
+          └─ • CB92302HB00: Spare Key for Mech Key Tag - Sparkle Black
+
+      └─ 📂 Mechanical Key Tag Switches (9 products)
+          └─ • CB92202HW20: Mech Key Tag Switch 20A 2M - Snow White
+          └─ • CB92202HM20: Mech Key Tag Switch 20A 2M - Mountain Grey
+          └─ • CB92202HB20: Mech Key Tag Switch 20A 2M - Sparkle Black
+          └─ ... and 6 more products
+
+
+
+📁 Power Sockets (10 products)
+
+  └─ 📦 ENCURVE (4 products)
+      └─ 📂 Power Sockets - 2 Module (4 products)
+          └─ • CB95602CW06: Socket 6A 3 Pin with ISI 2M - White
+          └─ • CB95602CG06: Socket 6A 3 Pin with ISI 2M - Magnesium Grey
+          └─ • CB95302CW16: Socket 6A/16A 3 Pin Combi with ISI 2M - White
+          └─ ... and 1 more products
+
+
+  └─ 📦 ENGLAZE (6 products)
+      └─ 📂 Power Sockets - 2 Module (6 products)
+          └─ • CB92602CW06: Socket 6A 3 Pin with ISI (Heavy Duty) 2M - Snow White
+          └─ • CB92602CM06: Socket 6A 3 Pin with ISI (Heavy Duty) 2M - Mountain Grey
+          └─ • CB92602CB06: Socket 6A 3 Pin with ISI (Heavy Duty) 2M - Sparkle Black
+          └─ ... and 3 more products
+
+
+
+📁 Switches (32 products)
+
+  └─ 📦 ENCURVE (24 products)
+      └─ 📂 Bell Push - 1 Module (4 products)
+          └─ • CB95101BW06: Bell Push 6A 1M - White
+          └─ • CB95101BG06: Bell Push 6A 1M - Magnesium Grey
+          └─ • CB95301BW06: Bell Push 6A 1M with Indicator 1M - White
+          └─ ... and 1 more products
+
+      └─ 📂 Bell Push - 2 Module (2 products)
+          └─ • CB95302BW06: Bell Push 6A with Indicator 2M - White
+          └─ • CB95302BG06: Bell Push 6A with Indicator 2M - Magnesium Grey
+
+      └─ 📂 DP Switches - 2 Module (2 products)
+          └─ • CB95402SW32: Switch 32A DP with Indicator 2M - White
+          └─ • CB95402SG32: Switch 32A DP with Indicator 2M - Magnesium Grey
+
+      └─ 📂 Switches - 1 Module (16 products)
+          └─ • CB95101SW06: Switch 6AX 1-way 1M - White
+          └─ • CB95101SG06: Switch 6AX 1-way 1M - Magnesium Grey
+          └─ • CB95301SW06: Switch 6AX 1-way with Indicator 1M - White
+          └─ ... and 13 more products
+
+
+  └─ 📦 ENTICE (8 products)
+      └─ 📂 Bell Push - 1 Module (4 products)
+          └─ • CB91101BW10: Bell Push 10AX 1M - White
+          └─ • CB91101BG10: Bell Push 10AX 1M - Charcoal Grey
+          └─ • CB91301BW10: Bell Push 10AX with Indicator 1M - White
+          └─ ... and 1 more products
+
+      └─ 📂 Bell Push - 2 Module (2 products)
+          └─ • CB91302BW10: Bell Push 10AX with Indicator 2M - White
+          └─ • CB91302BG10: Bell Push 10AX with Indicator 2M - Charcoal Grey
+
+      └─ 📂 Motor Starters - 2 Module (2 products)
+          └─ • CB91102MW25: Motor Starter 25A 2M - White
+          └─ • CB91102MG25: Motor Starter 25A 2M - Charcoal Grey
+
+
+
+================================================================================
+TOTAL PRODUCTS: 149
+================================================================================

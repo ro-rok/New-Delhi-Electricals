@@ -1,0 +1,573 @@
+// Product Tree
+digraph {
+	dpi=300 rankdir=TB size="100,200"
+	node [shape=box style="rounded,filled"]
+	cat_0 [label="Accessories
+(45 products)" fillcolor="#4A90E2" fontcolor=white fontsize=14 fontweight=bold]
+	fam_1 [label="ENCONNECT
+(9 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_0 -> fam_1
+	sub_2 [label="Wi-fi Accessories
+(9 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_1 -> sub_2
+	prod_3 [label="CB94602DM00
+Wi-fi Light Dimmer 5 Step - Mountain Gre..." fillcolor="#E8E8E8" fontsize=8]
+	sub_2 -> prod_3
+	prod_4 [label="CB94602DB00
+Wi-fi Light Dimmer 5 Step - Sparkle Blac..." fillcolor="#E8E8E8" fontsize=8]
+	sub_2 -> prod_4
+	prod_5 [label="CB94602DL00
+Wi-fi Light Dimmer 5 Step - Black Glass" fillcolor="#E8E8E8" fontsize=8]
+	sub_2 -> prod_5
+	prod_6 [label="CB94602CM00
+Wi-fi Curtain Controller - Mountain Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_2 -> prod_6
+	prod_7 [label="CB94602CB00
+Wi-fi Curtain Controller - Sparkle Black" fillcolor="#E8E8E8" fontsize=8]
+	sub_2 -> prod_7
+	more_8 [label="... and 4 more products" fillcolor="#E8E8E8" fontsize=8 style=dashed]
+	sub_2 -> more_8
+	fam_9 [label="ENCURVE
+(11 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_0 -> fam_9
+	sub_10 [label="Blank Off Unit - 1 Module
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_9 -> sub_10
+	prod_11 [label="CB95201AW00
+Blank off unit 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_10 -> prod_11
+	prod_12 [label="CB95201AG00
+Blank off unit 1M - Magnesium Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_10 -> prod_12
+	sub_13 [label="Cable Outlet - 1 Module
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_9 -> sub_13
+	prod_14 [label="CB95101AW00
+Cable Outlet 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_13 -> prod_14
+	prod_15 [label="CB95101AG00
+Cable Outlet 1M - Magnesium Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_13 -> prod_15
+	sub_16 [label="LED Foot Light - 2 Module
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_9 -> sub_16
+	prod_17 [label="CB95102LW00
+LED Foot Light 2M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_16 -> prod_17
+	prod_18 [label="CB95102LG00
+LED Foot Light 2M - Magnesium Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_16 -> prod_18
+	sub_19 [label="LED Phase Indicator - 1 Module
+(1 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_9 -> sub_19
+	prod_20 [label="CB95401AW00
+LED Phase Indicator 1M Full Glow - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_19 -> prod_20
+	sub_21 [label="USB Chargers - 1 Module
+(4 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_9 -> sub_21
+	prod_22 [label="CB95101AW02
+USB Charger 2A 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_21 -> prod_22
+	prod_23 [label="CB95101AG02
+USB Charger 2A 1M - Magnesium Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_21 -> prod_23
+	prod_24 [label="CB95101AW18
+USB Charger 18W Type A & Type C Combi 1M..." fillcolor="#E8E8E8" fontsize=8]
+	sub_21 -> prod_24
+	prod_25 [label="CB95101AG18
+USB Charger 18W Type A & Type C Combi 1M..." fillcolor="#E8E8E8" fontsize=8]
+	sub_21 -> prod_25
+	fam_26 [label="ENGLAZE
+(25 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_0 -> fam_26
+	sub_27 [label="Blank Off Unit - 1 Module
+(3 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_26 -> sub_27
+	prod_28 [label="CB92201AW00
+Blank off unit 1M - Snow White" fillcolor="#E8E8E8" fontsize=8]
+	sub_27 -> prod_28
+	prod_29 [label="CB92201AM00
+Blank off unit 1M - Mountain Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_27 -> prod_29
+	prod_30 [label="CB92201AB00
+Blank off unit 1M - Sparkle Black" fillcolor="#E8E8E8" fontsize=8]
+	sub_27 -> prod_30
+	sub_31 [label="Buzzer - 2 Module
+(3 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_26 -> sub_31
+	prod_32 [label="CB92102AW00
+Buzzer 2M - Snow White" fillcolor="#E8E8E8" fontsize=8]
+	sub_31 -> prod_32
+	prod_33 [label="CB92102AM00
+Buzzer 2M - Mountain Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_31 -> prod_33
+	prod_34 [label="CB92102AB00
+Buzzer 2M - Sparkle Black" fillcolor="#E8E8E8" fontsize=8]
+	sub_31 -> prod_34
+	sub_35 [label="Cable Outlet - 1 Module
+(3 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_26 -> sub_35
+	prod_36 [label="CB92101AW00
+Cable Outlet 1M - Snow White" fillcolor="#E8E8E8" fontsize=8]
+	sub_35 -> prod_36
+	prod_37 [label="CB92101AM00
+Cable Outlet 1M - Mountain Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_35 -> prod_37
+	prod_38 [label="CB92101AB00
+Cable Outlet 1M - Sparkle Black" fillcolor="#E8E8E8" fontsize=8]
+	sub_35 -> prod_38
+	sub_39 [label="Door Bells - 2 Module
+(3 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_26 -> sub_39
+	prod_40 [label="CB92402AW00
+Electronic Ding Dong Bell 2M - Snow Whit..." fillcolor="#E8E8E8" fontsize=8]
+	sub_39 -> prod_40
+	prod_41 [label="CB92402AM00
+Electronic Ding Dong Bell 2M - Mountain ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_39 -> prod_41
+	prod_42 [label="CB92402AB00
+Electronic Ding Dong Bell 2M - Sparkle B..." fillcolor="#E8E8E8" fontsize=8]
+	sub_39 -> prod_42
+	sub_43 [label="LED Foot Light - 2 Module
+(3 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_26 -> sub_43
+	prod_44 [label="CB92102LW00
+LED Foot Light 2M - Snow White" fillcolor="#E8E8E8" fontsize=8]
+	sub_43 -> prod_44
+	prod_45 [label="CB92102LM00
+LED Foot Light 2M - Mountain Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_43 -> prod_45
+	prod_46 [label="CB92102LB00
+LED Foot Light 2M - Sparkle Black" fillcolor="#E8E8E8" fontsize=8]
+	sub_43 -> prod_46
+	sub_47 [label="LED Phase Indicator - 1 Module
+(1 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_26 -> sub_47
+	prod_48 [label="CB92401AW00
+LED Phase Indicator 1M - Full Glow" fillcolor="#E8E8E8" fontsize=8]
+	sub_47 -> prod_48
+	sub_49 [label="USB Chargers - 1 Module
+(9 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_26 -> sub_49
+	prod_50 [label="CB92101AW02
+USB Charger 2A 1M - Snow White" fillcolor="#E8E8E8" fontsize=8]
+	sub_49 -> prod_50
+	prod_51 [label="CB92101AM02
+USB Charger 2A 1M - Mountain Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_49 -> prod_51
+	prod_52 [label="CB92101AB02
+USB Charger 2A 1M - Sparkle Black" fillcolor="#E8E8E8" fontsize=8]
+	sub_49 -> prod_52
+	prod_53 [label="CB92101AW18
+USB Type A Quick Charger 18W 1M - Snow W..." fillcolor="#E8E8E8" fontsize=8]
+	sub_49 -> prod_53
+	prod_54 [label="CB92101AM18
+USB Type A Quick Charger 18W 1M - Mounta..." fillcolor="#E8E8E8" fontsize=8]
+	sub_49 -> prod_54
+	more_55 [label="... and 4 more products" fillcolor="#E8E8E8" fontsize=8 style=dashed]
+	sub_49 -> more_55
+	cat_56 [label="Data Sockets
+(15 products)" fillcolor="#4A90E2" fontcolor=white fontsize=14 fontweight=bold]
+	fam_57 [label="ENCURVE
+(6 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_56 -> fam_57
+	sub_58 [label="LAN Sockets - 1 Module
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_57 -> sub_58
+	prod_59 [label="CB95301TW45
+RJ 45 Cat 6A Socket 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_58 -> prod_59
+	prod_60 [label="CB95301TG45
+RJ 45 Cat 6A Socket 1M - Magnesium Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_58 -> prod_60
+	sub_61 [label="TV Sockets - 1 Module
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_57 -> sub_61
+	prod_62 [label="CB95101TW00
+TV Socket 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_61 -> prod_62
+	prod_63 [label="CB95101TG00
+TV Socket 1M - Magnesium Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_61 -> prod_63
+	sub_64 [label="Telephone Sockets - 1 Module
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_57 -> sub_64
+	prod_65 [label="CB95101TW11
+RJ 11 Socket 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_64 -> prod_65
+	prod_66 [label="CB95101TG11
+RJ 11 Socket 1M - Magnesium Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_64 -> prod_66
+	fam_67 [label="ENGLAZE
+(9 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_56 -> fam_67
+	sub_68 [label="LAN Sockets - 1 Module
+(3 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_67 -> sub_68
+	prod_69 [label="CB92301TW45
+RJ 45 Cat 6A Socket with Shutter 1M - Sn..." fillcolor="#E8E8E8" fontsize=8]
+	sub_68 -> prod_69
+	prod_70 [label="CB92301TM45
+RJ 45 Cat 6A Socket with Shutter 1M - Mo..." fillcolor="#E8E8E8" fontsize=8]
+	sub_68 -> prod_70
+	prod_71 [label="CB92301TB45
+RJ 45 Cat 6A Socket with Shutter 1M - Sp..." fillcolor="#E8E8E8" fontsize=8]
+	sub_68 -> prod_71
+	sub_72 [label="TV Sockets - 1 Module
+(3 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_67 -> sub_72
+	prod_73 [label="CB92101TW00
+TV Socket 1M - Snow White" fillcolor="#E8E8E8" fontsize=8]
+	sub_72 -> prod_73
+	prod_74 [label="CB92101TM00
+TV Socket 1M - Mountain Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_72 -> prod_74
+	prod_75 [label="CB92101TB00
+TV Socket 1M - Sparkle Black" fillcolor="#E8E8E8" fontsize=8]
+	sub_72 -> prod_75
+	sub_76 [label="Telephone Sockets - 1 Module
+(3 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_67 -> sub_76
+	prod_77 [label="CB92101TW11
+RJ 11 Socket with Shutter 1M - Snow Whit..." fillcolor="#E8E8E8" fontsize=8]
+	sub_76 -> prod_77
+	prod_78 [label="CB92101TM11
+RJ 11 Socket with Shutter 1M - Mountain ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_76 -> prod_78
+	prod_79 [label="CB92101TB11
+RJ 11 Socket with Shutter 1M - Sparkle B..." fillcolor="#E8E8E8" fontsize=8]
+	sub_76 -> prod_79
+	cat_80 [label="Dimmers
+(5 products)" fillcolor="#4A90E2" fontcolor=white fontsize=14 fontweight=bold]
+	fam_81 [label="ENCURVE
+(2 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_80 -> fam_81
+	sub_82 [label="Dimmers - 1 Module
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_81 -> sub_82
+	prod_83 [label="CB95101DW04
+Dimmer 400W 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_82 -> prod_83
+	prod_84 [label="CB95101DG04
+Dimmer 400W 1M - Magnesium Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_82 -> prod_84
+	fam_85 [label="ENGLAZE
+(3 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_80 -> fam_85
+	sub_86 [label="Dimmers - 1 Module
+(3 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_85 -> sub_86
+	prod_87 [label="CB92101DW04
+Dimmer 400W 1M - Snow White" fillcolor="#E8E8E8" fontsize=8]
+	sub_86 -> prod_87
+	prod_88 [label="CB92101DM04
+Dimmer 400W 1M - Mountain Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_86 -> prod_88
+	prod_89 [label="CB92101DB04
+Dimmer 400W 1M - Sparkle Black" fillcolor="#E8E8E8" fontsize=8]
+	sub_86 -> prod_89
+	cat_90 [label="Fan Controls
+(16 products)" fillcolor="#4A90E2" fontcolor=white fontsize=14 fontweight=bold]
+	fam_91 [label="ENCONNECT
+(3 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_90 -> fam_91
+	sub_92 [label="Wi-fi Fan Regulators
+(3 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_91 -> sub_92
+	prod_93 [label="CB94602FM00
+Wi-fi Fan Regulator 5 Step - Mountain Gr..." fillcolor="#E8E8E8" fontsize=8]
+	sub_92 -> prod_93
+	prod_94 [label="CB94602FB00
+Wi-fi Fan Regulator 5 Step - Sparkle Bla..." fillcolor="#E8E8E8" fontsize=8]
+	sub_92 -> prod_94
+	prod_95 [label="CB94602FL00
+Wi-fi Fan Regulator 5 Step - Black Glass" fillcolor="#E8E8E8" fontsize=8]
+	sub_92 -> prod_95
+	fam_96 [label="ENCURVE
+(4 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_90 -> fam_96
+	sub_97 [label="Fan Regulators - 1 Module
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_96 -> sub_97
+	prod_98 [label="CB95101RW01
+Fan Regulator 4-Step 80W 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_97 -> prod_98
+	prod_99 [label="CB95101RG01
+Fan Regulator 4-Step 80W 1M - Magnesium ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_97 -> prod_99
+	sub_100 [label="Fan Regulators - 2 Module
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_96 -> sub_100
+	prod_101 [label="CB95102RW02
+Fan Regulator 5-Step 120W with ISI 2M - ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_100 -> prod_101
+	prod_102 [label="CB95102RG02
+Fan Regulator 5-Step 120W with ISI 2M - ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_100 -> prod_102
+	fam_103 [label="ENGLAZE
+(9 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_90 -> fam_103
+	sub_104 [label="Fan Regulators - 1 Module
+(3 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_103 -> sub_104
+	prod_105 [label="CB92101RW01
+Fan Regulator 4-Step 80W 1M - Snow White" fillcolor="#E8E8E8" fontsize=8]
+	sub_104 -> prod_105
+	prod_106 [label="CB92101RM01
+Fan Regulator 4-Step 80W 1M - Mountain G..." fillcolor="#E8E8E8" fontsize=8]
+	sub_104 -> prod_106
+	prod_107 [label="CB92101RB01
+Fan Regulator 4-Step 80W 1M - Sparkle Bl..." fillcolor="#E8E8E8" fontsize=8]
+	sub_104 -> prod_107
+	sub_108 [label="Fan Regulators - 2 Module
+(6 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_103 -> sub_108
+	prod_109 [label="CB92102RW02
+Fan Regulator 5-Step 120W with ISI 2M - ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_108 -> prod_109
+	prod_110 [label="CB92102RM02
+Fan Regulator 5-Step 120W with ISI 2M - ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_108 -> prod_110
+	prod_111 [label="CB92102RB02
+Fan Regulator 5-Step 120W with ISI 2M - ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_108 -> prod_111
+	prod_112 [label="CB92202RW02
+Fan Regulator 5-Step Flat Type 120W with..." fillcolor="#E8E8E8" fontsize=8]
+	sub_108 -> prod_112
+	prod_113 [label="CB92202RM02
+Fan Regulator 5-Step Flat Type 120W with..." fillcolor="#E8E8E8" fontsize=8]
+	sub_108 -> prod_113
+	more_114 [label="... and 1 more products" fillcolor="#E8E8E8" fontsize=8 style=dashed]
+	sub_108 -> more_114
+	cat_115 [label="Hospitality
+(26 products)" fillcolor="#4A90E2" fontcolor=white fontsize=14 fontweight=bold]
+	fam_116 [label="ENCURVE
+(8 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_115 -> fam_116
+	sub_117 [label="DND-MMR Units
+(4 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_116 -> sub_117
+	prod_118 [label="CB95502HW10
+DND-MMR Inside Room Unit 2M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_117 -> prod_118
+	prod_119 [label="CB95502HG10
+DND-MMR Inside Room Unit 2M - Magnesium ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_117 -> prod_119
+	prod_120 [label="CB95601HW10
+DND-MMR Outside Room Unit 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_117 -> prod_120
+	prod_121 [label="CB95601HG10
+DND-MMR Outside Room Unit 1M - Magnesium..." fillcolor="#E8E8E8" fontsize=8]
+	sub_117 -> prod_121
+	sub_122 [label="Key Tag Accessories
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_116 -> sub_122
+	prod_123 [label="CB95302HW00
+Spare key for Mech Key Tag - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_122 -> prod_123
+	prod_124 [label="CB95302HG00
+Spare key for Mech Key Tag - Magnesium G..." fillcolor="#E8E8E8" fontsize=8]
+	sub_122 -> prod_124
+	sub_125 [label="Mechanical Key Tag Switches
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_116 -> sub_125
+	prod_126 [label="CB95302HW32
+Mech Key Tag 32A 2M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_125 -> prod_126
+	prod_127 [label="CB95302HG32
+Mech Key Tag 32A 2M - Magnesium Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_125 -> prod_127
+	fam_128 [label="ENGLAZE
+(18 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_115 -> fam_128
+	sub_129 [label="DND-MMR Units
+(6 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_128 -> sub_129
+	prod_130 [label="CB92502HW10
+DND-MMR Inside Room Unit 2M - Snow White" fillcolor="#E8E8E8" fontsize=8]
+	sub_129 -> prod_130
+	prod_131 [label="CB92502HM10
+DND-MMR Inside Room Unit 2M - Mountain G..." fillcolor="#E8E8E8" fontsize=8]
+	sub_129 -> prod_131
+	prod_132 [label="CB92502HB10
+DND-MMR Inside Room Unit 2M - Sparkle Bl..." fillcolor="#E8E8E8" fontsize=8]
+	sub_129 -> prod_132
+	prod_133 [label="CB92602HW10
+DND-MMR Outside Room Unit 2M - Snow Whit..." fillcolor="#E8E8E8" fontsize=8]
+	sub_129 -> prod_133
+	prod_134 [label="CB92602HM10
+DND-MMR Outside Room Unit 2M - Mountain ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_129 -> prod_134
+	more_135 [label="... and 1 more products" fillcolor="#E8E8E8" fontsize=8 style=dashed]
+	sub_129 -> more_135
+	sub_136 [label="Key Tag Accessories
+(3 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_128 -> sub_136
+	prod_137 [label="CB92302HW00
+Spare Key for Mech Key Tag - Snow White" fillcolor="#E8E8E8" fontsize=8]
+	sub_136 -> prod_137
+	prod_138 [label="CB92302HM00
+Spare Key for Mech Key Tag - Mountain Gr..." fillcolor="#E8E8E8" fontsize=8]
+	sub_136 -> prod_138
+	prod_139 [label="CB92302HB00
+Spare Key for Mech Key Tag - Sparkle Bla..." fillcolor="#E8E8E8" fontsize=8]
+	sub_136 -> prod_139
+	sub_140 [label="Mechanical Key Tag Switches
+(9 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_128 -> sub_140
+	prod_141 [label="CB92202HW20
+Mech Key Tag Switch 20A 2M - Snow White" fillcolor="#E8E8E8" fontsize=8]
+	sub_140 -> prod_141
+	prod_142 [label="CB92202HM20
+Mech Key Tag Switch 20A 2M - Mountain Gr..." fillcolor="#E8E8E8" fontsize=8]
+	sub_140 -> prod_142
+	prod_143 [label="CB92202HB20
+Mech Key Tag Switch 20A 2M - Sparkle Bla..." fillcolor="#E8E8E8" fontsize=8]
+	sub_140 -> prod_143
+	prod_144 [label="CB92302HW32
+Mech Key Tag Switch 32A 2M - Snow White" fillcolor="#E8E8E8" fontsize=8]
+	sub_140 -> prod_144
+	prod_145 [label="CB92302HM32
+Mech Key Tag Switch 32A 2M - Mountain Gr..." fillcolor="#E8E8E8" fontsize=8]
+	sub_140 -> prod_145
+	more_146 [label="... and 4 more products" fillcolor="#E8E8E8" fontsize=8 style=dashed]
+	sub_140 -> more_146
+	cat_147 [label="Power Sockets
+(10 products)" fillcolor="#4A90E2" fontcolor=white fontsize=14 fontweight=bold]
+	fam_148 [label="ENCURVE
+(4 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_147 -> fam_148
+	sub_149 [label="Power Sockets - 2 Module
+(4 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_148 -> sub_149
+	prod_150 [label="CB95602CW06
+Socket 6A 3 Pin with ISI 2M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_149 -> prod_150
+	prod_151 [label="CB95602CG06
+Socket 6A 3 Pin with ISI 2M - Magnesium ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_149 -> prod_151
+	prod_152 [label="CB95302CW16
+Socket 6A/16A 3 Pin Combi with ISI 2M - ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_149 -> prod_152
+	prod_153 [label="CB95302CG16
+Socket 6A/16A 3 Pin Combi with ISI 2M - ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_149 -> prod_153
+	fam_154 [label="ENGLAZE
+(6 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_147 -> fam_154
+	sub_155 [label="Power Sockets - 2 Module
+(6 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_154 -> sub_155
+	prod_156 [label="CB92602CW06
+Socket 6A 3 Pin with ISI (Heavy Duty) 2M..." fillcolor="#E8E8E8" fontsize=8]
+	sub_155 -> prod_156
+	prod_157 [label="CB92602CM06
+Socket 6A 3 Pin with ISI (Heavy Duty) 2M..." fillcolor="#E8E8E8" fontsize=8]
+	sub_155 -> prod_157
+	prod_158 [label="CB92602CB06
+Socket 6A 3 Pin with ISI (Heavy Duty) 2M..." fillcolor="#E8E8E8" fontsize=8]
+	sub_155 -> prod_158
+	prod_159 [label="CB92302CW16
+Socket 6A/16A 3 Pin Combi with ISI 2M - ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_155 -> prod_159
+	prod_160 [label="CB92302CM16
+Socket 6A/16A 3 Pin Combi with ISI 2M - ..." fillcolor="#E8E8E8" fontsize=8]
+	sub_155 -> prod_160
+	more_161 [label="... and 1 more products" fillcolor="#E8E8E8" fontsize=8 style=dashed]
+	sub_155 -> more_161
+	cat_162 [label="Switches
+(32 products)" fillcolor="#4A90E2" fontcolor=white fontsize=14 fontweight=bold]
+	fam_163 [label="ENCURVE
+(24 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_162 -> fam_163
+	sub_164 [label="Bell Push - 1 Module
+(4 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_163 -> sub_164
+	prod_165 [label="CB95101BW06
+Bell Push 6A 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_164 -> prod_165
+	prod_166 [label="CB95101BG06
+Bell Push 6A 1M - Magnesium Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_164 -> prod_166
+	prod_167 [label="CB95301BW06
+Bell Push 6A 1M with Indicator 1M - Whit..." fillcolor="#E8E8E8" fontsize=8]
+	sub_164 -> prod_167
+	prod_168 [label="CB95301BG06
+Bell Push 6A 1M with Indicator 1M - Magn..." fillcolor="#E8E8E8" fontsize=8]
+	sub_164 -> prod_168
+	sub_169 [label="Bell Push - 2 Module
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_163 -> sub_169
+	prod_170 [label="CB95302BW06
+Bell Push 6A with Indicator 2M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_169 -> prod_170
+	prod_171 [label="CB95302BG06
+Bell Push 6A with Indicator 2M - Magnesi..." fillcolor="#E8E8E8" fontsize=8]
+	sub_169 -> prod_171
+	sub_172 [label="DP Switches - 2 Module
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_163 -> sub_172
+	prod_173 [label="CB95402SW32
+Switch 32A DP with Indicator 2M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_172 -> prod_173
+	prod_174 [label="CB95402SG32
+Switch 32A DP with Indicator 2M - Magnes..." fillcolor="#E8E8E8" fontsize=8]
+	sub_172 -> prod_174
+	sub_175 [label="Switches - 1 Module
+(16 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_163 -> sub_175
+	prod_176 [label="CB95101SW06
+Switch 6AX 1-way 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_175 -> prod_176
+	prod_177 [label="CB95101SG06
+Switch 6AX 1-way 1M - Magnesium Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_175 -> prod_177
+	prod_178 [label="CB95301SW06
+Switch 6AX 1-way with Indicator 1M - Whi..." fillcolor="#E8E8E8" fontsize=8]
+	sub_175 -> prod_178
+	prod_179 [label="CB95301SG06
+Switch 6AX 1-way with Indicator 1M - Mag..." fillcolor="#E8E8E8" fontsize=8]
+	sub_175 -> prod_179
+	prod_180 [label="CB95201SW06
+Switch 6AX 2-way 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_175 -> prod_180
+	more_181 [label="... and 11 more products" fillcolor="#E8E8E8" fontsize=8 style=dashed]
+	sub_175 -> more_181
+	fam_182 [label="ENTICE
+(8 products)" fillcolor="#50C878" fontcolor=white fontsize=12]
+	cat_162 -> fam_182
+	sub_183 [label="Bell Push - 1 Module
+(4 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_182 -> sub_183
+	prod_184 [label="CB91101BW10
+Bell Push 10AX 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_183 -> prod_184
+	prod_185 [label="CB91101BG10
+Bell Push 10AX 1M - Charcoal Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_183 -> prod_185
+	prod_186 [label="CB91301BW10
+Bell Push 10AX with Indicator 1M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_183 -> prod_186
+	prod_187 [label="CB91301BG10
+Bell Push 10AX with Indicator 1M - Charc..." fillcolor="#E8E8E8" fontsize=8]
+	sub_183 -> prod_187
+	sub_188 [label="Bell Push - 2 Module
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_182 -> sub_188
+	prod_189 [label="CB91302BW10
+Bell Push 10AX with Indicator 2M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_188 -> prod_189
+	prod_190 [label="CB91302BG10
+Bell Push 10AX with Indicator 2M - Charc..." fillcolor="#E8E8E8" fontsize=8]
+	sub_188 -> prod_190
+	sub_191 [label="Motor Starters - 2 Module
+(2 products)" fillcolor="#FFB347" fontcolor=black fontsize=10]
+	fam_182 -> sub_191
+	prod_192 [label="CB91102MW25
+Motor Starter 25A 2M - White" fillcolor="#E8E8E8" fontsize=8]
+	sub_191 -> prod_192
+	prod_193 [label="CB91102MG25
+Motor Starter 25A 2M - Charcoal Grey" fillcolor="#E8E8E8" fontsize=8]
+	sub_191 -> prod_193
+}

@@ -33,6 +33,7 @@ const AdminProducts = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [brandFilter, setBrandFilter] = useState('all');
+  const [productFamilyFilter, setProductFamilyFilter] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
   const [products, setProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -60,6 +61,17 @@ const AdminProducts = () => {
     fetchData();
   }, []);
 
+  // Extract unique product families from products
+  const productFamilies = useMemo(() => {
+    const families = new Set<string>();
+    products.forEach(product => {
+      if (product.series) {
+        families.add(product.series);
+      }
+    });
+    return Array.from(families).sort();
+  }, [products]);
+
   const filteredProducts = useMemo(() => {
     return products.filter(product => {
       const matchesSearch =
@@ -67,9 +79,10 @@ const AdminProducts = () => {
         product.sku.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory = categoryFilter === 'all' || product.category === categoryFilter;
       const matchesBrand = brandFilter === 'all' || product.brand === brandFilter;
-      return matchesSearch && matchesCategory && matchesBrand;
+      const matchesProductFamily = productFamilyFilter === 'all' || product.series === productFamilyFilter;
+      return matchesSearch && matchesCategory && matchesBrand && matchesProductFamily;
     });
-  }, [products, searchQuery, categoryFilter, brandFilter]);
+  }, [products, searchQuery, categoryFilter, brandFilter, productFamilyFilter]);
 
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
   const paginatedProducts = filteredProducts.slice(
@@ -132,6 +145,17 @@ const AdminProducts = () => {
                 ))}
               </SelectContent>
             </Select>
+            <Select value={productFamilyFilter} onValueChange={setProductFamilyFilter}>
+              <SelectTrigger className="w-full md:w-48">
+                <SelectValue placeholder="Product Family" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Product Families</SelectItem>
+                {productFamilies.map(family => (
+                  <SelectItem key={family} value={family}>{family}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
         </CardContent>
       </Card>
@@ -145,6 +169,7 @@ const AdminProducts = () => {
                 <th className="text-left p-4 text-sm font-medium text-muted-foreground">Product</th>
                 <th className="text-left p-4 text-sm font-medium text-muted-foreground">SKU</th>
                 <th className="text-left p-4 text-sm font-medium text-muted-foreground">Category</th>
+                <th className="text-left p-4 text-sm font-medium text-muted-foreground">Subcategory</th>
                 <th className="text-left p-4 text-sm font-medium text-muted-foreground">Brand</th>
                 <th className="text-left p-4 text-sm font-medium text-muted-foreground">Price</th>
                 <th className="text-left p-4 text-sm font-medium text-muted-foreground">Badge</th>
@@ -187,6 +212,7 @@ const AdminProducts = () => {
                     </button>
                   </td>
                   <td className="p-4 text-sm">{product.category}</td>
+                  <td className="p-4 text-sm">{product.subcategory || '-'}</td>
                   <td className="p-4 text-sm">{product.brand}</td>
                   <td className="p-4 text-sm font-medium">₹{product.listPrice.toLocaleString()}</td>
                   <td className="p-4">

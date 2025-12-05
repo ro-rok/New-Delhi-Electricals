@@ -184,7 +184,7 @@ const ProductSlugPage = () => {
 
       <main className="pt-16">
         {/* Hero Image Section */}
-        <section className="relative min-h-[85vh] flex items-center justify-center bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black overflow-hidden">
+        <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center justify-center bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black overflow-hidden">
           <AnimatePresence mode="wait">
             {productImages.length > 0 && !imageError ? (
               <motion.img
@@ -195,7 +195,7 @@ const ProductSlugPage = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-                className="max-w-5xl w-full h-auto object-contain px-6"
+                className="max-w-xl md:max-w-2xl w-full h-auto object-contain px-6"
                 onError={() => {
                   setImageError(true);
                 }}
@@ -208,7 +208,7 @@ const ProductSlugPage = () => {
                 transition={{ duration: 0.5 }}
                 className="text-center"
               >
-                <div className="text-[240px] md:text-[320px] font-extralight text-gray-200 dark:text-gray-800 leading-none">
+                <div className="text-[120px] md:text-[160px] font-extralight text-gray-200 dark:text-gray-800 leading-none">
                   {product.brand.charAt(0).toUpperCase()}
                 </div>
               </motion.div>
@@ -255,7 +255,7 @@ const ProductSlugPage = () => {
         </section>
 
         {/* Product Info Section */}
-        <section className="max-w-4xl mx-auto px-6 py-24 md:py-32">
+        <section className="max-w-3xl mx-auto px-6 py-20 md:py-24">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -468,25 +468,25 @@ const ProductSlugPage = () => {
                     >
                       <motion.div
                         whileHover={{ y: -8, scale: 1.02 }}
-                        className="bg-white dark:bg-black rounded-2xl p-6 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-2xl transition-all duration-300"
+                        className="bg-white dark:bg-black rounded-xl p-4 md:p-5 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-xl transition-all duration-300"
                       >
-                        <div className="aspect-square bg-gray-50 dark:bg-gray-900 rounded-xl flex items-center justify-center mb-5 overflow-hidden">
+                        <div className="aspect-square bg-gray-50 dark:bg-gray-900 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                           {p.images && p.images.length > 0 && p.images[0] ? (
                             <img 
                               src={p.images[0]} 
                               alt={p.name} 
-                              className="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-300" 
+                              className="w-full h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300" 
                             />
                           ) : (
-                            <span className="text-5xl font-extralight text-gray-300 dark:text-gray-700">
+                            <span className="text-4xl font-extralight text-gray-300 dark:text-gray-700">
                               {p.brand.charAt(0).toUpperCase()}
                             </span>
                           )}
                         </div>
-                        <h3 className="font-normal text-gray-900 dark:text-white mb-2 line-clamp-2 text-sm md:text-base">
+                        <h3 className="font-normal text-gray-900 dark:text-white mb-2 line-clamp-2 text-sm">
                           {p.name}
                         </h3>
-                        <p className="text-lg font-light text-gray-600 dark:text-gray-400">
+                        <p className="text-base font-light text-gray-600 dark:text-gray-400">
                           ₹{p.listPrice.toLocaleString('en-IN')}
                         </p>
                       </motion.div>

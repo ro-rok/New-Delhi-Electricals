@@ -32,6 +32,7 @@ function transformProduct(backendProduct: any): Product {
     name: backendProduct.name,
     brand: backendProduct.brand,
     category: backendProduct.category,
+    subcategory: backendProduct.subcategory || backendProduct.catalog_source?.subcategory,
     series: series,
     listPrice: typeof listPrice === 'number' ? listPrice : parseInt(String(listPrice), 10) || 0,
     currency: backendProduct.currency || 'INR',
@@ -59,11 +60,25 @@ function transformSpecs(specs: any): Record<string, string> {
 
 export async function getProducts(params?: {
   q?: string;
+  category?: string;
+  brand?: string;
+  series?: string;
+  minPrice?: number;
+  maxPrice?: number;
+  sortBy?: 'name' | 'price';
+  sortOrder?: 'asc' | 'desc';
   page?: number;
   pageSize?: number;
 }): Promise<ProductListResponse> {
   const searchParams = new URLSearchParams();
   if (params?.q) searchParams.append('q', params.q);
+  if (params?.category) searchParams.append('category', params.category);
+  if (params?.brand) searchParams.append('brand', params.brand);
+  if (params?.series) searchParams.append('series', params.series);
+  if (params?.minPrice !== undefined) searchParams.append('min_price', String(params.minPrice));
+  if (params?.maxPrice !== undefined) searchParams.append('max_price', String(params.maxPrice));
+  if (params?.sortBy) searchParams.append('sort_by', params.sortBy);
+  if (params?.sortOrder) searchParams.append('sort_order', params.sortOrder);
   if (params?.page) searchParams.append('page', String(params.page));
   if (params?.pageSize) searchParams.append('pageSize', String(params.pageSize));
 
@@ -137,21 +152,15 @@ export async function searchProducts(query: string): Promise<Product[]> {
 }
 
 export async function getProductsByCategory(category: string): Promise<Product[]> {
-  // Since backend doesn't have category filtering, we'll fetch all and filter
-  // In production, this should be a backend filter
-  const response = await getProducts({ pageSize: 1000 });
-  return response.items.filter(p => 
-    p.category.toLowerCase().includes(category.toLowerCase())
-  );
+  // Use backend filtering for better performance
+  const response = await getProducts({ category, pageSize: 1000 });
+  return response.items;
 }
 
 export async function getProductsByBrand(brand: string): Promise<Product[]> {
-  // Since backend doesn't have brand filtering, we'll fetch all and filter
-  // In production, this should be a backend filter
-  const response = await getProducts({ pageSize: 1000 });
-  return response.items.filter(p => 
-    p.brand.toLowerCase() === brand.toLowerCase()
-  );
+  // Use backend filtering for better performance
+  const response = await getProducts({ brand, pageSize: 1000 });
+  return response.items;
 }
 
 export async function getFeaturedProducts(brand?: string): Promise<Product[]> {
