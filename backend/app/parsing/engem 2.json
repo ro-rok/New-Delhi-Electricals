@@ -1,0 +1,2143 @@
+[
+  {
+    "sku": "CB93101TW11",
+    "name": "RJ 11 Socket with Shutter 1M - White",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "RJ 11 Socket with Shutter"
+    },
+    "variant": [
+      "CB93101TS11"
+    ],
+    "pricing": {
+      "mrp": 199,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj-11-socket-shutter-1m-white-engem",
+      "keywords": [
+        "RJ 11 Socket",
+        "Shutter",
+        "1M",
+        "White",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy RJ 11 Socket with Shutter 1M White online at New Delhi Electricals. Engem data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101TS11",
+    "name": "RJ 11 Socket with Shutter 1M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "Stone Grey",
+      "mw": 1,
+      "type_detail": "RJ 11 Socket with Shutter"
+    },
+    "variant": [
+      "CB93101TW11"
+    ],
+    "pricing": {
+      "mrp": 247,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj-11-socket-shutter-1m-stone-grey-engem",
+      "keywords": [
+        "RJ 11 Socket",
+        "Shutter",
+        "1M",
+        "Stone Grey",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy RJ 11 Socket with Shutter 1M Stone Grey online at New Delhi Electricals. Engem data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93301TW45",
+    "name": "RJ 45 Cat 6A Socket with Shutter 1M - White",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "RJ 45 Cat 6A Socket with Shutter"
+    },
+    "variant": [
+      "CB93301TS45"
+    ],
+    "pricing": {
+      "mrp": 760,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj-45-cat-6a-socket-shutter-1m-white-engem",
+      "keywords": [
+        "RJ 45",
+        "Cat 6A",
+        "Socket",
+        "Shutter",
+        "1M",
+        "White",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy RJ 45 Cat 6A Socket with Shutter 1M White online at New Delhi Electricals. Engem data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93301TS45",
+    "name": "RJ 45 Cat 6A Socket with Shutter 1M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "Stone Grey",
+      "mw": 1,
+      "type_detail": "RJ 45 Cat 6A Socket with Shutter"
+    },
+    "variant": [
+      "CB93301TW45"
+    ],
+    "pricing": {
+      "mrp": 950,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rj-45-cat-6a-socket-shutter-1m-stone-grey-engem",
+      "keywords": [
+        "RJ 45",
+        "Cat 6A",
+        "Socket",
+        "Shutter",
+        "1M",
+        "Stone Grey",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy RJ 45 Cat 6A Socket with Shutter 1M Stone Grey online at New Delhi Electricals. Engem data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101TW00",
+    "name": "TV Socket 1M - White",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "TV Socket"
+    },
+    "variant": [
+      "CB93101TS00"
+    ],
+    "pricing": {
+      "mrp": 194,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "tv-socket-1m-white-engem",
+      "keywords": [
+        "TV Socket",
+        "1M",
+        "White",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy TV Socket 1M White online at New Delhi Electricals. Engem data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101TS00",
+    "name": "TV Socket 1M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "Stone Grey",
+      "mw": 1,
+      "type_detail": "TV Socket"
+    },
+    "variant": [
+      "CB93101TW00"
+    ],
+    "pricing": {
+      "mrp": 242,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "tv-socket-1m-stone-grey-engem",
+      "keywords": [
+        "TV Socket",
+        "1M",
+        "Stone Grey",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy TV Socket 1M Stone Grey online at New Delhi Electricals. Engem data socket."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101AW00",
+    "name": "Cable Outlet 1M - White",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "Cable Outlet"
+    },
+    "variant": [
+      "CB93101AS00"
+    ],
+    "pricing": {
+      "mrp": 156,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cable-outlet-1m-white-engem",
+      "keywords": [
+        "Cable Outlet",
+        "1M",
+        "White",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy Cable Outlet 1M White online at New Delhi Electricals. Engem accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101AS00",
+    "name": "Cable Outlet 1M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "Stone Grey",
+      "mw": 1,
+      "type_detail": "Cable Outlet"
+    },
+    "variant": [
+      "CB93101AW00"
+    ],
+    "pricing": {
+      "mrp": 196,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cable-outlet-1m-stone-grey-engem",
+      "keywords": [
+        "Cable Outlet",
+        "1M",
+        "Stone Grey",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy Cable Outlet 1M Stone Grey online at New Delhi Electricals. Engem accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93201AW00",
+    "name": "Blank off Unit 1M - White",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "Blank off Unit"
+    },
+    "variant": [
+      "CB93201AS00"
+    ],
+    "pricing": {
+      "mrp": 41,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "blank-off-unit-1m-white-engem",
+      "keywords": [
+        "Blank off Unit",
+        "1M",
+        "White",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy Blank off Unit 1M White online at New Delhi Electricals. Engem accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93201AS00",
+    "name": "Blank off Unit 1M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "Stone Grey",
+      "mw": 1,
+      "type_detail": "Blank off Unit"
+    },
+    "variant": [
+      "CB93201AW00"
+    ],
+    "pricing": {
+      "mrp": 51,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "blank-off-unit-1m-stone-grey-engem",
+      "keywords": [
+        "Blank off Unit",
+        "1M",
+        "Stone Grey",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy Blank off Unit 1M Stone Grey online at New Delhi Electricals. Engem accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93102LW00",
+    "name": "LED Foot Light 2M - White",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 2 Module",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "LED Foot Light"
+    },
+    "variant": [
+      "CB93102LS00"
+    ],
+    "pricing": {
+      "mrp": 933,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-foot-light-2m-white-engem",
+      "keywords": [
+        "LED Foot Light",
+        "2M",
+        "White",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy LED Foot Light 2M White online at New Delhi Electricals. Engem accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93102LS00",
+    "name": "LED Foot Light 2M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 2 Module",
+    "specs": {
+      "color": "Stone Grey",
+      "mw": 2,
+      "type_detail": "LED Foot Light"
+    },
+    "variant": [
+      "CB93102LW00"
+    ],
+    "pricing": {
+      "mrp": 1166,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-foot-light-2m-stone-grey-engem",
+      "keywords": [
+        "LED Foot Light",
+        "2M",
+        "Stone Grey",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy LED Foot Light 2M Stone Grey online at New Delhi Electricals. Engem accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101AW02",
+    "name": "USB Charger 2A 1M - White",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "USB Charger 2A"
+    },
+    "variant": [
+      "CB93101AS02"
+    ],
+    "pricing": {
+      "mrp": 1293,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-2a-1m-white-engem",
+      "keywords": [
+        "USB Charger",
+        "2A",
+        "1M",
+        "White",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy USB Charger 2A 1M White online at New Delhi Electricals. Engem accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101AS02",
+    "name": "USB Charger 2A 1M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "Stone Grey",
+      "mw": 1,
+      "type_detail": "USB Charger 2A"
+    },
+    "variant": [
+      "CB93101AW02"
+    ],
+    "pricing": {
+      "mrp": 1552,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-2a-1m-stone-grey-engem",
+      "keywords": [
+        "USB Charger",
+        "2A",
+        "1M",
+        "Stone Grey",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy USB Charger 2A 1M Stone Grey online at New Delhi Electricals. Engem accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101AW18",
+    "name": "USB Charger 18W Type A & C 1M - White",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "USB Charger 18W Type A & C"
+    },
+    "variant": [
+      "CB93101AS18"
+    ],
+    "pricing": {
+      "mrp": 2400,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-18w-type-a-c-1m-white-engem",
+      "keywords": [
+        "USB Charger",
+        "18W",
+        "Type A & C",
+        "1M",
+        "White",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy USB Charger 18W Type A & C 1M White online at New Delhi Electricals. Engem accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101AS18",
+    "name": "USB Charger 18W Type A & C 1M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "Stone Grey",
+      "mw": 1,
+      "type_detail": "USB Charger 18W Type A & C"
+    },
+    "variant": [
+      "CB93101AW18"
+    ],
+    "pricing": {
+      "mrp": 2700,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-18w-type-a-c-1m-stone-grey-engem",
+      "keywords": [
+        "USB Charger",
+        "18W",
+        "Type A & C",
+        "1M",
+        "Stone Grey",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy USB Charger 18W Type A & C 1M Stone Grey online at New Delhi Electricals. Engem accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93401AW00",
+    "name": "LED Phase Indicator 1M-Full Glow - White",
+    "product_family": "ENGEM",
+    "category": "Data Sockets & Accessories",
+    "subcategory": "Data Sockets & Accessories - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "LED Phase Indicator 1M-Full Glow"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 235,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-phase-indicator-1m-full-glow-white-engem",
+      "keywords": [
+        "LED Phase Indicator",
+        "1M",
+        "Full Glow",
+        "White",
+        "Data Sockets & Accessories",
+        "ENGEM"
+      ],
+      "meta_description": "Buy LED Phase Indicator 1M Full Glow White online at New Delhi Electricals. Engem accessory."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101KW06",
+    "name": "6A SP Mini MCB 3kA 1M - White",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 1 Module",
+    "specs": {
+      "ampere": 6,
+      "mw": 1,
+      "poles": 1,
+      "type_detail": "SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93101KS06"
+    ],
+    "pricing": {
+      "mrp": 465,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "6a-sp-mini-mcb-3ka-1m-white-engem",
+      "keywords": [
+        "Mini MCB",
+        "6A",
+        "SP",
+        "3kA",
+        "1M",
+        "White",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 6A SP Mini MCB 3kA 1M White online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101KS06",
+    "name": "6A SP Mini MCB 3kA 1M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 1 Module",
+    "specs": {
+      "ampere": 6,
+      "mw": 1,
+      "poles": 1,
+      "type_detail": "SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93101KW06"
+    ],
+    "pricing": {
+      "mrp": 558,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "6a-sp-mini-mcb-3ka-1m-stone-grey-engem",
+      "keywords": [
+        "Mini MCB",
+        "6A",
+        "SP",
+        "3kA",
+        "1M",
+        "Stone Grey",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 6A SP Mini MCB 3kA 1M Stone Grey online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101KW10",
+    "name": "10A SP Mini MCB 3kA 1M - White",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "mw": 1,
+      "poles": 1,
+      "type_detail": "SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93101KS10"
+    ],
+    "pricing": {
+      "mrp": 465,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "10a-sp-mini-mcb-3ka-1m-white-engem",
+      "keywords": [
+        "Mini MCB",
+        "10A",
+        "SP",
+        "3kA",
+        "1M",
+        "White",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 10A SP Mini MCB 3kA 1M White online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101KS10",
+    "name": "10A SP Mini MCB 3kA 1M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "mw": 1,
+      "poles": 1,
+      "type_detail": "SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93101KW10"
+    ],
+    "pricing": {
+      "mrp": 558,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "10a-sp-mini-mcb-3ka-1m-stone-grey-engem",
+      "keywords": [
+        "Mini MCB",
+        "10A",
+        "SP",
+        "3kA",
+        "1M",
+        "Stone Grey",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 10A SP Mini MCB 3kA 1M Stone Grey online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101KW16",
+    "name": "16A SP Mini MCB 3kA 1M - White",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "mw": 1,
+      "poles": 1,
+      "type_detail": "SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93101KS16"
+    ],
+    "pricing": {
+      "mrp": 465,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "16a-sp-mini-mcb-3ka-1m-white-engem",
+      "keywords": [
+        "Mini MCB",
+        "16A",
+        "SP",
+        "3kA",
+        "1M",
+        "White",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 16A SP Mini MCB 3kA 1M White online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101KS16",
+    "name": "16A SP Mini MCB 3kA 1M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "mw": 1,
+      "poles": 1,
+      "type_detail": "SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93101KW16"
+    ],
+    "pricing": {
+      "mrp": 558,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "16a-sp-mini-mcb-3ka-1m-stone-grey-engem",
+      "keywords": [
+        "Mini MCB",
+        "16A",
+        "SP",
+        "3kA",
+        "1M",
+        "Stone Grey",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 16A SP Mini MCB 3kA 1M Stone Grey online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101KW20",
+    "name": "20A SP Mini MCB 3kA 1M - White",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 1 Module",
+    "specs": {
+      "ampere": 20,
+      "mw": 1,
+      "poles": 1,
+      "type_detail": "SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93101KS20"
+    ],
+    "pricing": {
+      "mrp": 465,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "20a-sp-mini-mcb-3ka-1m-white-engem",
+      "keywords": [
+        "Mini MCB",
+        "20A",
+        "SP",
+        "3kA",
+        "1M",
+        "White",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 20A SP Mini MCB 3kA 1M White online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101KS20",
+    "name": "20A SP Mini MCB 3kA 1M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 1 Module",
+    "specs": {
+      "ampere": 20,
+      "mw": 1,
+      "poles": 1,
+      "type_detail": "SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93101KW20"
+    ],
+    "pricing": {
+      "mrp": 558,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "20a-sp-mini-mcb-3ka-1m-stone-grey-engem",
+      "keywords": [
+        "Mini MCB",
+        "20A",
+        "SP",
+        "3kA",
+        "1M",
+        "Stone Grey",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 20A SP Mini MCB 3kA 1M Stone Grey online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101KW25",
+    "name": "25A SP Mini MCB 3kA 1M - White",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 1 Module",
+    "specs": {
+      "ampere": 25,
+      "mw": 1,
+      "poles": 1,
+      "type_detail": "SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93101KS25"
+    ],
+    "pricing": {
+      "mrp": 465,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "25a-sp-mini-mcb-3ka-1m-white-engem",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "SP",
+        "3kA",
+        "1M",
+        "White",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 25A SP Mini MCB 3kA 1M White online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101KS25",
+    "name": "25A SP Mini MCB 3kA 1M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 1 Module",
+    "specs": {
+      "ampere": 25,
+      "mw": 1,
+      "poles": 1,
+      "type_detail": "SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93101KW25"
+    ],
+    "pricing": {
+      "mrp": 558,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "25a-sp-mini-mcb-3ka-1m-stone-grey-engem",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "SP",
+        "3kA",
+        "1M",
+        "Stone Grey",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 25A SP Mini MCB 3kA 1M Stone Grey online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101KW32",
+    "name": "32A SP Mini MCB 3kA 1M - White",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 1 Module",
+    "specs": {
+      "ampere": 32,
+      "mw": 1,
+      "poles": 1,
+      "type_detail": "SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93101KS32"
+    ],
+    "pricing": {
+      "mrp": 465,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "32a-sp-mini-mcb-3ka-1m-white-engem",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "SP",
+        "3kA",
+        "1M",
+        "White",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 32A SP Mini MCB 3kA 1M White online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93101KS32",
+    "name": "32A SP Mini MCB 3kA 1M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 1 Module",
+    "specs": {
+      "ampere": 32,
+      "mw": 1,
+      "poles": 1,
+      "type_detail": "SP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93101KW32"
+    ],
+    "pricing": {
+      "mrp": 558,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "32a-sp-mini-mcb-3ka-1m-stone-grey-engem",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "SP",
+        "3kA",
+        "1M",
+        "Stone Grey",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 32A SP Mini MCB 3kA 1M Stone Grey online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93202KW25",
+    "name": "25A DP Mini MCB 3kA 2M - White",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 2 Module",
+    "specs": {
+      "ampere": 25,
+      "mw": 2,
+      "poles": 2,
+      "type_detail": "DP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93202KS25"
+    ],
+    "pricing": {
+      "mrp": 1038,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "25a-dp-mini-mcb-3ka-2m-white-engem",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "DP",
+        "3kA",
+        "2M",
+        "White",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 25A DP Mini MCB 3kA 2M White online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93202KS25",
+    "name": "25A DP Mini MCB 3kA 2M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 2 Module",
+    "specs": {
+      "ampere": 25,
+      "mw": 2,
+      "poles": 2,
+      "type_detail": "DP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93202KW25"
+    ],
+    "pricing": {
+      "mrp": 1246,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "25a-dp-mini-mcb-3ka-2m-stone-grey-engem",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "DP",
+        "3kA",
+        "2M",
+        "Stone Grey",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 25A DP Mini MCB 3kA 2M Stone Grey online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93202KW32",
+    "name": "32A DP Mini MCB 3kA 2M - White",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 2 Module",
+    "specs": {
+      "ampere": 32,
+      "mw": 2,
+      "poles": 2,
+      "type_detail": "DP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93202KS32"
+    ],
+    "pricing": {
+      "mrp": 1038,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "32a-dp-mini-mcb-3ka-2m-white-engem",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "DP",
+        "3kA",
+        "2M",
+        "White",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 32A DP Mini MCB 3kA 2M White online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93202KS32",
+    "name": "32A DP Mini MCB 3kA 2M - Stone Grey",
+    "product_family": "ENGEM",
+    "category": "Circuit Protection",
+    "subcategory": "Mini MCBs - 2 Module",
+    "specs": {
+      "ampere": 32,
+      "mw": 2,
+      "poles": 2,
+      "type_detail": "DP Mini MCB 3kA"
+    },
+    "variant": [
+      "CB93202KW32"
+    ],
+    "pricing": {
+      "mrp": 1246,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "32a-dp-mini-mcb-3ka-2m-stone-grey-engem",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "DP",
+        "3kA",
+        "2M",
+        "Stone Grey",
+        "Circuit Protection",
+        "ENGEM"
+      ],
+      "meta_description": "Buy 32A DP Mini MCB 3kA 2M Stone Grey online at New Delhi Electricals. Engem mini MCB."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93102WM00",
+    "name": "GI Metal Box - 1 & 2 Module",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": "1-2",
+      "dimensions_mm": "72 x 75 x 46",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 79,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-1-2-module-engem",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "1 Module",
+        "2 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy GI Metal Box 1 & 2 Module (72 x 75 x 46 mm) online at New Delhi Electricals. Engem flush mounting box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93103WM00",
+    "name": "GI Metal Box - 3 Module",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 3,
+      "dimensions_mm": "98 x 75 x 46",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 117,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-3-module-engem",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "3 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy GI Metal Box 3 Module (98 x 75 x 46 mm) online at New Delhi Electricals. Engem flush mounting box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93104WM00",
+    "name": "GI Metal Box - 4 Module",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 4,
+      "dimensions_mm": "133 x 75 x 53",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 142,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-4-module-engem",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "4 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy GI Metal Box 4 Module (133 x 75 x 53 mm) online at New Delhi Electricals. Engem flush mounting box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93106WM00",
+    "name": "GI Metal Box - 6 Module",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 6,
+      "dimensions_mm": "204 x 75 x 53",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 204,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-6-module-engem",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "6 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy GI Metal Box 6 Module (204 x 75 x 53 mm) online at New Delhi Electricals. Engem flush mounting box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93108WM00",
+    "name": "GI Metal Box - 8 Module Horizontal",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 8,
+      "orientation": "Horizontal",
+      "dimensions_mm": "230 x 78 x 53",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 261,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-8-module-horizontal-engem",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "8 Module",
+        "Horizontal",
+        "ENGEM"
+      ],
+      "meta_description": "Buy GI Metal Box 8 Module Horizontal (230 x 78 x 53 mm) online at New Delhi Electricals. Engem flush mounting box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93208WM00",
+    "name": "GI Metal Box - 8 Module Square",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 8,
+      "orientation": "Square",
+      "dimensions_mm": "131 x 136 x 58",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 261,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-8-module-square-engem",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "8 Module",
+        "Square",
+        "ENGEM"
+      ],
+      "meta_description": "Buy GI Metal Box 8 Module Square (131 x 136 x 58 mm) online at New Delhi Electricals. Engem flush mounting box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93112WM00",
+    "name": "GI Metal Box - 12 Module",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 12,
+      "dimensions_mm": "204 x 135 x 58",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 348,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-12-module-engem",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "12 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy GI Metal Box 12 Module (204 x 135 x 58 mm) online at New Delhi Electricals. Engem flush mounting box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93116WM00",
+    "name": "GI Metal Box - 16 Module",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 16,
+      "dimensions_mm": "231 x 142 x 58",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 426,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-16-module-engem",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "16 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy GI Metal Box 16 Module (231 x 142 x 58 mm) online at New Delhi Electricals. Engem flush mounting box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB93118WM00",
+    "name": "GI Metal Box - 18 Module",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "GI Metal Mounting Boxes",
+    "specs": {
+      "mw": 18,
+      "dimensions_mm": "204 x 202 x 58",
+      "material": "GI Metal",
+      "mounting_type": "Flush"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 484,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "gi-metal-box-18-module-engem",
+      "keywords": [
+        "GI Metal Box",
+        "Mounting Box",
+        "18 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy GI Metal Box 18 Module (204 x 202 x 58 mm) online at New Delhi Electricals. Engem flush mounting box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91102WP00",
+    "name": "Surface Mounting Box - 1/2M",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "Plastic Surface Mounting Boxes",
+    "specs": {
+      "mw": "0.5",
+      "dimensions_mm": "98 x 90 x 50",
+      "material": "Plastic",
+      "mounting_type": "Surface"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 95,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "surface-mounting-box-half-module-engem",
+      "keywords": [
+        "Surface Mounting Box",
+        "Plastic Box",
+        "0.5 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy Surface Mounting Box 1/2 Module (98 x 90 x 50 mm) online at New Delhi Electricals. Engem plastic surface box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91103WP00",
+    "name": "Surface Mounting Box - 3M",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "Plastic Surface Mounting Boxes",
+    "specs": {
+      "mw": 3,
+      "dimensions_mm": "126 x 90 x 50",
+      "material": "Plastic",
+      "mounting_type": "Surface"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 125,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "surface-mounting-box-3m-engem",
+      "keywords": [
+        "Surface Mounting Box",
+        "Plastic Box",
+        "3 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy Surface Mounting Box 3M (126 x 90 x 50 mm) online at New Delhi Electricals. Engem plastic surface box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91104WP00",
+    "name": "Surface Mounting Box - 4M",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "Plastic Surface Mounting Boxes",
+    "specs": {
+      "mw": 4,
+      "dimensions_mm": "158 x 90 x 50",
+      "material": "Plastic",
+      "mounting_type": "Surface"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 149,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "surface-mounting-box-4m-engem",
+      "keywords": [
+        "Surface Mounting Box",
+        "Plastic Box",
+        "4 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy Surface Mounting Box 4M (158 x 90 x 50 mm) online at New Delhi Electricals. Engem plastic surface box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91106WP00",
+    "name": "Surface Mounting Box - 6M",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "Plastic Surface Mounting Boxes",
+    "specs": {
+      "mw": 6,
+      "dimensions_mm": "229 x 90 x 50",
+      "material": "Plastic",
+      "mounting_type": "Surface"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 195,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "surface-mounting-box-6m-engem",
+      "keywords": [
+        "Surface Mounting Box",
+        "Plastic Box",
+        "6 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy Surface Mounting Box 6M (229 x 90 x 50 mm) online at New Delhi Electricals. Engem plastic surface box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91108WP00",
+    "name": "Surface Mounting Box - 8M Horizontal",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "Plastic Surface Mounting Boxes",
+    "specs": {
+      "mw": 8,
+      "orientation": "Horizontal",
+      "dimensions_mm": "263 x 90 x 50",
+      "material": "Plastic",
+      "mounting_type": "Surface"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 245,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "surface-mounting-box-8m-horizontal-engem",
+      "keywords": [
+        "Surface Mounting Box",
+        "Plastic Box",
+        "8 Module",
+        "Horizontal",
+        "ENGEM"
+      ],
+      "meta_description": "Buy Surface Mounting Box 8M Horizontal (263 x 90 x 50 mm) online at New Delhi Electricals. Engem plastic surface box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91208WP00",
+    "name": "Surface Mounting Box - 8M Square",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "Plastic Surface Mounting Boxes",
+    "specs": {
+      "mw": 8,
+      "orientation": "Square",
+      "dimensions_mm": "158 x 157 x 50",
+      "material": "Plastic",
+      "mounting_type": "Surface"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 245,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "7"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "surface-mounting-box-8m-square-engem",
+      "keywords": [
+        "Surface Mounting Box",
+        "Plastic Box",
+        "8 Module",
+        "Square",
+        "ENGEM"
+      ],
+      "meta_description": "Buy Surface Mounting Box 8M Square (158 x 157 x 50 mm) online at New Delhi Electricals. Engem plastic surface box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91112WP00",
+    "name": "Surface Mounting Box - 12M",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "Plastic Surface Mounting Boxes",
+    "specs": {
+      "mw": 12,
+      "dimensions_mm": "229 x 157 x 50",
+      "material": "Plastic",
+      "mounting_type": "Surface"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 325,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "surface-mounting-box-12m-engem",
+      "keywords": [
+        "Surface Mounting Box",
+        "Plastic Box",
+        "12 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy Surface Mounting Box 12M (229 x 157 x 50 mm) online at New Delhi Electricals. Engem plastic surface box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91116WP00",
+    "name": "Surface Mounting Box - 16M",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "Plastic Surface Mounting Boxes",
+    "specs": {
+      "mw": 16,
+      "dimensions_mm": "249 x 157 x 50",
+      "material": "Plastic",
+      "mounting_type": "Surface"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 345,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "surface-mounting-box-16m-engem",
+      "keywords": [
+        "Surface Mounting Box",
+        "Plastic Box",
+        "16 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy Surface Mounting Box 16M (249 x 157 x 50 mm) online at New Delhi Electricals. Engem plastic surface box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  },
+  {
+    "sku": "CB91118WP00",
+    "name": "Surface Mounting Box - 18M",
+    "product_family": "ENGEM",
+    "category": "Boxes",
+    "subcategory": "Plastic Surface Mounting Boxes",
+    "specs": {
+      "mw": 18,
+      "dimensions_mm": "229 x 226 x 50",
+      "material": "Plastic",
+      "mounting_type": "Surface"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 375,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "surface-mounting-box-18m-engem",
+      "keywords": [
+        "Surface Mounting Box",
+        "Plastic Box",
+        "18 Module",
+        "ENGEM"
+      ],
+      "meta_description": "Buy Surface Mounting Box 18M (229 x 226 x 50 mm) online at New Delhi Electricals. Engem plastic surface box."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Lauritz Knudsen"
+  }
+]
