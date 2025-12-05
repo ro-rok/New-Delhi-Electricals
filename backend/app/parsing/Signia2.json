@@ -1841,6 +1841,46 @@
     "brand": "Havells"
   },
   {
+    "sku": "ACWKRWW452",
+    "name": "Computer Jack RJ45 Cat 6A 1M - White",
+    "product_family": "Signia",
+    "category": "Data Sockets",
+    "subcategory": "LAN Sockets - 1 Module",
+    "specs": {
+      "type_detail": "RJ45 Cat 6A",
+      "color": "White",
+      "mw": 1
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1531,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "computer-jack-rj45-cat6a-1m-white",
+      "keywords": [
+        "Computer Jack",
+        "RJ45",
+        "Cat 6A",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Computer Jack RJ45 Cat 6A 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
     "sku": "ACWKTXW001",
     "name": "TV Socket 1M - White",
     "product_family": "Signia",
@@ -2235,6 +2275,500 @@
         "Signia"
       ],
       "meta_description": "Buy Electronic Chime 2M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWGGXW001",
+    "name": "USB Data Socket 1M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Cable Outlet - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "USB Data Socket"
+    },
+    "variant": [
+      "ACWGGXG001"
+    ],
+    "pricing": {
+      "mrp": 1705,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-data-socket-1m-white",
+      "keywords": [
+        "USB Data Socket",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy USB Data Socket 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWGGXG001",
+    "name": "USB Data Socket 1M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Cable Outlet - 1 Module",
+    "specs": {
+      "color": "Grey",
+      "mw": 1,
+      "type_detail": "USB Data Socket"
+    },
+    "variant": [
+      "ACWGGXW001"
+    ],
+    "pricing": {
+      "mrp": 2683,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-data-socket-1m-grey",
+      "keywords": [
+        "USB Data Socket",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy USB Data Socket 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKGXW002",
+    "name": "USB Charging Socket Up-to 2.1A 1M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "USB Chargers - 1 Module",
+    "specs": {
+      "usb_type": "USB-A",
+      "output_current_a": 2.1,
+      "color": "White",
+      "mw": 1,
+      "type_detail": "USB Charging Socket Up-to 2.1A"
+    },
+    "variant": [
+      "ACWKGXG002"
+    ],
+    "pricing": {
+      "mrp": 1020,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charging-socket-2-1a-1m-white",
+      "keywords": [
+        "USB Charging Socket",
+        "2.1A",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy USB Charging Socket Up-to 2.1A 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKGXG002",
+    "name": "USB Charging Socket Up-to 2.1A 1M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "USB Chargers - 1 Module",
+    "specs": {
+      "usb_type": "USB-A",
+      "output_current_a": 2.1,
+      "color": "Grey",
+      "mw": 1,
+      "type_detail": "USB Charging Socket Up-to 2.1A"
+    },
+    "variant": [
+      "ACWKGXW002"
+    ],
+    "pricing": {
+      "mrp": 1284,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charging-socket-2-1a-1m-grey",
+      "keywords": [
+        "USB Charging Socket",
+        "2.1A",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy USB Charging Socket Up-to 2.1A 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKRXW002",
+    "name": "USB Type C Charger 2.1A 1M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "USB Chargers - 1 Module",
+    "specs": {
+      "usb_type": "USB-C",
+      "output_current_a": 2.1,
+      "color": "White",
+      "mw": 1,
+      "type_detail": "USB Type C Charger 2.1A"
+    },
+    "variant": [
+      "ACWKRXG002"
+    ],
+    "pricing": {
+      "mrp": 1164,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-type-c-charger-2-1a-1m-white",
+      "keywords": [
+        "USB Charger",
+        "USB Type C",
+        "2.1A",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy USB Type C Charger 2.1A 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKRXG002",
+    "name": "USB Type C Charger 2.1A 1M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "USB Chargers - 1 Module",
+    "specs": {
+      "usb_type": "USB-C",
+      "output_current_a": 2.1,
+      "color": "Grey",
+      "mw": 1,
+      "type_detail": "USB Type C Charger 2.1A"
+    },
+    "variant": [
+      "ACWKRXW002"
+    ],
+    "pricing": {
+      "mrp": 1446,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-type-c-charger-2-1a-1m-grey",
+      "keywords": [
+        "USB Charger",
+        "USB Type C",
+        "2.1A",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy USB Type C Charger 2.1A 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKXXW061",
+    "name": "HDMI Data Socket 1M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Cable Outlet - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "HDMI Data Socket"
+    },
+    "variant": [
+      "ACWKXXG061"
+    ],
+    "pricing": {
+      "mrp": 1705,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "hdmi-data-socket-1m-white",
+      "keywords": [
+        "HDMI Data Socket",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy HDMI Data Socket 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKXXG061",
+    "name": "HDMI Data Socket 1M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Cable Outlet - 1 Module",
+    "specs": {
+      "color": "Grey",
+      "mw": 1,
+      "type_detail": "HDMI Data Socket"
+    },
+    "variant": [
+      "ACWKXXW061"
+    ],
+    "pricing": {
+      "mrp": 2683,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "hdmi-data-socket-1m-grey",
+      "keywords": [
+        "HDMI Data Socket",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy HDMI Data Socket 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKXXW062",
+    "name": "VGA Data Socket 1M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Cable Outlet - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "VGA Data Socket"
+    },
+    "variant": [
+      "ACWKXXG062"
+    ],
+    "pricing": {
+      "mrp": 1705,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "vga-data-socket-1m-white",
+      "keywords": [
+        "VGA Data Socket",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy VGA Data Socket 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKXXG062",
+    "name": "VGA Data Socket 1M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Cable Outlet - 1 Module",
+    "specs": {
+      "color": "Grey",
+      "mw": 1,
+      "type_detail": "VGA Data Socket"
+    },
+    "variant": [
+      "ACWKXXW062"
+    ],
+    "pricing": {
+      "mrp": 2683,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "vga-data-socket-1m-grey",
+      "keywords": [
+        "VGA Data Socket",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy VGA Data Socket 1M Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKPXW001",
+    "name": "RCA Socket 1M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Cable Outlet - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "RCA Socket"
+    },
+    "variant": [
+      "ACWKPXG001"
+    ],
+    "pricing": {
+      "mrp": 1705,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rca-socket-1m-white",
+      "keywords": [
+        "RCA Socket",
+        "1M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy RCA Socket 1M White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWKPXG001",
+    "name": "RCA Socket 1M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Cable Outlet - 1 Module",
+    "specs": {
+      "color": "Grey",
+      "mw": 1,
+      "type_detail": "RCA Socket"
+    },
+    "variant": [
+      "ACWKPXW001"
+    ],
+    "pricing": {
+      "mrp": 2683,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rca-socket-1m-grey",
+      "keywords": [
+        "RCA Socket",
+        "1M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy RCA Socket 1M Grey from the Signia range at New Delhi Electricals."
     },
     "status": {
       "is_active": true,

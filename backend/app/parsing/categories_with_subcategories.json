@@ -6,7 +6,7 @@
     "description": "Accessories products",
     "icon": "Package",
     "image": "/category-images/accessories.jpg",
-    "productCount": 64,
+    "productCount": 73,
     "subcategories": [
       {
         "id": "blank-off-unit---1-module",
@@ -24,7 +24,7 @@
         "id": "cable-outlet---1-module",
         "name": "Cable Outlet - 1 Module",
         "slug": "cable-outlet---1-module",
-        "productCount": 7
+        "productCount": 9
       },
       {
         "id": "door-bells---2-module",
@@ -36,13 +36,13 @@
         "id": "led-foot-light---2-module",
         "name": "LED Foot Light - 2 Module",
         "slug": "led-foot-light---2-module",
-        "productCount": 7
+        "productCount": 9
       },
       {
         "id": "led-phase-indicator---1-module",
         "name": "LED Phase Indicator - 1 Module",
         "slug": "led-phase-indicator---1-module",
-        "productCount": 4
+        "productCount": 5
       },
       {
         "id": "remotes",
@@ -54,7 +54,7 @@
         "id": "usb-chargers---1-module",
         "name": "USB Chargers - 1 Module",
         "slug": "usb-chargers---1-module",
-        "productCount": 19
+        "productCount": 23
       },
       {
         "id": "wi-fi-accessories",
@@ -71,12 +71,18 @@
     "description": "Boxes products",
     "icon": "Package",
     "image": "/category-images/boxes.jpg",
-    "productCount": 9,
+    "productCount": 27,
     "subcategories": [
       {
         "id": "gi-metal-mounting-boxes",
         "name": "GI Metal Mounting Boxes",
         "slug": "gi-metal-mounting-boxes",
+        "productCount": 18
+      },
+      {
+        "id": "mounting-boxes---plastic-surface",
+        "name": "Mounting Boxes - Plastic Surface",
+        "slug": "mounting-boxes---plastic-surface",
         "productCount": 9
       }
     ]
@@ -88,7 +94,7 @@
     "description": "Circuit Protection products",
     "icon": "Package",
     "image": "/category-images/circuit-protection.jpg",
-    "productCount": 188,
+    "productCount": 132,
     "subcategories": [
       {
         "id": "automatic-changeover-with-current-limiter-accl",
@@ -101,18 +107,6 @@
         "name": "Isolators",
         "slug": "isolators",
         "productCount": 9
-      },
-      {
-        "id": "mini-mcbs-3ka",
-        "name": "Mini MCBs 3kA",
-        "slug": "mini-mcbs-3ka",
-        "productCount": 16
-      },
-      {
-        "id": "mini-mcbs-with-led-indicator",
-        "name": "Mini MCBs with LED Indicator",
-        "slug": "mini-mcbs-with-led-indicator",
-        "productCount": 40
       },
       {
         "id": "miniature-circuit-breakers-mcbs",
@@ -153,25 +147,25 @@
     "description": "Data Sockets products",
     "icon": "Package",
     "image": "/category-images/data-sockets.jpg",
-    "productCount": 21,
+    "productCount": 29,
     "subcategories": [
       {
         "id": "lan-sockets---1-module",
         "name": "LAN Sockets - 1 Module",
         "slug": "lan-sockets---1-module",
-        "productCount": 7
+        "productCount": 11
       },
       {
         "id": "tv-sockets---1-module",
         "name": "TV Sockets - 1 Module",
         "slug": "tv-sockets---1-module",
-        "productCount": 7
+        "productCount": 9
       },
       {
         "id": "telephone-sockets---1-module",
         "name": "Telephone Sockets - 1 Module",
         "slug": "telephone-sockets---1-module",
-        "productCount": 7
+        "productCount": 9
       }
     ]
   },
@@ -182,13 +176,13 @@
     "description": "Dimmers products",
     "icon": "Package",
     "image": "/category-images/dimmers.jpg",
-    "productCount": 9,
+    "productCount": 11,
     "subcategories": [
       {
         "id": "dimmers---1-module",
         "name": "Dimmers - 1 Module",
         "slug": "dimmers---1-module",
-        "productCount": 7
+        "productCount": 9
       },
       {
         "id": "modular-ir-dimmers",
@@ -205,19 +199,19 @@
     "description": "Fan Controls products",
     "icon": "Package",
     "image": "/category-images/fan-controls.jpg",
-    "productCount": 22,
+    "productCount": 26,
     "subcategories": [
       {
         "id": "fan-regulators---1-module",
         "name": "Fan Regulators - 1 Module",
         "slug": "fan-regulators---1-module",
-        "productCount": 7
+        "productCount": 9
       },
       {
         "id": "fan-regulators---2-module",
         "name": "Fan Regulators - 2 Module",
         "slug": "fan-regulators---2-module",
-        "productCount": 10
+        "productCount": 12
       },
       {
         "id": "modular-ir-fan-regulators",
@@ -240,13 +234,13 @@
     "description": "Hospitality products",
     "icon": "Package",
     "image": "/category-images/hospitality.jpg",
-    "productCount": 36,
+    "productCount": 44,
     "subcategories": [
       {
         "id": "dnd-mmr-units",
         "name": "DND-MMR Units",
         "slug": "dnd-mmr-units",
-        "productCount": 14
+        "productCount": 18
       },
       {
         "id": "key-tag-accessories",
@@ -258,7 +252,7 @@
         "id": "mechanical-key-tag-switches",
         "name": "Mechanical Key Tag Switches",
         "slug": "mechanical-key-tag-switches",
-        "productCount": 15
+        "productCount": 19
       }
     ]
   },
@@ -269,13 +263,13 @@
     "description": "Plates products",
     "icon": "Package",
     "image": "/category-images/plates.jpg",
-    "productCount": 422,
+    "productCount": 442,
     "subcategories": [
       {
         "id": "cover-plates-with-grid-frames",
         "name": "Cover Plates with grid frames",
         "slug": "cover-plates-with-grid-frames",
-        "productCount": 81
+        "productCount": 101
       },
       {
         "id": "cover-plates-without-grid-frames---vibrant-shades",
@@ -346,13 +340,13 @@
     "description": "Power Sockets products",
     "icon": "Package",
     "image": "/category-images/power-sockets.jpg",
-    "productCount": 16,
+    "productCount": 20,
     "subcategories": [
       {
         "id": "power-sockets---2-module",
         "name": "Power Sockets - 2 Module",
         "slug": "power-sockets---2-module",
-        "productCount": 16
+        "productCount": 20
       }
     ]
   },
@@ -363,25 +357,37 @@
     "description": "Switches products",
     "icon": "Package",
     "image": "/category-images/switches.jpg",
-    "productCount": 132,
+    "productCount": 230,
     "subcategories": [
       {
         "id": "bell-push---1-module",
         "name": "Bell Push - 1 Module",
         "slug": "bell-push---1-module",
-        "productCount": 8
+        "productCount": 12
       },
       {
         "id": "bell-push---2-module",
         "name": "Bell Push - 2 Module",
         "slug": "bell-push---2-module",
-        "productCount": 4
+        "productCount": 6
       },
       {
         "id": "dp-switches---2-module",
         "name": "DP Switches - 2 Module",
         "slug": "dp-switches---2-module",
-        "productCount": 6
+        "productCount": 8
+      },
+      {
+        "id": "mini-mcbs-3ka",
+        "name": "Mini MCBs 3kA",
+        "slug": "mini-mcbs-3ka",
+        "productCount": 32
+      },
+      {
+        "id": "mini-mcbs-with-led-indicator",
+        "name": "Mini MCBs with LED Indicator",
+        "slug": "mini-mcbs-with-led-indicator",
+        "productCount": 40
       },
       {
         "id": "modular-ir-touch-switches",
@@ -393,7 +399,7 @@
         "id": "motor-starters---2-module",
         "name": "Motor Starters - 2 Module",
         "slug": "motor-starters---2-module",
-        "productCount": 7
+        "productCount": 9
       },
       {
         "id": "switches---2-module-mega-switches",
@@ -417,7 +423,7 @@
         "id": "switches---1-module",
         "name": "Switches - 1 Module",
         "slug": "switches---1-module",
-        "productCount": 32
+        "productCount": 48
       },
       {
         "id": "wi-fi-power-switch",
