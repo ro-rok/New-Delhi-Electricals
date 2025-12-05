@@ -4,6 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFab from '@/components/WhatsAppFab';
 import ProductCard from '@/components/catalog/ProductCard';
+import { ProductFamilyFilter } from '@/components/catalog/ProductFamilyFilter';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -120,9 +121,12 @@ const CategoryPage = () => {
   const [showFilters, setShowFilters] = useState(false);
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [selectedSeries, setSelectedSeries] = useState<string[]>([]);
+  const [selectedProductFamily, setSelectedProductFamily] = useState<string | null>(null);
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
   const [sortBy, setSortBy] = useState<SortOption>('name-asc');
   const [localSearch, setLocalSearch] = useState(searchQuery);
+  const [allProducts, setAllProducts] = useState<Product[]>([]); // Store all products for filtering
   const [category, setCategory] = useState<Category | null>(null);
   const [categories, setCategories] = useState<Category[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
@@ -165,16 +169,17 @@ const CategoryPage = () => {
         
         // Set initial price bounds if category found
         if (foundCategory) {
-          // Fetch initial products to get price bounds
+          // Fetch initial products to get price bounds and populate product family filter
           const initialResponse = await getProducts({ 
             category: foundCategory.name,
-            pageSize: 100 
+            pageSize: 1000 // Fetch more to populate product family filter
           });
           if (initialResponse.items.length > 0) {
             const prices = initialResponse.items.map(p => p.listPrice);
             const min = Math.min(...prices);
             const max = Math.max(...prices);
             setPriceRange([min, max]);
+            setAllProducts(initialResponse.items); // Store for product family filter
           }
         }
       } catch (error) {
@@ -195,6 +200,9 @@ const CategoryPage = () => {
       const [sortField, sortOrder] = sortBy.split('-') as ['name' | 'price', 'asc' | 'desc'];
       const pageSize = 20; // Load 20 products per page
       
+      // Fetch more products initially to have enough for product family filtering
+      const fetchSize = selectedProductFamily || selectedColor ? 1000 : pageSize;
+      
       const response = await getProducts({
         category: category.name,
         brand: selectedBrands.length === 1 ? selectedBrands[0] : undefined,
@@ -205,26 +213,51 @@ const CategoryPage = () => {
         sortOrder: sortOrder,
         q: debouncedSearch || undefined,
         page: page,
-        pageSize: pageSize,
+        pageSize: fetchSize,
       });
       
-      if (append) {
-        setProducts(prev => [...prev, ...response.items]);
+      // Store all products for client-side filtering by product_family and color
+      if (!append) {
+        setAllProducts(response.items);
       } else {
-        setProducts(response.items);
+        setAllProducts(prev => [...prev, ...response.items]);
       }
       
-      setTotalProducts(response.total);
+      // Apply product_family and color filters client-side
+      let filteredItems = response.items;
+      
+      if (selectedProductFamily) {
+        filteredItems = filteredItems.filter(product => {
+          const productFamily = product.catalogSource?.product_family || product.series;
+          return productFamily === selectedProductFamily;
+        });
+      }
+      
+      if (selectedColor) {
+        filteredItems = filteredItems.filter(product => {
+          const productColor = product.specs?.color?.trim();
+          return productColor === selectedColor.trim();
+        });
+      }
+      
+      if (append) {
+        setProducts(prev => [...prev, ...filteredItems]);
+      } else {
+        setProducts(filteredItems);
+      }
+      
+      setTotalProducts(filteredItems.length);
       setHasMore(response.items.length === pageSize && (page * pageSize) < response.total);
     } catch (error) {
       console.error('Failed to fetch filtered products:', error);
       if (!append) {
         setProducts([]);
+        setAllProducts([]);
       }
     } finally {
       setFilterLoading(false);
     }
-  }, [category, selectedBrands, selectedSeries, priceRange, sortBy, debouncedSearch]);
+  }, [category, selectedBrands, selectedSeries, selectedProductFamily, selectedColor, priceRange, sortBy, debouncedSearch]);
 
   // Fetch products when filters change (reset to page 1)
   useEffect(() => {
@@ -232,7 +265,7 @@ const CategoryPage = () => {
       setCurrentPage(1);
       fetchFilteredProducts(1, false);
     }
-  }, [category, selectedBrands, selectedSeries, priceRange, sortBy, debouncedSearch, fetchFilteredProducts]);
+  }, [category, selectedBrands, selectedSeries, selectedProductFamily, selectedColor, priceRange, sortBy, debouncedSearch, fetchFilteredProducts]);
 
   // Load more products for infinite scroll
   const loadMore = useCallback(() => {
@@ -302,6 +335,8 @@ const CategoryPage = () => {
   const clearFilters = () => {
     setSelectedBrands([]);
     setSelectedSeries([]);
+    setSelectedProductFamily(null);
+    setSelectedColor(null);
     if (priceBounds.min !== undefined && priceBounds.max !== undefined) {
       setPriceRange([priceBounds.min, priceBounds.max]);
     }
@@ -309,6 +344,7 @@ const CategoryPage = () => {
   };
 
   const hasActiveFilters = selectedBrands.length > 0 || selectedSeries.length > 0 || 
+    selectedProductFamily !== null || selectedColor !== null ||
     (priceBounds.min !== undefined && priceBounds.max !== undefined && 
      (priceRange[0] > priceBounds.min || priceRange[1] < priceBounds.max)) || 
     localSearch;
@@ -506,6 +542,23 @@ const CategoryPage = () => {
 
             {/* Right Side - Products Section */}
             <div className="flex-1 min-w-0">
+              {/* Product Family Filter - Prominently displayed */}
+              {allProducts.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mb-8"
+                >
+                  <ProductFamilyFilter
+                    products={allProducts}
+                    selectedProductFamily={selectedProductFamily}
+                    selectedColor={selectedColor}
+                    onProductFamilySelect={setSelectedProductFamily}
+                    onColorSelect={setSelectedColor}
+                  />
+                </motion.div>
+              )}
+
               {/* Toolbar */}
               <div className="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-gray-200 dark:border-gray-800">
                 <div className="flex items-center gap-2 flex-wrap">
@@ -561,7 +614,7 @@ const CategoryPage = () => {
                           transition={{ type: "spring", stiffness: 500, damping: 30 }}
                         >
                           <Badge variant="default" className="ml-1 h-5 w-5 p-0 flex items-center justify-center">
-                            {selectedBrands.length + selectedSeries.length + (localSearch ? 1 : 0)}
+                            {selectedBrands.length + selectedSeries.length + (selectedProductFamily ? 1 : 0) + (selectedColor ? 1 : 0) + (localSearch ? 1 : 0)}
                           </Badge>
                         </motion.div>
                       )}
@@ -576,7 +629,7 @@ const CategoryPage = () => {
                         Filters
                         {hasActiveFilters && (
                           <Badge variant="default" className="ml-1">
-                            {selectedBrands.length + selectedSeries.length}
+                            {selectedBrands.length + selectedSeries.length + (selectedProductFamily ? 1 : 0) + (selectedColor ? 1 : 0)}
                           </Badge>
                         )}
                       </Button>
@@ -653,7 +706,8 @@ const CategoryPage = () => {
                   </motion.div>
 
                   <span className="text-sm text-muted-foreground hidden sm:inline">
-                    {totalProducts > 0 ? `${products.length} of ${totalProducts}` : products.length} products
+                    {products.length} {products.length === 1 ? 'product' : 'products'}
+                    {selectedProductFamily || selectedColor ? ` (filtered)` : ''}
                   </span>
                   
                   {/* View Toggle */}

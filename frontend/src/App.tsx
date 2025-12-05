@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { AppProvider } from "@/contexts/AppContext";
 import { PageLoader } from "@/components/ui/PageLoader";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 // Eagerly loaded components (critical path)
 import Home from "./pages/Home";
@@ -70,37 +71,39 @@ const App = () => (
             }}
           >
             <GlobalShortcuts />
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/categories" element={<CategoriesListPage />} />
-                <Route path="/category/:slug" element={<CategoryPage />} />
-                <Route path="/brands" element={<BrandsListPage />} />
-                <Route path="/brand/:slug" element={<BrandPage />} />
-                <Route path="/product/:brand/:product_family/:slug" element={<ProductSlugPage />} />
-                <Route path="/product/:id" element={<ProductPage />} />
-                <Route path="/shortlist" element={<ShortlistPage />} />
-                <Route path="/compare" element={<ComparePage />} />
-                <Route path="/cart" element={<CartPage />} />
+            <ErrorBoundary>
+              <Suspense fallback={<PageLoader />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/categories" element={<CategoriesListPage />} />
+                  <Route path="/category/:slug" element={<CategoryPage />} />
+                  <Route path="/brands" element={<BrandsListPage />} />
+                  <Route path="/brand/:slug" element={<BrandPage />} />
+                  <Route path="/product/:brand/:product_family/:slug" element={<ProductSlugPage />} />
+                  <Route path="/product/:id" element={<ProductPage />} />
+                  <Route path="/shortlist" element={<ShortlistPage />} />
+                  <Route path="/compare" element={<ComparePage />} />
+                  <Route path="/cart" element={<CartPage />} />
 
-                {/* Admin Routes */}
-                <Route path="/admin/login" element={<AdminLogin />} />
-                <Route path="/admin" element={<AdminLayout />}>
-                  <Route index element={<AdminDashboard />} />
-                  <Route path="products" element={<AdminProducts />} />
-                  <Route path="products/add" element={<AdminAddProduct />} />
-                  <Route path="categories" element={<AdminCategories />} />
-                  <Route path="brands" element={<AdminBrands />} />
-                  <Route path="import" element={<AdminImport />} />
-                  <Route path="inquiries" element={<AdminInquiries />} />
-                  <Route path="logs" element={<AdminLogs />} />
-                  <Route path="settings" element={<AdminSettings />} />
-                </Route>
+                  {/* Admin Routes */}
+                  <Route path="/admin/login" element={<AdminLogin />} />
+                  <Route path="/admin" element={<AdminLayout />}>
+                    <Route index element={<AdminDashboard />} />
+                    <Route path="products" element={<AdminProducts />} />
+                    <Route path="products/add" element={<AdminAddProduct />} />
+                    <Route path="categories" element={<AdminCategories />} />
+                    <Route path="brands" element={<AdminBrands />} />
+                    <Route path="import" element={<AdminImport />} />
+                    <Route path="inquiries" element={<AdminInquiries />} />
+                    <Route path="logs" element={<AdminLogs />} />
+                    <Route path="settings" element={<AdminSettings />} />
+                  </Route>
 
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
+            </ErrorBoundary>
           </BrowserRouter>
         </TooltipProvider>
       </AppProvider>

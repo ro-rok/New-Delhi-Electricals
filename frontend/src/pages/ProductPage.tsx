@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { Product } from '@/types/product';
-import { useParams, Link, useLocation } from 'react-router-dom';
+import { useParams, Link, useLocation, useNavigate } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFab from '@/components/WhatsAppFab';
@@ -13,7 +13,7 @@ import { useApp } from '@/contexts/AppContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MessageCircle, Heart, GitCompare, Copy, Check, FileText, 
-  Camera, ChevronLeft, ChevronRight, ZoomIn, Download, Share2, ShoppingCart
+  Camera, ChevronLeft, ChevronRight, ZoomIn, Download, Share2, ShoppingCart, ArrowLeft
 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
@@ -42,6 +42,7 @@ const generatePlaceholderImages = (count: number, brandChar: string) => {
 const ProductPage = () => {
   const { id } = useParams();
   const location = useLocation();
+  const navigate = useNavigate();
   const { addToRecentlyViewed, trackProductView, toggleShortlist, isInShortlist, toggleComparison, isInComparison, trackWhatsAppClick, addToCart, isInCart } = useApp();
   const [copiedSku, setCopiedSku] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -64,14 +65,22 @@ const ProductPage = () => {
       }
       try {
         const prod = await getProductById(id);
+        if (!prod) {
+          setProduct(null);
+          setLoading(false);
+          return;
+        }
         setProduct(prod);
-        if (prod) {
-          // Fetch similar products
+        // Fetch similar products
+        try {
           const response = await getProducts({ pageSize: 20 });
           const similar = response.items
             .filter(p => p.id !== prod.id && (p.category === prod.category || p.brand === prod.brand))
             .slice(0, 4);
           setSimilarProducts(similar);
+        } catch (err) {
+          console.error('Failed to fetch similar products:', err);
+          setSimilarProducts([]);
         }
       } catch (error) {
         console.error('Failed to fetch product:', error);
@@ -85,8 +94,13 @@ const ProductPage = () => {
   
   // Generate multiple images for carousel demo
   const productImages = useMemo(() => {
-    if (!product) return [];
-    return generatePlaceholderImages(4, product.brand.charAt(0));
+    if (!product || !product.brand) return [];
+    try {
+      return generatePlaceholderImages(4, product.brand.charAt(0));
+    } catch (error) {
+      console.error('Error generating product images:', error);
+      return [];
+    }
   }, [product]);
 
 
@@ -133,10 +147,12 @@ const ProductPage = () => {
   };
 
   const nextImage = () => {
+    if (productImages.length === 0) return;
     setCurrentImageIndex((prev) => (prev + 1) % productImages.length);
   };
 
   const prevImage = () => {
+    if (productImages.length === 0) return;
     setCurrentImageIndex((prev) => (prev - 1 + productImages.length) % productImages.length);
   };
 
@@ -151,12 +167,22 @@ const ProductPage = () => {
     );
   }
 
-  if (!product) {
+  if (!product && !loading) {
     return (
       <div className="min-h-screen bg-background">
         <Header />
         <main className="pt-24 container">
-          <p className="text-center text-muted-foreground">Product not found</p>
+          <div className="text-center space-y-4">
+            <p className="text-muted-foreground">Product not found</p>
+            <Button
+              variant="outline"
+              onClick={() => navigate(-1)}
+              className="gap-2"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Go Back
+            </Button>
+          </div>
         </main>
       </div>
     );
@@ -171,7 +197,17 @@ const ProductPage = () => {
       <main className="pt-24 pb-16">
         <div className="container">
           {/* Breadcrumb */}
-          <nav className="text-sm text-muted-foreground mb-6">
+          <nav className="text-sm text-muted-foreground mb-6 flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => navigate(-1)}
+              className="gap-2 -ml-2"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back
+            </Button>
+            <span className="mx-1">|</span>
             <Link to="/" className="hover:text-foreground">Home</Link>
             <span className="mx-2">/</span>
             <Link to={`/category/${product.category.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-foreground">{product.category}</Link>
