@@ -60,16 +60,24 @@ def generate_signed_upload_params(
     Generate a short-lived signed upload payload for direct browser uploads.
 
     The frontend should POST to Cloudinary's upload API with these fields plus the file.
+    
+    Note: For resource_type="image" (default), Cloudinary does not include it in the signature.
+    Only timestamp and folder are signed for image uploads.
     """
     _ensure_config()
     timestamp = int(
         (datetime.utcnow() + timedelta(seconds=ttl_seconds)).timestamp()
     )
+    # For image uploads, Cloudinary only signs timestamp and folder
+    # resource_type is not included in the signature when it's "image"
     params = {
         "timestamp": timestamp,
         "folder": folder,
-        "resource_type": allow_types,
     }
+    # Only include resource_type in signature if it's not "image"
+    if allow_types != "image":
+        params["resource_type"] = allow_types
+    
     signature = cloudinary.utils.api_sign_request(
         params_to_sign=params,
         api_secret=settings.CLOUDINARY_API_SECRET,  # type: ignore[arg-type]

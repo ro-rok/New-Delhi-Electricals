@@ -14,4 +14,5 @@ dist/
 frontend/dist/
 
 
-
+# Catalog images
+backend/public/catalog_images

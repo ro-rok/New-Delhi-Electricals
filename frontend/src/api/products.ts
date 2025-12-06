@@ -219,3 +219,192 @@ export async function getBrands(): Promise<Brand[]> {
   }
 }
 
+export async function updateProduct(
+  id: string,
+  data: Partial<Product>
+): Promise<Product> {
+  // Transform frontend Product format to backend ProductUpdate format
+  const updatePayload: any = {};
+  
+  if (data.name !== undefined) updatePayload.name = data.name;
+  if (data.brand !== undefined) updatePayload.brand = data.brand;
+  if (data.category !== undefined) updatePayload.category = data.category;
+  if (data.series !== undefined) updatePayload.series = data.series;
+  if (data.listPrice !== undefined) updatePayload.list_price = data.listPrice;
+  if (data.currency !== undefined) updatePayload.currency = data.currency;
+  if (data.images !== undefined) updatePayload.images = data.images;
+  if (data.datasheetUrl !== undefined) updatePayload.datasheet_url = data.datasheetUrl;
+  if (data.specs !== undefined) updatePayload.specs = data.specs;
+  if (data.description !== undefined) updatePayload.description = data.description;
+
+  // Get auth token for authenticated requests
+  const token = localStorage.getItem('admin_token');
+  const headers: HeadersInit = {
+    'Content-Type': 'application/json',
+  };
+  
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+
+  const res = await fetch(`${API_BASE}/api/products/${id}`, {
+    method: 'PATCH',
+    headers,
+    body: JSON.stringify(updatePayload),
+  });
+
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({}));
+    throw new Error(errorData.detail || 'Failed to update product');
+  }
+
+  const updatedProduct = await res.json();
+  return transformProduct(updatedProduct);
+}
+
+// Cloudinary upload functions
+export interface CloudinarySignature {
+  cloudName: string;
+  apiKey: string;
+  timestamp: number;
+  folder: string;
+  resourceType: string;
+  signature: string;
+}
+
+export async function getCloudinarySignature(): Promise<CloudinarySignature> {
+  // Get auth token from localStorage (admin_token is used in this app)
+  const token = localStorage.getItem('admin_token');
+  
+  if (!token) {
+    console.error('No admin_token found in localStorage');
+    throw new Error('Not authenticated. Please log in again.');
+  }
+
+  const headers: HeadersInit = {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${token}`,
+  };
+
+  try {
+    const res = await fetch(`${API_BASE}/api/admin/cloudinary/signature`, {
+      method: 'GET',
+      headers,
+      credentials: 'include', // Include cookies for auth
+    });
+
+    if (!res.ok) {
+      if (res.status === 401) {
+        // Clear invalid token
+        localStorage.removeItem('admin_token');
+        localStorage.removeItem('admin_auth');
+        console.error('Authentication failed - token may be expired');
+        throw new Error('Not authenticated. Please log in again.');
+      }
+      const errorData = await res.json().catch(() => ({}));
+      console.error('Failed to get Cloudinary signature:', {
+        status: res.status,
+        statusText: res.statusText,
+        error: errorData
+      });
+      throw new Error(errorData.detail || `Failed to get Cloudinary signature (${res.status})`);
+    }
+
+    return res.json();
+  } catch (error: any) {
+    // If it's already our custom error, re-throw it
+    if (error.message?.includes('Not authenticated')) {
+      throw error;
+    }
+    // Otherwise wrap it
+    console.error('Error fetching Cloudinary signature:', error);
+    throw new Error(error.message || 'Failed to get Cloudinary signature');
+  }
+}
+
+export async function uploadImageToCloudinary(file: File): Promise<string> {
+  try {
+    // Get signature from backend
+    const signature = await getCloudinarySignature();
+
+    // Create form data for Cloudinary upload
+    // Important: Only include parameters that were used in signature calculation
+    // For image uploads, backend only signs: timestamp and folder (resource_type is excluded)
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('api_key', signature.apiKey);
+    formData.append('timestamp', String(signature.timestamp));
+    formData.append('folder', signature.folder);
+    // Note: resource_type is NOT included in form data for image uploads
+    // as it's not part of the signature when resource_type="image"
+    formData.append('signature', signature.signature);
+
+    // Upload to Cloudinary
+    // Use the resource_type from signature, default to 'image'
+    const resourceType = signature.resourceType || 'image';
+    const cloudinaryUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/${resourceType}/upload`;
+    
+    const uploadRes = await fetch(cloudinaryUrl, {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (!uploadRes.ok) {
+      const error = await uploadRes.json().catch(() => ({ error: { message: 'Unknown error' } }));
+      const errorMessage = error.error?.message || error.message || `Failed to upload image (${uploadRes.status})`;
+      console.error('Cloudinary upload error:', {
+        status: uploadRes.status,
+        statusText: uploadRes.statusText,
+        error,
+        signature: {
+          cloudName: signature.cloudName,
+          timestamp: signature.timestamp,
+          folder: signature.folder,
+          resourceType: signature.resourceType,
+        }
+      });
+      throw new Error(errorMessage);
+    }
+
+    const result = await uploadRes.json();
+    return result.secure_url;
+  } catch (error: any) {
+    console.error('Error uploading image:', error);
+    // Re-throw with a more user-friendly message if it's an authentication error
+    if (error.message?.includes('Not authenticated')) {
+      throw error;
+    }
+    throw new Error(error.message || 'Failed to upload image to Cloudinary');
+  }
+}
+
+// Bulk update products
+export async function bulkUpdateProducts(
+  productIds: string[],
+  data: Partial<Product>
+): Promise<void> {
+  // Transform frontend Product format to backend ProductUpdate format
+  const updatePayload: any = {};
+  
+  if (data.name !== undefined) updatePayload.name = data.name;
+  if (data.brand !== undefined) updatePayload.brand = data.brand;
+  if (data.category !== undefined) updatePayload.category = data.category;
+  if (data.series !== undefined) updatePayload.series = data.series;
+  if (data.listPrice !== undefined) updatePayload.list_price = data.listPrice;
+  if (data.currency !== undefined) updatePayload.currency = data.currency;
+  if (data.images !== undefined) updatePayload.images = data.images;
+  if (data.datasheetUrl !== undefined) updatePayload.datasheet_url = data.datasheetUrl;
+  if (data.specs !== undefined) updatePayload.specs = data.specs;
+  if (data.description !== undefined) updatePayload.description = data.description;
+
+  // Update products in parallel
+  const updatePromises = productIds.map(id =>
+    updateProduct(id, data).catch(error => {
+      console.error(`Failed to update product ${id}:`, error);
+      throw error;
+    })
+  );
+
+  await Promise.all(updatePromises);
+}
+

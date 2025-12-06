@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Plus, Search, Filter, MoreHorizontal, Edit, Trash2,
-  Eye, Copy, ChevronLeft, ChevronRight
+  Eye, Copy, ChevronLeft, ChevronRight, Image as ImageIcon
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -21,11 +21,14 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
-import { getProducts, getCategories, getBrands } from '@/api/products';
+import { getProducts, getCategories, getBrands, updateProduct } from '@/api/products';
 import { Product, Category, Brand } from '@/types/product';
 import { toast } from 'sonner';
 import { motion } from 'framer-motion';
 import { getProductUrl } from '@/lib/utils';
+import EditProductModal from '@/components/admin/EditProductModal';
+import ImageScraperModal from '@/components/admin/ImageScraperModal';
+import PlatesBulkImageModal from '@/components/admin/PlatesBulkImageModal';
 
 const ITEMS_PER_PAGE = 10;
 
@@ -39,6 +42,11 @@ const AdminProducts = () => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [loading, setLoading] = useState(true);
+  const [editModalOpen, setEditModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [imageModalOpen, setImageModalOpen] = useState(false);
+  const [selectedProductForImage, setSelectedProductForImage] = useState<Product | null>(null);
+  const [platesBulkModalOpen, setPlatesBulkModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -93,6 +101,73 @@ const AdminProducts = () => {
   const handleCopySKU = (sku: string) => {
     navigator.clipboard.writeText(sku);
     toast.success('SKU copied to clipboard');
+  };
+
+  const handleEdit = (product: Product) => {
+    setSelectedProduct(product);
+    setEditModalOpen(true);
+  };
+
+  const handleImageScraper = (product: Product) => {
+    // Check if product is in Plates category
+    if (product.category === 'Plates') {
+      setPlatesBulkModalOpen(true);
+    } else {
+      setSelectedProductForImage(product);
+      setImageModalOpen(true);
+    }
+  };
+
+  const handleBulkImageSuccess = () => {
+    // Refresh products list after bulk image assignment
+    const fetchData = async () => {
+      try {
+        const productsResponse = await getProducts({ pageSize: 1000 });
+        setProducts(productsResponse.items);
+      } catch (error) {
+        console.error('Failed to refresh products:', error);
+      }
+    };
+    fetchData();
+  };
+
+  const handleDelete = async (product: Product) => {
+    if (!confirm(`Are you sure you want to delete "${product.name}"?`)) {
+      return;
+    }
+    // TODO: Implement delete functionality
+    toast.info('Delete functionality not yet implemented');
+  };
+
+  const handleEditSuccess = () => {
+    // Refresh products list
+    const fetchData = async () => {
+      try {
+        const productsResponse = await getProducts({ pageSize: 1000 });
+        setProducts(productsResponse.items);
+      } catch (error) {
+        console.error('Failed to refresh products:', error);
+      }
+    };
+    fetchData();
+  };
+
+  const handleSaveImages = async (images: string[]) => {
+    if (!selectedProductForImage) return;
+    
+    try {
+      await updateProduct(selectedProductForImage.id, { images });
+      // Update local state
+      setProducts(products.map(p => 
+        p.id === selectedProductForImage.id 
+          ? { ...p, images } 
+          : p
+      ));
+      toast.success('Images updated successfully');
+    } catch (error) {
+      console.error('Error saving images:', error);
+      throw error;
+    }
   };
 
   return (
@@ -236,11 +311,25 @@ const AdminProducts = () => {
                             View
                           </Link>
                         </DropdownMenuItem>
-                        <DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => handleEdit(product)}>
                           <Edit className="h-4 w-4 mr-2" />
                           Edit
                         </DropdownMenuItem>
-                        <DropdownMenuItem className="text-destructive">
+                        {product.category === 'Plates' ? (
+                          <DropdownMenuItem onClick={() => setPlatesBulkModalOpen(true)}>
+                            <ImageIcon className="h-4 w-4 mr-2" />
+                            Bulk Assign Images
+                          </DropdownMenuItem>
+                        ) : (
+                          <DropdownMenuItem onClick={() => handleImageScraper(product)}>
+                            <ImageIcon className="h-4 w-4 mr-2" />
+                            Manage Images
+                          </DropdownMenuItem>
+                        )}
+                        <DropdownMenuItem 
+                          className="text-destructive"
+                          onClick={() => handleDelete(product)}
+                        >
                           <Trash2 className="h-4 w-4 mr-2" />
                           Delete
                         </DropdownMenuItem>
@@ -281,6 +370,41 @@ const AdminProducts = () => {
           </div>
         </div>
       </Card>
+
+      {/* Edit Product Modal */}
+      {selectedProduct && (
+        <EditProductModal
+          isOpen={editModalOpen}
+          onClose={() => {
+            setEditModalOpen(false);
+            setSelectedProduct(null);
+          }}
+          productId={selectedProduct.id}
+          onSuccess={handleEditSuccess}
+        />
+      )}
+
+      {/* Image Scraper Modal */}
+      {selectedProductForImage && (
+        <ImageScraperModal
+          isOpen={imageModalOpen}
+          onClose={() => {
+            setImageModalOpen(false);
+            setSelectedProductForImage(null);
+          }}
+          productId={selectedProductForImage.id}
+          productName={selectedProductForImage.name}
+          currentImages={selectedProductForImage.images}
+          onSave={handleSaveImages}
+        />
+      )}
+
+      {/* Plates Bulk Image Modal */}
+      <PlatesBulkImageModal
+        isOpen={platesBulkModalOpen}
+        onClose={() => setPlatesBulkModalOpen(false)}
+        onSuccess={handleBulkImageSuccess}
+      />
     </div>
   );
 };
