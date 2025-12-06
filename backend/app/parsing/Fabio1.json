@@ -1,0 +1,8287 @@
+[
+  {
+    "sku": "AHFSXXW061",
+    "name": "Switch 6AX One way 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "6AX One way"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 51,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-6ax-one-way-1m-white",
+      "keywords": [
+        "Switch",
+        "6AX",
+        "One way",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Switch 6AX One way 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSXXB101",
+    "name": "Switch 10AX One way 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Velvet Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX One way"
+    },
+    "variant": [
+      "AHFSXXW101"
+    ],
+    "pricing": {
+      "mrp": 74,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-one-way-1m-velvet-black",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "One way",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Switch 10AX One way 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSXXW101",
+    "name": "Switch 10AX One way 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX One way"
+    },
+    "variant": [
+      "AHFSXXB101"
+    ],
+    "pricing": {
+      "mrp": 60,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-one-way-1m-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "One way",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Switch 10AX One way 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSXXB102",
+    "name": "Switch 10AX Two way 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Velvet Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX Two way"
+    },
+    "variant": [
+      "AHFSXXW102"
+    ],
+    "pricing": {
+      "mrp": 191,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-two-way-1m-velvet-black",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "Two way",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Switch 10AX Two way 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSXXW102",
+    "name": "Switch 10AX Two way 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "10AX Two way"
+    },
+    "variant": [
+      "AHFSXXB102"
+    ],
+    "pricing": {
+      "mrp": 143,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-10ax-two-way-1m-white",
+      "keywords": [
+        "Switch",
+        "10AX",
+        "Two way",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Switch 10AX Two way 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSBXB101",
+    "name": "Bell Push Switch 10AX 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Velvet Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Bell Push Switch 10AX"
+    },
+    "variant": [
+      "AHFSBXW101"
+    ],
+    "pricing": {
+      "mrp": 219,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-switch-10ax-1m-velvet-black",
+      "keywords": [
+        "Bell Push",
+        "Switch",
+        "10AX",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Bell Push Switch 10AX 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSBXW101",
+    "name": "Bell Push Switch 10AX 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Bell Push Switch 10AX"
+    },
+    "variant": [
+      "AHFSBXB101"
+    ],
+    "pricing": {
+      "mrp": 165,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-switch-10ax-1m-white",
+      "keywords": [
+        "Bell Push",
+        "Switch",
+        "10AX",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Bell Push Switch 10AX 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSBIB101",
+    "name": "Bell Push Switch 10AX with Indicator 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Velvet Black",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bell Push Switch 10AX with Indicator"
+    },
+    "variant": [
+      "AHFSBIW101"
+    ],
+    "pricing": {
+      "mrp": 260,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-switch-10ax-indicator-1m-velvet-black",
+      "keywords": [
+        "Bell Push",
+        "Switch",
+        "10AX",
+        "Indicator",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Bell Push Switch 10AX with Indicator 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSBIW101",
+    "name": "Bell Push Switch 10AX with Indicator 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bell Push Switch 10AX with Indicator"
+    },
+    "variant": [
+      "AHFSBIB101"
+    ],
+    "pricing": {
+      "mrp": 196,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-switch-10ax-indicator-1m-white",
+      "keywords": [
+        "Bell Push",
+        "Switch",
+        "10AX",
+        "Indicator",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Bell Push Switch 10AX with Indicator 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFMBIB101",
+    "name": "Mega Bell Push Switch 10AX with Indicator 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Velvet Black",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Mega Bell Push Switch 10AX with Indicator"
+    },
+    "variant": [
+      "AHFMBIW101"
+    ],
+    "pricing": {
+      "mrp": 289,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mega-bell-push-switch-10ax-indicator-1m-velvet-black",
+      "keywords": [
+        "Mega",
+        "Bell Push",
+        "Switch",
+        "10AX",
+        "Indicator",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mega Bell Push Switch 10AX with Indicator 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFMBIW101",
+    "name": "Mega Bell Push Switch 10AX with Indicator 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Mega Bell Push Switch 10AX with Indicator"
+    },
+    "variant": [
+      "AHFMBIB101"
+    ],
+    "pricing": {
+      "mrp": 218,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mega-bell-push-switch-10ax-indicator-1m-white",
+      "keywords": [
+        "Mega",
+        "Bell Push",
+        "Switch",
+        "10AX",
+        "Indicator",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mega Bell Push Switch 10AX with Indicator 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFMXIB101",
+    "name": "Mega Switch 10AX with Indicator 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Velvet Black",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Mega Switch 10AX with Indicator"
+    },
+    "variant": [
+      "AHFMXIW101"
+    ],
+    "pricing": {
+      "mrp": 289,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mega-switch-10ax-indicator-1m-velvet-black",
+      "keywords": [
+        "Mega",
+        "Switch",
+        "10AX",
+        "Indicator",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mega Switch 10AX with Indicator 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFMXIW101",
+    "name": "Mega Switch 10AX with Indicator 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Mega Switch 10AX with Indicator"
+    },
+    "variant": [
+      "AHFMXIB101"
+    ],
+    "pricing": {
+      "mrp": 218,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mega-switch-10ax-indicator-1m-white",
+      "keywords": [
+        "Mega",
+        "Switch",
+        "10AX",
+        "Indicator",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mega Switch 10AX with Indicator 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFMXXB102",
+    "name": "Mega Switch 10AX Two way 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "Velvet Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Mega Switch 10AX Two way"
+    },
+    "variant": [
+      "AHFMXXW102"
+    ],
+    "pricing": {
+      "mrp": 250,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mega-switch-10ax-two-way-1m-velvet-black",
+      "keywords": [
+        "Mega",
+        "Switch",
+        "10AX",
+        "Two way",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mega Switch 10AX Two way 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFMXXW102",
+    "name": "Mega Switch 10AX Two way 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Mega Switch 10AX Two way"
+    },
+    "variant": [
+      "AHFMXXB102"
+    ],
+    "pricing": {
+      "mrp": 186,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mega-switch-10ax-two-way-1m-white",
+      "keywords": [
+        "Mega",
+        "Switch",
+        "10AX",
+        "Two way",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mega Switch 10AX Two way 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSXXB161",
+    "name": "Switch 16AX One way 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Velvet Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX One way"
+    },
+    "variant": [
+      "AHFSXXW161"
+    ],
+    "pricing": {
+      "mrp": 192,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-one-way-1m-velvet-black",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "One way",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Switch 16AX One way 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSXXW161",
+    "name": "Switch 16AX One way 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX One way"
+    },
+    "variant": [
+      "AHFSXXB161"
+    ],
+    "pricing": {
+      "mrp": 158,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-one-way-1m-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "One way",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Switch 16AX One way 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSXIB161",
+    "name": "Switch 16AX One way with Indicator 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Velvet Black",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "16AX One way with Indicator"
+    },
+    "variant": [
+      "AHFSXIW161"
+    ],
+    "pricing": {
+      "mrp": 250,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-one-way-indicator-1m-velvet-black",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "One way",
+        "Indicator",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Switch 16AX One way with Indicator 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSXIW161",
+    "name": "Switch 16AX One way with Indicator 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "16AX One way with Indicator"
+    },
+    "variant": [
+      "AHFSXIB161"
+    ],
+    "pricing": {
+      "mrp": 186,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-one-way-indicator-1m-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "One way",
+        "Indicator",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Switch 16AX One way with Indicator 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSXXB162",
+    "name": "Switch 16AX Two way 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "Velvet Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX Two way"
+    },
+    "variant": [
+      "AHFSXXW162"
+    ],
+    "pricing": {
+      "mrp": 321,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-two-way-1m-velvet-black",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "Two way",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Switch 16AX Two way 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSXXW162",
+    "name": "Switch 16AX Two way 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Switches - 1 Module",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "16AX Two way"
+    },
+    "variant": [
+      "AHFSXXB162"
+    ],
+    "pricing": {
+      "mrp": 242,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "switch-16ax-two-way-1m-white",
+      "keywords": [
+        "Switch",
+        "16AX",
+        "Two way",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Switch 16AX Two way 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSDIB201",
+    "name": "DP Switch 20A with Indicator 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "DP Switches - 2 Module",
+    "specs": {
+      "ampere": 20,
+      "color": "Velvet Black",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "DP Switch 20A with Indicator"
+    },
+    "variant": [
+      "AHFSDIW201"
+    ],
+    "pricing": {
+      "mrp": 361,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dp-switch-20a-indicator-2m-velvet-black",
+      "keywords": [
+        "DP Switch",
+        "20A",
+        "Indicator",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy DP Switch 20A with Indicator 2M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSDIW201",
+    "name": "DP Switch 20A with Indicator 2M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "DP Switches - 2 Module",
+    "specs": {
+      "ampere": 20,
+      "color": "White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "DP Switch 20A with Indicator"
+    },
+    "variant": [
+      "AHFSDIB201"
+    ],
+    "pricing": {
+      "mrp": 272,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dp-switch-20a-indicator-2m-white",
+      "keywords": [
+        "DP Switch",
+        "20A",
+        "Indicator",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy DP Switch 20A with Indicator 2M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSDIB321",
+    "name": "DP Switch 32A with Indicator 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "DP Switches - 2 Module",
+    "specs": {
+      "ampere": 32,
+      "color": "Velvet Black",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "DP Switch 32A with Indicator"
+    },
+    "variant": [
+      "AHFSDIW321"
+    ],
+    "pricing": {
+      "mrp": 649,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dp-switch-32a-indicator-2m-velvet-black",
+      "keywords": [
+        "DP Switch",
+        "32A",
+        "Indicator",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy DP Switch 32A with Indicator 2M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSDIW321",
+    "name": "DP Switch 32A with Indicator 2M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "DP Switches - 2 Module",
+    "specs": {
+      "ampere": 32,
+      "color": "White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "DP Switch 32A with Indicator"
+    },
+    "variant": [
+      "AHFSDIB321"
+    ],
+    "pricing": {
+      "mrp": 487,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dp-switch-32a-indicator-2m-white",
+      "keywords": [
+        "DP Switch",
+        "32A",
+        "Indicator",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy DP Switch 32A with Indicator 2M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKPXB063",
+    "name": "Socket 6A 3 Pin 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "Velvet Black",
+      "mw": 2,
+      "type_detail": "6A 3 Pin Socket"
+    },
+    "variant": [
+      "AHFKPXW063"
+    ],
+    "pricing": {
+      "mrp": 184,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-3-pin-2m-velvet-black",
+      "keywords": [
+        "Socket",
+        "6A",
+        "3 Pin",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Socket 6A 3 Pin 2M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKPXW063",
+    "name": "Socket 6A 3 Pin 2M - White",
+    "product_family": "Fabio",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": 6,
+      "color": "White",
+      "mw": 2,
+      "type_detail": "6A 3 Pin Socket"
+    },
+    "variant": [
+      "AHFKPXB063"
+    ],
+    "pricing": {
+      "mrp": 149,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-3-pin-2m-white",
+      "keywords": [
+        "Socket",
+        "6A",
+        "3 Pin",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Socket 6A 3 Pin 2M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKPXB163",
+    "name": "Socket 6A/16A Combi 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": "6A/16A",
+      "color": "Velvet Black",
+      "mw": 2,
+      "type_detail": "6A/16A Combi Socket"
+    },
+    "variant": [
+      "AHFKCXW163"
+    ],
+    "pricing": {
+      "mrp": 292,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-16a-combi-2m-velvet-black",
+      "keywords": [
+        "Socket",
+        "6A/16A",
+        "Combi",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Socket 6A/16A Combi 2M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKCXW163",
+    "name": "Socket 6A/16A Combi 2M - White",
+    "product_family": "Fabio",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": "6A/16A",
+      "color": "White",
+      "mw": 2,
+      "type_detail": "6A/16A Combi Socket"
+    },
+    "variant": [
+      "AHFKPXB163"
+    ],
+    "pricing": {
+      "mrp": 237,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-16a-combi-2m-white",
+      "keywords": [
+        "Socket",
+        "6A/16A",
+        "Combi",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Socket 6A/16A Combi 2M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKRXB163",
+    "name": "Socket 6A/16A Raised 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": "6A/16A",
+      "color": "Velvet Black",
+      "mw": 2,
+      "type_detail": "6A/16A Raised Socket"
+    },
+    "variant": [
+      "AHFKRXW163"
+    ],
+    "pricing": {
+      "mrp": 292,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-16a-raised-2m-velvet-black",
+      "keywords": [
+        "Socket",
+        "6A/16A",
+        "Raised",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Socket 6A/16A Raised 2M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKRXW163",
+    "name": "Socket 6A/16A Raised 2M - White",
+    "product_family": "Fabio",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": "6A/16A",
+      "color": "White",
+      "mw": 2,
+      "type_detail": "6A/16A Raised Socket"
+    },
+    "variant": [
+      "AHFKRXB163"
+    ],
+    "pricing": {
+      "mrp": 237,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-16a-raised-2m-white",
+      "keywords": [
+        "Socket",
+        "6A/16A",
+        "Raised",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Socket 6A/16A Raised 2M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKPXB253",
+    "name": "Socket 6A/16A Heavy Duty 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": "6A/16A",
+      "color": "Velvet Black",
+      "mw": 2,
+      "type_detail": "6A/16A Heavy Duty Socket"
+    },
+    "variant": [
+      "AHFKCXW253"
+    ],
+    "pricing": {
+      "mrp": 373,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-16a-heavy-duty-2m-velvet-black",
+      "keywords": [
+        "Socket",
+        "6A/16A",
+        "Heavy Duty",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Socket 6A/16A Heavy Duty 2M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKCXW253",
+    "name": "Socket 6A/16A Heavy Duty 2M - White",
+    "product_family": "Fabio",
+    "category": "Power Sockets",
+    "subcategory": "Power Sockets - 2 Module",
+    "specs": {
+      "ampere": "6A/16A",
+      "color": "White",
+      "mw": 2,
+      "type_detail": "6A/16A Heavy Duty Socket"
+    },
+    "variant": [
+      "AHFKPXB253"
+    ],
+    "pricing": {
+      "mrp": 280,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "socket-6a-16a-heavy-duty-2m-white",
+      "keywords": [
+        "Socket",
+        "6A/16A",
+        "Heavy Duty",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Socket 6A/16A Heavy Duty 2M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSEXB000",
+    "name": "Key Tag Mechanical 30A 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches",
+    "specs": {
+      "ampere": 30,
+      "color": "Velvet Black",
+      "mw": 2,
+      "type_detail": "Key Tag Mechanical 30A"
+    },
+    "variant": [
+      "AHFSEXW000"
+    ],
+    "pricing": {
+      "mrp": 1439,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "key-tag-mechanical-30a-2m-velvet-black",
+      "keywords": [
+        "Key Tag",
+        "Mechanical",
+        "30A",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Key Tag Mechanical 30A 2M Velvet Black hospitality range from the Fabio series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSEXW000",
+    "name": "Key Tag Mechanical 30A 2M - White",
+    "product_family": "Fabio",
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches",
+    "specs": {
+      "ampere": 30,
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Key Tag Mechanical 30A"
+    },
+    "variant": [
+      "AHFSEXB000"
+    ],
+    "pricing": {
+      "mrp": 797,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "key-tag-mechanical-30a-2m-white",
+      "keywords": [
+        "Key Tag",
+        "Mechanical",
+        "30A",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Key Tag Mechanical 30A 2M White hospitality range from the Fabio series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSEIB000",
+    "name": "Key Tag with Time Delay Electronic 30A 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Hospitality",
+    "subcategory": "Electronic Key Tag Switches",
+    "specs": {
+      "ampere": 30,
+      "color": "Velvet Black",
+      "mw": 2,
+      "type_detail": "Key Tag with Time Delay Electronic 30A"
+    },
+    "variant": [
+      "AHFSEIW000"
+    ],
+    "pricing": {
+      "mrp": 3740,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "key-tag-time-delay-electronic-30a-2m-velvet-black",
+      "keywords": [
+        "Key Tag",
+        "Time Delay",
+        "Electronic",
+        "30A",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Key Tag with Time Delay Electronic 30A 2M Velvet Black hospitality range from the Fabio series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSEIW000",
+    "name": "Key Tag with Time Delay Electronic 30A 2M - White",
+    "product_family": "Fabio",
+    "category": "Hospitality",
+    "subcategory": "Electronic Key Tag Switches",
+    "specs": {
+      "ampere": 30,
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Key Tag with Time Delay Electronic 30A"
+    },
+    "variant": [
+      "AHFSEIB000"
+    ],
+    "pricing": {
+      "mrp": 2071,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "key-tag-time-delay-electronic-30a-2m-white",
+      "keywords": [
+        "Key Tag",
+        "Time Delay",
+        "Electronic",
+        "30A",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Key Tag with Time Delay Electronic 30A 2M White hospitality range from the Fabio series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSXDB002",
+    "name": "DND Indoor Panel 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Hospitality",
+    "subcategory": "DND Switches",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "DND Indoor Panel"
+    },
+    "variant": [
+      "AHFSXDW002"
+    ],
+    "pricing": {
+      "mrp": 552,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dnd-indoor-panel-1m-velvet-black",
+      "keywords": [
+        "DND",
+        "Indoor Panel",
+        "1M",
+        "Velvet Black",
+        "Hospitality",
+        "Fabio"
+      ],
+      "meta_description": "Buy DND Indoor Panel 1M Velvet Black hospitality range from the Fabio series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSXDW002",
+    "name": "DND Indoor Panel 1M - White",
+    "product_family": "Fabio",
+    "category": "Hospitality",
+    "subcategory": "DND Switches",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "DND Indoor Panel"
+    },
+    "variant": [
+      "AHFSXDB002"
+    ],
+    "pricing": {
+      "mrp": 306,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dnd-indoor-panel-1m-white",
+      "keywords": [
+        "DND",
+        "Indoor Panel",
+        "1M",
+        "White",
+        "Hospitality",
+        "Fabio"
+      ],
+      "meta_description": "Buy DND Indoor Panel 1M White hospitality range from the Fabio series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSIIB061",
+    "name": "DND and MMR Outdoor Panel 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "DND and MMR Outdoor Panel"
+    },
+    "variant": [
+      "AHFSIIW061"
+    ],
+    "pricing": {
+      "mrp": 1276,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dnd-mmr-outdoor-panel-1m-velvet-black",
+      "keywords": [
+        "DND",
+        "MMR",
+        "Outdoor Panel",
+        "1M",
+        "Velvet Black",
+        "Hospitality",
+        "Fabio"
+      ],
+      "meta_description": "Buy DND and MMR Outdoor Panel 1M Velvet Black hospitality range from the Fabio series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSIIW061",
+    "name": "DND and MMR Outdoor Panel 1M - White",
+    "product_family": "Fabio",
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "DND and MMR Outdoor Panel"
+    },
+    "variant": [
+      "AHFSIIB061"
+    ],
+    "pricing": {
+      "mrp": 706,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "dnd-mmr-outdoor-panel-1m-white",
+      "keywords": [
+        "DND",
+        "MMR",
+        "Outdoor Panel",
+        "1M",
+        "White",
+        "Hospitality",
+        "Fabio"
+      ],
+      "meta_description": "Buy DND and MMR Outdoor Panel 1M White hospitality range from the Fabio series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFIPIB061",
+    "name": "MMR Indoor Panel 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Hospitality",
+    "subcategory": "MMR Switches",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "MMR Indoor Panel"
+    },
+    "variant": [
+      "AHFIPIW061"
+    ],
+    "pricing": {
+      "mrp": 468,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mmr-indoor-panel-1m-velvet-black",
+      "keywords": [
+        "MMR",
+        "Indoor Panel",
+        "1M",
+        "Velvet Black",
+        "Hospitality",
+        "Fabio"
+      ],
+      "meta_description": "Buy MMR Indoor Panel 1M Velvet Black hospitality range from the Fabio series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFIPIW061",
+    "name": "MMR Indoor Panel 1M - White",
+    "product_family": "Fabio",
+    "category": "Hospitality",
+    "subcategory": "MMR Switches",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "MMR Indoor Panel"
+    },
+    "variant": [
+      "AHFIPIB061"
+    ],
+    "pricing": {
+      "mrp": 250,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mmr-indoor-panel-1m-white",
+      "keywords": [
+        "MMR",
+        "Indoor Panel",
+        "1M",
+        "White",
+        "Hospitality",
+        "Fabio"
+      ],
+      "meta_description": "Buy MMR Indoor Panel 1M White hospitality range from the Fabio series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKEXB162",
+    "name": "Shaver Socket 4M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Hospitality",
+    "subcategory": "Shaver Sockets",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 4,
+      "type_detail": "Shaver Socket"
+    },
+    "variant": [
+      "AHFKEXW162"
+    ],
+    "pricing": {
+      "mrp": 3405,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "shaver-socket-4m-velvet-black",
+      "keywords": [
+        "Shaver Socket",
+        "4M",
+        "Velvet Black",
+        "Hospitality",
+        "Fabio"
+      ],
+      "meta_description": "Buy Shaver Socket 4M Velvet Black hospitality range from the Fabio series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKEXW162",
+    "name": "Shaver Socket 4M - White",
+    "product_family": "Fabio",
+    "category": "Hospitality",
+    "subcategory": "Shaver Sockets",
+    "specs": {
+      "color": "White",
+      "mw": 4,
+      "type_detail": "Shaver Socket"
+    },
+    "variant": [
+      "AHFKEXB162"
+    ],
+    "pricing": {
+      "mrp": 1804,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "shaver-socket-4m-white",
+      "keywords": [
+        "Shaver Socket",
+        "4M",
+        "White",
+        "Hospitality",
+        "Fabio"
+      ],
+      "meta_description": "Buy Shaver Socket 4M White hospitality range from the Fabio series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFBXXB002",
+    "name": "Buzzer 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "Buzzer - 2 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 2,
+      "type_detail": "Buzzer"
+    },
+    "variant": [
+      "AHFBXXW002"
+    ],
+    "pricing": {
+      "mrp": 57,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "9"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "buzzer-2m-velvet-black",
+      "keywords": [
+        "Buzzer",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Buzzer 2M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFBXXW002",
+    "name": "Buzzer 2M - White",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "Buzzer - 2 Module",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Buzzer"
+    },
+    "variant": [
+      "AHFBXXB002"
+    ],
+    "pricing": {
+      "mrp": 327,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "9"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "buzzer-2m-white",
+      "keywords": [
+        "Buzzer",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Buzzer 2M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFCEEB060",
+    "name": "Chime 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "Door Bells - 2 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 2,
+      "type_detail": "Chime"
+    },
+    "variant": [
+      "AHFCEEW060"
+    ],
+    "pricing": {
+      "mrp": 962,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "chime-2m-velvet-black",
+      "keywords": [
+        "Chime",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Chime 2M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFCEEW060",
+    "name": "Chime 2M - White",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "Door Bells - 2 Module",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Chime"
+    },
+    "variant": [
+      "AHFCEEB060"
+    ],
+    "pricing": {
+      "mrp": 531,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "chime-2m-white",
+      "keywords": [
+        "Chime",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Chime 2M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFRFXB004",
+    "name": "Fan Speed Controller 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Fan Controls",
+    "subcategory": "Fan Regulators - 1 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "Fan Speed Controller 1M"
+    },
+    "variant": [
+      "AHFRFXW004"
+    ],
+    "pricing": {
+      "mrp": 551,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "fan-speed-controller-1m-velvet-black",
+      "keywords": [
+        "Fan Speed Controller",
+        "FSC",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Fan Speed Controller 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFRFXW004",
+    "name": "Fan Speed Controller 1M - White",
+    "product_family": "Fabio",
+    "category": "Fan Controls",
+    "subcategory": "Fan Regulators - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "Fan Speed Controller 1M"
+    },
+    "variant": [
+      "AHFRFXB004"
+    ],
+    "pricing": {
+      "mrp": 449,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "fan-speed-controller-1m-white",
+      "keywords": [
+        "Fan Speed Controller",
+        "FSC",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Fan Speed Controller 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFRFXB005",
+    "name": "Fan Speed Controller 5 Step 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Fan Controls",
+    "subcategory": "Fan Regulators - 1 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "Fan Speed Controller 5 Step"
+    },
+    "variant": [
+      "AHFRFXW005"
+    ],
+    "pricing": {
+      "mrp": 614,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "fan-speed-controller-5-step-1m-velvet-black",
+      "keywords": [
+        "Fan Speed Controller",
+        "FSC",
+        "5 Step",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Fan Speed Controller 5 Step 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFRFXW005",
+    "name": "Fan Speed Controller 5 Step 1M - White",
+    "product_family": "Fabio",
+    "category": "Fan Controls",
+    "subcategory": "Fan Regulators - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "Fan Speed Controller 5 Step"
+    },
+    "variant": [
+      "AHFRFXB005"
+    ],
+    "pricing": {
+      "mrp": 502,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "fan-speed-controller-5-step-1m-white",
+      "keywords": [
+        "Fan Speed Controller",
+        "FSC",
+        "5 Step",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Fan Speed Controller 5 Step 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKNWB111",
+    "name": "Telephone Socket 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "Telephone Sockets - 1 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "Telephone Socket"
+    },
+    "variant": [
+      "AHFKNWW111"
+    ],
+    "pricing": {
+      "mrp": 233,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "telephone-socket-1m-velvet-black",
+      "keywords": [
+        "Telephone Socket",
+        "RJ 11",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Telephone Socket 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKNWW111",
+    "name": "Telephone Socket 1M - White",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "Telephone Sockets - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "Telephone Socket"
+    },
+    "variant": [
+      "AHFKNWB111"
+    ],
+    "pricing": {
+      "mrp": 152,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "telephone-socket-1m-white",
+      "keywords": [
+        "Telephone Socket",
+        "RJ 11",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Telephone Socket 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKRWB451",
+    "name": "Computer Jack LAN Socket 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "LAN Sockets - 1 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "Computer Jack LAN Socket"
+    },
+    "variant": [
+      "AHFKRWW451"
+    ],
+    "pricing": {
+      "mrp": 777,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "computer-jack-lan-socket-1m-velvet-black",
+      "keywords": [
+        "Computer Jack",
+        "LAN Socket",
+        "RJ 45",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Computer Jack LAN Socket 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKRWW451",
+    "name": "Computer Jack LAN Socket 1M - White",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "LAN Sockets - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "Computer Jack LAN Socket"
+    },
+    "variant": [
+      "AHFKRWB451"
+    ],
+    "pricing": {
+      "mrp": 503,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "computer-jack-lan-socket-1m-white",
+      "keywords": [
+        "Computer Jack",
+        "LAN Socket",
+        "RJ 45",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Computer Jack LAN Socket 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKTOB001",
+    "name": "TV Socket 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "TV Sockets - 1 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "TV Socket"
+    },
+    "variant": [
+      "AHFKTOW001"
+    ],
+    "pricing": {
+      "mrp": 212,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "tv-socket-1m-velvet-black",
+      "keywords": [
+        "TV Socket",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy TV Socket 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKTOW001",
+    "name": "TV Socket 1M - White",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "TV Sockets - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "TV Socket"
+    },
+    "variant": [
+      "AHFKTOB001"
+    ],
+    "pricing": {
+      "mrp": 140,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "tv-socket-1m-white",
+      "keywords": [
+        "TV Socket",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy TV Socket 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPFCBV04",
+    "name": "LED Foot Light 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "LED Foot Light - 2 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 2,
+      "type_detail": "LED Foot Light"
+    },
+    "variant": [
+      "AHFPFCWV04"
+    ],
+    "pricing": {
+      "mrp": 888,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-foot-light-2m-velvet-black",
+      "keywords": [
+        "LED Foot Light",
+        "Footlamp",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy LED Foot Light 2M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPFCWV04",
+    "name": "LED Foot Light 2M - White",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "LED Foot Light - 2 Module",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "LED Foot Light"
+    },
+    "variant": [
+      "AHFPFCBV04"
+    ],
+    "pricing": {
+      "mrp": 663,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-foot-light-2m-white",
+      "keywords": [
+        "LED Foot Light",
+        "Footlamp",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy LED Foot Light 2M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFIIIB101",
+    "name": "LED Phase Indicator 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "LED Phase Indicator - 1 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "LED Phase Indicator"
+    },
+    "variant": [
+      "AHFIIIW060"
+    ],
+    "pricing": {
+      "mrp": 139,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-phase-indicator-1m-velvet-black",
+      "keywords": [
+        "LED Phase Indicator",
+        "Indicator",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy LED Phase Indicator 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFIIIW060",
+    "name": "LED Phase Indicator 1M - White",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "LED Phase Indicator - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "LED Phase Indicator"
+    },
+    "variant": [
+      "AHFIIIB101"
+    ],
+    "pricing": {
+      "mrp": 101,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "led-phase-indicator-1m-white",
+      "keywords": [
+        "LED Phase Indicator",
+        "Indicator",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy LED Phase Indicator 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLBBX01",
+    "name": "Blank Off Unit 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "Blank Off Unit - 1 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "Blank Off Unit"
+    },
+    "variant": [
+      "AHFPLBWX01"
+    ],
+    "pricing": {
+      "mrp": 43,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "25"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "blank-off-unit-1m-velvet-black",
+      "keywords": [
+        "Blank Off Unit",
+        "Dummy Plate",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Blank Off Unit 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLBWX01",
+    "name": "Blank Off Unit 1M - White",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "Blank Off Unit - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "Blank Off Unit"
+    },
+    "variant": [
+      "AHFPLBBX01"
+    ],
+    "pricing": {
+      "mrp": 34,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "25"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "blank-off-unit-1m-white",
+      "keywords": [
+        "Blank Off Unit",
+        "Dummy Plate",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Blank Off Unit 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKGXB002",
+    "name": "USB Charger 2.1A Single Port 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "USB Chargers - 1 Module",
+    "specs": {
+      "ampere": 2.1,
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "USB Charger 2.1A Single Port"
+    },
+    "variant": [
+      "AHFGGXW002"
+    ],
+    "pricing": {
+      "mrp": 1200,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-2-1a-single-port-1m-velvet-black",
+      "keywords": [
+        "USB Charger",
+        "2.1A",
+        "Single Port",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy USB Charger 2.1A Single Port 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFGGXW002",
+    "name": "USB Charger 2.1A Single Port 1M - White",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "USB Chargers - 1 Module",
+    "specs": {
+      "ampere": 2.1,
+      "color": "White",
+      "mw": 1,
+      "type_detail": "USB Charger 2.1A Single Port"
+    },
+    "variant": [
+      "AHFKGXB002"
+    ],
+    "pricing": {
+      "mrp": 962,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-2-1a-single-port-1m-white",
+      "keywords": [
+        "USB Charger",
+        "2.1A",
+        "Single Port",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy USB Charger 2.1A Single Port 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKRXB002",
+    "name": "USB Charger Type C 2.1A 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "USB Chargers - 1 Module",
+    "specs": {
+      "ampere": 2.1,
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "USB Charger Type C 2.1A"
+    },
+    "variant": [
+      "AHFKRXW002"
+    ],
+    "pricing": {
+      "mrp": 1406,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-type-c-2-1a-1m-velvet-black",
+      "keywords": [
+        "USB Charger",
+        "Type C",
+        "2.1A",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy USB Charger Type C 2.1A 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKRXW002",
+    "name": "USB Charger Type C 2.1A 1M - White",
+    "product_family": "Fabio",
+    "category": "Accessories",
+    "subcategory": "USB Chargers - 1 Module",
+    "specs": {
+      "ampere": 2.1,
+      "color": "White",
+      "mw": 1,
+      "type_detail": "USB Charger Type C 2.1A"
+    },
+    "variant": [
+      "AHFKRXB002"
+    ],
+    "pricing": {
+      "mrp": 1215,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-charger-type-c-2-1a-1m-white",
+      "keywords": [
+        "USB Charger",
+        "Type C",
+        "2.1A",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy USB Charger Type C 2.1A 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFGGXB002",
+    "name": "USB Socket for Data Transmission 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "LAN Sockets - 1 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "USB Socket for Data Transmission"
+    },
+    "variant": [
+      "AHFGGXW001"
+    ],
+    "pricing": {
+      "mrp": 2931,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-socket-data-transmission-1m-velvet-black",
+      "keywords": [
+        "USB Socket",
+        "Data Transmission",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy USB Socket for Data Transmission 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFGGXW001",
+    "name": "USB Socket for Data Transmission 1M - White",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "LAN Sockets - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "USB Socket for Data Transmission"
+    },
+    "variant": [
+      "AHFGGXB002"
+    ],
+    "pricing": {
+      "mrp": 1622,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "usb-socket-data-transmission-1m-white",
+      "keywords": [
+        "USB Socket",
+        "Data Transmission",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy USB Socket for Data Transmission 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKXXB061",
+    "name": "HDMI Socket 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "TV Sockets - 1 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "HDMI Socket"
+    },
+    "variant": [
+      "AHFKXXW061"
+    ],
+    "pricing": {
+      "mrp": 2931,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "hdmi-socket-1m-velvet-black",
+      "keywords": [
+        "HDMI Socket",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy HDMI Socket 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKXXW061",
+    "name": "HDMI Socket 1M - White",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "TV Sockets - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "HDMI Socket"
+    },
+    "variant": [
+      "AHFKXXB061"
+    ],
+    "pricing": {
+      "mrp": 1622,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "hdmi-socket-1m-white",
+      "keywords": [
+        "HDMI Socket",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy HDMI Socket 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKXXB062",
+    "name": "VGA Socket 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "TV Sockets - 1 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "VGA Socket"
+    },
+    "variant": [
+      "AHFKXXW062"
+    ],
+    "pricing": {
+      "mrp": 2931,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "vga-socket-1m-velvet-black",
+      "keywords": [
+        "VGA Socket",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy VGA Socket 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKXXW062",
+    "name": "VGA Socket 1M - White",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "TV Sockets - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "VGA Socket"
+    },
+    "variant": [
+      "AHFKXXB062"
+    ],
+    "pricing": {
+      "mrp": 1622,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "6"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "vga-socket-1m-white",
+      "keywords": [
+        "VGA Socket",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy VGA Socket 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKPXB001",
+    "name": "RCA Socket 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "TV Sockets - 1 Module",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "RCA Socket"
+    },
+    "variant": [
+      "AHFKPXW001"
+    ],
+    "pricing": {
+      "mrp": 2931,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rca-socket-1m-velvet-black",
+      "keywords": [
+        "RCA Socket",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy RCA Socket 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFKPXW001",
+    "name": "RCA Socket 1M - White",
+    "product_family": "Fabio",
+    "category": "Data Sockets",
+    "subcategory": "TV Sockets - 1 Module",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "RCA Socket"
+    },
+    "variant": [
+      "AHFKPXB001"
+    ],
+    "pricing": {
+      "mrp": 1622,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "rca-socket-1m-white",
+      "keywords": [
+        "RCA Socket",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy RCA Socket 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSMXB201",
+    "name": "Motor Starter 20A 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 20,
+      "color": "Velvet Black",
+      "mw": 2,
+      "type_detail": "20A Motor Starter"
+    },
+    "variant": [
+      "AHFSMXW201"
+    ],
+    "pricing": {
+      "mrp": 671,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-20a-2m-velvet-black",
+      "keywords": [
+        "Motor Starter",
+        "20A",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Motor Starter 20A 2M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSMXW201",
+    "name": "Motor Starter 20A 2M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 20,
+      "color": "White",
+      "mw": 2,
+      "type_detail": "20A Motor Starter"
+    },
+    "variant": [
+      "AHFSMXB201"
+    ],
+    "pricing": {
+      "mrp": 502,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-20a-2m-white",
+      "keywords": [
+        "Motor Starter",
+        "20A",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Motor Starter 20A 2M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSMXB251",
+    "name": "Motor Starter 25A 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "Velvet Black",
+      "mw": 2,
+      "type_detail": "25A Motor Starter"
+    },
+    "variant": [
+      "AHFSMXW251"
+    ],
+    "pricing": {
+      "mrp": 694,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-25a-2m-velvet-black",
+      "keywords": [
+        "Motor Starter",
+        "25A",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Motor Starter 25A 2M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSMXW251",
+    "name": "Motor Starter 25A 2M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "White",
+      "mw": 2,
+      "type_detail": "25A Motor Starter"
+    },
+    "variant": [
+      "AHFSMXB251"
+    ],
+    "pricing": {
+      "mrp": 520,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-25a-2m-white",
+      "keywords": [
+        "Motor Starter",
+        "25A",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Motor Starter 25A 2M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSMXB321",
+    "name": "Motor Starter 32A 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 32,
+      "color": "Velvet Black",
+      "mw": 2,
+      "type_detail": "32A Motor Starter"
+    },
+    "variant": [
+      "AHFSMXW321"
+    ],
+    "pricing": {
+      "mrp": 775,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-32a-2m-velvet-black",
+      "keywords": [
+        "Motor Starter",
+        "32A",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Motor Starter 32A 2M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFSMXW321",
+    "name": "Motor Starter 32A 2M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 32,
+      "color": "White",
+      "mw": 2,
+      "type_detail": "32A Motor Starter"
+    },
+    "variant": [
+      "AHFSMXB321"
+    ],
+    "pricing": {
+      "mrp": 580,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-32a-2m-white",
+      "keywords": [
+        "Motor Starter",
+        "32A",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Motor Starter 32A 2M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DHFNCSPA01000EB",
+    "name": "Mini MCB 10A SP Type C 3kA 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "specs": {
+      "ampere": 10,
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "10A SP Type C Mini MCB 3kA"
+    },
+    "variant": [
+      "DHFNCSPA010"
+    ],
+    "pricing": {
+      "mrp": 370,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-10a-sp-type-c-3ka-1m-velvet-black",
+      "keywords": [
+        "Mini MCB",
+        "10A",
+        "SP",
+        "Type C",
+        "3kA",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mini MCB 10A SP Type C 3kA 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DHFNCSPA010",
+    "name": "Mini MCB 10A SP Type C 3kA 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "type_detail": "10A SP Type C Mini MCB 3kA"
+    },
+    "variant": [
+      "DHFNCSPA01000EB"
+    ],
+    "pricing": {
+      "mrp": 280,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-10a-sp-type-c-3ka-1m-white",
+      "keywords": [
+        "Mini MCB",
+        "10A",
+        "SP",
+        "Type C",
+        "3kA",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mini MCB 10A SP Type C 3kA 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DHFNCSPA01600EB",
+    "name": "Mini MCB 16A SP Type C 3kA 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "specs": {
+      "ampere": 16,
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "16A SP Type C Mini MCB 3kA"
+    },
+    "variant": [
+      "DHFNCSPA016"
+    ],
+    "pricing": {
+      "mrp": 370,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-16a-sp-type-c-3ka-1m-velvet-black",
+      "keywords": [
+        "Mini MCB",
+        "16A",
+        "SP",
+        "Type C",
+        "3kA",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mini MCB 16A SP Type C 3kA 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DHFNCSPA016",
+    "name": "Mini MCB 16A SP Type C 3kA 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "specs": {
+      "ampere": 16,
+      "color": "White",
+      "mw": 1,
+      "type_detail": "16A SP Type C Mini MCB 3kA"
+    },
+    "variant": [
+      "DHFNCSPA01600EB"
+    ],
+    "pricing": {
+      "mrp": 280,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-16a-sp-type-c-3ka-1m-white",
+      "keywords": [
+        "Mini MCB",
+        "16A",
+        "SP",
+        "Type C",
+        "3kA",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mini MCB 16A SP Type C 3kA 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DHFNCSPA02000EB",
+    "name": "Mini MCB 20A SP Type C 3kA 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "specs": {
+      "ampere": 20,
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "20A SP Type C Mini MCB 3kA"
+    },
+    "variant": [
+      "DHFNCSPA020"
+    ],
+    "pricing": {
+      "mrp": 370,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-20a-sp-type-c-3ka-1m-velvet-black",
+      "keywords": [
+        "Mini MCB",
+        "20A",
+        "SP",
+        "Type C",
+        "3kA",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mini MCB 20A SP Type C 3kA 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DHFNCSPA020",
+    "name": "Mini MCB 20A SP Type C 3kA 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "specs": {
+      "ampere": 20,
+      "color": "White",
+      "mw": 1,
+      "type_detail": "20A SP Type C Mini MCB 3kA"
+    },
+    "variant": [
+      "DHFNCSPA02000EB"
+    ],
+    "pricing": {
+      "mrp": 280,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-20a-sp-type-c-3ka-1m-white",
+      "keywords": [
+        "Mini MCB",
+        "20A",
+        "SP",
+        "Type C",
+        "3kA",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mini MCB 20A SP Type C 3kA 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DHFNCSPA02500EB",
+    "name": "Mini MCB 25A SP Type C 3kA 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "specs": {
+      "ampere": 25,
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "25A SP Type C Mini MCB 3kA"
+    },
+    "variant": [
+      "DHFNCSPA025"
+    ],
+    "pricing": {
+      "mrp": 370,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-25a-sp-type-c-3ka-1m-velvet-black",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "SP",
+        "Type C",
+        "3kA",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mini MCB 25A SP Type C 3kA 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DHFNCSPA025",
+    "name": "Mini MCB 25A SP Type C 3kA 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "specs": {
+      "ampere": 25,
+      "color": "White",
+      "mw": 1,
+      "type_detail": "25A SP Type C Mini MCB 3kA"
+    },
+    "variant": [
+      "DHFNCSPA02500EB"
+    ],
+    "pricing": {
+      "mrp": 280,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-25a-sp-type-c-3ka-1m-white",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "SP",
+        "Type C",
+        "3kA",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mini MCB 25A SP Type C 3kA 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DHFNCSPA03200EB",
+    "name": "Mini MCB 32A SP Type C 3kA 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "specs": {
+      "ampere": 32,
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "32A SP Type C Mini MCB 3kA"
+    },
+    "variant": [
+      "DHFNCSPA032"
+    ],
+    "pricing": {
+      "mrp": 370,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-32a-sp-type-c-3ka-1m-velvet-black",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "SP",
+        "Type C",
+        "3kA",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mini MCB 32A SP Type C 3kA 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DHFNCSPA032",
+    "name": "Mini MCB 32A SP Type C 3kA 1M - White",
+    "product_family": "Fabio",
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "specs": {
+      "ampere": 32,
+      "color": "White",
+      "mw": 1,
+      "type_detail": "32A SP Type C Mini MCB 3kA"
+    },
+    "variant": [
+      "DHFNCSPA03200EB"
+    ],
+    "pricing": {
+      "mrp": 280,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-32a-sp-type-c-3ka-1m-white",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "SP",
+        "Type C",
+        "3kA",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Mini MCB 32A SP Type C 3kA 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOBV01",
+    "name": "Plexy Glass Plate 1M - Black",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Black",
+      "mw": 1,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 275,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-1m-black",
+      "keywords": [
+        "Plexy Glass Plate",
+        "1M",
+        "Black",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 1M Black from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOLV01",
+    "name": "Plexy Glass Plate 1M - Gold",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Gold",
+      "mw": 1,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 275,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-1m-gold",
+      "keywords": [
+        "Plexy Glass Plate",
+        "1M",
+        "Gold",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 1M Gold from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOWV01",
+    "name": "Plexy Glass Plate 1M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 275,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-1m-white",
+      "keywords": [
+        "Plexy Glass Plate",
+        "1M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 1M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOAV01",
+    "name": "Plexy Glass Plate 1M - Marble",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Marble",
+      "mw": 1,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 275,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-1m-marble",
+      "keywords": [
+        "Plexy Glass Plate",
+        "1M",
+        "Marble",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 1M Marble from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOBV02",
+    "name": "Plexy Glass Plate 2M - Black",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Black",
+      "mw": 2,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 275,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-2m-black",
+      "keywords": [
+        "Plexy Glass Plate",
+        "2M",
+        "Black",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 2M Black from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOLV02",
+    "name": "Plexy Glass Plate 2M - Gold",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Gold",
+      "mw": 2,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 275,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-2m-gold",
+      "keywords": [
+        "Plexy Glass Plate",
+        "2M",
+        "Gold",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 2M Gold from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOWV02",
+    "name": "Plexy Glass Plate 2M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 275,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-2m-white",
+      "keywords": [
+        "Plexy Glass Plate",
+        "2M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 2M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOAV02",
+    "name": "Plexy Glass Plate 2M - Marble",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Marble",
+      "mw": 2,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 275,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-2m-marble",
+      "keywords": [
+        "Plexy Glass Plate",
+        "2M",
+        "Marble",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 2M Marble from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOBV03",
+    "name": "Plexy Glass Plate 3M - Black",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Black",
+      "mw": 3,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 305,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-3m-black",
+      "keywords": [
+        "Plexy Glass Plate",
+        "3M",
+        "Black",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 3M Black from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOLV03",
+    "name": "Plexy Glass Plate 3M - Gold",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Gold",
+      "mw": 3,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 305,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-3m-gold",
+      "keywords": [
+        "Plexy Glass Plate",
+        "3M",
+        "Gold",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 3M Gold from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOWV03",
+    "name": "Plexy Glass Plate 3M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 3,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 305,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-3m-white",
+      "keywords": [
+        "Plexy Glass Plate",
+        "3M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 3M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOAV03",
+    "name": "Plexy Glass Plate 3M - Marble",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Marble",
+      "mw": 3,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 305,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-3m-marble",
+      "keywords": [
+        "Plexy Glass Plate",
+        "3M",
+        "Marble",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 3M Marble from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOBH03",
+    "name": "Plexy Glass Plate 3M Without Pillar - Black",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Black",
+      "mw": 3,
+      "type_detail": "Plexy Glass Plate Without Pillar",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 305,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-3m-without-pillar-black",
+      "keywords": [
+        "Plexy Glass Plate",
+        "3M",
+        "Without Pillar",
+        "Black",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 3M Without Pillar Black from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOLH03",
+    "name": "Plexy Glass Plate 3M Without Pillar - Gold",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Gold",
+      "mw": 3,
+      "type_detail": "Plexy Glass Plate Without Pillar",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 305,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-3m-without-pillar-gold",
+      "keywords": [
+        "Plexy Glass Plate",
+        "3M",
+        "Without Pillar",
+        "Gold",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 3M Without Pillar Gold from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOWH03",
+    "name": "Plexy Glass Plate 3M Without Pillar - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 3,
+      "type_detail": "Plexy Glass Plate Without Pillar",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 305,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-3m-without-pillar-white",
+      "keywords": [
+        "Plexy Glass Plate",
+        "3M",
+        "Without Pillar",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 3M Without Pillar White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOAH03",
+    "name": "Plexy Glass Plate 3M Without Pillar - Marble",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Marble",
+      "mw": 3,
+      "type_detail": "Plexy Glass Plate Without Pillar",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 305,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-3m-without-pillar-marble",
+      "keywords": [
+        "Plexy Glass Plate",
+        "3M",
+        "Without Pillar",
+        "Marble",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 3M Without Pillar Marble from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOBV04",
+    "name": "Plexy Glass Plate 4M - Black",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Black",
+      "mw": 4,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 376,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-4m-black",
+      "keywords": [
+        "Plexy Glass Plate",
+        "4M",
+        "Black",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 4M Black from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOLV04",
+    "name": "Plexy Glass Plate 4M - Gold",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Gold",
+      "mw": 4,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 376,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-4m-gold",
+      "keywords": [
+        "Plexy Glass Plate",
+        "4M",
+        "Gold",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 4M Gold from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOWV04",
+    "name": "Plexy Glass Plate 4M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 4,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 376,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-4m-white",
+      "keywords": [
+        "Plexy Glass Plate",
+        "4M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 4M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOAV04",
+    "name": "Plexy Glass Plate 4M - Marble",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Marble",
+      "mw": 4,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 376,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-4m-marble",
+      "keywords": [
+        "Plexy Glass Plate",
+        "4M",
+        "Marble",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 4M Marble from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOBV06",
+    "name": "Plexy Glass Plate 6M - Black",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Black",
+      "mw": 6,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 524,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-6m-black",
+      "keywords": [
+        "Plexy Glass Plate",
+        "6M",
+        "Black",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 6M Black from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOLV06",
+    "name": "Plexy Glass Plate 6M - Gold",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Gold",
+      "mw": 6,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 524,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-6m-gold",
+      "keywords": [
+        "Plexy Glass Plate",
+        "6M",
+        "Gold",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 6M Gold from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOWV06",
+    "name": "Plexy Glass Plate 6M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 6,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 524,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-6m-white",
+      "keywords": [
+        "Plexy Glass Plate",
+        "6M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 6M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOAV06",
+    "name": "Plexy Glass Plate 6M - Marble",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Marble",
+      "mw": 6,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 524,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-6m-marble",
+      "keywords": [
+        "Plexy Glass Plate",
+        "6M",
+        "Marble",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 6M Marble from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOBH08",
+    "name": "Plexy Glass Plate 8M Horizontal - Black",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Black",
+      "mw": 8,
+      "type_detail": "Plexy Glass Plate Horizontal",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 689,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-8m-horizontal-black",
+      "keywords": [
+        "Plexy Glass Plate",
+        "8M",
+        "Horizontal",
+        "Black",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 8M Horizontal Black from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOLH08",
+    "name": "Plexy Glass Plate 8M Horizontal - Gold",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Gold",
+      "mw": 8,
+      "type_detail": "Plexy Glass Plate Horizontal",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 689,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-8m-horizontal-gold",
+      "keywords": [
+        "Plexy Glass Plate",
+        "8M",
+        "Horizontal",
+        "Gold",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 8M Horizontal Gold from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOWH08",
+    "name": "Plexy Glass Plate 8M Horizontal - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 8,
+      "type_detail": "Plexy Glass Plate Horizontal",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 689,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-8m-horizontal-white",
+      "keywords": [
+        "Plexy Glass Plate",
+        "8M",
+        "Horizontal",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 8M Horizontal White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOAH08",
+    "name": "Plexy Glass Plate 8M Horizontal - Marble",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Marble",
+      "mw": 8,
+      "type_detail": "Plexy Glass Plate Horizontal",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 689,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-8m-horizontal-marble",
+      "keywords": [
+        "Plexy Glass Plate",
+        "8M",
+        "Horizontal",
+        "Marble",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 8M Horizontal Marble from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLOWV01",
+    "name": "PC Plate 1M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "PC Plate",
+      "material": "PC (Polycarbonate)"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 72,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-1m-white",
+      "keywords": [
+        "PC Plate",
+        "1M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy PC Plate 1M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLOWV02",
+    "name": "PC Plate 2M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "PC Plate",
+      "material": "PC (Polycarbonate)"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 72,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-2m-white",
+      "keywords": [
+        "PC Plate",
+        "2M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy PC Plate 2M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLOWV03",
+    "name": "PC Plate 3M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 3,
+      "type_detail": "PC Plate",
+      "material": "PC (Polycarbonate)"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 78,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-3m-white",
+      "keywords": [
+        "PC Plate",
+        "3M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy PC Plate 3M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLOWH03",
+    "name": "PC Plate 3M Without Pillar - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 3,
+      "type_detail": "PC Plate Without Pillar",
+      "material": "PC (Polycarbonate)"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 78,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-3m-without-pillar-white",
+      "keywords": [
+        "PC Plate",
+        "3M",
+        "Without Pillar",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy PC Plate 3M Without Pillar White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLOWV04",
+    "name": "PC Plate 4M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 4,
+      "type_detail": "PC Plate",
+      "material": "PC (Polycarbonate)"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 98,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-4m-white",
+      "keywords": [
+        "PC Plate",
+        "4M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy PC Plate 4M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLOWV06",
+    "name": "PC Plate 6M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 6,
+      "type_detail": "PC Plate",
+      "material": "PC (Polycarbonate)"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 135,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-6m-white",
+      "keywords": [
+        "PC Plate",
+        "6M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy PC Plate 6M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLOWV07",
+    "name": "PC Plate 7M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 7,
+      "type_detail": "PC Plate",
+      "material": "PC (Polycarbonate)"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 135,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-7m-white",
+      "keywords": [
+        "PC Plate",
+        "7M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy PC Plate 7M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOBV08",
+    "name": "Plexy Glass Plate 8M Vertical - Black",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Black",
+      "mw": 8,
+      "type_detail": "Plexy Glass Plate Vertical",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 689,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-8m-vertical-black",
+      "keywords": [
+        "Plexy Glass Plate",
+        "8M",
+        "Vertical",
+        "Black",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 8M Vertical Black from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOLV08",
+    "name": "Plexy Glass Plate 8M Vertical - Gold",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Gold",
+      "mw": 8,
+      "type_detail": "Plexy Glass Plate Vertical",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 689,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-8m-vertical-gold",
+      "keywords": [
+        "Plexy Glass Plate",
+        "8M",
+        "Vertical",
+        "Gold",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 8M Vertical Gold from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOWV08",
+    "name": "Plexy Glass Plate 8M Vertical - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 8,
+      "type_detail": "Plexy Glass Plate Vertical",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 689,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-8m-vertical-white",
+      "keywords": [
+        "Plexy Glass Plate",
+        "8M",
+        "Vertical",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 8M Vertical White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOAV08",
+    "name": "Plexy Glass Plate 8M Vertical - Marble",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Marble",
+      "mw": 8,
+      "type_detail": "Plexy Glass Plate Vertical",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 689,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-8m-vertical-marble",
+      "keywords": [
+        "Plexy Glass Plate",
+        "8M",
+        "Vertical",
+        "Marble",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 8M Vertical Marble from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOBV09",
+    "name": "Plexy Glass Plate 9M - Black",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Black",
+      "mw": 9,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 756,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-9m-black",
+      "keywords": [
+        "Plexy Glass Plate",
+        "9M",
+        "Black",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 9M Black from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOLV09",
+    "name": "Plexy Glass Plate 9M - Gold",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Gold",
+      "mw": 9,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 756,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-9m-gold",
+      "keywords": [
+        "Plexy Glass Plate",
+        "9M",
+        "Gold",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 9M Gold from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOWV09",
+    "name": "Plexy Glass Plate 9M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 9,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 756,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-9m-white",
+      "keywords": [
+        "Plexy Glass Plate",
+        "9M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 9M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOAV09",
+    "name": "Plexy Glass Plate 9M - Marble",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Marble",
+      "mw": 9,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 756,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-9m-marble",
+      "keywords": [
+        "Plexy Glass Plate",
+        "9M",
+        "Marble",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 9M Marble from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOBV12",
+    "name": "Plexy Glass Plate 12M - Black",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Black",
+      "mw": 12,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 809,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-12m-black",
+      "keywords": [
+        "Plexy Glass Plate",
+        "12M",
+        "Black",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 12M Black from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOLV12",
+    "name": "Plexy Glass Plate 12M - Gold",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Gold",
+      "mw": 12,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 809,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-12m-gold",
+      "keywords": [
+        "Plexy Glass Plate",
+        "12M",
+        "Gold",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 12M Gold from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOWV12",
+    "name": "Plexy Glass Plate 12M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 12,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 809,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-12m-white",
+      "keywords": [
+        "Plexy Glass Plate",
+        "12M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 12M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOAV12",
+    "name": "Plexy Glass Plate 12M - Marble",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Marble",
+      "mw": 12,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 809,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-12m-marble",
+      "keywords": [
+        "Plexy Glass Plate",
+        "12M",
+        "Marble",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 12M Marble from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOBV16",
+    "name": "Plexy Glass Plate 16M - Black",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Black",
+      "mw": 16,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 917,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-16m-black",
+      "keywords": [
+        "Plexy Glass Plate",
+        "16M",
+        "Black",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 16M Black from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOLV16",
+    "name": "Plexy Glass Plate 16M - Gold",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Gold",
+      "mw": 16,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 917,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-16m-gold",
+      "keywords": [
+        "Plexy Glass Plate",
+        "16M",
+        "Gold",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 16M Gold from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOWV16",
+    "name": "Plexy Glass Plate 16M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 16,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 917,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-16m-white",
+      "keywords": [
+        "Plexy Glass Plate",
+        "16M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 16M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOAV16",
+    "name": "Plexy Glass Plate 16M - Marble",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Marble",
+      "mw": 16,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 917,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-16m-marble",
+      "keywords": [
+        "Plexy Glass Plate",
+        "16M",
+        "Marble",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 16M Marble from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOBV18",
+    "name": "Plexy Glass Plate 18M - Black",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Black",
+      "mw": 18,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1087,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-18m-black",
+      "keywords": [
+        "Plexy Glass Plate",
+        "18M",
+        "Black",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 18M Black from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOLV18",
+    "name": "Plexy Glass Plate 18M - Gold",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Gold",
+      "mw": 18,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1087,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-18m-gold",
+      "keywords": [
+        "Plexy Glass Plate",
+        "18M",
+        "Gold",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 18M Gold from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOWV18",
+    "name": "Plexy Glass Plate 18M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 18,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1087,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-18m-white",
+      "keywords": [
+        "Plexy Glass Plate",
+        "18M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 18M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPTOAV18",
+    "name": "Plexy Glass Plate 18M - Marble",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Plexy Glass Plates without grid frames",
+    "specs": {
+      "color": "Marble",
+      "mw": 18,
+      "type_detail": "Plexy Glass Plate",
+      "material": "Plexy Glass"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1087,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "plexy-glass-plate-18m-marble",
+      "keywords": [
+        "Plexy Glass Plate",
+        "18M",
+        "Marble",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Plexy Glass Plate 18M Marble from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLOWH08",
+    "name": "PC Plate 8M Horizontal - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 8,
+      "type_detail": "PC Plate Horizontal",
+      "material": "PC (Polycarbonate)"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 180,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-8m-horizontal-white",
+      "keywords": [
+        "PC Plate",
+        "8M",
+        "Horizontal",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy PC Plate 8M Horizontal White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLOWV08",
+    "name": "PC Plate 8M Vertical - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 8,
+      "type_detail": "PC Plate Vertical",
+      "material": "PC (Polycarbonate)"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 180,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-8m-vertical-white",
+      "keywords": [
+        "PC Plate",
+        "8M",
+        "Vertical",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy PC Plate 8M Vertical White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLOWV09",
+    "name": "PC Plate 9M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 9,
+      "type_detail": "PC Plate",
+      "material": "PC (Polycarbonate)"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 206,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-9m-white",
+      "keywords": [
+        "PC Plate",
+        "9M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy PC Plate 9M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLOWV12",
+    "name": "PC Plate 12M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 12,
+      "type_detail": "PC Plate",
+      "material": "PC (Polycarbonate)"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 212,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-12m-white",
+      "keywords": [
+        "PC Plate",
+        "12M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy PC Plate 12M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLOWV16",
+    "name": "PC Plate 16M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 16,
+      "type_detail": "PC Plate",
+      "material": "PC (Polycarbonate)"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 255,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-16m-white",
+      "keywords": [
+        "PC Plate",
+        "16M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy PC Plate 16M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLOWV18",
+    "name": "PC Plate 18M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 18,
+      "type_detail": "PC Plate",
+      "material": "PC (Polycarbonate)"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 266,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-18m-white",
+      "keywords": [
+        "PC Plate",
+        "18M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy PC Plate 18M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLIWV01",
+    "name": "Inner Plate Grid Frame 1M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "Inner Plate Grid Frame",
+      "material": "Grid Frame"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 36,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-grid-frame-1m-white",
+      "keywords": [
+        "Inner Plate",
+        "Grid Frame",
+        "1M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Inner Plate Grid Frame 1M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLIWV02",
+    "name": "Inner Plate Grid Frame 2M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Inner Plate Grid Frame",
+      "material": "Grid Frame"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 36,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-grid-frame-2m-white",
+      "keywords": [
+        "Inner Plate",
+        "Grid Frame",
+        "2M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Inner Plate Grid Frame 2M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLIWV03",
+    "name": "Inner Plate Grid Frame 3M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "color": "White",
+      "mw": 3,
+      "type_detail": "Inner Plate Grid Frame",
+      "material": "Grid Frame"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 44,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-grid-frame-3m-white",
+      "keywords": [
+        "Inner Plate",
+        "Grid Frame",
+        "3M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Inner Plate Grid Frame 3M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLIWH03",
+    "name": "Inner Plate Grid Frame 3M Without Pillar - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "color": "White",
+      "mw": 3,
+      "type_detail": "Inner Plate Grid Frame Without Pillar",
+      "material": "Grid Frame"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 44,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-grid-frame-3m-without-pillar-white",
+      "keywords": [
+        "Inner Plate",
+        "Grid Frame",
+        "3M",
+        "Without Pillar",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Inner Plate Grid Frame 3M Without Pillar White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLIWV04",
+    "name": "Inner Plate Grid Frame 4M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "color": "White",
+      "mw": 4,
+      "type_detail": "Inner Plate Grid Frame",
+      "material": "Grid Frame"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 54,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-grid-frame-4m-white",
+      "keywords": [
+        "Inner Plate",
+        "Grid Frame",
+        "4M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Inner Plate Grid Frame 4M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLIWV06",
+    "name": "Inner Plate Grid Frame 6M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "color": "White",
+      "mw": 6,
+      "type_detail": "Inner Plate Grid Frame",
+      "material": "Grid Frame"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 73,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-grid-frame-6m-white",
+      "keywords": [
+        "Inner Plate",
+        "Grid Frame",
+        "6M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Inner Plate Grid Frame 6M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLIWV07",
+    "name": "Inner Plate Grid Frame 7M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "color": "White",
+      "mw": 7,
+      "type_detail": "Inner Plate Grid Frame",
+      "material": "Grid Frame"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 73,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-grid-frame-7m-white",
+      "keywords": [
+        "Inner Plate",
+        "Grid Frame",
+        "7M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Inner Plate Grid Frame 7M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLIWH08",
+    "name": "Inner Plate Grid Frame 8M Horizontal - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "color": "White",
+      "mw": 8,
+      "type_detail": "Inner Plate Grid Frame Horizontal",
+      "material": "Grid Frame"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 97,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-grid-frame-8m-horizontal-white",
+      "keywords": [
+        "Inner Plate",
+        "Grid Frame",
+        "8M",
+        "Horizontal",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Inner Plate Grid Frame 8M Horizontal White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLIWV08",
+    "name": "Inner Plate Grid Frame 8M Vertical - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "color": "White",
+      "mw": 8,
+      "type_detail": "Inner Plate Grid Frame Vertical",
+      "material": "Grid Frame"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 97,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-grid-frame-8m-vertical-white",
+      "keywords": [
+        "Inner Plate",
+        "Grid Frame",
+        "8M",
+        "Vertical",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Inner Plate Grid Frame 8M Vertical White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLIWV09",
+    "name": "Inner Plate Grid Frame 9M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "color": "White",
+      "mw": 9,
+      "type_detail": "Inner Plate Grid Frame",
+      "material": "Grid Frame"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 110,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-grid-frame-9m-white",
+      "keywords": [
+        "Inner Plate",
+        "Grid Frame",
+        "9M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Inner Plate Grid Frame 9M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLIWV12",
+    "name": "Inner Plate Grid Frame 12M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "color": "White",
+      "mw": 12,
+      "type_detail": "Inner Plate Grid Frame",
+      "material": "Grid Frame"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 111,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-grid-frame-12m-white",
+      "keywords": [
+        "Inner Plate",
+        "Grid Frame",
+        "12M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Inner Plate Grid Frame 12M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLIWV16",
+    "name": "Inner Plate Grid Frame 16M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "color": "White",
+      "mw": 16,
+      "type_detail": "Inner Plate Grid Frame",
+      "material": "Grid Frame"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 133,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-grid-frame-16m-white",
+      "keywords": [
+        "Inner Plate",
+        "Grid Frame",
+        "16M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Inner Plate Grid Frame 16M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHXPLIWV18",
+    "name": "Inner Plate Grid Frame 18M - White",
+    "product_family": "Fabio Art",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "color": "White",
+      "mw": 18,
+      "type_detail": "Inner Plate Grid Frame",
+      "material": "Grid Frame"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 141,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-grid-frame-18m-white",
+      "keywords": [
+        "Inner Plate",
+        "Grid Frame",
+        "18M",
+        "White",
+        "Fabio Art"
+      ],
+      "meta_description": "Buy Inner Plate Grid Frame 18M White from the Fabio Art range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCBV01",
+    "name": "Cover Plate 1M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 1,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLBWV01",
+      "AHFPLCWV01"
+    ],
+    "pricing": {
+      "mrp": 160,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-1m-velvet-black",
+      "keywords": [
+        "Cover Plate",
+        "1M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 1M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLBWV01",
+    "name": "Cover Plate 1M - Chrome Bezel",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Chrome Bezel",
+      "mw": 1,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV01",
+      "AHFPLCWV01"
+    ],
+    "pricing": {
+      "mrp": 120,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-1m-chrome-bezel",
+      "keywords": [
+        "Cover Plate",
+        "1M",
+        "Chrome Bezel",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 1M Chrome Bezel from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCWV01",
+    "name": "Cover Plate 1M - White",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV01",
+      "AHFPLBWV01"
+    ],
+    "pricing": {
+      "mrp": 106,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-1m-white",
+      "keywords": [
+        "Cover Plate",
+        "1M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 1M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCBV02",
+    "name": "Cover Plate 2M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 2,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLBWV02",
+      "AHFPLCWV02"
+    ],
+    "pricing": {
+      "mrp": 160,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-2m-velvet-black",
+      "keywords": [
+        "Cover Plate",
+        "2M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 2M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLBWV02",
+    "name": "Cover Plate 2M - Chrome Bezel",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Chrome Bezel",
+      "mw": 2,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV02",
+      "AHFPLCWV02"
+    ],
+    "pricing": {
+      "mrp": 120,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-2m-chrome-bezel",
+      "keywords": [
+        "Cover Plate",
+        "2M",
+        "Chrome Bezel",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 2M Chrome Bezel from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCWV02",
+    "name": "Cover Plate 2M - White",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV02",
+      "AHFPLBWV02"
+    ],
+    "pricing": {
+      "mrp": 106,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-2m-white",
+      "keywords": [
+        "Cover Plate",
+        "2M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 2M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCBV03",
+    "name": "Cover Plate 3M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 3,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLBWV03",
+      "AHFPLCWV03"
+    ],
+    "pricing": {
+      "mrp": 181,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-3m-velvet-black",
+      "keywords": [
+        "Cover Plate",
+        "3M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 3M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLBWV03",
+    "name": "Cover Plate 3M - Chrome Bezel",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Chrome Bezel",
+      "mw": 3,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV03",
+      "AHFPLCWV03"
+    ],
+    "pricing": {
+      "mrp": 139,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-3m-chrome-bezel",
+      "keywords": [
+        "Cover Plate",
+        "3M",
+        "Chrome Bezel",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 3M Chrome Bezel from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCWV03",
+    "name": "Cover Plate 3M - White",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 3,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV03",
+      "AHFPLBWV03"
+    ],
+    "pricing": {
+      "mrp": 117,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-3m-white",
+      "keywords": [
+        "Cover Plate",
+        "3M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 3M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCBV04",
+    "name": "Cover Plate 4M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 4,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLBWV04",
+      "AHFPLCWV04"
+    ],
+    "pricing": {
+      "mrp": 223,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-4m-velvet-black",
+      "keywords": [
+        "Cover Plate",
+        "4M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 4M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLBWV04",
+    "name": "Cover Plate 4M - Chrome Bezel",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Chrome Bezel",
+      "mw": 4,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV04",
+      "AHFPLCWV04"
+    ],
+    "pricing": {
+      "mrp": 168,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-4m-chrome-bezel",
+      "keywords": [
+        "Cover Plate",
+        "4M",
+        "Chrome Bezel",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 4M Chrome Bezel from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCWV04",
+    "name": "Cover Plate 4M - White",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 4,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV04",
+      "AHFPLBWV04"
+    ],
+    "pricing": {
+      "mrp": 146,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-4m-white",
+      "keywords": [
+        "Cover Plate",
+        "4M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 4M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCBV06",
+    "name": "Cover Plate 6M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 6,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLBWV06",
+      "AHFPLCWV06"
+    ],
+    "pricing": {
+      "mrp": 311,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-6m-velvet-black",
+      "keywords": [
+        "Cover Plate",
+        "6M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 6M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLBWV06",
+    "name": "Cover Plate 6M - Chrome Bezel",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Chrome Bezel",
+      "mw": 6,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV06",
+      "AHFPLCWV06"
+    ],
+    "pricing": {
+      "mrp": 234,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-6m-chrome-bezel",
+      "keywords": [
+        "Cover Plate",
+        "6M",
+        "Chrome Bezel",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 6M Chrome Bezel from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCWV06",
+    "name": "Cover Plate 6M - White",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 6,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV06",
+      "AHFPLBWV06"
+    ],
+    "pricing": {
+      "mrp": 205,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-6m-white",
+      "keywords": [
+        "Cover Plate",
+        "6M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 6M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCBV08",
+    "name": "Cover Plate 8M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 8,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLBWV08",
+      "AHFPLCWV08"
+    ],
+    "pricing": {
+      "mrp": 407,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-8m-velvet-black",
+      "keywords": [
+        "Cover Plate",
+        "8M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 8M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLBWV08",
+    "name": "Cover Plate 8M - Chrome Bezel",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Chrome Bezel",
+      "mw": 8,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV08",
+      "AHFPLCWV08"
+    ],
+    "pricing": {
+      "mrp": 309,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-8m-chrome-bezel",
+      "keywords": [
+        "Cover Plate",
+        "8M",
+        "Chrome Bezel",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 8M Chrome Bezel from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCWV08",
+    "name": "Cover Plate 8M - White",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 8,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV08",
+      "AHFPLBWV08"
+    ],
+    "pricing": {
+      "mrp": 268,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-8m-white",
+      "keywords": [
+        "Cover Plate",
+        "8M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 8M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCBH08",
+    "name": "Cover Plate 8M Horizontal - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 8,
+      "type_detail": "Cover Plate Horizontal",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLBWH08",
+      "AHFPLCWH08"
+    ],
+    "pricing": {
+      "mrp": 407,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-8m-horizontal-velvet-black",
+      "keywords": [
+        "Cover Plate",
+        "8M",
+        "Horizontal",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 8M Horizontal Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLBWH08",
+    "name": "Cover Plate 8M Horizontal - Chrome Bezel",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Chrome Bezel",
+      "mw": 8,
+      "type_detail": "Cover Plate Horizontal",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBH08",
+      "AHFPLCWH08"
+    ],
+    "pricing": {
+      "mrp": 309,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-8m-horizontal-chrome-bezel",
+      "keywords": [
+        "Cover Plate",
+        "8M",
+        "Horizontal",
+        "Chrome Bezel",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 8M Horizontal Chrome Bezel from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCWH08",
+    "name": "Cover Plate 8M Horizontal - White",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 8,
+      "type_detail": "Cover Plate Horizontal",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBH08",
+      "AHFPLBWH08"
+    ],
+    "pricing": {
+      "mrp": 268,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-8m-horizontal-white",
+      "keywords": [
+        "Cover Plate",
+        "8M",
+        "Horizontal",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 8M Horizontal White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCBV09",
+    "name": "Cover Plate 9M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 9,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLBWV09",
+      "AHFPLCWV09"
+    ],
+    "pricing": {
+      "mrp": 468,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-9m-velvet-black",
+      "keywords": [
+        "Cover Plate",
+        "9M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 9M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLBWV09",
+    "name": "Cover Plate 9M - Chrome Bezel",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Chrome Bezel",
+      "mw": 9,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV09",
+      "AHFPLCWV09"
+    ],
+    "pricing": {
+      "mrp": 351,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-9m-chrome-bezel",
+      "keywords": [
+        "Cover Plate",
+        "9M",
+        "Chrome Bezel",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 9M Chrome Bezel from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCWV09",
+    "name": "Cover Plate 9M - White",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 9,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV09",
+      "AHFPLBWV09"
+    ],
+    "pricing": {
+      "mrp": 307,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-9m-white",
+      "keywords": [
+        "Cover Plate",
+        "9M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 9M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCBV12",
+    "name": "Cover Plate 12M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 12,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLBWV12",
+      "AHFPLCWV12"
+    ],
+    "pricing": {
+      "mrp": 474,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-12m-velvet-black",
+      "keywords": [
+        "Cover Plate",
+        "12M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 12M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLBWV12",
+    "name": "Cover Plate 12M - Chrome Bezel",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Chrome Bezel",
+      "mw": 12,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV12",
+      "AHFPLCWV12"
+    ],
+    "pricing": {
+      "mrp": 361,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-12m-chrome-bezel",
+      "keywords": [
+        "Cover Plate",
+        "12M",
+        "Chrome Bezel",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 12M Chrome Bezel from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCWV12",
+    "name": "Cover Plate 12M - White",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 12,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV12",
+      "AHFPLBWV12"
+    ],
+    "pricing": {
+      "mrp": 313,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-12m-white",
+      "keywords": [
+        "Cover Plate",
+        "12M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 12M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCBV16",
+    "name": "Cover Plate 16M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 16,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLBWV16",
+      "AHFPLCWV16"
+    ],
+    "pricing": {
+      "mrp": 574,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-16m-velvet-black",
+      "keywords": [
+        "Cover Plate",
+        "16M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 16M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLBWV16",
+    "name": "Cover Plate 16M - Chrome Bezel",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Chrome Bezel",
+      "mw": 16,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV16",
+      "AHFPLCWV16"
+    ],
+    "pricing": {
+      "mrp": 435,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-16m-chrome-bezel",
+      "keywords": [
+        "Cover Plate",
+        "16M",
+        "Chrome Bezel",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 16M Chrome Bezel from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCWV16",
+    "name": "Cover Plate 16M - White",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 16,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV16",
+      "AHFPLBWV16"
+    ],
+    "pricing": {
+      "mrp": 379,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-16m-white",
+      "keywords": [
+        "Cover Plate",
+        "16M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 16M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCBV18",
+    "name": "Cover Plate 18M - Velvet Black",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Velvet Black",
+      "mw": 18,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLBWV18",
+      "AHFPLCWV18"
+    ],
+    "pricing": {
+      "mrp": 601,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-18m-velvet-black",
+      "keywords": [
+        "Cover Plate",
+        "18M",
+        "Velvet Black",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 18M Velvet Black from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLBWV18",
+    "name": "Cover Plate 18M - Chrome Bezel",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "Chrome Bezel",
+      "mw": 18,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV18",
+      "AHFPLCWV18"
+    ],
+    "pricing": {
+      "mrp": 453,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-18m-chrome-bezel",
+      "keywords": [
+        "Cover Plate",
+        "18M",
+        "Chrome Bezel",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 18M Chrome Bezel from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "AHFPLCWV18",
+    "name": "Cover Plate 18M - White",
+    "product_family": "Fabio",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 18,
+      "type_detail": "Cover Plate",
+      "material": "Cover Plate"
+    },
+    "variant": [
+      "AHFPLCBV18",
+      "AHFPLBWV18"
+    ],
+    "pricing": {
+      "mrp": 395,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "cover-plate-18m-white",
+      "keywords": [
+        "Cover Plate",
+        "18M",
+        "White",
+        "Fabio"
+      ],
+      "meta_description": "Buy Cover Plate 18M White from the Fabio range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  }
+]
+

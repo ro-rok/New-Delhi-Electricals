@@ -1,0 +1,41 @@
+[
+  {
+    "sku": "65901CG",
+    "name": "Designer Plate, 1 Module, Charcoal Grey",
+    "product_family": "Penta",
+    "category": "Plates",
+    "subcategory": "Cover Plates without grid frames",
+    "specs": {
+      "module": 1,
+      "color": "Charcoal Grey",
+      "orientation": "Horizontal"
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": null,
+      "discount": null,
+      "selling_price": 117,
+      "std_pack": "20"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "designer-plate-1-module-charcoal-grey",
+      "keywords": [
+        "Designer Plate",
+        "1 Module",
+        "Charcoal Grey",
+        "Penta"
+      ],
+      "meta_description": "Buy Designer Plate, 1 Module, Charcoal Grey from the Penta range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Anchor"
+  }
+]
+

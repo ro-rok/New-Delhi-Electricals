@@ -185,6 +185,12 @@
         "productCount": 9
       },
       {
+        "id": "dimmers---2-module",
+        "name": "Dimmers - 2 Module",
+        "slug": "dimmers---2-module",
+        "productCount": 0
+      },
+      {
         "id": "modular-ir-dimmers",
         "name": "Modular IR Dimmers",
         "slug": "modular-ir-dimmers",
@@ -290,6 +296,12 @@
         "productCount": 20
       },
       {
+        "id": "cover-plates-without-grid-frames",
+        "name": "Cover Plates without grid frames",
+        "slug": "cover-plates-without-grid-frames",
+        "productCount": 33
+      },
+      {
         "id": "glass-plates-with-grid-frames",
         "name": "Glass Plates with grid frames",
         "slug": "glass-plates-with-grid-frames",
@@ -330,6 +342,18 @@
         "name": "Wood Plates without grid frames",
         "slug": "wood-plates-without-grid-frames",
         "productCount": 30
+      },
+      {
+        "id": "plexy-glass-plates-without-grid-frames",
+        "name": "Plexy Glass Plates without grid frames",
+        "slug": "plexy-glass-plates-without-grid-frames",
+        "productCount": 28
+      },
+      {
+        "id": "pc-plates-without-grid-frames",
+        "name": "PC Plates without grid frames",
+        "slug": "pc-plates-without-grid-frames",
+        "productCount": 7
       }
     ]
   },
