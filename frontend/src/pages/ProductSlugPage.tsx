@@ -5,9 +5,10 @@ import { Product } from '@/types/product';
 import { getProductBySlug, getProducts } from '@/api/products';
 import { useApp } from '@/contexts/AppContext';
 import { Button } from '@/components/ui/button';
+import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFab from '@/components/WhatsAppFab';
-import { 
+import {
   MessageCircle, Heart, GitCompare, Share2, ArrowLeft,
   ChevronLeft, ChevronRight, Download, FileText, Copy, Check, ShoppingCart
 } from 'lucide-react';
@@ -19,18 +20,18 @@ const ProductSlugPage = () => {
   const { brand, product_family, slug } = useParams<{ brand: string; product_family: string; slug: string }>();
   const navigate = useNavigate();
   const location = useLocation();
-  const { 
-    addToRecentlyViewed, 
-    trackProductView, 
-    toggleShortlist, 
-    isInShortlist, 
-    toggleComparison, 
-    isInComparison, 
+  const {
+    addToRecentlyViewed,
+    trackProductView,
+    toggleShortlist,
+    isInShortlist,
+    toggleComparison,
+    isInComparison,
     trackWhatsAppClick,
     addToCart,
     isInCart
   } = useApp();
-  
+
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -159,30 +160,10 @@ const ProductSlugPage = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">
-      {/* Minimal Navigation */}
-      <motion.nav 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-900"
-      >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <button
-            onClick={() => navigate(-1)}
-            className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-          >
-            <ArrowLeft className="h-5 w-5" />
-            <span className="text-sm font-medium">Back</span>
-          </button>
-          <button
-            onClick={handleShare}
-            className="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-          >
-            <Share2 className="h-5 w-5" />
-          </button>
-        </div>
-      </motion.nav>
+      <Header />
+      <div className="h-16" /> {/* Spacer for fixed header */}
 
-      <main className="pt-16">
+      <main>
         {/* Hero Image Section */}
         <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center justify-center bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black overflow-hidden">
           <AnimatePresence mode="wait">
@@ -397,8 +378,8 @@ const ProductSlugPage = () => {
                     transition={{ delay: 0.6 + idx * 0.05 }}
                     className={cn(
                       "flex items-center justify-between py-5 px-8",
-                      idx % 2 === 0 
-                        ? "bg-white dark:bg-black" 
+                      idx % 2 === 0
+                        ? "bg-white dark:bg-black"
                         : "bg-gray-50 dark:bg-gray-950"
                     )}
                   >
@@ -472,10 +453,10 @@ const ProductSlugPage = () => {
                       >
                         <div className="aspect-square bg-gray-50 dark:bg-gray-900 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                           {p.images && p.images.length > 0 && p.images[0] ? (
-                            <img 
-                              src={p.images[0]} 
-                              alt={p.name} 
-                              className="w-full h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300" 
+                            <img
+                              src={p.images[0]}
+                              alt={p.name}
+                              className="w-full h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
                             />
                           ) : (
                             <span className="text-4xl font-extralight text-gray-300 dark:text-gray-700">

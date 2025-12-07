@@ -54,20 +54,26 @@ def upload_image_bytes(
 def generate_signed_upload_params(
     folder: str = "catalog-products",
     allow_types: str = "image",
-    ttl_seconds: int = 600,
 ) -> Dict[str, Any]:
     """
-    Generate a short-lived signed upload payload for direct browser uploads.
+    Generate a signed upload payload for direct browser uploads.
 
     The frontend should POST to Cloudinary's upload API with these fields plus the file.
     
     Note: For resource_type="image" (default), Cloudinary does not include it in the signature.
     Only timestamp and folder are signed for image uploads.
+    
+    The timestamp must be the CURRENT time - Cloudinary will reject requests where the 
+    timestamp is more than 1 hour old.
     """
     _ensure_config()
-    timestamp = int(
-        (datetime.utcnow() + timedelta(seconds=ttl_seconds)).timestamp()
-    )
+    # Generate current timestamp (not future time)
+    # Cloudinary validates that the timestamp is within 1 hour of the current time
+    # Use time.time() which returns UTC timestamp directly
+    # datetime.utcnow().timestamp() is incorrect because it treats the naive UTC time as local time
+    import time
+    timestamp = int(time.time())
+    
     # For image uploads, Cloudinary only signs timestamp and folder
     # resource_type is not included in the signature when it's "image"
     params = {

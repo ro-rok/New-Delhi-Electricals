@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, Outlet, useLocation, Navigate } from 'react-router-dom';
-import { 
-  LayoutDashboard, Package, FolderOpen, Tags, FileUp, 
+import {
+  LayoutDashboard, Package, FolderOpen, Tags, FileUp,
   MessageSquare, Settings, LogOut, Menu, X, ChevronRight,
   Sun, Moon
 } from 'lucide-react';
@@ -33,7 +33,7 @@ const useAdminAuth = () => {
 const AdminLayout = () => {
   const location = useLocation();
   const { theme, setTheme } = useTheme();
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false); // Start closed on mobile
   const isAuthenticated = useAdminAuth();
 
   if (!isAuthenticated && location.pathname !== '/admin/login') {
@@ -46,15 +46,29 @@ const AdminLayout = () => {
 
   return (
     <div className="min-h-screen bg-background flex">
+      {/* Mobile overlay */}
+      <AnimatePresence>
+        {sidebarOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+            onClick={() => setSidebarOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+
       {/* Sidebar */}
       <AnimatePresence mode="wait">
-        {sidebarOpen && (
+        {(sidebarOpen || window.innerWidth >= 1024) && (
           <motion.aside
-            initial={{ width: 0, opacity: 0 }}
-            animate={{ width: 256, opacity: 1 }}
-            exit={{ width: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-y-0 left-0 z-50 w-64 bg-card border-r border-border flex flex-col lg:relative"
+            initial={{ x: -256 }}
+            animate={{ x: 0 }}
+            exit={{ x: -256 }}
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
+            className="fixed inset-y-0 left-0 z-50 w-64 bg-card border-r border-border flex flex-col lg:relative lg:translate-x-0"
           >
             <div className="p-6 border-b border-border">
               <Link to="/admin" className="flex items-center gap-3">
@@ -70,17 +84,22 @@ const AdminLayout = () => {
 
             <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
               {navItems.map((item) => {
-                const isActive = location.pathname === item.path || 
+                const isActive = location.pathname === item.path ||
                   (item.path !== '/admin' && location.pathname.startsWith(item.path));
                 return (
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all ${
-                      isActive
-                        ? 'bg-primary text-primary-foreground'
-                        : 'text-muted-foreground hover:bg-secondary hover:text-foreground'
-                    }`}
+                    onClick={() => {
+                      // Close sidebar on mobile when clicking a link
+                      if (window.innerWidth < 1024) {
+                        setSidebarOpen(false);
+                      }
+                    }}
+                    className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all ${isActive
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-muted-foreground hover:bg-secondary hover:text-foreground'
+                      }`}
                   >
                     <item.icon className="h-5 w-5" />
                     {item.label}
@@ -123,14 +142,19 @@ const AdminLayout = () => {
               variant="ghost"
               size="icon"
               onClick={() => setSidebarOpen(!sidebarOpen)}
+              className="lg:hidden"
             >
-              {sidebarOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              <Menu className="h-5 w-5" />
             </Button>
-            <div className="flex items-center gap-4">
-              <Link to="/" className="text-sm text-muted-foreground hover:text-foreground">
-                View Site →
-              </Link>
-            </div>
+            <Link
+              to="/"
+              className="ml-auto lg:ml-0 flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-secondary transition-colors"
+            >
+              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-sm">N</span>
+              </div>
+              <span className="font-semibold text-sm">New Delhi Electricals</span>
+            </Link>
           </div>
         </header>
 

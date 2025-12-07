@@ -16,7 +16,9 @@ import { getProductsByCategory, uploadImageToCloudinary, bulkUpdateProducts } fr
 import { Product } from '@/types/product';
 
 interface ProductFamily {
+  id: string;
   name: string;
+  color: string;
   products: Product[];
   representativeProduct: Product;
 }
@@ -25,12 +27,14 @@ interface PlatesBulkImageModalProps {
   isOpen: boolean;
   onClose: () => void;
   onSuccess?: () => void;
+  initialProduct?: Product | null;
 }
 
 const PlatesBulkImageModal = ({
   isOpen,
   onClose,
   onSuccess,
+  initialProduct,
 }: PlatesBulkImageModalProps) => {
   const [loading, setLoading] = useState(false);
   const [uploading, setUploading] = useState(false);
@@ -40,54 +44,88 @@ const PlatesBulkImageModal = ({
   const [dragActive, setDragActive] = useState(false);
   const [applying, setApplying] = useState(false);
 
-  // Group products by product family
+  // Group products by product family AND color
   const productFamilies = useMemo(() => {
     const families = new Map<string, Product[]>();
 
     products.forEach(product => {
       // Get product family from series or catalogSource
-      const familyName = product.series || 
-                        product.catalogSource?.product_family || 
-                        'Unknown Family';
-      
-      if (!families.has(familyName)) {
-        families.set(familyName, []);
+      const familyName = product.series ||
+        (product.catalogSource as any)?.product_family ||
+        'Unknown Family';
+
+      const color = product.specs?.color?.trim() || 'Unknown Color';
+
+      // Create a composite key: "FamilyName|Color"
+      const key = `${familyName}|${color}`;
+
+      if (!families.has(key)) {
+        families.set(key, []);
       }
-      families.get(familyName)!.push(product);
+      families.get(key)!.push(product);
     });
 
-    // Convert to array and select representative product (first one)
+    // Convert to array and sort
     return Array.from(families.entries())
-      .map(([name, prods]) => ({
-        name,
-        products: prods,
-        representativeProduct: prods[0], // First product as representative
-      }))
-      .sort((a, b) => a.name.localeCompare(b.name));
+      .map(([key, prods]) => {
+        const [name, color] = key.split('|');
+        return {
+          id: key, // Use composite key as ID
+          name,
+          color,
+          products: prods,
+          representativeProduct: prods[0],
+        };
+      })
+      .sort((a, b) => {
+        // Sort by family name first, then by color
+        const nameCompare = a.name.localeCompare(b.name);
+        if (nameCompare !== 0) return nameCompare;
+        return a.color.localeCompare(b.color);
+      });
   }, [products]);
 
-  // Get selected family and its color
+  // Get selected family data
   const selectedFamilyData = useMemo(() => {
     if (!selectedFamily) return null;
-    const family = productFamilies.find(f => f.name === selectedFamily);
+    const family = productFamilies.find(f => f.id === selectedFamily);
     if (!family) return null;
-    
-    // Get color from representative product
-    const representativeColor = family.representativeProduct.specs?.color?.trim() || '';
-    
-    // Filter products by color (only products with matching color)
-    const productsWithColor = family.products.filter(product => {
-      const productColor = product.specs?.color?.trim() || '';
-      return productColor && productColor.toLowerCase() === representativeColor.toLowerCase();
-    });
-    
+
     return {
       family,
-      color: representativeColor,
-      products: productsWithColor,
+      color: family.color,
+      products: family.products,
       totalProducts: family.products.length,
     };
   }, [selectedFamily, productFamilies]);
+
+  // Filter products based on initialProduct if provided
+  const displayedFamilies = useMemo(() => {
+    console.log('displayedFamilies - initialProduct:', initialProduct);
+    console.log('displayedFamilies - productFamilies:', productFamilies.length);
+
+    if (!initialProduct) {
+      console.log('No initialProduct, showing all families');
+      return productFamilies;
+    }
+
+    const targetFamily = initialProduct.series ||
+      (initialProduct.catalogSource as any)?.product_family ||
+      'Unknown Family';
+    const targetColor = initialProduct.specs?.color?.trim() || 'Unknown Color';
+    const targetKey = `${targetFamily}|${targetColor}`;
+
+    console.log('Filtering for targetKey:', targetKey);
+
+    // Only show the matching family+color group
+    const filtered = productFamilies.filter(f => {
+      console.log('Checking family:', f.id, 'against', targetKey);
+      return f.id === targetKey;
+    });
+
+    console.log('Filtered families:', filtered.length);
+    return filtered;
+  }, [productFamilies, initialProduct]);
 
   // Fetch Plates products when modal opens
   useEffect(() => {
@@ -100,6 +138,22 @@ const PlatesBulkImageModal = ({
       setProducts([]);
     }
   }, [isOpen]);
+
+  // Auto-select the matching family when initialProduct changes
+  useEffect(() => {
+    if (initialProduct && productFamilies.length > 0) {
+      const targetFamily = initialProduct.series ||
+        (initialProduct.catalogSource as any)?.product_family ||
+        'Unknown Family';
+      const targetColor = initialProduct.specs?.color?.trim() || 'Unknown Color';
+      const targetKey = `${targetFamily}|${targetColor}`;
+
+      const matchingFamily = productFamilies.find(f => f.id === targetKey);
+      if (matchingFamily) {
+        setSelectedFamily(matchingFamily.id);
+      }
+    }
+  }, [initialProduct, productFamilies]);
 
   const fetchPlatesProducts = async () => {
     setLoading(true);
@@ -179,15 +233,15 @@ const PlatesBulkImageModal = ({
     }
 
     if (selectedFamilyData.products.length === 0) {
-      toast.error(`No products found in "${selectedFamily}" with color "${selectedFamilyData.color}"`);
+      toast.error(`No products found in "${selectedFamilyData.family.name}" with color "${selectedFamilyData.color}"`);
       return;
     }
 
-    const colorInfo = selectedFamilyData.color 
-      ? ` with color "${selectedFamilyData.color}"` 
+    const colorInfo = selectedFamilyData.color
+      ? ` with color "${selectedFamilyData.color}"`
       : '';
     const confirmed = confirm(
-      `Are you sure you want to apply this image to ${selectedFamilyData.products.length} product${selectedFamilyData.products.length !== 1 ? 's' : ''} in "${selectedFamily}"${colorInfo}? This will replace all existing images.\n\nNote: Only products with matching color will be updated.`
+      `Are you sure you want to apply this image to ${selectedFamilyData.products.length} product${selectedFamilyData.products.length !== 1 ? 's' : ''} in "${selectedFamilyData.family.name}"${colorInfo}? This will replace all existing images.\n\nNote: Only products with matching color will be updated.`
     );
 
     if (!confirmed) return;
@@ -228,14 +282,13 @@ const PlatesBulkImageModal = ({
                 <Label className="text-base font-semibold mb-4 block">
                   Master Image
                 </Label>
-                
+
                 {!masterImageUrl ? (
                   <div
-                    className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors ${
-                      dragActive
-                        ? 'border-primary bg-primary/5'
-                        : 'border-muted-foreground/25'
-                    }`}
+                    className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors ${dragActive
+                      ? 'border-primary bg-primary/5'
+                      : 'border-muted-foreground/25'
+                      }`}
                     onDragEnter={handleDrag}
                     onDragLeave={handleDrag}
                     onDragOver={handleDrag}
@@ -306,27 +359,28 @@ const PlatesBulkImageModal = ({
             <Card>
               <CardContent className="p-6">
                 <Label className="text-base font-semibold mb-4 block">
-                  Product Families ({productFamilies.length})
+                  Product Families ({displayedFamilies.length})
                 </Label>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Select a product family to apply the master image. Only products with the same color as the representative product will be updated.
+                  {initialProduct
+                    ? `Showing products matching: ${initialProduct.series || 'Unknown'} - ${initialProduct.specs?.color || 'Unknown Color'}`
+                    : 'Select a product family to apply the master image. Only products with the same color as the representative product will be updated.'}
                 </p>
 
-                {productFamilies.length === 0 ? (
+                {displayedFamilies.length === 0 ? (
                   <div className="text-center py-8 text-muted-foreground">
                     <p>No product families found</p>
                   </div>
                 ) : (
                   <div className="space-y-2 max-h-64 overflow-y-auto">
-                    {productFamilies.map((family) => (
+                    {displayedFamilies.map((family) => (
                       <div
-                        key={family.name}
-                        className={`border rounded-lg p-4 cursor-pointer transition-colors ${
-                          selectedFamily === family.name
-                            ? 'border-primary bg-primary/5'
-                            : 'border-border hover:bg-muted/50'
-                        }`}
-                        onClick={() => setSelectedFamily(family.name)}
+                        key={family.id}
+                        className={`border rounded-lg p-4 cursor-pointer transition-colors ${selectedFamily === family.id
+                          ? 'border-primary bg-primary/5'
+                          : 'border-border hover:bg-muted/50'
+                          }`}
+                        onClick={() => setSelectedFamily(family.id)}
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-3 flex-1">
@@ -354,17 +408,15 @@ const PlatesBulkImageModal = ({
                               <p className="text-xs text-muted-foreground truncate">
                                 {family.representativeProduct.name}
                               </p>
-                              {family.representativeProduct.specs?.color && (
-                                <p className="text-xs text-primary mt-1">
-                                  Color: {family.representativeProduct.specs.color}
-                                </p>
-                              )}
+                              <p className="text-xs text-primary mt-1 font-medium">
+                                Color: {family.color}
+                              </p>
                             </div>
                             <Badge variant="secondary" className="text-xs">
                               {family.products.length} product{family.products.length !== 1 ? 's' : ''}
                             </Badge>
                           </div>
-                          {selectedFamily === family.name && (
+                          {selectedFamily === family.id && (
                             <Check className="h-5 w-5 text-primary ml-2 flex-shrink-0" />
                           )}
                         </div>
@@ -378,87 +430,87 @@ const PlatesBulkImageModal = ({
             {/* Selected Family Products */}
             {selectedFamilyData && (
               selectedFamilyData.products.length > 0 ? (
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <Label className="text-base font-semibold block">
-                        Products in "{selectedFamilyData.family.name}"
-                        {selectedFamilyData.color && (
-                          <span className="text-primary ml-2">
-                            (Color: {selectedFamilyData.color})
-                          </span>
-                        )}
-                      </Label>
-                      <p className="text-sm text-muted-foreground">
-                        {selectedFamilyData.products.length} product{selectedFamilyData.products.length !== 1 ? 's' : ''} with matching color will be updated
-                        {selectedFamilyData.totalProducts > selectedFamilyData.products.length && (
-                          <span className="text-muted-foreground/70 ml-1">
-                            (out of {selectedFamilyData.totalProducts} total in family)
-                          </span>
-                        )}
-                      </p>
-                    </div>
-                    {masterImageUrl && (
-                      <Button
-                        onClick={handleApplyToFamily}
-                        disabled={applying}
-                        className="gap-2"
-                      >
-                        {applying ? (
-                          <>
-                            <Loader2 className="h-4 w-4 animate-spin" />
-                            Applying...
-                          </>
-                        ) : (
-                          <>
-                            <Check className="h-4 w-4" />
-                            Apply Image to All
-                          </>
-                        )}
-                      </Button>
-                    )}
-                  </div>
-
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-h-64 overflow-y-auto">
-                    {selectedFamilyData.products.map((product) => (
-                      <div
-                        key={product.id}
-                        className="border rounded-lg p-2 bg-secondary/50"
-                      >
-                        <div className="aspect-square rounded bg-secondary mb-2 overflow-hidden">
-                          {product.images[0] ? (
-                            <img
-                              src={product.images[0]}
-                              alt={product.name}
-                              className="w-full h-full object-cover"
-                              onError={(e) => {
-                                const target = e.target as HTMLImageElement;
-                                target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100"%3E%3Crect width="100" height="100" fill="%23ddd"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%23999"%3EImage%3C/text%3E%3C/svg%3E';
-                              }}
-                            />
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div>
+                        <Label className="text-base font-semibold block">
+                          Products in "{selectedFamilyData.family.name}"
+                          {selectedFamilyData.color && (
+                            <span className="text-primary ml-2">
+                              (Color: {selectedFamilyData.color})
+                            </span>
+                          )}
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          {selectedFamilyData.products.length} product{selectedFamilyData.products.length !== 1 ? 's' : ''} with matching color will be updated
+                          {selectedFamilyData.totalProducts > selectedFamilyData.products.length && (
+                            <span className="text-muted-foreground/70 ml-1">
+                              (out of {selectedFamilyData.totalProducts} total in family)
+                            </span>
+                          )}
+                        </p>
+                      </div>
+                      {masterImageUrl && (
+                        <Button
+                          onClick={handleApplyToFamily}
+                          disabled={applying}
+                          className="gap-2"
+                        >
+                          {applying ? (
+                            <>
+                              <Loader2 className="h-4 w-4 animate-spin" />
+                              Applying...
+                            </>
                           ) : (
-                            <div className="w-full h-full flex items-center justify-center text-muted-foreground text-xs">
-                              No Image
-                            </div>
+                            <>
+                              <Check className="h-4 w-4" />
+                              Apply Image to All
+                            </>
+                          )}
+                        </Button>
+                      )}
+                    </div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-h-64 overflow-y-auto">
+                      {selectedFamilyData.products.map((product) => (
+                        <div
+                          key={product.id}
+                          className="border rounded-lg p-2 bg-secondary/50"
+                        >
+                          <div className="aspect-square rounded bg-secondary mb-2 overflow-hidden">
+                            {product.images[0] ? (
+                              <img
+                                src={product.images[0]}
+                                alt={product.name}
+                                className="w-full h-full object-cover"
+                                onError={(e) => {
+                                  const target = e.target as HTMLImageElement;
+                                  target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100"%3E%3Crect width="100" height="100" fill="%23ddd"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%23999"%3EImage%3C/text%3E%3C/svg%3E';
+                                }}
+                              />
+                            ) : (
+                              <div className="w-full h-full flex items-center justify-center text-muted-foreground text-xs">
+                                No Image
+                              </div>
+                            )}
+                          </div>
+                          <p className="text-xs font-medium truncate" title={product.name}>
+                            {product.name}
+                          </p>
+                          <p className="text-xs text-muted-foreground truncate" title={product.sku}>
+                            {product.sku}
+                          </p>
+                          {product.specs?.color && (
+                            <p className="text-xs text-primary truncate" title={`Color: ${product.specs.color}`}>
+                              {product.specs.color}
+                            </p>
                           )}
                         </div>
-                        <p className="text-xs font-medium truncate" title={product.name}>
-                          {product.name}
-                        </p>
-                        <p className="text-xs text-muted-foreground truncate" title={product.sku}>
-                          {product.sku}
-                        </p>
-                        {product.specs?.color && (
-                          <p className="text-xs text-primary truncate" title={`Color: ${product.specs.color}`}>
-                            {product.specs.color}
-                          </p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
               ) : (
                 <Card>
                   <CardContent className="p-6">

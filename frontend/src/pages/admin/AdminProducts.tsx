@@ -46,7 +46,7 @@ const AdminProducts = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [imageModalOpen, setImageModalOpen] = useState(false);
   const [selectedProductForImage, setSelectedProductForImage] = useState<Product | null>(null);
-  const [platesBulkModalOpen, setPlatesBulkModalOpen] = useState(false);
+  const [selectedProductForBulk, setSelectedProductForBulk] = useState<Product | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -111,7 +111,7 @@ const AdminProducts = () => {
   const handleImageScraper = (product: Product) => {
     // Check if product is in Plates category
     if (product.category === 'Plates') {
-      setPlatesBulkModalOpen(true);
+      setSelectedProductForBulk(product);
     } else {
       setSelectedProductForImage(product);
       setImageModalOpen(true);
@@ -154,13 +154,13 @@ const AdminProducts = () => {
 
   const handleSaveImages = async (images: string[]) => {
     if (!selectedProductForImage) return;
-    
+
     try {
       await updateProduct(selectedProductForImage.id, { images });
       // Update local state
-      setProducts(products.map(p => 
-        p.id === selectedProductForImage.id 
-          ? { ...p, images } 
+      setProducts(products.map(p =>
+        p.id === selectedProductForImage.id
+          ? { ...p, images }
           : p
       ));
       toast.success('Images updated successfully');
@@ -272,7 +272,14 @@ const AdminProducts = () => {
                         )}
                       </div>
                       <div>
-                        <p className="font-medium text-sm">{product.name}</p>
+                        <Link
+                          to={getProductUrl(product)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-sm hover:text-primary hover:underline transition-colors"
+                        >
+                          {product.name}
+                        </Link>
                         <p className="text-xs text-muted-foreground">{product.series}</p>
                       </div>
                     </div>
@@ -316,7 +323,7 @@ const AdminProducts = () => {
                           Edit
                         </DropdownMenuItem>
                         {product.category === 'Plates' ? (
-                          <DropdownMenuItem onClick={() => setPlatesBulkModalOpen(true)}>
+                          <DropdownMenuItem onClick={() => setSelectedProductForBulk(product)}>
                             <ImageIcon className="h-4 w-4 mr-2" />
                             Bulk Assign Images
                           </DropdownMenuItem>
@@ -326,7 +333,7 @@ const AdminProducts = () => {
                             Manage Images
                           </DropdownMenuItem>
                         )}
-                        <DropdownMenuItem 
+                        <DropdownMenuItem
                           className="text-destructive"
                           onClick={() => handleDelete(product)}
                         >
@@ -401,9 +408,10 @@ const AdminProducts = () => {
 
       {/* Plates Bulk Image Modal */}
       <PlatesBulkImageModal
-        isOpen={platesBulkModalOpen}
-        onClose={() => setPlatesBulkModalOpen(false)}
+        isOpen={!!selectedProductForBulk}
+        onClose={() => setSelectedProductForBulk(null)}
         onSuccess={handleBulkImageSuccess}
+        initialProduct={selectedProductForBulk}
       />
     </div>
   );

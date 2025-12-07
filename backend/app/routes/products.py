@@ -185,9 +185,19 @@ async def get_product_by_slug(slug: str, db: AsyncIOMotorDatabase = Depends(get_
     return ProductInDB(**doc)
 
 
+from bson import ObjectId
+from bson.errors import InvalidId
+
+# ... existing imports ...
+
 @router.get("/{product_id}", response_model=ProductInDB)
 async def get_product(product_id: str, db: AsyncIOMotorDatabase = Depends(get_db_dep)) -> Any:
-    doc = await db.products.find_one({"_id": product_id})
+    try:
+        query_id = ObjectId(product_id)
+    except InvalidId:
+        query_id = product_id
+        
+    doc = await db.products.find_one({"_id": query_id})
     if not doc:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
     doc["_id"] = str(doc["_id"])
@@ -204,8 +214,14 @@ async def update_product(
     update = {k: v for k, v in payload.model_dump(exclude_unset=True).items()}
     if not update:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="No fields to update")
+    
+    try:
+        query_id = ObjectId(product_id)
+    except InvalidId:
+        query_id = product_id
+
     res = await db.products.find_one_and_update(
-        {"_id": product_id},
+        {"_id": query_id},
         {"$set": update},
         return_document=True,
     )
@@ -221,6 +237,11 @@ async def delete_product(
     db: AsyncIOMotorDatabase = Depends(get_db_dep),
     admin=Depends(get_current_admin),
 ) -> None:
-    await db.products.delete_one({"_id": product_id})
+    try:
+        query_id = ObjectId(product_id)
+    except InvalidId:
+        query_id = product_id
+        
+    await db.products.delete_one({"_id": query_id})
     return None
 
