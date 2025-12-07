@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { X, Upload, Image as ImageIcon, Check, Loader2 } from 'lucide-react';
+import { X, Upload, Image as ImageIcon, Check, Loader2, PowerOff } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -43,6 +43,7 @@ const PlatesBulkImageModal = ({
   const [selectedFamily, setSelectedFamily] = useState<string | null>(null);
   const [dragActive, setDragActive] = useState(false);
   const [applying, setApplying] = useState(false);
+  const [markingComingSoon, setMarkingComingSoon] = useState(false);
 
   // Group products by product family AND color
   const productFamilies = useMemo(() => {
@@ -262,6 +263,44 @@ const PlatesBulkImageModal = ({
     }
   };
 
+  const handleDeactivateFamily = async () => {
+    if (!selectedFamily || !selectedFamilyData) {
+      toast.error('Please select a product family');
+      return;
+    }
+
+    if (selectedFamilyData.products.length === 0) {
+      toast.error(`No products found in "${selectedFamilyData.family.name}" with color "${selectedFamilyData.color}"`);
+      return;
+    }
+
+    const colorInfo = selectedFamilyData.color
+      ? ` with color "${selectedFamilyData.color}"`
+      : '';
+    const confirmed = confirm(
+      `Deactivate ${selectedFamilyData.products.length} product${selectedFamilyData.products.length !== 1 ? 's' : ''} in "${selectedFamilyData.family.name}"${colorInfo}?\n\nThese products will be hidden from the website.`
+    );
+
+    if (!confirmed) return;
+
+    setMarkingComingSoon(true); // Reusing state variable for loading
+    try {
+      const productIds = selectedFamilyData.products.map(p => p.id);
+      await bulkUpdateProducts(productIds, {
+        isActive: false
+      });
+      toast.success(`${productIds.length} product${productIds.length !== 1 ? 's' : ''} deactivated`);
+      onSuccess?.();
+      // Reset selection
+      setSelectedFamily(null);
+    } catch (error: any) {
+      console.error('Error deactivating products:', error);
+      toast.error(error.message || 'Failed to deactivate products');
+    } finally {
+      setMarkingComingSoon(false);
+    }
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -451,25 +490,45 @@ const PlatesBulkImageModal = ({
                           )}
                         </p>
                       </div>
-                      {masterImageUrl && (
+                      <div className="flex gap-2">
+                        {masterImageUrl && (
+                          <Button
+                            onClick={handleApplyToFamily}
+                            disabled={applying || markingComingSoon}
+                            className="gap-2"
+                          >
+                            {applying ? (
+                              <>
+                                <Loader2 className="h-4 w-4 animate-spin" />
+                                Applying...
+                              </>
+                            ) : (
+                              <>
+                                <Check className="h-4 w-4" />
+                                Apply Image to All
+                              </>
+                            )}
+                          </Button>
+                        )}
                         <Button
-                          onClick={handleApplyToFamily}
-                          disabled={applying}
-                          className="gap-2"
+                          onClick={handleDeactivateFamily}
+                          disabled={applying || markingComingSoon}
+                          variant="outline"
+                          className="gap-2 border-red-200 text-red-600 hover:bg-red-50 hover:text-red-700"
                         >
-                          {applying ? (
+                          {markingComingSoon ? (
                             <>
                               <Loader2 className="h-4 w-4 animate-spin" />
-                              Applying...
+                              Deactivating...
                             </>
                           ) : (
                             <>
-                              <Check className="h-4 w-4" />
-                              Apply Image to All
+                              <PowerOff className="h-4 w-4" />
+                              Deactivate
                             </>
                           )}
                         </Button>
-                      )}
+                      </div>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-h-64 overflow-y-auto">

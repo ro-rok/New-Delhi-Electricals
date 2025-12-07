@@ -59,6 +59,7 @@ const EditProductModal = ({
     meta_description: '',
     is_active: true,
     is_featured: false,
+    coming_soon: false,
   });
 
   // Specs State
@@ -132,8 +133,9 @@ const EditProductModal = ({
         std_pack: '', // Not available in Product type
         slug: productData.slug || '',
         meta_description: productData.description || '',
-        is_active: true, // Default, not available in Product type
+        is_active: productData.isActive ?? true,
         is_featured: productData.badge === 'popular' || false,
+        coming_soon: productData.comingSoon || false,
       });
 
       // Populate specs
@@ -143,7 +145,7 @@ const EditProductModal = ({
         color: productSpecs.color || '',
         mw: productSpecs.mw ? String(productSpecs.mw) : '',
         module_size: productSpecs.module_size || '',
-        has_indicator: productSpecs.has_indicator || false,
+        has_indicator: Boolean(productSpecs.has_indicator),
         type_detail: productSpecs.type_detail || '',
         channels: productSpecs.channels ? String(productSpecs.channels) : '',
         control_type: productSpecs.control_type || '',
@@ -221,7 +223,7 @@ const EditProductModal = ({
 
   const handleSaveImages = async (newImages: string[]) => {
     if (!product) return;
-    
+
     try {
       await updateProduct(product.id, { images: newImages });
       setImages(newImages);
@@ -281,6 +283,8 @@ const EditProductModal = ({
       images: images,
       specs: specsObj,
       description: formData.meta_description || undefined,
+      comingSoon: formData.coming_soon,
+      isActive: formData.is_active,
     };
 
     try {
@@ -748,6 +752,14 @@ const EditProductModal = ({
                         onCheckedChange={(checked) => handleSwitchChange('is_featured', checked)}
                       />
                       <Label htmlFor="is_featured">Featured</Label>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Switch
+                        id="coming_soon"
+                        checked={formData.coming_soon}
+                        onCheckedChange={(checked) => handleSwitchChange('coming_soon', checked)}
+                      />
+                      <Label htmlFor="coming_soon">Coming Soon</Label>
                     </div>
                   </div>
                 </CardContent>

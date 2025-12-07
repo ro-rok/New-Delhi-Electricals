@@ -28,6 +28,7 @@ class ProductSEO(BaseModel):
 class ProductStatus(BaseModel):
     is_active: bool = True
     is_featured: bool = False
+    coming_soon: bool = False
 
 
 class SwitchSpecs(BaseModel):

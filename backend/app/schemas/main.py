@@ -48,6 +48,7 @@ class ProductUpdate(BaseModel):
     datasheet_url: Optional[str] = None
     specs: Optional[Dict[str, Any]] = None
     description: Optional[str] = None
+    status: Optional[Dict[str, Any]] = None
 
 
 class ProductInDB(ProductBase):

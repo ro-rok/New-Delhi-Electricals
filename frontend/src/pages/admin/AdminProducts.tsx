@@ -37,6 +37,7 @@ const AdminProducts = () => {
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [brandFilter, setBrandFilter] = useState('all');
   const [productFamilyFilter, setProductFamilyFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
   const [products, setProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -88,9 +89,16 @@ const AdminProducts = () => {
       const matchesCategory = categoryFilter === 'all' || product.category === categoryFilter;
       const matchesBrand = brandFilter === 'all' || product.brand === brandFilter;
       const matchesProductFamily = productFamilyFilter === 'all' || product.series === productFamilyFilter;
-      return matchesSearch && matchesCategory && matchesBrand && matchesProductFamily;
+      const matchesActive = activeFilter === 'all' ||
+        (activeFilter === 'active' ? product.isActive !== false : product.isActive === false);
+      return matchesSearch && matchesCategory && matchesBrand && matchesProductFamily && matchesActive;
     });
-  }, [products, searchQuery, categoryFilter, brandFilter, productFamilyFilter]);
+  }, [products, searchQuery, categoryFilter, brandFilter, productFamilyFilter, activeFilter]);
+
+  // Reset page when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, categoryFilter, brandFilter, productFamilyFilter, activeFilter]);
 
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
   const paginatedProducts = filteredProducts.slice(
@@ -231,6 +239,16 @@ const AdminProducts = () => {
                 ))}
               </SelectContent>
             </Select>
+            <Select value={activeFilter} onValueChange={setActiveFilter}>
+              <SelectTrigger className="w-full md:w-48">
+                <SelectValue placeholder="Status" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Status</SelectItem>
+                <SelectItem value="active">Active</SelectItem>
+                <SelectItem value="inactive">Deactivated</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
         </CardContent>
       </Card>
@@ -298,11 +316,18 @@ const AdminProducts = () => {
                   <td className="p-4 text-sm">{product.brand}</td>
                   <td className="p-4 text-sm font-medium">₹{product.listPrice.toLocaleString()}</td>
                   <td className="p-4">
-                    {product.badge && (
-                      <Badge variant="secondary" className="text-xs">
-                        {product.badge}
-                      </Badge>
-                    )}
+                    <div className="flex flex-wrap gap-1">
+                      {product.badge && (
+                        <Badge variant="secondary" className="text-xs">
+                          {product.badge}
+                        </Badge>
+                      )}
+                      {product.comingSoon && (
+                        <Badge variant="outline" className="text-xs border-amber-500 text-amber-600">
+                          Coming Soon
+                        </Badge>
+                      )}
+                    </div>
                   </td>
                   <td className="p-4 text-right">
                     <DropdownMenu>
@@ -379,32 +404,36 @@ const AdminProducts = () => {
       </Card>
 
       {/* Edit Product Modal */}
-      {selectedProduct && (
-        <EditProductModal
-          isOpen={editModalOpen}
-          onClose={() => {
-            setEditModalOpen(false);
-            setSelectedProduct(null);
-          }}
-          productId={selectedProduct.id}
-          onSuccess={handleEditSuccess}
-        />
-      )}
+      {
+        selectedProduct && (
+          <EditProductModal
+            isOpen={editModalOpen}
+            onClose={() => {
+              setEditModalOpen(false);
+              setSelectedProduct(null);
+            }}
+            productId={selectedProduct.id}
+            onSuccess={handleEditSuccess}
+          />
+        )
+      }
 
       {/* Image Scraper Modal */}
-      {selectedProductForImage && (
-        <ImageScraperModal
-          isOpen={imageModalOpen}
-          onClose={() => {
-            setImageModalOpen(false);
-            setSelectedProductForImage(null);
-          }}
-          productId={selectedProductForImage.id}
-          productName={selectedProductForImage.name}
-          currentImages={selectedProductForImage.images}
-          onSave={handleSaveImages}
-        />
-      )}
+      {
+        selectedProductForImage && (
+          <ImageScraperModal
+            isOpen={imageModalOpen}
+            onClose={() => {
+              setImageModalOpen(false);
+              setSelectedProductForImage(null);
+            }}
+            productId={selectedProductForImage.id}
+            productName={selectedProductForImage.name}
+            currentImages={selectedProductForImage.images}
+            onSave={handleSaveImages}
+          />
+        )
+      }
 
       {/* Plates Bulk Image Modal */}
       <PlatesBulkImageModal

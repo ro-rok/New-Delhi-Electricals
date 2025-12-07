@@ -13,19 +13,19 @@ export interface ProductListResponse {
 function transformProduct(backendProduct: any): Product {
   // Handle both ProductInDB format (list_price, images array) and full Product schema format (pricing.mrp, media.images)
   const listPrice = backendProduct.list_price || backendProduct.pricing?.mrp || 0;
-  const images = backendProduct.images || 
+  const images = backendProduct.images ||
     (backendProduct.media?.images?.map((img: any) => typeof img === 'string' ? img : img.url) || []);
   const datasheetUrl = backendProduct.datasheet_url || backendProduct.media?.documents?.[0];
   const description = backendProduct.description || backendProduct.seo?.meta_description || '';
   const series = backendProduct.series || backendProduct.product_family || '';
-  
+
   // Extract slug from multiple possible locations
-  const slug = backendProduct.seo?.slug || 
-               backendProduct.catalog_source?.slug || 
-               backendProduct.specs?.slug || 
-               backendProduct.slug ||
-               null;
-  
+  const slug = backendProduct.seo?.slug ||
+    backendProduct.catalog_source?.slug ||
+    backendProduct.specs?.slug ||
+    backendProduct.slug ||
+    null;
+
   return {
     id: backendProduct._id || backendProduct.id || backendProduct.sku,
     sku: backendProduct.sku,
@@ -42,6 +42,8 @@ function transformProduct(backendProduct: any): Product {
     description: description,
     badge: backendProduct.status?.is_featured || backendProduct.badge ? 'popular' : undefined,
     slug: slug,
+    comingSoon: backendProduct.status?.coming_soon || backendProduct.comingSoon || false,
+    isActive: backendProduct.status?.is_active !== false, // Default to true if undefined
     catalogSource: backendProduct.catalog_source,
   };
 }
@@ -69,6 +71,7 @@ export async function getProducts(params?: {
   sortOrder?: 'asc' | 'desc';
   page?: number;
   pageSize?: number;
+  isActive?: boolean;
 }): Promise<ProductListResponse> {
   const searchParams = new URLSearchParams();
   if (params?.q) searchParams.append('q', params.q);
@@ -81,6 +84,7 @@ export async function getProducts(params?: {
   if (params?.sortOrder) searchParams.append('sort_order', params.sortOrder);
   if (params?.page) searchParams.append('page', String(params.page));
   if (params?.pageSize) searchParams.append('pageSize', String(params.pageSize));
+  if (params?.isActive !== undefined) searchParams.append('is_active', String(params.isActive));
 
   const url = `${API_BASE}/api/products${searchParams.toString() ? '?' + searchParams.toString() : ''}`;
   const res = await fetch(url);
@@ -128,18 +132,18 @@ export async function getProductBySlug(
     }
     const data = await res.json();
     const product = transformProduct(data);
-    
+
     // Verify brand and product_family match
     const brandSlug = brand.toLowerCase().replace(/\s+/g, '-');
     const productBrandSlug = product.brand.toLowerCase().replace(/\s+/g, '-');
     const productFamilySlug = productFamily.toLowerCase().replace(/\s+/g, '-');
     const productSeriesSlug = product.series.toLowerCase().replace(/\s+/g, '-');
-    
+
     if (productBrandSlug !== brandSlug || productSeriesSlug !== productFamilySlug) {
       // Brand or product family doesn't match, return null
       return null;
     }
-    
+
     return product;
   } catch {
     return null;
@@ -225,7 +229,7 @@ export async function updateProduct(
 ): Promise<Product> {
   // Transform frontend Product format to backend ProductUpdate format
   const updatePayload: any = {};
-  
+
   if (data.name !== undefined) updatePayload.name = data.name;
   if (data.brand !== undefined) updatePayload.brand = data.brand;
   if (data.category !== undefined) updatePayload.category = data.category;
@@ -236,13 +240,22 @@ export async function updateProduct(
   if (data.datasheetUrl !== undefined) updatePayload.datasheet_url = data.datasheetUrl;
   if (data.specs !== undefined) updatePayload.specs = data.specs;
   if (data.description !== undefined) updatePayload.description = data.description;
+  if (data.comingSoon !== undefined) {
+    // Store coming_soon in a status object to match backend schema
+    updatePayload.status = updatePayload.status || {};
+    updatePayload.status.coming_soon = data.comingSoon;
+  }
+  if (data.isActive !== undefined) {
+    updatePayload.status = updatePayload.status || {};
+    updatePayload.status.is_active = data.isActive;
+  }
 
   // Get auth token for authenticated requests
   const token = localStorage.getItem('admin_token');
   const headers: HeadersInit = {
     'Content-Type': 'application/json',
   };
-  
+
   if (token) {
     headers['Authorization'] = `Bearer ${token}`;
   }
@@ -275,7 +288,7 @@ export interface CloudinarySignature {
 export async function getCloudinarySignature(): Promise<CloudinarySignature> {
   // Get auth token from localStorage (admin_token is used in this app)
   const token = localStorage.getItem('admin_token');
-  
+
   if (!token) {
     console.error('No admin_token found in localStorage');
     throw new Error('Not authenticated. Please log in again.');
@@ -343,7 +356,7 @@ export async function uploadImageToCloudinary(file: File): Promise<string> {
     // Use the resource_type from signature, default to 'image'
     const resourceType = signature.resourceType || 'image';
     const cloudinaryUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/${resourceType}/upload`;
-    
+
     const uploadRes = await fetch(cloudinaryUrl, {
       method: 'POST',
       body: formData,
@@ -385,7 +398,7 @@ export async function bulkUpdateProducts(
 ): Promise<void> {
   // Transform frontend Product format to backend ProductUpdate format
   const updatePayload: any = {};
-  
+
   if (data.name !== undefined) updatePayload.name = data.name;
   if (data.brand !== undefined) updatePayload.brand = data.brand;
   if (data.category !== undefined) updatePayload.category = data.category;

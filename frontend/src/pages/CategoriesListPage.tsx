@@ -22,7 +22,6 @@ const CategoriesListPage = () => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -78,7 +77,7 @@ const CategoriesListPage = () => {
               {categories.map((category, idx) => {
                 const IconComponent = iconMap[category.icon] || Zap;
                 const count = category.productCount || getCategoryCount(category.name);
-                
+
                 return (
                   <motion.div
                     key={category.id}

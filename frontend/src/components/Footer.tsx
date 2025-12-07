@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4 tracking-tight">New Delhi Electricals</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Your trusted partner for premium electrical solutions since 1998. 
+              Your trusted partner for premium electrical solutions since 1998.
               Authorized retail partner for India's finest brands.
             </p>
           </div>
@@ -59,10 +59,10 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <p className="mt-4 text-center text-xs text-muted-foreground">
-            27 Years of Trusted Service · 30,000+ Happy Customers
-          </p>
         </div>
+        <p className="mt-4 text-center text-xs text-muted-foreground">
+          27 Years of Trusted Service · 30,000+ Happy Customers
+        </p>
       </div>
     </footer>
   );

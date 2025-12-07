@@ -40,11 +40,20 @@ import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 
 type SortOption = 'name-asc' | 'name-desc' | 'price-asc' | 'price-desc' | 'newest';
 
+const iconMap: Record<string, LucideIcon> = {
+  ToggleRight,
+  Cable,
+  Zap,
+  Lightbulb,
+  Fan,
+  Smartphone,
+};
+
 // Category Card Component with image error handling
-const CategoryCard = ({ cat, isActive, iconMap, Package }: { 
-  cat: Category; 
-  isActive: boolean; 
-  iconMap: Record<string, LucideIcon>; 
+const CategoryCard = ({ cat, isActive, iconMap, Package }: {
+  cat: Category;
+  isActive: boolean;
+  iconMap: Record<string, LucideIcon>;
   Package: LucideIcon;
 }) => {
   const [imageError, setImageError] = useState(false);
@@ -116,93 +125,110 @@ const CategoryPage = () => {
   const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
   const { trackCategoryView } = useApp();
-  
-  const [view, setView] = useState<'grid' | 'list'>('grid');
-  const [showFilters, setShowFilters] = useState(false);
+
+  const [category, setCategory] = useState<Category | null>(null);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [allProducts, setAllProducts] = useState<Product[]>([]);
+  const [brands, setBrands] = useState<Brand[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [filterLoading, setFilterLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  // Filter states
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [selectedSeries, setSelectedSeries] = useState<string[]>([]);
   const [selectedProductFamily, setSelectedProductFamily] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
+  const [priceBounds, setPriceBounds] = useState<{ min: number; max: number }>({ min: 0, max: 10000 });
   const [sortBy, setSortBy] = useState<SortOption>('name-asc');
   const [localSearch, setLocalSearch] = useState(searchQuery);
-  const [allProducts, setAllProducts] = useState<Product[]>([]); // Store all products for filtering
-  const [category, setCategory] = useState<Category | null>(null);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [products, setProducts] = useState<Product[]>([]);
-  const [brands, setBrands] = useState<Brand[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [filterLoading, setFilterLoading] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalProducts, setTotalProducts] = useState(0);
-  const [hasMore, setHasMore] = useState(false);
-  
-  // Debounce search input
-  const debouncedSearch = useDebounce(localSearch, 300);
+  const debouncedSearch = useDebounce(localSearch, 500);
 
-  const iconMap: Record<string, LucideIcon> = {
-    ToggleRight,
-    Cable,
-    Zap,
-    Lightbulb,
-    Fan,
-    Smartphone,
-    Package,
-  };
+  // Pagination state
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+  const fetchSize = 20;
 
-  // Fetch category and brands on mount/route change
-  useEffect(() => {
-    const fetchInitialData = async () => {
-      if (!slug) {
+  const [view, setView] = useState<'grid' | 'list'>('grid');
+  const [showFilters, setShowFilters] = useState(false);
+
+  const fetchInitialData = useCallback(async () => {
+    if (!slug) return;
+
+    setLoading(true);
+    setError(null);
+    try {
+      const [cats, brandsList] = await Promise.all([
+        getCategories(),
+        getBrands()
+      ]);
+
+      const foundCategory = cats.find(c => c.slug === slug);
+
+      if (!foundCategory) {
+        setError('Category not found');
         setLoading(false);
         return;
       }
-      try {
-        const [catsList, brandsList] = await Promise.all([
-          getCategories(),
-          getBrands(),
-        ]);
-        const foundCategory = catsList.find(c => c.slug === slug);
-        setCategory(foundCategory || null);
-        setCategories(catsList);
-        setBrands(brandsList);
-        
-        // Set initial price bounds if category found
-        if (foundCategory) {
-          // Fetch initial products to get price bounds and populate product family filter
-          const initialResponse = await getProducts({ 
-            category: foundCategory.name,
-            pageSize: 1000 // Fetch more to populate product family filter
-          });
-          if (initialResponse.items.length > 0) {
-            const prices = initialResponse.items.map(p => p.listPrice);
-            const min = Math.min(...prices);
-            const max = Math.max(...prices);
-            setPriceRange([min, max]);
-            setAllProducts(initialResponse.items); // Store for product family filter
-          }
-        }
-      } catch (error) {
-        console.error('Failed to fetch initial data:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchInitialData();
-  }, [slug, location.key]);
 
-  // Fetch products with backend filtering when filters change
-  const fetchFilteredProducts = useCallback(async (page: number = 1, append: boolean = false) => {
+      setCategory(foundCategory);
+      setCategories(cats);
+      setBrands(brandsList);
+
+      // Fetch all products for this category to get bounds and families
+      const initialResponse = await getProducts({
+        category: foundCategory.name,
+        pageSize: 1000, // Fetch more to populate product family filter
+      });
+
+      setAllProducts(initialResponse.items);
+
+      if (initialResponse.items.length > 0) {
+        const prices = initialResponse.items.map(p => p.listPrice);
+        const min = Math.min(...prices);
+        const max = Math.max(...prices);
+        setPriceBounds({ min, max });
+        setPriceRange([min, max]);
+      }
+
+      // Initial filtered fetch
+      const filteredResponse = await getProducts({
+        category: foundCategory.name,
+        page: 1,
+        pageSize: fetchSize,
+        sortBy: 'name',
+        sortOrder: 'asc'
+      });
+
+      setProducts(filteredResponse.items);
+      setHasMore(filteredResponse.items.length === fetchSize);
+      setPage(1);
+
+    } catch (err) {
+      console.error('Error fetching category data:', err);
+      setError('Failed to load category data');
+    } finally {
+      setLoading(false);
+    }
+  }, [slug]);
+
+  const fetchFilteredProducts = useCallback(async (pageNum: number, isNewFilter: boolean = false) => {
     if (!category) return;
-    
+
     setFilterLoading(true);
     try {
-      const [sortField, sortOrder] = sortBy.split('-') as ['name' | 'price', 'asc' | 'desc'];
-      const pageSize = 20; // Load 20 products per page
-      
-      // Fetch more products initially to have enough for product family filtering
-      const fetchSize = selectedProductFamily || selectedColor ? 1000 : pageSize;
-      
+      let sortField = 'name';
+      let sortOrder = 'asc';
+
+      switch (sortBy) {
+        case 'name-desc': sortOrder = 'desc'; break;
+        case 'price-asc': sortField = 'listPrice'; break;
+        case 'price-desc': sortField = 'listPrice'; sortOrder = 'desc'; break;
+        case 'newest': sortField = 'created_at'; sortOrder = 'desc'; break;
+      }
+
       const response = await getProducts({
         category: category.name,
         brand: selectedBrands.length === 1 ? selectedBrands[0] : undefined,
@@ -212,76 +238,45 @@ const CategoryPage = () => {
         sortBy: sortField,
         sortOrder: sortOrder,
         q: debouncedSearch || undefined,
-        page: page,
+        page: pageNum,
         pageSize: fetchSize,
       });
-      
-      // Store all products for client-side filtering by product_family and color
-      if (!append) {
-        setAllProducts(response.items);
+
+      if (isNewFilter) {
+        setProducts(response.items);
       } else {
-        setAllProducts(prev => [...prev, ...response.items]);
+        setProducts(prev => [...prev, ...response.items]);
       }
-      
-      // Apply product_family and color filters client-side
-      let filteredItems = response.items;
-      
-      if (selectedProductFamily) {
-        filteredItems = filteredItems.filter(product => {
-          const productFamily = product.catalogSource?.product_family || product.series;
-          return productFamily === selectedProductFamily;
-        });
-      }
-      
-      if (selectedColor) {
-        filteredItems = filteredItems.filter(product => {
-          const productColor = product.specs?.color?.trim();
-          return productColor === selectedColor.trim();
-        });
-      }
-      
-      if (append) {
-        setProducts(prev => [...prev, ...filteredItems]);
-      } else {
-        setProducts(filteredItems);
-      }
-      
-      setTotalProducts(filteredItems.length);
-      setHasMore(response.items.length === pageSize && (page * pageSize) < response.total);
+
+      setHasMore(response.items.length === fetchSize);
     } catch (error) {
-      console.error('Failed to fetch filtered products:', error);
-      if (!append) {
-        setProducts([]);
-        setAllProducts([]);
-      }
+      console.error('Error fetching filtered products:', error);
     } finally {
       setFilterLoading(false);
     }
-  }, [category, selectedBrands, selectedSeries, selectedProductFamily, selectedColor, priceRange, sortBy, debouncedSearch]);
+  }, [category, selectedBrands, selectedSeries, priceRange, sortBy, debouncedSearch]);
 
-  // Fetch products when filters change (reset to page 1)
   useEffect(() => {
-    if (category) {
-      setCurrentPage(1);
-      fetchFilteredProducts(1, false);
-    }
-  }, [category, selectedBrands, selectedSeries, selectedProductFamily, selectedColor, priceRange, sortBy, debouncedSearch, fetchFilteredProducts]);
+    fetchInitialData();
+  }, [fetchInitialData]);
 
-  // Load more products for infinite scroll
+  useEffect(() => {
+    if (!loading && category) {
+      const timer = setTimeout(() => {
+        setPage(1);
+        fetchFilteredProducts(1, true);
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [selectedBrands, selectedSeries, priceRange, sortBy, debouncedSearch]);
+
   const loadMore = useCallback(() => {
     if (!filterLoading && hasMore) {
-      const nextPage = currentPage + 1;
-      setCurrentPage(nextPage);
-      fetchFilteredProducts(nextPage, true);
+      const nextPage = page + 1;
+      setPage(nextPage);
+      fetchFilteredProducts(nextPage, false);
     }
-  }, [currentPage, filterLoading, hasMore, fetchFilteredProducts]);
-  
-  // Get price bounds for the category (from initial fetch or products)
-  const priceBounds = useMemo(() => {
-    if (products.length === 0) return { min: 0, max: 10000 };
-    const prices = products.map(p => p.listPrice);
-    return { min: Math.min(...prices), max: Math.max(...prices) };
-  }, [products]);
+  }, [page, filterLoading, hasMore, fetchFilteredProducts]);
 
   // Get available series and brands from current products
   const availableSeries = useMemo(() => {
@@ -343,10 +338,10 @@ const CategoryPage = () => {
     setLocalSearch('');
   };
 
-  const hasActiveFilters = selectedBrands.length > 0 || selectedSeries.length > 0 || 
+  const hasActiveFilters = selectedBrands.length > 0 || selectedSeries.length > 0 ||
     selectedProductFamily !== null || selectedColor !== null ||
-    (priceBounds.min !== undefined && priceBounds.max !== undefined && 
-     (priceRange[0] > priceBounds.min || priceRange[1] < priceBounds.max)) || 
+    (priceBounds.min !== undefined && priceBounds.max !== undefined &&
+      (priceRange[0] > priceBounds.min || priceRange[1] < priceBounds.max)) ||
     localSearch;
 
   const FilterContent = () => (
@@ -465,7 +460,7 @@ const CategoryPage = () => {
   // Simplified Category List Item for Sidebar
   const CategoryListItem = ({ cat, isActive }: { cat: Category; isActive: boolean }) => {
     const IconComponent = iconMap[cat.icon] || Package;
-    
+
     return (
       <Link
         to={`/category/${cat.slug}`}
@@ -643,7 +638,7 @@ const CategoryPage = () => {
                       </div>
                     </SheetContent>
                   </Sheet>
-              
+
                   {/* Active Filter Badges */}
                   <AnimatePresence>
                     {selectedBrands.map(brand => (
@@ -709,7 +704,7 @@ const CategoryPage = () => {
                     {products.length} {products.length === 1 ? 'product' : 'products'}
                     {selectedProductFamily || selectedColor ? ` (filtered)` : ''}
                   </span>
-                  
+
                   {/* View Toggle */}
                   <div className="flex border border-border rounded-lg overflow-hidden">
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -755,85 +750,83 @@ const CategoryPage = () => {
 
                 {/* Products Grid */}
                 <div className="flex-1">
-              {filterLoading ? (
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className={`grid gap-4 ${
-                    view === 'grid' 
-                      ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4' 
-                      : 'grid-cols-1'
-                  }`}
-                >
-                  <ProductCardSkeleton count={view === 'grid' ? 8 : 4} />
-                </motion.div>
-              ) : products.length > 0 ? (
-                <motion.div 
-                  layout
-                  className={`grid gap-4 ${
-                    view === 'grid' 
-                      ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4' 
-                      : 'grid-cols-1'
-                  }`}
-                >
-                  <AnimatePresence mode="popLayout">
-                    {products.map((product, idx) => (
-                      <motion.div
-                        key={product.id}
-                        layout
-                        initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.9, y: -20 }}
-                        transition={{ 
-                          delay: idx * 0.02,
-                          duration: 0.3,
-                          ease: [0.25, 0.1, 0.25, 1]
-                        }}
-                      >
-                        <ProductCard product={product} index={idx} />
-                      </motion.div>
-                    ))}
-                  </AnimatePresence>
-                  
-                  {/* Infinite scroll trigger */}
-                  {hasMore && (
-                    <div ref={loadMoreRef} className="col-span-full py-8">
-                      {filterLoading && (
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          className="flex justify-center"
-                        >
-                          <ProductCardSkeleton count={view === 'grid' ? 4 : 2} />
-                        </motion.div>
-                      )}
-                    </div>
-                  )}
-                  
-                  {/* End of results message */}
-                  {!hasMore && products.length > 0 && (
+                  {filterLoading ? (
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      className="col-span-full text-center py-8 text-sm text-muted-foreground"
+                      className={`grid gap-4 ${view === 'grid'
+                        ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
+                        : 'grid-cols-1'
+                        }`}
                     >
-                      Showing all {products.length} products
+                      <ProductCardSkeleton count={view === 'grid' ? 8 : 4} />
+                    </motion.div>
+                  ) : products.length > 0 ? (
+                    <motion.div
+                      layout
+                      className={`grid gap-4 ${view === 'grid'
+                        ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
+                        : 'grid-cols-1'
+                        }`}
+                    >
+                      <AnimatePresence mode="popLayout">
+                        {products.map((product, idx) => (
+                          <motion.div
+                            key={product.id}
+                            layout
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: -20 }}
+                            transition={{
+                              delay: idx * 0.02,
+                              duration: 0.3,
+                              ease: [0.25, 0.1, 0.25, 1]
+                            }}
+                          >
+                            <ProductCard product={product} index={idx} />
+                          </motion.div>
+                        ))}
+                      </AnimatePresence>
+
+                      {/* Infinite scroll trigger */}
+                      {hasMore && (
+                        <div ref={loadMoreRef} className="col-span-full py-8">
+                          {filterLoading && (
+                            <motion.div
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              className="flex justify-center"
+                            >
+                              <ProductCardSkeleton count={view === 'grid' ? 4 : 2} />
+                            </motion.div>
+                          )}
+                        </div>
+                      )}
+
+                      {/* End of results message */}
+                      {!hasMore && products.length > 0 && (
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          className="col-span-full text-center py-8 text-sm text-muted-foreground"
+                        >
+                          Showing all {products.length} products
+                        </motion.div>
+                      )}
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-center py-16"
+                    >
+                      <p className="text-muted-foreground mb-4">No products found matching your criteria</p>
+                      <Button variant="outline" onClick={clearFilters}>
+                        Clear Filters
+                      </Button>
                     </motion.div>
                   )}
-                </motion.div>
-              ) : (
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-center py-16"
-                >
-                  <p className="text-muted-foreground mb-4">No products found matching your criteria</p>
-                  <Button variant="outline" onClick={clearFilters}>
-                    Clear Filters
-                  </Button>
-                </motion.div>
-              )}
                 </div>
               </div>
             </div>

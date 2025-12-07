@@ -11,8 +11,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getProductById, getProducts } from '@/api/products';
 import { useApp } from '@/contexts/AppContext';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MessageCircle, Heart, GitCompare, Copy, Check, FileText, 
+import {
+  MessageCircle, Heart, GitCompare, Copy, Check, FileText,
   Camera, ChevronLeft, ChevronRight, ZoomIn, Download, Share2, ShoppingCart, ArrowLeft
 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
@@ -91,7 +91,7 @@ const ProductPage = () => {
     };
     fetchProduct();
   }, [id, location.key]);
-  
+
   // Generate multiple images for carousel demo
   const productImages = useMemo(() => {
     if (!product || !product.brand) return [];
@@ -229,7 +229,7 @@ const ProductPage = () => {
                     {badgeConfig[product.badge].label}
                   </Badge>
                 )}
-                
+
                 {/* Navigation Arrows */}
                 {productImages.length > 1 && (
                   <>
@@ -318,7 +318,7 @@ const ProductPage = () => {
                   {product.series}
                 </p>
                 <h1 className="text-3xl md:text-4xl font-semibold mb-4">{product.name}</h1>
-                
+
                 <div className="flex items-center gap-3 mb-4">
                   <button
                     onClick={copySku}
@@ -352,7 +352,7 @@ const ProductPage = () => {
                   <MessageCircle className="h-5 w-5" />
                   Enquire on WhatsApp
                 </Button>
-                
+
                 <Button
                   size="lg"
                   variant="outline"
@@ -371,7 +371,7 @@ const ProductPage = () => {
                   )} />
                   {isInCart(product.id) ? 'In Cart' : 'Add to Cart'}
                 </Button>
-                
+
                 <Button
                   size="lg"
                   variant="outline"
@@ -429,7 +429,7 @@ const ProductPage = () => {
                 </TabsContent>
                 <TabsContent value="description" className="mt-4">
                   <p className="text-muted-foreground leading-relaxed">{product.description}</p>
-                  
+
                   {/* Catalog Source Info */}
                   {product.catalogSource && (
                     <div className="mt-4 p-4 bg-secondary/50 rounded-xl">

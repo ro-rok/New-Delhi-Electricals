@@ -24,6 +24,7 @@ const ComparePage = lazy(() => import("./pages/ComparePage"));
 const CartPage = lazy(() => import("./pages/CartPage"));
 const BrandsListPage = lazy(() => import("./pages/BrandsListPage"));
 const CategoriesListPage = lazy(() => import("./pages/CategoriesListPage"));
+
 const AdminLayout = lazy(() => import("./pages/admin/AdminLayout"));
 const AdminLogin = lazy(() => import("./pages/admin/AdminLogin"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
@@ -85,6 +86,7 @@ const App = () => (
                   <Route path="/shortlist" element={<ShortlistPage />} />
                   <Route path="/compare" element={<ComparePage />} />
                   <Route path="/cart" element={<CartPage />} />
+
 
                   {/* Admin Routes */}
                   <Route path="/admin/login" element={<AdminLogin />} />

@@ -91,12 +91,14 @@ const ShortlistPage = () => {
                         {product!.brand.charAt(0)}
                       </span>
                     </div>
-                    
+
                     <div className="flex-1 min-w-0">
                       <Link to={getProductUrl(product!)} className="hover:text-accent transition-colors">
                         <h3 className="font-medium truncate">{product!.name}</h3>
                       </Link>
-                      <p className="text-sm text-muted-foreground">{product!.brand} · {product!.sku}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {product!.brand} · {product!.sku}
+                      </p>
                       <p className="font-semibold mt-1">₹{product!.listPrice.toLocaleString()}</p>
                     </div>
 

@@ -21,6 +21,7 @@ async def list_products(
     max_price: float | None = Query(default=None, ge=0, description="Maximum price"),
     sort_by: str | None = Query(default="name", description="Sort field: name or price"),
     sort_order: str | None = Query(default="asc", description="Sort order: asc or desc"),
+    is_active: bool | None = Query(default=None, description="Filter by active status"),
     page: int = Query(1, ge=1),
     page_size: int = Query(20, ge=1, le=10000, alias="pageSize"),
     db: AsyncIOMotorDatabase = Depends(get_db_dep),
@@ -28,31 +29,49 @@ async def list_products(
     skip = (page - 1) * page_size
     query: dict[str, Any] = {}
     
-    # Build MongoDB query dynamically based on filters
+
+
+    # Re-structuring query to handle multiple $or conditions safely
+    and_conditions = []
+    
     if q:
-        query["$text"] = {"$search": q}
+        and_conditions.append({"$text": {"$search": q}})
     
     if category:
-        query["category"] = {"$regex": category, "$options": "i"}
-    
+        and_conditions.append({"category": {"$regex": category, "$options": "i"}})
+        
     if brand:
-        query["brand"] = brand
-    
+        and_conditions.append({"brand": brand})
+        
     if series:
-        # Check both series and product_family fields
-        query["$or"] = [
-            {"series": {"$regex": series, "$options": "i"}},
-            {"product_family": {"$regex": series, "$options": "i"}}
-        ]
-    
-    # Price range filtering
+        and_conditions.append({
+            "$or": [
+                {"series": {"$regex": series, "$options": "i"}},
+                {"product_family": {"$regex": series, "$options": "i"}}
+            ]
+        })
+        
     if min_price is not None or max_price is not None:
-        price_query: dict[str, Any] = {}
-        if min_price is not None:
-            price_query["$gte"] = min_price
-        if max_price is not None:
-            price_query["$lte"] = max_price
-        query["list_price"] = price_query
+        price_query = {}
+        if min_price is not None: price_query["$gte"] = min_price
+        if max_price is not None: price_query["$lte"] = max_price
+        and_conditions.append({"list_price": price_query})
+
+    if is_active is not None:
+        if is_active:
+            and_conditions.append({
+                "$or": [
+                    {"status.is_active": True},
+                    {"status.is_active": {"$exists": False}}
+                ]
+            })
+        else:
+            and_conditions.append({"status.is_active": False})
+            
+    if and_conditions:
+        query = {"$and": and_conditions}
+    else:
+        query = {}
     
     # Build sort query
     sort_field = "name" if sort_by == "name" else "list_price"
@@ -214,6 +233,8 @@ async def update_product(
     update = {k: v for k, v in payload.model_dump(exclude_unset=True).items()}
     if not update:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="No fields to update")
+    
+
     
     try:
         query_id = ObjectId(product_id)

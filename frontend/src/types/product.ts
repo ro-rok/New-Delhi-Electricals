@@ -14,6 +14,8 @@ export interface Product {
   description: string;
   badge?: 'popular' | 'best-value' | 'new';
   slug?: string;
+  comingSoon?: boolean;
+  isActive?: boolean;
   catalogSource?: {
     file: string;
     page: number;
