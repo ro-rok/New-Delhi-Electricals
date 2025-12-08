@@ -90,6 +90,9 @@ export async function getProducts(params?: {
   category?: string;
   brand?: string;
   series?: string;
+  productFamily?: string;
+  color?: string;
+  moduleSize?: string;
   minPrice?: number;
   maxPrice?: number;
   sortBy?: 'name' | 'price';
@@ -104,6 +107,9 @@ export async function getProducts(params?: {
   if (params?.category) searchParams.append('category', params.category);
   if (params?.brand) searchParams.append('brand', params.brand);
   if (params?.series) searchParams.append('series', params.series);
+  if (params?.productFamily) searchParams.append('product_family', params.productFamily);
+  if (params?.color) searchParams.append('color', params.color);
+  if (params?.moduleSize) searchParams.append('moduleSize', params.moduleSize);
   if (params?.minPrice !== undefined) searchParams.append('min_price', String(params.minPrice));
   if (params?.maxPrice !== undefined) searchParams.append('max_price', String(params.maxPrice));
   if (params?.sortBy) searchParams.append('sort_by', params.sortBy);

@@ -38,6 +38,8 @@ const ProductSlugPage = () => {
   const [similarProducts, setSimilarProducts] = useState<Product[]>([]);
   const [imageError, setImageError] = useState(false);
   const [copiedSku, setCopiedSku] = useState(false);
+  const [moduleVariants, setModuleVariants] = useState<Product[]>([]);
+  const [colorVariants, setColorVariants] = useState<Product[]>([]);
 
   useEffect(() => {
     // Reset state immediately when route params change
@@ -79,6 +81,120 @@ const ProductSlugPage = () => {
       trackProductView(product.id);
     }
   }, [product, addToRecentlyViewed, trackProductView]);
+
+  useEffect(() => {
+    const fetchVariants = async () => {
+      if (!product) {
+        setModuleVariants([]);
+        setColorVariants([]);
+        return;
+      }
+
+      try {
+        const productFamily = product.catalogSource?.product_family || product.series;
+        const currentColor = product.specs?.color as string | undefined;
+        const currentModuleSize = product.specs?.module_size as string | undefined;
+
+        console.log('Fetching variants for product:', {
+          productFamily,
+          currentColor,
+          currentModuleSize,
+          specs: product.specs,
+          catalogSource: product.catalogSource
+        });
+
+        if (!productFamily) {
+          console.log('No product_family found, skipping variant fetch');
+          setModuleVariants([]);
+          setColorVariants([]);
+          return;
+        }
+
+        // Fetch module variants: same product_family and color, different module_size
+        if (currentColor) {
+          const moduleResponse = await getProducts({
+            productFamily,
+            color: currentColor,
+            pageSize: 100,
+          });
+          console.log('Module variants response:', moduleResponse.items.length);
+          const moduleVars = moduleResponse.items
+            .filter(p => {
+              const pModuleSize = p.specs?.module_size as string | undefined;
+              const pColor = p.specs?.color as string | undefined;
+              // If current product has no module_size, find products that DO have one
+              // If current product has module_size, find products with different module_size
+              if (currentModuleSize) {
+                return p.id !== product.id && 
+                       pModuleSize && 
+                       pModuleSize !== currentModuleSize &&
+                       pColor === currentColor;
+              } else {
+                return p.id !== product.id && 
+                       pModuleSize && 
+                       pColor === currentColor;
+              }
+            })
+            .sort((a, b) => {
+              const aSize = (a.specs?.module_size as string) || '';
+              const bSize = (b.specs?.module_size as string) || '';
+              return aSize.localeCompare(bSize);
+            });
+          console.log('Filtered module variants:', moduleVars.length);
+          setModuleVariants(moduleVars);
+        } else {
+          console.log('No color found, skipping module variants');
+          setModuleVariants([]);
+        }
+
+        // Fetch color variants: same product_family and module_size (if exists), different color
+        // If no module_size, find products with same family and no module_size but different color
+        if (currentColor) {
+          const colorResponse = currentModuleSize
+            ? await getProducts({
+                productFamily,
+                moduleSize: currentModuleSize,
+                pageSize: 100,
+              })
+            : await getProducts({
+                productFamily,
+                pageSize: 100,
+              });
+          console.log('Color variants response:', colorResponse.items.length);
+          const colorVars = colorResponse.items
+            .filter(p => {
+              const pColor = p.specs?.color as string | undefined;
+              const pModuleSize = p.specs?.module_size as string | undefined;
+              // Match module_size: both should be undefined or both should match
+              const moduleSizeMatches = currentModuleSize 
+                ? pModuleSize === currentModuleSize
+                : !pModuleSize; // If current has no module_size, match products with no module_size
+              
+              return p.id !== product.id && 
+                     pColor && 
+                     pColor !== currentColor &&
+                     moduleSizeMatches;
+            })
+            .sort((a, b) => {
+              const aColor = (a.specs?.color as string) || '';
+              const bColor = (b.specs?.color as string) || '';
+              return aColor.localeCompare(bColor);
+            });
+          console.log('Filtered color variants:', colorVars.length);
+          setColorVariants(colorVars);
+        } else {
+          console.log('No color found, skipping color variants');
+          setColorVariants([]);
+        }
+      } catch (error) {
+        console.error('Failed to fetch variants:', error);
+        setModuleVariants([]);
+        setColorVariants([]);
+      }
+    };
+
+    fetchVariants();
+  }, [product]);
 
   const productImages = useMemo(() => {
     if (!product) return [];
@@ -164,199 +280,280 @@ const ProductSlugPage = () => {
       <div className="h-16" /> {/* Spacer for fixed header */}
 
       <main>
-        {/* Hero Image Section */}
-        <section className="relative min-h-[45vh] md:min-h-[50vh] flex items-center justify-center bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black overflow-hidden">
-          <AnimatePresence mode="wait">
-            {productImages.length > 0 && !imageError ? (
-              <motion.img
-                key={currentImageIndex}
-                src={productImages[currentImageIndex]}
-                alt={product.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-                className="max-w-xl md:max-w-2xl w-full h-auto object-contain px-6"
-                onError={() => {
-                  setImageError(true);
-                }}
-              />
-            ) : (
-              <motion.div
-                key="placeholder"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="text-center"
-              >
-                <div className="text-[120px] md:text-[160px] font-extralight text-gray-200 dark:text-gray-800 leading-none">
-                  {product.brand.charAt(0).toUpperCase()}
+        {/* Hero Section with left image and right content */}
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-20 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 md:gap-12 lg:gap-16 items-center">
+          <div className="relative min-h-[320px] md:min-h-[420px] lg:min-h-[500px] max-h-[560px] bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black rounded-3xl overflow-hidden flex items-center justify-center shadow-lg border border-gray-100 dark:border-gray-900 p-4 sm:p-6 md:p-8">
+            <AnimatePresence mode="wait">
+              {productImages.length > 0 && !imageError ? (
+                <motion.img
+                  key={currentImageIndex}
+                  src={productImages[currentImageIndex]}
+                  alt={product.name}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+                  className="w-full h-full max-h-[420px] md:max-h-[500px] lg:max-h-[560px] object-contain"
+                  onError={() => {
+                    setImageError(true);
+                  }}
+                />
+              ) : (
+                <motion.div
+                  key="placeholder"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-center"
+                >
+                  <div className="text-[96px] md:text-[140px] font-extralight text-gray-200 dark:text-gray-800 leading-none">
+                    {product.brand.charAt(0).toUpperCase()}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* Image Navigation */}
+            {productImages.length > 1 && !imageError && (
+              <>
+                <motion.button
+                  onClick={prevImage}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 dark:bg-black/90 backdrop-blur-md flex items-center justify-center hover:bg-white dark:hover:bg-black transition-all shadow-xl border border-gray-100 dark:border-gray-800"
+                >
+                  <ChevronLeft className="h-6 w-6 text-gray-900 dark:text-white" />
+                </motion.button>
+                <motion.button
+                  onClick={nextImage}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 dark:bg-black/90 backdrop-blur-md flex items-center justify-center hover:bg-white dark:hover:bg-black transition-all shadow-xl border border-gray-100 dark:border-gray-800"
+                >
+                  <ChevronRight className="h-6 w-6 text-gray-900 dark:text-white" />
+                </motion.button>
+                <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2.5">
+                  {productImages.map((_, idx) => (
+                    <motion.button
+                      key={idx}
+                      onClick={() => setCurrentImageIndex(idx)}
+                      whileHover={{ scale: 1.2 }}
+                      whileTap={{ scale: 0.9 }}
+                      className={cn(
+                        "h-1.5 rounded-full transition-all duration-300",
+                        idx === currentImageIndex
+                          ? "bg-gray-900 dark:bg-white w-8"
+                          : "bg-gray-300 dark:bg-gray-700 w-1.5"
+                      )}
+                    />
+                  ))}
                 </div>
+              </>
+            )}
+          </div>
+
+          <div className="space-y-6 w-full max-w-xl lg:max-w-2xl mx-auto lg:mx-0">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.6 }}
+              className="space-y-4"
+            >
+              <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 uppercase tracking-[0.2em] font-light">
+                {product.brand} {product.series && `· ${product.series}`}
+              </p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-900 dark:text-white leading-[1.1] tracking-tight">
+                {product.name}
+              </h1>
+              <p className="text-3xl md:text-4xl font-light text-gray-900 dark:text-white">
+                ₹{product.listPrice.toLocaleString('en-IN')}
+              </p>
+              <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                <button
+                  onClick={copySku}
+                  className="flex items-center gap-2 hover:text-gray-900 dark:hover:text-white transition-colors group"
+                >
+                  {copiedSku ? (
+                    <>
+                      <Check className="h-4 w-4 text-emerald-500" />
+                      <span className="text-emerald-500">Copied</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="h-4 w-4 group-hover:scale-110 transition-transform" />
+                      <span>SKU: {product.sku}</span>
+                    </>
+                  )}
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Variant Selector */}
+            {product && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="space-y-4 pt-4 border-t border-gray-200 dark:border-gray-800"
+              >
+                {/* Module Type Variants */}
+                {moduleVariants.length > 0 ? (
+                  <div className="space-y-2">
+                    <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Module Size:
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span
+                        className={cn(
+                          "px-4 py-2 rounded-lg border-2 border-gray-900 dark:border-white bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-sm font-medium"
+                        )}
+                      >
+                        {product.specs?.module_size || 'Current'}
+                      </span>
+                      {moduleVariants.map((variant) => (
+                        <Link
+                          key={variant.id}
+                          to={getProductUrl(variant)}
+                          className="px-4 py-2 rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-white text-sm font-medium transition-all hover:border-gray-900 dark:hover:border-white hover:scale-105"
+                        >
+                          {variant.specs?.module_size || 'N/A'}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : product.specs?.module_size && (
+                  <div className="text-xs text-gray-500 dark:text-gray-400">
+                    No other module sizes available
+                  </div>
+                )}
+
+                {/* Color Variants */}
+                {colorVariants.length > 0 ? (
+                  <div className="space-y-2">
+                    <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Color:
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span
+                        className={cn(
+                          "px-4 py-2 rounded-lg border-2 border-gray-900 dark:border-white bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-sm font-medium"
+                        )}
+                      >
+                        {product.specs?.color || 'Current'}
+                      </span>
+                      {colorVariants.map((variant) => (
+                        <Link
+                          key={variant.id}
+                          to={getProductUrl(variant)}
+                          className="px-4 py-2 rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-white text-sm font-medium transition-all hover:border-gray-900 dark:hover:border-white hover:scale-105"
+                        >
+                          {variant.specs?.color || 'N/A'}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : product.specs?.color && (
+                  <div className="text-xs text-gray-500 dark:text-gray-400">
+                    No other colors available
+                  </div>
+                )}
+
+                {/* Debug info */}
+                {process.env.NODE_ENV === 'development' && (
+                  <div className="text-xs text-gray-400 pt-2 space-y-1">
+                    <div>Product Family: {product.catalogSource?.product_family || product.series || 'N/A'}</div>
+                    <div>Current Color: {product.specs?.color || 'N/A'}</div>
+                    <div>Current Module Size: {product.specs?.module_size || 'N/A'}</div>
+                    <div>Module Variants Found: {moduleVariants.length}</div>
+                    <div>Color Variants Found: {colorVariants.length}</div>
+                  </div>
+                )}
               </motion.div>
             )}
-          </AnimatePresence>
 
-          {/* Image Navigation */}
-          {productImages.length > 1 && !imageError && (
-            <>
-              <motion.button
-                onClick={prevImage}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="absolute left-6 md:left-12 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white/90 dark:bg-black/90 backdrop-blur-md flex items-center justify-center hover:bg-white dark:hover:bg-black transition-all shadow-xl border border-gray-100 dark:border-gray-800"
+            {product.description && (
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-light"
               >
-                <ChevronLeft className="h-6 w-6 text-gray-900 dark:text-white" />
-              </motion.button>
-              <motion.button
-                onClick={nextImage}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="absolute right-6 md:right-12 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white/90 dark:bg-black/90 backdrop-blur-md flex items-center justify-center hover:bg-white dark:hover:bg-black transition-all shadow-xl border border-gray-100 dark:border-gray-800"
-              >
-                <ChevronRight className="h-6 w-6 text-gray-900 dark:text-white" />
-              </motion.button>
-              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-2.5">
-                {productImages.map((_, idx) => (
-                  <motion.button
-                    key={idx}
-                    onClick={() => setCurrentImageIndex(idx)}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.9 }}
-                    className={cn(
-                      "h-1.5 rounded-full transition-all duration-300",
-                      idx === currentImageIndex
-                        ? "bg-gray-900 dark:bg-white w-8"
-                        : "bg-gray-300 dark:bg-gray-700 w-1.5"
-                    )}
-                  />
-                ))}
-              </div>
-            </>
-          )}
-        </section>
+                {product.description}
+              </motion.p>
+            )}
 
-        {/* Product Info Section */}
-        <section className="max-w-3xl mx-auto px-6 py-20 md:py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-center mb-20"
-          >
-            <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 mb-6 uppercase tracking-[0.2em] font-light">
-              {product.brand} {product.series && `· ${product.series}`}
-            </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extralight text-gray-900 dark:text-white mb-8 leading-[1.1] tracking-tight">
-              {product.name}
-            </h1>
-            <p className="text-3xl md:text-4xl font-light text-gray-900 dark:text-white mb-10">
-              ₹{product.listPrice.toLocaleString('en-IN')}
-            </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-gray-500 dark:text-gray-400">
-              <button
-                onClick={copySku}
-                className="flex items-center gap-2 hover:text-gray-900 dark:hover:text-white transition-colors group"
-              >
-                {copiedSku ? (
-                  <>
-                    <Check className="h-4 w-4 text-emerald-500" />
-                    <span className="text-emerald-500">Copied</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="h-4 w-4 group-hover:scale-110 transition-transform" />
-                    <span>SKU: {product.sku}</span>
-                  </>
-                )}
-              </button>
-            </div>
-          </motion.div>
-
-          {/* Action Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-24"
-          >
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Button
-                size="lg"
-                onClick={handleWhatsApp}
-                className="bg-emerald-500 hover:bg-emerald-600 text-white px-10 py-7 text-base font-normal rounded-full shadow-lg hover:shadow-xl transition-all"
-              >
-                <MessageCircle className="h-5 w-5 mr-2" />
-                Enquire on WhatsApp
-              </Button>
-            </motion.div>
-            {product && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.6 }}
+              className="flex flex-col sm:flex-row sm:flex-wrap gap-3 md:gap-4 items-stretch sm:items-center"
+            >
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button
                   size="lg"
-                  onClick={() => {
-                    addToCart(product, 1);
-                    toast({ description: 'Product added to cart' });
-                  }}
-                  variant="outline"
-                  className={cn(
-                    "px-10 py-7 text-base font-normal rounded-full border-2 transition-all",
-                    isInCart(product.id) && "bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800"
-                  )}
+                  onClick={handleWhatsApp}
+                  className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 md:px-10 py-6 text-base font-normal rounded-full shadow-lg hover:shadow-xl transition-all w-full sm:w-auto"
                 >
-                  <ShoppingCart className={cn(
-                    "h-5 w-5 mr-2",
-                    isInCart(product.id) && "fill-current"
-                  )} />
-                  {isInCart(product.id) ? 'In Cart' : 'Add to Cart'}
+                  <MessageCircle className="h-5 w-5 mr-2" />
+                  Enquire on WhatsApp
                 </Button>
               </motion.div>
-            )}
-            <div className="flex gap-3">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  onClick={() => toggleShortlist(product.id)}
-                  className={cn(
-                    "px-6 py-7 rounded-full border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all",
-                    inShortlist && "bg-red-50 dark:bg-red-950/30 border-red-200 dark:border-red-800"
-                  )}
-                >
-                  <Heart className={cn(
-                    "h-5 w-5 transition-all",
-                    inShortlist && "fill-current text-red-600 dark:text-red-400"
-                  )} />
-                </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  onClick={() => toggleComparison(product.id)}
-                  className={cn(
-                    "px-6 py-7 rounded-full border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all",
-                    inComparison && "bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800"
-                  )}
-                >
-                  <GitCompare className="h-5 w-5" />
-                </Button>
-              </motion.div>
-            </div>
-          </motion.div>
-
-          {/* Description */}
-          {product.description && (
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="mb-24"
-            >
-              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed text-center max-w-3xl mx-auto font-light">
-                {product.description}
-              </p>
+              {product && (
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                  <Button
+                    size="lg"
+                    onClick={() => {
+                      addToCart(product, 1);
+                      toast({ description: 'Product added to cart' });
+                    }}
+                    variant="outline"
+                    className={cn(
+                      "px-8 md:px-10 py-6 text-base font-normal rounded-full border-2 transition-all w-full sm:w-auto",
+                      isInCart(product.id) && "bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800"
+                    )}
+                  >
+                    <ShoppingCart className={cn(
+                      "h-5 w-5 mr-2",
+                      isInCart(product.id) && "fill-current"
+                    )} />
+                    {isInCart(product.id) ? 'In Cart' : 'Add to Cart'}
+                  </Button>
+                </motion.div>
+              )}
+              <div className="flex gap-3">
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    onClick={() => toggleShortlist(product.id)}
+                    className={cn(
+                      "px-5 md:px-6 py-6 rounded-full border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all",
+                      inShortlist && "bg-red-50 dark:bg-red-950/30 border-red-200 dark:border-red-800"
+                    )}
+                  >
+                    <Heart className={cn(
+                      "h-5 w-5 transition-all",
+                      inShortlist && "fill-current text-red-600 dark:text-red-400"
+                    )} />
+                  </Button>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    onClick={() => toggleComparison(product.id)}
+                    className={cn(
+                      "px-5 md:px-6 py-6 rounded-full border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all",
+                      inComparison && "bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800"
+                    )}
+                  >
+                    <GitCompare className="h-5 w-5" />
+                  </Button>
+                </motion.div>
+              </div>
             </motion.div>
-          )}
+          </div>
+        </section>
 
           {/* Specifications */}
           {product.specs && Object.keys(product.specs).length > 0 && (
@@ -419,7 +616,6 @@ const ProductSlugPage = () => {
               </motion.div>
             </motion.div>
           )}
-        </section>
 
         {/* Similar Products */}
         {similarProducts.length > 0 && (

@@ -17,6 +17,9 @@ async def list_products(
     category: str | None = Query(default=None, description="Filter by category name"),
     brand: str | None = Query(default=None, description="Filter by brand name"),
     series: str | None = Query(default=None, description="Filter by product series/family"),
+    product_family: str | None = Query(default=None, description="Filter by exact product_family match"),
+    color: str | None = Query(default=None, description="Filter by color from specs"),
+    module_size: str | None = Query(default=None, alias="moduleSize", description="Filter by module_size from specs"),
     min_price: float | None = Query(default=None, ge=0, description="Minimum price"),
     max_price: float | None = Query(default=None, ge=0, description="Maximum price"),
     sort_by: str | None = Query(default="name", description="Sort field: name or price"),
@@ -66,6 +69,15 @@ async def list_products(
                 {"product_family": {"$regex": series, "$options": "i"}}
             ]
         })
+    
+    if product_family:
+        and_conditions.append({"product_family": {"$regex": product_family, "$options": "i"}})
+    
+    if color:
+        and_conditions.append({"specs.color": {"$regex": color, "$options": "i"}})
+    
+    if module_size:
+        and_conditions.append({"specs.module_size": {"$regex": module_size, "$options": "i"}})
         
     if min_price is not None or max_price is not None:
         price_query = {}
