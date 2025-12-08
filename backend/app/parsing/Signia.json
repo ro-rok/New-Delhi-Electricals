@@ -45,6 +45,524 @@
     "brand": "Havells"
   },
   {
+    "sku": "ACWPLCWV01",
+    "name": "PC Plate PC Color 1M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV01"
+    ],
+    "pricing": {
+      "mrp": 119,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-1m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "1M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 1M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV01",
+    "name": "PC Plate PC Color 1M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 1,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV01"
+    ],
+    "pricing": {
+      "mrp": 172,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-1m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "1M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 1M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWV02",
+    "name": "PC Plate PC Color 2M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV02"
+    ],
+    "pricing": {
+      "mrp": 120,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-2m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "2M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 2M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV02",
+    "name": "PC Plate PC Color 2M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 2,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV02"
+    ],
+    "pricing": {
+      "mrp": 172,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-2m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "2M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 2M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWV03",
+    "name": "PC Plate PC Color 3M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 3,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV03"
+    ],
+    "pricing": {
+      "mrp": 139,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-3m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "3M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 3M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV03",
+    "name": "PC Plate PC Color 3M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 3,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV03"
+    ],
+    "pricing": {
+      "mrp": 200,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-3m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "3M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 3M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLPWV03",
+    "name": "PC Plate PC Color 3M without Pillar - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 3,
+      "material": "PC",
+      "type_detail": "PC Plate without pillar"
+    },
+    "variant": [
+      "ACWPLPGV03"
+    ],
+    "pricing": {
+      "mrp": 139,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-3m-without-pillar-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "3M",
+        "Without Pillar",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 3M without pillar White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLPGV03",
+    "name": "PC Plate PC Color 3M without Pillar - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 3,
+      "material": "PC",
+      "type_detail": "PC Plate without pillar"
+    },
+    "variant": [
+      "ACWPLPWV03"
+    ],
+    "pricing": {
+      "mrp": 200,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-3m-without-pillar-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "3M",
+        "Without Pillar",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 3M without pillar Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWV04",
+    "name": "PC Plate PC Color 4M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 4,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV04"
+    ],
+    "pricing": {
+      "mrp": 172,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-4m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "4M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 4M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV04",
+    "name": "PC Plate PC Color 4M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 4,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV04"
+    ],
+    "pricing": {
+      "mrp": 247,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-4m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "4M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 4M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWV06",
+    "name": "PC Plate PC Color 6M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 6,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV06"
+    ],
+    "pricing": {
+      "mrp": 235,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-6m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "6M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 6M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV06",
+    "name": "PC Plate PC Color 6M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 6,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV06"
+    ],
+    "pricing": {
+      "mrp": 341,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-6m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "6M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 6M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
     "sku": "ACWSPXG101",
     "name": "Bottom Push Switch 10AX 1-way with Indicator 1M - Charcoal Grey",
     "product_family": "Signia",
@@ -1494,6 +2012,2042 @@
         "Signia"
       ],
       "meta_description": "Buy LED Foot Light 2M Charcoal Grey hospitality range from the Signia series at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWV01",
+    "name": "PC Plate PC Color 1M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV01"
+    ],
+    "pricing": {
+      "mrp": 119,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-1m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "1M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 1M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV01",
+    "name": "PC Plate PC Color 1M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 1,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV01"
+    ],
+    "pricing": {
+      "mrp": 172,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-1m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "1M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 1M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWV02",
+    "name": "PC Plate PC Color 2M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV02"
+    ],
+    "pricing": {
+      "mrp": 120,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-2m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "2M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 2M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV02",
+    "name": "PC Plate PC Color 2M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 2,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV02"
+    ],
+    "pricing": {
+      "mrp": 172,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-2m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "2M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 2M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWV03",
+    "name": "PC Plate PC Color 3M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 3,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV03"
+    ],
+    "pricing": {
+      "mrp": 139,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-3m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "3M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 3M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV03",
+    "name": "PC Plate PC Color 3M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 3,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV03"
+    ],
+    "pricing": {
+      "mrp": 200,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-3m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "3M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 3M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLPWV03",
+    "name": "PC Plate PC Color 3M without Pillar - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 3,
+      "material": "PC",
+      "type_detail": "PC Plate without pillar"
+    },
+    "variant": [
+      "ACWPLPGV03"
+    ],
+    "pricing": {
+      "mrp": 139,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-3m-without-pillar-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "3M",
+        "Without Pillar",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 3M without pillar White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLPGV03",
+    "name": "PC Plate PC Color 3M without Pillar - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 3,
+      "material": "PC",
+      "type_detail": "PC Plate without pillar"
+    },
+    "variant": [
+      "ACWPLPWV03"
+    ],
+    "pricing": {
+      "mrp": 200,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-3m-without-pillar-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "3M",
+        "Without Pillar",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 3M without pillar Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWV04",
+    "name": "PC Plate PC Color 4M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 4,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV04"
+    ],
+    "pricing": {
+      "mrp": 172,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-4m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "4M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 4M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV04",
+    "name": "PC Plate PC Color 4M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 4,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV04"
+    ],
+    "pricing": {
+      "mrp": 247,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-4m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "4M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 4M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWV06",
+    "name": "PC Plate PC Color 6M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 6,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV06"
+    ],
+    "pricing": {
+      "mrp": 235,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-6m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "6M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 6M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV06",
+    "name": "PC Plate PC Color 6M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 6,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV06"
+    ],
+    "pricing": {
+      "mrp": 341,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-6m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "6M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 6M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWV08",
+    "name": "PC Plate PC Color 8M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 8,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV08"
+    ],
+    "pricing": {
+      "mrp": 315,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-8m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "8M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 8M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV08",
+    "name": "PC Plate PC Color 8M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 8,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV08"
+    ],
+    "pricing": {
+      "mrp": 452,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-8m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "8M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 8M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWH08",
+    "name": "PC Plate PC Color 8M (H) - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 8,
+      "material": "PC",
+      "type_detail": "PC Plate Horizontal"
+    },
+    "variant": [
+      "ACWPLCGH08"
+    ],
+    "pricing": {
+      "mrp": 315,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-8m-horizontal-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "8M",
+        "Horizontal",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 8M horizontal White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGH08",
+    "name": "PC Plate PC Color 8M (H) - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 8,
+      "material": "PC",
+      "type_detail": "PC Plate Horizontal"
+    },
+    "variant": [
+      "ACWPLCWH08"
+    ],
+    "pricing": {
+      "mrp": 452,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-8m-horizontal-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "8M",
+        "Horizontal",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 8M horizontal Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLPWV09",
+    "name": "PC Plate PC Color 9M without Pillar - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 9,
+      "material": "PC",
+      "type_detail": "PC Plate without pillar"
+    },
+    "variant": [
+      "ACWPLPGV09"
+    ],
+    "pricing": {
+      "mrp": 362,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-9m-without-pillar-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "9M",
+        "Without Pillar",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 9M without pillar White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLPGV09",
+    "name": "PC Plate PC Color 9M without Pillar - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 9,
+      "material": "PC",
+      "type_detail": "PC Plate without pillar"
+    },
+    "variant": [
+      "ACWPLPWV09"
+    ],
+    "pricing": {
+      "mrp": 608,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-9m-without-pillar-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "9M",
+        "Without Pillar",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 9M without pillar Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWV12",
+    "name": "PC Plate PC Color 12M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 12,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV12"
+    ],
+    "pricing": {
+      "mrp": 364,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-12m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "12M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 12M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV12",
+    "name": "PC Plate PC Color 12M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 12,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV12"
+    ],
+    "pricing": {
+      "mrp": 635,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-12m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "12M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 12M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWV16",
+    "name": "PC Plate PC Color 16M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 16,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV16"
+    ],
+    "pricing": {
+      "mrp": 440,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-16m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "16M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 16M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV16",
+    "name": "PC Plate PC Color 16M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 16,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV16"
+    ],
+    "pricing": {
+      "mrp": 771,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-16m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "16M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 16M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCWV18",
+    "name": "PC Plate PC Color 18M - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 18,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCGV18"
+    ],
+    "pricing": {
+      "mrp": 462,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-18m-white",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "18M",
+        "White",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 18M White from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCGV18",
+    "name": "PC Plate PC Color 18M - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "PC Plates without grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 18,
+      "material": "PC",
+      "type_detail": "PC Plate"
+    },
+    "variant": [
+      "ACWPLCWV18"
+    ],
+    "pricing": {
+      "mrp": 809,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "pc-plate-pc-color-18m-grey",
+      "keywords": [
+        "PC Plate",
+        "Plate",
+        "18M",
+        "Grey",
+        "Signia",
+        "Modular Combined"
+      ],
+      "meta_description": "Buy PC Plate PC Color 18M Grey from the Signia modular combined range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCRV01",
+    "name": "Signia Grande PC Combined Plate 1M PC Rose Bezel - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 1,
+      "material": "PC",
+      "bezel": "Rose",
+      "type_detail": "PC Combined Plate"
+    },
+    "variant": [
+      "ACWPLCCV01"
+    ],
+    "pricing": {
+      "mrp": 202,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-pc-combined-plate-1m-grey-rose-bezel",
+      "keywords": [
+        "Signia Grande",
+        "PC Combined Plate",
+        "Cover Plate",
+        "1M",
+        "Grey",
+        "Rose Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande PC Combined Plate 1M Grey with Rose bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCCV01",
+    "name": "Signia Grande PC Combined Plate 1M PC Chrome Bezel - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 1,
+      "material": "PC",
+      "bezel": "Chrome",
+      "type_detail": "PC Combined Plate"
+    },
+    "variant": [
+      "ACWPLCRV01"
+    ],
+    "pricing": {
+      "mrp": 145,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-pc-combined-plate-1m-white-chrome-bezel",
+      "keywords": [
+        "Signia Grande",
+        "PC Combined Plate",
+        "Cover Plate",
+        "1M",
+        "White",
+        "Chrome Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande PC Combined Plate 1M White with Chrome bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCRV02",
+    "name": "Signia Grande PC Combined Plate 2M PC Rose Bezel - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 2,
+      "material": "PC",
+      "bezel": "Rose",
+      "type_detail": "PC Combined Plate"
+    },
+    "variant": [
+      "ACWPLCCV02"
+    ],
+    "pricing": {
+      "mrp": 202,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-pc-combined-plate-2m-grey-rose-bezel",
+      "keywords": [
+        "Signia Grande",
+        "PC Combined Plate",
+        "Cover Plate",
+        "2M",
+        "Grey",
+        "Rose Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande PC Combined Plate 2M Grey with Rose bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCCV02",
+    "name": "Signia Grande PC Combined Plate 2M PC Chrome Bezel - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "material": "PC",
+      "bezel": "Chrome",
+      "type_detail": "PC Combined Plate"
+    },
+    "variant": [
+      "ACWPLCRV02"
+    ],
+    "pricing": {
+      "mrp": 145,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-pc-combined-plate-2m-white-chrome-bezel",
+      "keywords": [
+        "Signia Grande",
+        "PC Combined Plate",
+        "Cover Plate",
+        "2M",
+        "White",
+        "Chrome Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande PC Combined Plate 2M White with Chrome bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCRV03",
+    "name": "Signia Grande PC Combined Plate 3M PC Rose Bezel w/o Pillar - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 3,
+      "material": "PC",
+      "bezel": "Rose",
+      "type_detail": "PC Combined Plate without pillar"
+    },
+    "variant": [
+      "ACWPLCCV03"
+    ],
+    "pricing": {
+      "mrp": 230,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-pc-combined-plate-3m-grey-rose-bezel-without-pillar",
+      "keywords": [
+        "Signia Grande",
+        "PC Combined Plate",
+        "Cover Plate",
+        "3M",
+        "Without Pillar",
+        "Grey",
+        "Rose Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande PC Combined Plate 3M Grey without pillar with Rose bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCCV03",
+    "name": "Signia Grande PC Combined Plate 3M PC Chrome Bezel w/o Pillar - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 3,
+      "material": "PC",
+      "bezel": "Chrome",
+      "type_detail": "PC Combined Plate without pillar"
+    },
+    "variant": [
+      "ACWPLCRV03"
+    ],
+    "pricing": {
+      "mrp": 165,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-pc-combined-plate-3m-white-chrome-bezel-without-pillar",
+      "keywords": [
+        "Signia Grande",
+        "PC Combined Plate",
+        "Cover Plate",
+        "3M",
+        "Without Pillar",
+        "White",
+        "Chrome Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande PC Combined Plate 3M White without pillar with Chrome bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLPRV03",
+    "name": "Signia Grande PC Combined Plate 3M PC Rose Bezel with Pillar - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 3,
+      "material": "PC",
+      "bezel": "Rose",
+      "type_detail": "PC Combined Plate with pillar"
+    },
+    "variant": [
+      "ACWPLPCV03"
+    ],
+    "pricing": {
+      "mrp": 230,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-pc-combined-plate-3m-grey-rose-bezel-with-pillar",
+      "keywords": [
+        "Signia Grande",
+        "PC Combined Plate",
+        "Cover Plate",
+        "3M",
+        "With Pillar",
+        "Grey",
+        "Rose Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande PC Combined Plate 3M Grey with pillar with Rose bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLPCV03",
+    "name": "Signia Grande PC Combined Plate 3M PC Chrome Bezel with Pillar - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 3,
+      "material": "PC",
+      "bezel": "Chrome",
+      "type_detail": "PC Combined Plate with pillar"
+    },
+    "variant": [
+      "ACWPLPRV03"
+    ],
+    "pricing": {
+      "mrp": 165,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-pc-combined-plate-3m-white-chrome-bezel-with-pillar",
+      "keywords": [
+        "Signia Grande",
+        "PC Combined Plate",
+        "Cover Plate",
+        "3M",
+        "With Pillar",
+        "White",
+        "Chrome Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande PC Combined Plate 3M White with pillar with Chrome bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCRV04",
+    "name": "Signia Grande PC Combined Plate 4M PC Rose Bezel - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 4,
+      "material": "PC",
+      "bezel": "Rose",
+      "type_detail": "PC Combined Plate"
+    },
+    "variant": [
+      "ACWPLCCV04"
+    ],
+    "pricing": {
+      "mrp": 286,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-pc-combined-plate-4m-grey-rose-bezel",
+      "keywords": [
+        "Signia Grande",
+        "PC Combined Plate",
+        "Cover Plate",
+        "4M",
+        "Grey",
+        "Rose Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande PC Combined Plate 4M Grey with Rose bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCCV04",
+    "name": "Signia Grande PC Combined Plate 4M PC Chrome Bezel - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 4,
+      "material": "PC",
+      "bezel": "Chrome",
+      "type_detail": "PC Combined Plate"
+    },
+    "variant": [
+      "ACWPLCRV04"
+    ],
+    "pricing": {
+      "mrp": 206,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-pc-combined-plate-4m-white-chrome-bezel",
+      "keywords": [
+        "Signia Grande",
+        "PC Combined Plate",
+        "Cover Plate",
+        "4M",
+        "White",
+        "Chrome Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande PC Combined Plate 4M White with Chrome bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCRV06",
+    "name": "Signia Grande Outer Plate 6M PC Rose Bezel - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 6,
+      "material": "PC",
+      "bezel": "Rose",
+      "type_detail": "Outer Plate with grid frame"
+    },
+    "variant": [
+      "ACWPLCCV06"
+    ],
+    "pricing": {
+      "mrp": 397,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-outer-plate-6m-grey-rose-bezel",
+      "keywords": [
+        "Signia Grande",
+        "Outer Plate",
+        "Cover Plate",
+        "6M",
+        "Grey",
+        "Rose Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande Outer Plate 6M Grey with Rose bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCCV06",
+    "name": "Signia Grande Outer Plate 6M PC Chrome Bezel - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 6,
+      "material": "PC",
+      "bezel": "Chrome",
+      "type_detail": "Outer Plate with grid frame"
+    },
+    "variant": [
+      "ACWPLCRV06"
+    ],
+    "pricing": {
+      "mrp": 282,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-outer-plate-6m-white-chrome-bezel",
+      "keywords": [
+        "Signia Grande",
+        "Outer Plate",
+        "Cover Plate",
+        "6M",
+        "White",
+        "Chrome Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande Outer Plate 6M White with Chrome bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCRH08",
+    "name": "Signia Grande Outer Plate 8M Horizontal PC Rose Bezel - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 8,
+      "material": "PC",
+      "bezel": "Rose",
+      "orientation": "Horizontal",
+      "type_detail": "Outer Plate with grid frame"
+    },
+    "variant": [
+      "ACWPLCCH08"
+    ],
+    "pricing": {
+      "mrp": 525,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-outer-plate-8m-horizontal-grey-rose-bezel",
+      "keywords": [
+        "Signia Grande",
+        "Outer Plate",
+        "Cover Plate",
+        "8M",
+        "Horizontal",
+        "Grey",
+        "Rose Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande Outer Plate 8M Horizontal Grey with Rose bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCCH08",
+    "name": "Signia Grande Outer Plate 8M Horizontal PC Chrome Bezel - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 8,
+      "material": "PC",
+      "bezel": "Chrome",
+      "orientation": "Horizontal",
+      "type_detail": "Outer Plate with grid frame"
+    },
+    "variant": [
+      "ACWPLCRH08"
+    ],
+    "pricing": {
+      "mrp": 376,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-outer-plate-8m-horizontal-white-chrome-bezel",
+      "keywords": [
+        "Signia Grande",
+        "Outer Plate",
+        "Cover Plate",
+        "8M",
+        "Horizontal",
+        "White",
+        "Chrome Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande Outer Plate 8M Horizontal White with Chrome bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCRV08",
+    "name": "Signia Grande Outer Plate 8M PC Rose Bezel - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 8,
+      "material": "PC",
+      "bezel": "Rose",
+      "type_detail": "Outer Plate with grid frame"
+    },
+    "variant": [
+      "ACWPLCCV08"
+    ],
+    "pricing": {
+      "mrp": 525,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-outer-plate-8m-grey-rose-bezel",
+      "keywords": [
+        "Signia Grande",
+        "Outer Plate",
+        "Cover Plate",
+        "8M",
+        "Grey",
+        "Rose Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande Outer Plate 8M Grey with Rose bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCCV08",
+    "name": "Signia Grande Outer Plate 8M PC Chrome Bezel - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 8,
+      "material": "PC",
+      "bezel": "Chrome",
+      "type_detail": "Outer Plate with grid frame"
+    },
+    "variant": [
+      "ACWPLCRV08"
+    ],
+    "pricing": {
+      "mrp": 376,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-outer-plate-8m-white-chrome-bezel",
+      "keywords": [
+        "Signia Grande",
+        "Outer Plate",
+        "Cover Plate",
+        "8M",
+        "White",
+        "Chrome Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande Outer Plate 8M White with Chrome bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCRV12",
+    "name": "Signia Grande Outer Plate 12M PC Rose Bezel - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 12,
+      "material": "PC",
+      "bezel": "Rose",
+      "type_detail": "Outer Plate with grid frame"
+    },
+    "variant": [
+      "ACWPLCCV12"
+    ],
+    "pricing": {
+      "mrp": 738,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-outer-plate-12m-grey-rose-bezel",
+      "keywords": [
+        "Signia Grande",
+        "Outer Plate",
+        "Cover Plate",
+        "12M",
+        "Grey",
+        "Rose Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande Outer Plate 12M Grey with Rose bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCCV12",
+    "name": "Signia Grande Outer Plate 12M PC Chrome Bezel - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 12,
+      "material": "PC",
+      "bezel": "Chrome",
+      "type_detail": "Outer Plate with grid frame"
+    },
+    "variant": [
+      "ACWPLCRV12"
+    ],
+    "pricing": {
+      "mrp": 435,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-outer-plate-12m-white-chrome-bezel",
+      "keywords": [
+        "Signia Grande",
+        "Outer Plate",
+        "Cover Plate",
+        "12M",
+        "White",
+        "Chrome Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande Outer Plate 12M White with Chrome bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCRV16",
+    "name": "Signia Grande Outer Plate 16M PC Rose Bezel - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 16,
+      "material": "PC",
+      "bezel": "Rose",
+      "type_detail": "Outer Plate with grid frame"
+    },
+    "variant": [
+      "ACWPLCCV16"
+    ],
+    "pricing": {
+      "mrp": 897,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-outer-plate-16m-grey-rose-bezel",
+      "keywords": [
+        "Signia Grande",
+        "Outer Plate",
+        "Cover Plate",
+        "16M",
+        "Grey",
+        "Rose Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande Outer Plate 16M Grey with Rose bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCCV16",
+    "name": "Signia Grande Outer Plate 16M PC Chrome Bezel - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 16,
+      "material": "PC",
+      "bezel": "Chrome",
+      "type_detail": "Outer Plate with grid frame"
+    },
+    "variant": [
+      "ACWPLCRV16"
+    ],
+    "pricing": {
+      "mrp": 526,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-outer-plate-16m-white-chrome-bezel",
+      "keywords": [
+        "Signia Grande",
+        "Outer Plate",
+        "Cover Plate",
+        "16M",
+        "White",
+        "Chrome Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande Outer Plate 16M White with Chrome bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCRV18",
+    "name": "Signia Grande Outer Plate 18M PC Rose Bezel - Grey",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "Grey",
+      "mw": 18,
+      "material": "PC",
+      "bezel": "Rose",
+      "type_detail": "Outer Plate with grid frame"
+    },
+    "variant": [
+      "ACWPLCCV18"
+    ],
+    "pricing": {
+      "mrp": 940,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-outer-plate-18m-grey-rose-bezel",
+      "keywords": [
+        "Signia Grande",
+        "Outer Plate",
+        "Cover Plate",
+        "18M",
+        "Grey",
+        "Rose Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande Outer Plate 18M Grey with Rose bezel (cover plate with grid frame) from New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLCCV18",
+    "name": "Signia Grande Outer Plate 18M PC Chrome Bezel - White",
+    "product_family": "Signia",
+    "category": "Plates",
+    "subcategory": "Cover Plates with grid frames",
+    "specs": {
+      "color": "White",
+      "mw": 18,
+      "material": "PC",
+      "bezel": "Chrome",
+      "type_detail": "Outer Plate with grid frame"
+    },
+    "variant": [
+      "ACWPLCRV18"
+    ],
+    "pricing": {
+      "mrp": 552,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "5"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "signia-grande-outer-plate-18m-white-chrome-bezel",
+      "keywords": [
+        "Signia Grande",
+        "Outer Plate",
+        "Cover Plate",
+        "18M",
+        "White",
+        "Chrome Bezel",
+        "Havells"
+      ],
+      "meta_description": "Buy Signia Grande Outer Plate 18M White with Chrome bezel (cover plate with grid frame) from New Delhi Electricals."
     },
     "status": {
       "is_active": true,

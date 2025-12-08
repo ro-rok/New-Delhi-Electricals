@@ -2775,6 +2775,6528 @@
       "is_featured": false
     },
     "brand": "Havells"
+  },
+  {
+    "sku": "DCWNCSPA010",
+    "name": "Mini MCB 10A SP C - Std Pack",
+    "product_family": "Signia",
+    "category": "Circuit Protection",
+    "subcategory": "Miniature Circuit Breakers (MCBs)",
+    "specs": {
+      "ampere": 10,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "variant": [
+      "DCWNCSPA01000MR"
+    ],
+    "pricing": {
+      "mrp": 292,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-10a-sp-c-std-pack",
+      "keywords": [
+        "Mini MCB",
+        "10A",
+        "SP",
+        "Curve C",
+        "Signia"
+      ],
+      "meta_description": "Buy Mini MCB 10A SP C standard pack from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DCWNCSPA01000MR",
+    "name": "Mini MCB 10A SP C - Master Pack",
+    "product_family": "Signia",
+    "category": "Circuit Protection",
+    "subcategory": "Miniature Circuit Breakers (MCBs)",
+    "specs": {
+      "ampere": 10,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "variant": [
+      "DCWNCSPA010"
+    ],
+    "pricing": {
+      "mrp": 406,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "240"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-10a-sp-c-master-pack",
+      "keywords": [
+        "Mini MCB",
+        "10A",
+        "SP",
+        "Curve C",
+        "Signia"
+      ],
+      "meta_description": "Buy Mini MCB 10A SP C master pack from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DCWNCSPA016",
+    "name": "Mini MCB 16A SP C - Std Pack",
+    "product_family": "Signia",
+    "category": "Circuit Protection",
+    "subcategory": "Miniature Circuit Breakers (MCBs)",
+    "specs": {
+      "ampere": 16,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "variant": [
+      "DCWNCSPA01600MR"
+    ],
+    "pricing": {
+      "mrp": 292,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-16a-sp-c-std-pack",
+      "keywords": [
+        "Mini MCB",
+        "16A",
+        "SP",
+        "Curve C",
+        "Signia"
+      ],
+      "meta_description": "Buy Mini MCB 16A SP C standard pack from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DCWNCSPA01600MR",
+    "name": "Mini MCB 16A SP C - Master Pack",
+    "product_family": "Signia",
+    "category": "Circuit Protection",
+    "subcategory": "Miniature Circuit Breakers (MCBs)",
+    "specs": {
+      "ampere": 16,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "variant": [
+      "DCWNCSPA016"
+    ],
+    "pricing": {
+      "mrp": 406,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "240"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-16a-sp-c-master-pack",
+      "keywords": [
+        "Mini MCB",
+        "16A",
+        "SP",
+        "Curve C",
+        "Signia"
+      ],
+      "meta_description": "Buy Mini MCB 16A SP C master pack from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DCWNCSPA020",
+    "name": "Mini MCB 20A SP C - Std Pack",
+    "product_family": "Signia",
+    "category": "Circuit Protection",
+    "subcategory": "Miniature Circuit Breakers (MCBs)",
+    "specs": {
+      "ampere": 20,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "variant": [
+      "DCWNCSPA02000MR"
+    ],
+    "pricing": {
+      "mrp": 292,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-20a-sp-c-std-pack",
+      "keywords": [
+        "Mini MCB",
+        "20A",
+        "SP",
+        "Curve C",
+        "Signia"
+      ],
+      "meta_description": "Buy Mini MCB 20A SP C standard pack from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DCWNCSPA02000MR",
+    "name": "Mini MCB 20A SP C - Master Pack",
+    "product_family": "Signia",
+    "category": "Circuit Protection",
+    "subcategory": "Miniature Circuit Breakers (MCBs)",
+    "specs": {
+      "ampere": 20,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "variant": [
+      "DCWNCSPA020"
+    ],
+    "pricing": {
+      "mrp": 406,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "240"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-20a-sp-c-master-pack",
+      "keywords": [
+        "Mini MCB",
+        "20A",
+        "SP",
+        "Curve C",
+        "Signia"
+      ],
+      "meta_description": "Buy Mini MCB 20A SP C master pack from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DCWNCSPA025",
+    "name": "Mini MCB 25A SP C - Std Pack",
+    "product_family": "Signia",
+    "category": "Circuit Protection",
+    "subcategory": "Miniature Circuit Breakers (MCBs)",
+    "specs": {
+      "ampere": 25,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "variant": [
+      "DCWNCSPA02500MR"
+    ],
+    "pricing": {
+      "mrp": 292,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-25a-sp-c-std-pack",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "SP",
+        "Curve C",
+        "Signia"
+      ],
+      "meta_description": "Buy Mini MCB 25A SP C standard pack from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DCWNCSPA02500MR",
+    "name": "Mini MCB 25A SP C - Master Pack",
+    "product_family": "Signia",
+    "category": "Circuit Protection",
+    "subcategory": "Miniature Circuit Breakers (MCBs)",
+    "specs": {
+      "ampere": 25,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "variant": [
+      "DCWNCSPA025"
+    ],
+    "pricing": {
+      "mrp": 406,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "240"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-25a-sp-c-master-pack",
+      "keywords": [
+        "Mini MCB",
+        "25A",
+        "SP",
+        "Curve C",
+        "Signia"
+      ],
+      "meta_description": "Buy Mini MCB 25A SP C master pack from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DCWNCSPA032",
+    "name": "Mini MCB 32A SP C - Std Pack",
+    "product_family": "Signia",
+    "category": "Circuit Protection",
+    "subcategory": "Miniature Circuit Breakers (MCBs)",
+    "specs": {
+      "ampere": 32,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "variant": [
+      "DCWNCSPA03200MR"
+    ],
+    "pricing": {
+      "mrp": 292,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "12"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-32a-sp-c-std-pack",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "SP",
+        "Curve C",
+        "Signia"
+      ],
+      "meta_description": "Buy Mini MCB 32A SP C standard pack from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "DCWNCSPA03200MR",
+    "name": "Mini MCB 32A SP C - Master Pack",
+    "product_family": "Signia",
+    "category": "Circuit Protection",
+    "subcategory": "Miniature Circuit Breakers (MCBs)",
+    "specs": {
+      "ampere": 32,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "variant": [
+      "DCWNCSPA032"
+    ],
+    "pricing": {
+      "mrp": 406,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "240"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "mini-mcb-32a-sp-c-master-pack",
+      "keywords": [
+        "Mini MCB",
+        "32A",
+        "SP",
+        "Curve C",
+        "Signia"
+      ],
+      "meta_description": "Buy Mini MCB 32A SP C master pack from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSMXW201",
+    "name": "Motor Starter 20A - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 20,
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Motor Starter"
+    },
+    "variant": [
+      "ACWSMXG201"
+    ],
+    "pricing": {
+      "mrp": 527,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-20a-white",
+      "keywords": [
+        "Motor Starter",
+        "20A",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Motor Starter 20A White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSMXG201",
+    "name": "Motor Starter 20A - Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 20,
+      "color": "Grey",
+      "mw": 2,
+      "type_detail": "Motor Starter"
+    },
+    "variant": [
+      "ACWSMXW201"
+    ],
+    "pricing": {
+      "mrp": 746,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-20a-grey",
+      "keywords": [
+        "Motor Starter",
+        "20A",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Motor Starter 20A Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSMXW251",
+    "name": "Motor Starter 25A - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Motor Starter"
+    },
+    "variant": [
+      "ACWSMXG251"
+    ],
+    "pricing": {
+      "mrp": 545,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-25a-white",
+      "keywords": [
+        "Motor Starter",
+        "25A",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Motor Starter 25A White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSMXG251",
+    "name": "Motor Starter 25A - Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 25,
+      "color": "Grey",
+      "mw": 2,
+      "type_detail": "Motor Starter"
+    },
+    "variant": [
+      "ACWSMXW251"
+    ],
+    "pricing": {
+      "mrp": 772,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-25a-grey",
+      "keywords": [
+        "Motor Starter",
+        "25A",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Motor Starter 25A Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSMXW321",
+    "name": "Motor Starter 32A - White",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 32,
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Motor Starter"
+    },
+    "variant": [
+      "ACWSMXG321"
+    ],
+    "pricing": {
+      "mrp": 610,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-32a-white",
+      "keywords": [
+        "Motor Starter",
+        "32A",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Motor Starter 32A White from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSMXG321",
+    "name": "Motor Starter 32A - Grey",
+    "product_family": "Signia",
+    "category": "Switches",
+    "subcategory": "Motor Starters - 2 Module",
+    "specs": {
+      "ampere": 32,
+      "color": "Grey",
+      "mw": 2,
+      "type_detail": "Motor Starter"
+    },
+    "variant": [
+      "ACWSMXW321"
+    ],
+    "pricing": {
+      "mrp": 864,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "10"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "motor-starter-32a-grey",
+      "keywords": [
+        "Motor Starter",
+        "32A",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Motor Starter 32A Grey from the Signia range at New Delhi Electricals."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOWV01",
+    "name": "Outer Plate 1M Igloo White Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 1,
+      "color": "Igloo White",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 612,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-1m-igloo-white-glass",
+      "keywords": [
+        "Outer Plate",
+        "1M",
+        "Igloo White",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 1M Igloo White Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOWV02",
+    "name": "Outer Plate 2M Igloo White Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 2,
+      "color": "Igloo White",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 612,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-2m-igloo-white-glass",
+      "keywords": [
+        "Outer Plate",
+        "2M",
+        "Igloo White",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 2M Igloo White Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOWV03",
+    "name": "Outer Plate 3M without Pillar Igloo White Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "color": "Igloo White",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 662,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-without-pillar-igloo-white-glass",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "Without Pillar",
+        "Igloo White",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M without pillar Igloo White Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOWP03",
+    "name": "Outer Plate 3M with Pillar Igloo White Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "color": "Igloo White",
+      "finish": "Glass",
+      "with_pillar": true,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 662,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-with-pillar-igloo-white-glass",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "With Pillar",
+        "Igloo White",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M with pillar Igloo White Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOWV04",
+    "name": "Outer Plate 4M Igloo White Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 4,
+      "color": "Igloo White",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 735,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-4m-igloo-white-glass",
+      "keywords": [
+        "Outer Plate",
+        "4M",
+        "Igloo White",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 4M Igloo White Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOBV01",
+    "name": "Outer Plate 1M Raven Black Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 1,
+      "color": "Raven Black",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 612,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-1m-raven-black-glass",
+      "keywords": [
+        "Outer Plate",
+        "1M",
+        "Raven Black",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 1M Raven Black Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOBV02",
+    "name": "Outer Plate 2M Raven Black Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 2,
+      "color": "Raven Black",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 612,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-2m-raven-black-glass",
+      "keywords": [
+        "Outer Plate",
+        "2M",
+        "Raven Black",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 2M Raven Black Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOBV03",
+    "name": "Outer Plate 3M without Pillar Raven Black Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "color": "Raven Black",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 662,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-without-pillar-raven-black-glass",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "Without Pillar",
+        "Raven Black",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M without pillar Raven Black Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOBP03",
+    "name": "Outer Plate 3M with Pillar Raven Black Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "color": "Raven Black",
+      "finish": "Glass",
+      "with_pillar": true,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 662,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-with-pillar-raven-black-glass",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "With Pillar",
+        "Raven Black",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M with pillar Raven Black Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOBV04",
+    "name": "Outer Plate 4M Raven Black Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 4,
+      "color": "Raven Black",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 735,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-4m-raven-black-glass",
+      "keywords": [
+        "Outer Plate",
+        "4M",
+        "Raven Black",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 4M Raven Black Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOCV01",
+    "name": "Outer Plate 1M Copper Mirror Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 1,
+      "color": "Copper Mirror",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 675,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-1m-copper-mirror-glass",
+      "keywords": [
+        "Outer Plate",
+        "1M",
+        "Copper Mirror",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 1M Copper Mirror Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOCV02",
+    "name": "Outer Plate 2M Copper Mirror Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 2,
+      "color": "Copper Mirror",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 675,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-2m-copper-mirror-glass",
+      "keywords": [
+        "Outer Plate",
+        "2M",
+        "Copper Mirror",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 2M Copper Mirror Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOCV03",
+    "name": "Outer Plate 3M without Pillar Copper Mirror Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "color": "Copper Mirror",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 729,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-without-pillar-copper-mirror-glass",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "Without Pillar",
+        "Copper Mirror",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M without pillar Copper Mirror Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOCP03",
+    "name": "Outer Plate 3M with Pillar Copper Mirror Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "color": "Copper Mirror",
+      "finish": "Glass",
+      "with_pillar": true,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 729,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-with-pillar-copper-mirror-glass",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "With Pillar",
+        "Copper Mirror",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M with pillar Copper Mirror Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOCV04",
+    "name": "Outer Plate 4M Copper Mirror Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 4,
+      "color": "Copper Mirror",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 807,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-4m-copper-mirror-glass",
+      "keywords": [
+        "Outer Plate",
+        "4M",
+        "Copper Mirror",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 4M Copper Mirror Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOAV01",
+    "name": "Outer Plate 1M Silver Sheen Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 1,
+      "color": "Silver Sheen",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 675,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-1m-silver-sheen-glass",
+      "keywords": [
+        "Outer Plate",
+        "1M",
+        "Silver Sheen",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 1M Silver Sheen Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOAV02",
+    "name": "Outer Plate 2M Silver Sheen Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 2,
+      "color": "Silver Sheen",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 675,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-2m-silver-sheen-glass",
+      "keywords": [
+        "Outer Plate",
+        "2M",
+        "Silver Sheen",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 2M Silver Sheen Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOAV03",
+    "name": "Outer Plate 3M without Pillar Silver Sheen Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "color": "Silver Sheen",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 729,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-without-pillar-silver-sheen-glass",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "Without Pillar",
+        "Silver Sheen",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M without pillar Silver Sheen Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOAP03",
+    "name": "Outer Plate 3M with Pillar Silver Sheen Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "color": "Silver Sheen",
+      "finish": "Glass",
+      "with_pillar": true,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 729,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-with-pillar-silver-sheen-glass",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "With Pillar",
+        "Silver Sheen",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M with pillar Silver Sheen Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOAV04",
+    "name": "Outer Plate 4M Silver Sheen Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 4,
+      "color": "Silver Sheen",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 807,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-4m-silver-sheen-glass",
+      "keywords": [
+        "Outer Plate",
+        "4M",
+        "Silver Sheen",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 4M Silver Sheen Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOGV01",
+    "name": "Outer Plate 1M Frosted State Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 1,
+      "color": "Frosted State",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 675,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-1m-frosted-state-glass",
+      "keywords": [
+        "Outer Plate",
+        "1M",
+        "Frosted State",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 1M Frosted State Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOGV02",
+    "name": "Outer Plate 2M Frosted State Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 2,
+      "color": "Frosted State",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 675,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-2m-frosted-state-glass",
+      "keywords": [
+        "Outer Plate",
+        "2M",
+        "Frosted State",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 2M Frosted State Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOGV03",
+    "name": "Outer Plate 3M without Pillar Frosted State Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "color": "Frosted State",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 729,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-without-pillar-frosted-state-glass",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "Without Pillar",
+        "Frosted State",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M without pillar Frosted State Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOGP03",
+    "name": "Outer Plate 3M with Pillar Frosted State Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "color": "Frosted State",
+      "finish": "Glass",
+      "with_pillar": true,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 729,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-with-pillar-frosted-state-glass",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "With Pillar",
+        "Frosted State",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M with pillar Frosted State Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOGV04",
+    "name": "Outer Plate 4M Frosted State Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 4,
+      "color": "Frosted State",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 807,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-4m-frosted-state-glass",
+      "keywords": [
+        "Outer Plate",
+        "4M",
+        "Frosted State",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 4M Frosted State Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOSV01",
+    "name": "Outer Plate 1M Frosted Husky Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 1,
+      "color": "Frosted Husky",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 675,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-1m-frosted-husky-glass",
+      "keywords": [
+        "Outer Plate",
+        "1M",
+        "Frosted Husky",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 1M Frosted Husky Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOSV02",
+    "name": "Outer Plate 2M Frosted Husky Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 2,
+      "color": "Frosted Husky",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 675,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-2m-frosted-husky-glass",
+      "keywords": [
+        "Outer Plate",
+        "2M",
+        "Frosted Husky",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 2M Frosted Husky Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOSV03",
+    "name": "Outer Plate 3M without Pillar Frosted Husky Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "color": "Frosted Husky",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 729,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-without-pillar-frosted-husky-glass",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "Without Pillar",
+        "Frosted Husky",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M without pillar Frosted Husky Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOSP03",
+    "name": "Outer Plate 3M with Pillar Frosted Husky Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "color": "Frosted Husky",
+      "finish": "Glass",
+      "with_pillar": true,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 729,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-with-pillar-frosted-husky-glass",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "With Pillar",
+        "Frosted Husky",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M with pillar Frosted Husky Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOSV04",
+    "name": "Outer Plate 4M Frosted Husky Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 4,
+      "color": "Frosted Husky",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 807,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-4m-frosted-husky-glass",
+      "keywords": [
+        "Outer Plate",
+        "4M",
+        "Frosted Husky",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 4M Frosted Husky Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOWV06",
+    "name": "Outer Plate 6M Igloo White Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 6,
+      "color": "Igloo White",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 796,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-6m-igloo-white-glass",
+      "keywords": [
+        "Outer Plate",
+        "6M",
+        "Igloo White",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 6M Igloo White Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOWH08",
+    "name": "Outer Plate 8M Horizontal Igloo White Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Horizontal",
+      "color": "Igloo White",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1041,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-horizontal-igloo-white-glass",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Horizontal",
+        "Igloo White",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M horizontal Igloo White Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOWV08",
+    "name": "Outer Plate 8M Vertical Igloo White Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Vertical",
+      "color": "Igloo White",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/18 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1041,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-vertical-igloo-white-glass",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Vertical",
+        "Igloo White",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M vertical Igloo White Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOWV12",
+    "name": "Outer Plate 12M Igloo White Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 12,
+      "color": "Igloo White",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1347,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-12m-igloo-white-glass",
+      "keywords": [
+        "Outer Plate",
+        "12M",
+        "Igloo White",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 12M Igloo White Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOWV18",
+    "name": "Outer Plate 18M Igloo White Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 18,
+      "color": "Igloo White",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 2358,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-18m-igloo-white-glass",
+      "keywords": [
+        "Outer Plate",
+        "18M",
+        "Igloo White",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 18M Igloo White Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOBV06",
+    "name": "Outer Plate 6M Raven Black Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 6,
+      "color": "Raven Black",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 796,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-6m-raven-black-glass",
+      "keywords": [
+        "Outer Plate",
+        "6M",
+        "Raven Black",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 6M Raven Black Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOBH08",
+    "name": "Outer Plate 8M Horizontal Raven Black Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Horizontal",
+      "color": "Raven Black",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1041,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-horizontal-raven-black-glass",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Horizontal",
+        "Raven Black",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M horizontal Raven Black Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOBV08",
+    "name": "Outer Plate 8M Vertical Raven Black Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Vertical",
+      "color": "Raven Black",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/18 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1041,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-vertical-raven-black-glass",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Vertical",
+        "Raven Black",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M vertical Raven Black Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOBV12",
+    "name": "Outer Plate 12M Raven Black Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 12,
+      "color": "Raven Black",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1347,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-12m-raven-black-glass",
+      "keywords": [
+        "Outer Plate",
+        "12M",
+        "Raven Black",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 12M Raven Black Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOBV18",
+    "name": "Outer Plate 18M Raven Black Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 18,
+      "color": "Raven Black",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 2358,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-18m-raven-black-glass",
+      "keywords": [
+        "Outer Plate",
+        "18M",
+        "Raven Black",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 18M Raven Black Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOCV06",
+    "name": "Outer Plate 6M Copper Mirror Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 6,
+      "color": "Copper Mirror",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 875,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-6m-copper-mirror-glass",
+      "keywords": [
+        "Outer Plate",
+        "6M",
+        "Copper Mirror",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 6M Copper Mirror Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOCH08",
+    "name": "Outer Plate 8M Horizontal Copper Mirror Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Horizontal",
+      "color": "Copper Mirror",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1146,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-horizontal-copper-mirror-glass",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Horizontal",
+        "Copper Mirror",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M horizontal Copper Mirror Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOCV08",
+    "name": "Outer Plate 8M Vertical Copper Mirror Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Vertical",
+      "color": "Copper Mirror",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/18 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1146,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-vertical-copper-mirror-glass",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Vertical",
+        "Copper Mirror",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M vertical Copper Mirror Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOCV12",
+    "name": "Outer Plate 12M Copper Mirror Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 12,
+      "color": "Copper Mirror",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1483,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-12m-copper-mirror-glass",
+      "keywords": [
+        "Outer Plate",
+        "12M",
+        "Copper Mirror",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 12M Copper Mirror Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOCV18",
+    "name": "Outer Plate 18M Copper Mirror Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 18,
+      "color": "Copper Mirror",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 2816,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-18m-copper-mirror-glass",
+      "keywords": [
+        "Outer Plate",
+        "18M",
+        "Copper Mirror",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 18M Copper Mirror Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOAV06",
+    "name": "Outer Plate 6M Silver Sheen Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 6,
+      "color": "Silver Sheen",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 875,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-6m-silver-sheen-glass",
+      "keywords": [
+        "Outer Plate",
+        "6M",
+        "Silver Sheen",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 6M Silver Sheen Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOAH08",
+    "name": "Outer Plate 8M Horizontal Silver Sheen Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Horizontal",
+      "color": "Silver Sheen",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1146,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-horizontal-silver-sheen-glass",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Horizontal",
+        "Silver Sheen",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M horizontal Silver Sheen Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOAV08",
+    "name": "Outer Plate 8M Vertical Silver Sheen Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Vertical",
+      "color": "Silver Sheen",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/18 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1146,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-vertical-silver-sheen-glass",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Vertical",
+        "Silver Sheen",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M vertical Silver Sheen Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOAV12",
+    "name": "Outer Plate 12M Silver Sheen Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 12,
+      "color": "Silver Sheen",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1483,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-12m-silver-sheen-glass",
+      "keywords": [
+        "Outer Plate",
+        "12M",
+        "Silver Sheen",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 12M Silver Sheen Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOAV18",
+    "name": "Outer Plate 18M Silver Sheen Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 18,
+      "color": "Silver Sheen",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 2816,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-18m-silver-sheen-glass",
+      "keywords": [
+        "Outer Plate",
+        "18M",
+        "Silver Sheen",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 18M Silver Sheen Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOGV06",
+    "name": "Outer Plate 6M Frosted State Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 6,
+      "color": "Frosted State",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 875,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-6m-frosted-state-glass",
+      "keywords": [
+        "Outer Plate",
+        "6M",
+        "Frosted State",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 6M Frosted State Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOGH08",
+    "name": "Outer Plate 8M Horizontal Frosted State Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Horizontal",
+      "color": "Frosted State",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1146,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-horizontal-frosted-state-glass",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Horizontal",
+        "Frosted State",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M horizontal Frosted State Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOGV08",
+    "name": "Outer Plate 8M Vertical Frosted State Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Vertical",
+      "color": "Frosted State",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/18 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1146,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-vertical-frosted-state-glass",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Vertical",
+        "Frosted State",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M vertical Frosted State Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOGV12",
+    "name": "Outer Plate 12M Frosted State Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 12,
+      "color": "Frosted State",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1483,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-12m-frosted-state-glass",
+      "keywords": [
+        "Outer Plate",
+        "12M",
+        "Frosted State",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 12M Frosted State Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOGV18",
+    "name": "Outer Plate 18M Frosted State Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 18,
+      "color": "Frosted State",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 2816,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-18m-frosted-state-glass",
+      "keywords": [
+        "Outer Plate",
+        "18M",
+        "Frosted State",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 18M Frosted State Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOSV06",
+    "name": "Outer Plate 6M Frosted Husky Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 6,
+      "color": "Frosted Husky",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 875,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-6m-frosted-husky-glass",
+      "keywords": [
+        "Outer Plate",
+        "6M",
+        "Frosted Husky",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 6M Frosted Husky Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOSH08",
+    "name": "Outer Plate 8M Horizontal Frosted Husky Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Horizontal",
+      "color": "Frosted Husky",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1146,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-horizontal-frosted-husky-glass",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Horizontal",
+        "Frosted Husky",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M horizontal Frosted Husky Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOSV08",
+    "name": "Outer Plate 8M Vertical Frosted Husky Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Vertical",
+      "color": "Frosted Husky",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/18 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1146,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-vertical-frosted-husky-glass",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Vertical",
+        "Frosted Husky",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M vertical Frosted Husky Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOSV12",
+    "name": "Outer Plate 12M Frosted Husky Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 12,
+      "color": "Frosted Husky",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1483,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-12m-frosted-husky-glass",
+      "keywords": [
+        "Outer Plate",
+        "12M",
+        "Frosted Husky",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 12M Frosted Husky Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGOSV18",
+    "name": "Outer Plate 18M Frosted Husky Glass",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 18,
+      "color": "Frosted Husky",
+      "finish": "Glass",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "cover_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 2816,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-18m-frosted-husky-glass",
+      "keywords": [
+        "Outer Plate",
+        "18M",
+        "Frosted Husky",
+        "Glass",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 18M Frosted Husky Glass (grid frame without cover plate) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOBV01",
+    "name": "Outer Plate 1M Charcoal Black Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 1,
+      "color": "Charcoal Black",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 929,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-1m-charcoal-black-metal",
+      "keywords": [
+        "Outer Plate",
+        "1M",
+        "Charcoal Black",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 1M Charcoal Black Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOBV02",
+    "name": "Outer Plate 2M Charcoal Black Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 2,
+      "color": "Charcoal Black",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 929,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-2m-charcoal-black-metal",
+      "keywords": [
+        "Outer Plate",
+        "2M",
+        "Charcoal Black",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 2M Charcoal Black Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOBV03",
+    "name": "Outer Plate 3M without Pillar Charcoal Black Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 3,
+      "color": "Charcoal Black",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1009,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-without-pillar-charcoal-black-metal",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "Without Pillar",
+        "Charcoal Black",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M without pillar Charcoal Black Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOBP03",
+    "name": "Outer Plate 3M with Pillar Charcoal Black Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 3,
+      "color": "Charcoal Black",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": true,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1009,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-with-pillar-charcoal-black-metal",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "With Pillar",
+        "Charcoal Black",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M with pillar Charcoal Black Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOBV04",
+    "name": "Outer Plate 4M Charcoal Black Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 4,
+      "color": "Charcoal Black",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1122,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-4m-charcoal-black-metal",
+      "keywords": [
+        "Outer Plate",
+        "4M",
+        "Charcoal Black",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 4M Charcoal Black Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOSV01",
+    "name": "Outer Plate 1M Sterling Silver Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 1,
+      "color": "Sterling Silver",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 929,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-1m-sterling-silver-metal",
+      "keywords": [
+        "Outer Plate",
+        "1M",
+        "Sterling Silver",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 1M Sterling Silver Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOSV02",
+    "name": "Outer Plate 2M Sterling Silver Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 2,
+      "color": "Sterling Silver",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 929,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-2m-sterling-silver-metal",
+      "keywords": [
+        "Outer Plate",
+        "2M",
+        "Sterling Silver",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 2M Sterling Silver Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOSV03",
+    "name": "Outer Plate 3M without Pillar Sterling Silver Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 3,
+      "color": "Sterling Silver",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1009,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-without-pillar-sterling-silver-metal",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "Without Pillar",
+        "Sterling Silver",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M without pillar Sterling Silver Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOSP03",
+    "name": "Outer Plate 3M with Pillar Sterling Silver Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 3,
+      "color": "Sterling Silver",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": true,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1009,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-with-pillar-sterling-silver-metal",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "With Pillar",
+        "Sterling Silver",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M with pillar Sterling Silver Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOSV04",
+    "name": "Outer Plate 4M Sterling Silver Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 4,
+      "color": "Sterling Silver",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1122,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-4m-sterling-silver-metal",
+      "keywords": [
+        "Outer Plate",
+        "4M",
+        "Sterling Silver",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 4M Sterling Silver Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOGV01",
+    "name": "Outer Plate 1M Gold Shimmer Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 1,
+      "color": "Gold Shimmer",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 929,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-1m-gold-shimmer-metal",
+      "keywords": [
+        "Outer Plate",
+        "1M",
+        "Gold Shimmer",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 1M Gold Shimmer Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOGV02",
+    "name": "Outer Plate 2M Gold Shimmer Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 2,
+      "color": "Gold Shimmer",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 929,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-2m-gold-shimmer-metal",
+      "keywords": [
+        "Outer Plate",
+        "2M",
+        "Gold Shimmer",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 2M Gold Shimmer Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOGV03",
+    "name": "Outer Plate 3M without Pillar Gold Shimmer Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 3,
+      "color": "Gold Shimmer",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1009,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-without-pillar-gold-shimmer-metal",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "Without Pillar",
+        "Gold Shimmer",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M without pillar Gold Shimmer Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOGP03",
+    "name": "Outer Plate 3M with Pillar Gold Shimmer Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 3,
+      "color": "Gold Shimmer",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": true,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1009,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-with-pillar-gold-shimmer-metal",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "With Pillar",
+        "Gold Shimmer",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M with pillar Gold Shimmer Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOGV04",
+    "name": "Outer Plate 4M Gold Shimmer Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 4,
+      "color": "Gold Shimmer",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1122,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-4m-gold-shimmer-metal",
+      "keywords": [
+        "Outer Plate",
+        "4M",
+        "Gold Shimmer",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 4M Gold Shimmer Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOKV01",
+    "name": "Outer Plate 1M Dusky Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 1,
+      "color": "Dusky Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 929,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-1m-dusky-wood",
+      "keywords": [
+        "Outer Plate",
+        "1M",
+        "Dusky Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 1M Dusky Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOKV02",
+    "name": "Outer Plate 2M Dusky Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 2,
+      "color": "Dusky Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 929,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-2m-dusky-wood",
+      "keywords": [
+        "Outer Plate",
+        "2M",
+        "Dusky Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 2M Dusky Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOKV03",
+    "name": "Outer Plate 3M without Pillar Dusky Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 3,
+      "color": "Dusky Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1009,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-without-pillar-dusky-wood",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "Without Pillar",
+        "Dusky Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M without pillar Dusky Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOKP03",
+    "name": "Outer Plate 3M with Pillar Dusky Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 3,
+      "color": "Dusky Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": true,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1009,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-with-pillar-dusky-wood",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "With Pillar",
+        "Dusky Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M with pillar Dusky Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOKV04",
+    "name": "Outer Plate 4M Dusky Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 4,
+      "color": "Dusky Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1122,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-4m-dusky-wood",
+      "keywords": [
+        "Outer Plate",
+        "4M",
+        "Dusky Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 4M Dusky Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOSV01",
+    "name": "Outer Plate 1M Sandi Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 1,
+      "color": "Sandi Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 929,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-1m-sandi-wood",
+      "keywords": [
+        "Outer Plate",
+        "1M",
+        "Sandi Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 1M Sandi Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOSV02",
+    "name": "Outer Plate 2M Sandi Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 2,
+      "color": "Sandi Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 929,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-2m-sandi-wood",
+      "keywords": [
+        "Outer Plate",
+        "2M",
+        "Sandi Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 2M Sandi Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOSV03",
+    "name": "Outer Plate 3M without Pillar Sandi Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 3,
+      "color": "Sandi Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1009,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-without-pillar-sandi-wood",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "Without Pillar",
+        "Sandi Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M without pillar Sandi Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOSP03",
+    "name": "Outer Plate 3M with Pillar Sandi Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 3,
+      "color": "Sandi Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": true,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1009,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-3m-with-pillar-sandi-wood",
+      "keywords": [
+        "Outer Plate",
+        "3M",
+        "With Pillar",
+        "Sandi Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 3M with pillar Sandi Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOSV04",
+    "name": "Outer Plate 4M Sandi Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 4,
+      "color": "Sandi Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/24 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1122,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-4m-sandi-wood",
+      "keywords": [
+        "Outer Plate",
+        "4M",
+        "Sandi Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 4M Sandi Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOBV06",
+    "name": "Outer Plate 6M Charcoal Black Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 6,
+      "color": "Charcoal Black",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1219,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-6m-charcoal-black-metal",
+      "keywords": [
+        "Outer Plate",
+        "6M",
+        "Charcoal Black",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 6M Charcoal Black Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOBH08",
+    "name": "Outer Plate 8M Horizontal Charcoal Black Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Horizontal",
+      "color": "Charcoal Black",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1591,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-horizontal-charcoal-black-metal",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Horizontal",
+        "Charcoal Black",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M horizontal Charcoal Black Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOBV08",
+    "name": "Outer Plate 8M Vertical Charcoal Black Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Vertical",
+      "color": "Charcoal Black",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/18 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1591,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-vertical-charcoal-black-metal",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Vertical",
+        "Charcoal Black",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M vertical Charcoal Black Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOBV12",
+    "name": "Outer Plate 12M Charcoal Black Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 12,
+      "color": "Charcoal Black",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 2298,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-12m-charcoal-black-metal",
+      "keywords": [
+        "Outer Plate",
+        "12M",
+        "Charcoal Black",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 12M Charcoal Black Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOBV18",
+    "name": "Outer Plate 18M Charcoal Black Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 18,
+      "color": "Charcoal Black",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 3909,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-18m-charcoal-black-metal",
+      "keywords": [
+        "Outer Plate",
+        "18M",
+        "Charcoal Black",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 18M Charcoal Black Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOSV06",
+    "name": "Outer Plate 6M Sterling Silver Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 6,
+      "color": "Sterling Silver",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1219,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-6m-sterling-silver-metal",
+      "keywords": [
+        "Outer Plate",
+        "6M",
+        "Sterling Silver",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 6M Sterling Silver Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOSH08",
+    "name": "Outer Plate 8M Horizontal Sterling Silver Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Horizontal",
+      "color": "Sterling Silver",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1591,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-horizontal-sterling-silver-metal",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Horizontal",
+        "Sterling Silver",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M horizontal Sterling Silver Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOSV08",
+    "name": "Outer Plate 8M Vertical Sterling Silver Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Vertical",
+      "color": "Sterling Silver",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/18 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1591,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-vertical-sterling-silver-metal",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Vertical",
+        "Sterling Silver",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M vertical Sterling Silver Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOSV12",
+    "name": "Outer Plate 12M Sterling Silver Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 12,
+      "color": "Sterling Silver",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 2298,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-12m-sterling-silver-metal",
+      "keywords": [
+        "Outer Plate",
+        "12M",
+        "Sterling Silver",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 12M Sterling Silver Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOSV18",
+    "name": "Outer Plate 18M Sterling Silver Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 18,
+      "color": "Sterling Silver",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 3909,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-18m-sterling-silver-metal",
+      "keywords": [
+        "Outer Plate",
+        "18M",
+        "Sterling Silver",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 18M Sterling Silver Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOGV06",
+    "name": "Outer Plate 6M Gold Shimmer Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 6,
+      "color": "Gold Shimmer",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1219,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-6m-gold-shimmer-metal",
+      "keywords": [
+        "Outer Plate",
+        "6M",
+        "Gold Shimmer",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 6M Gold Shimmer Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOGH08",
+    "name": "Outer Plate 8M Horizontal Gold Shimmer Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Horizontal",
+      "color": "Gold Shimmer",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1591,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-horizontal-gold-shimmer-metal",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Horizontal",
+        "Gold Shimmer",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M horizontal Gold Shimmer Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOGV08",
+    "name": "Outer Plate 8M Vertical Gold Shimmer Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Vertical",
+      "color": "Gold Shimmer",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/18 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1591,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-vertical-gold-shimmer-metal",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Vertical",
+        "Gold Shimmer",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M vertical Gold Shimmer Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOGV12",
+    "name": "Outer Plate 12M Gold Shimmer Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 12,
+      "color": "Gold Shimmer",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 2298,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-12m-gold-shimmer-metal",
+      "keywords": [
+        "Outer Plate",
+        "12M",
+        "Gold Shimmer",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 12M Gold Shimmer Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPMOGV18",
+    "name": "Outer Plate 18M Gold Shimmer Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Metal (Aluminium) Plates without grid frames",
+    "specs": {
+      "modules": 18,
+      "color": "Gold Shimmer",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 3909,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-18m-gold-shimmer-metal",
+      "keywords": [
+        "Outer Plate",
+        "18M",
+        "Gold Shimmer",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 18M Gold Shimmer Metal (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOKV06",
+    "name": "Outer Plate 6M Dusky Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 6,
+      "color": "Dusky Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1219,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-6m-dusky-wood",
+      "keywords": [
+        "Outer Plate",
+        "6M",
+        "Dusky Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 6M Dusky Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOKH08",
+    "name": "Outer Plate 8M Horizontal Dusky Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Horizontal",
+      "color": "Dusky Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1591,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-horizontal-dusky-wood",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Horizontal",
+        "Dusky Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M horizontal Dusky Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOKV08",
+    "name": "Outer Plate 8M Vertical Dusky Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Vertical",
+      "color": "Dusky Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/18 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1591,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-vertical-dusky-wood",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Vertical",
+        "Dusky Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M vertical Dusky Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOKV12",
+    "name": "Outer Plate 12M Dusky Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 12,
+      "color": "Dusky Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 2298,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-12m-dusky-wood",
+      "keywords": [
+        "Outer Plate",
+        "12M",
+        "Dusky Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 12M Dusky Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOKV18",
+    "name": "Outer Plate 18M Dusky Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 18,
+      "color": "Dusky Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 3909,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-18m-dusky-wood",
+      "keywords": [
+        "Outer Plate",
+        "18M",
+        "Dusky Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 18M Dusky Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOSV06",
+    "name": "Outer Plate 6M Sandi Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 6,
+      "color": "Sandi Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1219,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-6m-sandi-wood",
+      "keywords": [
+        "Outer Plate",
+        "6M",
+        "Sandi Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 6M Sandi Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOSH08",
+    "name": "Outer Plate 8M Horizontal Sandi Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Horizontal",
+      "color": "Sandi Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/12 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1591,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-horizontal-sandi-wood",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Horizontal",
+        "Sandi Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M horizontal Sandi Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOSV08",
+    "name": "Outer Plate 8M Vertical Sandi Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Vertical",
+      "color": "Sandi Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/18 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 1591,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-8m-vertical-sandi-wood",
+      "keywords": [
+        "Outer Plate",
+        "8M",
+        "Vertical",
+        "Sandi Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 8M vertical Sandi Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOSV12",
+    "name": "Outer Plate 12M Sandi Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 12,
+      "color": "Sandi Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 2298,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-12m-sandi-wood",
+      "keywords": [
+        "Outer Plate",
+        "12M",
+        "Sandi Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 12M Sandi Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPSOSV18",
+    "name": "Outer Plate 18M Sandi Wood",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Wood Plates without grid frames",
+    "specs": {
+      "modules": 18,
+      "color": "Sandi Wood",
+      "material": "Wood",
+      "finish": "Wood",
+      "with_pillar": false,
+      "packing": "3 N/15 N",
+      "grid_frame_included": false
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 3909,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "outer-plate-18m-sandi-wood",
+      "keywords": [
+        "Outer Plate",
+        "18M",
+        "Sandi Wood",
+        "Wood",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Outer Plate 18M Sandi Wood (without grid frame) from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLIWV01",
+    "name": "Inner Plate 1M Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 1,
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/50 N",
+      "grid_frame": true
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 96,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-1m-metal",
+      "keywords": [
+        "Inner Plate",
+        "1M",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Inner Plate 1M Metal grid frame from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLIWV03",
+    "name": "Inner Plate 3M without Pillar Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/50 N",
+      "grid_frame": true
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 125,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-3m-without-pillar-metal",
+      "keywords": [
+        "Inner Plate",
+        "3M",
+        "Without Pillar",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Inner Plate 3M without pillar Metal grid frame from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLIWP03",
+    "name": "Inner Plate 3M with Pillar Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 3,
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": true,
+      "packing": "3 N/50 N",
+      "grid_frame": true
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 125,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-3m-with-pillar-metal",
+      "keywords": [
+        "Inner Plate",
+        "3M",
+        "With Pillar",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Inner Plate 3M with pillar Metal grid frame from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLIWV04",
+    "name": "Inner Plate 4M Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 4,
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/40 N",
+      "grid_frame": true
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 150,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-4m-metal",
+      "keywords": [
+        "Inner Plate",
+        "4M",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Inner Plate 4M Metal grid frame from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLIWV06",
+    "name": "Inner Plate 6M Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 6,
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/60 N",
+      "grid_frame": true
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 196,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-6m-metal",
+      "keywords": [
+        "Inner Plate",
+        "6M",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Inner Plate 6M Metal grid frame from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLIWH08",
+    "name": "Inner Plate 8M Horizontal Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Horizontal",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/60 N",
+      "grid_frame": true
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 250,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-8m-horizontal-metal",
+      "keywords": [
+        "Inner Plate",
+        "8M",
+        "Horizontal",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Inner Plate 8M horizontal Metal grid frame from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLIWV08",
+    "name": "Inner Plate 8M Vertical Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 8,
+      "orientation": "Vertical",
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/50 N",
+      "grid_frame": true
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 216,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-8m-vertical-metal",
+      "keywords": [
+        "Inner Plate",
+        "8M",
+        "Vertical",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Inner Plate 8M vertical Metal grid frame from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLIWV12",
+    "name": "Inner Plate 12M Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 12,
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/30 N",
+      "grid_frame": true
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 323,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-12m-metal",
+      "keywords": [
+        "Inner Plate",
+        "12M",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Inner Plate 12M Metal grid frame from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPGAWV18",
+    "name": "Inner Plate 18M Plastic",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 18,
+      "material": "Plastic",
+      "finish": "Plastic",
+      "with_pillar": false,
+      "packing": "3 N/30 N",
+      "grid_frame": true
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 144,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-18m-plastic",
+      "keywords": [
+        "Inner Plate",
+        "18M",
+        "Plastic",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Inner Plate 18M Plastic grid frame from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWPLIWV18",
+    "name": "Inner Plate 18M Metal",
+    "product_family": "Signia Grande",
+    "category": "Plates",
+    "subcategory": "Grid Frames",
+    "specs": {
+      "modules": 18,
+      "material": "Metal",
+      "finish": "Metal",
+      "with_pillar": false,
+      "packing": "3 N/30 N",
+      "grid_frame": true
+    },
+    "variant": [],
+    "pricing": {
+      "mrp": 440,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "3"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "inner-plate-18m-metal",
+      "keywords": [
+        "Inner Plate",
+        "18M",
+        "Metal",
+        "Signia Grande"
+      ],
+      "meta_description": "Buy Inner Plate 18M Metal grid frame from the Signia Grande range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWAJ003",
+    "name": "2 Channel Relay Switch 2M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "channels": 2,
+      "type_detail": "2 Channel Relay Switch",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWAJ005"
+    ],
+    "pricing": {
+      "mrp": 5295,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "2-channel-relay-switch-2m-white",
+      "keywords": [
+        "Relay Switch",
+        "2 Channel",
+        "2M",
+        "White",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy 2 Channel Relay Switch 2M White from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWAJ005",
+    "name": "2 Channel Relay Switch 2M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "Grey",
+      "mw": 2,
+      "channels": 2,
+      "type_detail": "2 Channel Relay Switch",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWAJ003"
+    ],
+    "pricing": {
+      "mrp": 5295,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "2-channel-relay-switch-2m-grey",
+      "keywords": [
+        "Relay Switch",
+        "2 Channel",
+        "2M",
+        "Grey",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy 2 Channel Relay Switch 2M Grey from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWAJ004",
+    "name": "4 Channel Relay Switch 2M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "channels": 4,
+      "type_detail": "4 Channel Relay Switch",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWAJ006"
+    ],
+    "pricing": {
+      "mrp": 6975,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "4-channel-relay-switch-2m-white",
+      "keywords": [
+        "Relay Switch",
+        "4 Channel",
+        "2M",
+        "White",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy 4 Channel Relay Switch 2M White from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWAJ006",
+    "name": "4 Channel Relay Switch 2M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "Grey",
+      "mw": 2,
+      "channels": 4,
+      "type_detail": "4 Channel Relay Switch",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWAJ004"
+    ],
+    "pricing": {
+      "mrp": 6975,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "4-channel-relay-switch-2m-grey",
+      "keywords": [
+        "Relay Switch",
+        "4 Channel",
+        "2M",
+        "Grey",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy 4 Channel Relay Switch 2M Grey from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWAW004",
+    "name": "Smart Fan Regulator 2M - White",
+    "product_family": "Signia",
+    "category": "Fan Controls",
+    "subcategory": "Wi-fi Fan Regulators",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Smart Fan Regulator",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWAW006"
+    ],
+    "pricing": {
+      "mrp": 7830,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "smart-fan-regulator-2m-white",
+      "keywords": [
+        "Smart Fan Regulator",
+        "2M",
+        "White",
+        "Signia"
+      ],
+      "meta_description": "Buy Smart Fan Regulator 2M White from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWAW006",
+    "name": "Smart Fan Regulator 2M - Grey",
+    "product_family": "Signia",
+    "category": "Fan Controls",
+    "subcategory": "Wi-fi Fan Regulators",
+    "specs": {
+      "color": "Grey",
+      "mw": 2,
+      "type_detail": "Smart Fan Regulator",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWAW004"
+    ],
+    "pricing": {
+      "mrp": 7830,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "smart-fan-regulator-2m-grey",
+      "keywords": [
+        "Smart Fan Regulator",
+        "2M",
+        "Grey",
+        "Signia"
+      ],
+      "meta_description": "Buy Smart Fan Regulator 2M Grey from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWBD002",
+    "name": "20A Relay Switch 2M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "ampere": 20,
+      "type_detail": "20A Relay Switch",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWBD006"
+    ],
+    "pricing": {
+      "mrp": 7865,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "20a-relay-switch-2m-white",
+      "keywords": [
+        "Relay Switch",
+        "20A",
+        "2M",
+        "White",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy 20A Relay Switch 2M White from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWBD006",
+    "name": "20A Relay Switch 2M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "Grey",
+      "mw": 2,
+      "ampere": 20,
+      "type_detail": "20A Relay Switch",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWBD002"
+    ],
+    "pricing": {
+      "mrp": 7865,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "20a-relay-switch-2m-grey",
+      "keywords": [
+        "Relay Switch",
+        "20A",
+        "2M",
+        "Grey",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy 20A Relay Switch 2M Grey from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWAA023",
+    "name": "Curtain Relay Switch 2M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Curtain Relay Switch",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWAA027"
+    ],
+    "pricing": {
+      "mrp": 8655,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "curtain-relay-switch-2m-white",
+      "keywords": [
+        "Curtain Relay Switch",
+        "2M",
+        "White",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy Curtain Relay Switch 2M White from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWAA027",
+    "name": "Curtain Relay Switch 2M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "Grey",
+      "mw": 2,
+      "type_detail": "Curtain Relay Switch",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWAA023"
+    ],
+    "pricing": {
+      "mrp": 8655,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "curtain-relay-switch-2m-grey",
+      "keywords": [
+        "Curtain Relay Switch",
+        "2M",
+        "Grey",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy Curtain Relay Switch 2M Grey from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWBD004",
+    "name": "2 Channel Dimmer 2M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "channels": 2,
+      "type_detail": "2 Channel Dimmer",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWBD007"
+    ],
+    "pricing": {
+      "mrp": 8510,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "2-channel-dimmer-2m-white",
+      "keywords": [
+        "Dimmer",
+        "2 Channel",
+        "2M",
+        "White",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy 2 Channel Dimmer 2M White from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWBD007",
+    "name": "2 Channel Dimmer 2M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "Grey",
+      "mw": 2,
+      "channels": 2,
+      "type_detail": "2 Channel Dimmer",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWBD004"
+    ],
+    "pricing": {
+      "mrp": 8510,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "2-channel-dimmer-2m-grey",
+      "keywords": [
+        "Dimmer",
+        "2 Channel",
+        "2M",
+        "Grey",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy 2 Channel Dimmer 2M Grey from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWAN001",
+    "name": "Bell Push Relay 2M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "type_detail": "Bell Push Relay",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWAN002"
+    ],
+    "pricing": {
+      "mrp": 7860,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-relay-2m-white",
+      "keywords": [
+        "Bell Push Relay",
+        "2M",
+        "White",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy Bell Push Relay 2M White from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWAN002",
+    "name": "Bell Push Relay 2M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "Grey",
+      "mw": 2,
+      "type_detail": "Bell Push Relay",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWAN001"
+    ],
+    "pricing": {
+      "mrp": 7860,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "bell-push-relay-2m-grey",
+      "keywords": [
+        "Bell Push Relay",
+        "2M",
+        "Grey",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy Bell Push Relay 2M Grey from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSC001",
+    "name": "4 Scene Controller 2M - White",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "White",
+      "mw": 2,
+      "scenes": 4,
+      "type_detail": "4 Scene Controller",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWSC002"
+    ],
+    "pricing": {
+      "mrp": 8280,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "4-scene-controller-2m-white",
+      "keywords": [
+        "4 Scene Controller",
+        "2M",
+        "White",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy 4 Scene Controller 2M White from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
+  },
+  {
+    "sku": "ACWSC002",
+    "name": "4 Scene Controller 2M - Grey",
+    "product_family": "Signia",
+    "category": "Accessories",
+    "subcategory": "Wi-fi Accessories",
+    "specs": {
+      "color": "Grey",
+      "mw": 2,
+      "scenes": 4,
+      "type_detail": "4 Scene Controller",
+      "packing": "1N",
+      "smart": true
+    },
+    "variant": [
+      "ACWSC001"
+    ],
+    "pricing": {
+      "mrp": 8280,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "1"
+    },
+    "media": {
+      "images": [],
+      "documents": []
+    },
+    "seo": {
+      "slug": "4-scene-controller-2m-grey",
+      "keywords": [
+        "4 Scene Controller",
+        "2M",
+        "Grey",
+        "Smart",
+        "Signia"
+      ],
+      "meta_description": "Buy 4 Scene Controller 2M Grey from the Signia range."
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    },
+    "brand": "Havells"
   }
 ]
 
