@@ -16,3 +16,4 @@ frontend/dist/
 
 # Catalog images
 backend/public/catalog_images
+/backend/public/uploads/catalogs

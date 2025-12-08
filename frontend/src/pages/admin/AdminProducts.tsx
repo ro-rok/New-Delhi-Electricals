@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
+import { useDebounce } from '@/hooks/useDebounce';
 import { Link } from 'react-router-dom';
 import {
   Plus, Search, Filter, MoreHorizontal, Edit, Trash2,
@@ -34,10 +35,11 @@ const ITEMS_PER_PAGE = 10;
 
 const AdminProducts = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const debouncedSearchQuery = useDebounce(searchQuery, 500);
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [brandFilter, setBrandFilter] = useState('all');
   const [productFamilyFilter, setProductFamilyFilter] = useState('all');
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState('active');
   const [currentPage, setCurrentPage] = useState(1);
   const [products, setProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -49,12 +51,29 @@ const AdminProducts = () => {
   const [selectedProductForImage, setSelectedProductForImage] = useState<Product | null>(null);
   const [selectedProductForBulk, setSelectedProductForBulk] = useState<Product | null>(null);
 
+  // Fetch products with server-side filtering
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
+        // Determine isActive filter based on activeFilter state
+        let isActiveParam: boolean | undefined = undefined;
+        if (activeFilter === 'active') {
+          isActiveParam = true;
+        } else if (activeFilter === 'inactive') {
+          isActiveParam = false;
+        }
+        // else 'all' - isActiveParam remains undefined
+
         const [productsResponse, catsList, brandsList] = await Promise.all([
-          getProducts({ pageSize: 1000 }),
+          getProducts({
+            pageSize: 1000,
+            isActive: isActiveParam,
+            category: categoryFilter !== 'all' ? categoryFilter : undefined,
+            brand: brandFilter !== 'all' ? brandFilter : undefined,
+            series: productFamilyFilter !== 'all' ? productFamilyFilter : undefined,
+            q: debouncedSearchQuery || undefined,
+          }),
           getCategories(),
           getBrands(),
         ]);
@@ -68,32 +87,32 @@ const AdminProducts = () => {
       }
     };
     fetchData();
+  }, [activeFilter, categoryFilter, brandFilter, productFamilyFilter, debouncedSearchQuery]);
+
+  // Extract unique product families from all products (for filter dropdown)
+  // We need to fetch all products to get the full list of families
+  const [allProductFamilies, setAllProductFamilies] = useState<string[]>([]);
+  
+  useEffect(() => {
+    const fetchFamilies = async () => {
+      try {
+        const response = await getProducts({ pageSize: 1000 });
+        const families = new Set<string>();
+        response.items.forEach(product => {
+          if (product.series) {
+            families.add(product.series);
+          }
+        });
+        setAllProductFamilies(Array.from(families).sort());
+      } catch (error) {
+        console.error('Failed to fetch product families:', error);
+      }
+    };
+    fetchFamilies();
   }, []);
 
-  // Extract unique product families from products
-  const productFamilies = useMemo(() => {
-    const families = new Set<string>();
-    products.forEach(product => {
-      if (product.series) {
-        families.add(product.series);
-      }
-    });
-    return Array.from(families).sort();
-  }, [products]);
-
-  const filteredProducts = useMemo(() => {
-    return products.filter(product => {
-      const matchesSearch =
-        product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        product.sku.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = categoryFilter === 'all' || product.category === categoryFilter;
-      const matchesBrand = brandFilter === 'all' || product.brand === brandFilter;
-      const matchesProductFamily = productFamilyFilter === 'all' || product.series === productFamilyFilter;
-      const matchesActive = activeFilter === 'all' ||
-        (activeFilter === 'active' ? product.isActive !== false : product.isActive === false);
-      return matchesSearch && matchesCategory && matchesBrand && matchesProductFamily && matchesActive;
-    });
-  }, [products, searchQuery, categoryFilter, brandFilter, productFamilyFilter, activeFilter]);
+  // Products are already filtered server-side, so use them directly
+  const filteredProducts = products;
 
   // Reset page when filters change
   useEffect(() => {
@@ -127,13 +146,30 @@ const AdminProducts = () => {
   };
 
   const handleBulkImageSuccess = () => {
-    // Refresh products list after bulk image assignment
+    // Refresh products list after bulk image assignment with current filters
     const fetchData = async () => {
+      setLoading(true);
       try {
-        const productsResponse = await getProducts({ pageSize: 1000 });
+        let isActiveParam: boolean | undefined = undefined;
+        if (activeFilter === 'active') {
+          isActiveParam = true;
+        } else if (activeFilter === 'inactive') {
+          isActiveParam = false;
+        }
+
+        const productsResponse = await getProducts({
+          pageSize: 1000,
+          isActive: isActiveParam,
+          category: categoryFilter !== 'all' ? categoryFilter : undefined,
+          brand: brandFilter !== 'all' ? brandFilter : undefined,
+          series: productFamilyFilter !== 'all' ? productFamilyFilter : undefined,
+          q: debouncedSearchQuery || undefined,
+        });
         setProducts(productsResponse.items);
       } catch (error) {
         console.error('Failed to refresh products:', error);
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
@@ -148,13 +184,30 @@ const AdminProducts = () => {
   };
 
   const handleEditSuccess = () => {
-    // Refresh products list
+    // Refresh products list with current filters
     const fetchData = async () => {
+      setLoading(true);
       try {
-        const productsResponse = await getProducts({ pageSize: 1000 });
+        let isActiveParam: boolean | undefined = undefined;
+        if (activeFilter === 'active') {
+          isActiveParam = true;
+        } else if (activeFilter === 'inactive') {
+          isActiveParam = false;
+        }
+
+        const productsResponse = await getProducts({
+          pageSize: 1000,
+          isActive: isActiveParam,
+          category: categoryFilter !== 'all' ? categoryFilter : undefined,
+          brand: brandFilter !== 'all' ? brandFilter : undefined,
+          series: productFamilyFilter !== 'all' ? productFamilyFilter : undefined,
+          q: debouncedSearchQuery || undefined,
+        });
         setProducts(productsResponse.items);
       } catch (error) {
         console.error('Failed to refresh products:', error);
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
@@ -234,7 +287,7 @@ const AdminProducts = () => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Product Families</SelectItem>
-                {productFamilies.map(family => (
+                {allProductFamilies.map(family => (
                   <SelectItem key={family} value={family}>{family}</SelectItem>
                 ))}
               </SelectContent>

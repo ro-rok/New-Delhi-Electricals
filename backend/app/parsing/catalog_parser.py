@@ -52,8 +52,10 @@ def _extract_page_images(pdf_bytes: bytes) -> List[PageImage]:
     images: List[PageImage] = []
     for page_index in range(len(doc)):
         page = doc[page_index]
-        # Full-page rasterisation as a fallback image for the page
-        pix = page.get_pixmap()
+        # Full-page rasterisation with better settings to avoid dark outlines
+        # Use alpha=False to avoid transparency issues and matrix for better quality
+        matrix = fitz.Matrix(2.0, 2.0)  # 2x zoom for better quality
+        pix = page.get_pixmap(matrix=matrix, alpha=False)
         images.append(
             PageImage(page_no=page_index + 1, bytes=pix.tobytes("png"), bbox=None)
         )
@@ -70,6 +72,64 @@ def _extract_page_images(pdf_bytes: bytes) -> List[PageImage]:
                 )
             )
     return images
+
+
+def _clean_white_product_image(image_bytes: bytes) -> bytes:
+    """
+    Clean up dark outlines on white product images.
+    Removes dark edges/outlines that appear on white backgrounds.
+    """
+    try:
+        img = Image.open(io.BytesIO(image_bytes))
+        
+        # Convert to RGB if needed
+        if img.mode != "RGB":
+            img = img.convert("RGB")
+        
+        # Simple approach: detect and lighten dark pixels near white areas
+        try:
+            import numpy as np
+            from scipy import ndimage
+            
+            img_array = np.array(img)
+            
+            # Detect white/light background areas (RGB > 240)
+            white_threshold = 240
+            white_mask = (
+                (img_array[:, :, 0] > white_threshold) &
+                (img_array[:, :, 1] > white_threshold) &
+                (img_array[:, :, 2] > white_threshold)
+            )
+            
+            # Dilate white mask to include edge pixels (2 pixel radius)
+            dilated_mask = ndimage.binary_dilation(white_mask, iterations=2)
+            
+            # Find dark pixels (potential outline artifacts, RGB < 100)
+            dark_threshold = 100
+            dark_pixels = (
+                (img_array[:, :, 0] < dark_threshold) &
+                (img_array[:, :, 1] < dark_threshold) &
+                (img_array[:, :, 2] < dark_threshold)
+            )
+            
+            # Lighten dark pixels that are near white areas (outline artifacts)
+            outline_mask = dilated_mask & dark_pixels
+            img_array[outline_mask] = [255, 255, 255]  # Make them white
+            
+            img = Image.fromarray(img_array)
+        except ImportError:
+            # Fallback: simple brightness adjustment if scipy not available
+            from PIL import ImageEnhance
+            enhancer = ImageEnhance.Brightness(img)
+            img = enhancer.enhance(1.1)
+        
+        # Save to bytes
+        output = io.BytesIO()
+        img.save(output, format="PNG", optimize=True)
+        return output.getvalue()
+    except Exception as e:
+        logger.warning(f"Failed to clean white product image: {e}")
+        return image_bytes  # Return original if processing fails
 
 
 def _safe_int_from_price(cell: str) -> Optional[int]:
@@ -278,6 +338,7 @@ def parse_catalog_pdf(
     *,
     default_brand: Optional[str] = None,
     default_category: Optional[str] = None,
+    progress_callback: Optional[Callable[[int, int, str, str], None]] = None,
 ) -> Tuple[List[ParsedRow], List[PageImage]]:
     """
     High-level parsing pipeline for catalog PDFs.
@@ -285,6 +346,10 @@ def parse_catalog_pdf(
     Returns a tuple of (parsed_rows, page_images) where:
       - parsed_rows is a list of ParsedRow objects with confidence scores.
       - page_images is a list of PageImage to be uploaded and mapped to rows.
+    
+    Args:
+        progress_callback: Optional callback function(current_page, total_pages, stage, message)
+                          called to report progress during parsing.
     """
     logger.info("parse_catalog_pdf: start file=%s bytes=%d", file_name, len(pdf_bytes))
     # Step A: extract images
@@ -297,9 +362,21 @@ def parse_catalog_pdf(
     with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
         total_pages = len(pdf.pages)
         logger.info("parse_catalog_pdf: document has %d pages", total_pages)
+        
+        if progress_callback:
+            progress_callback(0, total_pages, "parsing_pages", f"Starting to parse {total_pages} pages...")
+        
         for page_index, page in enumerate(pdf.pages):
             page_no = page_index + 1
             page_rows_before = len(parsed_rows)
+            
+            if progress_callback:
+                progress_callback(
+                    page_no, 
+                    total_pages, 
+                    "parsing_pages", 
+                    f"Parsing page {page_no} of {total_pages}..."
+                )
             try:
                 tables = page.extract_tables()
             except Exception as exc:  # pragma: no cover - defensive
@@ -414,10 +491,17 @@ def parse_catalog_pdf(
                     )
 
     # Step D: variant grouping
+    if progress_callback:
+        progress_callback(total_pages, total_pages, "grouping_variants", "Grouping product variants...")
     _group_rows_into_variants(parsed_rows)
 
     # Step E: map images to rows (placeholders; URLs will be filled by caller)
+    if progress_callback:
+        progress_callback(total_pages, total_pages, "mapping_images", "Mapping images to products...")
     _map_images_to_rows(page_images, parsed_rows)
+    
+    if progress_callback:
+        progress_callback(total_pages, total_pages, "complete", f"Completed! Extracted {len(parsed_rows)} products.")
 
     logger.info(
         "parse_catalog_pdf: finished file=%s total_rows=%d page_images=%d",

@@ -22,6 +22,11 @@ async def list_products(
     sort_by: str | None = Query(default="name", description="Sort field: name or price"),
     sort_order: str | None = Query(default="asc", description="Sort order: asc or desc"),
     is_active: bool | None = Query(default=None, description="Filter by active status"),
+    missing_images: bool | None = Query(
+        default=None,
+        alias="missingImages",
+        description="When true, only return products without images",
+    ),
     page: int = Query(1, ge=1),
     page_size: int = Query(20, ge=1, le=10000, alias="pageSize"),
     db: AsyncIOMotorDatabase = Depends(get_db_dep),
@@ -35,13 +40,24 @@ async def list_products(
     and_conditions = []
     
     if q:
-        and_conditions.append({"$text": {"$search": q}})
+        # Use regex search across multiple fields instead of $text (which requires text index)
+        search_pattern = {"$regex": q, "$options": "i"}
+        and_conditions.append({
+            "$or": [
+                {"name": search_pattern},
+                {"sku": search_pattern},
+                {"description": search_pattern},
+                {"brand": search_pattern},
+                {"category": search_pattern},
+                {"series": search_pattern},
+            ]
+        })
     
     if category:
         and_conditions.append({"category": {"$regex": category, "$options": "i"}})
         
     if brand:
-        and_conditions.append({"brand": brand})
+        and_conditions.append({"brand": {"$regex": brand, "$options": "i"}})
         
     if series:
         and_conditions.append({
@@ -67,6 +83,15 @@ async def list_products(
             })
         else:
             and_conditions.append({"status.is_active": False})
+
+    if missing_images:
+        # Products where images is missing or empty
+        and_conditions.append({
+            "$or": [
+                {"images": {"$exists": False}},
+                {"images": {"$size": 0}},
+            ]
+        })
             
     if and_conditions:
         query = {"$and": and_conditions}

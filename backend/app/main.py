@@ -11,13 +11,26 @@ app = FastAPI(title=settings.APP_NAME)
 
 origins = [origin.strip() for origin in settings.CORS_ORIGINS.split(",") if origin]
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins or ["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# When using "*", we cannot use allow_credentials=True (CORS spec requirement)
+# So we need to handle this case specially
+if origins == ["*"] or not origins:
+    # Allow all origins, but disable credentials
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=False,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+else:
+    # Specific origins - can use credentials
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=origins,
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
 app.include_router(auth.router)
 app.include_router(products.router)

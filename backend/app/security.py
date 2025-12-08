@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta, timezone
 from typing import Any, Optional
 
-from fastapi import Depends, HTTPException, status
+from fastapi import Depends, HTTPException, Request, status
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from passlib.context import CryptContext
@@ -10,7 +10,8 @@ import pyotp
 from .config import settings
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
+# Set auto_error=False to allow OPTIONS requests to pass through
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login", auto_error=False)
 
 
 def hash_password(password: str) -> str:
@@ -51,7 +52,24 @@ def decode_token(token: str) -> dict[str, Any]:
         ) from e
 
 
-async def get_current_admin(token: str = Depends(oauth2_scheme)) -> dict[str, Any]:
+async def get_current_admin(
+    request: Request,
+    token: Optional[str] = Depends(oauth2_scheme)
+) -> dict[str, Any]:
+    # Allow OPTIONS requests to pass through (handled by CORS middleware)
+    if request.method == "OPTIONS":
+        raise HTTPException(
+            status_code=status.HTTP_200_OK,
+            detail="OK"
+        )
+    
+    if not token:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Not authenticated",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    
     payload = decode_token(token)
     # In v1, we just trust the token and subject; later we can look up in DB
     sub = payload.get("sub")

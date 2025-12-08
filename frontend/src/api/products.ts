@@ -72,6 +72,7 @@ export async function getProducts(params?: {
   page?: number;
   pageSize?: number;
   isActive?: boolean;
+  missingImages?: boolean;
 }): Promise<ProductListResponse> {
   const searchParams = new URLSearchParams();
   if (params?.q) searchParams.append('q', params.q);
@@ -85,6 +86,7 @@ export async function getProducts(params?: {
   if (params?.page) searchParams.append('page', String(params.page));
   if (params?.pageSize) searchParams.append('pageSize', String(params.pageSize));
   if (params?.isActive !== undefined) searchParams.append('is_active', String(params.isActive));
+  if (params?.missingImages !== undefined) searchParams.append('missingImages', String(params.missingImages));
 
   const url = `${API_BASE}/api/products${searchParams.toString() ? '?' + searchParams.toString() : ''}`;
   const res = await fetch(url);

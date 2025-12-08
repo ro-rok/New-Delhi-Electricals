@@ -1,32 +1,25 @@
 """
-Script to upload products from JSON files in the parsing folder to MongoDB.
+Script to upload specific JSON files to MongoDB.
 
-This script:
-1. Reads all JSON files from the parsing folder
-2. Transforms Product schema format to ProductBase format for MongoDB
-3. Uses upsert (update if exists, insert if not) based on SKU
-4. Provides progress tracking and error reporting
+This script uploads:
+- penta.json
+- penta2.json
+- Fabio1.json
 """
 
 import asyncio
 import json
 import logging
 import os
-from pathlib import Path
-from typing import Any, Dict, List
 import sys
 from pathlib import Path as PathLib
-
-# Import app config and db setup
+from typing import Any, Dict
 
 # Add backend directory to path to import app modules
-# Script is at: backend/app/parsing/upload_products_to_db.py
-# We need backend/ in path to import app.config
 backend_dir = PathLib(__file__).parent.parent.parent
 sys.path.insert(0, str(backend_dir))
 
 # Change to backend directory so .env file can be found
-# The Settings class looks for .env in the current working directory
 original_cwd = PathLib.cwd()
 backend_path = backend_dir
 os.chdir(backend_path)
@@ -45,23 +38,17 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+)
+logger = logging.getLogger(__name__)
+
 
 def transform_product(product_data: Dict[str, Any]) -> Dict[str, Any]:
     """
     Transform Product schema format to ProductBase format for MongoDB.
-    
-    Maps:
-    - sku -> sku
-    - name -> name
-    - brand -> brand
-    - category -> category
-    - product_family -> series
-    - pricing.mrp -> list_price (int)
-    - currency -> "INR"
-    - media.images -> images (list of URLs)
-    - specs -> specs (as dict)
-    - seo.meta_description -> description
-    - Additional fields stored in catalog_source
     """
     # Extract image URLs from media.images array
     images = []
@@ -106,7 +93,7 @@ def transform_product(product_data: Dict[str, Any]) -> Dict[str, Any]:
 
 
 async def upload_products_from_file(
-    file_path: Path, db, collection_name: str = "products"
+    file_path: PathLib, db, collection_name: str = "products"
 ) -> Dict[str, Any]:
     """
     Upload products from a single JSON file to MongoDB.
@@ -189,45 +176,27 @@ async def upload_products_from_file(
     return stats
 
 
-async def upload_all_products(
-    parsing_folder: Path = None, collection_name: str = "products", specific_files: List[str] = None
-) -> Dict[str, Any]:
-    """
-    Upload all products from JSON files in the parsing folder to MongoDB.
+async def upload_specific_files():
+    """Upload the three specified JSON files to MongoDB."""
+    parsing_folder = PathLib(__file__).parent
     
-    Args:
-        parsing_folder: Path to folder containing JSON files (default: script's parent)
-        collection_name: MongoDB collection name (default: "products")
-        specific_files: Optional list of specific file names to upload (default: all JSON files)
-    
-    Returns:
-        Dict with overall stats
-    """
-    if parsing_folder is None:
-        parsing_folder = Path(__file__).parent
-    
-    # Get JSON files - either specific ones or all
-    if specific_files:
-        json_files = [parsing_folder / fname for fname in specific_files if (parsing_folder / fname).exists()]
-        if len(json_files) != len(specific_files):
-            missing = set(specific_files) - {f.name for f in json_files}
-            if missing:
-                logger.warning(f"Some specified files not found: {missing}")
-    else:
-        json_files = list(parsing_folder.glob("*.json"))
-    
-    if not json_files:
-        logger.warning(f"No JSON files found in {parsing_folder}")
-        return {"total_files": 0, "total_processed": 0, "total_inserted": 0, "total_updated": 0, "total_errors": 0}
-    
-    logger.info(f"Found {len(json_files)} JSON file(s) to process")
+    # Files to upload
+    files_to_upload = [
+        "penta.json",
+        "penta2.json",
+        "Fabio1.json"
+    ]
     
     # Connect to MongoDB
+    logger.info("Connecting to MongoDB...")
+    logger.info(f"MongoDB URI: {settings.MONGODB_URI}")
+    logger.info(f"Database: {settings.MONGODB_DB_NAME}")
+    
     client = get_client()
     db = get_db()
     
     overall_stats = {
-        "total_files": len(json_files),
+        "total_files": 0,
         "total_processed": 0,
         "total_inserted": 0,
         "total_updated": 0,
@@ -236,15 +205,27 @@ async def upload_all_products(
     
     try:
         # Process each file
-        for json_file in json_files:
-            stats = await upload_products_from_file(json_file, db, collection_name)
+        for filename in files_to_upload:
+            file_path = parsing_folder / filename
             
+            if not file_path.exists():
+                logger.error(f"File not found: {file_path}")
+                overall_stats["total_errors"] += 1
+                continue
+            
+            logger.info(f"\n{'='*60}")
+            logger.info(f"Processing: {filename}")
+            logger.info(f"{'='*60}")
+            
+            stats = await upload_products_from_file(file_path, db, "products")
+            
+            overall_stats["total_files"] += 1
             overall_stats["total_processed"] += stats["processed"]
             overall_stats["total_inserted"] += stats["inserted"]
             overall_stats["total_updated"] += stats["updated"]
             overall_stats["total_errors"] += stats["errors"]
         
-        logger.info("=" * 60)
+        logger.info("\n" + "=" * 60)
         logger.info("Upload Summary:")
         logger.info(f"  Files processed: {overall_stats['total_files']}")
         logger.info(f"  Products processed: {overall_stats['total_processed']}")
@@ -252,29 +233,20 @@ async def upload_all_products(
         logger.info(f"  Products updated: {overall_stats['total_updated']}")
         logger.info(f"  Errors: {overall_stats['total_errors']}")
         logger.info("=" * 60)
+        
+        return overall_stats
     
-    finally:
-        # Note: We don't close the client here as it's a singleton
-        # The client will be reused if the script is run again
-        pass
-    
-    return overall_stats
+    except Exception as e:
+        logger.error(f"Fatal error: {str(e)}", exc_info=True)
+        raise
 
 
 async def main():
     """Main entry point for the script."""
-    # Check for command line arguments (specific files to upload)
-    specific_files = None
-    if len(sys.argv) > 1:
-        specific_files = sys.argv[1:]
-        logger.info(f"Uploading specific files: {specific_files}")
-    
-    logger.info("Starting product upload to MongoDB...")
-    logger.info(f"MongoDB URI: {settings.MONGODB_URI}")
-    logger.info(f"Database: {settings.MONGODB_DB_NAME}")
+    logger.info("Starting upload of specific files to MongoDB...")
     
     try:
-        stats = await upload_all_products(specific_files=specific_files)
+        stats = await upload_specific_files()
         
         if stats["total_errors"] > 0:
             logger.warning(f"Upload completed with {stats['total_errors']} errors")
@@ -289,6 +261,14 @@ async def main():
 
 
 if __name__ == "__main__":
-    exit_code = asyncio.run(main())
-    sys.exit(exit_code)
+    print("Starting script...")
+    try:
+        exit_code = asyncio.run(main())
+        print(f"Script completed with exit code: {exit_code}")
+        sys.exit(exit_code)
+    except Exception as e:
+        print(f"Error running script: {e}")
+        import traceback
+        traceback.print_exc()
+        sys.exit(1)
 

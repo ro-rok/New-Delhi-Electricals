@@ -1,6 +1,8 @@
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+from collections import defaultdict
+import io
 import logging
 
 from fastapi import (
@@ -9,6 +11,7 @@ from fastapi import (
     Depends,
     File,
     HTTPException,
+    Response,
     UploadFile,
     status,
 )
@@ -60,8 +63,38 @@ async def _save_parsed_rows(
     upload_folder: str,
 ) -> None:
     """
-    Persist parsed rows and upload page images to Cloudinary.
+    Persist parsed rows and save page images to local storage.
     """
+    from ..parsing.catalog_parser import _clean_white_product_image
+    from PIL import Image
+    
+    # Save images to disk with white product cleaning
+    images_dir = CATALOG_UPLOAD_DIR / import_id / "catalog_images"
+    images_dir.mkdir(parents=True, exist_ok=True)
+    
+    per_page_counter: Dict[int, int] = defaultdict(int)
+    for img in page_images:
+        per_page_counter[img.page_no] += 1
+        counter = per_page_counter[img.page_no]
+        
+        # Detect format via Pillow
+        try:
+            image = Image.open(io.BytesIO(img.bytes))
+            fmt = (image.format or "png").lower()
+        except Exception:
+            fmt = "png"
+        filename = f"page{img.page_no:03d}_img_{counter:02d}.{fmt}"
+        full_path = images_dir / filename
+        
+        # Process image bytes - clean up white product images
+        processed_bytes = _clean_white_product_image(img.bytes)
+        
+        try:
+            with open(full_path, "wb") as f:
+                f.write(processed_bytes)
+        except Exception as e:
+            logger.warning(f"Failed to save image {filename}: {e}")
+    
     # We no longer push images to Cloudinary; keep any image_candidates as-is
     # (typically with empty URLs) so the UI can still show that images exist if
     # we add local storage later.
@@ -92,7 +125,10 @@ async def _save_parsed_rows(
             image_candidates=candidates,
             chosen_image_urls=[],
             variant_group_key=row.variant_group_key,
-        ).model_dump(by_alias=True)
+        ).model_dump(by_alias=True, exclude_none=True)
+        # Remove _id if it's None to let MongoDB auto-generate it
+        if "_id" in doc and doc["_id"] is None:
+            del doc["_id"]
         docs.append(doc)
     if docs:
         await db.catalog_import_rows.insert_many(docs)
@@ -116,16 +152,75 @@ async def _run_parse_job(
     )
     await db.catalog_imports.update_one(
         {"_id": import_id},
-        {"$set": {"status": "processing", "updated_at": datetime.utcnow()}},
+        {
+            "$set": {
+                "status": "processing",
+                "updated_at": datetime.utcnow(),
+                "parsing_progress": {
+                    "current_page": 0,
+                    "total_pages": 0,
+                    "stage": "starting",
+                    "message": "Initializing...",
+                    "percentage": 0,
+                },
+            }
+        },
     )
+    
+    # Progress callback to update database
+    import asyncio
+    
+    async def update_progress(current_page: int, total_pages: int, stage: str, message: str):
+        """Update progress in database."""
+        percentage = int((current_page / total_pages * 100)) if total_pages > 0 else 0
+        await db.catalog_imports.update_one(
+            {"_id": import_id},
+            {
+                "$set": {
+                    "parsing_progress": {
+                        "current_page": current_page,
+                        "total_pages": total_pages,
+                        "stage": stage,
+                        "message": message,
+                        "percentage": percentage,
+                    },
+                    "updated_at": datetime.utcnow(),
+                }
+            },
+        )
+    
+    # Synchronous wrapper for async callback
+    def progress_callback(current_page: int, total_pages: int, stage: str, message: str):
+        """Synchronous wrapper for async progress update."""
+        try:
+            loop = asyncio.get_event_loop()
+            if loop.is_running():
+                # Schedule the coroutine to run in the background
+                asyncio.create_task(update_progress(current_page, total_pages, stage, message))
+            else:
+                loop.run_until_complete(update_progress(current_page, total_pages, stage, message))
+        except RuntimeError:
+            # If no event loop, create a new one (shouldn't happen in FastAPI background task)
+            asyncio.run(update_progress(current_page, total_pages, stage, message))
+    
     try:
-        parsed_rows, page_images = parse_catalog_pdf(pdf_bytes, file_name)
+        parsed_rows, page_images = parse_catalog_pdf(
+            pdf_bytes, file_name, progress_callback=progress_callback
+        )
         logger.info(
             "catalog_import: parse job import_id=%s finished parsing rows=%d page_images=%d",
             import_id,
             len(parsed_rows),
             len(page_images),
         )
+        # Update progress for saving
+        await update_progress(
+            page_images[0].page_no if page_images else 0,
+            len({r.page_no for r in parsed_rows}) if parsed_rows else 1,
+            "saving",
+            f"Saving {len(parsed_rows)} products to database...",
+        )
+        
         await _save_parsed_rows(
             db,
             import_id,
@@ -133,6 +228,8 @@ async def _run_parse_job(
             page_images,
             upload_folder=f"catalogs/{import_id}",
         )
+        
+        total_pages = len({r.page_no for r in parsed_rows}) if parsed_rows else 0
         await db.catalog_imports.update_one(
             {"_id": import_id},
             {
@@ -141,7 +238,14 @@ async def _run_parse_job(
                     "updated_at": datetime.utcnow(),
                     "parsing_summary": {
                         "total_rows": len(parsed_rows),
-                        "pages": len({r.page_no for r in parsed_rows}),
+                        "pages": total_pages,
+                    },
+                    "parsing_progress": {
+                        "current_page": total_pages,
+                        "total_pages": total_pages,
+                        "stage": "complete",
+                        "message": f"Completed! Extracted {len(parsed_rows)} products.",
+                        "percentage": 100,
                     },
                 }
             },
@@ -165,6 +269,20 @@ async def _run_parse_job(
         )
 
 
+@router.options("/upload")
+async def upload_catalog_options():
+    """Handle OPTIONS preflight requests for CORS."""
+    return Response(
+        status_code=200,
+        headers={
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+            "Access-Control-Max-Age": "3600",
+        },
+    )
+
+
 @router.post(
     "/upload",
     status_code=status.HTTP_202_ACCEPTED,
@@ -176,8 +294,11 @@ async def upload_catalog(
     admin=Depends(get_current_admin),
 ) -> Dict[str, Any]:
     """
-    Accept a price-list PDF upload, store it in Cloudinary, trigger parsing, and
+    Accept a price-list PDF upload, save it locally, trigger parsing, and
     return a catalog_import_id.
+    
+    Note: PDFs are saved to local storage, not uploaded to Cloudinary.
+    Only extracted images are processed and saved locally.
     """
     if not file.filename or not file.filename.lower().endswith(".pdf"):
         raise HTTPException(
@@ -215,7 +336,7 @@ async def upload_catalog(
         )
     else:
         import_id = f"import-{int(datetime.utcnow().timestamp())}"
-        # Save raw PDF to local storage instead of Cloudinary
+        # Save raw PDF to local storage (not Cloudinary)
         CATALOG_UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
         pdf_path = CATALOG_UPLOAD_DIR / f"{import_id}.pdf"
         pdf_path.write_bytes(pdf_bytes)
@@ -258,6 +379,31 @@ async def upload_catalog(
         "catalog_import_id": import_id,
         "status": "pending",
         "existing": bool(existing),
+    }
+
+
+@router.get("/{import_id}/progress")
+async def get_catalog_progress(
+    import_id: str,
+    db: AsyncIOMotorDatabase = Depends(get_db_dep),
+    admin=Depends(get_current_admin),
+) -> Dict[str, Any]:
+    """Return parsing progress for a given import."""
+    catalog_doc = await db.catalog_imports.find_one({"_id": import_id})
+    if not catalog_doc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Import not found")
+    
+    progress = catalog_doc.get("parsing_progress", {})
+    return {
+        "import_id": import_id,
+        "status": catalog_doc.get("status", "unknown"),
+        "progress": {
+            "current_page": progress.get("current_page", 0),
+            "total_pages": progress.get("total_pages", 0),
+            "stage": progress.get("stage", "unknown"),
+            "message": progress.get("message", ""),
+            "percentage": progress.get("percentage", 0),
+        },
     }
 
 
@@ -377,11 +523,20 @@ async def apply_catalog_import(
                     "raw_text": row.get("raw_text"),
                 },
             }
+            
+            # Handle status.is_active if provided - use dot notation to preserve other status fields
+            update_ops: Dict[str, Any] = {"$set": product_doc}
+            if "is_active" in row:
+                update_ops["$set"]["status.is_active"] = bool(row.get("is_active", True))
+            elif "status" in row and isinstance(row.get("status"), dict):
+                status_obj = row.get("status", {})
+                if "is_active" in status_obj:
+                    update_ops["$set"]["status.is_active"] = bool(status_obj["is_active"])
 
             if existing:
                 await db.products.update_one(
                     {"_id": existing["_id"]},
-                    {"$set": product_doc},
+                    update_ops,
                 )
                 updated.append({"sku": sku})
                 decision = "updated"
@@ -392,6 +547,14 @@ async def apply_catalog_import(
                     )
                     decision = "ignored"
                 else:
+                    # For new products, set status.is_active if provided
+                    if "is_active" in row:
+                        product_doc.setdefault("status", {})["is_active"] = bool(row.get("is_active", True))
+                    elif "status" in row and isinstance(row.get("status"), dict):
+                        status_obj = row.get("status", {})
+                        if "is_active" in status_obj:
+                            product_doc.setdefault("status", {})["is_active"] = bool(status_obj["is_active"])
+                    
                     await db.products.insert_one(product_doc)
                     created.append({"sku": sku})
                     decision = "created"

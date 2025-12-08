@@ -59,6 +59,30 @@ export async function uploadCatalogPdf(file: File, token: string): Promise<Catal
   return res.json();
 }
 
+export interface CatalogProgressResponse {
+  import_id: string;
+  status: string;
+  progress: {
+    current_page: number;
+    total_pages: number;
+    stage: string;
+    message: string;
+    percentage: number;
+  };
+}
+
+export async function getCatalogProgress(importId: string, token: string): Promise<CatalogProgressResponse> {
+  const res = await fetch(`${API_BASE}/api/admin/catalogs/${importId}/progress`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  if (!res.ok) {
+    throw new Error('Failed to fetch catalog progress');
+  }
+  return res.json();
+}
+
 export async function getCatalogPreview(importId: string, token: string): Promise<CatalogPreviewResponse> {
   const res = await fetch(`${API_BASE}/api/admin/catalogs/${importId}/preview`, {
     headers: {
@@ -67,6 +91,38 @@ export async function getCatalogPreview(importId: string, token: string): Promis
   });
   if (!res.ok) {
     throw new Error('Failed to fetch catalog preview');
+  }
+  return res.json();
+}
+
+export interface ApplyCatalogImportPayload {
+  selected_rows: any[];
+  createIfMissing?: boolean;
+  dedupeStrategy?: string;
+}
+
+export interface ApplyCatalogImportResponse {
+  created: Array<{ sku: string }>;
+  updated: Array<{ sku: string }>;
+  failed: Array<{ row_id?: string; sku?: string; reason: string }>;
+}
+
+export async function applyCatalogImport(
+  importId: string,
+  payload: ApplyCatalogImportPayload,
+  token: string
+): Promise<ApplyCatalogImportResponse> {
+  const res = await fetch(`${API_BASE}/api/admin/catalogs/${importId}/apply`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({}));
+    throw new Error(errorData.detail || 'Failed to apply catalog import');
   }
   return res.json();
 }

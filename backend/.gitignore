@@ -28,6 +28,7 @@ env/
 *.swp
 *.swo
 
+
 ./app/public/uploads/catalogs/
 ./app/public/uploads/catalogs_images/
 

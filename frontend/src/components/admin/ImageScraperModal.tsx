@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { X, Plus, Image as ImageIcon, Trash2 } from 'lucide-react';
+import { useState, useEffect, useCallback } from 'react';
+import { X, Plus, Image as ImageIcon, Trash2, Upload, Loader2 } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -10,7 +10,9 @@ import {
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
+import { uploadImageToCloudinary, getProductBySku, bulkUpdateProducts } from '@/api/products';
 
 interface ImageScraperModalProps {
   isOpen: boolean;
@@ -19,6 +21,7 @@ interface ImageScraperModalProps {
   productName: string;
   currentImages: string[];
   onSave: (images: string[]) => Promise<void>;
+  relatedSkus?: string[] | string; // Array of SKUs or newline-separated string
 }
 
 const ImageScraperModal = ({
@@ -28,18 +31,110 @@ const ImageScraperModal = ({
   productName,
   currentImages,
   onSave,
+  relatedSkus,
 }: ImageScraperModalProps) => {
   const [imageUrl, setImageUrl] = useState('');
   const [images, setImages] = useState<string[]>(currentImages);
   const [loading, setLoading] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [dragActive, setDragActive] = useState(false);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [skuInput, setSkuInput] = useState('');
+
 
   // Reset state when modal opens
   useEffect(() => {
     if (isOpen) {
       setImages(currentImages);
       setImageUrl('');
+      setSelectedFile(null);
+      setPreviewUrl(null);
+      setSkuInput('');
+      // Initialize SKU input with related SKUs if provided
+      if (relatedSkus) {
+        const skus = Array.isArray(relatedSkus) 
+          ? relatedSkus 
+          : relatedSkus.split('\n').map(s => s.trim()).filter(s => s.length > 0);
+        setSkuInput(skus.join('\n'));
+      }
+    } else {
+      // Cleanup preview URL when modal closes
+      if (previewUrl) {
+        URL.revokeObjectURL(previewUrl);
+        setPreviewUrl(null);
+      }
     }
-  }, [isOpen, currentImages]);
+  }, [isOpen, currentImages, relatedSkus]);
+
+  // Cleanup preview URL on unmount
+  useEffect(() => {
+    return () => {
+      if (previewUrl) {
+        URL.revokeObjectURL(previewUrl);
+      }
+    };
+  }, [previewUrl]);
+
+  // Drag and drop handlers
+  const handleDrag = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.type === 'dragenter' || e.type === 'dragover') {
+      setDragActive(true);
+    } else if (e.type === 'dragleave') {
+      setDragActive(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(false);
+
+    const files = Array.from(e.dataTransfer.files);
+    const imageFile = files.find(file => file.type.startsWith('image/'));
+
+    if (imageFile) {
+      handleFileSelect(imageFile);
+    } else {
+      toast.error('Please drop an image file');
+    }
+  }, []);
+
+  const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      handleFileSelect(file);
+    }
+  };
+
+  const handleFileSelect = (file: File) => {
+    // Validate file type
+    if (!file.type.startsWith('image/')) {
+      toast.error('Please select an image file');
+      return;
+    }
+
+    // Validate file size (max 10MB)
+    if (file.size > 10 * 1024 * 1024) {
+      toast.error('Image size must be less than 10MB');
+      return;
+    }
+
+    setSelectedFile(file);
+    // Create preview URL
+    const url = URL.createObjectURL(file);
+    setPreviewUrl(url);
+  };
+
+  const handleRemoveFile = () => {
+    if (previewUrl) {
+      URL.revokeObjectURL(previewUrl);
+    }
+    setSelectedFile(null);
+    setPreviewUrl(null);
+  };
 
   const handleAddImage = () => {
     if (!imageUrl.trim()) {
@@ -72,14 +167,99 @@ const ImageScraperModal = ({
   const handleSave = async () => {
     setLoading(true);
     try {
-      await onSave(images);
-      toast.success('Images saved successfully');
+      let finalImageUrl: string | null = null;
+
+      // Priority: 1. Selected file, 2. Image URL input, 3. First image from images array
+      if (selectedFile) {
+        // If a file is selected, upload it to Cloudinary first
+        setUploading(true);
+        try {
+          finalImageUrl = await uploadImageToCloudinary(selectedFile);
+          toast.success('Image uploaded to Cloudinary');
+        } catch (error: any) {
+          console.error('Error uploading image:', error);
+          toast.error(error.message || 'Failed to upload image to Cloudinary');
+          setLoading(false);
+          setUploading(false);
+          return;
+        } finally {
+          setUploading(false);
+        }
+      } else if (imageUrl.trim()) {
+        // If URL is provided in input field, use it (validate first)
+        try {
+          new URL(imageUrl.trim());
+          finalImageUrl = imageUrl.trim();
+        } catch {
+          toast.error('Please enter a valid URL');
+          setLoading(false);
+          return;
+        }
+      } else if (images.length > 0) {
+        // Use the first image from the images array
+        finalImageUrl = images[0];
+      } else {
+        toast.error('Please add an image (upload file, enter URL, or add from URL)');
+        setLoading(false);
+        return;
+      }
+
+      if (!finalImageUrl) {
+        toast.error('No image to save');
+        setLoading(false);
+        return;
+      }
+
+      // Parse SKUs from input
+      const allSkus: string[] = [];
+      
+      if (skuInput.trim()) {
+        const parsedSkus = skuInput
+          .split('\n')
+          .map(s => s.trim())
+          .filter(s => s.length > 0);
+        allSkus.push(...parsedSkus);
+      }
+
+      // Get product IDs for all SKUs
+      const productIds: string[] = [productId]; // Start with current product
+      
+      // Fetch products by SKU
+      if (allSkus.length > 0) {
+        const productPromises = allSkus.map(sku => getProductBySku(sku));
+        const products = await Promise.all(productPromises);
+        const foundProductIds = products
+          .filter(p => p !== null)
+          .map(p => p!.id);
+        productIds.push(...foundProductIds);
+      }
+
+      // Remove duplicates
+      const uniqueProductIds = Array.from(new Set(productIds));
+
+      // Update all products with the image
+      if (uniqueProductIds.length > 0) {
+        await bulkUpdateProducts(uniqueProductIds, { images: [finalImageUrl] });
+        toast.success(`Image applied to ${uniqueProductIds.length} product${uniqueProductIds.length !== 1 ? 's' : ''} successfully`);
+      }
+
+      // Also update the current product's images list (avoid duplicates)
+      const updatedImages = finalImageUrl && !images.includes(finalImageUrl) 
+        ? [finalImageUrl, ...images] 
+        : images.length > 0 
+          ? images 
+          : finalImageUrl 
+            ? [finalImageUrl] 
+            : [];
+      await onSave(updatedImages);
+      
       onClose();
     } catch (error) {
       console.error('Error saving images:', error);
       toast.error('Failed to save images');
     } finally {
       setLoading(false);
+      setUploading(false);
     }
   };
 
@@ -98,9 +278,76 @@ const ImageScraperModal = ({
         </DialogHeader>
 
         <div className="space-y-4">
+          {/* Drag and Drop Section */}
+          <div className="space-y-2">
+            <Label>Upload Image from Local</Label>
+            {!previewUrl ? (
+              <div
+                className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors ${
+                  dragActive
+                    ? 'border-primary bg-primary/5'
+                    : 'border-muted-foreground/25'
+                }`}
+                onDragEnter={handleDrag}
+                onDragLeave={handleDrag}
+                onDragOver={handleDrag}
+                onDrop={handleDrop}
+              >
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleFileInputChange}
+                  className="hidden"
+                  id="file-upload"
+                  disabled={uploading}
+                />
+                <label htmlFor="file-upload" className="cursor-pointer">
+                  {uploading ? (
+                    <div className="space-y-2">
+                      <Loader2 className="h-12 w-12 animate-spin mx-auto text-primary" />
+                      <p className="text-sm text-muted-foreground">
+                        Uploading image...
+                      </p>
+                    </div>
+                  ) : (
+                    <div className="space-y-2">
+                      <Upload className="h-12 w-12 mx-auto text-muted-foreground" />
+                      <div>
+                        <p className="text-sm font-medium">
+                          Drag and drop an image here, or click to select
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          Supports: JPG, PNG, WebP (Max 10MB)
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </label>
+              </div>
+            ) : (
+              <div className="space-y-2">
+                <div className="relative border rounded-lg overflow-hidden bg-secondary">
+                  <img
+                    src={previewUrl}
+                    alt="Preview"
+                    className="w-full h-64 object-contain"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleRemoveFile}
+                    className="absolute top-2 right-2 bg-destructive text-destructive-foreground rounded-full p-1"
+                    title="Remove image"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+
           {/* Add Image URL Input */}
           <div className="space-y-2">
-            <Label htmlFor="imageUrl">Image URL</Label>
+            <Label htmlFor="imageUrl">Or Enter Image URL</Label>
             <div className="flex gap-2">
               <Input
                 id="imageUrl"
@@ -121,6 +368,22 @@ const ImageScraperModal = ({
             </div>
             <p className="text-xs text-muted-foreground">
               Enter an image URL and press Enter or click Add
+            </p>
+          </div>
+
+          {/* Related SKUs Section */}
+          <div className="space-y-2">
+            <Label htmlFor="skuInput">Related SKUs (one per line)</Label>
+            <Textarea
+              id="skuInput"
+              value={skuInput}
+              onChange={(e) => setSkuInput(e.target.value)}
+              placeholder="CB91101KG06&#10;CB91101KG10&#10;CB91101KG16"
+              className="min-h-[100px] font-mono text-sm"
+              rows={6}
+            />
+            <p className="text-xs text-muted-foreground">
+              Enter SKUs (one per line). The image will be applied to all these SKUs and the current product.
             </p>
           </div>
 
@@ -169,11 +432,18 @@ const ImageScraperModal = ({
         </div>
 
         <DialogFooter>
-          <Button variant="outline" onClick={onClose} disabled={loading}>
+          <Button variant="outline" onClick={onClose} disabled={loading || uploading}>
             Cancel
           </Button>
-          <Button onClick={handleSave} disabled={loading}>
-            {loading ? 'Saving...' : 'Save Images'}
+          <Button onClick={handleSave} disabled={loading || uploading}>
+            {loading || uploading ? (
+              <>
+                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                {uploading ? 'Uploading...' : 'Saving...'}
+              </>
+            ) : (
+              'Save Images'
+            )}
           </Button>
         </DialogFooter>
       </DialogContent>
