@@ -223,6 +223,23 @@ async def get_product_by_slug(slug: str, db: AsyncIOMotorDatabase = Depends(get_
             {"slug": slug},
         ]
     })
+    # Fallback: try matching name-derived slug or SKU
+    if not doc:
+        # Replace dashes with spaces and match name loosely (case-insensitive)
+        loose = slug.replace("-", " ")
+        # Token-based regex: require all tokens to appear (order flexible)
+        tokens = [t for t in slug.split("-") if t]
+        token_regex = [{"name": {"$regex": t, "$options": "i"}} for t in tokens]
+        loose_query = {
+            "$or": [
+                {"name": {"$regex": f"^{loose}$", "$options": "i"}},
+                {"name": {"$regex": loose, "$options": "i"}},
+                {"sku": {"$regex": f"^{slug}$", "$options": "i"}},
+                {"sku": {"$regex": slug, "$options": "i"}},
+                {"$and": token_regex} if token_regex else {},
+            ]
+        }
+        doc = await db.products.find_one(loose_query)
     if not doc:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
     doc["_id"] = str(doc["_id"])

@@ -167,15 +167,15 @@ const ImageScraperModal = ({
   const handleSave = async () => {
     setLoading(true);
     try {
-      let finalImageUrl: string | null = null;
+      let finalImages: string[] = images ? [...images] : [];
 
-      // Priority: 1. Selected file, 2. Image URL input, 3. First image from images array
+      // Priority: 1. Selected file upload (prepend), 2. Image URL input (prepend), 3. Existing images from DB/state
       if (selectedFile) {
-        // If a file is selected, upload it to Cloudinary first
         setUploading(true);
         try {
-          finalImageUrl = await uploadImageToCloudinary(selectedFile);
+          const uploadedUrl = await uploadImageToCloudinary(selectedFile);
           toast.success('Image uploaded to Cloudinary');
+          finalImages = [uploadedUrl, ...finalImages];
         } catch (error: any) {
           console.error('Error uploading image:', error);
           toast.error(error.message || 'Failed to upload image to Cloudinary');
@@ -186,29 +186,30 @@ const ImageScraperModal = ({
           setUploading(false);
         }
       } else if (imageUrl.trim()) {
-        // If URL is provided in input field, use it (validate first)
         try {
           new URL(imageUrl.trim());
-          finalImageUrl = imageUrl.trim();
+          finalImages = [imageUrl.trim(), ...finalImages];
         } catch {
           toast.error('Please enter a valid URL');
           setLoading(false);
           return;
         }
-      } else if (images.length > 0) {
-        // Use the first image from the images array
-        finalImageUrl = images[0];
-      } else {
+      }
+
+      // If still no images, ensure we use existing images from DB/state for propagation
+      if (!finalImages.length && currentImages.length) {
+        finalImages = [...currentImages];
+      }
+
+      // If still empty, bail
+      if (!finalImages.length) {
         toast.error('Please add an image (upload file, enter URL, or add from URL)');
         setLoading(false);
         return;
       }
 
-      if (!finalImageUrl) {
-        toast.error('No image to save');
-        setLoading(false);
-        return;
-      }
+      // Deduplicate while preserving order
+      finalImages = Array.from(new Set(finalImages));
 
       // Parse SKUs from input
       const allSkus: string[] = [];
@@ -239,19 +240,12 @@ const ImageScraperModal = ({
 
       // Update all products with the image
       if (uniqueProductIds.length > 0) {
-        await bulkUpdateProducts(uniqueProductIds, { images: [finalImageUrl] });
+        await bulkUpdateProducts(uniqueProductIds, { images: finalImages });
         toast.success(`Image applied to ${uniqueProductIds.length} product${uniqueProductIds.length !== 1 ? 's' : ''} successfully`);
       }
 
-      // Also update the current product's images list (avoid duplicates)
-      const updatedImages = finalImageUrl && !images.includes(finalImageUrl) 
-        ? [finalImageUrl, ...images] 
-        : images.length > 0 
-          ? images 
-          : finalImageUrl 
-            ? [finalImageUrl] 
-            : [];
-      await onSave(updatedImages);
+      // Update the current product's images list
+      await onSave(finalImages);
       
       onClose();
     } catch (error) {
