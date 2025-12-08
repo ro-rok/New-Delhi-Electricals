@@ -1,0 +1,1870 @@
+[
+  {
+    "_id": "6935c128b9a9b9042d41eb1c",
+    "sku": "65990GB",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65990"
+      ],
+      "pricing": {
+        "mrp": 860,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "6"
+      },
+      "seo": {
+        "slug": "10a-dp-c-mini-mcb-gb",
+        "keywords": [
+          "Mini MCB",
+          "10A",
+          "DP",
+          "C Curve",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 10A DP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 10A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 860,
+    "name": "10A DP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 10,
+      "type_detail": "DP 'C' Mini MCB",
+      "curve": "C",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c126b9a9b9042d41eadd",
+    "sku": "65990",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65990GB"
+      ],
+      "pricing": {
+        "mrp": 790,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "6"
+      },
+      "seo": {
+        "slug": "10a-dp-c-mini-mcb",
+        "keywords": [
+          "Mini MCB",
+          "10A",
+          "DP",
+          "C Curve",
+          "Penta"
+        ],
+        "meta_description": "Buy 10A DP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 10A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 790,
+    "name": "10A DP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 10,
+      "type_detail": "DP 'C' Mini MCB",
+      "curve": "C",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c126b9a9b9042d41ead7",
+    "sku": "65981",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65981GB"
+      ],
+      "pricing": {
+        "mrp": 365,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "10a-sp-c-mini-mcb",
+        "keywords": [
+          "Mini MCB",
+          "10A",
+          "SP",
+          "C Curve",
+          "Penta"
+        ],
+        "meta_description": "Buy 10A SP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 10A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 365,
+    "name": "10A SP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 10,
+      "type_detail": "SP 'C' Mini MCB",
+      "curve": "C",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c128b9a9b9042d41eb16",
+    "sku": "65981GB",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65981"
+      ],
+      "pricing": {
+        "mrp": 395,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "10a-sp-c-mini-mcb-gb",
+        "keywords": [
+          "Mini MCB",
+          "10A",
+          "SP",
+          "C Curve",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 10A SP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 10A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 395,
+    "name": "10A SP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 10,
+      "type_detail": "SP 'C' Mini MCB",
+      "curve": "C",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c128b9a9b9042d41eb1d",
+    "sku": "65991GB",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65991"
+      ],
+      "pricing": {
+        "mrp": 860,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "6"
+      },
+      "seo": {
+        "slug": "16a-dp-c-mini-mcb-gb",
+        "keywords": [
+          "Mini MCB",
+          "16A",
+          "DP",
+          "C Curve",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 16A DP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 16A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 860,
+    "name": "16A DP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 16,
+      "type_detail": "DP 'C' Mini MCB",
+      "curve": "C",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c126b9a9b9042d41eade",
+    "sku": "65991",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65991GB"
+      ],
+      "pricing": {
+        "mrp": 790,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "6"
+      },
+      "seo": {
+        "slug": "16a-dp-c-mini-mcb",
+        "keywords": [
+          "Mini MCB",
+          "16A",
+          "DP",
+          "C Curve",
+          "Penta"
+        ],
+        "meta_description": "Buy 16A DP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 16A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 790,
+    "name": "16A DP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 16,
+      "type_detail": "DP 'C' Mini MCB",
+      "curve": "C",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c124b9a9b9042d41eab4",
+    "sku": "65509",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [],
+      "pricing": {
+        "mrp": 188,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "20"
+      },
+      "seo": {
+        "slug": "16a-resettable-fuse-unit-240v-1-module",
+        "keywords": [
+          "Resettable Fuse Unit",
+          "16A",
+          "240V",
+          "1 Module",
+          "Penta"
+        ],
+        "meta_description": "Buy 16A Resettable Fuse Unit, 240V~, 1 Module from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 16A Resettable Fuse Unit, 240V~, 1 Module from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 188,
+    "name": "16A Resettable Fuse Unit, 240V~, 1 Module",
+    "series": "Penta",
+    "specs": {
+      "ampere": 16,
+      "mw": 1,
+      "type_detail": "Resettable Fuse Unit",
+      "voltage": "240V~",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c127b9a9b9042d41eaf3",
+    "sku": "65509B",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65509"
+      ],
+      "pricing": {
+        "mrp": 227,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "20"
+      },
+      "seo": {
+        "slug": "16a-resettable-fuse-unit-240v-1-module-b",
+        "keywords": [
+          "Resettable Fuse Unit",
+          "16A",
+          "240V",
+          "1 Module",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 16A Resettable Fuse Unit, 240V~, 1 Module from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 16A Resettable Fuse Unit, 240V~, 1 Module from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 227,
+    "name": "16A Resettable Fuse Unit, 240V~, 1 Module",
+    "series": "Penta",
+    "specs": {
+      "ampere": 16,
+      "mw": 1,
+      "type_detail": "Resettable Fuse Unit",
+      "voltage": "240V~",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c126b9a9b9042d41ead8",
+    "sku": "65982",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [],
+      "pricing": {
+        "mrp": 365,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "16a-sp-c-mini-mcb",
+        "keywords": [
+          "Mini MCB",
+          "16A",
+          "SP",
+          "C Curve",
+          "Penta"
+        ],
+        "meta_description": "Buy 16A SP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 16A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 365,
+    "name": "16A SP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 16,
+      "type_detail": "SP 'C' Mini MCB",
+      "curve": "C",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c128b9a9b9042d41eb17",
+    "sku": "65982GB",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65982"
+      ],
+      "pricing": {
+        "mrp": 395,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "16a-sp-c-mini-mcb-gb",
+        "keywords": [
+          "Mini MCB",
+          "16A",
+          "SP",
+          "C Curve",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 16A SP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 16A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 395,
+    "name": "16A SP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 16,
+      "type_detail": "SP 'C' Mini MCB",
+      "curve": "C",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c129b9a9b9042d41eb1e",
+    "sku": "65992GB",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65992"
+      ],
+      "pricing": {
+        "mrp": 860,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "6"
+      },
+      "seo": {
+        "slug": "20a-dp-c-mini-mcb-gb",
+        "keywords": [
+          "Mini MCB",
+          "20A",
+          "DP",
+          "C Curve",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 20A DP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 20A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 860,
+    "name": "20A DP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 20,
+      "type_detail": "DP 'C' Mini MCB",
+      "curve": "C",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c126b9a9b9042d41eadf",
+    "sku": "65992",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65992GB"
+      ],
+      "pricing": {
+        "mrp": 790,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "6"
+      },
+      "seo": {
+        "slug": "20a-dp-c-mini-mcb",
+        "keywords": [
+          "Mini MCB",
+          "20A",
+          "DP",
+          "C Curve",
+          "Penta"
+        ],
+        "meta_description": "Buy 20A DP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 20A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 790,
+    "name": "20A DP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 20,
+      "type_detail": "DP 'C' Mini MCB",
+      "curve": "C",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c128b9a9b9042d41eb18",
+    "sku": "65983GB",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [],
+      "pricing": {
+        "mrp": 395,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "20a-sp-c-mini-mcb-gb",
+        "keywords": [
+          "Mini MCB",
+          "20A",
+          "SP",
+          "C Curve",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 20A SP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 20A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 395,
+    "name": "20A SP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 20,
+      "type_detail": "SP 'C' Mini MCB",
+      "curve": "C",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c126b9a9b9042d41ead9",
+    "sku": "65983",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65983GB"
+      ],
+      "pricing": {
+        "mrp": 365,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "20a-sp-c-mini-mcb",
+        "keywords": [
+          "Mini MCB",
+          "20A",
+          "SP",
+          "C Curve",
+          "Penta"
+        ],
+        "meta_description": "Buy 20A SP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 20A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 365,
+    "name": "20A SP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 20,
+      "type_detail": "SP 'C' Mini MCB",
+      "curve": "C",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c126b9a9b9042d41eae0",
+    "sku": "65993",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [],
+      "pricing": {
+        "mrp": 790,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "6"
+      },
+      "seo": {
+        "slug": "25a-dp-c-mini-mcb",
+        "keywords": [
+          "Mini MCB",
+          "25A",
+          "DP",
+          "C Curve",
+          "Penta"
+        ],
+        "meta_description": "Buy 25A DP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 25A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 790,
+    "name": "25A DP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 25,
+      "type_detail": "DP 'C' Mini MCB",
+      "curve": "C",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c129b9a9b9042d41eb1f",
+    "sku": "65993GB",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65993"
+      ],
+      "pricing": {
+        "mrp": 860,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "6"
+      },
+      "seo": {
+        "slug": "25a-dp-c-mini-mcb-gb",
+        "keywords": [
+          "Mini MCB",
+          "25A",
+          "DP",
+          "C Curve",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 25A DP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 25A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 860,
+    "name": "25A DP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 25,
+      "type_detail": "DP 'C' Mini MCB",
+      "curve": "C",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c128b9a9b9042d41eb19",
+    "sku": "65984GB",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65984"
+      ],
+      "pricing": {
+        "mrp": 395,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "25a-sp-c-mini-mcb-gb",
+        "keywords": [
+          "Mini MCB",
+          "25A",
+          "SP",
+          "C Curve",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 25A SP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 25A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 395,
+    "name": "25A SP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 25,
+      "type_detail": "SP 'C' Mini MCB",
+      "curve": "C",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c126b9a9b9042d41eada",
+    "sku": "65984",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65984GB"
+      ],
+      "pricing": {
+        "mrp": 365,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "25a-sp-c-mini-mcb",
+        "keywords": [
+          "Mini MCB",
+          "25A",
+          "SP",
+          "C Curve",
+          "Penta"
+        ],
+        "meta_description": "Buy 25A SP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 25A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 365,
+    "name": "25A SP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 25,
+      "type_detail": "SP 'C' Mini MCB",
+      "curve": "C",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c129b9a9b9042d41eb20",
+    "sku": "65994GB",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65994"
+      ],
+      "pricing": {
+        "mrp": 860,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "6"
+      },
+      "seo": {
+        "slug": "32a-dp-c-mini-mcb-gb",
+        "keywords": [
+          "Mini MCB",
+          "32A",
+          "DP",
+          "C Curve",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 32A DP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 32A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 860,
+    "name": "32A DP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 32,
+      "type_detail": "DP 'C' Mini MCB",
+      "curve": "C",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c126b9a9b9042d41eae1",
+    "sku": "65994",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [],
+      "pricing": {
+        "mrp": 790,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "6"
+      },
+      "seo": {
+        "slug": "32a-dp-c-mini-mcb",
+        "keywords": [
+          "Mini MCB",
+          "32A",
+          "DP",
+          "C Curve",
+          "Penta"
+        ],
+        "meta_description": "Buy 32A DP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 32A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 790,
+    "name": "32A DP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 32,
+      "type_detail": "DP 'C' Mini MCB",
+      "curve": "C",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c126b9a9b9042d41eadb",
+    "sku": "65985",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65985GB"
+      ],
+      "pricing": {
+        "mrp": 365,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "32a-sp-c-mini-mcb",
+        "keywords": [
+          "Mini MCB",
+          "32A",
+          "SP",
+          "C Curve",
+          "Penta"
+        ],
+        "meta_description": "Buy 32A SP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 32A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 365,
+    "name": "32A SP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 32,
+      "type_detail": "SP 'C' Mini MCB",
+      "curve": "C",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c128b9a9b9042d41eb1a",
+    "sku": "65985GB",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65985"
+      ],
+      "pricing": {
+        "mrp": 395,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "32a-sp-c-mini-mcb-gb",
+        "keywords": [
+          "Mini MCB",
+          "32A",
+          "SP",
+          "C Curve",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 32A SP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 32A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 395,
+    "name": "32A SP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 32,
+      "type_detail": "SP 'C' Mini MCB",
+      "curve": "C",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c126b9a9b9042d41eadc",
+    "sku": "65989",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65989GB"
+      ],
+      "pricing": {
+        "mrp": 790,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "6"
+      },
+      "seo": {
+        "slug": "6a-dp-c-mini-mcb",
+        "keywords": [
+          "Mini MCB",
+          "6A",
+          "DP",
+          "C Curve",
+          "Penta"
+        ],
+        "meta_description": "Buy 6A DP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 6A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 790,
+    "name": "6A DP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 6,
+      "type_detail": "DP 'C' Mini MCB",
+      "curve": "C",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c128b9a9b9042d41eb1b",
+    "sku": "65989GB",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65989"
+      ],
+      "pricing": {
+        "mrp": 860,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "6"
+      },
+      "seo": {
+        "slug": "6a-dp-c-mini-mcb-gb",
+        "keywords": [
+          "Mini MCB",
+          "6A",
+          "DP",
+          "C Curve",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 6A DP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 6A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 860,
+    "name": "6A DP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 6,
+      "type_detail": "DP 'C' Mini MCB",
+      "curve": "C",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c127b9a9b9042d41eaf2",
+    "sku": "65508B",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65508"
+      ],
+      "pricing": {
+        "mrp": 190,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "20"
+      },
+      "seo": {
+        "slug": "6a-resettable-fuse-unit-240v-1-module-b",
+        "keywords": [
+          "Resettable Fuse Unit",
+          "6A",
+          "240V",
+          "1 Module",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 6A Resettable Fuse Unit, 240V~, 1 Module from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 6A Resettable Fuse Unit, 240V~, 1 Module from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 190,
+    "name": "6A Resettable Fuse Unit, 240V~, 1 Module",
+    "series": "Penta",
+    "specs": {
+      "ampere": 6,
+      "mw": 1,
+      "type_detail": "Resettable Fuse Unit",
+      "voltage": "240V~",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c124b9a9b9042d41eab3",
+    "sku": "65508",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [],
+      "pricing": {
+        "mrp": 157,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "20"
+      },
+      "seo": {
+        "slug": "6a-resettable-fuse-unit-240v-1-module",
+        "keywords": [
+          "Resettable Fuse Unit",
+          "6A",
+          "240V",
+          "1 Module",
+          "Penta"
+        ],
+        "meta_description": "Buy 6A Resettable Fuse Unit, 240V~, 1 Module from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 6A Resettable Fuse Unit, 240V~, 1 Module from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 157,
+    "name": "6A Resettable Fuse Unit, 240V~, 1 Module",
+    "series": "Penta",
+    "specs": {
+      "ampere": 6,
+      "mw": 1,
+      "type_detail": "Resettable Fuse Unit",
+      "voltage": "240V~",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c126b9a9b9042d41ead6",
+    "sku": "65980",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65980GB"
+      ],
+      "pricing": {
+        "mrp": 365,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "6a-sp-c-mini-mcb",
+        "keywords": [
+          "Mini MCB",
+          "6A",
+          "SP",
+          "C Curve",
+          "Penta"
+        ],
+        "meta_description": "Buy 6A SP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 6A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 365,
+    "name": "6A SP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 6,
+      "type_detail": "SP 'C' Mini MCB",
+      "curve": "C",
+      "color": "White"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "6935c128b9a9b9042d41eb15",
+    "sku": "65980GB",
+    "brand": "Anchor",
+    "catalog_source": {
+      "source_file": "penta.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Penta",
+      "variant": [
+        "65980"
+      ],
+      "pricing": {
+        "mrp": 395,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "6a-sp-c-mini-mcb-gb",
+        "keywords": [
+          "Mini MCB",
+          "6A",
+          "SP",
+          "C Curve",
+          "Graphite",
+          "Penta"
+        ],
+        "meta_description": "Buy 6A SP 'C' Mini MCB from the Penta range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy 6A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 395,
+    "name": "6A SP 'C' Mini MCB",
+    "series": "Penta",
+    "specs": {
+      "ampere": 6,
+      "type_detail": "SP 'C' Mini MCB",
+      "curve": "C",
+      "color": "Graphite"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c83b9a9b9042d41f03d",
+    "sku": "DCWNCSPA01000MR",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Signia",
+      "variant": [
+        "DCWNCSPA010"
+      ],
+      "pricing": {
+        "mrp": 406,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "240"
+      },
+      "seo": {
+        "slug": "mini-mcb-10a-sp-c-master-pack",
+        "keywords": [
+          "Mini MCB",
+          "10A",
+          "SP",
+          "Curve C",
+          "Signia"
+        ],
+        "meta_description": "Buy Mini MCB 10A SP C master pack from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy Mini MCB 10A SP C master pack from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 406,
+    "name": "Mini MCB 10A SP C - Master Pack",
+    "series": "Signia",
+    "specs": {
+      "ampere": 10,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c83b9a9b9042d41f03c",
+    "sku": "DCWNCSPA010",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Signia",
+      "variant": [
+        "DCWNCSPA01000MR"
+      ],
+      "pricing": {
+        "mrp": 292,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "mini-mcb-10a-sp-c-std-pack",
+        "keywords": [
+          "Mini MCB",
+          "10A",
+          "SP",
+          "Curve C",
+          "Signia"
+        ],
+        "meta_description": "Buy Mini MCB 10A SP C standard pack from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy Mini MCB 10A SP C standard pack from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 292,
+    "name": "Mini MCB 10A SP C - Std Pack",
+    "series": "Signia",
+    "specs": {
+      "ampere": 10,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c83b9a9b9042d41f03f",
+    "sku": "DCWNCSPA01600MR",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Signia",
+      "variant": [
+        "DCWNCSPA016"
+      ],
+      "pricing": {
+        "mrp": 406,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "240"
+      },
+      "seo": {
+        "slug": "mini-mcb-16a-sp-c-master-pack",
+        "keywords": [
+          "Mini MCB",
+          "16A",
+          "SP",
+          "Curve C",
+          "Signia"
+        ],
+        "meta_description": "Buy Mini MCB 16A SP C master pack from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy Mini MCB 16A SP C master pack from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 406,
+    "name": "Mini MCB 16A SP C - Master Pack",
+    "series": "Signia",
+    "specs": {
+      "ampere": 16,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c83b9a9b9042d41f03e",
+    "sku": "DCWNCSPA016",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Signia",
+      "variant": [
+        "DCWNCSPA01600MR"
+      ],
+      "pricing": {
+        "mrp": 292,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "mini-mcb-16a-sp-c-std-pack",
+        "keywords": [
+          "Mini MCB",
+          "16A",
+          "SP",
+          "Curve C",
+          "Signia"
+        ],
+        "meta_description": "Buy Mini MCB 16A SP C standard pack from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy Mini MCB 16A SP C standard pack from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 292,
+    "name": "Mini MCB 16A SP C - Std Pack",
+    "series": "Signia",
+    "specs": {
+      "ampere": 16,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c83b9a9b9042d41f041",
+    "sku": "DCWNCSPA02000MR",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Signia",
+      "variant": [
+        "DCWNCSPA020"
+      ],
+      "pricing": {
+        "mrp": 406,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "240"
+      },
+      "seo": {
+        "slug": "mini-mcb-20a-sp-c-master-pack",
+        "keywords": [
+          "Mini MCB",
+          "20A",
+          "SP",
+          "Curve C",
+          "Signia"
+        ],
+        "meta_description": "Buy Mini MCB 20A SP C master pack from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy Mini MCB 20A SP C master pack from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 406,
+    "name": "Mini MCB 20A SP C - Master Pack",
+    "series": "Signia",
+    "specs": {
+      "ampere": 20,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c83b9a9b9042d41f040",
+    "sku": "DCWNCSPA020",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Signia",
+      "variant": [
+        "DCWNCSPA02000MR"
+      ],
+      "pricing": {
+        "mrp": 292,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "mini-mcb-20a-sp-c-std-pack",
+        "keywords": [
+          "Mini MCB",
+          "20A",
+          "SP",
+          "Curve C",
+          "Signia"
+        ],
+        "meta_description": "Buy Mini MCB 20A SP C standard pack from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy Mini MCB 20A SP C standard pack from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 292,
+    "name": "Mini MCB 20A SP C - Std Pack",
+    "series": "Signia",
+    "specs": {
+      "ampere": 20,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c83b9a9b9042d41f043",
+    "sku": "DCWNCSPA02500MR",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Signia",
+      "variant": [
+        "DCWNCSPA025"
+      ],
+      "pricing": {
+        "mrp": 406,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "240"
+      },
+      "seo": {
+        "slug": "mini-mcb-25a-sp-c-master-pack",
+        "keywords": [
+          "Mini MCB",
+          "25A",
+          "SP",
+          "Curve C",
+          "Signia"
+        ],
+        "meta_description": "Buy Mini MCB 25A SP C master pack from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy Mini MCB 25A SP C master pack from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 406,
+    "name": "Mini MCB 25A SP C - Master Pack",
+    "series": "Signia",
+    "specs": {
+      "ampere": 25,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c83b9a9b9042d41f042",
+    "sku": "DCWNCSPA025",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Signia",
+      "variant": [
+        "DCWNCSPA02500MR"
+      ],
+      "pricing": {
+        "mrp": 292,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "mini-mcb-25a-sp-c-std-pack",
+        "keywords": [
+          "Mini MCB",
+          "25A",
+          "SP",
+          "Curve C",
+          "Signia"
+        ],
+        "meta_description": "Buy Mini MCB 25A SP C standard pack from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy Mini MCB 25A SP C standard pack from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 292,
+    "name": "Mini MCB 25A SP C - Std Pack",
+    "series": "Signia",
+    "specs": {
+      "ampere": 25,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c84b9a9b9042d41f045",
+    "sku": "DCWNCSPA03200MR",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Signia",
+      "variant": [
+        "DCWNCSPA032"
+      ],
+      "pricing": {
+        "mrp": 406,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "240"
+      },
+      "seo": {
+        "slug": "mini-mcb-32a-sp-c-master-pack",
+        "keywords": [
+          "Mini MCB",
+          "32A",
+          "SP",
+          "Curve C",
+          "Signia"
+        ],
+        "meta_description": "Buy Mini MCB 32A SP C master pack from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy Mini MCB 32A SP C master pack from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 406,
+    "name": "Mini MCB 32A SP C - Master Pack",
+    "series": "Signia",
+    "specs": {
+      "ampere": 32,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c84b9a9b9042d41f044",
+    "sku": "DCWNCSPA032",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Mini MCBs 3kA",
+      "product_family": "Signia",
+      "variant": [
+        "DCWNCSPA03200MR"
+      ],
+      "pricing": {
+        "mrp": 292,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "12"
+      },
+      "seo": {
+        "slug": "mini-mcb-32a-sp-c-std-pack",
+        "keywords": [
+          "Mini MCB",
+          "32A",
+          "SP",
+          "Curve C",
+          "Signia"
+        ],
+        "meta_description": "Buy Mini MCB 32A SP C standard pack from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Mini MCBs 3kA",
+    "currency": "INR",
+    "description": "Buy Mini MCB 32A SP C standard pack from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 292,
+    "name": "Mini MCB 32A SP C - Std Pack",
+    "series": "Signia",
+    "specs": {
+      "ampere": 32,
+      "poles": "SP",
+      "curve": "C",
+      "packing": "12 N/240 N"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  }
+]

@@ -1,0 +1,4494 @@
+{
+  "collection_name": "products",
+  "total_products": 1994,
+  "total_fields": 82,
+  "fields": {
+    "brand": {
+      "type": "string",
+      "count": 1994,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 1994
+      },
+      "unique_count": 3,
+      "unique_values": [
+        "Anchor",
+        "Havells",
+        "Lauritz Knudsen"
+      ]
+    },
+    "catalog_source.highlights": {
+      "type": "array",
+      "count": 972,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "array": 972
+      },
+      "min_length": 0,
+      "max_length": 0,
+      "avg_length": 0.0,
+      "sample_arrays": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    "catalog_source.pricing.discount": {
+      "type": "null",
+      "count": 972,
+      "null_count": 972,
+      "null_percentage": 100.0
+    },
+    "catalog_source.pricing.mrp": {
+      "type": "integer",
+      "count": 972,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 972
+      },
+      "min": 28,
+      "max": 62680,
+      "unique_count": 438
+    },
+    "catalog_source.pricing.selling_price": {
+      "type": "null",
+      "count": 972,
+      "null_count": 972,
+      "null_percentage": 100.0
+    },
+    "catalog_source.pricing.std_pack": {
+      "type": "string",
+      "count": 972,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 972
+      },
+      "unique_count": 16,
+      "unique_values": [
+        "1",
+        "1/1",
+        "1/12",
+        "1/3",
+        "1/4",
+        "1/6",
+        "10",
+        "12",
+        "20",
+        "240",
+        "25",
+        "3",
+        "5",
+        "50",
+        "6",
+        "9"
+      ]
+    },
+    "catalog_source.product_family": {
+      "type": "string",
+      "count": 1994,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 1994
+      },
+      "unique_count": 11,
+      "unique_values": [
+        "Enconnect",
+        "Encurve",
+        "Engem",
+        "Englaze",
+        "Entice",
+        "Fabio",
+        "Fabio Art",
+        "Penta",
+        "Signia",
+        "Signiagrande",
+        "Tripper"
+      ]
+    },
+    "catalog_source.seo.keywords": {
+      "type": "array",
+      "count": 972,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "array": 972
+      },
+      "min_length": 3,
+      "max_length": 3,
+      "avg_length": 3.0,
+      "sample_arrays": [
+        [
+          "3Ph ACCL",
+          "Three Phase ACCL",
+          "Automatic Changeover"
+        ],
+        [
+          "3Ph ACCL",
+          "Three Phase ACCL",
+          "Automatic Changeover"
+        ],
+        [
+          "3Ph ACCL",
+          "Three Phase ACCL",
+          "Automatic Changeover"
+        ],
+        [
+          "3Ph ACCL",
+          "Three Phase ACCL",
+          "Automatic Changeover"
+        ],
+        [
+          "3Ph ACCL",
+          "Three Phase ACCL",
+          "Automatic Changeover"
+        ]
+      ]
+    },
+    "catalog_source.seo.meta_description": {
+      "type": "string",
+      "count": 972,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 972
+      },
+      "unique_count": 891,
+      "unique_values": [
+        "Buy 1 Module Cover Plate - Aqua Green (Color Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate - Ruby Red (Color Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate - White (Standard Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 10 Module Cover Plate - Aqua Green (Color Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 10 Module Cover Plate - Ruby Red (Color Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 10 Module Cover Plate - White (Standard Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 100A Double Pole Isolator (BE210000) from New Delhi Electricals. Premium quality isolator for safe electrical isolation.",
+        "Buy 100A Four Pole Isolator (BE410000) from New Delhi Electricals. Premium quality isolator for safe electrical isolation.",
+        "Buy 100A Three Pole Isolator (BE310000) from New Delhi Electricals. Premium quality isolator for safe electrical isolation.",
+        "Buy 100W, Dura Fan Regulator, 2 Module from the Penta range at New Delhi Electricals.",
+        "Buy 100W, Dura Fan Regulator,2 Module ISI from the Penta range at New Delhi Electricals.",
+        "Buy 100W, High speed fan regulator, 2 Module from the Penta range at New Delhi Electricals.",
+        "Buy 100W, Tiny Fan Regulator, 1 Module from the Penta range at New Delhi Electricals.",
+        "Buy 10A 100mA Double Pole RCBO (AUF3C201010) from New Delhi Electricals. Residual current circuit breaker with over current protection.",
+        "Buy 10A 300mA Double Pole RCBO (AUF3C201030) from New Delhi Electricals. Residual current circuit breaker with over current protection.",
+        "Buy 10A 30mA Double Pole RCBO (AUF3C201003) from New Delhi Electricals. Residual current circuit breaker with over current protection.",
+        "Buy 10A C Curve Double Pole Miniature Circuit Breaker (BA20100C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+        "Buy 10A C Curve Four Pole Miniature Circuit Breaker (BA40100C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+        "Buy 10A C Curve Single Pole Miniature Circuit Breaker (BA10100C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+        "Buy 10A C Curve Three Pole Miniature Circuit Breaker (BA30100C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+        "Buy 10A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+        "Buy 10A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+        "Buy 10A, Bell Push Switch With Indicator, 1M from the Penta range at New Delhi Electricals.",
+        "Buy 10A, Bell Push Switch With Indicator, 2M from the Penta range at New Delhi Electricals.",
+        "Buy 10AX, 1 Way Switch, 100W SBL Load, 1M from the Penta range at New Delhi Electricals.",
+        "Buy 10AX, 2 Way Switch, 100W SBL Load, 1M from the Penta range at New Delhi Electricals.",
+        "Buy 12 Module Cover Plate - Aqua Green (Color Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 12 Module Cover Plate - Aqua Green, Square (Color Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 12 Module Cover Plate - Ruby Red (Color Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 12 Module Cover Plate - Ruby Red, Square (Color Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 12 Module Cover Plate - White (Standard Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 12 Module Cover Plate - White, Square (Standard Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 125A/125A Three Phase Automatic Changeover with Current Limiter (AUCL03125125) from New Delhi Electricals. Reliable three phase EB/DG changeover with current limiting.",
+        "Buy 150W, LED Dimmer, 2 Module from the Penta range at New Delhi Electricals.",
+        "Buy 16 Module Cover Plate - Aqua Green (Color Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 16 Module Cover Plate - Ruby Red (Color Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 16 Module Cover Plate - White (Standard Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 16A 100mA Double Pole RCBO (AUF3C201610) from New Delhi Electricals. Residual current circuit breaker with over current protection.",
+        "Buy 16A 300mA Double Pole RCBO (AUF3C201630) from New Delhi Electricals. Residual current circuit breaker with over current protection.",
+        "Buy 16A 30mA Double Pole RCBO (AUF3C201603) from New Delhi Electricals. Residual current circuit breaker with over current protection.",
+        "Buy 16A C Curve Double Pole Miniature Circuit Breaker (BA20160C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+        "Buy 16A C Curve Four Pole Miniature Circuit Breaker (BA40160C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+        "Buy 16A C Curve Single Pole Miniature Circuit Breaker (BA10160C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+        "Buy 16A C Curve Three Pole Miniature Circuit Breaker (BA30160C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+        "Buy 16A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+        "Buy 16A Resettable Fuse Unit, 240V~, 1 Module from the Penta range at New Delhi Electricals.",
+        "Buy 16A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+        "Buy 16A, 3pin Socket, 2 Module ISI from the Penta range at New Delhi Electricals.",
+        "Buy 16AX, 1 Way Switch With Indicator, 200W SBL Load, 1M from the Penta range at New Delhi Electricals.",
+        "Buy 16AX, 1 Way Switch with Neon, 1 Module 200W SBL Load from the Penta range at New Delhi Electricals."
+      ],
+      "unique_values_sample": "... and 841 more"
+    },
+    "catalog_source.seo.slug": {
+      "type": "string",
+      "count": 972,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 972
+      },
+      "unique_count": 961,
+      "unique_values": [
+        "1-module-cover-plate-aqua-green-color-finish",
+        "1-module-cover-plate-ruby-red-color-finish",
+        "1-module-cover-plate-white-standard-finish",
+        "10-module-cover-plate-aqua-green-color-finish",
+        "10-module-cover-plate-ruby-red-color-finish",
+        "10-module-cover-plate-white-standard-finish",
+        "100w-dura-fan-regulator-2-module",
+        "100w-dura-fan-regulator-2-module-b",
+        "100w-dura-fan-regulator-2-module-isi",
+        "100w-dura-fan-regulator-2-module-isi-b",
+        "100w-high-speed-fan-regulator-2-module",
+        "100w-high-speed-fan-regulator-2-module-b",
+        "100w-tiny-fan-regulator-1-module",
+        "100w-tiny-fan-regulator-1-module-b",
+        "10a-bell-push-switch-with-indicator-1m",
+        "10a-bell-push-switch-with-indicator-1m-b",
+        "10a-bell-push-switch-with-indicator-2m",
+        "10a-bell-push-switch-with-indicator-2m-b",
+        "10a-dp-c-mini-mcb",
+        "10a-dp-c-mini-mcb-gb",
+        "10a-sp-c-mini-mcb",
+        "10a-sp-c-mini-mcb-gb",
+        "10ax-1-way-switch-100w-sbl-load-1m",
+        "10ax-1-way-switch-100w-sbl-load-1m-b",
+        "10ax-2-way-switch-100w-sbl-load-1m",
+        "10ax-2-way-switch-100w-sbl-load-1m-b",
+        "12-module-cover-plate-aqua-green-color-finish",
+        "12-module-cover-plate-aqua-green-square-color-finish",
+        "12-module-cover-plate-ruby-red-color-finish",
+        "12-module-cover-plate-ruby-red-square-color-finish",
+        "12-module-cover-plate-white-square-standard-finish",
+        "12-module-cover-plate-white-standard-finish",
+        "150w-led-dimmer-2-module",
+        "150w-led-dimmer-2-module-b",
+        "16-module-cover-plate-aqua-green-color-finish",
+        "16-module-cover-plate-ruby-red-color-finish",
+        "16-module-cover-plate-white-standard-finish",
+        "16a-3pin-socket-2-module-isi",
+        "16a-3pin-socket-2-module-isi-b",
+        "16a-dp-c-mini-mcb",
+        "16a-dp-c-mini-mcb-gb",
+        "16a-resettable-fuse-unit-240v-1-module",
+        "16a-resettable-fuse-unit-240v-1-module-b",
+        "16a-sp-c-mini-mcb",
+        "16a-sp-c-mini-mcb-gb",
+        "16ax-1-way-switch-1-module-200w-sbl-load",
+        "16ax-1-way-switch-1-module-200w-sbl-load-b",
+        "16ax-1-way-switch-1m-200w-sbl-load",
+        "16ax-1-way-switch-1m-200w-sbl-load-b",
+        "16ax-1-way-switch-200w-sbl-load-1m"
+      ],
+      "unique_values_sample": "... and 911 more"
+    },
+    "catalog_source.source_file": {
+      "type": "string",
+      "count": 972,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 972
+      },
+      "unique_count": 12,
+      "unique_values": [
+        "3ph.json",
+        "ACCL.json",
+        "Fabio1.json",
+        "MCB C curve.json",
+        "RCBO.json",
+        "RCCB.json",
+        "Signia.json",
+        "Signia2.json",
+        "changeover.json",
+        "isolator.json",
+        "penta.json",
+        "penta2.json"
+      ]
+    },
+    "catalog_source.subcategory": {
+      "type": "string",
+      "count": 972,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 972
+      },
+      "unique_count": 45,
+      "unique_values": [
+        "Automatic Changeover with Current Limiter (ACCL)",
+        "Bell Push - 1 Module",
+        "Bell Push - 2 Module",
+        "Blank Off Unit - 1 Module",
+        "Buzzer - 2 Module",
+        "Cable Outlet - 1 Module",
+        "Cover Plates with grid frames",
+        "Cover Plates without grid frames",
+        "DND Switches",
+        "DND-MMR Units",
+        "DP Switches - 2 Module",
+        "Dimmers - 1 Module",
+        "Dimmers - 2 Module",
+        "Door Bells - 2 Module",
+        "Electronic Key Tag Switches",
+        "Fan Regulators - 1 Module",
+        "Fan Regulators - 2 Module",
+        "Grid Frames",
+        "Isolators",
+        "Key Tag Accessories",
+        "LAN Sockets - 1 Module",
+        "LED Foot Light - 2 Module",
+        "LED Foot Lights",
+        "LED Phase Indicator - 1 Module",
+        "MMR Switches",
+        "Mechanical Key Tag Switches",
+        "Mini MCBs 3kA",
+        "Miniature Circuit Breakers (MCBs)",
+        "Modular Changeover Switches",
+        "Motor Starters - 2 Module",
+        "PC Plates without grid frames",
+        "Plexy Glass Plates without grid frames",
+        "Power Sockets - 2 Module",
+        "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+        "Residual Current Circuit Breakers (RCCBs/ELCBs)",
+        "SWITCHES - 2 MODULE (Mega Switches)",
+        "Shaver Sockets",
+        "Switches - 1 Module",
+        "Switches - 2 Module",
+        "TV Sockets - 1 Module",
+        "Telephone Sockets - 1 Module",
+        "Three Phase Automatic Changeover with Current Limiter (3Ph ACCL)",
+        "USB Chargers - 1 Module",
+        "Wi-fi Accessories",
+        "Wi-fi Fan Regulators"
+      ]
+    },
+    "catalog_source.variant": {
+      "type": "array",
+      "count": 972,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "array": 972
+      },
+      "min_length": 0,
+      "max_length": 2,
+      "avg_length": 0.44,
+      "sample_arrays": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    "category": {
+      "type": "string",
+      "count": 1994,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 1994
+      },
+      "unique_count": 10,
+      "unique_values": [
+        "Accessories",
+        "Boxes",
+        "Circuit Protection",
+        "Data Sockets",
+        "Dimmers",
+        "Fan Controls",
+        "Hospitality",
+        "Plates",
+        "Power Sockets",
+        "Switches"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "count": 1994,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 1994
+      },
+      "unique_count": 1,
+      "unique_values": [
+        "INR"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "count": 1994,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 1994
+      },
+      "unique_count": 1893,
+      "unique_values": [
+        "Buy 1 Module Cover Plate - Aqua Green (Color Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate - Ruby Red (Color Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate - White (Standard Finish) from the Penta range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate Beige Wood without grid frames online at New Delhi Electricals. ENGLAZE wood plate.",
+        "Buy 1 Module Cover Plate Black Beauty Vivid shade from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate Bottle Green Vivid shade from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate Charcoal Grey Vivid shade from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate Cinnamon Wood wooden finish from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate Dark Chocolate Wood wooden finish from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate Eco Grey Vivid shade from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate Firestorm Orange Vibrant shade from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate Gold Rush Vivid shade from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate Ice Silver Vivid shade from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate Metallic Grey Vibrant shade from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate Mocha Wood without grid frames online at New Delhi Electricals. ENGLAZE wood plate.",
+        "Buy 1 Module Cover Plate Oak Wood without grid frames online at New Delhi Electricals. ENGLAZE wood plate.",
+        "Buy 1 Module Cover Plate Rose Gold Vibrant shade from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate Rustic Gold Vibrant shade from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate with Grid Frame Antique Bronze from the Encurve range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate with Grid Frame Desert Gold from the Encurve range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate with Grid Frame Magnesium Grey from the Encurve range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate with Grid Frame Mystic Marble Finish from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate with Grid Frame Nebula Black from the Encurve range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate with Grid Frame Vintage Gold from the Encurve range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate with Grid Frame White Marble Finish from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate with Grid Frame White from the Encurve range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate with Grid Frame White from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Cover Plate with Grid Frame in Champagne Gold finish online at New Delhi Electricals. ENGLAZE cover plate with grid frame.",
+        "Buy 1 Module Cover Plate with Grid Frame in Gold Blush finish online at New Delhi Electricals. ENGLAZE cover plate with grid frame.",
+        "Buy 1 Module Cover Plate with Grid Frame in Moonlight Silver finish online at New Delhi Electricals. ENGLAZE cover plate with grid frame.",
+        "Buy 1 Module Cover Plate with Grid Frame in Mountain Grey finish online at New Delhi Electricals. ENGLAZE cover plate with grid frame.",
+        "Buy 1 Module Cover Plate with Grid Frame in Satin Chrome finish online at New Delhi Electricals. ENGLAZE cover plate with grid frame.",
+        "Buy 1 Module Cover Plate with Grid Frame in Snow White finish online at New Delhi Electricals. ENGLAZE cover plate with grid frame.",
+        "Buy 1 Module Cover Plate with Grid Frame in Sparkle Black finish online at New Delhi Electricals. ENGLAZE cover plate with grid frame.",
+        "Buy 1 Module Cover Plate+Grid Frame Stone Grey online at New Delhi Electricals. Engem cover plate with grid frame.",
+        "Buy 1 Module Cover Plate+Grid Frame White online at New Delhi Electricals. Engem cover plate with grid frame.",
+        "Buy 1 Module Glass Cover Plate Champagne Gold without grid frames online at New Delhi Electricals.",
+        "Buy 1 Module Glass Cover Plate Icy White without grid frames online at New Delhi Electricals.",
+        "Buy 1 Module Glass Cover Plate Silky Silver without grid frames online at New Delhi Electricals.",
+        "Buy 1 Module Glass Cover Plate with Grid Frame Bronze Mirror from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Glass Cover Plate with Grid Frame Caramel Brown from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Glass Cover Plate with Grid Frame Classic Grey from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Glass Cover Plate with Grid Frame Glacier White from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Glass Cover Plate with Grid Frame Onyx Black from the Entice range at New Delhi Electricals.",
+        "Buy 1 Module Metal Cover Plate Brush Silver without grid frames online at New Delhi Electricals.",
+        "Buy 1 Module Metal Cover Plate Jet Black without grid frames online at New Delhi Electricals.",
+        "Buy 1 Module Metal Cover Plate Metallic Gold without grid frames online at New Delhi Electricals.",
+        "Buy 1/2 Module Grid Frame (CB91102GB00) for Vivid, Vibrant and Wood cover plates at New Delhi Electricals.",
+        "Buy 1/2 Module Grid Frame (CB92102GB00) compatible with all plate materials at New Delhi Electricals.",
+        "Buy 10 Module Cover Plate - Aqua Green (Color Finish) from the Penta range at New Delhi Electricals."
+      ],
+      "unique_values_sample": "... and 1843 more"
+    },
+    "images": {
+      "type": "array",
+      "count": 1994,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "array": 1994
+      },
+      "min_length": 0,
+      "max_length": 2,
+      "avg_length": 0.16,
+      "sample_arrays": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    "list_price": {
+      "type": "integer",
+      "count": 1994,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 1994
+      },
+      "min": 28,
+      "max": 62680,
+      "unique_count": 763
+    },
+    "name": {
+      "type": "string",
+      "count": 1994,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 1994
+      },
+      "unique_count": 1806,
+      "unique_values": [
+        "1 Module Cover Plate - Aqua Green (Color Finish)",
+        "1 Module Cover Plate - Arabian Night (Graphic Finish)",
+        "1 Module Cover Plate - Beige Wood",
+        "1 Module Cover Plate - Black (Standard Finish)",
+        "1 Module Cover Plate - Black Beauty (Vivid)",
+        "1 Module Cover Plate - Black Ebony (Wooden Finish)",
+        "1 Module Cover Plate - Black Silver Chrome (Silver Chrome Finish)",
+        "1 Module Cover Plate - Bottle Green (Vivid)",
+        "1 Module Cover Plate - Bronze Blaze (Color Finish)",
+        "1 Module Cover Plate - Brush Silver",
+        "1 Module Cover Plate - Chameli (Graphic Finish)",
+        "1 Module Cover Plate - Champagne Gold",
+        "1 Module Cover Plate - Charcoal Grey (Color Finish)",
+        "1 Module Cover Plate - Charcoal Grey (Vivid)",
+        "1 Module Cover Plate - Cinnamon Wood (Wooden Finish)",
+        "1 Module Cover Plate - Dark Chocolate Wood (Wooden Finish)",
+        "1 Module Cover Plate - Eco Grey (Vivid)",
+        "1 Module Cover Plate - Firestorm Orange (Vibrant)",
+        "1 Module Cover Plate - Gold Rush (Vivid)",
+        "1 Module Cover Plate - Golden Ash (Color Finish)",
+        "1 Module Cover Plate - Golden Pecan (Wooden Finish)",
+        "1 Module Cover Plate - Ice Silver (Vivid)",
+        "1 Module Cover Plate - Icy White",
+        "1 Module Cover Plate - Jet Black",
+        "1 Module Cover Plate - Kalamkari (Graphic Finish)",
+        "1 Module Cover Plate - Kassa Noor (Graphic Finish)",
+        "1 Module Cover Plate - Metallic Gold",
+        "1 Module Cover Plate - Metallic Grey (Vibrant)",
+        "1 Module Cover Plate - Mocha Wood",
+        "1 Module Cover Plate - Oak Wood",
+        "1 Module Cover Plate - Rose Gold (Color Finish)",
+        "1 Module Cover Plate - Rose Gold (Vibrant)",
+        "1 Module Cover Plate - Ruby Red (Color Finish)",
+        "1 Module Cover Plate - Rustic Gold (Vibrant)",
+        "1 Module Cover Plate - Silky Silver",
+        "1 Module Cover Plate - White (Standard Finish)",
+        "1 Module Cover Plate - White Silver Chrome (Silver Chrome Finish)",
+        "1 Module Cover Plate with Grid Frame - Antique Bronze",
+        "1 Module Cover Plate with Grid Frame - Champagne Gold",
+        "1 Module Cover Plate with Grid Frame - Desert Gold",
+        "1 Module Cover Plate with Grid Frame - Gold Blush",
+        "1 Module Cover Plate with Grid Frame - Magnesium Grey",
+        "1 Module Cover Plate with Grid Frame - Moonlight Silver",
+        "1 Module Cover Plate with Grid Frame - Mountain Grey",
+        "1 Module Cover Plate with Grid Frame - Mystic Marble Finish",
+        "1 Module Cover Plate with Grid Frame - Nebula Black",
+        "1 Module Cover Plate with Grid Frame - Satin Chrome",
+        "1 Module Cover Plate with Grid Frame - Snow White",
+        "1 Module Cover Plate with Grid Frame - Sparkle Black",
+        "1 Module Cover Plate with Grid Frame - Vintage Gold"
+      ],
+      "unique_values_sample": "... and 1756 more"
+    },
+    "series": {
+      "type": "string",
+      "count": 1994,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 1994
+      },
+      "unique_count": 11,
+      "unique_values": [
+        "Enconnect",
+        "Encurve",
+        "Engem",
+        "Englaze",
+        "Entice",
+        "Fabio",
+        "Fabio Art",
+        "Penta",
+        "Signia",
+        "Signiagrande",
+        "Tripper"
+      ]
+    },
+    "sku": {
+      "type": "string",
+      "count": 1994,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 1994
+      },
+      "unique_count": 1994,
+      "unique_values": [
+        "65001",
+        "65001B",
+        "65002",
+        "65002B",
+        "65003",
+        "65003B",
+        "65007",
+        "65007B",
+        "65008",
+        "65008B",
+        "65010",
+        "65010B",
+        "65025",
+        "65025B",
+        "65032",
+        "65032B",
+        "65066",
+        "65066B",
+        "65077",
+        "65077B",
+        "65120",
+        "65120B",
+        "65125",
+        "65125B",
+        "65141",
+        "65141B",
+        "65142",
+        "65142B",
+        "65143",
+        "65143B",
+        "65147",
+        "65147B",
+        "65148",
+        "65148B",
+        "65149",
+        "65149B",
+        "65151",
+        "65151B",
+        "65157",
+        "65157B",
+        "65166",
+        "65166B",
+        "65171",
+        "65171B",
+        "65172",
+        "65172B",
+        "65173",
+        "65173B",
+        "65174",
+        "65174B"
+      ],
+      "unique_values_sample": "... and 1944 more"
+    },
+    "specs.Grid frame": {
+      "type": "boolean",
+      "count": 402,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "boolean": 402
+      },
+      "true_count": 245,
+      "false_count": 157
+    },
+    "specs.ampere": {
+      "type": "integer",
+      "count": 736,
+      "null_count": 109,
+      "null_percentage": 14.81,
+      "type_distribution": {
+        "integer": 615,
+        "string": 8,
+        "number": 4
+      },
+      "min": 2,
+      "max": 125,
+      "unique_count": 15,
+      "unique_values": [
+        2,
+        2.1,
+        6,
+        10,
+        16,
+        20,
+        25,
+        30,
+        32,
+        40,
+        50,
+        63,
+        80,
+        100,
+        125
+      ]
+    },
+    "specs.bezel": {
+      "type": "string",
+      "count": 22,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 22
+      },
+      "unique_count": 2,
+      "unique_values": [
+        "Chrome",
+        "Rose"
+      ]
+    },
+    "specs.category": {
+      "type": "string",
+      "count": 4,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 4
+      },
+      "unique_count": 2,
+      "unique_values": [
+        "Cat5e",
+        "Cat6"
+      ]
+    },
+    "specs.certification": {
+      "type": "string",
+      "count": 2,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 2
+      },
+      "unique_count": 1,
+      "unique_values": [
+        "CRS Certified"
+      ]
+    },
+    "specs.channels": {
+      "type": "integer",
+      "count": 10,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 10
+      },
+      "min": 2,
+      "max": 4,
+      "unique_count": 2,
+      "unique_values": [
+        2,
+        4
+      ]
+    },
+    "specs.color": {
+      "type": "string",
+      "count": 1704,
+      "null_count": 1,
+      "null_percentage": 0.06,
+      "type_distribution": {
+        "string": 1703
+      },
+      "unique_count": 74,
+      "unique_values": [
+        "Antique Bronze",
+        "Aqua Green",
+        "Beige Wood",
+        "Black",
+        "Black - Silver Chrome",
+        "Black Beauty",
+        "Black Ebony",
+        "Black Glass",
+        "Blue",
+        "Bottle Green",
+        "Bronze Blaze",
+        "Bronze Mirror",
+        "Brown Mahogany",
+        "Brush Silver",
+        "Caramel Brown",
+        "Champagne Gold",
+        "Charcoal Black",
+        "Charcoal Grey",
+        "Chocolate Hardwood",
+        "Chrome Bezel",
+        "Cinnamon Wood",
+        "Classic Grey",
+        "Copper Mirror",
+        "Dark Chocolate Wood",
+        "Dark Walnut",
+        "Desert Gold",
+        "Dusky Wood",
+        "Eco Grey",
+        "Firestorm Orange",
+        "Frosted Husky",
+        "Frosted State",
+        "Glacier White",
+        "Gold",
+        "Gold Blush",
+        "Gold Rush",
+        "Gold Shimmer",
+        "Golden Ash",
+        "Golden Pecan",
+        "Graphite",
+        "Graphite Black",
+        "Grey",
+        "Ice Silver",
+        "Icy White",
+        "Igloo White",
+        "Jet Black",
+        "Magnesium Grey",
+        "Marble",
+        "Metallic Gold",
+        "Metallic Grey",
+        "Mocha Wood"
+      ],
+      "unique_values_sample": "... and 24 more"
+    },
+    "specs.compatibility": {
+      "type": "string",
+      "count": 1,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 1
+      },
+      "unique_count": 1,
+      "unique_values": [
+        "Entice Modular IR Switches"
+      ]
+    },
+    "specs.control_type": {
+      "type": "string",
+      "count": 15,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 15
+      },
+      "unique_count": 5,
+      "unique_values": [
+        "IR Remote Control",
+        "Touch Bell Push",
+        "Touch IR Fan Regulator",
+        "Touch IR Switch",
+        "Touch IR Universal Light Dimmer"
+      ]
+    },
+    "specs.cover_included": {
+      "type": "boolean",
+      "count": 60,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "boolean": 60
+      },
+      "true_count": 0,
+      "false_count": 60
+    },
+    "specs.curve": {
+      "type": "string",
+      "count": 141,
+      "null_count": 51,
+      "null_percentage": 36.17,
+      "type_distribution": {
+        "string": 90
+      },
+      "unique_count": 1,
+      "unique_values": [
+        "C"
+      ]
+    },
+    "specs.cutout_dimensions_mm": {
+      "type": "string",
+      "count": 18,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 18
+      },
+      "unique_count": 18,
+      "unique_values": [
+        "109 x 125",
+        "110 x 60",
+        "113 x 120",
+        "119 x 55",
+        "156 x 193",
+        "156 x 60",
+        "168 x 126",
+        "173 x 120",
+        "173 x 185",
+        "178 x 61",
+        "191 x 136",
+        "203 x 126",
+        "206 x 68",
+        "222 x 68",
+        "52 x 55",
+        "71 x 60",
+        "80 x 66",
+        "86 x 60"
+      ]
+    },
+    "specs.design": {
+      "type": "string",
+      "count": 40,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 40
+      },
+      "unique_count": 4,
+      "unique_values": [
+        "Arabian Night",
+        "Chameli",
+        "Kalamkari",
+        "Kassa Noor"
+      ]
+    },
+    "specs.dg_current_limit_ampere": {
+      "type": "integer",
+      "count": 20,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 18,
+        "number": 2
+      },
+      "min": 1.5,
+      "max": 125,
+      "unique_count": 18,
+      "unique_values": [
+        1.5,
+        2.5,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20,
+        30,
+        32,
+        40,
+        50,
+        63,
+        80,
+        125
+      ]
+    },
+    "specs.dimensions": {
+      "type": "string",
+      "count": 161,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 161
+      },
+      "unique_count": 21,
+      "unique_values": [
+        "125 x 90 x 14 mm",
+        "126 x 90 x 14 mm",
+        "157 x 157 x 14 mm",
+        "157 x 90 x 14 mm",
+        "158 x 157 x 14 mm",
+        "158 x 90 x 14 mm",
+        "228 x 157 x 14 mm",
+        "228 x 226 x 14 mm",
+        "228 x 226 x 20 mm",
+        "228 x 90 x 14 mm",
+        "229 x 157 x 14 mm",
+        "229 x 226 x 14 mm",
+        "229 x 90 x 14 mm",
+        "248 x 156 x 18 mm",
+        "249 x 156 x 18 mm",
+        "249 x 157 x 19 mm",
+        "262 x 90 x 14 mm",
+        "262 x 90 x 18 mm",
+        "263 x 90 x 14 mm",
+        "97 x 90 x 14 mm",
+        "98 x 90 x 14 mm"
+      ]
+    },
+    "specs.dimensions_mm": {
+      "type": "string",
+      "count": 27,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 27
+      },
+      "unique_count": 27,
+      "unique_values": [
+        "103 x 76 x 53",
+        "126 x 90 x 50",
+        "131 x 136 x 58",
+        "133 x 75 x 53",
+        "136 x 132 x 58",
+        "136 x 76 x 53",
+        "158 x 157 x 50",
+        "158 x 90 x 50",
+        "204 x 135 x 58",
+        "204 x 202 x 58",
+        "204 x 75 x 53",
+        "210 x 132 x 61",
+        "210 x 76 x 53",
+        "212 x 210 x 61",
+        "227 x 146 x 61",
+        "227 x 82 x 53",
+        "229 x 157 x 50",
+        "229 x 226 x 50",
+        "229 x 90 x 50",
+        "230 x 78 x 53",
+        "231 x 142 x 58",
+        "249 x 157 x 50",
+        "263 x 90 x 50",
+        "72 x 75 x 46",
+        "77 x 76 x 53",
+        "98 x 75 x 46",
+        "98 x 90 x 50"
+      ]
+    },
+    "specs.eb_current_ampere": {
+      "type": "integer",
+      "count": 20,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 20
+      },
+      "min": 30,
+      "max": 125,
+      "unique_count": 7,
+      "unique_values": [
+        30,
+        32,
+        40,
+        50,
+        63,
+        80,
+        125
+      ]
+    },
+    "specs.finish": {
+      "type": "string",
+      "count": 120,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 120
+      },
+      "unique_count": 4,
+      "unique_values": [
+        "Glass",
+        "Metal",
+        "Plastic",
+        "Wood"
+      ]
+    },
+    "specs.frequency": {
+      "type": "string",
+      "count": 8,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 8
+      },
+      "unique_count": 1,
+      "unique_values": [
+        "50Hz"
+      ]
+    },
+    "specs.grid_frame": {
+      "type": "boolean",
+      "count": 10,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "boolean": 10
+      },
+      "true_count": 10,
+      "false_count": 0
+    },
+    "specs.grid_frame_included": {
+      "type": "boolean",
+      "count": 50,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "boolean": 50
+      },
+      "true_count": 0,
+      "false_count": 50
+    },
+    "specs.has_indicator": {
+      "type": "boolean",
+      "count": 462,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "boolean": 462
+      },
+      "true_count": 195,
+      "false_count": 267
+    },
+    "specs.heavy_duty": {
+      "type": "boolean",
+      "count": 4,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "boolean": 4
+      },
+      "true_count": 4,
+      "false_count": 0
+    },
+    "specs.indicator_color": {
+      "type": "string",
+      "count": 2,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 2
+      },
+      "unique_count": 1,
+      "unique_values": [
+        "Red"
+      ]
+    },
+    "specs.installation": {
+      "type": "string",
+      "count": 18,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 18
+      },
+      "unique_count": 1,
+      "unique_values": [
+        "Furniture"
+      ]
+    },
+    "specs.isi_marked": {
+      "type": "boolean",
+      "count": 16,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "boolean": 16
+      },
+      "true_count": 16,
+      "false_count": 0
+    },
+    "specs.light_type": {
+      "type": "string",
+      "count": 8,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 8
+      },
+      "unique_count": 2,
+      "unique_values": [
+        "Cool Day Light",
+        "Warm White Light"
+      ]
+    },
+    "specs.load": {
+      "type": "string",
+      "count": 34,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 34
+      },
+      "unique_count": 2,
+      "unique_values": [
+        "100W SBL",
+        "200W SBL"
+      ]
+    },
+    "specs.material": {
+      "type": "string",
+      "count": 330,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 330
+      },
+      "unique_count": 12,
+      "unique_values": [
+        "Cover Plate",
+        "GI Metal",
+        "Grid Frame",
+        "Metal",
+        "PC",
+        "PC (Polycarbonate)",
+        "Plastic",
+        "Plexy Glass",
+        "Thin Slim",
+        "Thin Slim Gina",
+        "Wood",
+        "Xena"
+      ]
+    },
+    "specs.material_compatibility": {
+      "type": "array",
+      "count": 18,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "array": 18
+      },
+      "min_length": 3,
+      "max_length": 3,
+      "avg_length": 3.0,
+      "sample_arrays": [
+        [
+          "Vivid",
+          "Vibrant",
+          "Wood"
+        ],
+        [
+          "Vivid",
+          "Vibrant",
+          "Wood"
+        ],
+        [
+          "Vivid",
+          "Vibrant",
+          "Wood"
+        ],
+        [
+          "Vivid",
+          "Vibrant",
+          "Wood"
+        ],
+        [
+          "Vivid",
+          "Vibrant",
+          "Wood"
+        ]
+      ]
+    },
+    "specs.min_ampere": {
+      "type": "integer",
+      "count": 8,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 8
+      },
+      "min": 6,
+      "max": 6,
+      "unique_count": 1,
+      "unique_values": [
+        6
+      ]
+    },
+    "specs.module": {
+      "type": "integer",
+      "count": 212,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 212
+      },
+      "min": 1,
+      "max": 24,
+      "unique_count": 12,
+      "unique_values": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        10,
+        12,
+        16,
+        18,
+        20,
+        24
+      ]
+    },
+    "specs.module_size": {
+      "type": "string",
+      "count": 14,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 14
+      },
+      "unique_count": 2,
+      "unique_values": [
+        "2M",
+        "2M*"
+      ]
+    },
+    "specs.modules": {
+      "type": "integer",
+      "count": 120,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 120
+      },
+      "min": 1,
+      "max": 18,
+      "unique_count": 8,
+      "unique_values": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        12,
+        18
+      ]
+    },
+    "specs.mounting_type": {
+      "type": "string",
+      "count": 27,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 27
+      },
+      "unique_count": 2,
+      "unique_values": [
+        "Flush",
+        "Surface"
+      ]
+    },
+    "specs.mw": {
+      "type": "integer",
+      "count": 1608,
+      "null_count": 9,
+      "null_percentage": 0.56,
+      "type_distribution": {
+        "integer": 1576,
+        "number": 20,
+        "string": 3
+      },
+      "min": 0.5,
+      "max": 18,
+      "unique_count": 13,
+      "unique_values": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        7.5,
+        8,
+        9,
+        12,
+        16,
+        18
+      ]
+    },
+    "specs.orientation": {
+      "type": "string",
+      "count": 301,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 301
+      },
+      "unique_count": 3,
+      "unique_values": [
+        "Horizontal",
+        "Square",
+        "Vertical"
+      ]
+    },
+    "specs.output": {
+      "type": "string",
+      "count": 6,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 6
+      },
+      "unique_count": 2,
+      "unique_values": [
+        "18W",
+        "2.1A, 5V DC"
+      ]
+    },
+    "specs.output_current_a": {
+      "type": "number",
+      "count": 8,
+      "null_count": 2,
+      "null_percentage": 25.0,
+      "type_distribution": {
+        "integer": 2,
+        "number": 4
+      },
+      "min": 2,
+      "max": 2.1,
+      "unique_count": 2,
+      "unique_values": [
+        2,
+        2.1
+      ]
+    },
+    "specs.packing": {
+      "type": "string",
+      "count": 146,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 146
+      },
+      "unique_count": 10,
+      "unique_values": [
+        "12 N/240 N",
+        "1N",
+        "3 N/12 N",
+        "3 N/15 N",
+        "3 N/18 N",
+        "3 N/24 N",
+        "3 N/30 N",
+        "3 N/40 N",
+        "3 N/50 N",
+        "3 N/60 N"
+      ]
+    },
+    "specs.pins": {
+      "type": "integer",
+      "count": 14,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 14
+      },
+      "min": 3,
+      "max": 3,
+      "unique_count": 1,
+      "unique_values": [
+        3
+      ]
+    },
+    "specs.poles": {
+      "type": "integer",
+      "count": 182,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 148,
+        "string": 34
+      },
+      "min": 1,
+      "max": 4,
+      "unique_count": 4,
+      "unique_values": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "specs.port_type": {
+      "type": "string",
+      "count": 4,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 4
+      },
+      "unique_count": 2,
+      "unique_values": [
+        "USB Type-A",
+        "USB-C"
+      ]
+    },
+    "specs.power_watt": {
+      "type": "integer",
+      "count": 6,
+      "null_count": 2,
+      "null_percentage": 33.33,
+      "type_distribution": {
+        "integer": 4
+      },
+      "min": 18,
+      "max": 18,
+      "unique_count": 1,
+      "unique_values": [
+        18
+      ]
+    },
+    "specs.raised": {
+      "type": "boolean",
+      "count": 2,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "boolean": 2
+      },
+      "true_count": 2,
+      "false_count": 0
+    },
+    "specs.rating_watt": {
+      "type": "integer",
+      "count": 6,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 6
+      },
+      "min": 80,
+      "max": 400,
+      "unique_count": 3,
+      "unique_values": [
+        80,
+        120,
+        400
+      ]
+    },
+    "specs.scenes": {
+      "type": "integer",
+      "count": 2,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 2
+      },
+      "min": 4,
+      "max": 4,
+      "unique_count": 1,
+      "unique_values": [
+        4
+      ]
+    },
+    "specs.sensitivity_ma": {
+      "type": "integer",
+      "count": 82,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 82
+      },
+      "min": 30,
+      "max": 3000000,
+      "unique_count": 4,
+      "unique_values": [
+        30,
+        100,
+        300,
+        3000000
+      ]
+    },
+    "specs.smart": {
+      "type": "boolean",
+      "count": 16,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "boolean": 16
+      },
+      "true_count": 16,
+      "false_count": 0
+    },
+    "specs.socket_type": {
+      "type": "string",
+      "count": 14,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 14
+      },
+      "unique_count": 4,
+      "unique_values": [
+        "6A 3 Pin",
+        "6A 3 Pin Shuttered",
+        "6A/16A 3 Pin Combi",
+        "6A/16A 3 Pin Shuttered"
+      ]
+    },
+    "specs.steps": {
+      "type": "integer",
+      "count": 10,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 10
+      },
+      "min": 4,
+      "max": 8,
+      "unique_count": 3,
+      "unique_values": [
+        4,
+        5,
+        8
+      ]
+    },
+    "specs.suitable_for": {
+      "type": "string",
+      "count": 1,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 1
+      },
+      "unique_count": 1,
+      "unique_values": [
+        "Oris 10M Boxes"
+      ]
+    },
+    "specs.type_detail": {
+      "type": "string",
+      "count": 1447,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 1447
+      },
+      "unique_count": 297,
+      "unique_values": [
+        "1 Module Cover Plate",
+        "1 Module Cover Plate with Grid Frame",
+        "1 Module Cover Plate+Grid Frame",
+        "1 Module Glass Cover Plate with Grid Frame",
+        "1 Way Switch",
+        "1 Way Switch With Indicator",
+        "1 Way Switch with Neon",
+        "10A SP Mini MCB 3kA",
+        "10A SP Mini MCB 3kA 1M",
+        "10A SP Type C Mini MCB 3kA",
+        "10AX 1-way",
+        "10AX 2-way",
+        "10AX Mega",
+        "10AX Mega Two way",
+        "10AX One way",
+        "10AX Two way",
+        "12 Module Cover Plate",
+        "12 Module Cover Plate with Grid Frame",
+        "12 Module Cover Plate+Grid Frame",
+        "12 Module Glass Cover Plate with Grid Frame",
+        "16 Module Cover Plate",
+        "16 Module Cover Plate with Grid Frame",
+        "16 Module Cover Plate+Grid Frame",
+        "16 Module Glass Cover Plate with Grid Frame",
+        "16A SP Mini MCB 3kA",
+        "16A SP Mini MCB 3kA 1M",
+        "16A SP Type C Mini MCB 3kA",
+        "16AX 1-way",
+        "16AX 1-way with Indicator",
+        "16AX 2-way",
+        "16AX One way",
+        "16AX One way with Indicator",
+        "16AX Two way",
+        "18 Module Cover Plate",
+        "18 Module Cover Plate with Grid Frame",
+        "18 Module Cover Plate+Grid Frame",
+        "18 Module Glass Cover Plate with Grid Frame",
+        "1Way Switch with Indicator",
+        "2 Channel",
+        "2 Channel Dimmer",
+        "2 Channel Relay Switch",
+        "2 Module Cover Plate",
+        "2 Module Cover Plate with Grid Frame",
+        "2 Module Cover Plate+Grid Frame",
+        "2 Module Glass Cover Plate with Grid Frame",
+        "2 Way Switch",
+        "2-way",
+        "20A 1-way",
+        "20A 1-way with Indicator",
+        "20A 2-way"
+      ],
+      "unique_values_sample": "... and 247 more"
+    },
+    "specs.usb_type": {
+      "type": "string",
+      "count": 10,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 10
+      },
+      "unique_count": 2,
+      "unique_values": [
+        "USB-A",
+        "USB-C"
+      ]
+    },
+    "specs.voltage": {
+      "type": "string",
+      "count": 20,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 20
+      },
+      "unique_count": 2,
+      "unique_values": [
+        "230V~",
+        "240V~"
+      ]
+    },
+    "specs.wattage": {
+      "type": "integer",
+      "count": 16,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "integer": 16
+      },
+      "min": 18,
+      "max": 650,
+      "unique_count": 5,
+      "unique_values": [
+        18,
+        100,
+        150,
+        450,
+        650
+      ]
+    },
+    "specs.with_pillar": {
+      "type": "boolean",
+      "count": 120,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "boolean": 120
+      },
+      "true_count": 12,
+      "false_count": 108
+    },
+    "specs.with_shutter": {
+      "type": "boolean",
+      "count": 12,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "boolean": 12
+      },
+      "true_count": 12,
+      "false_count": 0
+    },
+    "status.is_active": {
+      "type": "boolean",
+      "count": 989,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "boolean": 989
+      },
+      "true_count": 960,
+      "false_count": 29
+    },
+    "status.is_featured": {
+      "type": "boolean",
+      "count": 960,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "boolean": 960
+      },
+      "true_count": 0,
+      "false_count": 960
+    },
+    "subcategory": {
+      "type": "string",
+      "count": 48,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "type_distribution": {
+        "string": 48
+      },
+      "unique_count": 3,
+      "unique_values": [
+        "Bell Push - 1 Module",
+        "Bell Push - 2 Module",
+        "Mini MCBs 3kA"
+      ]
+    }
+  },
+  "nested_objects": {
+    "catalog_source": {
+      "catalog_source.highlights": {
+        "type": "array",
+        "count": 972,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "array": 972
+        },
+        "min_length": 0,
+        "max_length": 0,
+        "avg_length": 0.0,
+        "sample_arrays": [
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      "catalog_source.pricing.discount": {
+        "type": "null",
+        "count": 972,
+        "null_count": 972,
+        "null_percentage": 100.0
+      },
+      "catalog_source.pricing.mrp": {
+        "type": "integer",
+        "count": 972,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 972
+        },
+        "min": 28,
+        "max": 62680,
+        "unique_count": 438
+      },
+      "catalog_source.pricing.selling_price": {
+        "type": "null",
+        "count": 972,
+        "null_count": 972,
+        "null_percentage": 100.0
+      },
+      "catalog_source.pricing.std_pack": {
+        "type": "string",
+        "count": 972,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 972
+        },
+        "unique_count": 16,
+        "unique_values": [
+          "1",
+          "1/1",
+          "1/12",
+          "1/3",
+          "1/4",
+          "1/6",
+          "10",
+          "12",
+          "20",
+          "240",
+          "25",
+          "3",
+          "5",
+          "50",
+          "6",
+          "9"
+        ]
+      },
+      "catalog_source.product_family": {
+        "type": "string",
+        "count": 1994,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 1994
+        },
+        "unique_count": 11,
+        "unique_values": [
+          "Enconnect",
+          "Encurve",
+          "Engem",
+          "Englaze",
+          "Entice",
+          "Fabio",
+          "Fabio Art",
+          "Penta",
+          "Signia",
+          "Signiagrande",
+          "Tripper"
+        ]
+      },
+      "catalog_source.seo.keywords": {
+        "type": "array",
+        "count": 972,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "array": 972
+        },
+        "min_length": 3,
+        "max_length": 3,
+        "avg_length": 3.0,
+        "sample_arrays": [
+          [
+            "3Ph ACCL",
+            "Three Phase ACCL",
+            "Automatic Changeover"
+          ],
+          [
+            "3Ph ACCL",
+            "Three Phase ACCL",
+            "Automatic Changeover"
+          ],
+          [
+            "3Ph ACCL",
+            "Three Phase ACCL",
+            "Automatic Changeover"
+          ],
+          [
+            "3Ph ACCL",
+            "Three Phase ACCL",
+            "Automatic Changeover"
+          ],
+          [
+            "3Ph ACCL",
+            "Three Phase ACCL",
+            "Automatic Changeover"
+          ]
+        ]
+      },
+      "catalog_source.seo.meta_description": {
+        "type": "string",
+        "count": 972,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 972
+        },
+        "unique_count": 891,
+        "unique_values": [
+          "Buy 1 Module Cover Plate - Aqua Green (Color Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 1 Module Cover Plate - Ruby Red (Color Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 1 Module Cover Plate - White (Standard Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 10 Module Cover Plate - Aqua Green (Color Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 10 Module Cover Plate - Ruby Red (Color Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 10 Module Cover Plate - White (Standard Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 100A Double Pole Isolator (BE210000) from New Delhi Electricals. Premium quality isolator for safe electrical isolation.",
+          "Buy 100A Four Pole Isolator (BE410000) from New Delhi Electricals. Premium quality isolator for safe electrical isolation.",
+          "Buy 100A Three Pole Isolator (BE310000) from New Delhi Electricals. Premium quality isolator for safe electrical isolation.",
+          "Buy 100W, Dura Fan Regulator, 2 Module from the Penta range at New Delhi Electricals.",
+          "Buy 100W, Dura Fan Regulator,2 Module ISI from the Penta range at New Delhi Electricals.",
+          "Buy 100W, High speed fan regulator, 2 Module from the Penta range at New Delhi Electricals.",
+          "Buy 100W, Tiny Fan Regulator, 1 Module from the Penta range at New Delhi Electricals.",
+          "Buy 10A 100mA Double Pole RCBO (AUF3C201010) from New Delhi Electricals. Residual current circuit breaker with over current protection.",
+          "Buy 10A 300mA Double Pole RCBO (AUF3C201030) from New Delhi Electricals. Residual current circuit breaker with over current protection.",
+          "Buy 10A 30mA Double Pole RCBO (AUF3C201003) from New Delhi Electricals. Residual current circuit breaker with over current protection.",
+          "Buy 10A C Curve Double Pole Miniature Circuit Breaker (BA20100C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+          "Buy 10A C Curve Four Pole Miniature Circuit Breaker (BA40100C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+          "Buy 10A C Curve Single Pole Miniature Circuit Breaker (BA10100C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+          "Buy 10A C Curve Three Pole Miniature Circuit Breaker (BA30100C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+          "Buy 10A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+          "Buy 10A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+          "Buy 10A, Bell Push Switch With Indicator, 1M from the Penta range at New Delhi Electricals.",
+          "Buy 10A, Bell Push Switch With Indicator, 2M from the Penta range at New Delhi Electricals.",
+          "Buy 10AX, 1 Way Switch, 100W SBL Load, 1M from the Penta range at New Delhi Electricals.",
+          "Buy 10AX, 2 Way Switch, 100W SBL Load, 1M from the Penta range at New Delhi Electricals.",
+          "Buy 12 Module Cover Plate - Aqua Green (Color Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 12 Module Cover Plate - Aqua Green, Square (Color Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 12 Module Cover Plate - Ruby Red (Color Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 12 Module Cover Plate - Ruby Red, Square (Color Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 12 Module Cover Plate - White (Standard Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 12 Module Cover Plate - White, Square (Standard Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 125A/125A Three Phase Automatic Changeover with Current Limiter (AUCL03125125) from New Delhi Electricals. Reliable three phase EB/DG changeover with current limiting.",
+          "Buy 150W, LED Dimmer, 2 Module from the Penta range at New Delhi Electricals.",
+          "Buy 16 Module Cover Plate - Aqua Green (Color Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 16 Module Cover Plate - Ruby Red (Color Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 16 Module Cover Plate - White (Standard Finish) from the Penta range at New Delhi Electricals.",
+          "Buy 16A 100mA Double Pole RCBO (AUF3C201610) from New Delhi Electricals. Residual current circuit breaker with over current protection.",
+          "Buy 16A 300mA Double Pole RCBO (AUF3C201630) from New Delhi Electricals. Residual current circuit breaker with over current protection.",
+          "Buy 16A 30mA Double Pole RCBO (AUF3C201603) from New Delhi Electricals. Residual current circuit breaker with over current protection.",
+          "Buy 16A C Curve Double Pole Miniature Circuit Breaker (BA20160C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+          "Buy 16A C Curve Four Pole Miniature Circuit Breaker (BA40160C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+          "Buy 16A C Curve Single Pole Miniature Circuit Breaker (BA10160C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+          "Buy 16A C Curve Three Pole Miniature Circuit Breaker (BA30160C) from New Delhi Electricals. Premium quality MCB for residential and commercial electrical protection.",
+          "Buy 16A DP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+          "Buy 16A Resettable Fuse Unit, 240V~, 1 Module from the Penta range at New Delhi Electricals.",
+          "Buy 16A SP 'C' Mini MCB from the Penta range at New Delhi Electricals.",
+          "Buy 16A, 3pin Socket, 2 Module ISI from the Penta range at New Delhi Electricals.",
+          "Buy 16AX, 1 Way Switch With Indicator, 200W SBL Load, 1M from the Penta range at New Delhi Electricals.",
+          "Buy 16AX, 1 Way Switch with Neon, 1 Module 200W SBL Load from the Penta range at New Delhi Electricals."
+        ],
+        "unique_values_sample": "... and 841 more"
+      },
+      "catalog_source.seo.slug": {
+        "type": "string",
+        "count": 972,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 972
+        },
+        "unique_count": 961,
+        "unique_values": [
+          "1-module-cover-plate-aqua-green-color-finish",
+          "1-module-cover-plate-ruby-red-color-finish",
+          "1-module-cover-plate-white-standard-finish",
+          "10-module-cover-plate-aqua-green-color-finish",
+          "10-module-cover-plate-ruby-red-color-finish",
+          "10-module-cover-plate-white-standard-finish",
+          "100w-dura-fan-regulator-2-module",
+          "100w-dura-fan-regulator-2-module-b",
+          "100w-dura-fan-regulator-2-module-isi",
+          "100w-dura-fan-regulator-2-module-isi-b",
+          "100w-high-speed-fan-regulator-2-module",
+          "100w-high-speed-fan-regulator-2-module-b",
+          "100w-tiny-fan-regulator-1-module",
+          "100w-tiny-fan-regulator-1-module-b",
+          "10a-bell-push-switch-with-indicator-1m",
+          "10a-bell-push-switch-with-indicator-1m-b",
+          "10a-bell-push-switch-with-indicator-2m",
+          "10a-bell-push-switch-with-indicator-2m-b",
+          "10a-dp-c-mini-mcb",
+          "10a-dp-c-mini-mcb-gb",
+          "10a-sp-c-mini-mcb",
+          "10a-sp-c-mini-mcb-gb",
+          "10ax-1-way-switch-100w-sbl-load-1m",
+          "10ax-1-way-switch-100w-sbl-load-1m-b",
+          "10ax-2-way-switch-100w-sbl-load-1m",
+          "10ax-2-way-switch-100w-sbl-load-1m-b",
+          "12-module-cover-plate-aqua-green-color-finish",
+          "12-module-cover-plate-aqua-green-square-color-finish",
+          "12-module-cover-plate-ruby-red-color-finish",
+          "12-module-cover-plate-ruby-red-square-color-finish",
+          "12-module-cover-plate-white-square-standard-finish",
+          "12-module-cover-plate-white-standard-finish",
+          "150w-led-dimmer-2-module",
+          "150w-led-dimmer-2-module-b",
+          "16-module-cover-plate-aqua-green-color-finish",
+          "16-module-cover-plate-ruby-red-color-finish",
+          "16-module-cover-plate-white-standard-finish",
+          "16a-3pin-socket-2-module-isi",
+          "16a-3pin-socket-2-module-isi-b",
+          "16a-dp-c-mini-mcb",
+          "16a-dp-c-mini-mcb-gb",
+          "16a-resettable-fuse-unit-240v-1-module",
+          "16a-resettable-fuse-unit-240v-1-module-b",
+          "16a-sp-c-mini-mcb",
+          "16a-sp-c-mini-mcb-gb",
+          "16ax-1-way-switch-1-module-200w-sbl-load",
+          "16ax-1-way-switch-1-module-200w-sbl-load-b",
+          "16ax-1-way-switch-1m-200w-sbl-load",
+          "16ax-1-way-switch-1m-200w-sbl-load-b",
+          "16ax-1-way-switch-200w-sbl-load-1m"
+        ],
+        "unique_values_sample": "... and 911 more"
+      },
+      "catalog_source.source_file": {
+        "type": "string",
+        "count": 972,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 972
+        },
+        "unique_count": 12,
+        "unique_values": [
+          "3ph.json",
+          "ACCL.json",
+          "Fabio1.json",
+          "MCB C curve.json",
+          "RCBO.json",
+          "RCCB.json",
+          "Signia.json",
+          "Signia2.json",
+          "changeover.json",
+          "isolator.json",
+          "penta.json",
+          "penta2.json"
+        ]
+      },
+      "catalog_source.subcategory": {
+        "type": "string",
+        "count": 972,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 972
+        },
+        "unique_count": 45,
+        "unique_values": [
+          "Automatic Changeover with Current Limiter (ACCL)",
+          "Bell Push - 1 Module",
+          "Bell Push - 2 Module",
+          "Blank Off Unit - 1 Module",
+          "Buzzer - 2 Module",
+          "Cable Outlet - 1 Module",
+          "Cover Plates with grid frames",
+          "Cover Plates without grid frames",
+          "DND Switches",
+          "DND-MMR Units",
+          "DP Switches - 2 Module",
+          "Dimmers - 1 Module",
+          "Dimmers - 2 Module",
+          "Door Bells - 2 Module",
+          "Electronic Key Tag Switches",
+          "Fan Regulators - 1 Module",
+          "Fan Regulators - 2 Module",
+          "Grid Frames",
+          "Isolators",
+          "Key Tag Accessories",
+          "LAN Sockets - 1 Module",
+          "LED Foot Light - 2 Module",
+          "LED Foot Lights",
+          "LED Phase Indicator - 1 Module",
+          "MMR Switches",
+          "Mechanical Key Tag Switches",
+          "Mini MCBs 3kA",
+          "Miniature Circuit Breakers (MCBs)",
+          "Modular Changeover Switches",
+          "Motor Starters - 2 Module",
+          "PC Plates without grid frames",
+          "Plexy Glass Plates without grid frames",
+          "Power Sockets - 2 Module",
+          "Residual Current Circuit Breaker with Over Current Protection (RCBOs)",
+          "Residual Current Circuit Breakers (RCCBs/ELCBs)",
+          "SWITCHES - 2 MODULE (Mega Switches)",
+          "Shaver Sockets",
+          "Switches - 1 Module",
+          "Switches - 2 Module",
+          "TV Sockets - 1 Module",
+          "Telephone Sockets - 1 Module",
+          "Three Phase Automatic Changeover with Current Limiter (3Ph ACCL)",
+          "USB Chargers - 1 Module",
+          "Wi-fi Accessories",
+          "Wi-fi Fan Regulators"
+        ]
+      },
+      "catalog_source.variant": {
+        "type": "array",
+        "count": 972,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "array": 972
+        },
+        "min_length": 0,
+        "max_length": 2,
+        "avg_length": 0.44,
+        "sample_arrays": [
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "specs": {
+      "specs.Grid frame": {
+        "type": "boolean",
+        "count": 402,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 402
+        },
+        "true_count": 245,
+        "false_count": 157
+      },
+      "specs.ampere": {
+        "type": "integer",
+        "count": 736,
+        "null_count": 109,
+        "null_percentage": 14.81,
+        "type_distribution": {
+          "integer": 615,
+          "string": 8,
+          "number": 4
+        },
+        "min": 2,
+        "max": 125,
+        "unique_count": 15,
+        "unique_values": [
+          2,
+          2.1,
+          6,
+          10,
+          16,
+          20,
+          25,
+          30,
+          32,
+          40,
+          50,
+          63,
+          80,
+          100,
+          125
+        ]
+      },
+      "specs.bezel": {
+        "type": "string",
+        "count": 22,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 22
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "Chrome",
+          "Rose"
+        ]
+      },
+      "specs.category": {
+        "type": "string",
+        "count": 4,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 4
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "Cat5e",
+          "Cat6"
+        ]
+      },
+      "specs.certification": {
+        "type": "string",
+        "count": 2,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 2
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "CRS Certified"
+        ]
+      },
+      "specs.channels": {
+        "type": "integer",
+        "count": 10,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 10
+        },
+        "min": 2,
+        "max": 4,
+        "unique_count": 2,
+        "unique_values": [
+          2,
+          4
+        ]
+      },
+      "specs.color": {
+        "type": "string",
+        "count": 1704,
+        "null_count": 1,
+        "null_percentage": 0.06,
+        "type_distribution": {
+          "string": 1703
+        },
+        "unique_count": 74,
+        "unique_values": [
+          "Antique Bronze",
+          "Aqua Green",
+          "Beige Wood",
+          "Black",
+          "Black - Silver Chrome",
+          "Black Beauty",
+          "Black Ebony",
+          "Black Glass",
+          "Blue",
+          "Bottle Green",
+          "Bronze Blaze",
+          "Bronze Mirror",
+          "Brown Mahogany",
+          "Brush Silver",
+          "Caramel Brown",
+          "Champagne Gold",
+          "Charcoal Black",
+          "Charcoal Grey",
+          "Chocolate Hardwood",
+          "Chrome Bezel",
+          "Cinnamon Wood",
+          "Classic Grey",
+          "Copper Mirror",
+          "Dark Chocolate Wood",
+          "Dark Walnut",
+          "Desert Gold",
+          "Dusky Wood",
+          "Eco Grey",
+          "Firestorm Orange",
+          "Frosted Husky",
+          "Frosted State",
+          "Glacier White",
+          "Gold",
+          "Gold Blush",
+          "Gold Rush",
+          "Gold Shimmer",
+          "Golden Ash",
+          "Golden Pecan",
+          "Graphite",
+          "Graphite Black",
+          "Grey",
+          "Ice Silver",
+          "Icy White",
+          "Igloo White",
+          "Jet Black",
+          "Magnesium Grey",
+          "Marble",
+          "Metallic Gold",
+          "Metallic Grey",
+          "Mocha Wood"
+        ],
+        "unique_values_sample": "... and 24 more"
+      },
+      "specs.compatibility": {
+        "type": "string",
+        "count": 1,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 1
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "Entice Modular IR Switches"
+        ]
+      },
+      "specs.control_type": {
+        "type": "string",
+        "count": 15,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 15
+        },
+        "unique_count": 5,
+        "unique_values": [
+          "IR Remote Control",
+          "Touch Bell Push",
+          "Touch IR Fan Regulator",
+          "Touch IR Switch",
+          "Touch IR Universal Light Dimmer"
+        ]
+      },
+      "specs.cover_included": {
+        "type": "boolean",
+        "count": 60,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 60
+        },
+        "true_count": 0,
+        "false_count": 60
+      },
+      "specs.curve": {
+        "type": "string",
+        "count": 141,
+        "null_count": 51,
+        "null_percentage": 36.17,
+        "type_distribution": {
+          "string": 90
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "C"
+        ]
+      },
+      "specs.cutout_dimensions_mm": {
+        "type": "string",
+        "count": 18,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 18
+        },
+        "unique_count": 18,
+        "unique_values": [
+          "109 x 125",
+          "110 x 60",
+          "113 x 120",
+          "119 x 55",
+          "156 x 193",
+          "156 x 60",
+          "168 x 126",
+          "173 x 120",
+          "173 x 185",
+          "178 x 61",
+          "191 x 136",
+          "203 x 126",
+          "206 x 68",
+          "222 x 68",
+          "52 x 55",
+          "71 x 60",
+          "80 x 66",
+          "86 x 60"
+        ]
+      },
+      "specs.design": {
+        "type": "string",
+        "count": 40,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 40
+        },
+        "unique_count": 4,
+        "unique_values": [
+          "Arabian Night",
+          "Chameli",
+          "Kalamkari",
+          "Kassa Noor"
+        ]
+      },
+      "specs.dg_current_limit_ampere": {
+        "type": "integer",
+        "count": 20,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 18,
+          "number": 2
+        },
+        "min": 1.5,
+        "max": 125,
+        "unique_count": 18,
+        "unique_values": [
+          1.5,
+          2.5,
+          3,
+          4,
+          5,
+          6,
+          8,
+          10,
+          12,
+          15,
+          20,
+          30,
+          32,
+          40,
+          50,
+          63,
+          80,
+          125
+        ]
+      },
+      "specs.dimensions": {
+        "type": "string",
+        "count": 161,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 161
+        },
+        "unique_count": 21,
+        "unique_values": [
+          "125 x 90 x 14 mm",
+          "126 x 90 x 14 mm",
+          "157 x 157 x 14 mm",
+          "157 x 90 x 14 mm",
+          "158 x 157 x 14 mm",
+          "158 x 90 x 14 mm",
+          "228 x 157 x 14 mm",
+          "228 x 226 x 14 mm",
+          "228 x 226 x 20 mm",
+          "228 x 90 x 14 mm",
+          "229 x 157 x 14 mm",
+          "229 x 226 x 14 mm",
+          "229 x 90 x 14 mm",
+          "248 x 156 x 18 mm",
+          "249 x 156 x 18 mm",
+          "249 x 157 x 19 mm",
+          "262 x 90 x 14 mm",
+          "262 x 90 x 18 mm",
+          "263 x 90 x 14 mm",
+          "97 x 90 x 14 mm",
+          "98 x 90 x 14 mm"
+        ]
+      },
+      "specs.dimensions_mm": {
+        "type": "string",
+        "count": 27,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 27
+        },
+        "unique_count": 27,
+        "unique_values": [
+          "103 x 76 x 53",
+          "126 x 90 x 50",
+          "131 x 136 x 58",
+          "133 x 75 x 53",
+          "136 x 132 x 58",
+          "136 x 76 x 53",
+          "158 x 157 x 50",
+          "158 x 90 x 50",
+          "204 x 135 x 58",
+          "204 x 202 x 58",
+          "204 x 75 x 53",
+          "210 x 132 x 61",
+          "210 x 76 x 53",
+          "212 x 210 x 61",
+          "227 x 146 x 61",
+          "227 x 82 x 53",
+          "229 x 157 x 50",
+          "229 x 226 x 50",
+          "229 x 90 x 50",
+          "230 x 78 x 53",
+          "231 x 142 x 58",
+          "249 x 157 x 50",
+          "263 x 90 x 50",
+          "72 x 75 x 46",
+          "77 x 76 x 53",
+          "98 x 75 x 46",
+          "98 x 90 x 50"
+        ]
+      },
+      "specs.eb_current_ampere": {
+        "type": "integer",
+        "count": 20,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 20
+        },
+        "min": 30,
+        "max": 125,
+        "unique_count": 7,
+        "unique_values": [
+          30,
+          32,
+          40,
+          50,
+          63,
+          80,
+          125
+        ]
+      },
+      "specs.finish": {
+        "type": "string",
+        "count": 120,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 120
+        },
+        "unique_count": 4,
+        "unique_values": [
+          "Glass",
+          "Metal",
+          "Plastic",
+          "Wood"
+        ]
+      },
+      "specs.frequency": {
+        "type": "string",
+        "count": 8,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 8
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "50Hz"
+        ]
+      },
+      "specs.grid_frame": {
+        "type": "boolean",
+        "count": 10,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 10
+        },
+        "true_count": 10,
+        "false_count": 0
+      },
+      "specs.grid_frame_included": {
+        "type": "boolean",
+        "count": 50,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 50
+        },
+        "true_count": 0,
+        "false_count": 50
+      },
+      "specs.has_indicator": {
+        "type": "boolean",
+        "count": 462,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 462
+        },
+        "true_count": 195,
+        "false_count": 267
+      },
+      "specs.heavy_duty": {
+        "type": "boolean",
+        "count": 4,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 4
+        },
+        "true_count": 4,
+        "false_count": 0
+      },
+      "specs.indicator_color": {
+        "type": "string",
+        "count": 2,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 2
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "Red"
+        ]
+      },
+      "specs.installation": {
+        "type": "string",
+        "count": 18,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 18
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "Furniture"
+        ]
+      },
+      "specs.isi_marked": {
+        "type": "boolean",
+        "count": 16,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 16
+        },
+        "true_count": 16,
+        "false_count": 0
+      },
+      "specs.light_type": {
+        "type": "string",
+        "count": 8,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 8
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "Cool Day Light",
+          "Warm White Light"
+        ]
+      },
+      "specs.load": {
+        "type": "string",
+        "count": 34,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 34
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "100W SBL",
+          "200W SBL"
+        ]
+      },
+      "specs.material": {
+        "type": "string",
+        "count": 330,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 330
+        },
+        "unique_count": 12,
+        "unique_values": [
+          "Cover Plate",
+          "GI Metal",
+          "Grid Frame",
+          "Metal",
+          "PC",
+          "PC (Polycarbonate)",
+          "Plastic",
+          "Plexy Glass",
+          "Thin Slim",
+          "Thin Slim Gina",
+          "Wood",
+          "Xena"
+        ]
+      },
+      "specs.material_compatibility": {
+        "type": "array",
+        "count": 18,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "array": 18
+        },
+        "min_length": 3,
+        "max_length": 3,
+        "avg_length": 3.0,
+        "sample_arrays": [
+          [
+            "Vivid",
+            "Vibrant",
+            "Wood"
+          ],
+          [
+            "Vivid",
+            "Vibrant",
+            "Wood"
+          ],
+          [
+            "Vivid",
+            "Vibrant",
+            "Wood"
+          ],
+          [
+            "Vivid",
+            "Vibrant",
+            "Wood"
+          ],
+          [
+            "Vivid",
+            "Vibrant",
+            "Wood"
+          ]
+        ]
+      },
+      "specs.min_ampere": {
+        "type": "integer",
+        "count": 8,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 8
+        },
+        "min": 6,
+        "max": 6,
+        "unique_count": 1,
+        "unique_values": [
+          6
+        ]
+      },
+      "specs.module": {
+        "type": "integer",
+        "count": 212,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 212
+        },
+        "min": 1,
+        "max": 24,
+        "unique_count": 12,
+        "unique_values": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          10,
+          12,
+          16,
+          18,
+          20,
+          24
+        ]
+      },
+      "specs.module_size": {
+        "type": "string",
+        "count": 14,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 14
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "2M",
+          "2M*"
+        ]
+      },
+      "specs.modules": {
+        "type": "integer",
+        "count": 120,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 120
+        },
+        "min": 1,
+        "max": 18,
+        "unique_count": 8,
+        "unique_values": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12,
+          18
+        ]
+      },
+      "specs.mounting_type": {
+        "type": "string",
+        "count": 27,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 27
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "Flush",
+          "Surface"
+        ]
+      },
+      "specs.mw": {
+        "type": "integer",
+        "count": 1608,
+        "null_count": 9,
+        "null_percentage": 0.56,
+        "type_distribution": {
+          "integer": 1576,
+          "number": 20,
+          "string": 3
+        },
+        "min": 0.5,
+        "max": 18,
+        "unique_count": 13,
+        "unique_values": [
+          0.5,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          7.5,
+          8,
+          9,
+          12,
+          16,
+          18
+        ]
+      },
+      "specs.orientation": {
+        "type": "string",
+        "count": 301,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 301
+        },
+        "unique_count": 3,
+        "unique_values": [
+          "Horizontal",
+          "Square",
+          "Vertical"
+        ]
+      },
+      "specs.output": {
+        "type": "string",
+        "count": 6,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 6
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "18W",
+          "2.1A, 5V DC"
+        ]
+      },
+      "specs.output_current_a": {
+        "type": "number",
+        "count": 8,
+        "null_count": 2,
+        "null_percentage": 25.0,
+        "type_distribution": {
+          "integer": 2,
+          "number": 4
+        },
+        "min": 2,
+        "max": 2.1,
+        "unique_count": 2,
+        "unique_values": [
+          2,
+          2.1
+        ]
+      },
+      "specs.packing": {
+        "type": "string",
+        "count": 146,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 146
+        },
+        "unique_count": 10,
+        "unique_values": [
+          "12 N/240 N",
+          "1N",
+          "3 N/12 N",
+          "3 N/15 N",
+          "3 N/18 N",
+          "3 N/24 N",
+          "3 N/30 N",
+          "3 N/40 N",
+          "3 N/50 N",
+          "3 N/60 N"
+        ]
+      },
+      "specs.pins": {
+        "type": "integer",
+        "count": 14,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 14
+        },
+        "min": 3,
+        "max": 3,
+        "unique_count": 1,
+        "unique_values": [
+          3
+        ]
+      },
+      "specs.poles": {
+        "type": "integer",
+        "count": 182,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 148,
+          "string": 34
+        },
+        "min": 1,
+        "max": 4,
+        "unique_count": 4,
+        "unique_values": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "specs.port_type": {
+        "type": "string",
+        "count": 4,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 4
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "USB Type-A",
+          "USB-C"
+        ]
+      },
+      "specs.power_watt": {
+        "type": "integer",
+        "count": 6,
+        "null_count": 2,
+        "null_percentage": 33.33,
+        "type_distribution": {
+          "integer": 4
+        },
+        "min": 18,
+        "max": 18,
+        "unique_count": 1,
+        "unique_values": [
+          18
+        ]
+      },
+      "specs.raised": {
+        "type": "boolean",
+        "count": 2,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 2
+        },
+        "true_count": 2,
+        "false_count": 0
+      },
+      "specs.rating_watt": {
+        "type": "integer",
+        "count": 6,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 6
+        },
+        "min": 80,
+        "max": 400,
+        "unique_count": 3,
+        "unique_values": [
+          80,
+          120,
+          400
+        ]
+      },
+      "specs.scenes": {
+        "type": "integer",
+        "count": 2,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 2
+        },
+        "min": 4,
+        "max": 4,
+        "unique_count": 1,
+        "unique_values": [
+          4
+        ]
+      },
+      "specs.sensitivity_ma": {
+        "type": "integer",
+        "count": 82,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 82
+        },
+        "min": 30,
+        "max": 3000000,
+        "unique_count": 4,
+        "unique_values": [
+          30,
+          100,
+          300,
+          3000000
+        ]
+      },
+      "specs.smart": {
+        "type": "boolean",
+        "count": 16,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 16
+        },
+        "true_count": 16,
+        "false_count": 0
+      },
+      "specs.socket_type": {
+        "type": "string",
+        "count": 14,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 14
+        },
+        "unique_count": 4,
+        "unique_values": [
+          "6A 3 Pin",
+          "6A 3 Pin Shuttered",
+          "6A/16A 3 Pin Combi",
+          "6A/16A 3 Pin Shuttered"
+        ]
+      },
+      "specs.steps": {
+        "type": "integer",
+        "count": 10,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 10
+        },
+        "min": 4,
+        "max": 8,
+        "unique_count": 3,
+        "unique_values": [
+          4,
+          5,
+          8
+        ]
+      },
+      "specs.suitable_for": {
+        "type": "string",
+        "count": 1,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 1
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "Oris 10M Boxes"
+        ]
+      },
+      "specs.type_detail": {
+        "type": "string",
+        "count": 1447,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 1447
+        },
+        "unique_count": 297,
+        "unique_values": [
+          "1 Module Cover Plate",
+          "1 Module Cover Plate with Grid Frame",
+          "1 Module Cover Plate+Grid Frame",
+          "1 Module Glass Cover Plate with Grid Frame",
+          "1 Way Switch",
+          "1 Way Switch With Indicator",
+          "1 Way Switch with Neon",
+          "10A SP Mini MCB 3kA",
+          "10A SP Mini MCB 3kA 1M",
+          "10A SP Type C Mini MCB 3kA",
+          "10AX 1-way",
+          "10AX 2-way",
+          "10AX Mega",
+          "10AX Mega Two way",
+          "10AX One way",
+          "10AX Two way",
+          "12 Module Cover Plate",
+          "12 Module Cover Plate with Grid Frame",
+          "12 Module Cover Plate+Grid Frame",
+          "12 Module Glass Cover Plate with Grid Frame",
+          "16 Module Cover Plate",
+          "16 Module Cover Plate with Grid Frame",
+          "16 Module Cover Plate+Grid Frame",
+          "16 Module Glass Cover Plate with Grid Frame",
+          "16A SP Mini MCB 3kA",
+          "16A SP Mini MCB 3kA 1M",
+          "16A SP Type C Mini MCB 3kA",
+          "16AX 1-way",
+          "16AX 1-way with Indicator",
+          "16AX 2-way",
+          "16AX One way",
+          "16AX One way with Indicator",
+          "16AX Two way",
+          "18 Module Cover Plate",
+          "18 Module Cover Plate with Grid Frame",
+          "18 Module Cover Plate+Grid Frame",
+          "18 Module Glass Cover Plate with Grid Frame",
+          "1Way Switch with Indicator",
+          "2 Channel",
+          "2 Channel Dimmer",
+          "2 Channel Relay Switch",
+          "2 Module Cover Plate",
+          "2 Module Cover Plate with Grid Frame",
+          "2 Module Cover Plate+Grid Frame",
+          "2 Module Glass Cover Plate with Grid Frame",
+          "2 Way Switch",
+          "2-way",
+          "20A 1-way",
+          "20A 1-way with Indicator",
+          "20A 2-way"
+        ],
+        "unique_values_sample": "... and 247 more"
+      },
+      "specs.usb_type": {
+        "type": "string",
+        "count": 10,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 10
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "USB-A",
+          "USB-C"
+        ]
+      },
+      "specs.voltage": {
+        "type": "string",
+        "count": 20,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 20
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "230V~",
+          "240V~"
+        ]
+      },
+      "specs.wattage": {
+        "type": "integer",
+        "count": 16,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 16
+        },
+        "min": 18,
+        "max": 650,
+        "unique_count": 5,
+        "unique_values": [
+          18,
+          100,
+          150,
+          450,
+          650
+        ]
+      },
+      "specs.with_pillar": {
+        "type": "boolean",
+        "count": 120,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 120
+        },
+        "true_count": 12,
+        "false_count": 108
+      },
+      "specs.with_shutter": {
+        "type": "boolean",
+        "count": 12,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 12
+        },
+        "true_count": 12,
+        "false_count": 0
+      }
+    },
+    "status": {
+      "status.is_active": {
+        "type": "boolean",
+        "count": 989,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 989
+        },
+        "true_count": 960,
+        "false_count": 29
+      },
+      "status.is_featured": {
+        "type": "boolean",
+        "count": 960,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 960
+        },
+        "true_count": 0,
+        "false_count": 960
+      }
+    }
+  },
+  "specs_analysis": {
+    "total_products_with_specs": 1994,
+    "total_products_without_specs": 0,
+    "spec_fields": {
+      "Grid frame": {
+        "type": "boolean",
+        "count": 402,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 402
+        },
+        "true_count": 245,
+        "false_count": 157
+      },
+      "ampere": {
+        "type": "integer",
+        "count": 736,
+        "null_count": 109,
+        "null_percentage": 14.81,
+        "type_distribution": {
+          "integer": 615,
+          "string": 8,
+          "number": 4
+        },
+        "min": 2,
+        "max": 125,
+        "unique_count": 15,
+        "unique_values": [
+          2,
+          2.1,
+          6,
+          10,
+          16,
+          20,
+          25,
+          30,
+          32,
+          40,
+          50,
+          63,
+          80,
+          100,
+          125
+        ]
+      },
+      "bezel": {
+        "type": "string",
+        "count": 22,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 22
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "Chrome",
+          "Rose"
+        ]
+      },
+      "category": {
+        "type": "string",
+        "count": 4,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 4
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "Cat5e",
+          "Cat6"
+        ]
+      },
+      "certification": {
+        "type": "string",
+        "count": 2,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 2
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "CRS Certified"
+        ]
+      },
+      "channels": {
+        "type": "integer",
+        "count": 10,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 10
+        },
+        "min": 2,
+        "max": 4,
+        "unique_count": 2,
+        "unique_values": [
+          2,
+          4
+        ]
+      },
+      "color": {
+        "type": "string",
+        "count": 1704,
+        "null_count": 1,
+        "null_percentage": 0.06,
+        "type_distribution": {
+          "string": 1703
+        },
+        "unique_count": 74,
+        "unique_values": [
+          "Antique Bronze",
+          "Aqua Green",
+          "Beige Wood",
+          "Black",
+          "Black - Silver Chrome",
+          "Black Beauty",
+          "Black Ebony",
+          "Black Glass",
+          "Blue",
+          "Bottle Green",
+          "Bronze Blaze",
+          "Bronze Mirror",
+          "Brown Mahogany",
+          "Brush Silver",
+          "Caramel Brown",
+          "Champagne Gold",
+          "Charcoal Black",
+          "Charcoal Grey",
+          "Chocolate Hardwood",
+          "Chrome Bezel",
+          "Cinnamon Wood",
+          "Classic Grey",
+          "Copper Mirror",
+          "Dark Chocolate Wood",
+          "Dark Walnut",
+          "Desert Gold",
+          "Dusky Wood",
+          "Eco Grey",
+          "Firestorm Orange",
+          "Frosted Husky",
+          "Frosted State",
+          "Glacier White",
+          "Gold",
+          "Gold Blush",
+          "Gold Rush",
+          "Gold Shimmer",
+          "Golden Ash",
+          "Golden Pecan",
+          "Graphite",
+          "Graphite Black",
+          "Grey",
+          "Ice Silver",
+          "Icy White",
+          "Igloo White",
+          "Jet Black",
+          "Magnesium Grey",
+          "Marble",
+          "Metallic Gold",
+          "Metallic Grey",
+          "Mocha Wood",
+          "Moonlight Silver",
+          "Mountain Grey",
+          "Mystic Marble Finish",
+          "Nebula Black",
+          "Oak Wood",
+          "Onyx Black",
+          "Raven Black",
+          "Red",
+          "Rose Gold",
+          "Ruby Red",
+          "Rustic Gold",
+          "Sandi Wood",
+          "Satin Chrome",
+          "Silky Silver",
+          "Silver Sheen",
+          "Snow White",
+          "Sparkle Black",
+          "Sterling Silver",
+          "Stone Grey",
+          "Velvet Black",
+          "Vintage Gold",
+          "White",
+          "White - Silver Chrome",
+          "White Marble Finish"
+        ]
+      },
+      "compatibility": {
+        "type": "string",
+        "count": 1,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 1
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "Entice Modular IR Switches"
+        ]
+      },
+      "control_type": {
+        "type": "string",
+        "count": 15,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 15
+        },
+        "unique_count": 5,
+        "unique_values": [
+          "IR Remote Control",
+          "Touch Bell Push",
+          "Touch IR Fan Regulator",
+          "Touch IR Switch",
+          "Touch IR Universal Light Dimmer"
+        ]
+      },
+      "cover_included": {
+        "type": "boolean",
+        "count": 60,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 60
+        },
+        "true_count": 0,
+        "false_count": 60
+      },
+      "curve": {
+        "type": "string",
+        "count": 141,
+        "null_count": 51,
+        "null_percentage": 36.17,
+        "type_distribution": {
+          "string": 90
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "C"
+        ]
+      },
+      "cutout_dimensions_mm": {
+        "type": "string",
+        "count": 18,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 18
+        },
+        "unique_count": 18,
+        "unique_values": [
+          "109 x 125",
+          "110 x 60",
+          "113 x 120",
+          "119 x 55",
+          "156 x 193",
+          "156 x 60",
+          "168 x 126",
+          "173 x 120",
+          "173 x 185",
+          "178 x 61",
+          "191 x 136",
+          "203 x 126",
+          "206 x 68",
+          "222 x 68",
+          "52 x 55",
+          "71 x 60",
+          "80 x 66",
+          "86 x 60"
+        ]
+      },
+      "design": {
+        "type": "string",
+        "count": 40,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 40
+        },
+        "unique_count": 4,
+        "unique_values": [
+          "Arabian Night",
+          "Chameli",
+          "Kalamkari",
+          "Kassa Noor"
+        ]
+      },
+      "dg_current_limit_ampere": {
+        "type": "integer",
+        "count": 20,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 18,
+          "number": 2
+        },
+        "min": 1.5,
+        "max": 125,
+        "unique_count": 18,
+        "unique_values": [
+          1.5,
+          2.5,
+          3,
+          4,
+          5,
+          6,
+          8,
+          10,
+          12,
+          15,
+          20,
+          30,
+          32,
+          40,
+          50,
+          63,
+          80,
+          125
+        ]
+      },
+      "dimensions": {
+        "type": "string",
+        "count": 161,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 161
+        },
+        "unique_count": 21,
+        "unique_values": [
+          "125 x 90 x 14 mm",
+          "126 x 90 x 14 mm",
+          "157 x 157 x 14 mm",
+          "157 x 90 x 14 mm",
+          "158 x 157 x 14 mm",
+          "158 x 90 x 14 mm",
+          "228 x 157 x 14 mm",
+          "228 x 226 x 14 mm",
+          "228 x 226 x 20 mm",
+          "228 x 90 x 14 mm",
+          "229 x 157 x 14 mm",
+          "229 x 226 x 14 mm",
+          "229 x 90 x 14 mm",
+          "248 x 156 x 18 mm",
+          "249 x 156 x 18 mm",
+          "249 x 157 x 19 mm",
+          "262 x 90 x 14 mm",
+          "262 x 90 x 18 mm",
+          "263 x 90 x 14 mm",
+          "97 x 90 x 14 mm",
+          "98 x 90 x 14 mm"
+        ]
+      },
+      "dimensions_mm": {
+        "type": "string",
+        "count": 27,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 27
+        },
+        "unique_count": 27,
+        "unique_values": [
+          "103 x 76 x 53",
+          "126 x 90 x 50",
+          "131 x 136 x 58",
+          "133 x 75 x 53",
+          "136 x 132 x 58",
+          "136 x 76 x 53",
+          "158 x 157 x 50",
+          "158 x 90 x 50",
+          "204 x 135 x 58",
+          "204 x 202 x 58",
+          "204 x 75 x 53",
+          "210 x 132 x 61",
+          "210 x 76 x 53",
+          "212 x 210 x 61",
+          "227 x 146 x 61",
+          "227 x 82 x 53",
+          "229 x 157 x 50",
+          "229 x 226 x 50",
+          "229 x 90 x 50",
+          "230 x 78 x 53",
+          "231 x 142 x 58",
+          "249 x 157 x 50",
+          "263 x 90 x 50",
+          "72 x 75 x 46",
+          "77 x 76 x 53",
+          "98 x 75 x 46",
+          "98 x 90 x 50"
+        ]
+      },
+      "eb_current_ampere": {
+        "type": "integer",
+        "count": 20,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 20
+        },
+        "min": 30,
+        "max": 125,
+        "unique_count": 7,
+        "unique_values": [
+          30,
+          32,
+          40,
+          50,
+          63,
+          80,
+          125
+        ]
+      },
+      "finish": {
+        "type": "string",
+        "count": 120,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 120
+        },
+        "unique_count": 4,
+        "unique_values": [
+          "Glass",
+          "Metal",
+          "Plastic",
+          "Wood"
+        ]
+      },
+      "frequency": {
+        "type": "string",
+        "count": 8,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 8
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "50Hz"
+        ]
+      },
+      "grid_frame": {
+        "type": "boolean",
+        "count": 10,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 10
+        },
+        "true_count": 10,
+        "false_count": 0
+      },
+      "grid_frame_included": {
+        "type": "boolean",
+        "count": 50,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 50
+        },
+        "true_count": 0,
+        "false_count": 50
+      },
+      "has_indicator": {
+        "type": "boolean",
+        "count": 462,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 462
+        },
+        "true_count": 195,
+        "false_count": 267
+      },
+      "heavy_duty": {
+        "type": "boolean",
+        "count": 4,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 4
+        },
+        "true_count": 4,
+        "false_count": 0
+      },
+      "indicator_color": {
+        "type": "string",
+        "count": 2,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 2
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "Red"
+        ]
+      },
+      "installation": {
+        "type": "string",
+        "count": 18,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 18
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "Furniture"
+        ]
+      },
+      "isi_marked": {
+        "type": "boolean",
+        "count": 16,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 16
+        },
+        "true_count": 16,
+        "false_count": 0
+      },
+      "light_type": {
+        "type": "string",
+        "count": 8,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 8
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "Cool Day Light",
+          "Warm White Light"
+        ]
+      },
+      "load": {
+        "type": "string",
+        "count": 34,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 34
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "100W SBL",
+          "200W SBL"
+        ]
+      },
+      "material": {
+        "type": "string",
+        "count": 330,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 330
+        },
+        "unique_count": 12,
+        "unique_values": [
+          "Cover Plate",
+          "GI Metal",
+          "Grid Frame",
+          "Metal",
+          "PC",
+          "PC (Polycarbonate)",
+          "Plastic",
+          "Plexy Glass",
+          "Thin Slim",
+          "Thin Slim Gina",
+          "Wood",
+          "Xena"
+        ]
+      },
+      "material_compatibility": {
+        "type": "array",
+        "count": 18,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "array": 18
+        },
+        "min_length": 3,
+        "max_length": 3,
+        "avg_length": 3.0,
+        "sample_arrays": [
+          [
+            "Vivid",
+            "Vibrant",
+            "Wood"
+          ],
+          [
+            "Vivid",
+            "Vibrant",
+            "Wood"
+          ],
+          [
+            "Vivid",
+            "Vibrant",
+            "Wood"
+          ],
+          [
+            "Vivid",
+            "Vibrant",
+            "Wood"
+          ],
+          [
+            "Vivid",
+            "Vibrant",
+            "Wood"
+          ]
+        ]
+      },
+      "min_ampere": {
+        "type": "integer",
+        "count": 8,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 8
+        },
+        "min": 6,
+        "max": 6,
+        "unique_count": 1,
+        "unique_values": [
+          6
+        ]
+      },
+      "module": {
+        "type": "integer",
+        "count": 212,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 212
+        },
+        "min": 1,
+        "max": 24,
+        "unique_count": 12,
+        "unique_values": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          10,
+          12,
+          16,
+          18,
+          20,
+          24
+        ]
+      },
+      "module_size": {
+        "type": "string",
+        "count": 14,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 14
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "2M",
+          "2M*"
+        ]
+      },
+      "modules": {
+        "type": "integer",
+        "count": 120,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 120
+        },
+        "min": 1,
+        "max": 18,
+        "unique_count": 8,
+        "unique_values": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12,
+          18
+        ]
+      },
+      "mounting_type": {
+        "type": "string",
+        "count": 27,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 27
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "Flush",
+          "Surface"
+        ]
+      },
+      "mw": {
+        "type": "integer",
+        "count": 1608,
+        "null_count": 9,
+        "null_percentage": 0.56,
+        "type_distribution": {
+          "integer": 1576,
+          "number": 20,
+          "string": 3
+        },
+        "min": 0.5,
+        "max": 18,
+        "unique_count": 13,
+        "unique_values": [
+          0.5,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          7.5,
+          8,
+          9,
+          12,
+          16,
+          18
+        ]
+      },
+      "orientation": {
+        "type": "string",
+        "count": 301,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 301
+        },
+        "unique_count": 3,
+        "unique_values": [
+          "Horizontal",
+          "Square",
+          "Vertical"
+        ]
+      },
+      "output": {
+        "type": "string",
+        "count": 6,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 6
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "18W",
+          "2.1A, 5V DC"
+        ]
+      },
+      "output_current_a": {
+        "type": "number",
+        "count": 8,
+        "null_count": 2,
+        "null_percentage": 25.0,
+        "type_distribution": {
+          "integer": 2,
+          "number": 4
+        },
+        "min": 2,
+        "max": 2.1,
+        "unique_count": 2,
+        "unique_values": [
+          2,
+          2.1
+        ]
+      },
+      "packing": {
+        "type": "string",
+        "count": 146,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 146
+        },
+        "unique_count": 10,
+        "unique_values": [
+          "12 N/240 N",
+          "1N",
+          "3 N/12 N",
+          "3 N/15 N",
+          "3 N/18 N",
+          "3 N/24 N",
+          "3 N/30 N",
+          "3 N/40 N",
+          "3 N/50 N",
+          "3 N/60 N"
+        ]
+      },
+      "pins": {
+        "type": "integer",
+        "count": 14,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 14
+        },
+        "min": 3,
+        "max": 3,
+        "unique_count": 1,
+        "unique_values": [
+          3
+        ]
+      },
+      "poles": {
+        "type": "integer",
+        "count": 182,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 148,
+          "string": 34
+        },
+        "min": 1,
+        "max": 4,
+        "unique_count": 4,
+        "unique_values": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "port_type": {
+        "type": "string",
+        "count": 4,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 4
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "USB Type-A",
+          "USB-C"
+        ]
+      },
+      "power_watt": {
+        "type": "integer",
+        "count": 6,
+        "null_count": 2,
+        "null_percentage": 33.33,
+        "type_distribution": {
+          "integer": 4
+        },
+        "min": 18,
+        "max": 18,
+        "unique_count": 1,
+        "unique_values": [
+          18
+        ]
+      },
+      "raised": {
+        "type": "boolean",
+        "count": 2,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 2
+        },
+        "true_count": 2,
+        "false_count": 0
+      },
+      "rating_watt": {
+        "type": "integer",
+        "count": 6,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 6
+        },
+        "min": 80,
+        "max": 400,
+        "unique_count": 3,
+        "unique_values": [
+          80,
+          120,
+          400
+        ]
+      },
+      "scenes": {
+        "type": "integer",
+        "count": 2,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 2
+        },
+        "min": 4,
+        "max": 4,
+        "unique_count": 1,
+        "unique_values": [
+          4
+        ]
+      },
+      "sensitivity_ma": {
+        "type": "integer",
+        "count": 82,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 82
+        },
+        "min": 30,
+        "max": 3000000,
+        "unique_count": 4,
+        "unique_values": [
+          30,
+          100,
+          300,
+          3000000
+        ]
+      },
+      "smart": {
+        "type": "boolean",
+        "count": 16,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 16
+        },
+        "true_count": 16,
+        "false_count": 0
+      },
+      "socket_type": {
+        "type": "string",
+        "count": 14,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 14
+        },
+        "unique_count": 4,
+        "unique_values": [
+          "6A 3 Pin",
+          "6A 3 Pin Shuttered",
+          "6A/16A 3 Pin Combi",
+          "6A/16A 3 Pin Shuttered"
+        ]
+      },
+      "steps": {
+        "type": "integer",
+        "count": 10,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 10
+        },
+        "min": 4,
+        "max": 8,
+        "unique_count": 3,
+        "unique_values": [
+          4,
+          5,
+          8
+        ]
+      },
+      "suitable_for": {
+        "type": "string",
+        "count": 1,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 1
+        },
+        "unique_count": 1,
+        "unique_values": [
+          "Oris 10M Boxes"
+        ]
+      },
+      "type_detail": {
+        "type": "string",
+        "count": 1447,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 1447
+        },
+        "unique_count": 297,
+        "unique_values": [
+          "1 Module Cover Plate",
+          "1 Module Cover Plate with Grid Frame",
+          "1 Module Cover Plate+Grid Frame",
+          "1 Module Glass Cover Plate with Grid Frame",
+          "1 Way Switch",
+          "1 Way Switch With Indicator",
+          "1 Way Switch with Neon",
+          "10A SP Mini MCB 3kA",
+          "10A SP Mini MCB 3kA 1M",
+          "10A SP Type C Mini MCB 3kA",
+          "10AX 1-way",
+          "10AX 2-way",
+          "10AX Mega",
+          "10AX Mega Two way",
+          "10AX One way",
+          "10AX Two way",
+          "12 Module Cover Plate",
+          "12 Module Cover Plate with Grid Frame",
+          "12 Module Cover Plate+Grid Frame",
+          "12 Module Glass Cover Plate with Grid Frame",
+          "16 Module Cover Plate",
+          "16 Module Cover Plate with Grid Frame",
+          "16 Module Cover Plate+Grid Frame",
+          "16 Module Glass Cover Plate with Grid Frame",
+          "16A SP Mini MCB 3kA",
+          "16A SP Mini MCB 3kA 1M",
+          "16A SP Type C Mini MCB 3kA",
+          "16AX 1-way",
+          "16AX 1-way with Indicator",
+          "16AX 2-way",
+          "16AX One way",
+          "16AX One way with Indicator",
+          "16AX Two way",
+          "18 Module Cover Plate",
+          "18 Module Cover Plate with Grid Frame",
+          "18 Module Cover Plate+Grid Frame",
+          "18 Module Glass Cover Plate with Grid Frame",
+          "1Way Switch with Indicator",
+          "2 Channel",
+          "2 Channel Dimmer",
+          "2 Channel Relay Switch",
+          "2 Module Cover Plate",
+          "2 Module Cover Plate with Grid Frame",
+          "2 Module Cover Plate+Grid Frame",
+          "2 Module Glass Cover Plate with Grid Frame",
+          "2 Way Switch",
+          "2-way",
+          "20A 1-way",
+          "20A 1-way with Indicator",
+          "20A 2-way",
+          "20A DP",
+          "20A DP 1-way",
+          "20A Motor Starter",
+          "20A Relay Switch",
+          "20A SP Mini MCB 3kA",
+          "20A SP Mini MCB 3kA 1M",
+          "20A SP Type C Mini MCB 3kA",
+          "25A 1-way",
+          "25A DP Mini MCB 3kA",
+          "25A DP Mini MCB 3kA 2M",
+          "25A Motor Starter",
+          "25A SP Mini MCB 3kA",
+          "25A SP Mini MCB 3kA 1M",
+          "25A SP Type C Mini MCB 3kA",
+          "2WaySwitch",
+          "3 Module Cover Plate",
+          "3 Module Cover Plate with Grid Frame",
+          "3 Module Cover Plate+Grid Frame",
+          "3 Module Glass Cover Plate with Grid Frame",
+          "32A DP",
+          "32A DP 1-way",
+          "32A DP Mini MCB 3kA",
+          "32A DP Mini MCB 3kA 2M",
+          "32A DP with Indicator",
+          "32A DP with Indicator lamp",
+          "32A Motor Starter",
+          "32A SP Mini MCB 3kA",
+          "32A SP Mini MCB 3kA 1M",
+          "32A SP Type C Mini MCB 3kA",
+          "3Pin Socket (with Shutter)",
+          "3pin Round Socket (w/o Shutter)",
+          "3pin Socket",
+          "4 Channel",
+          "4 Channel Relay Switch",
+          "4 Module Cover Plate",
+          "4 Module Cover Plate with Grid Frame",
+          "4 Module Cover Plate+Grid Frame",
+          "4 Module Glass Cover Plate with Grid Frame",
+          "4 Scene Controller",
+          "5 Step",
+          "6 Module Cover Plate",
+          "6 Module Cover Plate with Grid Frame",
+          "6 Module Cover Plate+Grid Frame",
+          "6 Module Glass Cover Plate with Grid Frame",
+          "6A 3 Pin Socket",
+          "6A 3 Pin with ISI",
+          "6A 3 Pin with ISI (Heavy Duty)",
+          "6A SP Mini MCB 3kA",
+          "6A SP Mini MCB 3kA 1M",
+          "6A/16A 3 Pin Combi with ISI"
+        ],
+        "unique_values_sample": "... and 197 more"
+      },
+      "usb_type": {
+        "type": "string",
+        "count": 10,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 10
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "USB-A",
+          "USB-C"
+        ]
+      },
+      "voltage": {
+        "type": "string",
+        "count": 20,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "string": 20
+        },
+        "unique_count": 2,
+        "unique_values": [
+          "230V~",
+          "240V~"
+        ]
+      },
+      "wattage": {
+        "type": "integer",
+        "count": 16,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "integer": 16
+        },
+        "min": 18,
+        "max": 650,
+        "unique_count": 5,
+        "unique_values": [
+          18,
+          100,
+          150,
+          450,
+          650
+        ]
+      },
+      "with_pillar": {
+        "type": "boolean",
+        "count": 120,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 120
+        },
+        "true_count": 12,
+        "false_count": 108
+      },
+      "with_shutter": {
+        "type": "boolean",
+        "count": 12,
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "type_distribution": {
+          "boolean": 12
+        },
+        "true_count": 12,
+        "false_count": 0
+      }
+    },
+    "field_frequency": {
+      "color": 1704,
+      "mw": 1608,
+      "type_detail": 1447,
+      "ampere": 736,
+      "has_indicator": 462,
+      "Grid frame": 402,
+      "material": 330,
+      "orientation": 301,
+      "module": 212,
+      "poles": 182,
+      "dimensions": 161,
+      "packing": 146,
+      "curve": 141,
+      "modules": 120,
+      "finish": 120,
+      "with_pillar": 120,
+      "sensitivity_ma": 82,
+      "cover_included": 60,
+      "grid_frame_included": 50,
+      "design": 40,
+      "load": 34,
+      "dimensions_mm": 27,
+      "mounting_type": 27,
+      "bezel": 22,
+      "eb_current_ampere": 20,
+      "dg_current_limit_ampere": 20,
+      "voltage": 20,
+      "material_compatibility": 18,
+      "cutout_dimensions_mm": 18,
+      "installation": 18,
+      "wattage": 16,
+      "isi_marked": 16,
+      "smart": 16,
+      "control_type": 15,
+      "module_size": 14,
+      "pins": 14,
+      "socket_type": 14,
+      "with_shutter": 12,
+      "channels": 10,
+      "steps": 10,
+      "usb_type": 10,
+      "grid_frame": 10,
+      "min_ampere": 8,
+      "output_current_a": 8,
+      "light_type": 8,
+      "frequency": 8,
+      "rating_watt": 6,
+      "power_watt": 6,
+      "output": 6,
+      "heavy_duty": 4,
+      "port_type": 4,
+      "category": 4,
+      "indicator_color": 2,
+      "certification": 2,
+      "raised": 2,
+      "scenes": 2,
+      "compatibility": 1,
+      "suitable_for": 1
+    }
+  }
+}

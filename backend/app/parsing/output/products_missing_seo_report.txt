@@ -1,0 +1,269 @@
+================================================================================
+PRODUCTS MISSING SEO FIELDS, SPECS, AND CATEGORY/SUBCATEGORY REPORT
+================================================================================
+
+STATISTICS:
+  Total products: 1,994
+  Products with catalog_source: 1,994
+  Products with catalog_source.seo: 972
+  Products with slug: 972
+  Products with keywords: 972
+  Products with meta_description: 972
+  Products with specs: 1,994
+  Products missing SEO fields: 1,022
+  Products missing specs: 1
+
+MISSING SEO FIELDS BREAKDOWN:
+  catalog_source.seo.slug: 1,022 products
+  catalog_source.seo.keywords: 1,022 products
+  catalog_source.seo.meta_description: 1,022 products
+
+MISSING SPECS BREAKDOWN:
+  specs: 1 products
+
+MISSING CATEGORY/SUBCATEGORY BREAKDOWN:
+  subcategory: 1,946 products
+
+--------------------------------------------------------------------------------
+PRODUCTS GROUPED BY MISSING FIELDS
+--------------------------------------------------------------------------------
+
+Missing: catalog_source.seo.keywords, catalog_source.seo.meta_description, catalog_source.seo.slug
+  Count: 1022 products
+  Products:
+    1. SKU: CB92601BW10
+       Name: Soft Feel Bell Push 10AX 1-way 1M - Snow White
+       Category: Switches
+       Subcategory: N/A
+       Brand: Lauritz Knudsen
+       Product Family: Englaze
+       Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+    2. SKU: CB92601BM10
+       Name: Soft Feel Bell Push 10AX 1-way 1M - Mountain Grey
+       Category: Switches
+       Subcategory: N/A
+       Brand: Lauritz Knudsen
+       Product Family: Englaze
+       Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+    3. SKU: CB92601BB10
+       Name: Soft Feel Bell Push 10AX 1-way 1M - Sparkle Black
+       Category: Switches
+       Subcategory: N/A
+       Brand: Lauritz Knudsen
+       Product Family: Englaze
+       Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+    4. SKU: CB92801BW10
+       Name: Soft Feel Bell Push 10AX 1-way with Indicator 1M - Snow White
+       Category: Switches
+       Subcategory: N/A
+       Brand: Lauritz Knudsen
+       Product Family: Englaze
+       Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+    5. SKU: CB92801BM10
+       Name: Soft Feel Bell Push 10AX 1-way with Indicator 1M - Mountain Grey
+       Category: Switches
+       Subcategory: N/A
+       Brand: Lauritz Knudsen
+       Product Family: Englaze
+       Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+    6. SKU: CB92801BB10
+       Name: Soft Feel Bell Push 10AX 1-way with Indicator 1M - Sparkle Black
+       Category: Switches
+       Subcategory: N/A
+       Brand: Lauritz Knudsen
+       Product Family: Englaze
+       Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+    7. SKU: CB92102MW25
+       Name: Motor Starter 25A 2M - Snow White
+       Category: Switches
+       Subcategory: N/A
+       Brand: Lauritz Knudsen
+       Product Family: Englaze
+       Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+    8. SKU: CB92102MM25
+       Name: Motor Starter 25A 2M - Mountain Grey
+       Category: Switches
+       Subcategory: N/A
+       Brand: Lauritz Knudsen
+       Product Family: Englaze
+       Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+    9. SKU: CB92102MB25
+       Name: Motor Starter 25A 2M - Sparkle Black
+       Category: Switches
+       Subcategory: N/A
+       Brand: Lauritz Knudsen
+       Product Family: Englaze
+       Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+    10. SKU: CB92602CW06
+       Name: Socket 6A 3 Pin with ISI (Heavy Duty) 2M - Snow White
+       Category: Power Sockets
+       Subcategory: N/A
+       Brand: Lauritz Knudsen
+       Product Family: Englaze
+       Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+       ... and 1012 more products
+
+--------------------------------------------------------------------------------
+ALL PRODUCTS MISSING SEO FIELDS
+--------------------------------------------------------------------------------
+
+
+Enconnect (24 products):
+  - SKU: CB94602SM02 | Name: Wi-fi Switch 2 Channel - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602SB02 | Name: Wi-fi Switch 2 Channel - Sparkle Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602SL02 | Name: Wi-fi Switch 2 Channel - Black Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602SM04 | Name: Wi-fi Switch 4 Channel - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602SB04 | Name: Wi-fi Switch 4 Channel - Sparkle Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602SL04 | Name: Wi-fi Switch 4 Channel - Black Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602SM20 | Name: Wi-fi Switch 20A for Power Load - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602SB20 | Name: Wi-fi Switch 20A for Power Load - Sparkle Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602SL20 | Name: Wi-fi Switch 20A for Power Load - Black Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94702SM20 | Name: Wi-fi Switch 20A with Energy Monitoring - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94702SB20 | Name: Wi-fi Switch 20A with Energy Monitoring - Sparkle Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94702SL20 | Name: Wi-fi Switch 20A with Energy Monitoring - Black Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602FM00 | Name: Wi-fi Fan Regulator 5 Step - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602FB00 | Name: Wi-fi Fan Regulator 5 Step - Sparkle Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602FL00 | Name: Wi-fi Fan Regulator 5 Step - Black Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602DM00 | Name: Wi-fi Light Dimmer 5 Step - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602DB00 | Name: Wi-fi Light Dimmer 5 Step - Sparkle Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602DL00 | Name: Wi-fi Light Dimmer 5 Step - Black Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602CM00 | Name: Wi-fi Curtain Controller - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB94602CB00 | Name: Wi-fi Curtain Controller - Sparkle Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  ... and 4 more
+
+Encurve (143 products):
+  - SKU: CB95101SW06 | Name: Switch 6AX 1-way 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95101SG06 | Name: Switch 6AX 1-way 1M - Magnesium Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95301SW06 | Name: Switch 6AX 1-way with Indicator 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95301SG06 | Name: Switch 6AX 1-way with Indicator 1M - Magnesium Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95201SW06 | Name: Switch 6AX 2-way 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95201SG06 | Name: Switch 6AX 2-way 1M - Magnesium Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95101SW16 | Name: Switch 16AX 1-way 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95101SG16 | Name: Switch 16AX 1-way 1M - Magnesium Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95301SW16 | Name: Switch 16AX 1-way with Indicator 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95301SG16 | Name: Switch 16AX 1-way with Indicator 1M - Magnesium Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95201SW16 | Name: Switch 16AX 2-way 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95201SG16 | Name: Switch 16AX 2-way 1M - Magnesium Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95101SW25 | Name: Switch 25A 1-way 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95101SG25 | Name: Switch 25A 1-way 1M - Magnesium Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95301SW25 | Name: Switch 25A 1-way with Indicator 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95301SG25 | Name: Switch 25A 1-way with Indicator 1M - Magnesium Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95402SW32 | Name: Switch 32A DP with Indicator 2M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95402SG32 | Name: Switch 32A DP with Indicator 2M - Magnesium Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95101BW06 | Name: Bell Push 6A 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB95101BG06 | Name: Bell Push 6A 1M - Magnesium Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  ... and 123 more
+
+Engem (115 products):
+  - SKU: CB93101SW06 | Name: Switch 6AX 1-way 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93101SS06 | Name: Switch 6AX 1-way 1M - Stone Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93301SW06 | Name: Switch 6AX 1-way with Indicator 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93301SS06 | Name: Switch 6AX 1-way with Indicator 1M - Stone Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93201SW06 | Name: Switch 6AX 2-way 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93201SS06 | Name: Switch 6AX 2-way 1M - Stone Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93101SW16 | Name: Switch 16AX 1-way 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93101SS16 | Name: Switch 16AX 1-way 1M - Stone Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93301SW16 | Name: Switch 16AX 1-way with Indicator 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93301SS16 | Name: Switch 16AX 1-way with Indicator 1M - Stone Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93201SW16 | Name: Switch 16AX 2-way 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93201SS16 | Name: Switch 16AX 2-way 1M - Stone Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93101SW20 | Name: Switch 20A 1-way 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93101SS20 | Name: Switch 20A 1-way 1M - Stone Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93301SW20 | Name: Switch 20A 1-way with Indicator 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93301SS20 | Name: Switch 20A 1-way with Indicator 1M - Stone Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93402SW32 | Name: Switch 32A DP with Indicator lamp 2M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93402SS32 | Name: Switch 32A DP with Indicator lamp 2M - Stone Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93101BW06 | Name: Bell Push 6A 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB93101BS06 | Name: Bell Push 6A 1M - Stone Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  ... and 95 more
+
+Englaze (296 products):
+  - SKU: CB92601BW10 | Name: Soft Feel Bell Push 10AX 1-way 1M - Snow White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92601BM10 | Name: Soft Feel Bell Push 10AX 1-way 1M - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92601BB10 | Name: Soft Feel Bell Push 10AX 1-way 1M - Sparkle Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92801BW10 | Name: Soft Feel Bell Push 10AX 1-way with Indicator 1M - Snow White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92801BM10 | Name: Soft Feel Bell Push 10AX 1-way with Indicator 1M - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92801BB10 | Name: Soft Feel Bell Push 10AX 1-way with Indicator 1M - Sparkle Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92102MW25 | Name: Motor Starter 25A 2M - Snow White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92102MM25 | Name: Motor Starter 25A 2M - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92102MB25 | Name: Motor Starter 25A 2M - Sparkle Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92602CW06 | Name: Socket 6A 3 Pin with ISI (Heavy Duty) 2M - Snow White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92602CM06 | Name: Socket 6A 3 Pin with ISI (Heavy Duty) 2M - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92602CB06 | Name: Socket 6A 3 Pin with ISI (Heavy Duty) 2M - Sparkle Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92302CW16 | Name: Socket 6A/16A 3 Pin Combi with ISI 2M - Snow White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92302CM16 | Name: Socket 6A/16A 3 Pin Combi with ISI 2M - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92302CB16 | Name: Socket 6A/16A 3 Pin Combi with ISI 2M - Sparkle Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92102RW02 | Name: Fan Regulator 5-Step 120W with ISI 2M - Snow White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92102RM02 | Name: Fan Regulator 5-Step 120W with ISI 2M - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92102RB02 | Name: Fan Regulator 5-Step 120W with ISI 2M - Sparkle Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92202RW02 | Name: Fan Regulator 5-Step Flat Type 120W with ISI 2M - Snow White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB92202RM02 | Name: Fan Regulator 5-Step Flat Type 120W with ISI 2M - Mountain Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  ... and 276 more
+
+Entice (324 products):
+  - SKU: CB91602SC02 | Name: Touch IR Switch 2 Channel 2M - Charcoal Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91602SB02 | Name: Touch IR Switch 2 Channel 2M - Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91602SC04 | Name: Touch IR Switch 4 Channel 2M - Charcoal Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91602SB04 | Name: Touch IR Switch 4 Channel 2M - Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91602SC00 | Name: Touch IR Switch 2-way 2M - Charcoal Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91602SB00 | Name: Touch IR Switch 2-way 2M - Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91602BC00 | Name: Touch Bell Push 2M - Charcoal Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91602BB00 | Name: Touch Bell Push 2M - Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91602SC20 | Name: Touch IR Switch 25A 2M - Charcoal Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91602SB20 | Name: Touch IR Switch 25A 2M - Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91602FC00 | Name: Touch IR Fan Regulator 8-Step 2M - Charcoal Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91602RB00 | Name: Touch IR Fan Regulator 8-Step 2M - Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91602DC00 | Name: Touch IR Universal Light Dimmer 2M - Charcoal Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91602DB00 | Name: Touch IR Universal Light Dimmer 2M - Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB98T02RM13 | Name: IR Remote Control - Black | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91101SW10 | Name: Switch 10AX 1-way 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91101SG10 | Name: Switch 10AX 1-way 1M - Charcoal Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91301SW10 | Name: Switch 10AX 1-way with Indicator 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91301SG10 | Name: Switch 10AX 1-way with Indicator 1M - Charcoal Grey | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: CB91201SW10 | Name: Switch 10AX 2-way 1M - White | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  ... and 304 more
+
+Signiagrande (120 products):
+  - SKU: ACWPGOWV01 | Name: Outer Plate 1M Igloo White Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOWV02 | Name: Outer Plate 2M Igloo White Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOWV03 | Name: Outer Plate 3M without Pillar Igloo White Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOWP03 | Name: Outer Plate 3M with Pillar Igloo White Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOWV04 | Name: Outer Plate 4M Igloo White Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOBV01 | Name: Outer Plate 1M Raven Black Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOBV02 | Name: Outer Plate 2M Raven Black Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOBV03 | Name: Outer Plate 3M without Pillar Raven Black Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOBP03 | Name: Outer Plate 3M with Pillar Raven Black Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOBV04 | Name: Outer Plate 4M Raven Black Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOCV01 | Name: Outer Plate 1M Copper Mirror Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOCV02 | Name: Outer Plate 2M Copper Mirror Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOCV03 | Name: Outer Plate 3M without Pillar Copper Mirror Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOCP03 | Name: Outer Plate 3M with Pillar Copper Mirror Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOCV04 | Name: Outer Plate 4M Copper Mirror Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOAV01 | Name: Outer Plate 1M Silver Sheen Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOAV02 | Name: Outer Plate 2M Silver Sheen Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOAV03 | Name: Outer Plate 3M without Pillar Silver Sheen Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOAP03 | Name: Outer Plate 3M with Pillar Silver Sheen Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  - SKU: ACWPGOAV04 | Name: Outer Plate 4M Silver Sheen Glass | Missing: catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  ... and 100 more
+
+--------------------------------------------------------------------------------
+PRODUCTS MISSING SPECS
+--------------------------------------------------------------------------------
+
+PRODUCTS GROUPED BY MISSING SPECS:
+
+Missing: specs
+  Count: 1 products
+  Products:
+    1. SKU: CB91101FM02
+       Name: 1 Module Glass Cover Plate with Grid Frame - Bronze Mirror
+       Category: Plates
+       Subcategory: N/A
+       Brand: Lauritz Knudsen
+       Product Family: Entice
+
+
+PRODUCTS MISSING SPECS BY FAMILY:
+
+Entice (1 products):
+  - SKU: CB91101FM02 | Name: 1 Module Glass Cover Plate with Grid Frame - Bronze Mirror

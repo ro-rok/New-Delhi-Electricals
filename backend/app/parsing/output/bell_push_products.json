@@ -1,0 +1,514 @@
+[
+  {
+    "_id": "69368c7eb9a9b9042d41f001",
+    "sku": "ACWSBXG101",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Bell Push - 1 Module",
+      "product_family": "Signia",
+      "variant": [
+        "ACWSBXW101"
+      ],
+      "pricing": {
+        "mrp": 248,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "20"
+      },
+      "seo": {
+        "slug": "bell-push-10a-1m-grey",
+        "keywords": [
+          "Bell Push",
+          "10A",
+          "1M",
+          "Grey",
+          "Signia"
+        ],
+        "meta_description": "Buy Bell Push 10A 1M Grey from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "currency": "INR",
+    "description": "Buy Bell Push 10A 1M Grey from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 248,
+    "name": "Bell Push 10A 1M - Grey",
+    "series": "Signia",
+    "specs": {
+      "ampere": 10,
+      "color": "Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Bell Push 10A"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c7eb9a9b9042d41f000",
+    "sku": "ACWSBXW101",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Bell Push - 1 Module",
+      "product_family": "Signia",
+      "variant": [
+        "ACWSBXG101"
+      ],
+      "pricing": {
+        "mrp": 174,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "20"
+      },
+      "seo": {
+        "slug": "bell-push-10a-1m-white",
+        "keywords": [
+          "Bell Push",
+          "10A",
+          "1M",
+          "White",
+          "Signia"
+        ],
+        "meta_description": "Buy Bell Push 10A 1M White from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "currency": "INR",
+    "description": "Buy Bell Push 10A 1M White from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 174,
+    "name": "Bell Push 10A 1M - White",
+    "series": "Signia",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "Bell Push 10A"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c7fb9a9b9042d41f005",
+    "sku": "ACWMBIG101",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Bell Push - 2 Module",
+      "product_family": "Signia",
+      "variant": [
+        "ACWMBIW101"
+      ],
+      "pricing": {
+        "mrp": 323,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "seo": {
+        "slug": "bell-push-10a-mega-indicator-2m-grey",
+        "keywords": [
+          "Bell Push",
+          "Mega",
+          "Indicator",
+          "10A",
+          "2M",
+          "Grey",
+          "Signia"
+        ],
+        "meta_description": "Buy Bell Push 10A Mega with Indicator 2M Grey from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Bell Push - 2 Module",
+    "currency": "INR",
+    "description": "Buy Bell Push 10A Mega with Indicator 2M Grey from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 323,
+    "name": "Bell Push 10A Mega with Indicator 2M - Grey",
+    "series": "Signia",
+    "specs": {
+      "ampere": 10,
+      "color": "Grey",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "Bell Push 10A Mega"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c7fb9a9b9042d41f004",
+    "sku": "ACWMBIW101",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Bell Push - 2 Module",
+      "product_family": "Signia",
+      "variant": [
+        "ACWMBIG101"
+      ],
+      "pricing": {
+        "mrp": 227,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "seo": {
+        "slug": "bell-push-10a-mega-indicator-2m-white",
+        "keywords": [
+          "Bell Push",
+          "Mega",
+          "Indicator",
+          "10A",
+          "2M",
+          "White",
+          "Signia"
+        ],
+        "meta_description": "Buy Bell Push 10A Mega with Indicator 2M White from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Bell Push - 2 Module",
+    "currency": "INR",
+    "description": "Buy Bell Push 10A Mega with Indicator 2M White from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 227,
+    "name": "Bell Push 10A Mega with Indicator 2M - White",
+    "series": "Signia",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 2,
+      "has_indicator": true,
+      "type_detail": "Bell Push 10A Mega"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c7fb9a9b9042d41f003",
+    "sku": "ACWSBIG101",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Bell Push - 1 Module",
+      "product_family": "Signia",
+      "variant": [
+        "ACWSBIW101"
+      ],
+      "pricing": {
+        "mrp": 293,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "20"
+      },
+      "seo": {
+        "slug": "bell-push-10a-indicator-1m-grey",
+        "keywords": [
+          "Bell Push",
+          "Indicator",
+          "10A",
+          "1M",
+          "Grey",
+          "Signia"
+        ],
+        "meta_description": "Buy Bell Push 10A with Indicator 1M Grey from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "currency": "INR",
+    "description": "Buy Bell Push 10A with Indicator 1M Grey from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 293,
+    "name": "Bell Push 10A with Indicator 1M - Grey",
+    "series": "Signia",
+    "specs": {
+      "ampere": 10,
+      "color": "Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bell Push 10A"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c7eb9a9b9042d41f002",
+    "sku": "ACWSBIW101",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia2.json",
+      "subcategory": "Bell Push - 1 Module",
+      "product_family": "Signia",
+      "variant": [
+        "ACWSBIG101"
+      ],
+      "pricing": {
+        "mrp": 205,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "20"
+      },
+      "seo": {
+        "slug": "bell-push-10a-indicator-1m-white",
+        "keywords": [
+          "Bell Push",
+          "Indicator",
+          "10A",
+          "1M",
+          "White",
+          "Signia"
+        ],
+        "meta_description": "Buy Bell Push 10A with Indicator 1M White from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "currency": "INR",
+    "description": "Buy Bell Push 10A with Indicator 1M White from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 205,
+    "name": "Bell Push 10A with Indicator 1M - White",
+    "series": "Signia",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bell Push 10A"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c78b9a9b9042d41efbe",
+    "sku": "ACWMPCG101",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia.json",
+      "subcategory": "Bell Push - 1 Module",
+      "product_family": "Signia",
+      "variant": [
+        "ACWMPCW101"
+      ],
+      "pricing": {
+        "mrp": 280,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "seo": {
+        "slug": "bell-push-10ax-mega-indicator-1m-charcoal-grey",
+        "keywords": [
+          "Bell Push",
+          "Mega",
+          "Indicator",
+          "10AX",
+          "1M",
+          "Charcoal Grey",
+          "Signia"
+        ],
+        "meta_description": "Buy Bell Push 10AX Mega with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "currency": "INR",
+    "description": "Buy Bell Push 10AX Mega with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 280,
+    "name": "Bottom Push Bell Push 10AX Mega with Indicator 1M - Charcoal Grey",
+    "series": "Signia",
+    "specs": {
+      "ampere": 10,
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Bell Push 10AX Mega"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c78b9a9b9042d41efbd",
+    "sku": "ACWMPCW101",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia.json",
+      "subcategory": "Bell Push - 1 Module",
+      "product_family": "Signia",
+      "variant": [
+        "ACWMPCG101"
+      ],
+      "pricing": {
+        "mrp": 225,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "seo": {
+        "slug": "bell-push-10ax-mega-indicator-1m-white",
+        "keywords": [
+          "Bell Push",
+          "Mega",
+          "Indicator",
+          "10AX",
+          "1M",
+          "White",
+          "Signia"
+        ],
+        "meta_description": "Buy Bell Push 10AX Mega with Indicator 1M White from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "currency": "INR",
+    "description": "Buy Bell Push 10AX Mega with Indicator 1M White from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 225,
+    "name": "Bottom Push Bell Push 10AX Mega with Indicator 1M - White",
+    "series": "Signia",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Bell Push 10AX Mega"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c78b9a9b9042d41efbc",
+    "sku": "ACWSPCG101",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia.json",
+      "subcategory": "Bell Push - 1 Module",
+      "product_family": "Signia",
+      "variant": [
+        "ACWSPCW101"
+      ],
+      "pricing": {
+        "mrp": 240,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "20"
+      },
+      "seo": {
+        "slug": "bell-push-10ax-indicator-1m-charcoal-grey",
+        "keywords": [
+          "Bell Push",
+          "Indicator",
+          "10AX",
+          "1M",
+          "Charcoal Grey",
+          "Signia"
+        ],
+        "meta_description": "Buy Bell Push 10AX with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "currency": "INR",
+    "description": "Buy Bell Push 10AX with Indicator 1M Charcoal Grey from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 240,
+    "name": "Bottom Push Bell Push 10AX with Indicator 1M - Charcoal Grey",
+    "series": "Signia",
+    "specs": {
+      "ampere": 10,
+      "color": "Charcoal Grey",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Bell Push 10AX"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  },
+  {
+    "_id": "69368c78b9a9b9042d41efbb",
+    "sku": "ACWSPCW101",
+    "brand": "Havells",
+    "catalog_source": {
+      "source_file": "Signia.json",
+      "subcategory": "Bell Push - 1 Module",
+      "product_family": "Signia",
+      "variant": [
+        "ACWSPCG101"
+      ],
+      "pricing": {
+        "mrp": 190,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "20"
+      },
+      "seo": {
+        "slug": "bell-push-10ax-indicator-1m-white",
+        "keywords": [
+          "Bell Push",
+          "Indicator",
+          "10AX",
+          "1M",
+          "White",
+          "Signia"
+        ],
+        "meta_description": "Buy Bell Push 10AX with Indicator 1M White from the Signia range at New Delhi Electricals."
+      },
+      "highlights": []
+    },
+    "category": "Switches",
+    "subcategory": "Bell Push - 1 Module",
+    "currency": "INR",
+    "description": "Buy Bell Push 10AX with Indicator 1M White from the Signia range at New Delhi Electricals.",
+    "images": [],
+    "list_price": 190,
+    "name": "Bottom Push Bell Push 10AX with Indicator 1M - White",
+    "series": "Signia",
+    "specs": {
+      "ampere": 10,
+      "color": "White",
+      "mw": 1,
+      "has_indicator": true,
+      "type_detail": "Bottom Push Bell Push 10AX"
+    },
+    "status": {
+      "is_active": true,
+      "is_featured": false
+    }
+  }
+]

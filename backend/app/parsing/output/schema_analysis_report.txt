@@ -1,0 +1,931 @@
+================================================================================
+MongoDB Products Collection Schema Analysis Report
+================================================================================
+
+Collection: products
+Total Products: 1,994
+Total Fields: 82
+
+--------------------------------------------------------------------------------
+TOP-LEVEL FIELDS SUMMARY
+--------------------------------------------------------------------------------
+
+brand:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 3
+  Values: Anchor, Havells, Lauritz Knudsen
+
+catalog_source.highlights:
+  Type: array
+  Count: 972 (100.0% populated)
+
+catalog_source.pricing.discount:
+  Type: null
+  Count: 972 (0.0% populated)
+
+catalog_source.pricing.mrp:
+  Type: integer
+  Count: 972 (100.0% populated)
+
+catalog_source.pricing.selling_price:
+  Type: null
+  Count: 972 (0.0% populated)
+
+catalog_source.pricing.std_pack:
+  Type: string
+  Count: 972 (100.0% populated)
+  Unique Values: 16
+  Values: 1, 1/1, 1/12, 1/3, 1/4, 1/6, 10, 12, 20, 240, 25, 3, 5, 50, 6, 9
+
+catalog_source.product_family:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 11
+  Values: Enconnect, Encurve, Engem, Englaze, Entice, Fabio, Fabio Art, Penta, Signia, Signiagrande, Tripper
+
+catalog_source.seo.keywords:
+  Type: array
+  Count: 972 (100.0% populated)
+
+catalog_source.seo.meta_description:
+  Type: string
+  Count: 972 (100.0% populated)
+  Unique Values: 891
+
+catalog_source.seo.slug:
+  Type: string
+  Count: 972 (100.0% populated)
+  Unique Values: 961
+
+catalog_source.source_file:
+  Type: string
+  Count: 972 (100.0% populated)
+  Unique Values: 12
+  Values: 3ph.json, ACCL.json, Fabio1.json, MCB C curve.json, RCBO.json, RCCB.json, Signia.json, Signia2.json, changeover.json, isolator.json, penta.json, penta2.json
+
+catalog_source.subcategory:
+  Type: string
+  Count: 972 (100.0% populated)
+  Unique Values: 45
+
+catalog_source.variant:
+  Type: array
+  Count: 972 (100.0% populated)
+
+category:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 10
+  Values: Accessories, Boxes, Circuit Protection, Data Sockets, Dimmers, Fan Controls, Hospitality, Plates, Power Sockets, Switches
+
+currency:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 1
+  Values: INR
+
+description:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 1893
+
+images:
+  Type: array
+  Count: 1,994 (100.0% populated)
+
+list_price:
+  Type: integer
+  Count: 1,994 (100.0% populated)
+
+name:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 1806
+
+series:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 11
+  Values: Enconnect, Encurve, Engem, Englaze, Entice, Fabio, Fabio Art, Penta, Signia, Signiagrande, Tripper
+
+sku:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 1994
+
+specs.Grid frame:
+  Type: boolean
+  Count: 402 (100.0% populated)
+
+specs.ampere:
+  Type: integer
+  Count: 736 (85.2% populated)
+
+specs.bezel:
+  Type: string
+  Count: 22 (100.0% populated)
+  Unique Values: 2
+  Values: Chrome, Rose
+
+specs.category:
+  Type: string
+  Count: 4 (100.0% populated)
+  Unique Values: 2
+  Values: Cat5e, Cat6
+
+specs.certification:
+  Type: string
+  Count: 2 (100.0% populated)
+  Unique Values: 1
+  Values: CRS Certified
+
+specs.channels:
+  Type: integer
+  Count: 10 (100.0% populated)
+
+specs.color:
+  Type: string
+  Count: 1,704 (99.9% populated)
+  Unique Values: 74
+
+specs.compatibility:
+  Type: string
+  Count: 1 (100.0% populated)
+  Unique Values: 1
+  Values: Entice Modular IR Switches
+
+specs.control_type:
+  Type: string
+  Count: 15 (100.0% populated)
+  Unique Values: 5
+  Values: IR Remote Control, Touch Bell Push, Touch IR Fan Regulator, Touch IR Switch, Touch IR Universal Light Dimmer
+
+specs.cover_included:
+  Type: boolean
+  Count: 60 (100.0% populated)
+
+specs.curve:
+  Type: string
+  Count: 141 (63.8% populated)
+  Unique Values: 1
+  Values: C
+
+specs.cutout_dimensions_mm:
+  Type: string
+  Count: 18 (100.0% populated)
+  Unique Values: 18
+  Values: 109 x 125, 110 x 60, 113 x 120, 119 x 55, 156 x 193, 156 x 60, 168 x 126, 173 x 120, 173 x 185, 178 x 61, 191 x 136, 203 x 126, 206 x 68, 222 x 68, 52 x 55, 71 x 60, 80 x 66, 86 x 60
+
+specs.design:
+  Type: string
+  Count: 40 (100.0% populated)
+  Unique Values: 4
+  Values: Arabian Night, Chameli, Kalamkari, Kassa Noor
+
+specs.dg_current_limit_ampere:
+  Type: integer
+  Count: 20 (100.0% populated)
+
+specs.dimensions:
+  Type: string
+  Count: 161 (100.0% populated)
+  Unique Values: 21
+
+specs.dimensions_mm:
+  Type: string
+  Count: 27 (100.0% populated)
+  Unique Values: 27
+
+specs.eb_current_ampere:
+  Type: integer
+  Count: 20 (100.0% populated)
+
+specs.finish:
+  Type: string
+  Count: 120 (100.0% populated)
+  Unique Values: 4
+  Values: Glass, Metal, Plastic, Wood
+
+specs.frequency:
+  Type: string
+  Count: 8 (100.0% populated)
+  Unique Values: 1
+  Values: 50Hz
+
+specs.grid_frame:
+  Type: boolean
+  Count: 10 (100.0% populated)
+
+specs.grid_frame_included:
+  Type: boolean
+  Count: 50 (100.0% populated)
+
+specs.has_indicator:
+  Type: boolean
+  Count: 462 (100.0% populated)
+
+specs.heavy_duty:
+  Type: boolean
+  Count: 4 (100.0% populated)
+
+specs.indicator_color:
+  Type: string
+  Count: 2 (100.0% populated)
+  Unique Values: 1
+  Values: Red
+
+specs.installation:
+  Type: string
+  Count: 18 (100.0% populated)
+  Unique Values: 1
+  Values: Furniture
+
+specs.isi_marked:
+  Type: boolean
+  Count: 16 (100.0% populated)
+
+specs.light_type:
+  Type: string
+  Count: 8 (100.0% populated)
+  Unique Values: 2
+  Values: Cool Day Light, Warm White Light
+
+specs.load:
+  Type: string
+  Count: 34 (100.0% populated)
+  Unique Values: 2
+  Values: 100W SBL, 200W SBL
+
+specs.material:
+  Type: string
+  Count: 330 (100.0% populated)
+  Unique Values: 12
+  Values: Cover Plate, GI Metal, Grid Frame, Metal, PC, PC (Polycarbonate), Plastic, Plexy Glass, Thin Slim, Thin Slim Gina, Wood, Xena
+
+specs.material_compatibility:
+  Type: array
+  Count: 18 (100.0% populated)
+
+specs.min_ampere:
+  Type: integer
+  Count: 8 (100.0% populated)
+
+specs.module:
+  Type: integer
+  Count: 212 (100.0% populated)
+
+specs.module_size:
+  Type: string
+  Count: 14 (100.0% populated)
+  Unique Values: 2
+  Values: 2M, 2M*
+
+specs.modules:
+  Type: integer
+  Count: 120 (100.0% populated)
+
+specs.mounting_type:
+  Type: string
+  Count: 27 (100.0% populated)
+  Unique Values: 2
+  Values: Flush, Surface
+
+specs.mw:
+  Type: integer
+  Count: 1,608 (99.4% populated)
+
+specs.orientation:
+  Type: string
+  Count: 301 (100.0% populated)
+  Unique Values: 3
+  Values: Horizontal, Square, Vertical
+
+specs.output:
+  Type: string
+  Count: 6 (100.0% populated)
+  Unique Values: 2
+  Values: 18W, 2.1A, 5V DC
+
+specs.output_current_a:
+  Type: number
+  Count: 8 (75.0% populated)
+
+specs.packing:
+  Type: string
+  Count: 146 (100.0% populated)
+  Unique Values: 10
+  Values: 12 N/240 N, 1N, 3 N/12 N, 3 N/15 N, 3 N/18 N, 3 N/24 N, 3 N/30 N, 3 N/40 N, 3 N/50 N, 3 N/60 N
+
+specs.pins:
+  Type: integer
+  Count: 14 (100.0% populated)
+
+specs.poles:
+  Type: integer
+  Count: 182 (100.0% populated)
+
+specs.port_type:
+  Type: string
+  Count: 4 (100.0% populated)
+  Unique Values: 2
+  Values: USB Type-A, USB-C
+
+specs.power_watt:
+  Type: integer
+  Count: 6 (66.7% populated)
+
+specs.raised:
+  Type: boolean
+  Count: 2 (100.0% populated)
+
+specs.rating_watt:
+  Type: integer
+  Count: 6 (100.0% populated)
+
+specs.scenes:
+  Type: integer
+  Count: 2 (100.0% populated)
+
+specs.sensitivity_ma:
+  Type: integer
+  Count: 82 (100.0% populated)
+
+specs.smart:
+  Type: boolean
+  Count: 16 (100.0% populated)
+
+specs.socket_type:
+  Type: string
+  Count: 14 (100.0% populated)
+  Unique Values: 4
+  Values: 6A 3 Pin, 6A 3 Pin Shuttered, 6A/16A 3 Pin Combi, 6A/16A 3 Pin Shuttered
+
+specs.steps:
+  Type: integer
+  Count: 10 (100.0% populated)
+
+specs.suitable_for:
+  Type: string
+  Count: 1 (100.0% populated)
+  Unique Values: 1
+  Values: Oris 10M Boxes
+
+specs.type_detail:
+  Type: string
+  Count: 1,447 (100.0% populated)
+  Unique Values: 297
+
+specs.usb_type:
+  Type: string
+  Count: 10 (100.0% populated)
+  Unique Values: 2
+  Values: USB-A, USB-C
+
+specs.voltage:
+  Type: string
+  Count: 20 (100.0% populated)
+  Unique Values: 2
+  Values: 230V~, 240V~
+
+specs.wattage:
+  Type: integer
+  Count: 16 (100.0% populated)
+
+specs.with_pillar:
+  Type: boolean
+  Count: 120 (100.0% populated)
+
+specs.with_shutter:
+  Type: boolean
+  Count: 12 (100.0% populated)
+
+status.is_active:
+  Type: boolean
+  Count: 989 (100.0% populated)
+
+status.is_featured:
+  Type: boolean
+  Count: 960 (100.0% populated)
+
+subcategory:
+  Type: string
+  Count: 48 (100.0% populated)
+  Unique Values: 3
+  Values: Bell Push - 1 Module, Bell Push - 2 Module, Mini MCBs 3kA
+
+--------------------------------------------------------------------------------
+SPECS FIELD DETAILED ANALYSIS
+--------------------------------------------------------------------------------
+
+Products with specs: 1,994
+Products without specs: 0
+
+Spec Fields (sorted by frequency):
+
+  color:
+    Frequency: 1,704 products (85.5%)
+    Type: string
+    Unique Values (74):
+      - Antique Bronze
+      - Aqua Green
+      - Beige Wood
+      - Black
+      - Black - Silver Chrome
+      - Black Beauty
+      - Black Ebony
+      - Black Glass
+      - Blue
+      - Bottle Green
+      - Bronze Blaze
+      - Bronze Mirror
+      - Brown Mahogany
+      - Brush Silver
+      - Caramel Brown
+      - Champagne Gold
+      - Charcoal Black
+      - Charcoal Grey
+      - Chocolate Hardwood
+      - Chrome Bezel
+      - Cinnamon Wood
+      - Classic Grey
+      - Copper Mirror
+      - Dark Chocolate Wood
+      - Dark Walnut
+      - Desert Gold
+      - Dusky Wood
+      - Eco Grey
+      - Firestorm Orange
+      - Frosted Husky
+      ... and 44 more
+
+  mw:
+    Frequency: 1,608 products (80.6%)
+    Type: integer
+    Range: 0.5 - 18
+    Unique Values (13): 0.5, 1, 2, 3, 4, 6, 7, 7.5, 8, 9, 12, 16, 18
+
+  type_detail:
+    Frequency: 1,447 products (72.6%)
+    Type: string
+    Unique Values (100):
+      - 1 Module Cover Plate
+      - 1 Module Cover Plate with Grid Frame
+      - 1 Module Cover Plate+Grid Frame
+      - 1 Module Glass Cover Plate with Grid Frame
+      - 1 Way Switch
+      - 1 Way Switch With Indicator
+      - 1 Way Switch with Neon
+      - 10A SP Mini MCB 3kA
+      - 10A SP Mini MCB 3kA 1M
+      - 10A SP Type C Mini MCB 3kA
+      - 10AX 1-way
+      - 10AX 2-way
+      - 10AX Mega
+      - 10AX Mega Two way
+      - 10AX One way
+      - 10AX Two way
+      - 12 Module Cover Plate
+      - 12 Module Cover Plate with Grid Frame
+      - 12 Module Cover Plate+Grid Frame
+      - 12 Module Glass Cover Plate with Grid Frame
+      - 16 Module Cover Plate
+      - 16 Module Cover Plate with Grid Frame
+      - 16 Module Cover Plate+Grid Frame
+      - 16 Module Glass Cover Plate with Grid Frame
+      - 16A SP Mini MCB 3kA
+      - 16A SP Mini MCB 3kA 1M
+      - 16A SP Type C Mini MCB 3kA
+      - 16AX 1-way
+      - 16AX 1-way with Indicator
+      - 16AX 2-way
+      ... and 70 more
+
+  ampere:
+    Frequency: 736 products (36.9%)
+    Type: integer
+    Range: 2 - 125
+    Unique Values (15): 2, 2.1, 6, 10, 16, 20, 25, 30, 32, 40, 50, 63, 80, 100, 125
+
+  has_indicator:
+    Frequency: 462 products (23.2%)
+    Type: boolean
+    True: 195, False: 267
+
+  Grid frame:
+    Frequency: 402 products (20.2%)
+    Type: boolean
+    True: 245, False: 157
+
+  material:
+    Frequency: 330 products (16.5%)
+    Type: string
+    Unique Values (12):
+      - Cover Plate
+      - GI Metal
+      - Grid Frame
+      - Metal
+      - PC
+      - PC (Polycarbonate)
+      - Plastic
+      - Plexy Glass
+      - Thin Slim
+      - Thin Slim Gina
+      - Wood
+      - Xena
+
+  orientation:
+    Frequency: 301 products (15.1%)
+    Type: string
+    Unique Values (3):
+      - Horizontal
+      - Square
+      - Vertical
+
+  module:
+    Frequency: 212 products (10.6%)
+    Type: integer
+    Range: 1 - 24
+    Unique Values (12): 1, 2, 3, 4, 6, 8, 10, 12, 16, 18, 20, 24
+
+  poles:
+    Frequency: 182 products (9.1%)
+    Type: integer
+    Range: 1 - 4
+    Unique Values (4): 1, 2, 3, 4
+
+  dimensions:
+    Frequency: 161 products (8.1%)
+    Type: string
+    Unique Values (21):
+      - 125 x 90 x 14 mm
+      - 126 x 90 x 14 mm
+      - 157 x 157 x 14 mm
+      - 157 x 90 x 14 mm
+      - 158 x 157 x 14 mm
+      - 158 x 90 x 14 mm
+      - 228 x 157 x 14 mm
+      - 228 x 226 x 14 mm
+      - 228 x 226 x 20 mm
+      - 228 x 90 x 14 mm
+      - 229 x 157 x 14 mm
+      - 229 x 226 x 14 mm
+      - 229 x 90 x 14 mm
+      - 248 x 156 x 18 mm
+      - 249 x 156 x 18 mm
+      - 249 x 157 x 19 mm
+      - 262 x 90 x 14 mm
+      - 262 x 90 x 18 mm
+      - 263 x 90 x 14 mm
+      - 97 x 90 x 14 mm
+      - 98 x 90 x 14 mm
+
+  packing:
+    Frequency: 146 products (7.3%)
+    Type: string
+    Unique Values (10):
+      - 12 N/240 N
+      - 1N
+      - 3 N/12 N
+      - 3 N/15 N
+      - 3 N/18 N
+      - 3 N/24 N
+      - 3 N/30 N
+      - 3 N/40 N
+      - 3 N/50 N
+      - 3 N/60 N
+
+  curve:
+    Frequency: 141 products (7.1%)
+    Type: string
+    Unique Values (1):
+      - C
+
+  modules:
+    Frequency: 120 products (6.0%)
+    Type: integer
+    Range: 1 - 18
+    Unique Values (8): 1, 2, 3, 4, 6, 8, 12, 18
+
+  finish:
+    Frequency: 120 products (6.0%)
+    Type: string
+    Unique Values (4):
+      - Glass
+      - Metal
+      - Plastic
+      - Wood
+
+  with_pillar:
+    Frequency: 120 products (6.0%)
+    Type: boolean
+    True: 12, False: 108
+
+  sensitivity_ma:
+    Frequency: 82 products (4.1%)
+    Type: integer
+    Range: 30 - 3000000
+    Unique Values (4): 30, 100, 300, 3000000
+
+  cover_included:
+    Frequency: 60 products (3.0%)
+    Type: boolean
+    True: 0, False: 60
+
+  grid_frame_included:
+    Frequency: 50 products (2.5%)
+    Type: boolean
+    True: 0, False: 50
+
+  design:
+    Frequency: 40 products (2.0%)
+    Type: string
+    Unique Values (4):
+      - Arabian Night
+      - Chameli
+      - Kalamkari
+      - Kassa Noor
+
+  load:
+    Frequency: 34 products (1.7%)
+    Type: string
+    Unique Values (2):
+      - 100W SBL
+      - 200W SBL
+
+  dimensions_mm:
+    Frequency: 27 products (1.4%)
+    Type: string
+    Unique Values (27):
+      - 103 x 76 x 53
+      - 126 x 90 x 50
+      - 131 x 136 x 58
+      - 133 x 75 x 53
+      - 136 x 132 x 58
+      - 136 x 76 x 53
+      - 158 x 157 x 50
+      - 158 x 90 x 50
+      - 204 x 135 x 58
+      - 204 x 202 x 58
+      - 204 x 75 x 53
+      - 210 x 132 x 61
+      - 210 x 76 x 53
+      - 212 x 210 x 61
+      - 227 x 146 x 61
+      - 227 x 82 x 53
+      - 229 x 157 x 50
+      - 229 x 226 x 50
+      - 229 x 90 x 50
+      - 230 x 78 x 53
+      - 231 x 142 x 58
+      - 249 x 157 x 50
+      - 263 x 90 x 50
+      - 72 x 75 x 46
+      - 77 x 76 x 53
+      - 98 x 75 x 46
+      - 98 x 90 x 50
+
+  mounting_type:
+    Frequency: 27 products (1.4%)
+    Type: string
+    Unique Values (2):
+      - Flush
+      - Surface
+
+  bezel:
+    Frequency: 22 products (1.1%)
+    Type: string
+    Unique Values (2):
+      - Chrome
+      - Rose
+
+  eb_current_ampere:
+    Frequency: 20 products (1.0%)
+    Type: integer
+    Range: 30 - 125
+    Unique Values (7): 30, 32, 40, 50, 63, 80, 125
+
+  dg_current_limit_ampere:
+    Frequency: 20 products (1.0%)
+    Type: integer
+    Range: 1.5 - 125
+    Unique Values (18): 1.5, 2.5, 3, 4, 5, 6, 8, 10, 12, 15, 20, 30, 32, 40, 50, 63, 80, 125
+
+  voltage:
+    Frequency: 20 products (1.0%)
+    Type: string
+    Unique Values (2):
+      - 230V~
+      - 240V~
+
+  material_compatibility:
+    Frequency: 18 products (0.9%)
+    Type: array
+
+  cutout_dimensions_mm:
+    Frequency: 18 products (0.9%)
+    Type: string
+    Unique Values (18):
+      - 109 x 125
+      - 110 x 60
+      - 113 x 120
+      - 119 x 55
+      - 156 x 193
+      - 156 x 60
+      - 168 x 126
+      - 173 x 120
+      - 173 x 185
+      - 178 x 61
+      - 191 x 136
+      - 203 x 126
+      - 206 x 68
+      - 222 x 68
+      - 52 x 55
+      - 71 x 60
+      - 80 x 66
+      - 86 x 60
+
+  installation:
+    Frequency: 18 products (0.9%)
+    Type: string
+    Unique Values (1):
+      - Furniture
+
+  wattage:
+    Frequency: 16 products (0.8%)
+    Type: integer
+    Range: 18 - 650
+    Unique Values (5): 18, 100, 150, 450, 650
+
+  isi_marked:
+    Frequency: 16 products (0.8%)
+    Type: boolean
+    True: 16, False: 0
+
+  smart:
+    Frequency: 16 products (0.8%)
+    Type: boolean
+    True: 16, False: 0
+
+  control_type:
+    Frequency: 15 products (0.8%)
+    Type: string
+    Unique Values (5):
+      - IR Remote Control
+      - Touch Bell Push
+      - Touch IR Fan Regulator
+      - Touch IR Switch
+      - Touch IR Universal Light Dimmer
+
+  module_size:
+    Frequency: 14 products (0.7%)
+    Type: string
+    Unique Values (2):
+      - 2M
+      - 2M*
+
+  pins:
+    Frequency: 14 products (0.7%)
+    Type: integer
+    Range: 3 - 3
+    Unique Values (1): 3
+
+  socket_type:
+    Frequency: 14 products (0.7%)
+    Type: string
+    Unique Values (4):
+      - 6A 3 Pin
+      - 6A 3 Pin Shuttered
+      - 6A/16A 3 Pin Combi
+      - 6A/16A 3 Pin Shuttered
+
+  with_shutter:
+    Frequency: 12 products (0.6%)
+    Type: boolean
+    True: 12, False: 0
+
+  channels:
+    Frequency: 10 products (0.5%)
+    Type: integer
+    Range: 2 - 4
+    Unique Values (2): 2, 4
+
+  steps:
+    Frequency: 10 products (0.5%)
+    Type: integer
+    Range: 4 - 8
+    Unique Values (3): 4, 5, 8
+
+  usb_type:
+    Frequency: 10 products (0.5%)
+    Type: string
+    Unique Values (2):
+      - USB-A
+      - USB-C
+
+  grid_frame:
+    Frequency: 10 products (0.5%)
+    Type: boolean
+    True: 10, False: 0
+
+  min_ampere:
+    Frequency: 8 products (0.4%)
+    Type: integer
+    Range: 6 - 6
+    Unique Values (1): 6
+
+  output_current_a:
+    Frequency: 8 products (0.4%)
+    Type: number
+    Range: 2 - 2.1
+    Unique Values (2): 2, 2.1
+
+  light_type:
+    Frequency: 8 products (0.4%)
+    Type: string
+    Unique Values (2):
+      - Cool Day Light
+      - Warm White Light
+
+  frequency:
+    Frequency: 8 products (0.4%)
+    Type: string
+    Unique Values (1):
+      - 50Hz
+
+  rating_watt:
+    Frequency: 6 products (0.3%)
+    Type: integer
+    Range: 80 - 400
+    Unique Values (3): 80, 120, 400
+
+  power_watt:
+    Frequency: 6 products (0.3%)
+    Type: integer
+    Range: 18 - 18
+    Unique Values (1): 18
+
+  output:
+    Frequency: 6 products (0.3%)
+    Type: string
+    Unique Values (2):
+      - 18W
+      - 2.1A, 5V DC
+
+  heavy_duty:
+    Frequency: 4 products (0.2%)
+    Type: boolean
+    True: 4, False: 0
+
+  port_type:
+    Frequency: 4 products (0.2%)
+    Type: string
+    Unique Values (2):
+      - USB Type-A
+      - USB-C
+
+  category:
+    Frequency: 4 products (0.2%)
+    Type: string
+    Unique Values (2):
+      - Cat5e
+      - Cat6
+
+  indicator_color:
+    Frequency: 2 products (0.1%)
+    Type: string
+    Unique Values (1):
+      - Red
+
+  certification:
+    Frequency: 2 products (0.1%)
+    Type: string
+    Unique Values (1):
+      - CRS Certified
+
+  raised:
+    Frequency: 2 products (0.1%)
+    Type: boolean
+    True: 2, False: 0
+
+  scenes:
+    Frequency: 2 products (0.1%)
+    Type: integer
+    Range: 4 - 4
+    Unique Values (1): 4
+
+  compatibility:
+    Frequency: 1 products (0.1%)
+    Type: string
+    Unique Values (1):
+      - Entice Modular IR Switches
+
+  suitable_for:
+    Frequency: 1 products (0.1%)
+    Type: string
+    Unique Values (1):
+      - Oris 10M Boxes
+
+================================================================================
+End of Report
+================================================================================
