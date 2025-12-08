@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, Outlet, useLocation, Navigate } from 'react-router-dom';
 import {
   LayoutDashboard, Package, FolderOpen, Tags, FileUp,
@@ -34,7 +34,28 @@ const AdminLayout = () => {
   const location = useLocation();
   const { theme, setTheme } = useTheme();
   const [sidebarOpen, setSidebarOpen] = useState(false); // Start closed on mobile
+  const [isDesktop, setIsDesktop] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
+    return window.innerWidth >= 1024;
+  });
   const isAuthenticated = useAdminAuth();
+
+  // Track viewport width to decide when to keep sidebar open
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(min-width: 1024px)');
+    const handler = (e: MediaQueryListEvent | MediaQueryList) => {
+      setIsDesktop(e.matches);
+      // Ensure sidebar shown on desktop, hidden on mobile unless opened
+      if (e.matches) {
+        setSidebarOpen(false); // rely on isDesktop to show sidebar
+      }
+    };
+    // Initial sync
+    handler(mq);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
 
   if (!isAuthenticated && location.pathname !== '/admin/login') {
     return <Navigate to="/admin/login" replace />;
@@ -62,7 +83,7 @@ const AdminLayout = () => {
 
       {/* Sidebar */}
       <AnimatePresence mode="wait">
-        {(sidebarOpen || window.innerWidth >= 1024) && (
+        {(sidebarOpen || isDesktop) && (
           <motion.aside
             initial={{ x: -256 }}
             animate={{ x: 0 }}
@@ -92,7 +113,7 @@ const AdminLayout = () => {
                     to={item.path}
                     onClick={() => {
                       // Close sidebar on mobile when clicking a link
-                      if (window.innerWidth < 1024) {
+                      if (!isDesktop) {
                         setSidebarOpen(false);
                       }
                     }}
@@ -138,14 +159,16 @@ const AdminLayout = () => {
       <div className="flex-1 flex flex-col min-h-screen">
         <header className="sticky top-0 z-40 bg-card/80 backdrop-blur-xl border-b border-border">
           <div className="flex items-center justify-between px-6 py-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="lg:hidden"
-            >
-              <Menu className="h-5 w-5" />
-            </Button>
+            {!isDesktop && (
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setSidebarOpen(!sidebarOpen)}
+                className="lg:hidden"
+              >
+                <Menu className="h-5 w-5" />
+              </Button>
+            )}
             <Link
               to="/"
               className="ml-auto lg:ml-0 flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-secondary transition-colors"

@@ -135,15 +135,18 @@ export async function getProductBySlug(
     const data = await res.json();
     const product = transformProduct(data);
 
-    // Verify brand and product_family match
-    const brandSlug = brand.toLowerCase().replace(/\s+/g, '-');
-    const productBrandSlug = product.brand.toLowerCase().replace(/\s+/g, '-');
-    const productFamilySlug = productFamily.toLowerCase().replace(/\s+/g, '-');
-    const productSeriesSlug = product.series.toLowerCase().replace(/\s+/g, '-');
+    // Soft-check brand and family; don't fail hard to allow imperfect data
+    const brandSlug = (brand || '').toLowerCase().replace(/\s+/g, '-');
+    const productBrandSlug = (product.brand || '').toLowerCase().replace(/\s+/g, '-');
+    const productFamilySlug = (productFamily || '').toLowerCase().replace(/\s+/g, '-');
+    const productSeriesSlug = (product.series || '').toLowerCase().replace(/\s+/g, '-');
 
-    if (productBrandSlug !== brandSlug || productSeriesSlug !== productFamilySlug) {
-      // Brand or product family doesn't match, return null
-      return null;
+    // If both brand and series are present and don't match, log but still return product
+    if (brandSlug && productBrandSlug && productBrandSlug !== brandSlug) {
+      console.warn('Brand mismatch for slug lookup', { brandSlug, productBrandSlug });
+    }
+    if (productFamilySlug && productSeriesSlug && productSeriesSlug !== productFamilySlug) {
+      console.warn('Series/family mismatch for slug lookup', { productFamilySlug, productSeriesSlug });
     }
 
     return product;
