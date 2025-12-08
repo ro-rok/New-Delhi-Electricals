@@ -1,7 +1,11 @@
+from __future__ import annotations
+
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, Field
+
+from .product import CatalogSource, ProductStatus
 
 
 class Token(BaseModel):
@@ -22,15 +26,18 @@ class ProductBase(BaseModel):
     name: str
     brand: str
     category: str
+    subcategory: str | None = None
     series: str | None = None
     list_price: int = Field(..., description="List price in INR as integer rupees")
     currency: str = "INR"
-    images: List[str] = []
+    images: List[str] = Field(default_factory=list)
     datasheet_url: Optional[str] = None
-    specs: Dict[str, Any] = {}
-    description: Optional[str] = None
+    specs: Dict[str, Any] = Field(default_factory=dict)
+    description: str = ""
+    status: ProductStatus = Field(default_factory=ProductStatus)
     # Free-form source metadata so we can store file/page/confidence/import ids
-    catalog_source: Optional[Dict[str, Any]] = None
+    catalog_source: CatalogSource
+    slug: Optional[str] = None
 
 
 class ProductCreate(ProductBase):
@@ -41,6 +48,7 @@ class ProductUpdate(BaseModel):
     name: Optional[str] = None
     brand: Optional[str] = None
     category: Optional[str] = None
+    subcategory: Optional[str] = None
     series: Optional[str] = None
     list_price: Optional[int] = None
     currency: Optional[str] = None
@@ -48,7 +56,9 @@ class ProductUpdate(BaseModel):
     datasheet_url: Optional[str] = None
     specs: Optional[Dict[str, Any]] = None
     description: Optional[str] = None
-    status: Optional[Dict[str, Any]] = None
+    status: Optional[ProductStatus | Dict[str, Any]] = None
+    catalog_source: Optional[CatalogSource | Dict[str, Any]] = None
+    slug: Optional[str] = None
 
 
 class ProductInDB(ProductBase):

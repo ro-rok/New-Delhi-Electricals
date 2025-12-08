@@ -1,4 +1,4 @@
-import { Product, Category, Brand } from '@/types/product';
+import { Product, Category, Brand, CatalogSource } from '@/types/product';
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000';
 
@@ -26,6 +26,12 @@ function transformProduct(backendProduct: any): Product {
     backendProduct.slug ||
     null;
 
+  const status = backendProduct.status || {};
+  const isActive = status.is_active !== false;
+  const isFeatured = status.is_featured === true;
+
+  const catalogSource = transformCatalogSource(backendProduct.catalog_source, series);
+
   return {
     id: backendProduct._id || backendProduct.id || backendProduct.sku,
     sku: backendProduct.sku,
@@ -40,24 +46,43 @@ function transformProduct(backendProduct: any): Product {
     datasheetUrl: datasheetUrl,
     specs: transformSpecs(backendProduct.specs),
     description: description,
-    badge: backendProduct.status?.is_featured || backendProduct.badge ? 'popular' : undefined,
+    badge: isFeatured || backendProduct.badge ? 'popular' : undefined,
     slug: slug,
     comingSoon: backendProduct.status?.coming_soon || backendProduct.comingSoon || false,
-    isActive: backendProduct.status?.is_active !== false, // Default to true if undefined
-    catalogSource: backendProduct.catalog_source,
+    isActive: isActive,
+    status: status,
+    catalogSource: catalogSource,
   };
 }
 
-function transformSpecs(specs: any): Record<string, string> {
+function transformSpecs(specs: any): Record<string, string | number | boolean | null> {
   if (!specs) return {};
-  const result: Record<string, string> = {};
-  Object.keys(specs).forEach(key => {
-    const value = specs[key];
-    if (value !== null && value !== undefined) {
+  const result: Record<string, string | number | boolean | null> = {};
+  Object.entries(specs).forEach(([key, value]) => {
+    if (value === undefined) return;
+    if (value === null || typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
+      result[key] = value;
+    } else if (value && typeof value === 'object' && '$numberDouble' in value) {
+      const num = parseFloat((value as any)['$numberDouble']);
+      result[key] = Number.isNaN(num) ? null : num;
+    } else {
       result[key] = String(value);
     }
   });
   return result;
+}
+
+function transformCatalogSource(catalogSource: any, fallbackSeries: string): CatalogSource {
+  const productFamily = catalogSource?.product_family || fallbackSeries || '';
+  return {
+    product_family: productFamily,
+    source_file: catalogSource?.source_file,
+    subcategory: catalogSource?.subcategory,
+    variant: catalogSource?.variant,
+    pricing: catalogSource?.pricing,
+    seo: catalogSource?.seo,
+    highlights: catalogSource?.highlights,
+  };
 }
 
 export async function getProducts(params?: {

@@ -31,6 +31,27 @@ class ProductStatus(BaseModel):
     coming_soon: bool = False
 
 
+class CatalogSourcePricing(ProductPricing):
+    pass
+
+
+class CatalogSourceSEO(ProductSEO):
+    pass
+
+
+class CatalogSource(BaseModel):
+    product_family: str
+    source_file: Optional[str] = None
+    subcategory: Optional[str] = None
+    variant: List[str] = []
+    pricing: Optional[CatalogSourcePricing] = None
+    seo: Optional[CatalogSourceSEO] = None
+    highlights: List[object] = []
+
+    class Config:
+        extra = "allow"
+
+
 class SwitchSpecs(BaseModel):
     """
     Technical specifications for switches and related wiring accessories.
