@@ -3445,7 +3445,7 @@
   {
     "sku": "ACWPGOWV01",
     "name": "Outer Plate 1M Igloo White Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -3487,7 +3487,7 @@
   {
     "sku": "ACWPGOWV02",
     "name": "Outer Plate 2M Igloo White Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -3529,7 +3529,7 @@
   {
     "sku": "ACWPGOWV03",
     "name": "Outer Plate 3M without Pillar Igloo White Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -3572,7 +3572,7 @@
   {
     "sku": "ACWPGOWP03",
     "name": "Outer Plate 3M with Pillar Igloo White Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -3615,7 +3615,7 @@
   {
     "sku": "ACWPGOWV04",
     "name": "Outer Plate 4M Igloo White Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -3657,7 +3657,7 @@
   {
     "sku": "ACWPGOBV01",
     "name": "Outer Plate 1M Raven Black Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -3699,7 +3699,7 @@
   {
     "sku": "ACWPGOBV02",
     "name": "Outer Plate 2M Raven Black Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -3741,7 +3741,7 @@
   {
     "sku": "ACWPGOBV03",
     "name": "Outer Plate 3M without Pillar Raven Black Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -3784,7 +3784,7 @@
   {
     "sku": "ACWPGOBP03",
     "name": "Outer Plate 3M with Pillar Raven Black Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -3827,7 +3827,7 @@
   {
     "sku": "ACWPGOBV04",
     "name": "Outer Plate 4M Raven Black Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -3869,7 +3869,7 @@
   {
     "sku": "ACWPGOCV01",
     "name": "Outer Plate 1M Copper Mirror Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -3911,7 +3911,7 @@
   {
     "sku": "ACWPGOCV02",
     "name": "Outer Plate 2M Copper Mirror Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -3953,7 +3953,7 @@
   {
     "sku": "ACWPGOCV03",
     "name": "Outer Plate 3M without Pillar Copper Mirror Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -3996,7 +3996,7 @@
   {
     "sku": "ACWPGOCP03",
     "name": "Outer Plate 3M with Pillar Copper Mirror Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4039,7 +4039,7 @@
   {
     "sku": "ACWPGOCV04",
     "name": "Outer Plate 4M Copper Mirror Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4081,7 +4081,7 @@
   {
     "sku": "ACWPGOAV01",
     "name": "Outer Plate 1M Silver Sheen Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4123,7 +4123,7 @@
   {
     "sku": "ACWPGOAV02",
     "name": "Outer Plate 2M Silver Sheen Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4165,7 +4165,7 @@
   {
     "sku": "ACWPGOAV03",
     "name": "Outer Plate 3M without Pillar Silver Sheen Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4208,7 +4208,7 @@
   {
     "sku": "ACWPGOAP03",
     "name": "Outer Plate 3M with Pillar Silver Sheen Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4251,7 +4251,7 @@
   {
     "sku": "ACWPGOAV04",
     "name": "Outer Plate 4M Silver Sheen Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4293,7 +4293,7 @@
   {
     "sku": "ACWPGOGV01",
     "name": "Outer Plate 1M Frosted State Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4335,7 +4335,7 @@
   {
     "sku": "ACWPGOGV02",
     "name": "Outer Plate 2M Frosted State Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4377,7 +4377,7 @@
   {
     "sku": "ACWPGOGV03",
     "name": "Outer Plate 3M without Pillar Frosted State Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4420,7 +4420,7 @@
   {
     "sku": "ACWPGOGP03",
     "name": "Outer Plate 3M with Pillar Frosted State Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4463,7 +4463,7 @@
   {
     "sku": "ACWPGOGV04",
     "name": "Outer Plate 4M Frosted State Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4505,7 +4505,7 @@
   {
     "sku": "ACWPGOSV01",
     "name": "Outer Plate 1M Frosted Husky Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4547,7 +4547,7 @@
   {
     "sku": "ACWPGOSV02",
     "name": "Outer Plate 2M Frosted Husky Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4589,7 +4589,7 @@
   {
     "sku": "ACWPGOSV03",
     "name": "Outer Plate 3M without Pillar Frosted Husky Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4632,7 +4632,7 @@
   {
     "sku": "ACWPGOSP03",
     "name": "Outer Plate 3M with Pillar Frosted Husky Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4675,7 +4675,7 @@
   {
     "sku": "ACWPGOSV04",
     "name": "Outer Plate 4M Frosted Husky Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4717,7 +4717,7 @@
   {
     "sku": "ACWPGOWV06",
     "name": "Outer Plate 6M Igloo White Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4759,7 +4759,7 @@
   {
     "sku": "ACWPGOWH08",
     "name": "Outer Plate 8M Horizontal Igloo White Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4803,7 +4803,7 @@
   {
     "sku": "ACWPGOWV08",
     "name": "Outer Plate 8M Vertical Igloo White Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4847,7 +4847,7 @@
   {
     "sku": "ACWPGOWV12",
     "name": "Outer Plate 12M Igloo White Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4889,7 +4889,7 @@
   {
     "sku": "ACWPGOWV18",
     "name": "Outer Plate 18M Igloo White Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4931,7 +4931,7 @@
   {
     "sku": "ACWPGOBV06",
     "name": "Outer Plate 6M Raven Black Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -4973,7 +4973,7 @@
   {
     "sku": "ACWPGOBH08",
     "name": "Outer Plate 8M Horizontal Raven Black Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5017,7 +5017,7 @@
   {
     "sku": "ACWPGOBV08",
     "name": "Outer Plate 8M Vertical Raven Black Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5061,7 +5061,7 @@
   {
     "sku": "ACWPGOBV12",
     "name": "Outer Plate 12M Raven Black Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5103,7 +5103,7 @@
   {
     "sku": "ACWPGOBV18",
     "name": "Outer Plate 18M Raven Black Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5145,7 +5145,7 @@
   {
     "sku": "ACWPGOCV06",
     "name": "Outer Plate 6M Copper Mirror Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5187,7 +5187,7 @@
   {
     "sku": "ACWPGOCH08",
     "name": "Outer Plate 8M Horizontal Copper Mirror Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5231,7 +5231,7 @@
   {
     "sku": "ACWPGOCV08",
     "name": "Outer Plate 8M Vertical Copper Mirror Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5275,7 +5275,7 @@
   {
     "sku": "ACWPGOCV12",
     "name": "Outer Plate 12M Copper Mirror Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5317,7 +5317,7 @@
   {
     "sku": "ACWPGOCV18",
     "name": "Outer Plate 18M Copper Mirror Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5359,7 +5359,7 @@
   {
     "sku": "ACWPGOAV06",
     "name": "Outer Plate 6M Silver Sheen Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5401,7 +5401,7 @@
   {
     "sku": "ACWPGOAH08",
     "name": "Outer Plate 8M Horizontal Silver Sheen Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5445,7 +5445,7 @@
   {
     "sku": "ACWPGOAV08",
     "name": "Outer Plate 8M Vertical Silver Sheen Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5489,7 +5489,7 @@
   {
     "sku": "ACWPGOAV12",
     "name": "Outer Plate 12M Silver Sheen Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5531,7 +5531,7 @@
   {
     "sku": "ACWPGOAV18",
     "name": "Outer Plate 18M Silver Sheen Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5573,7 +5573,7 @@
   {
     "sku": "ACWPGOGV06",
     "name": "Outer Plate 6M Frosted State Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5615,7 +5615,7 @@
   {
     "sku": "ACWPGOGH08",
     "name": "Outer Plate 8M Horizontal Frosted State Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5659,7 +5659,7 @@
   {
     "sku": "ACWPGOGV08",
     "name": "Outer Plate 8M Vertical Frosted State Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5703,7 +5703,7 @@
   {
     "sku": "ACWPGOGV12",
     "name": "Outer Plate 12M Frosted State Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5745,7 +5745,7 @@
   {
     "sku": "ACWPGOGV18",
     "name": "Outer Plate 18M Frosted State Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5787,7 +5787,7 @@
   {
     "sku": "ACWPGOSV06",
     "name": "Outer Plate 6M Frosted Husky Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5829,7 +5829,7 @@
   {
     "sku": "ACWPGOSH08",
     "name": "Outer Plate 8M Horizontal Frosted Husky Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5873,7 +5873,7 @@
   {
     "sku": "ACWPGOSV08",
     "name": "Outer Plate 8M Vertical Frosted Husky Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5917,7 +5917,7 @@
   {
     "sku": "ACWPGOSV12",
     "name": "Outer Plate 12M Frosted Husky Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -5959,7 +5959,7 @@
   {
     "sku": "ACWPGOSV18",
     "name": "Outer Plate 18M Frosted Husky Glass",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -6001,7 +6001,7 @@
   {
     "sku": "ACWPMOBV01",
     "name": "Outer Plate 1M Charcoal Black Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6044,7 +6044,7 @@
   {
     "sku": "ACWPMOBV02",
     "name": "Outer Plate 2M Charcoal Black Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6087,7 +6087,7 @@
   {
     "sku": "ACWPMOBV03",
     "name": "Outer Plate 3M without Pillar Charcoal Black Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6131,7 +6131,7 @@
   {
     "sku": "ACWPMOBP03",
     "name": "Outer Plate 3M with Pillar Charcoal Black Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6175,7 +6175,7 @@
   {
     "sku": "ACWPMOBV04",
     "name": "Outer Plate 4M Charcoal Black Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6218,7 +6218,7 @@
   {
     "sku": "ACWPMOSV01",
     "name": "Outer Plate 1M Sterling Silver Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6261,7 +6261,7 @@
   {
     "sku": "ACWPMOSV02",
     "name": "Outer Plate 2M Sterling Silver Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6304,7 +6304,7 @@
   {
     "sku": "ACWPMOSV03",
     "name": "Outer Plate 3M without Pillar Sterling Silver Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6348,7 +6348,7 @@
   {
     "sku": "ACWPMOSP03",
     "name": "Outer Plate 3M with Pillar Sterling Silver Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6392,7 +6392,7 @@
   {
     "sku": "ACWPMOSV04",
     "name": "Outer Plate 4M Sterling Silver Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6435,7 +6435,7 @@
   {
     "sku": "ACWPMOGV01",
     "name": "Outer Plate 1M Gold Shimmer Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6478,7 +6478,7 @@
   {
     "sku": "ACWPMOGV02",
     "name": "Outer Plate 2M Gold Shimmer Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6521,7 +6521,7 @@
   {
     "sku": "ACWPMOGV03",
     "name": "Outer Plate 3M without Pillar Gold Shimmer Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6565,7 +6565,7 @@
   {
     "sku": "ACWPMOGP03",
     "name": "Outer Plate 3M with Pillar Gold Shimmer Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6609,7 +6609,7 @@
   {
     "sku": "ACWPMOGV04",
     "name": "Outer Plate 4M Gold Shimmer Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -6652,7 +6652,7 @@
   {
     "sku": "ACWPSOKV01",
     "name": "Outer Plate 1M Dusky Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -6695,7 +6695,7 @@
   {
     "sku": "ACWPSOKV02",
     "name": "Outer Plate 2M Dusky Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -6738,7 +6738,7 @@
   {
     "sku": "ACWPSOKV03",
     "name": "Outer Plate 3M without Pillar Dusky Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -6782,7 +6782,7 @@
   {
     "sku": "ACWPSOKP03",
     "name": "Outer Plate 3M with Pillar Dusky Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -6826,7 +6826,7 @@
   {
     "sku": "ACWPSOKV04",
     "name": "Outer Plate 4M Dusky Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -6869,7 +6869,7 @@
   {
     "sku": "ACWPSOSV01",
     "name": "Outer Plate 1M Sandi Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -6912,7 +6912,7 @@
   {
     "sku": "ACWPSOSV02",
     "name": "Outer Plate 2M Sandi Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -6955,7 +6955,7 @@
   {
     "sku": "ACWPSOSV03",
     "name": "Outer Plate 3M without Pillar Sandi Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -6999,7 +6999,7 @@
   {
     "sku": "ACWPSOSP03",
     "name": "Outer Plate 3M with Pillar Sandi Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -7043,7 +7043,7 @@
   {
     "sku": "ACWPSOSV04",
     "name": "Outer Plate 4M Sandi Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -7086,7 +7086,7 @@
   {
     "sku": "ACWPMOBV06",
     "name": "Outer Plate 6M Charcoal Black Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7129,7 +7129,7 @@
   {
     "sku": "ACWPMOBH08",
     "name": "Outer Plate 8M Horizontal Charcoal Black Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7174,7 +7174,7 @@
   {
     "sku": "ACWPMOBV08",
     "name": "Outer Plate 8M Vertical Charcoal Black Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7219,7 +7219,7 @@
   {
     "sku": "ACWPMOBV12",
     "name": "Outer Plate 12M Charcoal Black Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7262,7 +7262,7 @@
   {
     "sku": "ACWPMOBV18",
     "name": "Outer Plate 18M Charcoal Black Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7305,7 +7305,7 @@
   {
     "sku": "ACWPMOSV06",
     "name": "Outer Plate 6M Sterling Silver Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7348,7 +7348,7 @@
   {
     "sku": "ACWPMOSH08",
     "name": "Outer Plate 8M Horizontal Sterling Silver Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7393,7 +7393,7 @@
   {
     "sku": "ACWPMOSV08",
     "name": "Outer Plate 8M Vertical Sterling Silver Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7438,7 +7438,7 @@
   {
     "sku": "ACWPMOSV12",
     "name": "Outer Plate 12M Sterling Silver Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7481,7 +7481,7 @@
   {
     "sku": "ACWPMOSV18",
     "name": "Outer Plate 18M Sterling Silver Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7524,7 +7524,7 @@
   {
     "sku": "ACWPMOGV06",
     "name": "Outer Plate 6M Gold Shimmer Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7567,7 +7567,7 @@
   {
     "sku": "ACWPMOGH08",
     "name": "Outer Plate 8M Horizontal Gold Shimmer Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7612,7 +7612,7 @@
   {
     "sku": "ACWPMOGV08",
     "name": "Outer Plate 8M Vertical Gold Shimmer Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7657,7 +7657,7 @@
   {
     "sku": "ACWPMOGV12",
     "name": "Outer Plate 12M Gold Shimmer Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7700,7 +7700,7 @@
   {
     "sku": "ACWPMOGV18",
     "name": "Outer Plate 18M Gold Shimmer Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Metal (Aluminium) Plates without grid frames",
     "specs": {
@@ -7743,7 +7743,7 @@
   {
     "sku": "ACWPSOKV06",
     "name": "Outer Plate 6M Dusky Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -7786,7 +7786,7 @@
   {
     "sku": "ACWPSOKH08",
     "name": "Outer Plate 8M Horizontal Dusky Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -7831,7 +7831,7 @@
   {
     "sku": "ACWPSOKV08",
     "name": "Outer Plate 8M Vertical Dusky Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -7876,7 +7876,7 @@
   {
     "sku": "ACWPSOKV12",
     "name": "Outer Plate 12M Dusky Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -7919,7 +7919,7 @@
   {
     "sku": "ACWPSOKV18",
     "name": "Outer Plate 18M Dusky Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -7962,7 +7962,7 @@
   {
     "sku": "ACWPSOSV06",
     "name": "Outer Plate 6M Sandi Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -8005,7 +8005,7 @@
   {
     "sku": "ACWPSOSH08",
     "name": "Outer Plate 8M Horizontal Sandi Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -8050,7 +8050,7 @@
   {
     "sku": "ACWPSOSV08",
     "name": "Outer Plate 8M Vertical Sandi Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -8095,7 +8095,7 @@
   {
     "sku": "ACWPSOSV12",
     "name": "Outer Plate 12M Sandi Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -8138,7 +8138,7 @@
   {
     "sku": "ACWPSOSV18",
     "name": "Outer Plate 18M Sandi Wood",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Wood Plates without grid frames",
     "specs": {
@@ -8181,7 +8181,7 @@
   {
     "sku": "ACWPLIWV01",
     "name": "Inner Plate 1M Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -8222,7 +8222,7 @@
   {
     "sku": "ACWPLIWV03",
     "name": "Inner Plate 3M without Pillar Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -8264,7 +8264,7 @@
   {
     "sku": "ACWPLIWP03",
     "name": "Inner Plate 3M with Pillar Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -8306,7 +8306,7 @@
   {
     "sku": "ACWPLIWV04",
     "name": "Inner Plate 4M Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -8347,7 +8347,7 @@
   {
     "sku": "ACWPLIWV06",
     "name": "Inner Plate 6M Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -8388,7 +8388,7 @@
   {
     "sku": "ACWPLIWH08",
     "name": "Inner Plate 8M Horizontal Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -8431,7 +8431,7 @@
   {
     "sku": "ACWPLIWV08",
     "name": "Inner Plate 8M Vertical Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -8474,7 +8474,7 @@
   {
     "sku": "ACWPLIWV12",
     "name": "Inner Plate 12M Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -8515,7 +8515,7 @@
   {
     "sku": "ACWPGAWV18",
     "name": "Inner Plate 18M Plastic",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {
@@ -8556,7 +8556,7 @@
   {
     "sku": "ACWPLIWV18",
     "name": "Inner Plate 18M Metal",
-    "product_family": "Signia Grande",
+    "product_family": "Signia",
     "category": "Plates",
     "subcategory": "Grid Frames",
     "specs": {

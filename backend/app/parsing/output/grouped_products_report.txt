@@ -1,0 +1,92 @@
+================================================================================
+GROUPED PRODUCTS REPORT
+================================================================================
+
+Total products: 1,994
+Products with missing fields: 1,946
+
+MISSING FIELDS COUNTS:
+  subcategory: 1,946
+  catalog_source.seo.slug: 1,022
+  catalog_source.seo.keywords: 1,022
+  catalog_source.seo.meta_description: 1,022
+  specs: 1
+
+TOP PRODUCT FAMILIES (by count):
+  Penta: 464
+  Entice: 324
+  Englaze: 296
+  Signia: 296
+  Fabio: 200
+  Encurve: 143
+  Tripper: 132
+  Engem: 115
+  Enconnect: 24
+
+TOP CATEGORIES (by count):
+  Plates: 1,017
+  Switches: 419
+  Accessories: 147
+  Circuit Protection: 132
+  Hospitality: 86
+  Data Sockets: 60
+  Fan Controls: 45
+  Power Sockets: 44
+  Boxes: 27
+  Dimmers: 17
+
+PRODUCTS WITH MISSING FIELDS (first 50):
+  SKU AUCL03050050: Three Phase Automatic Changeover with Current Limiter 50A/50A | Missing: subcategory
+  SKU AUCL03063050: Three Phase Automatic Changeover with Current Limiter 63A/50A | Missing: subcategory
+  SKU AUCL03063063: Three Phase Automatic Changeover with Current Limiter 63A/63A | Missing: subcategory
+  SKU AUCL03080080: Three Phase Automatic Changeover with Current Limiter 80A/80A | Missing: subcategory
+  SKU AUCL03125125: Three Phase Automatic Changeover with Current Limiter 125A/125A | Missing: subcategory
+  SKU BCL010301E5: Automatic Changeover with Current Limiter 30A/1.5A Four Pole | Missing: subcategory
+  SKU BCL010302E5: Automatic Changeover with Current Limiter 30A/2.5A Four Pole | Missing: subcategory
+  SKU BCL01030003: Automatic Changeover with Current Limiter 30A/3A Four Pole | Missing: subcategory
+  SKU BCL01030004: Automatic Changeover with Current Limiter 30A/4A Four Pole | Missing: subcategory
+  SKU BCL01030005: Automatic Changeover with Current Limiter 30A/5A Four Pole | Missing: subcategory
+  SKU BCL01030006: Automatic Changeover with Current Limiter 30A/6A Four Pole | Missing: subcategory
+  SKU BCL01030008: Automatic Changeover with Current Limiter 30A/8A Four Pole | Missing: subcategory
+  SKU BCL01030010: Automatic Changeover with Current Limiter 30A/10A Four Pole | Missing: subcategory
+  SKU BCL01030012: Automatic Changeover with Current Limiter 30A/12A Four Pole | Missing: subcategory
+  SKU BCL01030015: Automatic Changeover with Current Limiter 30A/15A Four Pole | Missing: subcategory
+  SKU BCL01030020: Automatic Changeover with Current Limiter 30A/20A Four Pole | Missing: subcategory
+  SKU BCL01030030: Automatic Changeover with Current Limiter 30A/30A Four Pole | Missing: subcategory
+  SKU CB92601BW10: Soft Feel Bell Push 10AX 1-way 1M - Snow White | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92601BM10: Soft Feel Bell Push 10AX 1-way 1M - Mountain Grey | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92601BB10: Soft Feel Bell Push 10AX 1-way 1M - Sparkle Black | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92801BW10: Soft Feel Bell Push 10AX 1-way with Indicator 1M - Snow White | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92801BM10: Soft Feel Bell Push 10AX 1-way with Indicator 1M - Mountain Grey | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92801BB10: Soft Feel Bell Push 10AX 1-way with Indicator 1M - Sparkle Black | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92102MW25: Motor Starter 25A 2M - Snow White | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92102MM25: Motor Starter 25A 2M - Mountain Grey | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92102MB25: Motor Starter 25A 2M - Sparkle Black | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92602CW06: Socket 6A 3 Pin with ISI (Heavy Duty) 2M - Snow White | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92602CM06: Socket 6A 3 Pin with ISI (Heavy Duty) 2M - Mountain Grey | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92602CB06: Socket 6A 3 Pin with ISI (Heavy Duty) 2M - Sparkle Black | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92302CW16: Socket 6A/16A 3 Pin Combi with ISI 2M - Snow White | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92302CM16: Socket 6A/16A 3 Pin Combi with ISI 2M - Mountain Grey | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92302CB16: Socket 6A/16A 3 Pin Combi with ISI 2M - Sparkle Black | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92102RW02: Fan Regulator 5-Step 120W with ISI 2M - Snow White | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92102RM02: Fan Regulator 5-Step 120W with ISI 2M - Mountain Grey | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92102RB02: Fan Regulator 5-Step 120W with ISI 2M - Sparkle Black | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92202RW02: Fan Regulator 5-Step Flat Type 120W with ISI 2M - Snow White | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92202RM02: Fan Regulator 5-Step Flat Type 120W with ISI 2M - Mountain Grey | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92202RB02: Fan Regulator 5-Step Flat Type 120W with ISI 2M - Sparkle Black | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92101DW04: Dimmer 400W 1M - Snow White | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92101DM04: Dimmer 400W 1M - Mountain Grey | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92101DB04: Dimmer 400W 1M - Sparkle Black | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92101RW01: Fan Regulator 4-Step 80W 1M - Snow White | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92101RM01: Fan Regulator 4-Step 80W 1M - Mountain Grey | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU CB92101RB01: Fan Regulator 4-Step 80W 1M - Sparkle Black | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+  SKU AUC00202500: Modular Changeover Switch 25A Double Pole | Missing: subcategory
+  SKU AUC00204000: Modular Changeover Switch 40A Double Pole | Missing: subcategory
+  SKU AUC00206300: Modular Changeover Switch 63A Double Pole | Missing: subcategory
+  SKU AUC00404000: Modular Changeover Switch 40A Four Pole | Missing: subcategory
+  SKU AUC00406300: Modular Changeover Switch 63A Four Pole | Missing: subcategory
+  SKU CB94602SM02: Wi-fi Switch 2 Channel - Mountain Grey | Missing: subcategory, catalog_source.seo.slug, catalog_source.seo.keywords, catalog_source.seo.meta_description
+
+================================================================================
+End of Report
+================================================================================

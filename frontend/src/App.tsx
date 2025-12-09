@@ -17,7 +17,6 @@ import NotFound from "./pages/NotFound";
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const CategoryPage = lazy(() => import("./pages/CategoryPage"));
 const BrandPage = lazy(() => import("./pages/BrandPage"));
-const ProductPage = lazy(() => import("./pages/ProductPage"));
 const ProductSlugPage = lazy(() => import("./pages/ProductSlugPage"));
 const ShortlistPage = lazy(() => import("./pages/ShortlistPage"));
 const ComparePage = lazy(() => import("./pages/ComparePage"));
@@ -82,7 +81,6 @@ const App = () => (
                   <Route path="/brands" element={<BrandsListPage />} />
                   <Route path="/brand/:slug" element={<BrandPage />} />
                   <Route path="/product/:brand/:product_family/:slug" element={<ProductSlugPage />} />
-                  <Route path="/product/:id" element={<ProductPage />} />
                   <Route path="/shortlist" element={<ShortlistPage />} />
                   <Route path="/compare" element={<ComparePage />} />
                   <Route path="/cart" element={<CartPage />} />

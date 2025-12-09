@@ -1,0 +1,12 @@
+DONE vs MONGO COMPARISON
+================================================================================
+Done SKU count: 1994
+Mongo SKU count: 1994
+In Done only: 0
+In Mongo only: 0
+
+Sample Done-only (first 50):
+
+
+Sample Mongo-only (first 50):
+

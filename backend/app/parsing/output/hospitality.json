@@ -1,0 +1,1426 @@
+[
+  {
+    "sku": "CB95302HW32",
+    "name": "Mech Key Tag 32A 2M - White",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "encurve 3.json",
+    "source_product": {
+      "sku": "CB95302HW32",
+      "name": "Mech Key Tag 32A 2M - White",
+      "product_family": "ENCURVE",
+      "category": "Hospitality",
+      "subcategory": "Mechanical Key Tag Switches",
+      "specs": {
+        "ampere": 32,
+        "color": "White",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "Mech Key Tag 32A 2M"
+      },
+      "variant": [
+        "CB95302HG32"
+      ],
+      "pricing": {
+        "mrp": 996,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "mech-key-tag-32a-2m-white-encurve",
+        "keywords": [
+          "Hospitality",
+          "Mech Key Tag",
+          "32A",
+          "2M",
+          "White",
+          "ENCURVE"
+        ],
+        "meta_description": "Buy Mech Key Tag 32A 2M White online at New Delhi Electricals. ENCURVE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "encurve 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches"
+  },
+  {
+    "sku": "CB95302HG32",
+    "name": "Mech Key Tag 32A 2M - Magnesium Grey",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "encurve 3.json",
+    "source_product": {
+      "sku": "CB95302HG32",
+      "name": "Mech Key Tag 32A 2M - Magnesium Grey",
+      "product_family": "ENCURVE",
+      "category": "Hospitality",
+      "subcategory": "Mechanical Key Tag Switches",
+      "specs": {
+        "ampere": 32,
+        "color": "Magnesium Grey",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "Mech Key Tag 32A 2M"
+      },
+      "variant": [
+        "CB95302HW32"
+      ],
+      "pricing": {
+        "mrp": 1315,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "mech-key-tag-32a-2m-magnesium-grey-encurve",
+        "keywords": [
+          "Hospitality",
+          "Mech Key Tag",
+          "32A",
+          "2M",
+          "Magnesium Grey",
+          "ENCURVE"
+        ],
+        "meta_description": "Buy Mech Key Tag 32A 2M Magnesium Grey online at New Delhi Electricals. ENCURVE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "encurve 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches"
+  },
+  {
+    "sku": "CB95302HW00",
+    "name": "Spare key for Mech Key Tag - White",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "encurve 3.json",
+    "source_product": {
+      "sku": "CB95302HW00",
+      "name": "Spare key for Mech Key Tag - White",
+      "product_family": "ENCURVE",
+      "category": "Hospitality",
+      "subcategory": "Key Tag Accessories",
+      "specs": {
+        "ampere": null,
+        "color": "White",
+        "mw": null,
+        "has_indicator": false,
+        "type_detail": "Spare key for Mech Key Tag"
+      },
+      "variant": [
+        "CB95302HG00"
+      ],
+      "pricing": {
+        "mrp": 93,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "spare-key-mech-key-tag-white-encurve",
+        "keywords": [
+          "Hospitality",
+          "Mech Key Tag",
+          "Spare Key",
+          "White",
+          "ENCURVE"
+        ],
+        "meta_description": "Buy Spare Key for Mech Key Tag White online at New Delhi Electricals. ENCURVE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "encurve 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Key Tag Accessories"
+  },
+  {
+    "sku": "CB95302HG00",
+    "name": "Spare key for Mech Key Tag - Magnesium Grey",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "encurve 3.json",
+    "source_product": {
+      "sku": "CB95302HG00",
+      "name": "Spare key for Mech Key Tag - Magnesium Grey",
+      "product_family": "ENCURVE",
+      "category": "Hospitality",
+      "subcategory": "Key Tag Accessories",
+      "specs": {
+        "ampere": null,
+        "color": "Magnesium Grey",
+        "mw": null,
+        "has_indicator": false,
+        "type_detail": "Spare key for Mech Key Tag"
+      },
+      "variant": [
+        "CB95302HW00"
+      ],
+      "pricing": {
+        "mrp": 104,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "spare-key-mech-key-tag-magnesium-grey-encurve",
+        "keywords": [
+          "Hospitality",
+          "Mech Key Tag",
+          "Spare Key",
+          "Magnesium Grey",
+          "ENCURVE"
+        ],
+        "meta_description": "Buy Spare Key for Mech Key Tag Magnesium Grey online at New Delhi Electricals. ENCURVE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "encurve 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Key Tag Accessories"
+  },
+  {
+    "sku": "CB95502HW10",
+    "name": "DND-MMR Inside Room Unit 2M - White",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "encurve 3.json",
+    "source_product": {
+      "sku": "CB95502HW10",
+      "name": "DND-MMR Inside Room Unit 2M - White",
+      "product_family": "ENCURVE",
+      "category": "Hospitality",
+      "subcategory": "DND-MMR Units",
+      "specs": {
+        "ampere": null,
+        "color": "White",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "DND-MMR Inside Room Unit 2M"
+      },
+      "variant": [
+        "CB95502HG10"
+      ],
+      "pricing": {
+        "mrp": 688,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "dnd-mmr-inside-room-unit-2m-white-encurve",
+        "keywords": [
+          "Hospitality",
+          "DND",
+          "MMR",
+          "Inside Room Unit",
+          "2M",
+          "White",
+          "ENCURVE"
+        ],
+        "meta_description": "Buy DND-MMR Inside Room Unit 2M White online at New Delhi Electricals. ENCURVE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "encurve 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units"
+  },
+  {
+    "sku": "CB95502HG10",
+    "name": "DND-MMR Inside Room Unit 2M - Magnesium Grey",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "encurve 3.json",
+    "source_product": {
+      "sku": "CB95502HG10",
+      "name": "DND-MMR Inside Room Unit 2M - Magnesium Grey",
+      "product_family": "ENCURVE",
+      "category": "Hospitality",
+      "subcategory": "DND-MMR Units",
+      "specs": {
+        "ampere": null,
+        "color": "Magnesium Grey",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "DND-MMR Inside Room Unit 2M"
+      },
+      "variant": [
+        "CB95502HW10"
+      ],
+      "pricing": {
+        "mrp": 1004,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "dnd-mmr-inside-room-unit-2m-magnesium-grey-encurve",
+        "keywords": [
+          "Hospitality",
+          "DND",
+          "MMR",
+          "Inside Room Unit",
+          "2M",
+          "Magnesium Grey",
+          "ENCURVE"
+        ],
+        "meta_description": "Buy DND-MMR Inside Room Unit 2M Magnesium Grey online at New Delhi Electricals. ENCURVE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "encurve 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units"
+  },
+  {
+    "sku": "CB95601HW10",
+    "name": "DND-MMR Outside Room Unit 1M - White",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "encurve 3.json",
+    "source_product": {
+      "sku": "CB95601HW10",
+      "name": "DND-MMR Outside Room Unit 1M - White",
+      "product_family": "ENCURVE",
+      "category": "Hospitality",
+      "subcategory": "DND-MMR Units",
+      "specs": {
+        "ampere": null,
+        "color": "White",
+        "mw": 1,
+        "has_indicator": false,
+        "type_detail": "DND-MMR Outside Room Unit 1M"
+      },
+      "variant": [
+        "CB95601HG10"
+      ],
+      "pricing": {
+        "mrp": 736,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "dnd-mmr-outside-room-unit-1m-white-encurve",
+        "keywords": [
+          "Hospitality",
+          "DND",
+          "MMR",
+          "Outside Room Unit",
+          "1M",
+          "White",
+          "ENCURVE"
+        ],
+        "meta_description": "Buy DND-MMR Outside Room Unit 1M White online at New Delhi Electricals. ENCURVE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "encurve 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units"
+  },
+  {
+    "sku": "CB95601HG10",
+    "name": "DND-MMR Outside Room Unit 1M - Magnesium Grey",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "encurve 3.json",
+    "source_product": {
+      "sku": "CB95601HG10",
+      "name": "DND-MMR Outside Room Unit 1M - Magnesium Grey",
+      "product_family": "ENCURVE",
+      "category": "Hospitality",
+      "subcategory": "DND-MMR Units",
+      "specs": {
+        "ampere": null,
+        "color": "Magnesium Grey",
+        "mw": 1,
+        "has_indicator": false,
+        "type_detail": "DND-MMR Outside Room Unit 1M"
+      },
+      "variant": [
+        "CB95601HW10"
+      ],
+      "pricing": {
+        "mrp": 1114,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "dnd-mmr-outside-room-unit-1m-magnesium-grey-encurve",
+        "keywords": [
+          "Hospitality",
+          "DND",
+          "MMR",
+          "Outside Room Unit",
+          "1M",
+          "Magnesium Grey",
+          "ENCURVE"
+        ],
+        "meta_description": "Buy DND-MMR Outside Room Unit 1M Magnesium Grey online at New Delhi Electricals. ENCURVE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "encurve 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units"
+  },
+  {
+    "sku": "CB92202HW20",
+    "name": "Mech Key Tag Switch 20A 2M - Snow White",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92202HW20",
+      "name": "Mech Key Tag Switch 20A 2M - Snow White",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "Mechanical Key Tag Switches",
+      "specs": {
+        "ampere": 20,
+        "color": "Snow White",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "Mech Key Tag Switch 20A 2M"
+      },
+      "variant": [
+        "CB92202HM20",
+        "CB92202HB20"
+      ],
+      "pricing": {
+        "mrp": 1319,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "5"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "mech-key-tag-switch-20a-2m-snow-white",
+        "keywords": [
+          "Hospitality",
+          "Key Tag Switch",
+          "20A",
+          "2M",
+          "Snow White",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy Mech Key Tag Switch 20A 2M Snow White online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches"
+  },
+  {
+    "sku": "CB92202HM20",
+    "name": "Mech Key Tag Switch 20A 2M - Mountain Grey",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92202HM20",
+      "name": "Mech Key Tag Switch 20A 2M - Mountain Grey",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "Mechanical Key Tag Switches",
+      "specs": {
+        "ampere": 20,
+        "color": "Mountain Grey",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "Mech Key Tag Switch 20A 2M"
+      },
+      "variant": [
+        "CB92202HW20",
+        "CB92202HB20"
+      ],
+      "pricing": {
+        "mrp": 1650,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "5"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "mech-key-tag-switch-20a-2m-mountain-grey",
+        "keywords": [
+          "Hospitality",
+          "Key Tag Switch",
+          "20A",
+          "2M",
+          "Mountain Grey",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy Mech Key Tag Switch 20A 2M Mountain Grey online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches"
+  },
+  {
+    "sku": "CB92202HB20",
+    "name": "Mech Key Tag Switch 20A 2M - Sparkle Black",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92202HB20",
+      "name": "Mech Key Tag Switch 20A 2M - Sparkle Black",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "Mechanical Key Tag Switches",
+      "specs": {
+        "ampere": 20,
+        "color": "Sparkle Black",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "Mech Key Tag Switch 20A 2M"
+      },
+      "variant": [
+        "CB92202HW20",
+        "CB92202HM20"
+      ],
+      "pricing": {
+        "mrp": 1650,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "5"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "mech-key-tag-switch-20a-2m-sparkle-black",
+        "keywords": [
+          "Hospitality",
+          "Key Tag Switch",
+          "20A",
+          "2M",
+          "Sparkle Black",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy Mech Key Tag Switch 20A 2M Sparkle Black online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches"
+  },
+  {
+    "sku": "CB92302HW32",
+    "name": "Mech Key Tag Switch 32A 2M - Snow White",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92302HW32",
+      "name": "Mech Key Tag Switch 32A 2M - Snow White",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "Mechanical Key Tag Switches",
+      "specs": {
+        "ampere": 32,
+        "color": "Snow White",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "Mech Key Tag Switch 32A 2M"
+      },
+      "variant": [
+        "CB92302HM32",
+        "CB92302HB32"
+      ],
+      "pricing": {
+        "mrp": 1493,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "5"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "mech-key-tag-switch-32a-2m-snow-white",
+        "keywords": [
+          "Hospitality",
+          "Key Tag Switch",
+          "32A",
+          "2M",
+          "Snow White",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy Mech Key Tag Switch 32A 2M Snow White online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches"
+  },
+  {
+    "sku": "CB92302HM32",
+    "name": "Mech Key Tag Switch 32A 2M - Mountain Grey",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92302HM32",
+      "name": "Mech Key Tag Switch 32A 2M - Mountain Grey",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "Mechanical Key Tag Switches",
+      "specs": {
+        "ampere": 32,
+        "color": "Mountain Grey",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "Mech Key Tag Switch 32A 2M"
+      },
+      "variant": [
+        "CB92302HW32",
+        "CB92302HB32"
+      ],
+      "pricing": {
+        "mrp": 1867,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "5"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "mech-key-tag-switch-32a-2m-mountain-grey",
+        "keywords": [
+          "Hospitality",
+          "Key Tag Switch",
+          "32A",
+          "2M",
+          "Mountain Grey",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy Mech Key Tag Switch 32A 2M Mountain Grey online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches"
+  },
+  {
+    "sku": "CB92302HB32",
+    "name": "Mech Key Tag Switch 32A 2M - Sparkle Black",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92302HB32",
+      "name": "Mech Key Tag Switch 32A 2M - Sparkle Black",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "Mechanical Key Tag Switches",
+      "specs": {
+        "ampere": 32,
+        "color": "Sparkle Black",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "Mech Key Tag Switch 32A 2M"
+      },
+      "variant": [
+        "CB92302HW32",
+        "CB92302HM32"
+      ],
+      "pricing": {
+        "mrp": 1867,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "5"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "mech-key-tag-switch-32a-2m-sparkle-black",
+        "keywords": [
+          "Hospitality",
+          "Key Tag Switch",
+          "32A",
+          "2M",
+          "Sparkle Black",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy Mech Key Tag Switch 32A 2M Sparkle Black online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches"
+  },
+  {
+    "sku": "CB92302HW00",
+    "name": "Spare Key for Mech Key Tag - Snow White",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92302HW00",
+      "name": "Spare Key for Mech Key Tag - Snow White",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "Key Tag Accessories",
+      "specs": {
+        "ampere": null,
+        "color": "Snow White",
+        "mw": null,
+        "has_indicator": false,
+        "type_detail": "Spare Key for Mech Key Tag"
+      },
+      "variant": [
+        "CB92302HM00",
+        "CB92302HB00"
+      ],
+      "pricing": {
+        "mrp": 129,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "spare-key-mech-key-tag-snow-white",
+        "keywords": [
+          "Hospitality",
+          "Spare Key",
+          "Mech Key Tag",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy Spare Key for Mech Key Tag Snow White online at New Delhi Electricals. ENGLAZE hospitality range accessory."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Key Tag Accessories"
+  },
+  {
+    "sku": "CB92302HM00",
+    "name": "Spare Key for Mech Key Tag - Mountain Grey",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92302HM00",
+      "name": "Spare Key for Mech Key Tag - Mountain Grey",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "Key Tag Accessories",
+      "specs": {
+        "ampere": null,
+        "color": "Mountain Grey",
+        "mw": null,
+        "has_indicator": false,
+        "type_detail": "Spare Key for Mech Key Tag"
+      },
+      "variant": [
+        "CB92302HW00",
+        "CB92302HB00"
+      ],
+      "pricing": {
+        "mrp": 144,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "spare-key-mech-key-tag-mountain-grey",
+        "keywords": [
+          "Hospitality",
+          "Spare Key",
+          "Mech Key Tag",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy Spare Key for Mech Key Tag Mountain Grey online at New Delhi Electricals. ENGLAZE hospitality range accessory."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Key Tag Accessories"
+  },
+  {
+    "sku": "CB92302HB00",
+    "name": "Spare Key for Mech Key Tag - Sparkle Black",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92302HB00",
+      "name": "Spare Key for Mech Key Tag - Sparkle Black",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "Key Tag Accessories",
+      "specs": {
+        "ampere": null,
+        "color": "Sparkle Black",
+        "mw": null,
+        "has_indicator": false,
+        "type_detail": "Spare Key for Mech Key Tag"
+      },
+      "variant": [
+        "CB92302HW00",
+        "CB92302HM00"
+      ],
+      "pricing": {
+        "mrp": 144,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "spare-key-mech-key-tag-sparkle-black",
+        "keywords": [
+          "Hospitality",
+          "Spare Key",
+          "Mech Key Tag",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy Spare Key for Mech Key Tag Sparkle Black online at New Delhi Electricals. ENGLAZE hospitality range accessory."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Key Tag Accessories"
+  },
+  {
+    "sku": "CB92403HW20",
+    "name": "Electronic Key Tag 20A 3M - Snow White",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92403HW20",
+      "name": "Electronic Key Tag 20A 3M - Snow White",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "Mechanical Key Tag Switches",
+      "specs": {
+        "ampere": 20,
+        "color": "Snow White",
+        "mw": 3,
+        "has_indicator": false,
+        "type_detail": "Electronic Key Tag 20A 3M"
+      },
+      "variant": [
+        "CB92403HM20",
+        "CB92403HB20"
+      ],
+      "pricing": {
+        "mrp": 5886,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "2"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "electronic-key-tag-20a-3m-snow-white",
+        "keywords": [
+          "Hospitality",
+          "Electronic Key Tag",
+          "20A",
+          "3M",
+          "Snow White",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy Electronic Key Tag 20A 3M Snow White online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches"
+  },
+  {
+    "sku": "CB92403HM20",
+    "name": "Electronic Key Tag 20A 3M - Mountain Grey",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92403HM20",
+      "name": "Electronic Key Tag 20A 3M - Mountain Grey",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "Mechanical Key Tag Switches",
+      "specs": {
+        "ampere": 20,
+        "color": "Mountain Grey",
+        "mw": 3,
+        "has_indicator": false,
+        "type_detail": "Electronic Key Tag 20A 3M"
+      },
+      "variant": [
+        "CB92403HW20",
+        "CB92403HB20"
+      ],
+      "pricing": {
+        "mrp": 7356,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "2"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "electronic-key-tag-20a-3m-mountain-grey",
+        "keywords": [
+          "Hospitality",
+          "Electronic Key Tag",
+          "20A",
+          "3M",
+          "Mountain Grey",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy Electronic Key Tag 20A 3M Mountain Grey online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches"
+  },
+  {
+    "sku": "CB92403HB20",
+    "name": "Electronic Key Tag 20A 3M - Sparkle Black",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92403HB20",
+      "name": "Electronic Key Tag 20A 3M - Sparkle Black",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "Mechanical Key Tag Switches",
+      "specs": {
+        "ampere": 20,
+        "color": "Sparkle Black",
+        "mw": 3,
+        "has_indicator": false,
+        "type_detail": "Electronic Key Tag 20A 3M"
+      },
+      "variant": [
+        "CB92403HW20",
+        "CB92403HM20"
+      ],
+      "pricing": {
+        "mrp": 7356,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "2"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "electronic-key-tag-20a-3m-sparkle-black",
+        "keywords": [
+          "Hospitality",
+          "Electronic Key Tag",
+          "20A",
+          "3M",
+          "Sparkle Black",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy Electronic Key Tag 20A 3M Sparkle Black online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "Mechanical Key Tag Switches"
+  },
+  {
+    "sku": "CB92502HW10",
+    "name": "DND-MMR Inside Room Unit 2M - Snow White",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92502HW10",
+      "name": "DND-MMR Inside Room Unit 2M - Snow White",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "DND-MMR Units",
+      "specs": {
+        "ampere": null,
+        "color": "Snow White",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "DND-MMR Inside Room Unit 2M"
+      },
+      "variant": [
+        "CB92502HM10",
+        "CB92502HB10"
+      ],
+      "pricing": {
+        "mrp": 1361,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "dnd-mmr-inside-room-unit-2m-snow-white",
+        "keywords": [
+          "Hospitality",
+          "DND",
+          "MMR",
+          "Inside Room Unit",
+          "2M",
+          "Snow White",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy DND-MMR Inside Room Unit 2M Snow White online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units"
+  },
+  {
+    "sku": "CB92502HM10",
+    "name": "DND-MMR Inside Room Unit 2M - Mountain Grey",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92502HM10",
+      "name": "DND-MMR Inside Room Unit 2M - Mountain Grey",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "DND-MMR Units",
+      "specs": {
+        "ampere": null,
+        "color": "Mountain Grey",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "DND-MMR Inside Room Unit 2M"
+      },
+      "variant": [
+        "CB92502HW10",
+        "CB92502HB10"
+      ],
+      "pricing": {
+        "mrp": 1702,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "dnd-mmr-inside-room-unit-2m-mountain-grey",
+        "keywords": [
+          "Hospitality",
+          "DND",
+          "MMR",
+          "Inside Room Unit",
+          "2M",
+          "Mountain Grey",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy DND-MMR Inside Room Unit 2M Mountain Grey online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units"
+  },
+  {
+    "sku": "CB92502HB10",
+    "name": "DND-MMR Inside Room Unit 2M - Sparkle Black",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92502HB10",
+      "name": "DND-MMR Inside Room Unit 2M - Sparkle Black",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "DND-MMR Units",
+      "specs": {
+        "ampere": null,
+        "color": "Sparkle Black",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "DND-MMR Inside Room Unit 2M"
+      },
+      "variant": [
+        "CB92502HW10",
+        "CB92502HM10"
+      ],
+      "pricing": {
+        "mrp": 1702,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "dnd-mmr-inside-room-unit-2m-sparkle-black",
+        "keywords": [
+          "Hospitality",
+          "DND",
+          "MMR",
+          "Inside Room Unit",
+          "2M",
+          "Sparkle Black",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy DND-MMR Inside Room Unit 2M Sparkle Black online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units"
+  },
+  {
+    "sku": "CB92602HW10",
+    "name": "DND-MMR Outside Room Unit 2M - Snow White",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92602HW10",
+      "name": "DND-MMR Outside Room Unit 2M - Snow White",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "DND-MMR Units",
+      "specs": {
+        "ampere": null,
+        "color": "Snow White",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "DND-MMR Outside Room Unit 2M"
+      },
+      "variant": [
+        "CB92602HM10",
+        "CB92602HB10"
+      ],
+      "pricing": {
+        "mrp": 966,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "dnd-mmr-outside-room-unit-2m-snow-white",
+        "keywords": [
+          "Hospitality",
+          "DND",
+          "MMR",
+          "Outside Room Unit",
+          "2M",
+          "Snow White",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy DND-MMR Outside Room Unit 2M Snow White online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units"
+  },
+  {
+    "sku": "CB92602HM10",
+    "name": "DND-MMR Outside Room Unit 2M - Mountain Grey",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92602HM10",
+      "name": "DND-MMR Outside Room Unit 2M - Mountain Grey",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "DND-MMR Units",
+      "specs": {
+        "ampere": null,
+        "color": "Mountain Grey",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "DND-MMR Outside Room Unit 2M"
+      },
+      "variant": [
+        "CB92602HW10",
+        "CB92602HB10"
+      ],
+      "pricing": {
+        "mrp": 1207,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "dnd-mmr-outside-room-unit-2m-mountain-grey",
+        "keywords": [
+          "Hospitality",
+          "DND",
+          "MMR",
+          "Outside Room Unit",
+          "2M",
+          "Mountain Grey",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy DND-MMR Outside Room Unit 2M Mountain Grey online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units"
+  },
+  {
+    "sku": "CB92602HB10",
+    "name": "DND-MMR Outside Room Unit 2M - Sparkle Black",
+    "db_category": "Hospitality",
+    "source_category": "Switches",
+    "source_file": "englaze 3.json",
+    "source_product": {
+      "sku": "CB92602HB10",
+      "name": "DND-MMR Outside Room Unit 2M - Sparkle Black",
+      "product_family": "ENGLAZE",
+      "category": "Hospitality",
+      "subcategory": "DND-MMR Units",
+      "specs": {
+        "ampere": null,
+        "color": "Sparkle Black",
+        "mw": 2,
+        "has_indicator": false,
+        "type_detail": "DND-MMR Outside Room Unit 2M"
+      },
+      "variant": [
+        "CB92602HW10",
+        "CB92602HM10"
+      ],
+      "pricing": {
+        "mrp": 1207,
+        "discount": null,
+        "selling_price": null,
+        "std_pack": "10"
+      },
+      "media": {
+        "images": [],
+        "documents": []
+      },
+      "seo": {
+        "slug": "dnd-mmr-outside-room-unit-2m-sparkle-black",
+        "keywords": [
+          "Hospitality",
+          "DND",
+          "MMR",
+          "Outside Room Unit",
+          "2M",
+          "Sparkle Black",
+          "ENGLAZE"
+        ],
+        "meta_description": "Buy DND-MMR Outside Room Unit 2M Sparkle Black online at New Delhi Electricals. ENGLAZE hospitality range."
+      },
+      "status": {
+        "is_active": true,
+        "is_featured": false
+      },
+      "brand": "Lauritz Knudsen",
+      "_source_file": "englaze 3.json"
+    },
+    "category": "Hospitality",
+    "subcategory": "DND-MMR Units"
+  }
+]

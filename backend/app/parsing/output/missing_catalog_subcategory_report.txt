@@ -1,0 +1,81 @@
+================================================================================
+PRODUCTS MISSING catalog_source.subcategory
+================================================================================
+
+Total products: 1,994
+Missing catalog_source.subcategory: 1,022
+
+BY CATEGORY:
+  Plates: 562
+  Switches: 230
+  Accessories: 73
+  Hospitality: 44
+  Data Sockets: 29
+  Boxes: 27
+  Fan Controls: 26
+  Power Sockets: 20
+  Dimmers: 11
+
+BY PRODUCT FAMILY:
+  Entice: 324
+  Englaze: 296
+  Encurve: 143
+  Signia: 120
+  Engem: 115
+  Enconnect: 24
+
+SAMPLE (first 50):
+  SKU CB92601BW10 | Soft Feel Bell Push 10AX 1-way 1M - Snow White | category=Switches | subcategory=None
+  SKU CB92601BM10 | Soft Feel Bell Push 10AX 1-way 1M - Mountain Grey | category=Switches | subcategory=None
+  SKU CB92601BB10 | Soft Feel Bell Push 10AX 1-way 1M - Sparkle Black | category=Switches | subcategory=None
+  SKU CB92801BW10 | Soft Feel Bell Push 10AX 1-way with Indicator 1M - Snow White | category=Switches | subcategory=None
+  SKU CB92801BM10 | Soft Feel Bell Push 10AX 1-way with Indicator 1M - Mountain Grey | category=Switches | subcategory=None
+  SKU CB92801BB10 | Soft Feel Bell Push 10AX 1-way with Indicator 1M - Sparkle Black | category=Switches | subcategory=None
+  SKU CB92102MW25 | Motor Starter 25A 2M - Snow White | category=Switches | subcategory=None
+  SKU CB92102MM25 | Motor Starter 25A 2M - Mountain Grey | category=Switches | subcategory=None
+  SKU CB92102MB25 | Motor Starter 25A 2M - Sparkle Black | category=Switches | subcategory=None
+  SKU CB92602CW06 | Socket 6A 3 Pin with ISI (Heavy Duty) 2M - Snow White | category=Power Sockets | subcategory=None
+  SKU CB92602CM06 | Socket 6A 3 Pin with ISI (Heavy Duty) 2M - Mountain Grey | category=Power Sockets | subcategory=None
+  SKU CB92602CB06 | Socket 6A 3 Pin with ISI (Heavy Duty) 2M - Sparkle Black | category=Power Sockets | subcategory=None
+  SKU CB92302CW16 | Socket 6A/16A 3 Pin Combi with ISI 2M - Snow White | category=Power Sockets | subcategory=None
+  SKU CB92302CM16 | Socket 6A/16A 3 Pin Combi with ISI 2M - Mountain Grey | category=Power Sockets | subcategory=None
+  SKU CB92302CB16 | Socket 6A/16A 3 Pin Combi with ISI 2M - Sparkle Black | category=Power Sockets | subcategory=None
+  SKU CB92102RW02 | Fan Regulator 5-Step 120W with ISI 2M - Snow White | category=Fan Controls | subcategory=None
+  SKU CB92102RM02 | Fan Regulator 5-Step 120W with ISI 2M - Mountain Grey | category=Fan Controls | subcategory=None
+  SKU CB92102RB02 | Fan Regulator 5-Step 120W with ISI 2M - Sparkle Black | category=Fan Controls | subcategory=None
+  SKU CB92202RW02 | Fan Regulator 5-Step Flat Type 120W with ISI 2M - Snow White | category=Fan Controls | subcategory=None
+  SKU CB92202RM02 | Fan Regulator 5-Step Flat Type 120W with ISI 2M - Mountain Grey | category=Fan Controls | subcategory=None
+  SKU CB92202RB02 | Fan Regulator 5-Step Flat Type 120W with ISI 2M - Sparkle Black | category=Fan Controls | subcategory=None
+  SKU CB92101DW04 | Dimmer 400W 1M - Snow White | category=Dimmers | subcategory=None
+  SKU CB92101DM04 | Dimmer 400W 1M - Mountain Grey | category=Dimmers | subcategory=None
+  SKU CB92101DB04 | Dimmer 400W 1M - Sparkle Black | category=Dimmers | subcategory=None
+  SKU CB92101RW01 | Fan Regulator 4-Step 80W 1M - Snow White | category=Fan Controls | subcategory=None
+  SKU CB92101RM01 | Fan Regulator 4-Step 80W 1M - Mountain Grey | category=Fan Controls | subcategory=None
+  SKU CB92101RB01 | Fan Regulator 4-Step 80W 1M - Sparkle Black | category=Fan Controls | subcategory=None
+  SKU CB94602SM02 | Wi-fi Switch 2 Channel - Mountain Grey | category=Switches | subcategory=None
+  SKU CB94602SB02 | Wi-fi Switch 2 Channel - Sparkle Black | category=Switches | subcategory=None
+  SKU CB94602SL02 | Wi-fi Switch 2 Channel - Black Glass | category=Switches | subcategory=None
+  SKU CB94602SM04 | Wi-fi Switch 4 Channel - Mountain Grey | category=Switches | subcategory=None
+  SKU CB94602SB04 | Wi-fi Switch 4 Channel - Sparkle Black | category=Switches | subcategory=None
+  SKU CB94602SL04 | Wi-fi Switch 4 Channel - Black Glass | category=Switches | subcategory=None
+  SKU CB94602SM20 | Wi-fi Switch 20A for Power Load - Mountain Grey | category=Switches | subcategory=None
+  SKU CB94602SB20 | Wi-fi Switch 20A for Power Load - Sparkle Black | category=Switches | subcategory=None
+  SKU CB94602SL20 | Wi-fi Switch 20A for Power Load - Black Glass | category=Switches | subcategory=None
+  SKU CB94702SM20 | Wi-fi Switch 20A with Energy Monitoring - Mountain Grey | category=Switches | subcategory=None
+  SKU CB94702SB20 | Wi-fi Switch 20A with Energy Monitoring - Sparkle Black | category=Switches | subcategory=None
+  SKU CB94702SL20 | Wi-fi Switch 20A with Energy Monitoring - Black Glass | category=Switches | subcategory=None
+  SKU CB94602FM00 | Wi-fi Fan Regulator 5 Step - Mountain Grey | category=Fan Controls | subcategory=None
+  SKU CB94602FB00 | Wi-fi Fan Regulator 5 Step - Sparkle Black | category=Fan Controls | subcategory=None
+  SKU CB94602FL00 | Wi-fi Fan Regulator 5 Step - Black Glass | category=Fan Controls | subcategory=None
+  SKU CB94602DM00 | Wi-fi Light Dimmer 5 Step - Mountain Grey | category=Accessories | subcategory=None
+  SKU CB94602DB00 | Wi-fi Light Dimmer 5 Step - Sparkle Black | category=Accessories | subcategory=None
+  SKU CB94602DL00 | Wi-fi Light Dimmer 5 Step - Black Glass | category=Accessories | subcategory=None
+  SKU CB94602CM00 | Wi-fi Curtain Controller - Mountain Grey | category=Accessories | subcategory=None
+  SKU CB94602CB00 | Wi-fi Curtain Controller - Sparkle Black | category=Accessories | subcategory=None
+  SKU CB94602CL00 | Wi-fi Curtain Controller - Black Glass | category=Accessories | subcategory=None
+  SKU CB94602SM00 | Wi-fi Scene Controller - Mountain Grey | category=Accessories | subcategory=None
+  SKU CB94602SB00 | Wi-fi Scene Controller - Sparkle Black | category=Accessories | subcategory=None
+
+================================================================================
+End of Report
+================================================================================

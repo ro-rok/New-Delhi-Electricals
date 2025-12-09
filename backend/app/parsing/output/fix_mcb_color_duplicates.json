@@ -1,0 +1,86 @@
+{
+  "applied": [
+    {
+      "sku": "DCWNCSPA010",
+      "old_slug": "signia-mini-mcb-10a-sp-c",
+      "new_slug": "signia-mini-mcb-10a-sp-c-white",
+      "color": "White",
+      "matched": 1,
+      "modified": 1
+    },
+    {
+      "sku": "DCWNCSPA01000MR",
+      "old_slug": "signia-mini-mcb-10a-sp-c",
+      "new_slug": "signia-mini-mcb-10a-sp-c-grey",
+      "color": "Grey",
+      "matched": 1,
+      "modified": 1
+    },
+    {
+      "sku": "DCWNCSPA016",
+      "old_slug": "signia-mini-mcb-16a-sp-c",
+      "new_slug": "signia-mini-mcb-16a-sp-c-white",
+      "color": "White",
+      "matched": 1,
+      "modified": 1
+    },
+    {
+      "sku": "DCWNCSPA01600MR",
+      "old_slug": "signia-mini-mcb-16a-sp-c",
+      "new_slug": "signia-mini-mcb-16a-sp-c-grey",
+      "color": "Grey",
+      "matched": 1,
+      "modified": 1
+    },
+    {
+      "sku": "DCWNCSPA020",
+      "old_slug": "signia-mini-mcb-20a-sp-c",
+      "new_slug": "signia-mini-mcb-20a-sp-c-white",
+      "color": "White",
+      "matched": 1,
+      "modified": 1
+    },
+    {
+      "sku": "DCWNCSPA02000MR",
+      "old_slug": "signia-mini-mcb-20a-sp-c",
+      "new_slug": "signia-mini-mcb-20a-sp-c-grey",
+      "color": "Grey",
+      "matched": 1,
+      "modified": 1
+    },
+    {
+      "sku": "DCWNCSPA025",
+      "old_slug": "signia-mini-mcb-25a-sp-c",
+      "new_slug": "signia-mini-mcb-25a-sp-c-white",
+      "color": "White",
+      "matched": 1,
+      "modified": 1
+    },
+    {
+      "sku": "DCWNCSPA02500MR",
+      "old_slug": "signia-mini-mcb-25a-sp-c",
+      "new_slug": "signia-mini-mcb-25a-sp-c-grey",
+      "color": "Grey",
+      "matched": 1,
+      "modified": 1
+    },
+    {
+      "sku": "DCWNCSPA032",
+      "old_slug": "signia-mini-mcb-32a-sp-c",
+      "new_slug": "signia-mini-mcb-32a-sp-c-white",
+      "color": "White",
+      "matched": 1,
+      "modified": 1
+    },
+    {
+      "sku": "DCWNCSPA03200MR",
+      "old_slug": "signia-mini-mcb-32a-sp-c",
+      "new_slug": "signia-mini-mcb-32a-sp-c-grey",
+      "color": "Grey",
+      "matched": 1,
+      "modified": 1
+    }
+  ],
+  "not_found_slugs": [],
+  "errors": []
+}

@@ -10,68 +10,16 @@ Total Fields: 82
 TOP-LEVEL FIELDS SUMMARY
 --------------------------------------------------------------------------------
 
+_source_file:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 31
+
 brand:
   Type: string
   Count: 1,994 (100.0% populated)
   Unique Values: 3
   Values: Anchor, Havells, Lauritz Knudsen
-
-catalog_source.highlights:
-  Type: array
-  Count: 972 (100.0% populated)
-
-catalog_source.pricing.discount:
-  Type: null
-  Count: 972 (0.0% populated)
-
-catalog_source.pricing.mrp:
-  Type: integer
-  Count: 972 (100.0% populated)
-
-catalog_source.pricing.selling_price:
-  Type: null
-  Count: 972 (0.0% populated)
-
-catalog_source.pricing.std_pack:
-  Type: string
-  Count: 972 (100.0% populated)
-  Unique Values: 16
-  Values: 1, 1/1, 1/12, 1/3, 1/4, 1/6, 10, 12, 20, 240, 25, 3, 5, 50, 6, 9
-
-catalog_source.product_family:
-  Type: string
-  Count: 1,994 (100.0% populated)
-  Unique Values: 11
-  Values: Enconnect, Encurve, Engem, Englaze, Entice, Fabio, Fabio Art, Penta, Signia, Signiagrande, Tripper
-
-catalog_source.seo.keywords:
-  Type: array
-  Count: 972 (100.0% populated)
-
-catalog_source.seo.meta_description:
-  Type: string
-  Count: 972 (100.0% populated)
-  Unique Values: 891
-
-catalog_source.seo.slug:
-  Type: string
-  Count: 972 (100.0% populated)
-  Unique Values: 961
-
-catalog_source.source_file:
-  Type: string
-  Count: 972 (100.0% populated)
-  Unique Values: 12
-  Values: 3ph.json, ACCL.json, Fabio1.json, MCB C curve.json, RCBO.json, RCCB.json, Signia.json, Signia2.json, changeover.json, isolator.json, penta.json, penta2.json
-
-catalog_source.subcategory:
-  Type: string
-  Count: 972 (100.0% populated)
-  Unique Values: 45
-
-catalog_source.variant:
-  Type: array
-  Count: 972 (100.0% populated)
 
 category:
   Type: string
@@ -88,7 +36,7 @@ currency:
 description:
   Type: string
   Count: 1,994 (100.0% populated)
-  Unique Values: 1893
+  Unique Values: 1907
 
 images:
   Type: array
@@ -103,20 +51,68 @@ name:
   Count: 1,994 (100.0% populated)
   Unique Values: 1806
 
+pricing.discount:
+  Type: null
+  Count: 1,994 (0.0% populated)
+
+pricing.mrp:
+  Type: integer
+  Count: 1,994 (100.0% populated)
+
+pricing.note:
+  Type: string
+  Count: 2 (100.0% populated)
+  Unique Values: 1
+  Values: Same as White
+
+pricing.selling_price:
+  Type: null
+  Count: 1,994 (0.0% populated)
+
+pricing.std_pack:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 27
+
+product_family:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 9
+  Values: Enconnect, Encurve, Engem, Englaze, Entice, Fabio, Penta, Signia, Tripper
+
+seo.keywords:
+  Type: array
+  Count: 1,994 (100.0% populated)
+
+seo.meta_description:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 1913
+
+seo.slug:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 1994
+
 series:
   Type: string
   Count: 1,994 (100.0% populated)
-  Unique Values: 11
-  Values: Enconnect, Encurve, Engem, Englaze, Entice, Fabio, Fabio Art, Penta, Signia, Signiagrande, Tripper
+  Unique Values: 9
+  Values: Enconnect, Encurve, Engem, Englaze, Entice, Fabio, Penta, Signia, Tripper
 
 sku:
   Type: string
   Count: 1,994 (100.0% populated)
   Unique Values: 1994
 
+slug:
+  Type: string
+  Count: 1,994 (100.0% populated)
+  Unique Values: 1994
+
 specs.Grid frame:
   Type: boolean
-  Count: 402 (100.0% populated)
+  Count: 403 (100.0% populated)
 
 specs.ampere:
   Type: integer
@@ -146,7 +142,7 @@ specs.channels:
 
 specs.color:
   Type: string
-  Count: 1,704 (99.9% populated)
+  Count: 1,715 (99.9% populated)
   Unique Values: 74
 
 specs.compatibility:
@@ -293,7 +289,7 @@ specs.mounting_type:
 
 specs.mw:
   Type: integer
-  Count: 1,608 (99.4% populated)
+  Count: 1,609 (99.4% populated)
 
 specs.orientation:
   Type: string
@@ -373,7 +369,7 @@ specs.suitable_for:
 
 specs.type_detail:
   Type: string
-  Count: 1,447 (100.0% populated)
+  Count: 1,448 (100.0% populated)
   Unique Values: 297
 
 specs.usb_type:
@@ -410,9 +406,12 @@ status.is_featured:
 
 subcategory:
   Type: string
-  Count: 48 (100.0% populated)
-  Unique Values: 3
-  Values: Bell Push - 1 Module, Bell Push - 2 Module, Mini MCBs 3kA
+  Count: 1,994 (100.0% populated)
+  Unique Values: 78
+
+variant:
+  Type: array
+  Count: 1,232 (100.0% populated)
 
 --------------------------------------------------------------------------------
 SPECS FIELD DETAILED ANALYSIS
@@ -424,7 +423,7 @@ Products without specs: 0
 Spec Fields (sorted by frequency):
 
   color:
-    Frequency: 1,704 products (85.5%)
+    Frequency: 1,715 products (86.0%)
     Type: string
     Unique Values (74):
       - Antique Bronze
@@ -460,13 +459,13 @@ Spec Fields (sorted by frequency):
       ... and 44 more
 
   mw:
-    Frequency: 1,608 products (80.6%)
+    Frequency: 1,609 products (80.7%)
     Type: integer
     Range: 0.5 - 18
     Unique Values (13): 0.5, 1, 2, 3, 4, 6, 7, 7.5, 8, 9, 12, 16, 18
 
   type_detail:
-    Frequency: 1,447 products (72.6%)
+    Frequency: 1,448 products (72.6%)
     Type: string
     Unique Values (100):
       - 1 Module Cover Plate
@@ -513,9 +512,9 @@ Spec Fields (sorted by frequency):
     True: 195, False: 267
 
   Grid frame:
-    Frequency: 402 products (20.2%)
+    Frequency: 403 products (20.2%)
     Type: boolean
-    True: 245, False: 157
+    True: 246, False: 157
 
   material:
     Frequency: 330 products (16.5%)

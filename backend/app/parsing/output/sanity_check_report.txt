@@ -1,0 +1,15 @@
+SANITY CHECK REPORT
+================================================================================
+Total products: 1994
+Missing slug: 0
+Slug missing family prefix: 0
+Missing subcategory: 0
+Missing specs: 0
+
+Sample missing slug (up to 50):
+
+Sample bad prefix (up to 50):
+
+Sample missing subcategory (up to 50):
+
+Sample missing specs (up to 50):

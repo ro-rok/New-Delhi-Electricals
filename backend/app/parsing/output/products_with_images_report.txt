@@ -1,0 +1,64 @@
+================================================================================
+PRODUCTS WITH IMAGES
+================================================================================
+
+Total products: 1,994
+Products with images: 325
+From top-level images: 325
+From media.images: 0
+
+SAMPLE (first 50):
+  SKU CB91602SC02 | Touch IR Switch 2 Channel 2M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg']
+  SKU CB91602SB02 | Touch IR Switch 2 Channel 2M - Black | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg']
+  SKU CB91602SC04 | Touch IR Switch 4 Channel 2M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg']
+  SKU CB91602SB04 | Touch IR Switch 4 Channel 2M - Black | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg']
+  SKU CB91602SC00 | Touch IR Switch 2-way 2M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg']
+  SKU CB91602SB00 | Touch IR Switch 2-way 2M - Black | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg']
+  SKU CB91602BC00 | Touch Bell Push 2M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg']
+  SKU CB91602BB00 | Touch Bell Push 2M - Black | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg']
+  SKU CB91602SC20 | Touch IR Switch 25A 2M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg']
+  SKU CB91602SB20 | Touch IR Switch 25A 2M - Black | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg']
+  SKU CB91602FC00 | Touch IR Fan Regulator 8-Step 2M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg']
+  SKU CB91602RB00 | Touch IR Fan Regulator 8-Step 2M - Black | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg']
+  SKU CB91602DC00 | Touch IR Universal Light Dimmer 2M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg']
+  SKU CB91602DB00 | Touch IR Universal Light Dimmer 2M - Black | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg']
+  SKU CB98T02RM13 | IR Remote Control - Black | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765186671/catalog-products/cizveugysjwzhvlxlgtq.jpg']
+  SKU CB91101SW10 | Switch 10AX 1-way 1M - White | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181287/catalog-products/avrimmgemtcwcss9urhn.jpg']
+  SKU CB91101SG10 | Switch 10AX 1-way 1M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181133/catalog-products/tc6ajrphpen8fhmofhzn.jpg']
+  SKU CB91301SW10 | Switch 10AX 1-way with Indicator 1M - White | images: ['https://jayceeonline.com/wp-content/uploads/2020/09/16-switch.png']
+  SKU CB91301SG10 | Switch 10AX 1-way with Indicator 1M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181352/catalog-products/eibmhervib34b33shdea.jpg']
+  SKU CB91201SW10 | Switch 10AX 2-way 1M - White | images: ['https://jayceeonline.com/wp-content/uploads/2020/09/2way.png']
+  SKU CB91201SG10 | Switch 10AX 2-way 1M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765182162/catalog-products/pnayiy2c9jw2sd3vnhpd.jpg']
+  SKU CB91101SW16 | Switch 16AX 1-way 1M - White | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181287/catalog-products/avrimmgemtcwcss9urhn.jpg']
+  SKU CB91101SG16 | Switch 16AX 1-way 1M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181133/catalog-products/tc6ajrphpen8fhmofhzn.jpg']
+  SKU CB91301SW16 | Switch 16AX 1-way with Indicator 1M - White | images: ['https://jayceeonline.com/wp-content/uploads/2020/09/16-switch.png']
+  SKU CB91301SG16 | Switch 16AX 1-way with Indicator 1M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181352/catalog-products/eibmhervib34b33shdea.jpg']
+  SKU CB91201SW16 | Switch 16AX 2-way 1M - White | images: ['https://jayceeonline.com/wp-content/uploads/2020/09/2way.png']
+  SKU CB91201SG16 | Switch 16AX 2-way 1M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765182162/catalog-products/pnayiy2c9jw2sd3vnhpd.jpg']
+  SKU CB91101SW25 | Switch 25A 1-way 1M - White | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181287/catalog-products/avrimmgemtcwcss9urhn.jpg']
+  SKU CB91101SG25 | Switch 25A 1-way 1M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181133/catalog-products/tc6ajrphpen8fhmofhzn.jpg']
+  SKU CB91301SW25 | Switch 25A 1-way with Indicator 1M - White | images: ['https://jayceeonline.com/wp-content/uploads/2020/09/16-switch.png']
+  SKU CB91301SG25 | Switch 25A 1-way with Indicator 1M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181352/catalog-products/eibmhervib34b33shdea.jpg']
+  SKU CB91402SW20 | Switch 20A DP with Indicator 2M - White | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188161/catalog-products/bcp62xdcxg34ywbnvafx.jpg']
+  SKU CB91402SG20 | Switch 20A DP with Indicator 2M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188057/catalog-products/jtp0uwtrgnigjz31usjp.jpg']
+  SKU CB91402SW32 | Switch 32A DP with Indicator 2M - White | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188161/catalog-products/bcp62xdcxg34ywbnvafx.jpg']
+  SKU CB91402SG32 | Switch 32A DP with Indicator 2M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188057/catalog-products/jtp0uwtrgnigjz31usjp.jpg']
+  SKU CB91101BW10 | Bell Push 10AX 1M - White | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179586/catalog-products/psbhds4d2iftnpllkehl.jpg']
+  SKU CB91101BG10 | Bell Push 10AX 1M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179358/catalog-products/j9ims9a2noby5pkhyh8s.jpg']
+  SKU CB91301BW10 | Bell Push 10AX with Indicator 1M - White | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765180208/catalog-products/e3zuyyqttwb9cohdgid7.jpg']
+  SKU CB91301BG10 | Bell Push 10AX with Indicator 1M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765180066/catalog-products/dphqvuucdpyydga6xpms.png']
+  SKU CB91302BW10 | Bell Push 10AX with Indicator 2M - White | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765180546/catalog-products/k4cxzd2xhhzie2mt1boo.jpg']
+  SKU CB91302BG10 | Bell Push 10AX with Indicator 2M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765180391/catalog-products/jvkvlnrpy27t9zswdlgg.jpg']
+  SKU CB91102MW25 | Motor Starter 25A 2M - White | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765180702/catalog-products/s4riz8616ybxibztqly7.jpg']
+  SKU CB91102MG25 | Motor Starter 25A 2M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765180646/catalog-products/nffufyfl4dfkjirxnp7h.jpg']
+  SKU CB91602CW06 | Socket 6A 3 Pin with ISI 2M - White | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187732/catalog-products/uilrn8wkh4at0hkt4ere.jpg']
+  SKU CB91602CG06 | Socket 6A 3 Pin with ISI 2M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187701/catalog-products/vfnoicpkjeiqgtkbacon.jpg']
+  SKU CB91702CW06 | Socket 6A 3 Pin with ISI 2M (Heavy Duty) - White | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187732/catalog-products/uilrn8wkh4at0hkt4ere.jpg']
+  SKU CB91702CG06 | Socket 6A 3 Pin with ISI 2M (Heavy Duty) - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187701/catalog-products/vfnoicpkjeiqgtkbacon.jpg']
+  SKU CB91302CW16 | Socket 6A/16A 3 Pin Combi with ISI 2M - White | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187869/catalog-products/ecqb0bp1k2mfwauikc5s.jpg']
+  SKU CB91302CG16 | Socket 6A/16A 3 Pin Combi with ISI 2M - Charcoal Grey | images: ['https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187805/catalog-products/taztihacfo876mwdnxuu.jpg']
+  SKU CB91101DW04 | Dimmer 400W 1M - White | images: ['https://m.media-amazon.com/images/I/41So4+ETGCL._SX425_.jpg']
+
+================================================================================
+End of Report
+================================================================================

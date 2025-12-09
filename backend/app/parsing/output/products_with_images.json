@@ -1,0 +1,2287 @@
+{
+  "statistics": {
+    "total_products": 1994,
+    "with_images": 325,
+    "from_top_level_images": 325,
+    "from_media_images": 0
+  },
+  "products_with_images": [
+    {
+      "sku": "CB91602SC02",
+      "name": "Touch IR Switch 2 Channel 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602SB02",
+      "name": "Touch IR Switch 2 Channel 2M - Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602SC04",
+      "name": "Touch IR Switch 4 Channel 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602SB04",
+      "name": "Touch IR Switch 4 Channel 2M - Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602SC00",
+      "name": "Touch IR Switch 2-way 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602SB00",
+      "name": "Touch IR Switch 2-way 2M - Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602BC00",
+      "name": "Touch Bell Push 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602BB00",
+      "name": "Touch Bell Push 2M - Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602SC20",
+      "name": "Touch IR Switch 25A 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602SB20",
+      "name": "Touch IR Switch 25A 2M - Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602FC00",
+      "name": "Touch IR Fan Regulator 8-Step 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602RB00",
+      "name": "Touch IR Fan Regulator 8-Step 2M - Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602DC00",
+      "name": "Touch IR Universal Light Dimmer 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188772/catalog-products/nidxj75whejp0u2wvcfe.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602DB00",
+      "name": "Touch IR Universal Light Dimmer 2M - Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188707/catalog-products/fazifbn0ll2i0xjhvnny.jpg"
+      ]
+    },
+    {
+      "sku": "CB98T02RM13",
+      "name": "IR Remote Control - Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765186671/catalog-products/cizveugysjwzhvlxlgtq.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101SW10",
+      "name": "Switch 10AX 1-way 1M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181287/catalog-products/avrimmgemtcwcss9urhn.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101SG10",
+      "name": "Switch 10AX 1-way 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181133/catalog-products/tc6ajrphpen8fhmofhzn.jpg"
+      ]
+    },
+    {
+      "sku": "CB91301SW10",
+      "name": "Switch 10AX 1-way with Indicator 1M - White",
+      "images": [
+        "https://jayceeonline.com/wp-content/uploads/2020/09/16-switch.png"
+      ]
+    },
+    {
+      "sku": "CB91301SG10",
+      "name": "Switch 10AX 1-way with Indicator 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181352/catalog-products/eibmhervib34b33shdea.jpg"
+      ]
+    },
+    {
+      "sku": "CB91201SW10",
+      "name": "Switch 10AX 2-way 1M - White",
+      "images": [
+        "https://jayceeonline.com/wp-content/uploads/2020/09/2way.png"
+      ]
+    },
+    {
+      "sku": "CB91201SG10",
+      "name": "Switch 10AX 2-way 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765182162/catalog-products/pnayiy2c9jw2sd3vnhpd.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101SW16",
+      "name": "Switch 16AX 1-way 1M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181287/catalog-products/avrimmgemtcwcss9urhn.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101SG16",
+      "name": "Switch 16AX 1-way 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181133/catalog-products/tc6ajrphpen8fhmofhzn.jpg"
+      ]
+    },
+    {
+      "sku": "CB91301SW16",
+      "name": "Switch 16AX 1-way with Indicator 1M - White",
+      "images": [
+        "https://jayceeonline.com/wp-content/uploads/2020/09/16-switch.png"
+      ]
+    },
+    {
+      "sku": "CB91301SG16",
+      "name": "Switch 16AX 1-way with Indicator 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181352/catalog-products/eibmhervib34b33shdea.jpg"
+      ]
+    },
+    {
+      "sku": "CB91201SW16",
+      "name": "Switch 16AX 2-way 1M - White",
+      "images": [
+        "https://jayceeonline.com/wp-content/uploads/2020/09/2way.png"
+      ]
+    },
+    {
+      "sku": "CB91201SG16",
+      "name": "Switch 16AX 2-way 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765182162/catalog-products/pnayiy2c9jw2sd3vnhpd.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101SW25",
+      "name": "Switch 25A 1-way 1M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181287/catalog-products/avrimmgemtcwcss9urhn.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101SG25",
+      "name": "Switch 25A 1-way 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181133/catalog-products/tc6ajrphpen8fhmofhzn.jpg"
+      ]
+    },
+    {
+      "sku": "CB91301SW25",
+      "name": "Switch 25A 1-way with Indicator 1M - White",
+      "images": [
+        "https://jayceeonline.com/wp-content/uploads/2020/09/16-switch.png"
+      ]
+    },
+    {
+      "sku": "CB91301SG25",
+      "name": "Switch 25A 1-way with Indicator 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765181352/catalog-products/eibmhervib34b33shdea.jpg"
+      ]
+    },
+    {
+      "sku": "CB91402SW20",
+      "name": "Switch 20A DP with Indicator 2M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188161/catalog-products/bcp62xdcxg34ywbnvafx.jpg"
+      ]
+    },
+    {
+      "sku": "CB91402SG20",
+      "name": "Switch 20A DP with Indicator 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188057/catalog-products/jtp0uwtrgnigjz31usjp.jpg"
+      ]
+    },
+    {
+      "sku": "CB91402SW32",
+      "name": "Switch 32A DP with Indicator 2M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188161/catalog-products/bcp62xdcxg34ywbnvafx.jpg"
+      ]
+    },
+    {
+      "sku": "CB91402SG32",
+      "name": "Switch 32A DP with Indicator 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188057/catalog-products/jtp0uwtrgnigjz31usjp.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101BW10",
+      "name": "Bell Push 10AX 1M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179586/catalog-products/psbhds4d2iftnpllkehl.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101BG10",
+      "name": "Bell Push 10AX 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179358/catalog-products/j9ims9a2noby5pkhyh8s.jpg"
+      ]
+    },
+    {
+      "sku": "CB91301BW10",
+      "name": "Bell Push 10AX with Indicator 1M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765180208/catalog-products/e3zuyyqttwb9cohdgid7.jpg"
+      ]
+    },
+    {
+      "sku": "CB91301BG10",
+      "name": "Bell Push 10AX with Indicator 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765180066/catalog-products/dphqvuucdpyydga6xpms.png"
+      ]
+    },
+    {
+      "sku": "CB91302BW10",
+      "name": "Bell Push 10AX with Indicator 2M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765180546/catalog-products/k4cxzd2xhhzie2mt1boo.jpg"
+      ]
+    },
+    {
+      "sku": "CB91302BG10",
+      "name": "Bell Push 10AX with Indicator 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765180391/catalog-products/jvkvlnrpy27t9zswdlgg.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102MW25",
+      "name": "Motor Starter 25A 2M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765180702/catalog-products/s4riz8616ybxibztqly7.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102MG25",
+      "name": "Motor Starter 25A 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765180646/catalog-products/nffufyfl4dfkjirxnp7h.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602CW06",
+      "name": "Socket 6A 3 Pin with ISI 2M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187732/catalog-products/uilrn8wkh4at0hkt4ere.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602CG06",
+      "name": "Socket 6A 3 Pin with ISI 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187701/catalog-products/vfnoicpkjeiqgtkbacon.jpg"
+      ]
+    },
+    {
+      "sku": "CB91702CW06",
+      "name": "Socket 6A 3 Pin with ISI 2M (Heavy Duty) - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187732/catalog-products/uilrn8wkh4at0hkt4ere.jpg"
+      ]
+    },
+    {
+      "sku": "CB91702CG06",
+      "name": "Socket 6A 3 Pin with ISI 2M (Heavy Duty) - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187701/catalog-products/vfnoicpkjeiqgtkbacon.jpg"
+      ]
+    },
+    {
+      "sku": "CB91302CW16",
+      "name": "Socket 6A/16A 3 Pin Combi with ISI 2M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187869/catalog-products/ecqb0bp1k2mfwauikc5s.jpg"
+      ]
+    },
+    {
+      "sku": "CB91302CG16",
+      "name": "Socket 6A/16A 3 Pin Combi with ISI 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187805/catalog-products/taztihacfo876mwdnxuu.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101DW04",
+      "name": "Dimmer 400W 1M - White",
+      "images": [
+        "https://m.media-amazon.com/images/I/41So4+ETGCL._SX425_.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101DG04",
+      "name": "Dimmer 400W 1M - Charcoal Grey",
+      "images": [
+        "https://cdn.moglix.com/p/yzXVCm8Cxh2qn-xxlarge.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101RW01",
+      "name": "Fan Regulator 4-Step 80W 1M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765186086/catalog-products/x1zsxgelekys58umkt0f.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101RG01",
+      "name": "Fan Regulator 4-Step 80W 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765185979/catalog-products/p90guva8qwncqhepyr5e.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102RW02",
+      "name": "Fan Regulator 5-Step 120W with ISI 2M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765186370/catalog-products/dxmfd03iqdlcf6bsofed.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102RG02",
+      "name": "Fan Regulator 5-Step 120W with ISI 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765186176/catalog-products/bouq5dilyvvhr3rgkofg.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101TW11",
+      "name": "RJ11 Socket with Shutter 1M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187372/catalog-products/dl93zwf5kmsxbnwjih3s.png"
+      ]
+    },
+    {
+      "sku": "CB91101TG11",
+      "name": "RJ11 Socket with Shutter 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187338/catalog-products/horfjgs5bdj4yydewxtm.jpg"
+      ]
+    },
+    {
+      "sku": "CB91301TW45",
+      "name": "RJ45 Cat 6A Socket with Shutter 1M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187608/catalog-products/oqqvgxttvtazdmyfbbyd.png"
+      ]
+    },
+    {
+      "sku": "CB91301TG45",
+      "name": "RJ45 Cat 6A Socket with Shutter 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187578/catalog-products/jwifkb811v8hhahkyl4e.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101TW00",
+      "name": "TV Socket 1M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188415/catalog-products/hlkomwrxbwpwo1kdubah.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101TG00",
+      "name": "TV Socket 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188244/catalog-products/y6ycmkolfgnb9mbaogic.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102AW00",
+      "name": "Buzzer 2M - White",
+      "images": [
+        "https://jayceeonline.com/wp-content/uploads/2020/09/38.png"
+      ]
+    },
+    {
+      "sku": "CB91102AG00",
+      "name": "Buzzer 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765182647/catalog-products/ycjiq1wfqet2hk2y1itu.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101AW00",
+      "name": "Cable Outlet 1M - White",
+      "images": [
+        "https://cdn.moglix.com/p/PsU1j0szFWfQU-xxlarge.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101AG00",
+      "name": "Cable Outlet 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765183104/catalog-products/tz1z8q8goxkgukm5syqx.jpg"
+      ]
+    },
+    {
+      "sku": "CB91201AW00",
+      "name": "Blank Off Unit 1M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765182586/catalog-products/cvnpbkxvlu30uvfmsdh1.jpg"
+      ]
+    },
+    {
+      "sku": "CB91201AG00",
+      "name": "Blank Off Unit 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765182519/catalog-products/jcneygvv9pe5vbbef0k6.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102LW00",
+      "name": "LED Foot Light 2M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187025/catalog-products/lbypqea7qvgs73v2ma3h.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102LG00",
+      "name": "LED Foot Light 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765186826/catalog-products/z6licff0xuwkeh1oewzt.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101AW02",
+      "name": "USB Charger 2A 1M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188933/catalog-products/pe3avosjjow57mvdoest.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101AG02",
+      "name": "USB Charger 2A 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188837/catalog-products/vrztokcmq4iujj8viehz.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101AW18",
+      "name": "USB Type A Quick Charger 18W 1M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765189097/catalog-products/lxdwa7nalisjeadnwlnn.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101AG18",
+      "name": "USB Type A Quick Charger 18W 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765188962/catalog-products/iitzo5zoilcggk9npgyq.jpg"
+      ]
+    },
+    {
+      "sku": "CB91201AW18",
+      "name": "USB Type C PD Charger 18W 1M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765189111/catalog-products/capyfe9a5yfbghz9h7ou.jpg"
+      ]
+    },
+    {
+      "sku": "CB91201AG18",
+      "name": "USB Type C PD Charger 18W 1M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765189293/catalog-products/ptulqdrepv5tbarv6pfp.jpg"
+      ]
+    },
+    {
+      "sku": "CB91401AW00",
+      "name": "LED Phase Indicator 1M - Full Glow - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765186951/catalog-products/k5afdj7polddglkkjqpe.jpg"
+      ]
+    },
+    {
+      "sku": "CB91401AG00",
+      "name": "LED Phase Indicator 1M - Full Glow - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765186951/catalog-products/k5afdj7polddglkkjqpe.jpg"
+      ]
+    },
+    {
+      "sku": "CB91402AW00",
+      "name": "Electronic Ding Dong Bell 2M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765185831/catalog-products/jy6munw9c8ipt8nkz9tp.png"
+      ]
+    },
+    {
+      "sku": "CB91402AG00",
+      "name": "Electronic Ding Dong Bell 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765185788/catalog-products/xbfopzowiphd0xf7amog.jpg"
+      ]
+    },
+    {
+      "sku": "CB91202HW20",
+      "name": "Mech Key Tag Switch 20A 2M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187230/catalog-products/ohmr4yd9iyw5yfsgzg2o.jpg"
+      ]
+    },
+    {
+      "sku": "CB91202HG20",
+      "name": "Mech Key Tag Switch 20A 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187125/catalog-products/mtjso2mx4pgdzxldr335.jpg"
+      ]
+    },
+    {
+      "sku": "CB91302HW32",
+      "name": "Mech Key Tag Switch 32A 2M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187230/catalog-products/ohmr4yd9iyw5yfsgzg2o.jpg"
+      ]
+    },
+    {
+      "sku": "CB91302HG32",
+      "name": "Mech Key Tag Switch 32A 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187125/catalog-products/mtjso2mx4pgdzxldr335.jpg"
+      ]
+    },
+    {
+      "sku": "CB91302HW00",
+      "name": "Spare Key for Mech Key Tag - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187997/catalog-products/pvvsmsidye8urtauytfs.jpg"
+      ]
+    },
+    {
+      "sku": "CB91302HG00",
+      "name": "Spare Key for Mech Key Tag - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765187969/catalog-products/mj1dgasmkcj9sumasyva.jpg"
+      ]
+    },
+    {
+      "sku": "CB91502HW10",
+      "name": "DND-MMR Inside Room Unit 2M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765185395/catalog-products/konorhqzpdemfr1wc6oi.jpg"
+      ]
+    },
+    {
+      "sku": "CB91502HG10",
+      "name": "DND-MMR Inside Room Unit 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765185337/catalog-products/x58yoxte0eacyuo6vv3o.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602HW10",
+      "name": "DND-MMR Outside Room Unit 2M - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765184580/catalog-products/gtviusnwxrceqvaivotd.jpg",
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765184567/catalog-products/h64zscyv0vpl4kpwnx34.jpg"
+      ]
+    },
+    {
+      "sku": "CB91602HG10",
+      "name": "DND-MMR Outside Room Unit 2M - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765184580/catalog-products/gtviusnwxrceqvaivotd.jpg",
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765184567/catalog-products/h64zscyv0vpl4kpwnx34.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101KW06",
+      "name": "6A SP Mini MCB 3kA 1M with LED Indicator - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132182/catalog-products/tr7crsd5gpmnadx8ve2t.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101KG06",
+      "name": "6A SP Mini MCB 3kA 1M with LED Indicator - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132121/catalog-products/lea5pwdafozjcuey5thd.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101KW10",
+      "name": "10A SP Mini MCB 3kA 1M with LED Indicator - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132182/catalog-products/tr7crsd5gpmnadx8ve2t.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101KG10",
+      "name": "10A SP Mini MCB 3kA 1M with LED Indicator - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132121/catalog-products/lea5pwdafozjcuey5thd.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101KW16",
+      "name": "16A SP Mini MCB 3kA 1M with LED Indicator - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132182/catalog-products/tr7crsd5gpmnadx8ve2t.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101KG16",
+      "name": "16A SP Mini MCB 3kA 1M with LED Indicator - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132121/catalog-products/lea5pwdafozjcuey5thd.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101KW20",
+      "name": "20A SP Mini MCB 3kA 1M with LED Indicator - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132182/catalog-products/tr7crsd5gpmnadx8ve2t.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101KG20",
+      "name": "20A SP Mini MCB 3kA 1M with LED Indicator - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132121/catalog-products/lea5pwdafozjcuey5thd.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101KW25",
+      "name": "25A SP Mini MCB 3kA 1M with LED Indicator - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132182/catalog-products/tr7crsd5gpmnadx8ve2t.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101KG25",
+      "name": "25A SP Mini MCB 3kA 1M with LED Indicator - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132121/catalog-products/lea5pwdafozjcuey5thd.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101KW32",
+      "name": "32A SP Mini MCB 3kA 1M with LED Indicator - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132182/catalog-products/tr7crsd5gpmnadx8ve2t.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101KG32",
+      "name": "32A SP Mini MCB 3kA 1M with LED Indicator - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132121/catalog-products/lea5pwdafozjcuey5thd.jpg"
+      ]
+    },
+    {
+      "sku": "CB91202KW25",
+      "name": "25A DP Mini MCB 3kA 2M with LED Indicator - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132324/catalog-products/cdogmhklnlkawiukye09.jpg"
+      ]
+    },
+    {
+      "sku": "CB91202KG25",
+      "name": "25A DP Mini MCB 3kA 2M with LED Indicator - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132281/catalog-products/rpawv4leg6zz8c5wyt8r.jpg"
+      ]
+    },
+    {
+      "sku": "CB91202KW32",
+      "name": "32A DP Mini MCB 3kA 2M with LED Indicator - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132324/catalog-products/cdogmhklnlkawiukye09.jpg"
+      ]
+    },
+    {
+      "sku": "CB91202KG32",
+      "name": "32A DP Mini MCB 3kA 2M with LED Indicator - Charcoal Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765132281/catalog-products/rpawv4leg6zz8c5wyt8r.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101FW00",
+      "name": "1 Module Cover Plate with Grid Frame - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111009/catalog-products/awyoyo7r6udffgxhvqbc.webp"
+      ]
+    },
+    {
+      "sku": "CB91102FW00",
+      "name": "2 Module Cover Plate with Grid Frame - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111009/catalog-products/awyoyo7r6udffgxhvqbc.webp"
+      ]
+    },
+    {
+      "sku": "CB91103FW00",
+      "name": "3 Module Cover Plate with Grid Frame - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111009/catalog-products/awyoyo7r6udffgxhvqbc.webp"
+      ]
+    },
+    {
+      "sku": "CB91104FW00",
+      "name": "4 Module Cover Plate with Grid Frame - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111009/catalog-products/awyoyo7r6udffgxhvqbc.webp"
+      ]
+    },
+    {
+      "sku": "CB91106FW00",
+      "name": "6 Module Cover Plate with Grid Frame - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111009/catalog-products/awyoyo7r6udffgxhvqbc.webp"
+      ]
+    },
+    {
+      "sku": "CB91108FW00",
+      "name": "8 Module Cover Plate Horizontal with Grid Frame - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111009/catalog-products/awyoyo7r6udffgxhvqbc.webp"
+      ]
+    },
+    {
+      "sku": "CB91208FW00",
+      "name": "8 Module Cover Plate Square with Grid Frame - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111009/catalog-products/awyoyo7r6udffgxhvqbc.webp"
+      ]
+    },
+    {
+      "sku": "CB91308FW00",
+      "name": "8 Module Cover Plate with Grid Frame - Small Size White (Oris 10M Boxes)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111009/catalog-products/awyoyo7r6udffgxhvqbc.webp"
+      ]
+    },
+    {
+      "sku": "CB91112FW00",
+      "name": "12 Module Cover Plate with Grid Frame - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111009/catalog-products/awyoyo7r6udffgxhvqbc.webp"
+      ]
+    },
+    {
+      "sku": "CB91116FW00",
+      "name": "16 Module Cover Plate with Grid Frame - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111009/catalog-products/awyoyo7r6udffgxhvqbc.webp"
+      ]
+    },
+    {
+      "sku": "CB91118FW00",
+      "name": "18 Module Cover Plate with Grid Frame - White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111009/catalog-products/awyoyo7r6udffgxhvqbc.webp"
+      ]
+    },
+    {
+      "sku": "CB91101FG11",
+      "name": "1 Module Cover Plate - Charcoal Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109068/catalog-products/yqfap3obhsrz10see90c.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101FE11",
+      "name": "1 Module Cover Plate - Eco Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109283/catalog-products/v4abtem4rflrrglfuocy.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101FU11",
+      "name": "1 Module Cover Plate - Gold Rush (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109350/catalog-products/ofz7ydd9pfotaflpfcsb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101FI11",
+      "name": "1 Module Cover Plate - Ice Silver (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109388/catalog-products/iy7zwmu0kmlrwibb2co1.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101FB11",
+      "name": "1 Module Cover Plate - Black Beauty (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765107144/catalog-products/kickrfrrqzucydz0hnwb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101FD11",
+      "name": "1 Module Cover Plate - Bottle Green (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765108919/catalog-products/pc61d4dtnwlzohknmjby.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102FG11",
+      "name": "2 Module Cover Plate - Charcoal Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109068/catalog-products/yqfap3obhsrz10see90c.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102FE11",
+      "name": "2 Module Cover Plate - Eco Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109283/catalog-products/v4abtem4rflrrglfuocy.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102FU11",
+      "name": "2 Module Cover Plate - Gold Rush (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109350/catalog-products/ofz7ydd9pfotaflpfcsb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102FI11",
+      "name": "2 Module Cover Plate - Ice Silver (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109388/catalog-products/iy7zwmu0kmlrwibb2co1.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102FB11",
+      "name": "2 Module Cover Plate - Black Beauty (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765107144/catalog-products/kickrfrrqzucydz0hnwb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102FD11",
+      "name": "2 Module Cover Plate - Bottle Green (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765108919/catalog-products/pc61d4dtnwlzohknmjby.jpg"
+      ]
+    },
+    {
+      "sku": "CB91103FG11",
+      "name": "3 Module Cover Plate - Charcoal Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109068/catalog-products/yqfap3obhsrz10see90c.jpg"
+      ]
+    },
+    {
+      "sku": "CB91103FE11",
+      "name": "3 Module Cover Plate - Eco Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109283/catalog-products/v4abtem4rflrrglfuocy.jpg"
+      ]
+    },
+    {
+      "sku": "CB91103FU11",
+      "name": "3 Module Cover Plate - Gold Rush (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109350/catalog-products/ofz7ydd9pfotaflpfcsb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91103FI11",
+      "name": "3 Module Cover Plate - Ice Silver (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109388/catalog-products/iy7zwmu0kmlrwibb2co1.jpg"
+      ]
+    },
+    {
+      "sku": "CB91103FB11",
+      "name": "3 Module Cover Plate - Black Beauty (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765107144/catalog-products/kickrfrrqzucydz0hnwb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91103FD11",
+      "name": "3 Module Cover Plate - Bottle Green (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765108919/catalog-products/pc61d4dtnwlzohknmjby.jpg"
+      ]
+    },
+    {
+      "sku": "CB91104FG11",
+      "name": "4 Module Cover Plate - Charcoal Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109068/catalog-products/yqfap3obhsrz10see90c.jpg"
+      ]
+    },
+    {
+      "sku": "CB91104FE11",
+      "name": "4 Module Cover Plate - Eco Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109283/catalog-products/v4abtem4rflrrglfuocy.jpg"
+      ]
+    },
+    {
+      "sku": "CB91104FU11",
+      "name": "4 Module Cover Plate - Gold Rush (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109350/catalog-products/ofz7ydd9pfotaflpfcsb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91104FI11",
+      "name": "4 Module Cover Plate - Ice Silver (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109388/catalog-products/iy7zwmu0kmlrwibb2co1.jpg"
+      ]
+    },
+    {
+      "sku": "CB91104FB11",
+      "name": "4 Module Cover Plate - Black Beauty (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765107144/catalog-products/kickrfrrqzucydz0hnwb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91104FD11",
+      "name": "4 Module Cover Plate - Bottle Green (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765108919/catalog-products/pc61d4dtnwlzohknmjby.jpg"
+      ]
+    },
+    {
+      "sku": "CB91106FG11",
+      "name": "6 Module Cover Plate - Charcoal Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109068/catalog-products/yqfap3obhsrz10see90c.jpg"
+      ]
+    },
+    {
+      "sku": "CB91106FE11",
+      "name": "6 Module Cover Plate - Eco Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109283/catalog-products/v4abtem4rflrrglfuocy.jpg"
+      ]
+    },
+    {
+      "sku": "CB91106FU11",
+      "name": "6 Module Cover Plate - Gold Rush (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109350/catalog-products/ofz7ydd9pfotaflpfcsb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91106FI11",
+      "name": "6 Module Cover Plate - Ice Silver (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109388/catalog-products/iy7zwmu0kmlrwibb2co1.jpg"
+      ]
+    },
+    {
+      "sku": "CB91106FB11",
+      "name": "6 Module Cover Plate - Black Beauty (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765107144/catalog-products/kickrfrrqzucydz0hnwb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91106FD11",
+      "name": "6 Module Cover Plate - Bottle Green (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765108919/catalog-products/pc61d4dtnwlzohknmjby.jpg"
+      ]
+    },
+    {
+      "sku": "CB91108FG11",
+      "name": "8 Module Cover Plate Horizontal - Charcoal Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109068/catalog-products/yqfap3obhsrz10see90c.jpg"
+      ]
+    },
+    {
+      "sku": "CB91108FE11",
+      "name": "8 Module Cover Plate Horizontal - Eco Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109283/catalog-products/v4abtem4rflrrglfuocy.jpg"
+      ]
+    },
+    {
+      "sku": "CB91108FU11",
+      "name": "8 Module Cover Plate Horizontal - Gold Rush (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109350/catalog-products/ofz7ydd9pfotaflpfcsb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91108FI11",
+      "name": "8 Module Cover Plate Horizontal - Ice Silver (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109388/catalog-products/iy7zwmu0kmlrwibb2co1.jpg"
+      ]
+    },
+    {
+      "sku": "CB91108FB11",
+      "name": "8 Module Cover Plate Horizontal - Black Beauty (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765107144/catalog-products/kickrfrrqzucydz0hnwb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91108FD11",
+      "name": "8 Module Cover Plate Horizontal - Bottle Green (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765108919/catalog-products/pc61d4dtnwlzohknmjby.jpg"
+      ]
+    },
+    {
+      "sku": "CB91208FG11",
+      "name": "8 Module Cover Plate Square - Charcoal Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109068/catalog-products/yqfap3obhsrz10see90c.jpg"
+      ]
+    },
+    {
+      "sku": "CB91208FE11",
+      "name": "8 Module Cover Plate Square - Eco Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109283/catalog-products/v4abtem4rflrrglfuocy.jpg"
+      ]
+    },
+    {
+      "sku": "CB91208FU11",
+      "name": "8 Module Cover Plate Square - Gold Rush (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109350/catalog-products/ofz7ydd9pfotaflpfcsb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91208FI11",
+      "name": "8 Module Cover Plate Square - Ice Silver (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109388/catalog-products/iy7zwmu0kmlrwibb2co1.jpg"
+      ]
+    },
+    {
+      "sku": "CB91208FB11",
+      "name": "8 Module Cover Plate Square - Black Beauty (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765107144/catalog-products/kickrfrrqzucydz0hnwb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91208FD11",
+      "name": "8 Module Cover Plate Square - Bottle Green (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765108919/catalog-products/pc61d4dtnwlzohknmjby.jpg"
+      ]
+    },
+    {
+      "sku": "CB91112FG11",
+      "name": "12 Module Cover Plate - Charcoal Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109068/catalog-products/yqfap3obhsrz10see90c.jpg"
+      ]
+    },
+    {
+      "sku": "CB91112FE11",
+      "name": "12 Module Cover Plate - Eco Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109283/catalog-products/v4abtem4rflrrglfuocy.jpg"
+      ]
+    },
+    {
+      "sku": "CB91112FU11",
+      "name": "12 Module Cover Plate - Gold Rush (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109350/catalog-products/ofz7ydd9pfotaflpfcsb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91112FI11",
+      "name": "12 Module Cover Plate - Ice Silver (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109388/catalog-products/iy7zwmu0kmlrwibb2co1.jpg"
+      ]
+    },
+    {
+      "sku": "CB91112FB11",
+      "name": "12 Module Cover Plate - Black Beauty (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765107144/catalog-products/kickrfrrqzucydz0hnwb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91112FD11",
+      "name": "12 Module Cover Plate - Bottle Green (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765108919/catalog-products/pc61d4dtnwlzohknmjby.jpg"
+      ]
+    },
+    {
+      "sku": "CB91116FG11",
+      "name": "16 Module Cover Plate - Charcoal Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109068/catalog-products/yqfap3obhsrz10see90c.jpg"
+      ]
+    },
+    {
+      "sku": "CB91116FE11",
+      "name": "16 Module Cover Plate - Eco Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109283/catalog-products/v4abtem4rflrrglfuocy.jpg"
+      ]
+    },
+    {
+      "sku": "CB91116FU11",
+      "name": "16 Module Cover Plate - Gold Rush (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109350/catalog-products/ofz7ydd9pfotaflpfcsb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91116FI11",
+      "name": "16 Module Cover Plate - Ice Silver (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109388/catalog-products/iy7zwmu0kmlrwibb2co1.jpg"
+      ]
+    },
+    {
+      "sku": "CB91116FB11",
+      "name": "16 Module Cover Plate - Black Beauty (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765107144/catalog-products/kickrfrrqzucydz0hnwb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91116FD11",
+      "name": "16 Module Cover Plate - Bottle Green (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765108919/catalog-products/pc61d4dtnwlzohknmjby.jpg"
+      ]
+    },
+    {
+      "sku": "CB91118FG11",
+      "name": "18 Module Cover Plate - Charcoal Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109068/catalog-products/yqfap3obhsrz10see90c.jpg"
+      ]
+    },
+    {
+      "sku": "CB91118FE11",
+      "name": "18 Module Cover Plate - Eco Grey (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109283/catalog-products/v4abtem4rflrrglfuocy.jpg"
+      ]
+    },
+    {
+      "sku": "CB91118FU11",
+      "name": "18 Module Cover Plate - Gold Rush (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109350/catalog-products/ofz7ydd9pfotaflpfcsb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91118FI11",
+      "name": "18 Module Cover Plate - Ice Silver (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109388/catalog-products/iy7zwmu0kmlrwibb2co1.jpg"
+      ]
+    },
+    {
+      "sku": "CB91118FB11",
+      "name": "18 Module Cover Plate - Black Beauty (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765107144/catalog-products/kickrfrrqzucydz0hnwb.jpg"
+      ]
+    },
+    {
+      "sku": "CB91118FD11",
+      "name": "18 Module Cover Plate - Bottle Green (Vivid)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765108919/catalog-products/pc61d4dtnwlzohknmjby.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101FR11",
+      "name": "1 Module Cover Plate - Rustic Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110195/catalog-products/sojrhspnauzotoaphdgl.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101FM11",
+      "name": "1 Module Cover Plate - Metallic Grey (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109631/catalog-products/lw8ng9bghqag3c2wdxeo.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101FS11",
+      "name": "1 Module Cover Plate - Firestorm Orange (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109312/catalog-products/q8zqi2e7kwxvxhqftj8g.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101FL11",
+      "name": "1 Module Cover Plate - Rose Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110120/catalog-products/kaajwii68ihljuljcmxs.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102FR11",
+      "name": "2 Module Cover Plate - Rustic Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110195/catalog-products/sojrhspnauzotoaphdgl.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102FM11",
+      "name": "2 Module Cover Plate - Metallic Grey (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109631/catalog-products/lw8ng9bghqag3c2wdxeo.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102FS11",
+      "name": "2 Module Cover Plate - Firestorm Orange (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109312/catalog-products/q8zqi2e7kwxvxhqftj8g.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102FL11",
+      "name": "2 Module Cover Plate - Rose Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110120/catalog-products/kaajwii68ihljuljcmxs.jpg"
+      ]
+    },
+    {
+      "sku": "CB91103FR11",
+      "name": "3 Module Cover Plate - Rustic Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110195/catalog-products/sojrhspnauzotoaphdgl.jpg"
+      ]
+    },
+    {
+      "sku": "CB91103FM11",
+      "name": "3 Module Cover Plate - Metallic Grey (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109631/catalog-products/lw8ng9bghqag3c2wdxeo.jpg"
+      ]
+    },
+    {
+      "sku": "CB91103FS11",
+      "name": "3 Module Cover Plate - Firestorm Orange (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109312/catalog-products/q8zqi2e7kwxvxhqftj8g.jpg"
+      ]
+    },
+    {
+      "sku": "CB91103FL11",
+      "name": "3 Module Cover Plate - Rose Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110120/catalog-products/kaajwii68ihljuljcmxs.jpg"
+      ]
+    },
+    {
+      "sku": "CB91104FR11",
+      "name": "4 Module Cover Plate - Rustic Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110195/catalog-products/sojrhspnauzotoaphdgl.jpg"
+      ]
+    },
+    {
+      "sku": "CB91104FM11",
+      "name": "4 Module Cover Plate - Metallic Grey (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109631/catalog-products/lw8ng9bghqag3c2wdxeo.jpg"
+      ]
+    },
+    {
+      "sku": "CB91104FS11",
+      "name": "4 Module Cover Plate - Firestorm Orange (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109312/catalog-products/q8zqi2e7kwxvxhqftj8g.jpg"
+      ]
+    },
+    {
+      "sku": "CB91104FL11",
+      "name": "4 Module Cover Plate - Rose Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110120/catalog-products/kaajwii68ihljuljcmxs.jpg"
+      ]
+    },
+    {
+      "sku": "CB91106FR11",
+      "name": "6 Module Cover Plate - Rustic Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110195/catalog-products/sojrhspnauzotoaphdgl.jpg"
+      ]
+    },
+    {
+      "sku": "CB91106FM11",
+      "name": "6 Module Cover Plate - Metallic Grey (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109631/catalog-products/lw8ng9bghqag3c2wdxeo.jpg"
+      ]
+    },
+    {
+      "sku": "CB91106FS11",
+      "name": "6 Module Cover Plate - Firestorm Orange (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109312/catalog-products/q8zqi2e7kwxvxhqftj8g.jpg"
+      ]
+    },
+    {
+      "sku": "CB91106FL11",
+      "name": "6 Module Cover Plate - Rose Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110120/catalog-products/kaajwii68ihljuljcmxs.jpg"
+      ]
+    },
+    {
+      "sku": "CB91108FR11",
+      "name": "8 Module Cover Plate Horizontal - Rustic Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110195/catalog-products/sojrhspnauzotoaphdgl.jpg"
+      ]
+    },
+    {
+      "sku": "CB91108FM11",
+      "name": "8 Module Cover Plate Horizontal - Metallic Grey (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109631/catalog-products/lw8ng9bghqag3c2wdxeo.jpg"
+      ]
+    },
+    {
+      "sku": "CB91108FS11",
+      "name": "8 Module Cover Plate Horizontal - Firestorm Orange (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109312/catalog-products/q8zqi2e7kwxvxhqftj8g.jpg"
+      ]
+    },
+    {
+      "sku": "CB91108FL11",
+      "name": "8 Module Cover Plate Horizontal - Rose Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110120/catalog-products/kaajwii68ihljuljcmxs.jpg"
+      ]
+    },
+    {
+      "sku": "CB91208FR11",
+      "name": "8 Module Cover Plate Square - Rustic Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110195/catalog-products/sojrhspnauzotoaphdgl.jpg"
+      ]
+    },
+    {
+      "sku": "CB91208FM11",
+      "name": "8 Module Cover Plate Square - Metallic Grey (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109631/catalog-products/lw8ng9bghqag3c2wdxeo.jpg"
+      ]
+    },
+    {
+      "sku": "CB91208FS11",
+      "name": "8 Module Cover Plate Square - Firestorm Orange (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109312/catalog-products/q8zqi2e7kwxvxhqftj8g.jpg"
+      ]
+    },
+    {
+      "sku": "CB91208FL11",
+      "name": "8 Module Cover Plate Square - Rose Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110120/catalog-products/kaajwii68ihljuljcmxs.jpg"
+      ]
+    },
+    {
+      "sku": "CB91112FR11",
+      "name": "12 Module Cover Plate - Rustic Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110195/catalog-products/sojrhspnauzotoaphdgl.jpg"
+      ]
+    },
+    {
+      "sku": "CB91112FM11",
+      "name": "12 Module Cover Plate - Metallic Grey (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109631/catalog-products/lw8ng9bghqag3c2wdxeo.jpg"
+      ]
+    },
+    {
+      "sku": "CB91112FS11",
+      "name": "12 Module Cover Plate - Firestorm Orange (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109312/catalog-products/q8zqi2e7kwxvxhqftj8g.jpg"
+      ]
+    },
+    {
+      "sku": "CB91112FL11",
+      "name": "12 Module Cover Plate - Rose Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110120/catalog-products/kaajwii68ihljuljcmxs.jpg"
+      ]
+    },
+    {
+      "sku": "CB91116FR11",
+      "name": "16 Module Cover Plate - Rustic Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110195/catalog-products/sojrhspnauzotoaphdgl.jpg"
+      ]
+    },
+    {
+      "sku": "CB91116FM11",
+      "name": "16 Module Cover Plate - Metallic Grey (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109631/catalog-products/lw8ng9bghqag3c2wdxeo.jpg"
+      ]
+    },
+    {
+      "sku": "CB91116FS11",
+      "name": "16 Module Cover Plate - Firestorm Orange (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109312/catalog-products/q8zqi2e7kwxvxhqftj8g.jpg"
+      ]
+    },
+    {
+      "sku": "CB91116FL11",
+      "name": "16 Module Cover Plate - Rose Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110120/catalog-products/kaajwii68ihljuljcmxs.jpg"
+      ]
+    },
+    {
+      "sku": "CB91118FR11",
+      "name": "18 Module Cover Plate - Rustic Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110195/catalog-products/sojrhspnauzotoaphdgl.jpg"
+      ]
+    },
+    {
+      "sku": "CB91118FM11",
+      "name": "18 Module Cover Plate - Metallic Grey (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109631/catalog-products/lw8ng9bghqag3c2wdxeo.jpg"
+      ]
+    },
+    {
+      "sku": "CB91118FS11",
+      "name": "18 Module Cover Plate - Firestorm Orange (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109312/catalog-products/q8zqi2e7kwxvxhqftj8g.jpg"
+      ]
+    },
+    {
+      "sku": "CB91118FL11",
+      "name": "18 Module Cover Plate - Rose Gold (Vibrant)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110120/catalog-products/kaajwii68ihljuljcmxs.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101FL12",
+      "name": "1 Module Cover Plate - Dark Chocolate Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109163/catalog-products/ijcu9863nctucpxhv9qu.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101FA12",
+      "name": "1 Module Cover Plate - Cinnamon Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109136/catalog-products/sykl89mzrbqq0lfgnhyc.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102FL12",
+      "name": "2 Module Cover Plate - Dark Chocolate Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109163/catalog-products/ijcu9863nctucpxhv9qu.jpg"
+      ]
+    },
+    {
+      "sku": "CB91102FA12",
+      "name": "2 Module Cover Plate - Cinnamon Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109136/catalog-products/sykl89mzrbqq0lfgnhyc.jpg"
+      ]
+    },
+    {
+      "sku": "CB91103FL12",
+      "name": "3 Module Cover Plate - Dark Chocolate Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109163/catalog-products/ijcu9863nctucpxhv9qu.jpg"
+      ]
+    },
+    {
+      "sku": "CB91103FA12",
+      "name": "3 Module Cover Plate - Cinnamon Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109136/catalog-products/sykl89mzrbqq0lfgnhyc.jpg"
+      ]
+    },
+    {
+      "sku": "CB91104FL12",
+      "name": "4 Module Cover Plate - Dark Chocolate Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109163/catalog-products/ijcu9863nctucpxhv9qu.jpg"
+      ]
+    },
+    {
+      "sku": "CB91104FA12",
+      "name": "4 Module Cover Plate - Cinnamon Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109136/catalog-products/sykl89mzrbqq0lfgnhyc.jpg"
+      ]
+    },
+    {
+      "sku": "CB91106FL12",
+      "name": "6 Module Cover Plate - Dark Chocolate Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109163/catalog-products/ijcu9863nctucpxhv9qu.jpg"
+      ]
+    },
+    {
+      "sku": "CB91106FA12",
+      "name": "6 Module Cover Plate - Cinnamon Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109136/catalog-products/sykl89mzrbqq0lfgnhyc.jpg"
+      ]
+    },
+    {
+      "sku": "CB91108FL12",
+      "name": "8 Module Cover Plate Horizontal - Dark Chocolate Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109163/catalog-products/ijcu9863nctucpxhv9qu.jpg"
+      ]
+    },
+    {
+      "sku": "CB91108FA12",
+      "name": "8 Module Cover Plate Horizontal - Cinnamon Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109136/catalog-products/sykl89mzrbqq0lfgnhyc.jpg"
+      ]
+    },
+    {
+      "sku": "CB91208FL12",
+      "name": "8 Module Cover Plate Square - Dark Chocolate Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109163/catalog-products/ijcu9863nctucpxhv9qu.jpg"
+      ]
+    },
+    {
+      "sku": "CB91208FA12",
+      "name": "8 Module Cover Plate Square - Cinnamon Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109136/catalog-products/sykl89mzrbqq0lfgnhyc.jpg"
+      ]
+    },
+    {
+      "sku": "CB91112FL12",
+      "name": "12 Module Cover Plate - Dark Chocolate Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109163/catalog-products/ijcu9863nctucpxhv9qu.jpg"
+      ]
+    },
+    {
+      "sku": "CB91112FA12",
+      "name": "12 Module Cover Plate - Cinnamon Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109136/catalog-products/sykl89mzrbqq0lfgnhyc.jpg"
+      ]
+    },
+    {
+      "sku": "CB91116FL12",
+      "name": "16 Module Cover Plate - Dark Chocolate Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109163/catalog-products/ijcu9863nctucpxhv9qu.jpg"
+      ]
+    },
+    {
+      "sku": "CB91116FA12",
+      "name": "16 Module Cover Plate - Cinnamon Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109136/catalog-products/sykl89mzrbqq0lfgnhyc.jpg"
+      ]
+    },
+    {
+      "sku": "CB91118FL12",
+      "name": "18 Module Cover Plate - Dark Chocolate Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109163/catalog-products/ijcu9863nctucpxhv9qu.jpg"
+      ]
+    },
+    {
+      "sku": "CB91118FA12",
+      "name": "18 Module Cover Plate - Cinnamon Wood (Wooden Finish)",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765109136/catalog-products/sykl89mzrbqq0lfgnhyc.jpg"
+      ]
+    },
+    {
+      "sku": "CB91101FB02",
+      "name": "1 Module Glass Cover Plate with Grid Frame - Onyx Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765178635/catalog-products/ak40vcysq01g1thotnbe.png"
+      ]
+    },
+    {
+      "sku": "CB91101FC02",
+      "name": "1 Module Glass Cover Plate with Grid Frame - Classic Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765120094/catalog-products/fhh85eemlpbowfftyrsx.png"
+      ]
+    },
+    {
+      "sku": "CB91101FG02",
+      "name": "1 Module Glass Cover Plate with Grid Frame - Glacier White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765123211/catalog-products/nzusebo06qql4oeirpdf.avif"
+      ]
+    },
+    {
+      "sku": "CB91101FR02",
+      "name": "1 Module Glass Cover Plate with Grid Frame - Caramel Brown",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179072/catalog-products/gwqg9d1nkq1tbk4nsgur.avif"
+      ]
+    },
+    {
+      "sku": "CB91101FM02",
+      "name": "1 Module Glass Cover Plate with Grid Frame - Bronze Mirror",
+      "images": [
+        "http://localhost:8000/public/catalog_images/comming%20soon.jpeg"
+      ]
+    },
+    {
+      "sku": "CB91102FB02",
+      "name": "2 Module Glass Cover Plate with Grid Frame - Onyx Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765178635/catalog-products/ak40vcysq01g1thotnbe.png"
+      ]
+    },
+    {
+      "sku": "CB91102FC02",
+      "name": "2 Module Glass Cover Plate with Grid Frame - Classic Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765120094/catalog-products/fhh85eemlpbowfftyrsx.png"
+      ]
+    },
+    {
+      "sku": "CB91102FG02",
+      "name": "2 Module Glass Cover Plate with Grid Frame - Glacier White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765123211/catalog-products/nzusebo06qql4oeirpdf.avif"
+      ]
+    },
+    {
+      "sku": "CB91102FR02",
+      "name": "2 Module Glass Cover Plate with Grid Frame - Caramel Brown",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179072/catalog-products/gwqg9d1nkq1tbk4nsgur.avif"
+      ]
+    },
+    {
+      "sku": "CB91102FM02",
+      "name": "2 Module Glass Cover Plate with Grid Frame - Bronze Mirror",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179174/catalog-products/hgehwcakwjl0alfxhang.avif"
+      ]
+    },
+    {
+      "sku": "CB91103FB02",
+      "name": "3 Module Glass Cover Plate with Grid Frame - Onyx Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765178635/catalog-products/ak40vcysq01g1thotnbe.png"
+      ]
+    },
+    {
+      "sku": "CB91103FC02",
+      "name": "3 Module Glass Cover Plate with Grid Frame - Classic Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765120094/catalog-products/fhh85eemlpbowfftyrsx.png"
+      ]
+    },
+    {
+      "sku": "CB91103FG02",
+      "name": "3 Module Glass Cover Plate with Grid Frame - Glacier White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765123211/catalog-products/nzusebo06qql4oeirpdf.avif"
+      ]
+    },
+    {
+      "sku": "CB91103FR02",
+      "name": "3 Module Glass Cover Plate with Grid Frame - Caramel Brown",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179072/catalog-products/gwqg9d1nkq1tbk4nsgur.avif"
+      ]
+    },
+    {
+      "sku": "CB91103FM02",
+      "name": "3 Module Glass Cover Plate with Grid Frame - Bronze Mirror",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179174/catalog-products/hgehwcakwjl0alfxhang.avif"
+      ]
+    },
+    {
+      "sku": "CB91104FB02",
+      "name": "4 Module Glass Cover Plate with Grid Frame - Onyx Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765178635/catalog-products/ak40vcysq01g1thotnbe.png"
+      ]
+    },
+    {
+      "sku": "CB91104FC02",
+      "name": "4 Module Glass Cover Plate with Grid Frame - Classic Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765120094/catalog-products/fhh85eemlpbowfftyrsx.png"
+      ]
+    },
+    {
+      "sku": "CB91104FG02",
+      "name": "4 Module Glass Cover Plate with Grid Frame - Glacier White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765123211/catalog-products/nzusebo06qql4oeirpdf.avif"
+      ]
+    },
+    {
+      "sku": "CB91104FR02",
+      "name": "4 Module Glass Cover Plate with Grid Frame - Caramel Brown",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179072/catalog-products/gwqg9d1nkq1tbk4nsgur.avif"
+      ]
+    },
+    {
+      "sku": "CB91104FM02",
+      "name": "4 Module Glass Cover Plate with Grid Frame - Bronze Mirror",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179174/catalog-products/hgehwcakwjl0alfxhang.avif"
+      ]
+    },
+    {
+      "sku": "CB91106FB02",
+      "name": "6 Module Glass Cover Plate with Grid Frame - Onyx Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765178635/catalog-products/ak40vcysq01g1thotnbe.png"
+      ]
+    },
+    {
+      "sku": "CB91106FC02",
+      "name": "6 Module Glass Cover Plate with Grid Frame - Classic Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765120094/catalog-products/fhh85eemlpbowfftyrsx.png"
+      ]
+    },
+    {
+      "sku": "CB91106FG02",
+      "name": "6 Module Glass Cover Plate with Grid Frame - Glacier White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765123211/catalog-products/nzusebo06qql4oeirpdf.avif"
+      ]
+    },
+    {
+      "sku": "CB91106FR02",
+      "name": "6 Module Glass Cover Plate with Grid Frame - Caramel Brown",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179072/catalog-products/gwqg9d1nkq1tbk4nsgur.avif"
+      ]
+    },
+    {
+      "sku": "CB91106FM02",
+      "name": "6 Module Glass Cover Plate with Grid Frame - Bronze Mirror",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179174/catalog-products/hgehwcakwjl0alfxhang.avif"
+      ]
+    },
+    {
+      "sku": "CB91108FB02",
+      "name": "8 Module Glass Cover Plate Horizontal with Grid Frame - Onyx Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765178635/catalog-products/ak40vcysq01g1thotnbe.png"
+      ]
+    },
+    {
+      "sku": "CB91108FC02",
+      "name": "8 Module Glass Cover Plate Horizontal with Grid Frame - Classic Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765120094/catalog-products/fhh85eemlpbowfftyrsx.png"
+      ]
+    },
+    {
+      "sku": "CB91108FG02",
+      "name": "8 Module Glass Cover Plate Horizontal with Grid Frame - Glacier White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765123211/catalog-products/nzusebo06qql4oeirpdf.avif"
+      ]
+    },
+    {
+      "sku": "CB91108FR02",
+      "name": "8 Module Glass Cover Plate Horizontal with Grid Frame - Caramel Brown",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179072/catalog-products/gwqg9d1nkq1tbk4nsgur.avif"
+      ]
+    },
+    {
+      "sku": "CB91108FM02",
+      "name": "8 Module Glass Cover Plate Horizontal with Grid Frame - Bronze Mirror",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179174/catalog-products/hgehwcakwjl0alfxhang.avif"
+      ]
+    },
+    {
+      "sku": "CB91208FB02",
+      "name": "8 Module Glass Cover Plate Square with Grid Frame - Onyx Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765178635/catalog-products/ak40vcysq01g1thotnbe.png"
+      ]
+    },
+    {
+      "sku": "CB91208FC02",
+      "name": "8 Module Glass Cover Plate Square with Grid Frame - Classic Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765120094/catalog-products/fhh85eemlpbowfftyrsx.png"
+      ]
+    },
+    {
+      "sku": "CB91208FG02",
+      "name": "8 Module Glass Cover Plate Square with Grid Frame - Glacier White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765123211/catalog-products/nzusebo06qql4oeirpdf.avif"
+      ]
+    },
+    {
+      "sku": "CB91208FR02",
+      "name": "8 Module Glass Cover Plate Square with Grid Frame - Caramel Brown",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179072/catalog-products/gwqg9d1nkq1tbk4nsgur.avif"
+      ]
+    },
+    {
+      "sku": "CB91208FM02",
+      "name": "8 Module Glass Cover Plate Square with Grid Frame - Bronze Mirror",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179174/catalog-products/hgehwcakwjl0alfxhang.avif"
+      ]
+    },
+    {
+      "sku": "CB91112FB02",
+      "name": "12 Module Glass Cover Plate with Grid Frame - Onyx Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765178635/catalog-products/ak40vcysq01g1thotnbe.png"
+      ]
+    },
+    {
+      "sku": "CB91112FC02",
+      "name": "12 Module Glass Cover Plate with Grid Frame - Classic Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765120094/catalog-products/fhh85eemlpbowfftyrsx.png"
+      ]
+    },
+    {
+      "sku": "CB91112FG02",
+      "name": "12 Module Glass Cover Plate with Grid Frame - Glacier White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765123211/catalog-products/nzusebo06qql4oeirpdf.avif"
+      ]
+    },
+    {
+      "sku": "CB91112FR02",
+      "name": "12 Module Glass Cover Plate with Grid Frame - Caramel Brown",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179072/catalog-products/gwqg9d1nkq1tbk4nsgur.avif"
+      ]
+    },
+    {
+      "sku": "CB91112FM02",
+      "name": "12 Module Glass Cover Plate with Grid Frame - Bronze Mirror",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179174/catalog-products/hgehwcakwjl0alfxhang.avif"
+      ]
+    },
+    {
+      "sku": "CB91116FB02",
+      "name": "16 Module Glass Cover Plate with Grid Frame - Onyx Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765178635/catalog-products/ak40vcysq01g1thotnbe.png"
+      ]
+    },
+    {
+      "sku": "CB91116FC02",
+      "name": "16 Module Glass Cover Plate with Grid Frame - Classic Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765120094/catalog-products/fhh85eemlpbowfftyrsx.png"
+      ]
+    },
+    {
+      "sku": "CB91116FG02",
+      "name": "16 Module Glass Cover Plate with Grid Frame - Glacier White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765123211/catalog-products/nzusebo06qql4oeirpdf.avif"
+      ]
+    },
+    {
+      "sku": "CB91116FR02",
+      "name": "16 Module Glass Cover Plate with Grid Frame - Caramel Brown",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179072/catalog-products/gwqg9d1nkq1tbk4nsgur.avif"
+      ]
+    },
+    {
+      "sku": "CB91116FM02",
+      "name": "16 Module Glass Cover Plate with Grid Frame - Bronze Mirror",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179174/catalog-products/hgehwcakwjl0alfxhang.avif"
+      ]
+    },
+    {
+      "sku": "CB91118FB02",
+      "name": "18 Module Glass Cover Plate with Grid Frame - Onyx Black",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765178635/catalog-products/ak40vcysq01g1thotnbe.png"
+      ]
+    },
+    {
+      "sku": "CB91118FC02",
+      "name": "18 Module Glass Cover Plate with Grid Frame - Classic Grey",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765120094/catalog-products/fhh85eemlpbowfftyrsx.png"
+      ]
+    },
+    {
+      "sku": "CB91118FG02",
+      "name": "18 Module Glass Cover Plate with Grid Frame - Glacier White",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765123211/catalog-products/nzusebo06qql4oeirpdf.avif"
+      ]
+    },
+    {
+      "sku": "CB91118FR02",
+      "name": "18 Module Glass Cover Plate with Grid Frame - Caramel Brown",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179072/catalog-products/gwqg9d1nkq1tbk4nsgur.avif"
+      ]
+    },
+    {
+      "sku": "CB91118FM02",
+      "name": "18 Module Glass Cover Plate with Grid Frame - Bronze Mirror",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765179174/catalog-products/hgehwcakwjl0alfxhang.avif"
+      ]
+    },
+    {
+      "sku": "CB91101FM07",
+      "name": "1 Module Cover Plate with Grid Frame - Mystic Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110618/catalog-products/pkdrhuxidilg8sjrqsac.webp"
+      ]
+    },
+    {
+      "sku": "CB91101FW07",
+      "name": "1 Module Cover Plate with Grid Frame - White Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111867/catalog-products/v5dzks5obiawiyuuaxyu.png"
+      ]
+    },
+    {
+      "sku": "CB91102FM07",
+      "name": "2 Module Cover Plate with Grid Frame - Mystic Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110618/catalog-products/pkdrhuxidilg8sjrqsac.webp"
+      ]
+    },
+    {
+      "sku": "CB91102FW07",
+      "name": "2 Module Cover Plate with Grid Frame - White Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111867/catalog-products/v5dzks5obiawiyuuaxyu.png"
+      ]
+    },
+    {
+      "sku": "CB91103FM07",
+      "name": "3 Module Cover Plate with Grid Frame - Mystic Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110618/catalog-products/pkdrhuxidilg8sjrqsac.webp"
+      ]
+    },
+    {
+      "sku": "CB91103FW07",
+      "name": "3 Module Cover Plate with Grid Frame - White Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111867/catalog-products/v5dzks5obiawiyuuaxyu.png"
+      ]
+    },
+    {
+      "sku": "CB91104FM07",
+      "name": "4 Module Cover Plate with Grid Frame - Mystic Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110618/catalog-products/pkdrhuxidilg8sjrqsac.webp"
+      ]
+    },
+    {
+      "sku": "CB91104FW07",
+      "name": "4 Module Cover Plate with Grid Frame - White Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111867/catalog-products/v5dzks5obiawiyuuaxyu.png"
+      ]
+    },
+    {
+      "sku": "CB91106FM07",
+      "name": "6 Module Cover Plate with Grid Frame - Mystic Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110618/catalog-products/pkdrhuxidilg8sjrqsac.webp"
+      ]
+    },
+    {
+      "sku": "CB91106FW07",
+      "name": "6 Module Cover Plate with Grid Frame - White Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111867/catalog-products/v5dzks5obiawiyuuaxyu.png"
+      ]
+    },
+    {
+      "sku": "CB91108FM07",
+      "name": "8 Module Cover Plate Horizontal with Grid Frame - Mystic Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110618/catalog-products/pkdrhuxidilg8sjrqsac.webp"
+      ]
+    },
+    {
+      "sku": "CB91108FW07",
+      "name": "8 Module Cover Plate Horizontal with Grid Frame - White Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111867/catalog-products/v5dzks5obiawiyuuaxyu.png"
+      ]
+    },
+    {
+      "sku": "CB91208FM07",
+      "name": "8 Module Cover Plate Square with Grid Frame - Mystic Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110618/catalog-products/pkdrhuxidilg8sjrqsac.webp"
+      ]
+    },
+    {
+      "sku": "CB91208FW07",
+      "name": "8 Module Cover Plate Square with Grid Frame - White Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111867/catalog-products/v5dzks5obiawiyuuaxyu.png"
+      ]
+    },
+    {
+      "sku": "CB91112FM07",
+      "name": "12 Module Cover Plate with Grid Frame - Mystic Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110618/catalog-products/pkdrhuxidilg8sjrqsac.webp"
+      ]
+    },
+    {
+      "sku": "CB91112FW07",
+      "name": "12 Module Cover Plate with Grid Frame - White Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111867/catalog-products/v5dzks5obiawiyuuaxyu.png"
+      ]
+    },
+    {
+      "sku": "CB91116FM07",
+      "name": "16 Module Cover Plate with Grid Frame - Mystic Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110618/catalog-products/pkdrhuxidilg8sjrqsac.webp"
+      ]
+    },
+    {
+      "sku": "CB91116FW07",
+      "name": "16 Module Cover Plate with Grid Frame - White Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111867/catalog-products/v5dzks5obiawiyuuaxyu.png"
+      ]
+    },
+    {
+      "sku": "CB91118FM07",
+      "name": "18 Module Cover Plate with Grid Frame - Mystic Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765110618/catalog-products/pkdrhuxidilg8sjrqsac.webp"
+      ]
+    },
+    {
+      "sku": "CB91118FW07",
+      "name": "18 Module Cover Plate with Grid Frame - White Marble Finish",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765111867/catalog-products/v5dzks5obiawiyuuaxyu.png"
+      ]
+    },
+    {
+      "sku": "CB91102GB00",
+      "name": "1/2 Module Grid Frame",
+      "images": [
+        "http://localhost:8000/public/catalog_images/comming%20soon.jpeg"
+      ]
+    },
+    {
+      "sku": "CB91103GB00",
+      "name": "3 Module Grid Frame",
+      "images": [
+        "http://localhost:8000/public/catalog_images/comming%20soon.jpeg"
+      ]
+    },
+    {
+      "sku": "CB91104GB00",
+      "name": "4 Module Grid Frame",
+      "images": [
+        "http://localhost:8000/public/catalog_images/comming%20soon.jpeg"
+      ]
+    },
+    {
+      "sku": "CB91106GB00",
+      "name": "6 Module Grid Frame",
+      "images": [
+        "http://localhost:8000/public/catalog_images/comming%20soon.jpeg"
+      ]
+    },
+    {
+      "sku": "CB91108GB00",
+      "name": "8 Module Grid Frame Horizontal",
+      "images": [
+        "http://localhost:8000/public/catalog_images/comming%20soon.jpeg"
+      ]
+    },
+    {
+      "sku": "CB91208GB00",
+      "name": "8 Module Grid Frame Square",
+      "images": [
+        "http://localhost:8000/public/catalog_images/comming%20soon.jpeg"
+      ]
+    },
+    {
+      "sku": "CB91112GB00",
+      "name": "12 Module Grid Frame",
+      "images": [
+        "http://localhost:8000/public/catalog_images/comming%20soon.jpeg"
+      ]
+    },
+    {
+      "sku": "CB91116GB00",
+      "name": "16 Module Grid Frame",
+      "images": [
+        "http://localhost:8000/public/catalog_images/comming%20soon.jpeg"
+      ]
+    },
+    {
+      "sku": "CB91118GB00",
+      "name": "18 Module Grid Frame",
+      "images": [
+        "http://localhost:8000/public/catalog_images/comming%20soon.jpeg"
+      ]
+    },
+    {
+      "sku": "CB92101FB04",
+      "name": "1 Module Cover Plate - Beige Wood",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765106499/catalog-products/jkh6imtm4unulrbrcqt7.jpg"
+      ]
+    },
+    {
+      "sku": "CB92102FB04",
+      "name": "2 Module Cover Plate - Beige Wood",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765106499/catalog-products/jkh6imtm4unulrbrcqt7.jpg"
+      ]
+    },
+    {
+      "sku": "CB92103FB04",
+      "name": "3 Module Cover Plate - Beige Wood",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765106499/catalog-products/jkh6imtm4unulrbrcqt7.jpg"
+      ]
+    },
+    {
+      "sku": "CB92104FB04",
+      "name": "4 Module Cover Plate - Beige Wood",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765106499/catalog-products/jkh6imtm4unulrbrcqt7.jpg"
+      ]
+    },
+    {
+      "sku": "CB92106FB04",
+      "name": "6 Module Cover Plate - Beige Wood",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765106499/catalog-products/jkh6imtm4unulrbrcqt7.jpg"
+      ]
+    },
+    {
+      "sku": "CB92108FB04",
+      "name": "8 Module Cover Plate Horizontal - Beige Wood",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765106499/catalog-products/jkh6imtm4unulrbrcqt7.jpg"
+      ]
+    },
+    {
+      "sku": "CB92208FB04",
+      "name": "8 Module Cover Plate Square - Beige Wood",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765106499/catalog-products/jkh6imtm4unulrbrcqt7.jpg"
+      ]
+    },
+    {
+      "sku": "CB92112FB04",
+      "name": "12 Module Cover Plate - Beige Wood",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765106499/catalog-products/jkh6imtm4unulrbrcqt7.jpg"
+      ]
+    },
+    {
+      "sku": "CB92116FB04",
+      "name": "16 Module Cover Plate - Beige Wood",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765106499/catalog-products/jkh6imtm4unulrbrcqt7.jpg"
+      ]
+    },
+    {
+      "sku": "CB92118FB04",
+      "name": "18 Module Cover Plate - Beige Wood",
+      "images": [
+        "https://res.cloudinary.com/dl4ld36qn/image/upload/v1765106499/catalog-products/jkh6imtm4unulrbrcqt7.jpg"
+      ]
+    }
+  ]
+}
