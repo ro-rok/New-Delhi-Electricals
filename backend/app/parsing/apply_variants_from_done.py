@@ -39,8 +39,15 @@ OUTPUT_DIR = PathLib(__file__).parent / "output"
 SUMMARY_FILE = OUTPUT_DIR / "variant_updates_applied.json"
 
 
-def is_missing_list(val: Any) -> bool:
-    return not isinstance(val, list) or len(val) == 0
+def is_missing_variants(val: Any) -> bool:
+    """True when variants are missing/empty (supports list or dict)."""
+    if val is None:
+        return True
+    if isinstance(val, list):
+        return len(val) == 0
+    if isinstance(val, dict):
+        return len(val) == 0
+    return True
 
 
 def load_done_products() -> List[Dict[str, Any]]:
@@ -62,11 +69,41 @@ def load_done_products() -> List[Dict[str, Any]]:
     return products
 
 
-def build_updates(src: Dict[str, Any], db_doc: Dict[str, Any]) -> Dict[str, Any]:
+def build_color_lookup(products: List[Dict[str, Any]]) -> Dict[str, str]:
+    """Build sku -> color lookup from the provided products list."""
+    lookup: Dict[str, str] = {}
+    for p in products:
+        sku = p.get("sku")
+        if not sku:
+            continue
+        color = (p.get("specs") or {}).get("color")
+        if color:
+            lookup[sku] = color
+    return lookup
+
+
+def normalize_variant_mapping(raw_variants: Any, color_lookup: Dict[str, str]) -> Dict[str, str]:
+    """
+    Convert variants to dict[sku, color_or_empty].
+    Accepts either dict (returns as-is) or list (converts).
+    """
+    if isinstance(raw_variants, dict):
+        return raw_variants
+    if not isinstance(raw_variants, list):
+        return {}
+    mapping: Dict[str, str] = {}
+    for sku in raw_variants:
+        if not isinstance(sku, str):
+            continue
+        mapping[sku] = color_lookup.get(sku, "")
+    return mapping
+
+
+def build_updates(src: Dict[str, Any], db_doc: Dict[str, Any], color_lookup: Dict[str, str]) -> Dict[str, Any]:
     updates: Dict[str, Any] = {}
-    src_variants = src.get("variant") or []
+    src_variants = normalize_variant_mapping(src.get("variant"), color_lookup)
     db_variants = db_doc.get("variant")
-    if src_variants and is_missing_list(db_variants):
+    if src_variants and is_missing_variants(db_variants):
         updates["variant"] = src_variants
     return updates
 
@@ -74,6 +111,7 @@ def build_updates(src: Dict[str, Any], db_doc: Dict[str, Any]) -> Dict[str, Any]
 async def apply_updates(db) -> Dict[str, Any]:
     collection = db["products"]
     src_products = load_done_products()
+    color_lookup = build_color_lookup(src_products)
 
     applied = []
     not_found = []
@@ -89,7 +127,7 @@ async def apply_updates(db) -> Dict[str, Any]:
             not_found.append({"sku": sku, "source_file": src.get("_source_file", "")})
             continue
 
-        updates = build_updates(src, db_doc)
+        updates = build_updates(src, db_doc, color_lookup)
         if not updates:
             skipped_no_updates.append(sku)
             continue

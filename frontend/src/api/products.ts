@@ -32,6 +32,14 @@ function transformProduct(backendProduct: any): Product {
 
   const urlPath = backendProduct.url_path || (brandSlug && slug ? `/${brandSlug}/${slug}` : undefined);
 
+  // Extract variant field (maps SKU -> Color Name) - it's at top level
+  const variant = backendProduct.variant || undefined;
+  
+  console.log('Transform product variant extraction:', {
+    'backendProduct.variant': backendProduct.variant,
+    'final variant': variant,
+  });
+
   return {
     id: backendProduct._id || backendProduct.id || backendProduct.sku,
     sku: backendProduct.sku,
@@ -54,6 +62,7 @@ function transformProduct(backendProduct: any): Product {
     comingSoon: backendProduct.status?.coming_soon || backendProduct.comingSoon || false,
     isActive: isActive,
     status: status,
+    variant: variant,
   };
 }
 

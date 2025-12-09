@@ -40,6 +40,8 @@ class ProductBase(BaseModel):
     slug: Optional[str] = None
     url_path: str | None = None
     highlights: Optional[List[Any]] = Field(default=None, description="Product highlights/features")
+    variant: Optional[Dict[str, str]] = Field(default=None, description="Variant map: SKU -> Color Name")
+    catalog_source: Optional[Dict[str, Any]] = Field(default=None, description="Catalog source metadata")
 
 
 class ProductCreate(ProductBase):

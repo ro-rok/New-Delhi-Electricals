@@ -27,6 +27,7 @@ export interface Product {
   isActive: boolean;
   status?: ProductStatus;
   highlights?: any[];
+  variant?: Record<string, string>; // Maps SKU -> Color Name
 }
 
 export interface Category {

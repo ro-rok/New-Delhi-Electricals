@@ -1,0 +1,5336 @@
+[
+  {
+    "sku": "AUCL03050050",
+    "category": "Circuit Protection",
+    "name": "Three Phase Automatic Changeover with Current Limiter 50A/50A",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUCL03063050",
+    "category": "Circuit Protection",
+    "name": "Three Phase Automatic Changeover with Current Limiter 63A/50A",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUCL03063063",
+    "category": "Circuit Protection",
+    "name": "Three Phase Automatic Changeover with Current Limiter 63A/63A",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUCL03080080",
+    "category": "Circuit Protection",
+    "name": "Three Phase Automatic Changeover with Current Limiter 80A/80A",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUCL03125125",
+    "category": "Circuit Protection",
+    "name": "Three Phase Automatic Changeover with Current Limiter 125A/125A",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BCL010301E5",
+    "category": "Circuit Protection",
+    "name": "Automatic Changeover with Current Limiter 30A/1.5A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BCL010302E5",
+    "category": "Circuit Protection",
+    "name": "Automatic Changeover with Current Limiter 30A/2.5A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BCL01030003",
+    "category": "Circuit Protection",
+    "name": "Automatic Changeover with Current Limiter 30A/3A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BCL01030004",
+    "category": "Circuit Protection",
+    "name": "Automatic Changeover with Current Limiter 30A/4A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BCL01030005",
+    "category": "Circuit Protection",
+    "name": "Automatic Changeover with Current Limiter 30A/5A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BCL01030006",
+    "category": "Circuit Protection",
+    "name": "Automatic Changeover with Current Limiter 30A/6A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BCL01030008",
+    "category": "Circuit Protection",
+    "name": "Automatic Changeover with Current Limiter 30A/8A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BCL01030010",
+    "category": "Circuit Protection",
+    "name": "Automatic Changeover with Current Limiter 30A/10A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BCL01030012",
+    "category": "Circuit Protection",
+    "name": "Automatic Changeover with Current Limiter 30A/12A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BCL01030015",
+    "category": "Circuit Protection",
+    "name": "Automatic Changeover with Current Limiter 30A/15A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BCL01030020",
+    "category": "Circuit Protection",
+    "name": "Automatic Changeover with Current Limiter 30A/20A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BCL01030030",
+    "category": "Circuit Protection",
+    "name": "Automatic Changeover with Current Limiter 30A/30A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUC00202500",
+    "category": "Circuit Protection",
+    "name": "Modular Changeover Switch 25A Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUC00204000",
+    "category": "Circuit Protection",
+    "name": "Modular Changeover Switch 40A Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUC00206300",
+    "category": "Circuit Protection",
+    "name": "Modular Changeover Switch 63A Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUC00404000",
+    "category": "Circuit Protection",
+    "name": "Modular Changeover Switch 40A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUC00406300",
+    "category": "Circuit Protection",
+    "name": "Modular Changeover Switch 63A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "CB95401AW00",
+    "category": "Accessories",
+    "name": "LED Phase Indicator 1M Full Glow - White",
+    "series": "Encurve",
+    "product_family": "Encurve"
+  },
+  {
+    "sku": "AUCL03032032",
+    "category": "Circuit Protection",
+    "name": "Three Phase Automatic Changeover with Current Limiter 32A/32A",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUCL03040032",
+    "category": "Circuit Protection",
+    "name": "Three Phase Automatic Changeover with Current Limiter 40A/32A",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUCL03040040",
+    "category": "Circuit Protection",
+    "name": "Three Phase Automatic Changeover with Current Limiter 40A/40A",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "CB92401AW00",
+    "category": "Accessories",
+    "name": "LED Phase Indicator 1M - Full Glow",
+    "series": "Englaze",
+    "product_family": "Englaze"
+  },
+  {
+    "sku": "CB98T02RM13",
+    "category": "Accessories",
+    "name": "IR Remote Control - Black",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91101FW00",
+    "category": "Plates",
+    "name": "1 Module Cover Plate with Grid Frame - White",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91102FW00",
+    "category": "Plates",
+    "name": "2 Module Cover Plate with Grid Frame - White",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91103FW00",
+    "category": "Plates",
+    "name": "3 Module Cover Plate with Grid Frame - White",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91104FW00",
+    "category": "Plates",
+    "name": "4 Module Cover Plate with Grid Frame - White",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91106FW00",
+    "category": "Plates",
+    "name": "6 Module Cover Plate with Grid Frame - White",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91108FW00",
+    "category": "Plates",
+    "name": "8 Module Cover Plate Horizontal with Grid Frame - White",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91208FW00",
+    "category": "Plates",
+    "name": "8 Module Cover Plate Square with Grid Frame - White",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91308FW00",
+    "category": "Plates",
+    "name": "8 Module Cover Plate with Grid Frame - Small Size White (Oris 10M Boxes)",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91112FW00",
+    "category": "Plates",
+    "name": "12 Module Cover Plate with Grid Frame - White",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91116FW00",
+    "category": "Plates",
+    "name": "16 Module Cover Plate with Grid Frame - White",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91118FW00",
+    "category": "Plates",
+    "name": "18 Module Cover Plate with Grid Frame - White",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91102GB00",
+    "category": "Plates",
+    "name": "1/2 Module Grid Frame",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91103GB00",
+    "category": "Plates",
+    "name": "3 Module Grid Frame",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91104GB00",
+    "category": "Plates",
+    "name": "4 Module Grid Frame",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91106GB00",
+    "category": "Plates",
+    "name": "6 Module Grid Frame",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91108GB00",
+    "category": "Plates",
+    "name": "8 Module Grid Frame Horizontal",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91208GB00",
+    "category": "Plates",
+    "name": "8 Module Grid Frame Square",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91112GB00",
+    "category": "Plates",
+    "name": "12 Module Grid Frame",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91116GB00",
+    "category": "Plates",
+    "name": "16 Module Grid Frame",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91118GB00",
+    "category": "Plates",
+    "name": "18 Module Grid Frame",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91102WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 1 & 2 Module",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91103WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 3 Module",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91104WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 4 Module",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91106WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 6 Module",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91108WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 8 Module Horizontal",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91208WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 8 Module Square",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91112WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 12 Module",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91116WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 16 Module",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB91118WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 18 Module",
+    "series": "Entice",
+    "product_family": "Entice"
+  },
+  {
+    "sku": "CB92102GB00",
+    "category": "Plates",
+    "name": "1/2 Module Grid Frame",
+    "series": "Englaze",
+    "product_family": "Englaze"
+  },
+  {
+    "sku": "CB92103GB00",
+    "category": "Plates",
+    "name": "3 Module Grid Frame",
+    "series": "Englaze",
+    "product_family": "Englaze"
+  },
+  {
+    "sku": "CB92104GB00",
+    "category": "Plates",
+    "name": "4 Module Grid Frame",
+    "series": "Englaze",
+    "product_family": "Englaze"
+  },
+  {
+    "sku": "CB92106GB00",
+    "category": "Plates",
+    "name": "6 Module Grid Frame",
+    "series": "Englaze",
+    "product_family": "Englaze"
+  },
+  {
+    "sku": "CB92108GB00",
+    "category": "Plates",
+    "name": "8 Module Grid Frame Horizontal",
+    "series": "Englaze",
+    "product_family": "Englaze"
+  },
+  {
+    "sku": "CB92208GB00",
+    "category": "Plates",
+    "name": "8 Module Grid Frame Square",
+    "series": "Englaze",
+    "product_family": "Englaze"
+  },
+  {
+    "sku": "CB92112GB00",
+    "category": "Plates",
+    "name": "12 Module Grid Frame",
+    "series": "Englaze",
+    "product_family": "Englaze"
+  },
+  {
+    "sku": "CB92116GB00",
+    "category": "Plates",
+    "name": "16 Module Grid Frame",
+    "series": "Englaze",
+    "product_family": "Englaze"
+  },
+  {
+    "sku": "CB92118GB00",
+    "category": "Plates",
+    "name": "18 Module Grid Frame",
+    "series": "Englaze",
+    "product_family": "Englaze"
+  },
+  {
+    "sku": "BE204000",
+    "category": "Circuit Protection",
+    "name": "Isolator 40A Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BE304000",
+    "category": "Circuit Protection",
+    "name": "Isolator 40A Three Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BE404000",
+    "category": "Circuit Protection",
+    "name": "Isolator 40A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BE206300",
+    "category": "Circuit Protection",
+    "name": "Isolator 63A Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BE306300",
+    "category": "Circuit Protection",
+    "name": "Isolator 63A Three Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BE406300",
+    "category": "Circuit Protection",
+    "name": "Isolator 63A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BE210000",
+    "category": "Circuit Protection",
+    "name": "Isolator 100A Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BE310000",
+    "category": "Circuit Protection",
+    "name": "Isolator 100A Three Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BE410000",
+    "category": "Circuit Protection",
+    "name": "Isolator 100A Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA10060C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 6A C Curve Single Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA20060C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 6A C Curve Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA30060C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 6A C Curve Three Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA40060C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 6A C Curve Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA10100C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 10A C Curve Single Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA20100C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 10A C Curve Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA30100C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 10A C Curve Three Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA40100C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 10A C Curve Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA10160C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 16A C Curve Single Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA20160C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 16A C Curve Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA30160C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 16A C Curve Three Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA40160C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 16A C Curve Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA10200C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 20A C Curve Single Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA20200C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 20A C Curve Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA30200C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 20A C Curve Three Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA40200C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 20A C Curve Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA10250C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 25A C Curve Single Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA20250C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 25A C Curve Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA30250C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 25A C Curve Three Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA40250C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 25A C Curve Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA10320C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 32A C Curve Single Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA20320C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 32A C Curve Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA30320C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 32A C Curve Three Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA40320C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 32A C Curve Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA10400C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 40A C Curve Single Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA20400C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 40A C Curve Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA30400C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 40A C Curve Three Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA40400C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 40A C Curve Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA10630C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 63A C Curve Single Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA20630C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 63A C Curve Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA30630C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 63A C Curve Three Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BA40630C",
+    "category": "Circuit Protection",
+    "name": "Miniature Circuit Breaker 63A C Curve Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C200603",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 6A 30mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C200610",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 6A 100mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C200630",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 6A 300mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C201003",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 10A 30mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C201010",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 10A 100mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C201030",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 10A 300mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C201603",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 16A 30mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C201610",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 16A 100mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C201630",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 16A 300mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C202003",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 20A 30mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C202010",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 20A 100mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C202030",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 20A 300mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C202503",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 25A 30mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C202510",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 25A 100mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C202530",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 25A 300mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C203203",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 32A 30mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C203210",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 32A 100mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C203230",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 32A 300mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C204003",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 40A 30mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C204010",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 40A 100mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C204030",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 40A 300mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C206303",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 63A 30mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C206310",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 63A 100mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C206330",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection 63A 300mA Double Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C401603",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C16A 30mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C401610",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C16A 100mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C401630",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C16A 300mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C402003",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C20A 30mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C402010",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C20A 100mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C402030",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C20A 300mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C402503",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C25A 30mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C402510",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C25A 100mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C402530",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C25A 300mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C403203",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C32A 30mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C403210",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C32A 100mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C403230",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C32A 300mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C404003",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C40A 30mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C404010",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C40A 100mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C404030",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C40A 300mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C406303",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C63A 30mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C406310",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C63A 100mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C406330",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C63A 300mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C408003",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C80A 30mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C408010",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C80A 100mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C408030",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C80A 300mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C410003",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C100A 30mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C410010",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C100A 100mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "AUF3C410030",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker with Over Current Protection C100A 300mA Four Pole RCBO",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC202503",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 25A 30mA Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC402503",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 25A 30mA Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC202510",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 25A 100mA Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC402510",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 25A 100mA Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC202530",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 25A 300mA Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC402530",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 25A 300mA Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC204003",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 40A 30mA Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC404003",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 40A 30mA Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC204010",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 40A 100mA Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC404010",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 40A 100mA Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC204030",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 40A 300mA Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC404030",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 40A 300mA Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC206303",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 63A 30mA Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC406303",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 63A 30mA Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC206310",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 63A 100mA Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC406310",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 63A 100mA Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC206330",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 63A 300mA Double Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "BC406330",
+    "category": "Circuit Protection",
+    "name": "Residual Current Circuit Breaker 63A 300mA Four Pole",
+    "series": "Tripper",
+    "product_family": "Tripper"
+  },
+  {
+    "sku": "CB93401AW00",
+    "category": "Accessories",
+    "name": "LED Phase Indicator 1M-Full Glow - White",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB93102WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 1 & 2 Module",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB93103WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 3 Module",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB93104WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 4 Module",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB93106WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 6 Module",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB93108WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 8 Module Horizontal",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB93208WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 8 Module Square",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB93112WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 12 Module",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB93116WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 16 Module",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB93118WM00",
+    "category": "Boxes",
+    "name": "GI Metal Box - 18 Module",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB91102WP00",
+    "category": "Boxes",
+    "name": "Surface Mounting Box - 1/2M",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB91103WP00",
+    "category": "Boxes",
+    "name": "Surface Mounting Box - 3M",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB91104WP00",
+    "category": "Boxes",
+    "name": "Surface Mounting Box - 4M",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB91106WP00",
+    "category": "Boxes",
+    "name": "Surface Mounting Box - 6M",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB91108WP00",
+    "category": "Boxes",
+    "name": "Surface Mounting Box - 8M Horizontal",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB91208WP00",
+    "category": "Boxes",
+    "name": "Surface Mounting Box - 8M Square",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB91112WP00",
+    "category": "Boxes",
+    "name": "Surface Mounting Box - 12M",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB91116WP00",
+    "category": "Boxes",
+    "name": "Surface Mounting Box - 16M",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "CB91118WP00",
+    "category": "Boxes",
+    "name": "Surface Mounting Box - 18M",
+    "series": "Engem",
+    "product_family": "Engem"
+  },
+  {
+    "sku": "65171",
+    "category": "Switches",
+    "name": "10AX, 1 Way Switch, 100W SBL Load, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65172",
+    "category": "Switches",
+    "name": "10AX, 2 Way Switch, 100W SBL Load, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65173",
+    "category": "Switches",
+    "name": "16AX, 1 Way Switch, 200W SBL Load, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65174",
+    "category": "Switches",
+    "name": "16AX, 2 Way Switch, 200W SBL Load, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65175",
+    "category": "Switches",
+    "name": "16AX, 1 Way Switch With Indicator, 200W SBL Load, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65176",
+    "category": "Switches",
+    "name": "10A, Bell Push Switch With Indicator, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65177",
+    "category": "Switches",
+    "name": "10A, Bell Push Switch With Indicator, 2M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65178",
+    "category": "Switches",
+    "name": "25A S.P. 1 Way Switch With Indicator, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65179",
+    "category": "Switches",
+    "name": "32A D.P. 1 Way Switch With Indicator, 2M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65171B",
+    "category": "Switches",
+    "name": "10AX, 1 Way Switch, 100W SBL Load, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65172B",
+    "category": "Switches",
+    "name": "10AX, 2 Way Switch, 100W SBL Load, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65173B",
+    "category": "Switches",
+    "name": "16AX, 1 Way Switch, 200W SBL Load, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65174B",
+    "category": "Switches",
+    "name": "16AX, 2 Way Switch, 200W SBL Load, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65175B",
+    "category": "Switches",
+    "name": "16AX, 1 Way Switch With Indicator, 200W SBL Load, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65176B",
+    "category": "Switches",
+    "name": "10A, Bell Push Switch With Indicator, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65177B",
+    "category": "Switches",
+    "name": "10A, Bell Push Switch With Indicator, 2M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65178B",
+    "category": "Switches",
+    "name": "25A S.P. 1 Way Switch With Indicator, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65179B",
+    "category": "Switches",
+    "name": "32A D.P. 1 Way Switch With Indicator, 2M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65141",
+    "category": "Switches",
+    "name": "6AX, 1 Way Switch, 1M 100W SBL Load",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65142",
+    "category": "Switches",
+    "name": "6AX, 2 Way Switch, 1M 100W SBL Load",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65143",
+    "category": "Switches",
+    "name": "6A, Bell Push, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65166",
+    "category": "Switches",
+    "name": "6A, Bell Push, 2M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65151",
+    "category": "Switches",
+    "name": "6AX, 1Way Switch with Indicator, 1M 100W SBL Load",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65157",
+    "category": "Switches",
+    "name": "16AX, 1Way Switch with Indicator, 1M 200W SBL Load",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65147",
+    "category": "Switches",
+    "name": "16AX, 1 Way Switch, 1M 200W SBL Load",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65148",
+    "category": "Switches",
+    "name": "16AX, 2 Way Switch,1M 200W SBL Load",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65149",
+    "category": "Switches",
+    "name": "32A DP Switch With Indicator, 2M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65141B",
+    "category": "Switches",
+    "name": "6AX, 1 Way Switch, 1M 100W SBL Load",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65142B",
+    "category": "Switches",
+    "name": "6AX, 2 Way Switch, 1M 100W SBL Load",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65143B",
+    "category": "Switches",
+    "name": "6A, Bell Push, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65166B",
+    "category": "Switches",
+    "name": "6A, Bell Push, 2M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65151B",
+    "category": "Switches",
+    "name": "6AX, 1Way Switch with Indicator, 1M 100W SBL Load",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65157B",
+    "category": "Switches",
+    "name": "16AX, 1Way Switch with Indicator, 1M 200W SBL Load",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65147B",
+    "category": "Switches",
+    "name": "16AX, 1 Way Switch, 1M 200W SBL Load",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65148B",
+    "category": "Switches",
+    "name": "16AX, 2 Way Switch,1M 200W SBL Load",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65149B",
+    "category": "Switches",
+    "name": "32A DP Switch With Indicator, 2M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901AWH",
+    "category": "Plates",
+    "name": "Xena Plate 1 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901ABU",
+    "category": "Plates",
+    "name": "Xena Plate 1 Module - Blue",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901ABL",
+    "category": "Plates",
+    "name": "Xena Plate 1 Module - Graphite Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901ABR",
+    "category": "Plates",
+    "name": "Xena Plate 1 Module - Brown Mahogany",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901AWD",
+    "category": "Plates",
+    "name": "Xena Plate 1 Module - Dark Walnut",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902AWH",
+    "category": "Plates",
+    "name": "Xena Plate 2 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902ABU",
+    "category": "Plates",
+    "name": "Xena Plate 2 Module - Blue",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902ABL",
+    "category": "Plates",
+    "name": "Xena Plate 2 Module - Graphite Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902ABR",
+    "category": "Plates",
+    "name": "Xena Plate 2 Module - Brown Mahogany",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902AWD",
+    "category": "Plates",
+    "name": "Xena Plate 2 Module - Dark Walnut",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903AWH",
+    "category": "Plates",
+    "name": "Xena Plate 3 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903ABU",
+    "category": "Plates",
+    "name": "Xena Plate 3 Module - Blue",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903ABL",
+    "category": "Plates",
+    "name": "Xena Plate 3 Module - Graphite Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903ABR",
+    "category": "Plates",
+    "name": "Xena Plate 3 Module - Brown Mahogany",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903AWD",
+    "category": "Plates",
+    "name": "Xena Plate 3 Module - Dark Walnut",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904AWH",
+    "category": "Plates",
+    "name": "Xena Plate 4 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904ABU",
+    "category": "Plates",
+    "name": "Xena Plate 4 Module - Blue",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904ABL",
+    "category": "Plates",
+    "name": "Xena Plate 4 Module - Graphite Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904ABR",
+    "category": "Plates",
+    "name": "Xena Plate 4 Module - Brown Mahogany",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904AWD",
+    "category": "Plates",
+    "name": "Xena Plate 4 Module - Dark Walnut",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906AWH",
+    "category": "Plates",
+    "name": "Xena Plate 6 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906ABU",
+    "category": "Plates",
+    "name": "Xena Plate 6 Module - Blue",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906ABL",
+    "category": "Plates",
+    "name": "Xena Plate 6 Module - Graphite Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906ABR",
+    "category": "Plates",
+    "name": "Xena Plate 6 Module - Brown Mahogany",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906AWD",
+    "category": "Plates",
+    "name": "Xena Plate 6 Module - Dark Walnut",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908AWH",
+    "category": "Plates",
+    "name": "Xena Plate 8 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908ABU",
+    "category": "Plates",
+    "name": "Xena Plate 8 Module - Blue",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908ABL",
+    "category": "Plates",
+    "name": "Xena Plate 8 Module - Graphite Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908ABR",
+    "category": "Plates",
+    "name": "Xena Plate 8 Module - Brown Mahogany",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908AWD",
+    "category": "Plates",
+    "name": "Xena Plate 8 Module - Dark Walnut",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988AWH",
+    "category": "Plates",
+    "name": "Xena Plate 8 Module Vertical - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988ABU",
+    "category": "Plates",
+    "name": "Xena Plate 8 Module Vertical - Blue",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988ABL",
+    "category": "Plates",
+    "name": "Xena Plate 8 Module Vertical - Graphite Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988ABR",
+    "category": "Plates",
+    "name": "Xena Plate 8 Module Vertical - Brown Mahogany",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988AWD",
+    "category": "Plates",
+    "name": "Xena Plate 8 Module Vertical - Dark Walnut",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912AWH",
+    "category": "Plates",
+    "name": "Xena Plate 12 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912ABU",
+    "category": "Plates",
+    "name": "Xena Plate 12 Module - Blue",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912ABL",
+    "category": "Plates",
+    "name": "Xena Plate 12 Module - Graphite Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912ABR",
+    "category": "Plates",
+    "name": "Xena Plate 12 Module - Brown Mahogany",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912AWD",
+    "category": "Plates",
+    "name": "Xena Plate 12 Module - Dark Walnut",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916AWH",
+    "category": "Plates",
+    "name": "Xena Plate 16 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916ABU",
+    "category": "Plates",
+    "name": "Xena Plate 16 Module - Blue",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916ABL",
+    "category": "Plates",
+    "name": "Xena Plate 16 Module - Graphite Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916ABR",
+    "category": "Plates",
+    "name": "Xena Plate 16 Module - Brown Mahogany",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916AWD",
+    "category": "Plates",
+    "name": "Xena Plate 16 Module - Dark Walnut",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918AWH",
+    "category": "Plates",
+    "name": "Xena Plate 18 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918ABU",
+    "category": "Plates",
+    "name": "Xena Plate 18 Module - Blue",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918ABL",
+    "category": "Plates",
+    "name": "Xena Plate 18 Module - Graphite Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918ABR",
+    "category": "Plates",
+    "name": "Xena Plate 18 Module - Brown Mahogany",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918AWD",
+    "category": "Plates",
+    "name": "Xena Plate 18 Module - Dark Walnut",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65351",
+    "category": "Plates",
+    "name": "Thin Slim Plate 1 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65352",
+    "category": "Plates",
+    "name": "Thin Slim Plate 2 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65353",
+    "category": "Plates",
+    "name": "Thin Slim Plate 3 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65354",
+    "category": "Plates",
+    "name": "Thin Slim Plate 4 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65356",
+    "category": "Plates",
+    "name": "Thin Slim Plate 6 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65358",
+    "category": "Plates",
+    "name": "Thin Slim Plate 8 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65388",
+    "category": "Plates",
+    "name": "Thin Slim Plate 8 Module Vertical - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65312",
+    "category": "Plates",
+    "name": "Thin Slim Plate 12 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65316",
+    "category": "Plates",
+    "name": "Thin Slim Plate 16 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65318",
+    "category": "Plates",
+    "name": "Thin Slim Plate 18 Module - White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65351B",
+    "category": "Plates",
+    "name": "Thin Slim Plate 1 Module - Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65352B",
+    "category": "Plates",
+    "name": "Thin Slim Plate 2 Module - Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65353B",
+    "category": "Plates",
+    "name": "Thin Slim Plate 3 Module - Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65354B",
+    "category": "Plates",
+    "name": "Thin Slim Plate 4 Module - Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65356B",
+    "category": "Plates",
+    "name": "Thin Slim Plate 6 Module - Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65358B",
+    "category": "Plates",
+    "name": "Thin Slim Plate 8 Module - Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65388B",
+    "category": "Plates",
+    "name": "Thin Slim Plate 8 Module Vertical - Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65312B",
+    "category": "Plates",
+    "name": "Thin Slim Plate 12 Module - Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65316B",
+    "category": "Plates",
+    "name": "Thin Slim Plate 16 Module - Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65318B",
+    "category": "Plates",
+    "name": "Thin Slim Plate 18 Module - Black",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65451",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 1 Module - White - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65452",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 2 Module - White - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65453",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 3 Module - White - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65454",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 4 Module - White - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65456",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 6 Module - White - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65458",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 8 Module - White - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65488",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 8 Module Vertical - White - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65412",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 12 Module - White - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65416",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 16 Module - White - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65418",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 18 Module - White - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65451B",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 1 Module - Black - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65452B",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 2 Module - Black - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65453B",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 3 Module - Black - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65454B",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 4 Module - Black - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65456B",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 6 Module - Black - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65458B",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 8 Module - Black - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65488B",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 8 Module Vertical - Black - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65412B",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 12 Module - Black - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65416B",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 16 Module - Black - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65418B",
+    "category": "Plates",
+    "name": "Thin Slim Gina Plate 18 Module - Black - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65204",
+    "category": "Power Sockets",
+    "name": "16A, 3pin Socket, 2 Module ISI",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65205",
+    "category": "Power Sockets",
+    "name": "6A/16A, Twin Socket, 2 Module ISI",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65503",
+    "category": "Accessories",
+    "name": "Blank Plate, 1 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65504",
+    "category": "Accessories",
+    "name": "Neon Indicator, Red, 1 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65508",
+    "category": "Switches",
+    "name": "6A Resettable Fuse Unit, 240V~, 1 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65509",
+    "category": "Switches",
+    "name": "16A Resettable Fuse Unit, 240V~, 1 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65710",
+    "category": "Accessories",
+    "name": "Buzzer, 2 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65621",
+    "category": "Data Sockets",
+    "name": "RJ45, Computer Jack, Cat5e, 1 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65622",
+    "category": "Data Sockets",
+    "name": "RJ45, Computer Jack, Cat6, 1 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65705",
+    "category": "Accessories",
+    "name": "FootLight LED Based with 3 Module Plate (Cool Day Light) 230V~ 50Hz",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65711",
+    "category": "Accessories",
+    "name": "Emergency LED Light Unit",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65711-C",
+    "category": "Accessories",
+    "name": "Emergency LED Light Unit with 3 Module Gina Plate",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65302#",
+    "category": "Fan Controls",
+    "name": "100W, Dura Fan Regulator, 2 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65303",
+    "category": "Fan Controls",
+    "name": "100W, High speed fan regulator, 2 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65557",
+    "category": "Dimmers",
+    "name": "150W, LED Dimmer, 2 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65701",
+    "category": "Hospitality",
+    "name": "32A, DP Switch unit with keytag, 2 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65707",
+    "category": "Hospitality",
+    "name": "20A, Shaver Socket with 4 Module Plate 240V~",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65707-C",
+    "category": "Hospitality",
+    "name": "20A, Shaver Socket with 4 Module GINA Plate 240V~",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65709",
+    "category": "Hospitality",
+    "name": "DND MMR External Unit, 3 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65982",
+    "category": "Switches",
+    "name": "16A SP 'C' Mini MCB",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65993",
+    "category": "Switches",
+    "name": "25A DP 'C' Mini MCB",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65994",
+    "category": "Switches",
+    "name": "32A DP 'C' Mini MCB",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65077B",
+    "category": "Switches",
+    "name": "16AX, 1 Way Switch with Neon, 1 Module 200W SBL Load",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65025B",
+    "category": "Switches",
+    "name": "25A, SP 1 Way Switch with Neon, 1 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65208B",
+    "category": "Power Sockets",
+    "name": "6A, 3pin Round Socket, (w/o Shutter), 2 Module, ISI",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65611B",
+    "category": "Accessories",
+    "name": "USB-A Charger, Single Port(2.1A, 5V DC), 1 Module, (CRS Certified)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65613B",
+    "category": "Accessories",
+    "name": "18W, USB Type-A Fast Charger, 1M",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65120B",
+    "category": "Switches",
+    "name": "20A, Motor Starter Switch, 2 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65125B",
+    "category": "Switches",
+    "name": "25A, Motor Starter Switch, 2 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65502B",
+    "category": "Data Sockets",
+    "name": "TV Socket outlet, 1 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65610B",
+    "category": "Data Sockets",
+    "name": "RJ11, Tel Jack with Shutter, 1 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65322B",
+    "category": "Fan Controls",
+    "name": "100W, Dura Fan Regulator,2 Module ISI",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65402B#",
+    "category": "Dimmers",
+    "name": "650W, Dura Dimmer, 2 Module",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65702B",
+    "category": "Hospitality",
+    "name": "Only Keytag with Ring",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65983GB",
+    "category": "Switches",
+    "name": "20A SP 'C' Mini MCB",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901B",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Black (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902",
+    "category": "Plates",
+    "name": "Regular Plate, 2 Module, White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902B",
+    "category": "Plates",
+    "name": "2 Module Cover Plate - Black (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903",
+    "category": "Plates",
+    "name": "Regular Plate, 3 Module, White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903B",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Black (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904",
+    "category": "Plates",
+    "name": "Regular Plate, 4 Module, White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904B",
+    "category": "Plates",
+    "name": "4 Module Cover Plate - Black (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906",
+    "category": "Plates",
+    "name": "Regular Plate, 6 Module, White",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906B",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Black (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908B",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Black (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - White, Vertical (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988B",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Black, Vertical (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912B",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Black (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916B",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Black (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918B",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Black (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65801",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - White Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65801B",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Black Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65802",
+    "category": "Plates",
+    "name": "Gina Plate, 2 Module, White - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65802B",
+    "category": "Plates",
+    "name": "2 Module Cover Plate - Black Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65803",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - White Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65803B",
+    "category": "Plates",
+    "name": "Gina Plate, 3 Module, Black - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65804",
+    "category": "Plates",
+    "name": "4 Module Cover Plate - White Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65804B",
+    "category": "Plates",
+    "name": "Gina Plate, 4 Module, Black - Silver Chrome",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65806",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - White Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65806B",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Black Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65808",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - White Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65808B",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Black Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65888",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - White Silver Chrome, Vertical (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65888B",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Black Silver Chrome, Vertical (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65812",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - White Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65812B",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Black Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65816",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - White Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65816B",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Black Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65818",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - White Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65818B",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Black Silver Chrome (Silver Chrome Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901WGP",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Golden Pecan (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902WGP",
+    "category": "Plates",
+    "name": "Exiima Plate, 2 Module, Golden Pecan",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903WGP",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Golden Pecan (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904WGP",
+    "category": "Plates",
+    "name": "Exiima Plate, 4 Module, Golden Pecan",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906WGP",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Golden Pecan (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908WGP",
+    "category": "Plates",
+    "name": "Exiima Plate, 8 Module, Golden Pecan",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988WGP",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Golden Pecan, Vertical (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912WGP",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Golden Pecan (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916WGP",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Golden Pecan (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918WGP",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Golden Pecan (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901WCH",
+    "category": "Plates",
+    "name": "Exiima Plate, 1 Module, Chocolate Hardwood",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902WCH",
+    "category": "Plates",
+    "name": "2 Module Cover Plate - Chocolate Hardwood (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903WCH",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Chocolate Hardwood (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904WCH",
+    "category": "Plates",
+    "name": "4 Module Cover Plate - Chocolate Hardwood (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906WCH",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Chocolate Hardwood (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908WCH",
+    "category": "Plates",
+    "name": "Exiima Plate, 8 Module, Chocolate Hardwood",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988WCH",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Chocolate Hardwood, Vertical (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912WCH",
+    "category": "Plates",
+    "name": "Exiima Plate, 12 Module, Chocolate Hardwood",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916WCH",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Chocolate Hardwood (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918WCH",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Chocolate Hardwood (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901WBE",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Black Ebony (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902WBE",
+    "category": "Plates",
+    "name": "2 Module Cover Plate - Black Ebony (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903WBE",
+    "category": "Plates",
+    "name": "Exiima Plate, 3 Module, Black Ebony",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904WBE",
+    "category": "Plates",
+    "name": "4 Module Cover Plate - Black Ebony (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906WBE",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Black Ebony (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908WBE",
+    "category": "Plates",
+    "name": "Exiima Plate, 8 Module, Black Ebony",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988WBE",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Black Ebony, Vertical (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912WBE",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Black Ebony (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916WBE",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Black Ebony (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918WBE",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Black Ebony (Wooden Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901AG",
+    "category": "Plates",
+    "name": "Designer Plate, 1 Module, Aqua Green",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902AG",
+    "category": "Plates",
+    "name": "2 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903AG",
+    "category": "Plates",
+    "name": "Designer Plate, 3 Module, Aqua Green",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904AG",
+    "category": "Plates",
+    "name": "4 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906AG",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908AG",
+    "category": "Plates",
+    "name": "Designer Plate, 8 Module, Aqua Green",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988AG",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Aqua Green, Vertical (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912AG",
+    "category": "Plates",
+    "name": "Designer Plate, 12 Module, Aqua Green",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916AG",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918AG",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901RG",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Rose Gold (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902RG",
+    "category": "Plates",
+    "name": "Designer Plate, 2 Module, Rose Gold",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903RG",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Rose Gold (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904RG",
+    "category": "Plates",
+    "name": "Designer Plate, 4 Module, Rose Gold",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906RG",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Rose Gold (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908RG",
+    "category": "Plates",
+    "name": "Designer Plate, 8 Module, Rose Gold",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988RG",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Rose Gold, Vertical (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912RG",
+    "category": "Plates",
+    "name": "Designer Plate, 12 Module, Rose Gold",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916RG",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Rose Gold (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918RG",
+    "category": "Plates",
+    "name": "Designer Plate, 18 Module, Rose Gold",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901CG",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Charcoal Grey (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902CG",
+    "category": "Plates",
+    "name": "Designer Plate, 2 Module, Charcoal Grey",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903CG",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Charcoal Grey (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904CG",
+    "category": "Plates",
+    "name": "Designer Plate, 4 Module, Charcoal Grey",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906CG",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Charcoal Grey (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908CG",
+    "category": "Plates",
+    "name": "Designer Plate, 8 Module, Charcoal Grey",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988CG",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Charcoal Grey, Vertical (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912CG",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Charcoal Grey (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916CG",
+    "category": "Plates",
+    "name": "Designer Plate, 16 Module, Charcoal Grey",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918CG",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Charcoal Grey (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901BB",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Bronze Blaze (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902BB",
+    "category": "Plates",
+    "name": "Designer Plate, 2 Module, Bronze Blaze",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903BB",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Bronze Blaze (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904BB",
+    "category": "Plates",
+    "name": "Designer Plate, 4 Module, Bronze Blaze",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906BB",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Bronze Blaze (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908BB",
+    "category": "Plates",
+    "name": "Designer Plate, 8 Module, Bronze Blaze",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988BB",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Bronze Blaze, Vertical (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912BB",
+    "category": "Plates",
+    "name": "Designer Plate, 12 Module, Bronze Blaze",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916BB",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Bronze Blaze (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918BB",
+    "category": "Plates",
+    "name": "Designer Plate, 18 Module, Bronze Blaze",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901RR",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902RR",
+    "category": "Plates",
+    "name": "Designer Plate, 2 Module, Ruby Red",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903RR",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904RR",
+    "category": "Plates",
+    "name": "Designer Plate, 4 Module, Ruby Red",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906RR",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908RR",
+    "category": "Plates",
+    "name": "Designer Plate, 8 Module, Ruby Red",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988RR",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Ruby Red, Vertical (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912RR",
+    "category": "Plates",
+    "name": "Designer Plate, 12 Module, Ruby Red",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916RR",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918RR",
+    "category": "Plates",
+    "name": "Designer Plate, 18 Module, Ruby Red",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901GA",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Golden Ash (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902GA",
+    "category": "Plates",
+    "name": "Designer Plate, 2 Module, Golden Ash",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903GA",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Golden Ash (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904GA",
+    "category": "Plates",
+    "name": "Designer Plate, 4 Module, Golden Ash",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906GA",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Golden Ash (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908GA",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Golden Ash (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988GA",
+    "category": "Plates",
+    "name": "Designer Plate, 8 Module, Golden Ash, Vertical",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912GA",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Golden Ash (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916GA",
+    "category": "Plates",
+    "name": "Designer Plate, 16 Module, Golden Ash",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918GA",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Golden Ash (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901KK",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Kalamkari (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902KK",
+    "category": "Plates",
+    "name": "2 Module Cover Plate - Kalamkari (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903KK",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Kalamkari (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904KK",
+    "category": "Plates",
+    "name": "4 Module Cover Plate - Kalamkari (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906KK",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Kalamkari (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908KK",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Kalamkari (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988KK",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Kalamkari, Vertical (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912KK",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Kalamkari (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916KK",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Kalamkari (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918KK",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Kalamkari (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901CL",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Chameli (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902CL",
+    "category": "Plates",
+    "name": "2 Module Cover Plate - Chameli (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903CL",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Chameli (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904CL",
+    "category": "Plates",
+    "name": "4 Module Cover Plate - Chameli (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906CL",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Chameli (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908CL",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Chameli (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988CL",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Chameli, Vertical (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912CL",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Chameli (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916CL",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Chameli (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918CL",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Chameli (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901KN",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Kassa Noor (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902KN",
+    "category": "Plates",
+    "name": "2 Module Cover Plate - Kassa Noor (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903KN",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Kassa Noor (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904KN",
+    "category": "Plates",
+    "name": "4 Module Cover Plate - Kassa Noor (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906KN",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Kassa Noor (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908KN",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Kassa Noor (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988KN",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Kassa Noor, Vertical (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912KN",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Kassa Noor (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916KN",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Kassa Noor (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918KN",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Kassa Noor (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65901AN",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Arabian Night (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65902AN",
+    "category": "Plates",
+    "name": "2 Module Cover Plate - Arabian Night (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65903AN",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Arabian Night (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65904AN",
+    "category": "Plates",
+    "name": "4 Module Cover Plate - Arabian Night (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65906AN",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Arabian Night (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65908AN",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Arabian Night (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65988AN",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Arabian Night, Vertical (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65912AN",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Arabian Night (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65916AN",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Arabian Night (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65918AN",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Arabian Night (Graphic Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65551",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65552",
+    "category": "Plates",
+    "name": "2 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65553",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65554",
+    "category": "Plates",
+    "name": "4 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65556",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65588",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - White, Square (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65558",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65560",
+    "category": "Plates",
+    "name": "10 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65512",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - White, Square (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65562",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65516",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65518",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65520",
+    "category": "Plates",
+    "name": "20 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65524",
+    "category": "Plates",
+    "name": "24 Module Cover Plate - White (Standard Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65551AG",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65552AG",
+    "category": "Plates",
+    "name": "2 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65553AG",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65554AG",
+    "category": "Plates",
+    "name": "4 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65556AG",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65588AG",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Aqua Green, Square (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65558AG",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65560AG",
+    "category": "Plates",
+    "name": "10 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65512AG",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Aqua Green, Square (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65562AG",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65516AG",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65518AG",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65520AG",
+    "category": "Plates",
+    "name": "20 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65524AG",
+    "category": "Plates",
+    "name": "24 Module Cover Plate - Aqua Green (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65551RR",
+    "category": "Plates",
+    "name": "1 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65552RR",
+    "category": "Plates",
+    "name": "2 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65553RR",
+    "category": "Plates",
+    "name": "3 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65554RR",
+    "category": "Plates",
+    "name": "4 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65556RR",
+    "category": "Plates",
+    "name": "6 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65588RR",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Ruby Red, Square (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65558RR",
+    "category": "Plates",
+    "name": "8 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65560RR",
+    "category": "Plates",
+    "name": "10 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65512RR",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Ruby Red, Square (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65562RR",
+    "category": "Plates",
+    "name": "12 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65516RR",
+    "category": "Plates",
+    "name": "16 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65518RR",
+    "category": "Plates",
+    "name": "18 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65520RR",
+    "category": "Plates",
+    "name": "20 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "65524RR",
+    "category": "Plates",
+    "name": "24 Module Cover Plate - Ruby Red (Color Finish)",
+    "series": "Penta",
+    "product_family": "Penta"
+  },
+  {
+    "sku": "AHFSXXW061",
+    "category": "Switches",
+    "name": "Switch 6AX One way 1M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOBV01",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 1M - Black",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOLV01",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 1M - Gold",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOWV01",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 1M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOAV01",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 1M - Marble",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOBV02",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 2M - Black",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOLV02",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 2M - Gold",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOWV02",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 2M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOAV02",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 2M - Marble",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOBV03",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 3M - Black",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOLV03",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 3M - Gold",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOWV03",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 3M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOAV03",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 3M - Marble",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOBH03",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 3M Without Pillar - Black",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOLH03",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 3M Without Pillar - Gold",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOWH03",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 3M Without Pillar - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOAH03",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 3M Without Pillar - Marble",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOBV04",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 4M - Black",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOLV04",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 4M - Gold",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOWV04",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 4M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOAV04",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 4M - Marble",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOBV06",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 6M - Black",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOLV06",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 6M - Gold",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOWV06",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 6M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOAV06",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 6M - Marble",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOBH08",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 8M Horizontal - Black",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOLH08",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 8M Horizontal - Gold",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOWH08",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 8M Horizontal - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOAH08",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 8M Horizontal - Marble",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLOWV01",
+    "category": "Plates",
+    "name": "PC Plate 1M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLOWV02",
+    "category": "Plates",
+    "name": "PC Plate 2M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLOWV03",
+    "category": "Plates",
+    "name": "PC Plate 3M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLOWH03",
+    "category": "Plates",
+    "name": "PC Plate 3M Without Pillar - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLOWV04",
+    "category": "Plates",
+    "name": "PC Plate 4M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLOWV06",
+    "category": "Plates",
+    "name": "PC Plate 6M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLOWV07",
+    "category": "Plates",
+    "name": "PC Plate 7M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOBV08",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 8M Vertical - Black",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOLV08",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 8M Vertical - Gold",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOWV08",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 8M Vertical - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOAV08",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 8M Vertical - Marble",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOBV09",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 9M - Black",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOLV09",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 9M - Gold",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOWV09",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 9M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOAV09",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 9M - Marble",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOBV12",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 12M - Black",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOLV12",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 12M - Gold",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOWV12",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 12M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOAV12",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 12M - Marble",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOBV16",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 16M - Black",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOLV16",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 16M - Gold",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOWV16",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 16M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOAV16",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 16M - Marble",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOBV18",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 18M - Black",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOLV18",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 18M - Gold",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOWV18",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 18M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPTOAV18",
+    "category": "Plates",
+    "name": "Plexy Glass Plate 18M - Marble",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLOWH08",
+    "category": "Plates",
+    "name": "PC Plate 8M Horizontal - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLOWV08",
+    "category": "Plates",
+    "name": "PC Plate 8M Vertical - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLOWV09",
+    "category": "Plates",
+    "name": "PC Plate 9M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLOWV12",
+    "category": "Plates",
+    "name": "PC Plate 12M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLOWV16",
+    "category": "Plates",
+    "name": "PC Plate 16M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLOWV18",
+    "category": "Plates",
+    "name": "PC Plate 18M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLIWV01",
+    "category": "Plates",
+    "name": "Inner Plate Grid Frame 1M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLIWV02",
+    "category": "Plates",
+    "name": "Inner Plate Grid Frame 2M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLIWV03",
+    "category": "Plates",
+    "name": "Inner Plate Grid Frame 3M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLIWH03",
+    "category": "Plates",
+    "name": "Inner Plate Grid Frame 3M Without Pillar - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLIWV04",
+    "category": "Plates",
+    "name": "Inner Plate Grid Frame 4M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLIWV06",
+    "category": "Plates",
+    "name": "Inner Plate Grid Frame 6M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLIWV07",
+    "category": "Plates",
+    "name": "Inner Plate Grid Frame 7M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLIWH08",
+    "category": "Plates",
+    "name": "Inner Plate Grid Frame 8M Horizontal - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLIWV08",
+    "category": "Plates",
+    "name": "Inner Plate Grid Frame 8M Vertical - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLIWV09",
+    "category": "Plates",
+    "name": "Inner Plate Grid Frame 9M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLIWV12",
+    "category": "Plates",
+    "name": "Inner Plate Grid Frame 12M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLIWV16",
+    "category": "Plates",
+    "name": "Inner Plate Grid Frame 16M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "AHXPLIWV18",
+    "category": "Plates",
+    "name": "Inner Plate Grid Frame 18M - White",
+    "series": "Fabio",
+    "product_family": "Fabio"
+  },
+  {
+    "sku": "ACWRFXW006",
+    "category": "Fan Controls",
+    "name": "BLDC Fan Regulator 2M - White",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWKRWW452",
+    "category": "Data Sockets",
+    "name": "Computer Jack RJ45 Cat 6A 1M - White",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOWV01",
+    "category": "Plates",
+    "name": "Outer Plate 1M Igloo White Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOWV02",
+    "category": "Plates",
+    "name": "Outer Plate 2M Igloo White Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOWV03",
+    "category": "Plates",
+    "name": "Outer Plate 3M without Pillar Igloo White Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOWP03",
+    "category": "Plates",
+    "name": "Outer Plate 3M with Pillar Igloo White Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOWV04",
+    "category": "Plates",
+    "name": "Outer Plate 4M Igloo White Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOBV01",
+    "category": "Plates",
+    "name": "Outer Plate 1M Raven Black Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOBV02",
+    "category": "Plates",
+    "name": "Outer Plate 2M Raven Black Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOBV03",
+    "category": "Plates",
+    "name": "Outer Plate 3M without Pillar Raven Black Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOBP03",
+    "category": "Plates",
+    "name": "Outer Plate 3M with Pillar Raven Black Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOBV04",
+    "category": "Plates",
+    "name": "Outer Plate 4M Raven Black Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOCV01",
+    "category": "Plates",
+    "name": "Outer Plate 1M Copper Mirror Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOCV02",
+    "category": "Plates",
+    "name": "Outer Plate 2M Copper Mirror Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOCV03",
+    "category": "Plates",
+    "name": "Outer Plate 3M without Pillar Copper Mirror Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOCP03",
+    "category": "Plates",
+    "name": "Outer Plate 3M with Pillar Copper Mirror Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOCV04",
+    "category": "Plates",
+    "name": "Outer Plate 4M Copper Mirror Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOAV01",
+    "category": "Plates",
+    "name": "Outer Plate 1M Silver Sheen Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOAV02",
+    "category": "Plates",
+    "name": "Outer Plate 2M Silver Sheen Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOAV03",
+    "category": "Plates",
+    "name": "Outer Plate 3M without Pillar Silver Sheen Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOAP03",
+    "category": "Plates",
+    "name": "Outer Plate 3M with Pillar Silver Sheen Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOAV04",
+    "category": "Plates",
+    "name": "Outer Plate 4M Silver Sheen Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOGV01",
+    "category": "Plates",
+    "name": "Outer Plate 1M Frosted State Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOGV02",
+    "category": "Plates",
+    "name": "Outer Plate 2M Frosted State Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOGV03",
+    "category": "Plates",
+    "name": "Outer Plate 3M without Pillar Frosted State Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOGP03",
+    "category": "Plates",
+    "name": "Outer Plate 3M with Pillar Frosted State Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOGV04",
+    "category": "Plates",
+    "name": "Outer Plate 4M Frosted State Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOSV01",
+    "category": "Plates",
+    "name": "Outer Plate 1M Frosted Husky Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOSV02",
+    "category": "Plates",
+    "name": "Outer Plate 2M Frosted Husky Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOSV03",
+    "category": "Plates",
+    "name": "Outer Plate 3M without Pillar Frosted Husky Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOSP03",
+    "category": "Plates",
+    "name": "Outer Plate 3M with Pillar Frosted Husky Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOSV04",
+    "category": "Plates",
+    "name": "Outer Plate 4M Frosted Husky Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOWV06",
+    "category": "Plates",
+    "name": "Outer Plate 6M Igloo White Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOWH08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Horizontal Igloo White Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOWV08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Vertical Igloo White Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOWV12",
+    "category": "Plates",
+    "name": "Outer Plate 12M Igloo White Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOWV18",
+    "category": "Plates",
+    "name": "Outer Plate 18M Igloo White Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOBV06",
+    "category": "Plates",
+    "name": "Outer Plate 6M Raven Black Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOBH08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Horizontal Raven Black Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOBV08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Vertical Raven Black Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOBV12",
+    "category": "Plates",
+    "name": "Outer Plate 12M Raven Black Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOBV18",
+    "category": "Plates",
+    "name": "Outer Plate 18M Raven Black Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOCV06",
+    "category": "Plates",
+    "name": "Outer Plate 6M Copper Mirror Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOCH08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Horizontal Copper Mirror Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOCV08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Vertical Copper Mirror Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOCV12",
+    "category": "Plates",
+    "name": "Outer Plate 12M Copper Mirror Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOCV18",
+    "category": "Plates",
+    "name": "Outer Plate 18M Copper Mirror Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOAV06",
+    "category": "Plates",
+    "name": "Outer Plate 6M Silver Sheen Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOAH08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Horizontal Silver Sheen Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOAV08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Vertical Silver Sheen Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOAV12",
+    "category": "Plates",
+    "name": "Outer Plate 12M Silver Sheen Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOAV18",
+    "category": "Plates",
+    "name": "Outer Plate 18M Silver Sheen Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOGV06",
+    "category": "Plates",
+    "name": "Outer Plate 6M Frosted State Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOGH08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Horizontal Frosted State Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOGV08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Vertical Frosted State Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOGV12",
+    "category": "Plates",
+    "name": "Outer Plate 12M Frosted State Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOGV18",
+    "category": "Plates",
+    "name": "Outer Plate 18M Frosted State Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOSV06",
+    "category": "Plates",
+    "name": "Outer Plate 6M Frosted Husky Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOSH08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Horizontal Frosted Husky Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOSV08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Vertical Frosted Husky Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOSV12",
+    "category": "Plates",
+    "name": "Outer Plate 12M Frosted Husky Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGOSV18",
+    "category": "Plates",
+    "name": "Outer Plate 18M Frosted Husky Glass",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOBV01",
+    "category": "Plates",
+    "name": "Outer Plate 1M Charcoal Black Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOBV02",
+    "category": "Plates",
+    "name": "Outer Plate 2M Charcoal Black Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOBV03",
+    "category": "Plates",
+    "name": "Outer Plate 3M without Pillar Charcoal Black Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOBP03",
+    "category": "Plates",
+    "name": "Outer Plate 3M with Pillar Charcoal Black Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOBV04",
+    "category": "Plates",
+    "name": "Outer Plate 4M Charcoal Black Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOSV01",
+    "category": "Plates",
+    "name": "Outer Plate 1M Sterling Silver Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOSV02",
+    "category": "Plates",
+    "name": "Outer Plate 2M Sterling Silver Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOSV03",
+    "category": "Plates",
+    "name": "Outer Plate 3M without Pillar Sterling Silver Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOSP03",
+    "category": "Plates",
+    "name": "Outer Plate 3M with Pillar Sterling Silver Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOSV04",
+    "category": "Plates",
+    "name": "Outer Plate 4M Sterling Silver Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOGV01",
+    "category": "Plates",
+    "name": "Outer Plate 1M Gold Shimmer Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOGV02",
+    "category": "Plates",
+    "name": "Outer Plate 2M Gold Shimmer Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOGV03",
+    "category": "Plates",
+    "name": "Outer Plate 3M without Pillar Gold Shimmer Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOGP03",
+    "category": "Plates",
+    "name": "Outer Plate 3M with Pillar Gold Shimmer Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOGV04",
+    "category": "Plates",
+    "name": "Outer Plate 4M Gold Shimmer Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOKV01",
+    "category": "Plates",
+    "name": "Outer Plate 1M Dusky Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOKV02",
+    "category": "Plates",
+    "name": "Outer Plate 2M Dusky Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOKV03",
+    "category": "Plates",
+    "name": "Outer Plate 3M without Pillar Dusky Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOKP03",
+    "category": "Plates",
+    "name": "Outer Plate 3M with Pillar Dusky Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOKV04",
+    "category": "Plates",
+    "name": "Outer Plate 4M Dusky Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOSV01",
+    "category": "Plates",
+    "name": "Outer Plate 1M Sandi Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOSV02",
+    "category": "Plates",
+    "name": "Outer Plate 2M Sandi Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOSV03",
+    "category": "Plates",
+    "name": "Outer Plate 3M without Pillar Sandi Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOSP03",
+    "category": "Plates",
+    "name": "Outer Plate 3M with Pillar Sandi Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOSV04",
+    "category": "Plates",
+    "name": "Outer Plate 4M Sandi Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOBV06",
+    "category": "Plates",
+    "name": "Outer Plate 6M Charcoal Black Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOBH08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Horizontal Charcoal Black Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOBV08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Vertical Charcoal Black Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOBV12",
+    "category": "Plates",
+    "name": "Outer Plate 12M Charcoal Black Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOBV18",
+    "category": "Plates",
+    "name": "Outer Plate 18M Charcoal Black Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOSV06",
+    "category": "Plates",
+    "name": "Outer Plate 6M Sterling Silver Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOSH08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Horizontal Sterling Silver Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOSV08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Vertical Sterling Silver Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOSV12",
+    "category": "Plates",
+    "name": "Outer Plate 12M Sterling Silver Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOSV18",
+    "category": "Plates",
+    "name": "Outer Plate 18M Sterling Silver Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOGV06",
+    "category": "Plates",
+    "name": "Outer Plate 6M Gold Shimmer Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOGH08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Horizontal Gold Shimmer Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOGV08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Vertical Gold Shimmer Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOGV12",
+    "category": "Plates",
+    "name": "Outer Plate 12M Gold Shimmer Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPMOGV18",
+    "category": "Plates",
+    "name": "Outer Plate 18M Gold Shimmer Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOKV06",
+    "category": "Plates",
+    "name": "Outer Plate 6M Dusky Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOKH08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Horizontal Dusky Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOKV08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Vertical Dusky Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOKV12",
+    "category": "Plates",
+    "name": "Outer Plate 12M Dusky Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOKV18",
+    "category": "Plates",
+    "name": "Outer Plate 18M Dusky Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOSV06",
+    "category": "Plates",
+    "name": "Outer Plate 6M Sandi Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOSH08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Horizontal Sandi Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOSV08",
+    "category": "Plates",
+    "name": "Outer Plate 8M Vertical Sandi Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOSV12",
+    "category": "Plates",
+    "name": "Outer Plate 12M Sandi Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPSOSV18",
+    "category": "Plates",
+    "name": "Outer Plate 18M Sandi Wood",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPLIWV01",
+    "category": "Plates",
+    "name": "Inner Plate 1M Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPLIWV03",
+    "category": "Plates",
+    "name": "Inner Plate 3M without Pillar Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPLIWP03",
+    "category": "Plates",
+    "name": "Inner Plate 3M with Pillar Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPLIWV04",
+    "category": "Plates",
+    "name": "Inner Plate 4M Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPLIWV06",
+    "category": "Plates",
+    "name": "Inner Plate 6M Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPLIWH08",
+    "category": "Plates",
+    "name": "Inner Plate 8M Horizontal Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPLIWV08",
+    "category": "Plates",
+    "name": "Inner Plate 8M Vertical Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPLIWV12",
+    "category": "Plates",
+    "name": "Inner Plate 12M Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPGAWV18",
+    "category": "Plates",
+    "name": "Inner Plate 18M Plastic",
+    "series": "Signia",
+    "product_family": "Signia"
+  },
+  {
+    "sku": "ACWPLIWV18",
+    "category": "Plates",
+    "name": "Inner Plate 18M Metal",
+    "series": "Signia",
+    "product_family": "Signia"
+  }
+]

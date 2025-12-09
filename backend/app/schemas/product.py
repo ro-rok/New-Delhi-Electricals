@@ -407,8 +407,8 @@ class Product(BaseModel):
         SwitchSpecs,
     ]
 
-    # Simple variant labels (e.g. colour, finish, pack size)
-    variant: List[str] = []
+    # Variant map: sibling SKU -> label (e.g. colour)
+    variant: dict[str, str] = {}
 
     # Commerce & merchandising information
     pricing: ProductPricing

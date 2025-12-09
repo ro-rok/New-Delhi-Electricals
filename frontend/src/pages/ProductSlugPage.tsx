@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo } from 'react';
 import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Product } from '@/types/product';
-import { getProductBySlug, getProducts } from '@/api/products';
+import { getProductBySlug, getProducts, getProductBySku } from '@/api/products';
 import { useApp } from '@/contexts/AppContext';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/layout/Header';
@@ -15,6 +15,7 @@ import {
 import { cn } from '@/lib/utils';
 import { toast } from '@/hooks/use-toast';
 import { getProductUrl } from '@/lib/utils';
+import { getColorHex } from '@/lib/colors';
 
 const ProductSlugPage = () => {
   const { brand, slug } = useParams<{ brand?: string; slug?: string; product_family?: string }>();
@@ -40,6 +41,7 @@ const ProductSlugPage = () => {
   const [copiedSku, setCopiedSku] = useState(false);
   const [moduleVariants, setModuleVariants] = useState<Product[]>([]);
   const [colorVariants, setColorVariants] = useState<Product[]>([]);
+  const [variantProducts, setVariantProducts] = useState<Record<string, Product>>({});
 
   useEffect(() => {
     // Reset state immediately when route params change
@@ -87,7 +89,45 @@ const ProductSlugPage = () => {
       if (!product) {
         setModuleVariants([]);
         setColorVariants([]);
+        setVariantProducts({});
         return;
+      }
+
+      // Fetch variant products from SKUs in variant field
+      if (product.variant && Object.keys(product.variant).length > 0) {
+        console.log('=== Fetching variant products from SKUs ===');
+        console.log('Variant SKUs:', Object.keys(product.variant));
+        console.log('Variant object:', product.variant);
+        const variantSkus = Object.keys(product.variant);
+        const variantProductsMap: Record<string, Product> = {};
+        
+        await Promise.all(
+          variantSkus.map(async (sku) => {
+            try {
+              console.log(`Fetching product for SKU: ${sku}`);
+              const variantProduct = await getProductBySku(sku);
+              if (variantProduct) {
+                variantProductsMap[sku] = variantProduct;
+                console.log(`✓ Fetched variant product for SKU ${sku}:`, {
+                  slug: variantProduct.slug,
+                  brandSlug: variantProduct.brandSlug,
+                  urlPath: variantProduct.urlPath,
+                  name: variantProduct.name,
+                });
+              } else {
+                console.log(`✗ No product found for SKU: ${sku}`);
+              }
+            } catch (error) {
+              console.error(`✗ Error fetching product for SKU ${sku}:`, error);
+            }
+          })
+        );
+        
+        setVariantProducts(variantProductsMap);
+        console.log('All variant products fetched:', variantProductsMap);
+        console.log('=== End Fetching variant products ===');
+      } else {
+        console.log('No variant field or empty variant field in product');
       }
 
       try {
@@ -100,6 +140,7 @@ const ProductSlugPage = () => {
           currentColor,
           currentModuleSize,
           specs: product.specs,
+          variant: product.variant,
         });
 
         if (!productFamily) {
@@ -202,6 +243,48 @@ const ProductSlugPage = () => {
       return product.images.filter(img => img && img.trim() !== '');
     }
     return [];
+  }, [product]);
+
+  // Extract color variants from product.variant field (maps SKU -> Color Name)
+  const colorVariantsFromVariant = useMemo(() => {
+    console.log('=== Color Variants From Variant useMemo ===');
+    console.log('Product:', product);
+    console.log('Product variant field:', product?.variant);
+    console.log('Product variant type:', typeof product?.variant);
+    
+    if (!product?.variant) {
+      console.log('No variant field found in product');
+      return [];
+    }
+    
+    console.log('Product variant keys:', Object.keys(product.variant || {}));
+    console.log('Product variant values:', Object.values(product.variant || {}));
+    console.log('Product variant entries:', Object.entries(product.variant || {}));
+    
+    const currentColor = product.specs?.color as string | undefined;
+    console.log('Current color from specs:', currentColor);
+    
+    const variantColors: Array<{ sku: string; colorName: string }> = [];
+    
+    // Get all unique color names from variant object with their SKUs
+    Object.entries(product.variant).forEach(([sku, colorName]) => {
+      console.log(`Processing variant entry: SKU=${sku}, Color=${colorName}`);
+      if (colorName && typeof colorName === 'string' && colorName !== currentColor) {
+        // Check if we already have this color (avoid duplicates)
+        if (!variantColors.find(v => v.colorName === colorName)) {
+          variantColors.push({ sku, colorName });
+          console.log(`Added variant: ${sku} -> ${colorName}`);
+        } else {
+          console.log(`Skipping duplicate color: ${colorName}`);
+        }
+      } else {
+        console.log(`Skipping variant: ${sku} -> ${colorName} (reason: ${!colorName ? 'no color' : typeof colorName !== 'string' ? 'not string' : colorName === currentColor ? 'same as current' : 'unknown'})`);
+      }
+    });
+    
+    console.log('Final extracted variant colors:', variantColors);
+    console.log('=== End Color Variants From Variant useMemo ===');
+    return variantColors;
   }, [product]);
 
   const handleWhatsApp = () => {
@@ -426,34 +509,84 @@ const ProductSlugPage = () => {
                   </div>
                 )}
 
-                {/* Color Variants */}
-                {colorVariants.length > 0 ? (
-                  <div className="space-y-2">
+                {/* Color Variants from variant field only */}
+                {colorVariantsFromVariant.length > 0 && product.specs?.color && (
+                  <div className="space-y-3">
                     <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
                       Color:
                     </p>
-                    <div className="flex flex-wrap gap-2">
-                      <span
-                        className={cn(
-                          "px-4 py-2 rounded-lg border-2 border-gray-900 dark:border-white bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-sm font-medium"
-                        )}
-                      >
-                        {product.specs?.color || 'Current'}
-                      </span>
-                      {colorVariants.map((variant) => (
-                        <Link
-                          key={variant.id}
-                          to={getProductUrl(variant)}
-                          className="px-4 py-2 rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-white text-sm font-medium transition-all hover:border-gray-900 dark:hover:border-white hover:scale-105"
-                        >
-                          {variant.specs?.color || 'N/A'}
-                        </Link>
-                      ))}
+                    
+                    {/* Color Swatches (Clickable links to variant products) */}
+                    <div className="flex flex-wrap items-center gap-3">
+                      {/* Current Color Swatch */}
+                      <div className="flex items-center gap-2">
+                        <div
+                          className={cn(
+                            "w-12 h-12 rounded-full border-4 shadow-md transition-all cursor-default",
+                            "ring-2 ring-offset-2 ring-gray-900 dark:ring-white ring-offset-white dark:ring-offset-black"
+                          )}
+                          style={{
+                            backgroundColor: getColorHex(product.specs.color as string),
+                            borderColor: getColorHex(product.specs.color as string),
+                          }}
+                          title={`Current: ${product.specs.color as string}`}
+                        />
+                        <span className="text-sm font-medium text-gray-900 dark:text-white">
+                          {product.specs.color as string}
+                        </span>
+                      </div>
+                      {/* Variant Color Swatches from variant field */}
+                      {colorVariantsFromVariant.map(({ sku, colorName }) => {
+                        const variantProduct = variantProducts[sku];
+                        const variantUrl = variantProduct?.urlPath || (variantProduct?.slug && variantProduct?.brandSlug ? `/${variantProduct.brandSlug}/${variantProduct.slug}` : null);
+                        
+                        console.log(`Variant ${sku} (${colorName}):`, {
+                          variantProduct,
+                          variantUrl,
+                          slug: variantProduct?.slug,
+                          brandSlug: variantProduct?.brandSlug,
+                        });
+                        
+                        if (variantUrl) {
+                          return (
+                            <Link
+                              key={sku}
+                              to={variantUrl}
+                              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                              title={colorName}
+                            >
+                              <div
+                                className="w-10 h-10 rounded-full border-2 border-gray-300 dark:border-gray-600 shadow-sm cursor-pointer hover:scale-110 transition-transform"
+                                style={{
+                                  backgroundColor: getColorHex(colorName),
+                                }}
+                              />
+                              <span className="text-xs text-gray-500 dark:text-gray-500">
+                                {colorName}
+                              </span>
+                            </Link>
+                          );
+                        }
+                        
+                        return (
+                          <div
+                            key={sku}
+                            className="flex items-center gap-2"
+                            title={`${colorName} (SKU: ${sku})`}
+                          >
+                            <div
+                              className="w-10 h-10 rounded-full border-2 border-gray-300 dark:border-gray-600 shadow-sm cursor-default"
+                              style={{
+                                backgroundColor: getColorHex(colorName),
+                              }}
+                            />
+                            <span className="text-xs text-gray-500 dark:text-gray-500">
+                              {colorName}
+                            </span>
+                          </div>
+                        );
+                      })}
                     </div>
-                  </div>
-                ) : product.specs?.color && (
-                  <div className="text-xs text-gray-500 dark:text-gray-400">
-                    No other colors available
                   </div>
                 )}
 

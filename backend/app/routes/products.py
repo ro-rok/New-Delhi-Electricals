@@ -130,6 +130,7 @@ async def list_products(
         slug_val = extract_primary_slug(doc)
         if slug_val and not doc.get("slug"):
             doc["slug"] = slug_val
+        # Variant field is already at top level, no extraction needed
         items.append(ProductInDB(**doc))
     return ProductListResponse(items=items, total=total, page=page, pageSize=page_size)
 
@@ -254,6 +255,7 @@ async def get_product_by_slug(slug: str, db: AsyncIOMotorDatabase = Depends(get_
     slug_val = extract_primary_slug(doc)
     if slug_val and not doc.get("slug"):
         doc["slug"] = slug_val
+    # Variant field is already at top level, no extraction needed
     return ProductInDB(**doc)
 
 
@@ -281,6 +283,7 @@ async def get_product_by_brand_and_slug(
     slug_val = extract_primary_slug(doc)
     if slug_val and not doc.get("slug"):
         doc["slug"] = slug_val
+    # Variant field is already at top level, no extraction needed
     return ProductInDB(**doc)
 
 
@@ -304,6 +307,7 @@ async def get_product(product_id: str, db: AsyncIOMotorDatabase = Depends(get_db
     slug_val = extract_primary_slug(doc)
     if slug_val and not doc.get("slug"):
         doc["slug"] = slug_val
+    # Variant field is already at top level, no extraction needed
     return ProductInDB(**doc)
 
 
