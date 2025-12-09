@@ -16,6 +16,7 @@ router = APIRouter(prefix="/api/products", tags=["products"])
 async def list_products(
     q: str | None = Query(default=None, description="Search query"),
     category: str | None = Query(default=None, description="Filter by category name"),
+    subcategory: str | None = Query(default=None, description="Filter by subcategory name"),
     brand: str | None = Query(default=None, description="Filter by brand name"),
     series: str | None = Query(default=None, description="Filter by product series/family"),
     product_family: str | None = Query(default=None, description="Filter by exact product_family match"),
@@ -59,6 +60,9 @@ async def list_products(
     
     if category:
         and_conditions.append({"category": {"$regex": category, "$options": "i"}})
+    
+    if subcategory:
+        and_conditions.append({"subcategory": {"$regex": subcategory, "$options": "i"}})
         
     if brand:
         and_conditions.append({"brand": {"$regex": brand, "$options": "i"}})
@@ -226,13 +230,7 @@ async def get_brands(
 async def get_product_by_slug(slug: str, db: AsyncIOMotorDatabase = Depends(get_db_dep)) -> Any:
     """Fetch product by slug only (legacy)."""
     doc = await db.products.find_one({
-        "$or": [
-            {"catalog_source.seo.slug": slug},
-            {"catalog_source.slug": slug},
-            {"specs.slug": slug},
-            {"seo.slug": slug},
-            {"slug": slug},
-        ]
+        "slug": slug
     })
     if not doc:
         # Fallback: try matching name-derived slug or SKU
@@ -268,13 +266,7 @@ async def get_product_by_brand_and_slug(
     """Fetch product by brand slug + product slug."""
     # First attempt: find by slug in any known location
     doc = await db.products.find_one({
-        "$or": [
-            {"catalog_source.seo.slug": slug},
-            {"catalog_source.slug": slug},
-            {"specs.slug": slug},
-            {"seo.slug": slug},
-            {"slug": slug},
-        ]
+        "slug": slug
     })
     if not doc:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")

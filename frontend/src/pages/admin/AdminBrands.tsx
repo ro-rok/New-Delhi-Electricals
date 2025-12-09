@@ -86,8 +86,8 @@ const AdminBrands = () => {
         const response = await getProducts({ pageSize: 1000 });
         const families = new Set<string>();
         response.items.forEach(product => {
-          if (product.series) {
-            families.add(product.series);
+          if (product.product_family) {
+            families.add(product.product_family);
           }
         });
         setAllProductFamilies(Array.from(families).sort());

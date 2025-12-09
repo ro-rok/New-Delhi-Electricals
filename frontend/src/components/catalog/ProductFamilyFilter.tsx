@@ -46,13 +46,13 @@ export const ProductFamilyFilter = ({
   onProductFamilySelect,
   onColorSelect,
 }: ProductFamilyFilterProps) => {
-  // Group products by product_family (from catalog_source or series)
+    // Group products by product_family (from series)
   const productFamilies = useMemo(() => {
     const families = new Map<string, Product[]>();
     
     products.forEach(product => {
-      // Get product_family from catalog_source.product_family or fallback to series
-      const productFamily = product.catalogSource?.product_family || product.series || 'Unknown';
+      // Get product_family from series
+      const productFamily = product.product_family || 'Unknown';
       
       if (!families.has(productFamily)) {
         families.set(productFamily, []);

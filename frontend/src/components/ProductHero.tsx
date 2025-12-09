@@ -55,7 +55,6 @@ export interface ProductHeroProduct {
   pricing: ProductPricing;
   specs?: ProductSpec[];
   variants?: ProductVariant[];
-  catalogSource?: { product_family?: string; variant?: string[] };
   datasheetUrl?: string;
 }
 
@@ -286,7 +285,7 @@ export const ProductHero: React.FC<ProductHeroProps> = ({
 
           <div className="flex flex-col gap-2">
             <p className="text-sm uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
-              {product.catalogSource?.product_family || product.brand}
+              {product.product_family || product.brand}
             </p>
             <h1 className="text-2xl font-semibold leading-tight tracking-tight text-neutral-900 dark:text-white md:text-3xl">
               {product.name}
@@ -623,8 +622,6 @@ export interface Product {
   plates?: PlateVariant[];
   datasheetUrl?: string;
   specs?: ProductSpecs;
-  catalogSource?: {
-    product_family?: string;
     variant?: string[];
   };
 }

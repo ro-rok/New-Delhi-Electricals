@@ -18,22 +18,17 @@ function transformProduct(backendProduct: any): Product {
     (backendProduct.media?.images?.map((img: any) => typeof img === 'string' ? img : img.url) || []);
   const datasheetUrl = backendProduct.datasheet_url || backendProduct.media?.documents?.[0];
   const description = backendProduct.description || backendProduct.seo?.meta_description || '';
-  const series = backendProduct.series || backendProduct.product_family || '';
+  const product_family = backendProduct.product_family || backendProduct.series || '';
 
   const brandSlug = backendProduct.brand_slug || slugify(backendProduct.brand);
+  const sourceFile = backendProduct._source_file || backendProduct.source_file;
 
-  // Extract slug from multiple possible locations
-  const slug = backendProduct.slug ||
-    backendProduct.seo?.slug ||
-    backendProduct.catalog_source?.slug ||
-    backendProduct.specs?.slug ||
-    null;
+  // Extract slug from top-level field only
+  const slug = backendProduct.slug || null;
 
   const status = backendProduct.status || {};
   const isActive = status.is_active !== false;
   const isFeatured = status.is_featured === true;
-
-  const catalogSource = transformCatalogSource(backendProduct.catalog_source, series);
 
   const urlPath = backendProduct.url_path || (brandSlug && slug ? `/${brandSlug}/${slug}` : undefined);
 
@@ -43,9 +38,10 @@ function transformProduct(backendProduct: any): Product {
     name: backendProduct.name,
     brand: backendProduct.brand,
     brandSlug,
+    sourceFile,
     category: backendProduct.category,
-    subcategory: backendProduct.subcategory || backendProduct.catalog_source?.subcategory,
-    series: series,
+    subcategory: backendProduct.subcategory,
+    product_family: product_family,
     listPrice: typeof listPrice === 'number' ? listPrice : parseInt(String(listPrice), 10) || 0,
     currency: backendProduct.currency || 'INR',
     images: images,
@@ -58,7 +54,6 @@ function transformProduct(backendProduct: any): Product {
     comingSoon: backendProduct.status?.coming_soon || backendProduct.comingSoon || false,
     isActive: isActive,
     status: status,
-    catalogSource: catalogSource,
   };
 }
 
@@ -79,18 +74,6 @@ function transformSpecs(specs: any): Record<string, string | number | boolean | 
   return result;
 }
 
-function transformCatalogSource(catalogSource: any, fallbackSeries: string): CatalogSource {
-  const productFamily = catalogSource?.product_family || fallbackSeries || '';
-  return {
-    product_family: productFamily,
-    source_file: catalogSource?.source_file,
-    subcategory: catalogSource?.subcategory,
-    variant: catalogSource?.variant,
-    pricing: catalogSource?.pricing,
-    seo: catalogSource?.seo,
-    highlights: catalogSource?.highlights,
-  };
-}
 
 export async function getProducts(params?: {
   q?: string;

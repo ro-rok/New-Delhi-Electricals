@@ -515,13 +515,7 @@ async def apply_catalog_import(
                 "images": row.get("chosen_image_urls") or row.get("images") or [],
                 "datasheet_url": row.get("datasheet_url"),
                 "specs": row.get("specs") or {},
-                "catalog_source": {
-                    "file": row.get("file_name"),
-                    "page": row.get("page") or row.get("page_no"),
-                    "confidence_score": row.get("confidence") or row.get("confidence_score"),
-                    "import_id": import_id,
-                    "raw_text": row.get("raw_text"),
-                },
+                "_source_file": row.get("file_name"),
             }
             
             # Handle status.is_active if provided - use dot notation to preserve other status fields

@@ -17,42 +17,10 @@ def slugify_brand(brand: Optional[str]) -> Optional[str]:
 
 def extract_primary_slug(doc: Mapping[str, Any]) -> Optional[str]:
     """
-    Pull the most reliable product slug from common locations.
-    Order of preference:
-    - doc["slug"]
-    - doc["seo"]["slug"]
-    - doc["catalog_source"]["seo"]["slug"]
-    - doc["catalog_source"]["slug"]
-    - doc["specs"]["slug"]
+    Extract the product slug from the top-level field only.
+    Returns doc["slug"] or None if not present.
     """
-    slug = doc.get("slug")
-    if slug:
-        return slug
-
-    seo = doc.get("seo") or {}
-    if isinstance(seo, Mapping):
-        slug = seo.get("slug")
-        if slug:
-            return slug
-
-    catalog_source = doc.get("catalog_source") or {}
-    if isinstance(catalog_source, Mapping):
-        seo_cs = catalog_source.get("seo") or {}
-        if isinstance(seo_cs, Mapping):
-            slug = seo_cs.get("slug")
-            if slug:
-                return slug
-        slug = catalog_source.get("slug")
-        if slug:
-            return slug
-
-    specs = doc.get("specs") or {}
-    if isinstance(specs, Mapping):
-        slug = specs.get("slug")
-        if slug:
-            return slug
-
-    return None
+    return doc.get("slug")
 
 
 def inject_brand_and_url(doc: dict[str, Any]) -> dict[str, Any]:
@@ -68,3 +36,4 @@ def inject_brand_and_url(doc: dict[str, Any]) -> dict[str, Any]:
     if slug and brand_slug:
         doc["url_path"] = f"/{brand_slug}/{slug}"
     return doc
+

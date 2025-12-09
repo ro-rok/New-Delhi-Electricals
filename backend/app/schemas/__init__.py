@@ -6,7 +6,6 @@ from .main import (
     CatalogImport,
     CatalogImportRow,
     ImageCandidate,
-    CatalogSource,
     Inquiry,
     ProductBase,
     ProductCreate,
@@ -18,7 +17,6 @@ from .main import (
 from .product import (
     CircuitProtectionSpecs,
     CoverPlateSpecs,
-    CatalogSource,
     MediaImage,
     Product,
     ProductMedia,
@@ -36,7 +34,6 @@ __all__ = [
     "ProductUpdate",
     "ProductInDB",
     "ProductListResponse",
-    "CatalogSource",
     "ImageCandidate",
     "CatalogImportRow",
     "CatalogImport",
@@ -51,6 +48,5 @@ __all__ = [
     "MediaImage",
     "ProductSEO",
     "ProductStatus",
-    "CatalogSource",
 ]
 

@@ -179,7 +179,7 @@ const FloatingSearchBar = () => {
                         <div className="flex-1 min-w-0">
                           <p className="text-sm font-medium truncate">{product.name}</p>
                           <p className="text-xs text-muted-foreground">
-                            {product.brand} · {product.series} · ₹{product.listPrice.toLocaleString()}
+                            {product.brand} · {product.product_family} · ₹{product.listPrice.toLocaleString()}
                           </p>
                         </div>
                         <ArrowRight className="h-4 w-4 text-muted-foreground" />

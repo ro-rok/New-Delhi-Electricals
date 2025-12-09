@@ -102,7 +102,7 @@ const FeaturedCollection = ({ brandName }: FeaturedCollectionProps) => {
                     whileHover={{ opacity: 1 }}
                   >
                     <p className="text-xs text-muted-foreground font-light mb-1">
-                      {product.series}
+                      {product.product_family}
                     </p>
                     <h3 className="text-base md:text-lg font-normal text-foreground">
                       {product.name}

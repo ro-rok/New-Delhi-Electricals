@@ -5,7 +5,7 @@ from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, Field
 
-from .product import CatalogSource, ProductStatus
+from .product import ProductStatus
 
 
 class Token(BaseModel):
@@ -26,6 +26,7 @@ class ProductBase(BaseModel):
     name: str
     brand: str
     brand_slug: str | None = None
+    source_file: Optional[str] = Field(default=None, alias="_source_file")
     category: str
     subcategory: str | None = None
     series: str | None = None
@@ -36,10 +37,9 @@ class ProductBase(BaseModel):
     specs: Dict[str, Any] = Field(default_factory=dict)
     description: str = ""
     status: ProductStatus = Field(default_factory=ProductStatus)
-    # Free-form source metadata so we can store file/page/confidence/import ids
-    catalog_source: CatalogSource
     slug: Optional[str] = None
     url_path: str | None = None
+    highlights: Optional[List[Any]] = Field(default=None, description="Product highlights/features")
 
 
 class ProductCreate(ProductBase):
@@ -59,8 +59,8 @@ class ProductUpdate(BaseModel):
     specs: Optional[Dict[str, Any]] = None
     description: Optional[str] = None
     status: Optional[ProductStatus | Dict[str, Any]] = None
-    catalog_source: Optional[CatalogSource | Dict[str, Any]] = None
     slug: Optional[str] = None
+    highlights: Optional[List[Any]] = None
 
 
 class ProductInDB(ProductBase):

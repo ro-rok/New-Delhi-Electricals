@@ -1,25 +1,3 @@
-export interface CatalogSourcePricing {
-  mrp: number;
-  discount: number | null;
-  selling_price: number | null;
-  std_pack: string;
-}
-
-export interface CatalogSourceSEO {
-  keywords: string[];
-  meta_description: string;
-  slug: string;
-}
-
-export interface CatalogSource {
-  source_file?: string;
-  subcategory?: string;
-  product_family: string;
-  variant?: string[];
-  pricing?: CatalogSourcePricing;
-  seo?: CatalogSourceSEO;
-  highlights?: any[];
-}
 
 export interface ProductStatus {
   is_active: boolean;
@@ -32,9 +10,10 @@ export interface Product {
   name: string;
   brand: string;
   brandSlug?: string;
+  sourceFile?: string;
   category: string;
   subcategory?: string;
-  series: string;
+  product_family: string;
   listPrice: number;
   currency: string;
   images: string[];
@@ -47,7 +26,7 @@ export interface Product {
   comingSoon?: boolean;
   isActive: boolean;
   status?: ProductStatus;
-  catalogSource: CatalogSource;
+  highlights?: any[];
 }
 
 export interface Category {

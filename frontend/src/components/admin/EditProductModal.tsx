@@ -125,7 +125,7 @@ const EditProductModal = ({
       setFormData({
         name: productData.name || '',
         sku: productData.sku || '',
-        product_family: productData.series || '',
+        product_family: productData.product_family || '',
         category: productData.category || 'Switches',
         subcategory: productData.subcategory || '',
         brand: productData.brand || '',

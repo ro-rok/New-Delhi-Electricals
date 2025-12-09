@@ -25,13 +25,8 @@ export function getProductUrl(product: Product): string {
     return providedPath.startsWith("/") ? providedPath : `/${providedPath}`;
   }
 
-  // Extract slug from product (could be in slug field, catalogSource, or specs)
-  const slug =
-    product.slug ||
-    product.catalogSource?.slug ||
-    product.catalogSource?.seo?.slug ||
-    (product.specs && "slug" in product.specs ? (product.specs as any).slug : null) ||
-    null;
+  // Extract slug from top-level field only
+  const slug = product.slug || null;
 
   // Generate slug from product name as fallback
   const finalSlug =

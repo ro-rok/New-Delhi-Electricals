@@ -280,7 +280,7 @@ const CategoryPage = () => {
 
   // Get available series and brands from current products
   const availableSeries = useMemo(() => {
-    const seriesSet = new Set(products.map(p => p.series).filter(Boolean));
+    const seriesSet = new Set(products.map(p => p.product_family).filter(Boolean));
     return Array.from(seriesSet).sort();
   }, [products]);
 

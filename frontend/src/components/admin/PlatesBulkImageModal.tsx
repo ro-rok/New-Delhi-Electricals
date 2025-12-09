@@ -50,10 +50,8 @@ const PlatesBulkImageModal = ({
     const families = new Map<string, Product[]>();
 
     products.forEach(product => {
-      // Get product family from series or catalogSource
-      const familyName = product.series ||
-        (product.catalogSource as any)?.product_family ||
-        'Unknown Family';
+      // Get product family
+      const familyName = product.product_family || 'Unknown Family';
 
       const color = product.specs?.color?.trim() || 'Unknown Color';
 
@@ -110,9 +108,7 @@ const PlatesBulkImageModal = ({
       return productFamilies;
     }
 
-    const targetFamily = initialProduct.series ||
-      (initialProduct.catalogSource as any)?.product_family ||
-      'Unknown Family';
+    const targetFamily = initialProduct.product_family || 'Unknown Family';
     const targetColor = initialProduct.specs?.color?.trim() || 'Unknown Color';
     const targetKey = `${targetFamily}|${targetColor}`;
 
@@ -143,9 +139,7 @@ const PlatesBulkImageModal = ({
   // Auto-select the matching family when initialProduct changes
   useEffect(() => {
     if (initialProduct && productFamilies.length > 0) {
-      const targetFamily = initialProduct.series ||
-        (initialProduct.catalogSource as any)?.product_family ||
-        'Unknown Family';
+      const targetFamily = initialProduct.product_family || 'Unknown Family';
       const targetColor = initialProduct.specs?.color?.trim() || 'Unknown Color';
       const targetKey = `${targetFamily}|${targetColor}`;
 
@@ -402,7 +396,7 @@ const PlatesBulkImageModal = ({
                 </Label>
                 <p className="text-sm text-muted-foreground mb-4">
                   {initialProduct
-                    ? `Showing products matching: ${initialProduct.series || 'Unknown'} - ${initialProduct.specs?.color || 'Unknown Color'}`
+                    ? `Showing products matching: ${initialProduct.product_family || 'Unknown'} - ${initialProduct.specs?.color || 'Unknown Color'}`
                     : 'Select a product family to apply the master image. Only products with the same color as the representative product will be updated.'}
                 </p>
 

@@ -105,7 +105,7 @@ const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardPro
           {/* Content */}
           <div className="p-6">
             <p className="text-xs text-muted-foreground mb-2 font-medium tracking-wide">
-              {product.brand} · {product.series}
+              {product.brand} · {product.product_family}
             </p>
             <h3 className="font-medium text-base mb-3 line-clamp-2 leading-snug tracking-tight">
               {product.name}

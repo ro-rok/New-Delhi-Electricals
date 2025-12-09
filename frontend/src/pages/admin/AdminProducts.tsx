@@ -99,8 +99,8 @@ const AdminProducts = () => {
         const response = await getProducts({ pageSize: 1000 });
         const families = new Set<string>();
         response.items.forEach(product => {
-          if (product.series) {
-            families.add(product.series);
+          if (product.product_family) {
+            families.add(product.product_family);
           }
         });
         setAllProductFamilies(Array.from(families).sort());
@@ -351,7 +351,7 @@ const AdminProducts = () => {
                         >
                           {product.name}
                         </Link>
-                        <p className="text-xs text-muted-foreground">{product.series}</p>
+                        <p className="text-xs text-muted-foreground">{product.product_family}</p>
                       </div>
                     </div>
                   </td>

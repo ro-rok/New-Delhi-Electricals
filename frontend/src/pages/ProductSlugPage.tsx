@@ -91,7 +91,7 @@ const ProductSlugPage = () => {
       }
 
       try {
-        const productFamily = product.catalogSource?.product_family || product.series;
+        const productFamily = product.product_family;
         const currentColor = product.specs?.color as string | undefined;
         const currentModuleSize = product.specs?.module_size as string | undefined;
 
@@ -100,7 +100,6 @@ const ProductSlugPage = () => {
           currentColor,
           currentModuleSize,
           specs: product.specs,
-          catalogSource: product.catalogSource
         });
 
         if (!productFamily) {
@@ -360,7 +359,7 @@ const ProductSlugPage = () => {
               className="space-y-4"
             >
               <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 uppercase tracking-[0.2em] font-light">
-                {product.brand} {product.series && `· ${product.series}`}
+                {product.brand} {product.product_family && `· ${product.product_family}`}
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-900 dark:text-white leading-[1.1] tracking-tight">
                 {product.name}
@@ -461,7 +460,7 @@ const ProductSlugPage = () => {
                 {/* Debug info */}
                 {process.env.NODE_ENV === 'development' && (
                   <div className="text-xs text-gray-400 pt-2 space-y-1">
-                    <div>Product Family: {product.catalogSource?.product_family || product.series || 'N/A'}</div>
+                    <div>Product Family: {product.product_family || 'N/A'}</div>
                     <div>Current Color: {product.specs?.color || 'N/A'}</div>
                     <div>Current Module Size: {product.specs?.module_size || 'N/A'}</div>
                     <div>Module Variants Found: {moduleVariants.length}</div>
