@@ -1,0 +1,67 @@
+{
+  "stats": {
+    "total": 9,
+    "updated": 9,
+    "not_found": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "updated_products": [
+    {
+      "sku": "CB92101TM11",
+      "name": "RJ 11 Socket with Shutter 1M - Mountain Grey",
+      "old_subcategory": "Data Sockets - 1 Module",
+      "new_subcategory": "Telephone Sockets - 1 Module"
+    },
+    {
+      "sku": "CB92101TW11",
+      "name": "RJ 11 Socket with Shutter 1M - Snow White",
+      "old_subcategory": "Data Sockets - 1 Module",
+      "new_subcategory": "Telephone Sockets - 1 Module"
+    },
+    {
+      "sku": "CB92101TB11",
+      "name": "RJ 11 Socket with Shutter 1M - Sparkle Black",
+      "old_subcategory": "Data Sockets - 1 Module",
+      "new_subcategory": "Telephone Sockets - 1 Module"
+    },
+    {
+      "sku": "CB92301TM45",
+      "name": "RJ 45 Cat 6A Socket with Shutter 1M - Mountain Grey",
+      "old_subcategory": "Data Sockets - 1 Module",
+      "new_subcategory": "LAN Sockets - 1 Module"
+    },
+    {
+      "sku": "CB92301TW45",
+      "name": "RJ 45 Cat 6A Socket with Shutter 1M - Snow White",
+      "old_subcategory": "Data Sockets - 1 Module",
+      "new_subcategory": "LAN Sockets - 1 Module"
+    },
+    {
+      "sku": "CB92301TB45",
+      "name": "RJ 45 Cat 6A Socket with Shutter 1M - Sparkle Black",
+      "old_subcategory": "Data Sockets - 1 Module",
+      "new_subcategory": "LAN Sockets - 1 Module"
+    },
+    {
+      "sku": "CB92101TM00",
+      "name": "TV Socket 1M - Mountain Grey",
+      "old_subcategory": "Data Sockets - 1 Module",
+      "new_subcategory": "TV Sockets - 1 Module"
+    },
+    {
+      "sku": "CB92101TW00",
+      "name": "TV Socket 1M - Snow White",
+      "old_subcategory": "Data Sockets - 1 Module",
+      "new_subcategory": "TV Sockets - 1 Module"
+    },
+    {
+      "sku": "CB92101TB00",
+      "name": "TV Socket 1M - Sparkle Black",
+      "old_subcategory": "Data Sockets - 1 Module",
+      "new_subcategory": "TV Sockets - 1 Module"
+    }
+  ],
+  "not_found_skus": [],
+  "errors": []
+}

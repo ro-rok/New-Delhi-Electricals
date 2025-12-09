@@ -1,0 +1,7047 @@
+{
+  "Circuit Protection": {
+    "Three Phase Automatic Changeover with Current Limiter (3Ph ACCL)": {
+      "_id": {
+        "ObjectId": 8
+      },
+      "sku": {
+        "string": 8
+      },
+      "brand": {
+        "string": 8
+      },
+      "category": {
+        "string": 8
+      },
+      "currency": {
+        "string": 8
+      },
+      "description": {
+        "string": 8
+      },
+      "images": {
+        "array": 8
+      },
+      "list_price": {
+        "number": 8
+      },
+      "name": {
+        "string": 8
+      },
+      "series": {
+        "string": 8
+      },
+      "specs.ampere": {
+        "number": 8
+      },
+      "specs.poles": {
+        "number": 8
+      },
+      "specs.mw": {
+        "number": 8
+      },
+      "specs.eb_current_ampere": {
+        "number": 8
+      },
+      "specs.dg_current_limit_ampere": {
+        "number": 8
+      },
+      "seo.keywords": {
+        "array": 8
+      },
+      "seo.keywords[]": {
+        "string": 8
+      },
+      "seo.meta_description": {
+        "string": 8
+      },
+      "subcategory": {
+        "string": 8
+      },
+      "_source_file": {
+        "string": 8
+      },
+      "pricing.mrp": {
+        "number": 8
+      },
+      "pricing.discount": {
+        "null": 8
+      },
+      "pricing.selling_price": {
+        "null": 8
+      },
+      "pricing.std_pack": {
+        "string": 8
+      },
+      "product_family": {
+        "string": 8
+      },
+      "slug": {
+        "string": 8
+      }
+    },
+    "Automatic Changeover with Current Limiter (ACCL)": {
+      "_id": {
+        "ObjectId": 12
+      },
+      "sku": {
+        "string": 12
+      },
+      "brand": {
+        "string": 12
+      },
+      "category": {
+        "string": 12
+      },
+      "currency": {
+        "string": 12
+      },
+      "description": {
+        "string": 12
+      },
+      "images": {
+        "array": 12
+      },
+      "list_price": {
+        "number": 12
+      },
+      "name": {
+        "string": 12
+      },
+      "series": {
+        "string": 12
+      },
+      "specs.ampere": {
+        "number": 12
+      },
+      "specs.poles": {
+        "number": 12
+      },
+      "specs.mw": {
+        "number": 12
+      },
+      "specs.eb_current_ampere": {
+        "number": 12
+      },
+      "specs.dg_current_limit_ampere": {
+        "number": 12
+      },
+      "seo.keywords": {
+        "array": 12
+      },
+      "seo.keywords[]": {
+        "string": 12
+      },
+      "seo.meta_description": {
+        "string": 12
+      },
+      "subcategory": {
+        "string": 12
+      },
+      "_source_file": {
+        "string": 12
+      },
+      "pricing.mrp": {
+        "number": 12
+      },
+      "pricing.discount": {
+        "null": 12
+      },
+      "pricing.selling_price": {
+        "null": 12
+      },
+      "pricing.std_pack": {
+        "string": 12
+      },
+      "product_family": {
+        "string": 12
+      },
+      "slug": {
+        "string": 12
+      }
+    },
+    "Modular Changeover Switches": {
+      "_id": {
+        "ObjectId": 5
+      },
+      "sku": {
+        "string": 5
+      },
+      "brand": {
+        "string": 5
+      },
+      "category": {
+        "string": 5
+      },
+      "currency": {
+        "string": 5
+      },
+      "description": {
+        "string": 5
+      },
+      "images": {
+        "array": 5
+      },
+      "list_price": {
+        "number": 5
+      },
+      "name": {
+        "string": 5
+      },
+      "series": {
+        "string": 5
+      },
+      "specs.ampere": {
+        "number": 5
+      },
+      "specs.poles": {
+        "number": 5
+      },
+      "specs.mw": {
+        "number": 5
+      },
+      "seo.keywords": {
+        "array": 5
+      },
+      "seo.keywords[]": {
+        "string": 5
+      },
+      "seo.meta_description": {
+        "string": 5
+      },
+      "subcategory": {
+        "string": 5
+      },
+      "_source_file": {
+        "string": 5
+      },
+      "pricing.mrp": {
+        "number": 5
+      },
+      "pricing.discount": {
+        "null": 5
+      },
+      "pricing.selling_price": {
+        "null": 5
+      },
+      "pricing.std_pack": {
+        "string": 5
+      },
+      "product_family": {
+        "string": 5
+      },
+      "slug": {
+        "string": 5
+      }
+    },
+    "Isolators": {
+      "_id": {
+        "ObjectId": 9
+      },
+      "sku": {
+        "string": 9
+      },
+      "brand": {
+        "string": 9
+      },
+      "category": {
+        "string": 9
+      },
+      "currency": {
+        "string": 9
+      },
+      "description": {
+        "string": 9
+      },
+      "images": {
+        "array": 9
+      },
+      "list_price": {
+        "number": 9
+      },
+      "name": {
+        "string": 9
+      },
+      "series": {
+        "string": 9
+      },
+      "specs.ampere": {
+        "number": 9
+      },
+      "specs.curve": {
+        "null": 9
+      },
+      "specs.poles": {
+        "number": 9
+      },
+      "specs.mw": {
+        "number": 9
+      },
+      "seo.keywords": {
+        "array": 9
+      },
+      "seo.keywords[]": {
+        "string": 9
+      },
+      "seo.meta_description": {
+        "string": 9
+      },
+      "subcategory": {
+        "string": 9
+      },
+      "_source_file": {
+        "string": 9
+      },
+      "pricing.mrp": {
+        "number": 9
+      },
+      "pricing.discount": {
+        "null": 9
+      },
+      "pricing.selling_price": {
+        "null": 9
+      },
+      "pricing.std_pack": {
+        "string": 9
+      },
+      "product_family": {
+        "string": 9
+      },
+      "slug": {
+        "string": 9
+      }
+    },
+    "Miniature Circuit Breakers (MCBs)": {
+      "_id": {
+        "ObjectId": 32
+      },
+      "sku": {
+        "string": 32
+      },
+      "brand": {
+        "string": 32
+      },
+      "category": {
+        "string": 32
+      },
+      "currency": {
+        "string": 32
+      },
+      "description": {
+        "string": 32
+      },
+      "images": {
+        "array": 32
+      },
+      "list_price": {
+        "number": 32
+      },
+      "name": {
+        "string": 32
+      },
+      "series": {
+        "string": 32
+      },
+      "specs.ampere": {
+        "number": 32
+      },
+      "specs.curve": {
+        "string": 32
+      },
+      "specs.poles": {
+        "number": 32
+      },
+      "specs.mw": {
+        "number": 32
+      },
+      "seo.keywords": {
+        "array": 32
+      },
+      "seo.keywords[]": {
+        "string": 32
+      },
+      "seo.meta_description": {
+        "string": 32
+      },
+      "subcategory": {
+        "string": 32
+      },
+      "_source_file": {
+        "string": 32
+      },
+      "pricing.mrp": {
+        "number": 32
+      },
+      "pricing.discount": {
+        "null": 32
+      },
+      "pricing.selling_price": {
+        "null": 32
+      },
+      "pricing.std_pack": {
+        "string": 32
+      },
+      "product_family": {
+        "string": 32
+      },
+      "slug": {
+        "string": 32
+      }
+    },
+    "Residual Current Circuit Breaker with Over Current Protection (RCBOs)": {
+      "_id": {
+        "ObjectId": 48
+      },
+      "sku": {
+        "string": 48
+      },
+      "brand": {
+        "string": 48
+      },
+      "category": {
+        "string": 48
+      },
+      "currency": {
+        "string": 48
+      },
+      "description": {
+        "string": 48
+      },
+      "images": {
+        "array": 48
+      },
+      "list_price": {
+        "number": 48
+      },
+      "name": {
+        "string": 48
+      },
+      "series": {
+        "string": 48
+      },
+      "specs.ampere": {
+        "number": 48
+      },
+      "specs.curve": {
+        "null": 24,
+        "string": 24
+      },
+      "specs.poles": {
+        "number": 48
+      },
+      "specs.mw": {
+        "number": 48
+      },
+      "specs.sensitivity_ma": {
+        "number": 48
+      },
+      "seo.keywords": {
+        "array": 48
+      },
+      "seo.keywords[]": {
+        "string": 48
+      },
+      "seo.meta_description": {
+        "string": 48
+      },
+      "subcategory": {
+        "string": 48
+      },
+      "_source_file": {
+        "string": 48
+      },
+      "pricing.mrp": {
+        "number": 48
+      },
+      "pricing.discount": {
+        "null": 48
+      },
+      "pricing.selling_price": {
+        "null": 48
+      },
+      "pricing.std_pack": {
+        "string": 48
+      },
+      "product_family": {
+        "string": 48
+      },
+      "slug": {
+        "string": 48
+      }
+    },
+    "Residual Current Circuit Breakers (RCCBs/ELCBs)": {
+      "_id": {
+        "ObjectId": 18
+      },
+      "sku": {
+        "string": 18
+      },
+      "brand": {
+        "string": 18
+      },
+      "category": {
+        "string": 18
+      },
+      "currency": {
+        "string": 18
+      },
+      "description": {
+        "string": 18
+      },
+      "images": {
+        "array": 18
+      },
+      "list_price": {
+        "number": 18
+      },
+      "name": {
+        "string": 18
+      },
+      "series": {
+        "string": 18
+      },
+      "specs.ampere": {
+        "number": 18
+      },
+      "specs.curve": {
+        "null": 18
+      },
+      "specs.poles": {
+        "number": 18
+      },
+      "specs.mw": {
+        "number": 18
+      },
+      "specs.sensitivity_ma": {
+        "number": 18
+      },
+      "seo.keywords": {
+        "array": 18
+      },
+      "seo.keywords[]": {
+        "string": 18
+      },
+      "seo.meta_description": {
+        "string": 18
+      },
+      "subcategory": {
+        "string": 18
+      },
+      "_source_file": {
+        "string": 18
+      },
+      "pricing.mrp": {
+        "number": 18
+      },
+      "pricing.discount": {
+        "null": 18
+      },
+      "pricing.selling_price": {
+        "null": 18
+      },
+      "pricing.std_pack": {
+        "string": 18
+      },
+      "product_family": {
+        "string": 18
+      },
+      "slug": {
+        "string": 18
+      }
+    }
+  },
+  "Switches": {
+    "Soft Feel Bell Pushes - 1 Module": {
+      "_id": {
+        "ObjectId": 6
+      },
+      "sku": {
+        "string": 6
+      },
+      "brand": {
+        "string": 6
+      },
+      "category": {
+        "string": 6
+      },
+      "currency": {
+        "string": 6
+      },
+      "description": {
+        "string": 6
+      },
+      "images": {
+        "array": 6
+      },
+      "list_price": {
+        "number": 6
+      },
+      "name": {
+        "string": 6
+      },
+      "series": {
+        "string": 6
+      },
+      "specs.ampere": {
+        "number": 6
+      },
+      "specs.color": {
+        "string": 6
+      },
+      "specs.mw": {
+        "number": 6
+      },
+      "specs.has_indicator": {
+        "bool": 6
+      },
+      "specs.type_detail": {
+        "string": 6
+      },
+      "seo.keywords": {
+        "array": 6
+      },
+      "seo.keywords[]": {
+        "string": 6
+      },
+      "seo.meta_description": {
+        "string": 6
+      },
+      "subcategory": {
+        "string": 6
+      },
+      "variant": {
+        "array": 6
+      },
+      "variant[]": {
+        "string": 6
+      },
+      "product_family": {
+        "string": 6
+      },
+      "slug": {
+        "string": 6
+      },
+      "_source_file": {
+        "string": 6
+      },
+      "pricing.mrp": {
+        "number": 6
+      },
+      "pricing.discount": {
+        "null": 6
+      },
+      "pricing.selling_price": {
+        "null": 6
+      },
+      "pricing.std_pack": {
+        "string": 6
+      }
+    },
+    "Motor Starters - 2 Module": {
+      "_id": {
+        "ObjectId": 23
+      },
+      "sku": {
+        "string": 23
+      },
+      "brand": {
+        "string": 23
+      },
+      "category": {
+        "string": 23
+      },
+      "currency": {
+        "string": 23
+      },
+      "description": {
+        "string": 23
+      },
+      "images": {
+        "array": 23
+      },
+      "list_price": {
+        "number": 23
+      },
+      "name": {
+        "string": 23
+      },
+      "series": {
+        "string": 23
+      },
+      "specs.ampere": {
+        "number": 23
+      },
+      "specs.color": {
+        "string": 23
+      },
+      "specs.mw": {
+        "number": 23
+      },
+      "specs.has_indicator": {
+        "bool": 7
+      },
+      "specs.type_detail": {
+        "string": 23
+      },
+      "seo.keywords": {
+        "array": 23
+      },
+      "seo.keywords[]": {
+        "string": 23
+      },
+      "seo.meta_description": {
+        "string": 23
+      },
+      "subcategory": {
+        "string": 23
+      },
+      "variant": {
+        "array": 21
+      },
+      "variant[]": {
+        "string": 21
+      },
+      "product_family": {
+        "string": 23
+      },
+      "slug": {
+        "string": 23
+      },
+      "_source_file": {
+        "string": 23
+      },
+      "pricing.mrp": {
+        "number": 23
+      },
+      "pricing.discount": {
+        "null": 23
+      },
+      "pricing.selling_price": {
+        "null": 23
+      },
+      "pricing.std_pack": {
+        "string": 23
+      },
+      "status.is_active": {
+        "bool": 16
+      },
+      "status.is_featured": {
+        "bool": 16
+      }
+    },
+    "Wi-fi Switch": {
+      "_id": {
+        "ObjectId": 6
+      },
+      "sku": {
+        "string": 6
+      },
+      "brand": {
+        "string": 6
+      },
+      "category": {
+        "string": 6
+      },
+      "currency": {
+        "string": 6
+      },
+      "description": {
+        "string": 6
+      },
+      "images": {
+        "array": 6
+      },
+      "list_price": {
+        "number": 6
+      },
+      "name": {
+        "string": 6
+      },
+      "series": {
+        "string": 6
+      },
+      "specs.ampere": {
+        "null": 6
+      },
+      "specs.color": {
+        "string": 6
+      },
+      "specs.mw": {
+        "number": 6
+      },
+      "specs.has_indicator": {
+        "bool": 6
+      },
+      "specs.type_detail": {
+        "string": 6
+      },
+      "seo.keywords": {
+        "array": 6
+      },
+      "seo.keywords[]": {
+        "string": 6
+      },
+      "seo.meta_description": {
+        "string": 6
+      },
+      "subcategory": {
+        "string": 6
+      },
+      "variant": {
+        "array": 6
+      },
+      "variant[]": {
+        "string": 6
+      },
+      "product_family": {
+        "string": 6
+      },
+      "slug": {
+        "string": 6
+      },
+      "_source_file": {
+        "string": 6
+      },
+      "pricing.mrp": {
+        "number": 6
+      },
+      "pricing.discount": {
+        "null": 6
+      },
+      "pricing.selling_price": {
+        "null": 6
+      },
+      "pricing.std_pack": {
+        "string": 6
+      }
+    },
+    "Wi-fi Power Switch": {
+      "_id": {
+        "ObjectId": 6
+      },
+      "sku": {
+        "string": 6
+      },
+      "brand": {
+        "string": 6
+      },
+      "category": {
+        "string": 6
+      },
+      "currency": {
+        "string": 6
+      },
+      "description": {
+        "string": 6
+      },
+      "images": {
+        "array": 6
+      },
+      "list_price": {
+        "number": 6
+      },
+      "name": {
+        "string": 6
+      },
+      "series": {
+        "string": 6
+      },
+      "specs.ampere": {
+        "number": 6
+      },
+      "specs.color": {
+        "string": 6
+      },
+      "specs.mw": {
+        "number": 6
+      },
+      "specs.has_indicator": {
+        "bool": 6
+      },
+      "specs.type_detail": {
+        "string": 6
+      },
+      "seo.keywords": {
+        "array": 6
+      },
+      "seo.keywords[]": {
+        "string": 6
+      },
+      "seo.meta_description": {
+        "string": 6
+      },
+      "subcategory": {
+        "string": 6
+      },
+      "variant": {
+        "array": 6
+      },
+      "variant[]": {
+        "string": 6
+      },
+      "product_family": {
+        "string": 6
+      },
+      "slug": {
+        "string": 6
+      },
+      "_source_file": {
+        "string": 6
+      },
+      "pricing.mrp": {
+        "number": 6
+      },
+      "pricing.discount": {
+        "null": 6
+      },
+      "pricing.selling_price": {
+        "null": 6
+      },
+      "pricing.std_pack": {
+        "string": 6
+      }
+    },
+    "Switches & Bell Push - 1 Module": {
+      "_id": {
+        "ObjectId": 20
+      },
+      "sku": {
+        "string": 20
+      },
+      "brand": {
+        "string": 20
+      },
+      "category": {
+        "string": 20
+      },
+      "currency": {
+        "string": 20
+      },
+      "description": {
+        "string": 20
+      },
+      "images": {
+        "array": 20
+      },
+      "list_price": {
+        "number": 20
+      },
+      "name": {
+        "string": 20
+      },
+      "series": {
+        "string": 20
+      },
+      "specs.ampere": {
+        "number": 20
+      },
+      "specs.color": {
+        "string": 20
+      },
+      "specs.mw": {
+        "number": 20
+      },
+      "specs.has_indicator": {
+        "bool": 20
+      },
+      "specs.type_detail": {
+        "string": 20
+      },
+      "seo.keywords": {
+        "array": 20
+      },
+      "seo.keywords[]": {
+        "string": 20
+      },
+      "seo.meta_description": {
+        "string": 20
+      },
+      "subcategory": {
+        "string": 20
+      },
+      "variant": {
+        "array": 20
+      },
+      "variant[]": {
+        "string": 20
+      },
+      "product_family": {
+        "string": 20
+      },
+      "slug": {
+        "string": 20
+      },
+      "_source_file": {
+        "string": 20
+      },
+      "pricing.mrp": {
+        "number": 20
+      },
+      "pricing.discount": {
+        "null": 20
+      },
+      "pricing.selling_price": {
+        "null": 20
+      },
+      "pricing.std_pack": {
+        "string": 20
+      }
+    },
+    "Switches & Bell Push - 2 Module": {
+      "_id": {
+        "ObjectId": 4
+      },
+      "sku": {
+        "string": 4
+      },
+      "brand": {
+        "string": 4
+      },
+      "category": {
+        "string": 4
+      },
+      "currency": {
+        "string": 4
+      },
+      "description": {
+        "string": 4
+      },
+      "images": {
+        "array": 4
+      },
+      "list_price": {
+        "number": 4
+      },
+      "name": {
+        "string": 4
+      },
+      "series": {
+        "string": 4
+      },
+      "specs.ampere": {
+        "number": 4
+      },
+      "specs.color": {
+        "string": 4
+      },
+      "specs.mw": {
+        "number": 4
+      },
+      "specs.has_indicator": {
+        "bool": 4
+      },
+      "specs.type_detail": {
+        "string": 4
+      },
+      "seo.keywords": {
+        "array": 4
+      },
+      "seo.keywords[]": {
+        "string": 4
+      },
+      "seo.meta_description": {
+        "string": 4
+      },
+      "subcategory": {
+        "string": 4
+      },
+      "variant": {
+        "array": 4
+      },
+      "variant[]": {
+        "string": 4
+      },
+      "product_family": {
+        "string": 4
+      },
+      "slug": {
+        "string": 4
+      },
+      "_source_file": {
+        "string": 4
+      },
+      "pricing.mrp": {
+        "number": 4
+      },
+      "pricing.discount": {
+        "null": 4
+      },
+      "pricing.selling_price": {
+        "null": 4
+      },
+      "pricing.std_pack": {
+        "string": 4
+      }
+    },
+    "Mini MCBs 3kA": {
+      "_id": {
+        "ObjectId": 70
+      },
+      "sku": {
+        "string": 70
+      },
+      "brand": {
+        "string": 70
+      },
+      "category": {
+        "string": 70
+      },
+      "currency": {
+        "string": 70
+      },
+      "description": {
+        "string": 70
+      },
+      "images": {
+        "array": 70
+      },
+      "list_price": {
+        "number": 70
+      },
+      "name": {
+        "string": 70
+      },
+      "series": {
+        "string": 70
+      },
+      "specs.ampere": {
+        "number": 70
+      },
+      "specs.color": {
+        "string": 54
+      },
+      "specs.mw": {
+        "number": 46
+      },
+      "specs.has_indicator": {
+        "bool": 16
+      },
+      "specs.type_detail": {
+        "string": 70
+      },
+      "seo.keywords": {
+        "array": 70
+      },
+      "seo.keywords[]": {
+        "string": 70
+      },
+      "seo.meta_description": {
+        "string": 70
+      },
+      "subcategory": {
+        "string": 70
+      },
+      "variant": {
+        "array": 64
+      },
+      "variant[]": {
+        "string": 64
+      },
+      "product_family": {
+        "string": 70
+      },
+      "slug": {
+        "string": 70
+      },
+      "_source_file": {
+        "string": 70
+      },
+      "pricing.mrp": {
+        "number": 70
+      },
+      "pricing.discount": {
+        "null": 70
+      },
+      "pricing.selling_price": {
+        "null": 70
+      },
+      "pricing.std_pack": {
+        "string": 70
+      },
+      "specs.poles": {
+        "number": 16
+      },
+      "specs.voltage": {
+        "string": 4
+      },
+      "status.is_active": {
+        "bool": 38
+      },
+      "status.is_featured": {
+        "bool": 38
+      },
+      "specs.curve": {
+        "string": 24
+      }
+    },
+    "Soft Feel Switches - 1 Module": {
+      "_id": {
+        "ObjectId": 24
+      },
+      "sku": {
+        "string": 24
+      },
+      "brand": {
+        "string": 24
+      },
+      "category": {
+        "string": 24
+      },
+      "currency": {
+        "string": 24
+      },
+      "description": {
+        "string": 24
+      },
+      "images": {
+        "array": 24
+      },
+      "list_price": {
+        "number": 24
+      },
+      "name": {
+        "string": 24
+      },
+      "series": {
+        "string": 24
+      },
+      "specs.ampere": {
+        "number": 24
+      },
+      "specs.color": {
+        "string": 24
+      },
+      "specs.mw": {
+        "number": 24
+      },
+      "specs.has_indicator": {
+        "bool": 24
+      },
+      "specs.type_detail": {
+        "string": 24
+      },
+      "seo.keywords": {
+        "array": 24
+      },
+      "seo.keywords[]": {
+        "string": 24
+      },
+      "seo.meta_description": {
+        "string": 24
+      },
+      "subcategory": {
+        "string": 24
+      },
+      "variant": {
+        "array": 24
+      },
+      "variant[]": {
+        "string": 24
+      },
+      "product_family": {
+        "string": 24
+      },
+      "slug": {
+        "string": 24
+      },
+      "_source_file": {
+        "string": 24
+      },
+      "pricing.mrp": {
+        "number": 24
+      },
+      "pricing.discount": {
+        "null": 24
+      },
+      "pricing.selling_price": {
+        "null": 24
+      },
+      "pricing.std_pack": {
+        "string": 24
+      }
+    },
+    "SWITCHES - 2 MODULE (Mega Switches)": {
+      "_id": {
+        "ObjectId": 25
+      },
+      "sku": {
+        "string": 25
+      },
+      "brand": {
+        "string": 25
+      },
+      "category": {
+        "string": 25
+      },
+      "currency": {
+        "string": 25
+      },
+      "description": {
+        "string": 25
+      },
+      "images": {
+        "array": 25
+      },
+      "list_price": {
+        "number": 25
+      },
+      "name": {
+        "string": 25
+      },
+      "series": {
+        "string": 25
+      },
+      "specs.ampere": {
+        "number": 25
+      },
+      "specs.color": {
+        "string": 25
+      },
+      "specs.mw": {
+        "number": 25
+      },
+      "specs.has_indicator": {
+        "bool": 25
+      },
+      "specs.type_detail": {
+        "string": 25
+      },
+      "seo.keywords": {
+        "array": 25
+      },
+      "seo.keywords[]": {
+        "string": 25
+      },
+      "seo.meta_description": {
+        "string": 25
+      },
+      "subcategory": {
+        "string": 25
+      },
+      "variant": {
+        "array": 25
+      },
+      "variant[]": {
+        "string": 25
+      },
+      "product_family": {
+        "string": 25
+      },
+      "slug": {
+        "string": 25
+      },
+      "_source_file": {
+        "string": 25
+      },
+      "pricing.mrp": {
+        "number": 25
+      },
+      "pricing.discount": {
+        "null": 25
+      },
+      "pricing.selling_price": {
+        "null": 25
+      },
+      "pricing.std_pack": {
+        "string": 25
+      },
+      "specs.load": {
+        "string": 2
+      },
+      "status.is_active": {
+        "bool": 2
+      },
+      "status.is_featured": {
+        "bool": 2
+      }
+    },
+    "Mini MCBs with LED Indicator": {
+      "_id": {
+        "ObjectId": 40
+      },
+      "sku": {
+        "string": 40
+      },
+      "brand": {
+        "string": 40
+      },
+      "category": {
+        "string": 40
+      },
+      "currency": {
+        "string": 40
+      },
+      "description": {
+        "string": 40
+      },
+      "images": {
+        "array": 40
+      },
+      "list_price": {
+        "number": 40
+      },
+      "name": {
+        "string": 40
+      },
+      "series": {
+        "string": 40
+      },
+      "specs.ampere": {
+        "number": 40
+      },
+      "specs.color": {
+        "string": 40
+      },
+      "specs.mw": {
+        "number": 40
+      },
+      "specs.has_indicator": {
+        "bool": 40
+      },
+      "specs.type_detail": {
+        "string": 40
+      },
+      "seo.keywords": {
+        "array": 40
+      },
+      "seo.keywords[]": {
+        "string": 40
+      },
+      "seo.meta_description": {
+        "string": 40
+      },
+      "subcategory": {
+        "string": 40
+      },
+      "variant": {
+        "array": 40
+      },
+      "variant[]": {
+        "string": 40
+      },
+      "product_family": {
+        "string": 40
+      },
+      "slug": {
+        "string": 40
+      },
+      "_source_file": {
+        "string": 40
+      },
+      "pricing.mrp": {
+        "number": 40
+      },
+      "pricing.discount": {
+        "null": 40
+      },
+      "pricing.selling_price": {
+        "null": 40
+      },
+      "pricing.std_pack": {
+        "string": 40
+      },
+      "images[]": {
+        "string": 16
+      },
+      "specs.poles": {
+        "string": 16
+      },
+      "specs.sensitivity_ma": {
+        "number": 16
+      }
+    },
+    "Modular IR Touch Switches": {
+      "_id": {
+        "ObjectId": 10
+      },
+      "sku": {
+        "string": 10
+      },
+      "brand": {
+        "string": 10
+      },
+      "category": {
+        "string": 10
+      },
+      "currency": {
+        "string": 10
+      },
+      "description": {
+        "string": 10
+      },
+      "images": {
+        "array": 10
+      },
+      "images[]": {
+        "string": 10
+      },
+      "list_price": {
+        "number": 10
+      },
+      "name": {
+        "string": 10
+      },
+      "series": {
+        "string": 10
+      },
+      "specs.module_size": {
+        "string": 10
+      },
+      "specs.channels": {
+        "number": 4
+      },
+      "specs.color": {
+        "string": 10
+      },
+      "specs.control_type": {
+        "string": 10
+      },
+      "seo.keywords": {
+        "array": 10
+      },
+      "seo.keywords[]": {
+        "string": 10
+      },
+      "seo.meta_description": {
+        "string": 10
+      },
+      "subcategory": {
+        "string": 10
+      },
+      "variant": {
+        "array": 10
+      },
+      "variant[]": {
+        "string": 10
+      },
+      "product_family": {
+        "string": 10
+      },
+      "slug": {
+        "string": 10
+      },
+      "_source_file": {
+        "string": 10
+      },
+      "pricing.mrp": {
+        "number": 10
+      },
+      "pricing.discount": {
+        "null": 10
+      },
+      "pricing.selling_price": {
+        "null": 10
+      },
+      "pricing.std_pack": {
+        "string": 10
+      },
+      "specs.type_detail": {
+        "string": 2
+      },
+      "specs.ampere": {
+        "number": 2
+      }
+    },
+    "Switches - 1 Module": {
+      "_id": {
+        "ObjectId": 109
+      },
+      "sku": {
+        "string": 109
+      },
+      "brand": {
+        "string": 109
+      },
+      "category": {
+        "string": 109
+      },
+      "currency": {
+        "string": 109
+      },
+      "description": {
+        "string": 109
+      },
+      "images": {
+        "array": 109
+      },
+      "images[]": {
+        "string": 16
+      },
+      "list_price": {
+        "number": 109
+      },
+      "name": {
+        "string": 109
+      },
+      "series": {
+        "string": 109
+      },
+      "specs.ampere": {
+        "number": 109
+      },
+      "specs.color": {
+        "string": 85
+      },
+      "specs.mw": {
+        "number": 109
+      },
+      "specs.has_indicator": {
+        "bool": 109
+      },
+      "specs.type_detail": {
+        "string": 109
+      },
+      "seo.keywords": {
+        "array": 109
+      },
+      "seo.keywords[]": {
+        "string": 109
+      },
+      "seo.meta_description": {
+        "string": 109
+      },
+      "subcategory": {
+        "string": 109
+      },
+      "variant": {
+        "array": 82
+      },
+      "variant[]": {
+        "string": 82
+      },
+      "product_family": {
+        "string": 109
+      },
+      "slug": {
+        "string": 109
+      },
+      "_source_file": {
+        "string": 109
+      },
+      "pricing.mrp": {
+        "number": 109
+      },
+      "pricing.discount": {
+        "null": 109
+      },
+      "pricing.selling_price": {
+        "null": 109
+      },
+      "pricing.std_pack": {
+        "string": 109
+      },
+      "specs.load": {
+        "string": 32
+      },
+      "status.is_active": {
+        "bool": 77
+      },
+      "status.is_featured": {
+        "bool": 77
+      }
+    },
+    "DP Switches - 2 Module": {
+      "_id": {
+        "ObjectId": 20
+      },
+      "sku": {
+        "string": 20
+      },
+      "brand": {
+        "string": 20
+      },
+      "category": {
+        "string": 20
+      },
+      "currency": {
+        "string": 20
+      },
+      "description": {
+        "string": 20
+      },
+      "images": {
+        "array": 20
+      },
+      "images[]": {
+        "string": 4
+      },
+      "list_price": {
+        "number": 20
+      },
+      "name": {
+        "string": 20
+      },
+      "series": {
+        "string": 20
+      },
+      "specs.ampere": {
+        "number": 20
+      },
+      "specs.color": {
+        "string": 16
+      },
+      "specs.mw": {
+        "number": 20
+      },
+      "specs.poles": {
+        "string": 8
+      },
+      "specs.has_indicator": {
+        "bool": 20
+      },
+      "specs.type_detail": {
+        "string": 20
+      },
+      "seo.keywords": {
+        "array": 20
+      },
+      "seo.keywords[]": {
+        "string": 20
+      },
+      "seo.meta_description": {
+        "string": 20
+      },
+      "subcategory": {
+        "string": 20
+      },
+      "variant": {
+        "array": 16
+      },
+      "variant[]": {
+        "string": 16
+      },
+      "product_family": {
+        "string": 20
+      },
+      "slug": {
+        "string": 20
+      },
+      "_source_file": {
+        "string": 20
+      },
+      "pricing.mrp": {
+        "number": 20
+      },
+      "pricing.discount": {
+        "null": 20
+      },
+      "pricing.selling_price": {
+        "null": 20
+      },
+      "pricing.std_pack": {
+        "string": 20
+      },
+      "status.is_active": {
+        "bool": 14
+      },
+      "status.is_featured": {
+        "bool": 14
+      }
+    },
+    "Bell Push - 1 Module": {
+      "_id": {
+        "ObjectId": 28
+      },
+      "sku": {
+        "string": 28
+      },
+      "brand": {
+        "string": 28
+      },
+      "category": {
+        "string": 28
+      },
+      "currency": {
+        "string": 28
+      },
+      "description": {
+        "string": 28
+      },
+      "images": {
+        "array": 28
+      },
+      "images[]": {
+        "string": 4
+      },
+      "list_price": {
+        "number": 28
+      },
+      "name": {
+        "string": 28
+      },
+      "series": {
+        "string": 28
+      },
+      "specs.ampere": {
+        "number": 28
+      },
+      "specs.color": {
+        "string": 24
+      },
+      "specs.mw": {
+        "number": 28
+      },
+      "specs.has_indicator": {
+        "bool": 28
+      },
+      "specs.type_detail": {
+        "string": 28
+      },
+      "seo.keywords": {
+        "array": 28
+      },
+      "seo.keywords[]": {
+        "string": 28
+      },
+      "seo.meta_description": {
+        "string": 28
+      },
+      "subcategory": {
+        "string": 28
+      },
+      "variant": {
+        "array": 24
+      },
+      "variant[]": {
+        "string": 24
+      },
+      "product_family": {
+        "string": 28
+      },
+      "slug": {
+        "string": 28
+      },
+      "_source_file": {
+        "string": 28
+      },
+      "pricing.mrp": {
+        "number": 28
+      },
+      "pricing.discount": {
+        "null": 28
+      },
+      "pricing.selling_price": {
+        "null": 28
+      },
+      "pricing.std_pack": {
+        "string": 28
+      },
+      "status.is_active": {
+        "bool": 20
+      },
+      "status.is_featured": {
+        "bool": 20
+      }
+    },
+    "Bell Push - 2 Module": {
+      "_id": {
+        "ObjectId": 12
+      },
+      "sku": {
+        "string": 12
+      },
+      "brand": {
+        "string": 12
+      },
+      "category": {
+        "string": 12
+      },
+      "currency": {
+        "string": 12
+      },
+      "description": {
+        "string": 12
+      },
+      "images": {
+        "array": 12
+      },
+      "images[]": {
+        "string": 2
+      },
+      "list_price": {
+        "number": 12
+      },
+      "name": {
+        "string": 12
+      },
+      "series": {
+        "string": 12
+      },
+      "specs.ampere": {
+        "number": 12
+      },
+      "specs.color": {
+        "string": 8
+      },
+      "specs.mw": {
+        "number": 12
+      },
+      "specs.has_indicator": {
+        "bool": 12
+      },
+      "specs.type_detail": {
+        "string": 12
+      },
+      "seo.keywords": {
+        "array": 12
+      },
+      "seo.keywords[]": {
+        "string": 12
+      },
+      "seo.meta_description": {
+        "string": 12
+      },
+      "subcategory": {
+        "string": 12
+      },
+      "variant": {
+        "array": 8
+      },
+      "variant[]": {
+        "string": 8
+      },
+      "product_family": {
+        "string": 12
+      },
+      "slug": {
+        "string": 12
+      },
+      "_source_file": {
+        "string": 12
+      },
+      "pricing.mrp": {
+        "number": 12
+      },
+      "pricing.discount": {
+        "null": 12
+      },
+      "pricing.selling_price": {
+        "null": 12
+      },
+      "pricing.std_pack": {
+        "string": 12
+      },
+      "status.is_active": {
+        "bool": 8
+      },
+      "status.is_featured": {
+        "bool": 8
+      }
+    },
+    "Motor Starter - 2 Module": {
+      "_id": {
+        "ObjectId": 2
+      },
+      "sku": {
+        "string": 2
+      },
+      "brand": {
+        "string": 2
+      },
+      "category": {
+        "string": 2
+      },
+      "currency": {
+        "string": 2
+      },
+      "description": {
+        "string": 2
+      },
+      "images": {
+        "array": 2
+      },
+      "images[]": {
+        "string": 2
+      },
+      "list_price": {
+        "number": 2
+      },
+      "name": {
+        "string": 2
+      },
+      "series": {
+        "string": 2
+      },
+      "specs.ampere": {
+        "number": 2
+      },
+      "specs.color": {
+        "string": 2
+      },
+      "specs.mw": {
+        "number": 2
+      },
+      "specs.type_detail": {
+        "string": 2
+      },
+      "seo.keywords": {
+        "array": 2
+      },
+      "seo.keywords[]": {
+        "string": 2
+      },
+      "seo.meta_description": {
+        "string": 2
+      },
+      "subcategory": {
+        "string": 2
+      },
+      "variant": {
+        "array": 2
+      },
+      "variant[]": {
+        "string": 2
+      },
+      "product_family": {
+        "string": 2
+      },
+      "slug": {
+        "string": 2
+      },
+      "_source_file": {
+        "string": 2
+      },
+      "pricing.mrp": {
+        "number": 2
+      },
+      "pricing.discount": {
+        "null": 2
+      },
+      "pricing.selling_price": {
+        "null": 2
+      },
+      "pricing.std_pack": {
+        "string": 2
+      }
+    },
+    "Switches - 2 Module": {
+      "_id": {
+        "ObjectId": 4
+      },
+      "sku": {
+        "string": 4
+      },
+      "brand": {
+        "string": 4
+      },
+      "category": {
+        "string": 4
+      },
+      "currency": {
+        "string": 4
+      },
+      "description": {
+        "string": 4
+      },
+      "images": {
+        "array": 4
+      },
+      "list_price": {
+        "number": 4
+      },
+      "name": {
+        "string": 4
+      },
+      "series": {
+        "string": 4
+      },
+      "specs.ampere": {
+        "number": 4
+      },
+      "specs.color": {
+        "string": 4
+      },
+      "specs.mw": {
+        "number": 4
+      },
+      "specs.has_indicator": {
+        "bool": 4
+      },
+      "specs.type_detail": {
+        "string": 4
+      },
+      "status.is_active": {
+        "bool": 4
+      },
+      "status.is_featured": {
+        "bool": 4
+      },
+      "seo.keywords": {
+        "array": 4
+      },
+      "seo.keywords[]": {
+        "string": 4
+      },
+      "seo.meta_description": {
+        "string": 4
+      },
+      "subcategory": {
+        "string": 4
+      },
+      "variant": {
+        "array": 4
+      },
+      "variant[]": {
+        "string": 4
+      },
+      "_source_file": {
+        "string": 4
+      },
+      "pricing.mrp": {
+        "number": 4
+      },
+      "pricing.discount": {
+        "null": 4
+      },
+      "pricing.selling_price": {
+        "null": 4
+      },
+      "pricing.std_pack": {
+        "string": 4
+      },
+      "product_family": {
+        "string": 4
+      },
+      "slug": {
+        "string": 4
+      }
+    },
+    "Mini MCB": {
+      "_id": {
+        "ObjectId": 10
+      },
+      "sku": {
+        "string": 10
+      },
+      "brand": {
+        "string": 10
+      },
+      "category": {
+        "string": 10
+      },
+      "currency": {
+        "string": 10
+      },
+      "description": {
+        "string": 10
+      },
+      "images": {
+        "array": 10
+      },
+      "list_price": {
+        "number": 10
+      },
+      "name": {
+        "string": 10
+      },
+      "series": {
+        "string": 10
+      },
+      "specs.ampere": {
+        "number": 10
+      },
+      "specs.poles": {
+        "string": 10
+      },
+      "specs.curve": {
+        "string": 10
+      },
+      "specs.packing": {
+        "string": 10
+      },
+      "specs.color": {
+        "string": 10
+      },
+      "status.is_active": {
+        "bool": 10
+      },
+      "status.is_featured": {
+        "bool": 10
+      },
+      "seo.keywords": {
+        "array": 10
+      },
+      "seo.keywords[]": {
+        "string": 10
+      },
+      "seo.meta_description": {
+        "string": 10
+      },
+      "subcategory": {
+        "string": 10
+      },
+      "variant": {
+        "array": 10
+      },
+      "variant[]": {
+        "string": 10
+      },
+      "_source_file": {
+        "string": 10
+      },
+      "pricing.mrp": {
+        "number": 10
+      },
+      "pricing.discount": {
+        "null": 10
+      },
+      "pricing.selling_price": {
+        "null": 10
+      },
+      "pricing.std_pack": {
+        "string": 10
+      },
+      "product_family": {
+        "string": 10
+      },
+      "slug": {
+        "string": 10
+      }
+    }
+  },
+  "Power Sockets": {
+    "Power Sockets - 2 Module": {
+      "_id": {
+        "ObjectId": 44
+      },
+      "sku": {
+        "string": 44
+      },
+      "brand": {
+        "string": 44
+      },
+      "category": {
+        "string": 44
+      },
+      "currency": {
+        "string": 44
+      },
+      "description": {
+        "string": 44
+      },
+      "images": {
+        "array": 44
+      },
+      "list_price": {
+        "number": 44
+      },
+      "name": {
+        "string": 44
+      },
+      "series": {
+        "string": 44
+      },
+      "specs.ampere": {
+        "number": 36,
+        "string": 8
+      },
+      "specs.color": {
+        "string": 44
+      },
+      "specs.mw": {
+        "number": 44
+      },
+      "specs.has_indicator": {
+        "bool": 14
+      },
+      "specs.type_detail": {
+        "string": 30
+      },
+      "seo.keywords": {
+        "array": 44
+      },
+      "seo.keywords[]": {
+        "string": 44
+      },
+      "seo.meta_description": {
+        "string": 44
+      },
+      "subcategory": {
+        "string": 44
+      },
+      "variant": {
+        "array": 41
+      },
+      "variant[]": {
+        "string": 41
+      },
+      "product_family": {
+        "string": 44
+      },
+      "slug": {
+        "string": 44
+      },
+      "_source_file": {
+        "string": 44
+      },
+      "pricing.mrp": {
+        "number": 44
+      },
+      "pricing.discount": {
+        "null": 44
+      },
+      "pricing.selling_price": {
+        "null": 44
+      },
+      "pricing.std_pack": {
+        "string": 44
+      },
+      "images[]": {
+        "string": 6
+      },
+      "specs.pins": {
+        "number": 14
+      },
+      "specs.socket_type": {
+        "string": 14
+      },
+      "specs.isi_marked": {
+        "bool": 14
+      },
+      "specs.heavy_duty": {
+        "bool": 4
+      },
+      "specs.min_ampere": {
+        "number": 8
+      },
+      "status.is_active": {
+        "bool": 24
+      },
+      "status.is_featured": {
+        "bool": 24
+      },
+      "specs.with_shutter": {
+        "bool": 8
+      },
+      "specs.raised": {
+        "bool": 2
+      }
+    }
+  },
+  "Fan Controls": {
+    "Fan Regulators & Dimmers - 2 Module": {
+      "_id": {
+        "ObjectId": 8
+      },
+      "sku": {
+        "string": 8
+      },
+      "brand": {
+        "string": 8
+      },
+      "category": {
+        "string": 8
+      },
+      "currency": {
+        "string": 8
+      },
+      "description": {
+        "string": 8
+      },
+      "images": {
+        "array": 8
+      },
+      "list_price": {
+        "number": 8
+      },
+      "name": {
+        "string": 8
+      },
+      "series": {
+        "string": 8
+      },
+      "specs.ampere": {
+        "null": 8
+      },
+      "specs.color": {
+        "string": 8
+      },
+      "specs.mw": {
+        "number": 8
+      },
+      "specs.has_indicator": {
+        "bool": 8
+      },
+      "specs.type_detail": {
+        "string": 8
+      },
+      "seo.keywords": {
+        "array": 8
+      },
+      "seo.keywords[]": {
+        "string": 8
+      },
+      "seo.meta_description": {
+        "string": 8
+      },
+      "subcategory": {
+        "string": 8
+      },
+      "variant": {
+        "array": 8
+      },
+      "variant[]": {
+        "string": 8
+      },
+      "product_family": {
+        "string": 8
+      },
+      "slug": {
+        "string": 8
+      },
+      "_source_file": {
+        "string": 8
+      },
+      "pricing.mrp": {
+        "number": 8
+      },
+      "pricing.discount": {
+        "null": 8
+      },
+      "pricing.selling_price": {
+        "null": 8
+      },
+      "pricing.std_pack": {
+        "string": 8
+      }
+    },
+    "Fan Regulators & Dimmers - 1 Module": {
+      "_id": {
+        "ObjectId": 5
+      },
+      "sku": {
+        "string": 5
+      },
+      "brand": {
+        "string": 5
+      },
+      "category": {
+        "string": 5
+      },
+      "currency": {
+        "string": 5
+      },
+      "description": {
+        "string": 5
+      },
+      "images": {
+        "array": 5
+      },
+      "list_price": {
+        "number": 5
+      },
+      "name": {
+        "string": 5
+      },
+      "series": {
+        "string": 5
+      },
+      "specs.ampere": {
+        "null": 5
+      },
+      "specs.color": {
+        "string": 5
+      },
+      "specs.mw": {
+        "number": 5
+      },
+      "specs.has_indicator": {
+        "bool": 5
+      },
+      "specs.type_detail": {
+        "string": 5
+      },
+      "seo.keywords": {
+        "array": 5
+      },
+      "seo.keywords[]": {
+        "string": 5
+      },
+      "seo.meta_description": {
+        "string": 5
+      },
+      "subcategory": {
+        "string": 5
+      },
+      "variant": {
+        "array": 5
+      },
+      "variant[]": {
+        "string": 5
+      },
+      "product_family": {
+        "string": 5
+      },
+      "slug": {
+        "string": 5
+      },
+      "_source_file": {
+        "string": 5
+      },
+      "pricing.mrp": {
+        "number": 5
+      },
+      "pricing.discount": {
+        "null": 5
+      },
+      "pricing.selling_price": {
+        "null": 5
+      },
+      "pricing.std_pack": {
+        "string": 5
+      }
+    },
+    "Wi-fi Fan Regulator": {
+      "_id": {
+        "ObjectId": 3
+      },
+      "sku": {
+        "string": 3
+      },
+      "brand": {
+        "string": 3
+      },
+      "category": {
+        "string": 3
+      },
+      "currency": {
+        "string": 3
+      },
+      "description": {
+        "string": 3
+      },
+      "images": {
+        "array": 3
+      },
+      "list_price": {
+        "number": 3
+      },
+      "name": {
+        "string": 3
+      },
+      "series": {
+        "string": 3
+      },
+      "specs.ampere": {
+        "null": 3
+      },
+      "specs.color": {
+        "string": 3
+      },
+      "specs.mw": {
+        "number": 3
+      },
+      "specs.has_indicator": {
+        "bool": 3
+      },
+      "specs.type_detail": {
+        "string": 3
+      },
+      "seo.keywords": {
+        "array": 3
+      },
+      "seo.keywords[]": {
+        "string": 3
+      },
+      "seo.meta_description": {
+        "string": 3
+      },
+      "subcategory": {
+        "string": 3
+      },
+      "variant": {
+        "array": 3
+      },
+      "variant[]": {
+        "string": 3
+      },
+      "product_family": {
+        "string": 3
+      },
+      "slug": {
+        "string": 3
+      },
+      "_source_file": {
+        "string": 3
+      },
+      "pricing.mrp": {
+        "number": 3
+      },
+      "pricing.discount": {
+        "null": 3
+      },
+      "pricing.selling_price": {
+        "null": 3
+      },
+      "pricing.std_pack": {
+        "string": 3
+      }
+    },
+    "Modular IR Fan Regulators": {
+      "_id": {
+        "ObjectId": 2
+      },
+      "sku": {
+        "string": 2
+      },
+      "brand": {
+        "string": 2
+      },
+      "category": {
+        "string": 2
+      },
+      "currency": {
+        "string": 2
+      },
+      "description": {
+        "string": 2
+      },
+      "images": {
+        "array": 2
+      },
+      "images[]": {
+        "string": 2
+      },
+      "list_price": {
+        "number": 2
+      },
+      "name": {
+        "string": 2
+      },
+      "series": {
+        "string": 2
+      },
+      "specs.module_size": {
+        "string": 2
+      },
+      "specs.steps": {
+        "number": 2
+      },
+      "specs.color": {
+        "string": 2
+      },
+      "specs.control_type": {
+        "string": 2
+      },
+      "seo.keywords": {
+        "array": 2
+      },
+      "seo.keywords[]": {
+        "string": 2
+      },
+      "seo.meta_description": {
+        "string": 2
+      },
+      "subcategory": {
+        "string": 2
+      },
+      "variant": {
+        "array": 2
+      },
+      "variant[]": {
+        "string": 2
+      },
+      "product_family": {
+        "string": 2
+      },
+      "slug": {
+        "string": 2
+      },
+      "_source_file": {
+        "string": 2
+      },
+      "pricing.mrp": {
+        "number": 2
+      },
+      "pricing.discount": {
+        "null": 2
+      },
+      "pricing.selling_price": {
+        "null": 2
+      },
+      "pricing.std_pack": {
+        "string": 2
+      }
+    },
+    "Fan Regulators - 1 Module": {
+      "_id": {
+        "ObjectId": 12
+      },
+      "sku": {
+        "string": 12
+      },
+      "brand": {
+        "string": 12
+      },
+      "category": {
+        "string": 12
+      },
+      "currency": {
+        "string": 12
+      },
+      "description": {
+        "string": 12
+      },
+      "images": {
+        "array": 12
+      },
+      "images[]": {
+        "string": 2
+      },
+      "list_price": {
+        "number": 12
+      },
+      "name": {
+        "string": 12
+      },
+      "series": {
+        "string": 12
+      },
+      "specs.rating_watt": {
+        "number": 2
+      },
+      "specs.steps": {
+        "number": 4
+      },
+      "specs.color": {
+        "string": 12
+      },
+      "specs.mw": {
+        "number": 12
+      },
+      "specs.type_detail": {
+        "string": 12
+      },
+      "seo.keywords": {
+        "array": 12
+      },
+      "seo.keywords[]": {
+        "string": 12
+      },
+      "seo.meta_description": {
+        "string": 12
+      },
+      "subcategory": {
+        "string": 12
+      },
+      "variant": {
+        "array": 12
+      },
+      "variant[]": {
+        "string": 12
+      },
+      "product_family": {
+        "string": 12
+      },
+      "slug": {
+        "string": 12
+      },
+      "_source_file": {
+        "string": 12
+      },
+      "pricing.mrp": {
+        "number": 12
+      },
+      "pricing.discount": {
+        "null": 12
+      },
+      "pricing.selling_price": {
+        "null": 12
+      },
+      "pricing.std_pack": {
+        "string": 12
+      },
+      "specs.ampere": {
+        "null": 2
+      },
+      "specs.has_indicator": {
+        "bool": 2
+      },
+      "specs.wattage": {
+        "number": 2
+      },
+      "status.is_active": {
+        "bool": 8
+      },
+      "status.is_featured": {
+        "bool": 8
+      }
+    },
+    "Fan Regulators - 2 Module": {
+      "_id": {
+        "ObjectId": 13
+      },
+      "sku": {
+        "string": 13
+      },
+      "brand": {
+        "string": 13
+      },
+      "category": {
+        "string": 13
+      },
+      "currency": {
+        "string": 13
+      },
+      "description": {
+        "string": 13
+      },
+      "images": {
+        "array": 13
+      },
+      "images[]": {
+        "string": 2
+      },
+      "list_price": {
+        "number": 13
+      },
+      "name": {
+        "string": 13
+      },
+      "series": {
+        "string": 13
+      },
+      "specs.rating_watt": {
+        "number": 2
+      },
+      "specs.steps": {
+        "number": 4
+      },
+      "specs.color": {
+        "string": 13
+      },
+      "specs.mw": {
+        "number": 13
+      },
+      "specs.isi_marked": {
+        "bool": 2
+      },
+      "specs.type_detail": {
+        "string": 13
+      },
+      "seo.keywords": {
+        "array": 13
+      },
+      "seo.keywords[]": {
+        "string": 13
+      },
+      "seo.meta_description": {
+        "string": 13
+      },
+      "subcategory": {
+        "string": 13
+      },
+      "variant": {
+        "array": 9
+      },
+      "variant[]": {
+        "string": 9
+      },
+      "product_family": {
+        "string": 13
+      },
+      "slug": {
+        "string": 13
+      },
+      "_source_file": {
+        "string": 13
+      },
+      "pricing.mrp": {
+        "number": 13
+      },
+      "pricing.discount": {
+        "null": 13
+      },
+      "pricing.selling_price": {
+        "null": 13
+      },
+      "pricing.std_pack": {
+        "string": 13
+      },
+      "specs.ampere": {
+        "null": 2
+      },
+      "specs.has_indicator": {
+        "bool": 2
+      },
+      "specs.wattage": {
+        "number": 6
+      },
+      "status.is_active": {
+        "bool": 9
+      },
+      "status.is_featured": {
+        "bool": 9
+      }
+    },
+    "Wi-fi Fan Regulators": {
+      "_id": {
+        "ObjectId": 2
+      },
+      "sku": {
+        "string": 2
+      },
+      "brand": {
+        "string": 2
+      },
+      "category": {
+        "string": 2
+      },
+      "currency": {
+        "string": 2
+      },
+      "description": {
+        "string": 2
+      },
+      "images": {
+        "array": 2
+      },
+      "list_price": {
+        "number": 2
+      },
+      "name": {
+        "string": 2
+      },
+      "series": {
+        "string": 2
+      },
+      "specs.color": {
+        "string": 2
+      },
+      "specs.mw": {
+        "number": 2
+      },
+      "specs.type_detail": {
+        "string": 2
+      },
+      "specs.packing": {
+        "string": 2
+      },
+      "specs.smart": {
+        "bool": 2
+      },
+      "status.is_active": {
+        "bool": 2
+      },
+      "status.is_featured": {
+        "bool": 2
+      },
+      "seo.keywords": {
+        "array": 2
+      },
+      "seo.keywords[]": {
+        "string": 2
+      },
+      "seo.meta_description": {
+        "string": 2
+      },
+      "subcategory": {
+        "string": 2
+      },
+      "variant": {
+        "array": 2
+      },
+      "variant[]": {
+        "string": 2
+      },
+      "_source_file": {
+        "string": 2
+      },
+      "pricing.mrp": {
+        "number": 2
+      },
+      "pricing.discount": {
+        "null": 2
+      },
+      "pricing.selling_price": {
+        "null": 2
+      },
+      "pricing.std_pack": {
+        "string": 2
+      },
+      "product_family": {
+        "string": 2
+      },
+      "slug": {
+        "string": 2
+      }
+    }
+  },
+  "Dimmers": {
+    "Fan Regulators & Dimmers - 1 Module": {
+      "_id": {
+        "ObjectId": 5
+      },
+      "sku": {
+        "string": 5
+      },
+      "brand": {
+        "string": 5
+      },
+      "category": {
+        "string": 5
+      },
+      "currency": {
+        "string": 5
+      },
+      "description": {
+        "string": 5
+      },
+      "images": {
+        "array": 5
+      },
+      "list_price": {
+        "number": 5
+      },
+      "name": {
+        "string": 5
+      },
+      "series": {
+        "string": 5
+      },
+      "specs.ampere": {
+        "null": 5
+      },
+      "specs.color": {
+        "string": 5
+      },
+      "specs.mw": {
+        "number": 5
+      },
+      "specs.has_indicator": {
+        "bool": 5
+      },
+      "specs.type_detail": {
+        "string": 5
+      },
+      "seo.keywords": {
+        "array": 5
+      },
+      "seo.keywords[]": {
+        "string": 5
+      },
+      "seo.meta_description": {
+        "string": 5
+      },
+      "subcategory": {
+        "string": 5
+      },
+      "variant": {
+        "array": 5
+      },
+      "variant[]": {
+        "string": 5
+      },
+      "product_family": {
+        "string": 5
+      },
+      "slug": {
+        "string": 5
+      },
+      "_source_file": {
+        "string": 5
+      },
+      "pricing.mrp": {
+        "number": 5
+      },
+      "pricing.discount": {
+        "null": 5
+      },
+      "pricing.selling_price": {
+        "null": 5
+      },
+      "pricing.std_pack": {
+        "string": 5
+      }
+    },
+    "Modular IR Dimmers": {
+      "_id": {
+        "ObjectId": 2
+      },
+      "sku": {
+        "string": 2
+      },
+      "brand": {
+        "string": 2
+      },
+      "category": {
+        "string": 2
+      },
+      "currency": {
+        "string": 2
+      },
+      "description": {
+        "string": 2
+      },
+      "images": {
+        "array": 2
+      },
+      "images[]": {
+        "string": 2
+      },
+      "list_price": {
+        "number": 2
+      },
+      "name": {
+        "string": 2
+      },
+      "series": {
+        "string": 2
+      },
+      "specs.module_size": {
+        "string": 2
+      },
+      "specs.color": {
+        "string": 2
+      },
+      "specs.control_type": {
+        "string": 2
+      },
+      "seo.keywords": {
+        "array": 2
+      },
+      "seo.keywords[]": {
+        "string": 2
+      },
+      "seo.meta_description": {
+        "string": 2
+      },
+      "subcategory": {
+        "string": 2
+      },
+      "variant": {
+        "array": 2
+      },
+      "variant[]": {
+        "string": 2
+      },
+      "product_family": {
+        "string": 2
+      },
+      "slug": {
+        "string": 2
+      },
+      "_source_file": {
+        "string": 2
+      },
+      "pricing.mrp": {
+        "number": 2
+      },
+      "pricing.discount": {
+        "null": 2
+      },
+      "pricing.selling_price": {
+        "null": 2
+      },
+      "pricing.std_pack": {
+        "string": 2
+      }
+    },
+    "Dimmers - 1 Module": {
+      "_id": {
+        "ObjectId": 6
+      },
+      "sku": {
+        "string": 6
+      },
+      "brand": {
+        "string": 6
+      },
+      "category": {
+        "string": 6
+      },
+      "currency": {
+        "string": 6
+      },
+      "description": {
+        "string": 6
+      },
+      "images": {
+        "array": 6
+      },
+      "images[]": {
+        "string": 2
+      },
+      "list_price": {
+        "number": 6
+      },
+      "name": {
+        "string": 6
+      },
+      "series": {
+        "string": 6
+      },
+      "specs.rating_watt": {
+        "number": 2
+      },
+      "specs.color": {
+        "string": 6
+      },
+      "specs.mw": {
+        "number": 6
+      },
+      "specs.type_detail": {
+        "string": 6
+      },
+      "seo.keywords": {
+        "array": 6
+      },
+      "seo.keywords[]": {
+        "string": 6
+      },
+      "seo.meta_description": {
+        "string": 6
+      },
+      "subcategory": {
+        "string": 6
+      },
+      "variant": {
+        "array": 6
+      },
+      "variant[]": {
+        "string": 6
+      },
+      "product_family": {
+        "string": 6
+      },
+      "slug": {
+        "string": 6
+      },
+      "_source_file": {
+        "string": 6
+      },
+      "pricing.mrp": {
+        "number": 6
+      },
+      "pricing.discount": {
+        "null": 6
+      },
+      "pricing.selling_price": {
+        "null": 6
+      },
+      "pricing.std_pack": {
+        "string": 6
+      },
+      "specs.ampere": {
+        "null": 2
+      },
+      "specs.has_indicator": {
+        "bool": 2
+      },
+      "specs.wattage": {
+        "number": 2
+      },
+      "status.is_active": {
+        "bool": 2
+      },
+      "status.is_featured": {
+        "bool": 2
+      }
+    },
+    "Dimmers - 2 Module": {
+      "_id": {
+        "ObjectId": 4
+      },
+      "sku": {
+        "string": 4
+      },
+      "brand": {
+        "string": 4
+      },
+      "category": {
+        "string": 4
+      },
+      "currency": {
+        "string": 4
+      },
+      "description": {
+        "string": 4
+      },
+      "images": {
+        "array": 4
+      },
+      "list_price": {
+        "number": 4
+      },
+      "name": {
+        "string": 4
+      },
+      "series": {
+        "string": 4
+      },
+      "specs.wattage": {
+        "number": 4
+      },
+      "specs.mw": {
+        "number": 4
+      },
+      "specs.type_detail": {
+        "string": 4
+      },
+      "specs.color": {
+        "string": 4
+      },
+      "status.is_active": {
+        "bool": 4
+      },
+      "status.is_featured": {
+        "bool": 4
+      },
+      "seo.keywords": {
+        "array": 4
+      },
+      "seo.keywords[]": {
+        "string": 4
+      },
+      "seo.meta_description": {
+        "string": 4
+      },
+      "subcategory": {
+        "string": 4
+      },
+      "variant": {
+        "array": 2
+      },
+      "variant[]": {
+        "string": 2
+      },
+      "_source_file": {
+        "string": 4
+      },
+      "pricing.mrp": {
+        "number": 4
+      },
+      "pricing.discount": {
+        "null": 4
+      },
+      "pricing.selling_price": {
+        "null": 4
+      },
+      "pricing.std_pack": {
+        "string": 4
+      },
+      "product_family": {
+        "string": 4
+      },
+      "slug": {
+        "string": 4
+      }
+    }
+  },
+  "Accessories": {
+    "Wi-fi Light Dimmer": {
+      "_id": {
+        "ObjectId": 3
+      },
+      "sku": {
+        "string": 3
+      },
+      "brand": {
+        "string": 3
+      },
+      "category": {
+        "string": 3
+      },
+      "currency": {
+        "string": 3
+      },
+      "description": {
+        "string": 3
+      },
+      "images": {
+        "array": 3
+      },
+      "list_price": {
+        "number": 3
+      },
+      "name": {
+        "string": 3
+      },
+      "series": {
+        "string": 3
+      },
+      "specs.ampere": {
+        "null": 3
+      },
+      "specs.color": {
+        "string": 3
+      },
+      "specs.mw": {
+        "number": 3
+      },
+      "specs.has_indicator": {
+        "bool": 3
+      },
+      "specs.type_detail": {
+        "string": 3
+      },
+      "seo.keywords": {
+        "array": 3
+      },
+      "seo.keywords[]": {
+        "string": 3
+      },
+      "seo.meta_description": {
+        "string": 3
+      },
+      "subcategory": {
+        "string": 3
+      },
+      "variant": {
+        "array": 3
+      },
+      "variant[]": {
+        "string": 3
+      },
+      "product_family": {
+        "string": 3
+      },
+      "slug": {
+        "string": 3
+      },
+      "_source_file": {
+        "string": 3
+      },
+      "pricing.mrp": {
+        "number": 3
+      },
+      "pricing.discount": {
+        "null": 3
+      },
+      "pricing.selling_price": {
+        "null": 3
+      },
+      "pricing.std_pack": {
+        "string": 3
+      }
+    },
+    "Wi-fi Curtain Controller": {
+      "_id": {
+        "ObjectId": 3
+      },
+      "sku": {
+        "string": 3
+      },
+      "brand": {
+        "string": 3
+      },
+      "category": {
+        "string": 3
+      },
+      "currency": {
+        "string": 3
+      },
+      "description": {
+        "string": 3
+      },
+      "images": {
+        "array": 3
+      },
+      "list_price": {
+        "number": 3
+      },
+      "name": {
+        "string": 3
+      },
+      "series": {
+        "string": 3
+      },
+      "specs.ampere": {
+        "null": 3
+      },
+      "specs.color": {
+        "string": 3
+      },
+      "specs.mw": {
+        "number": 3
+      },
+      "specs.has_indicator": {
+        "bool": 3
+      },
+      "specs.type_detail": {
+        "string": 3
+      },
+      "seo.keywords": {
+        "array": 3
+      },
+      "seo.keywords[]": {
+        "string": 3
+      },
+      "seo.meta_description": {
+        "string": 3
+      },
+      "subcategory": {
+        "string": 3
+      },
+      "variant": {
+        "array": 3
+      },
+      "variant[]": {
+        "string": 3
+      },
+      "product_family": {
+        "string": 3
+      },
+      "slug": {
+        "string": 3
+      },
+      "_source_file": {
+        "string": 3
+      },
+      "pricing.mrp": {
+        "number": 3
+      },
+      "pricing.discount": {
+        "null": 3
+      },
+      "pricing.selling_price": {
+        "null": 3
+      },
+      "pricing.std_pack": {
+        "string": 3
+      }
+    },
+    "Wi-fi Scene Controller": {
+      "_id": {
+        "ObjectId": 3
+      },
+      "sku": {
+        "string": 3
+      },
+      "brand": {
+        "string": 3
+      },
+      "category": {
+        "string": 3
+      },
+      "currency": {
+        "string": 3
+      },
+      "description": {
+        "string": 3
+      },
+      "images": {
+        "array": 3
+      },
+      "list_price": {
+        "number": 3
+      },
+      "name": {
+        "string": 3
+      },
+      "series": {
+        "string": 3
+      },
+      "specs.ampere": {
+        "null": 3
+      },
+      "specs.color": {
+        "string": 3
+      },
+      "specs.mw": {
+        "number": 3
+      },
+      "specs.has_indicator": {
+        "bool": 3
+      },
+      "specs.type_detail": {
+        "string": 3
+      },
+      "seo.keywords": {
+        "array": 3
+      },
+      "seo.keywords[]": {
+        "string": 3
+      },
+      "seo.meta_description": {
+        "string": 3
+      },
+      "subcategory": {
+        "string": 3
+      },
+      "variant": {
+        "array": 3
+      },
+      "variant[]": {
+        "string": 3
+      },
+      "product_family": {
+        "string": 3
+      },
+      "slug": {
+        "string": 3
+      },
+      "_source_file": {
+        "string": 3
+      },
+      "pricing.mrp": {
+        "number": 3
+      },
+      "pricing.discount": {
+        "null": 3
+      },
+      "pricing.selling_price": {
+        "null": 3
+      },
+      "pricing.std_pack": {
+        "string": 3
+      }
+    },
+    "Accessories": {
+      "_id": {
+        "ObjectId": 36
+      },
+      "sku": {
+        "string": 36
+      },
+      "brand": {
+        "string": 36
+      },
+      "category": {
+        "string": 36
+      },
+      "currency": {
+        "string": 36
+      },
+      "description": {
+        "string": 36
+      },
+      "images": {
+        "array": 36
+      },
+      "list_price": {
+        "number": 36
+      },
+      "name": {
+        "string": 36
+      },
+      "series": {
+        "string": 36
+      },
+      "specs.ampere": {
+        "null": 31,
+        "number": 5
+      },
+      "specs.color": {
+        "string": 35,
+        "null": 1
+      },
+      "specs.mw": {
+        "number": 36
+      },
+      "specs.has_indicator": {
+        "bool": 36
+      },
+      "specs.type_detail": {
+        "string": 36
+      },
+      "seo.keywords": {
+        "array": 36
+      },
+      "seo.keywords[]": {
+        "string": 36
+      },
+      "seo.meta_description": {
+        "string": 36
+      },
+      "subcategory": {
+        "string": 36
+      },
+      "variant": {
+        "array": 34
+      },
+      "variant[]": {
+        "string": 34
+      },
+      "product_family": {
+        "string": 36
+      },
+      "slug": {
+        "string": 36
+      },
+      "_source_file": {
+        "string": 36
+      },
+      "pricing.mrp": {
+        "number": 36
+      },
+      "pricing.discount": {
+        "null": 36
+      },
+      "pricing.selling_price": {
+        "null": 36
+      },
+      "pricing.std_pack": {
+        "string": 36
+      },
+      "specs.wattage": {
+        "number": 2
+      }
+    },
+    "Remotes": {
+      "_id": {
+        "ObjectId": 1
+      },
+      "sku": {
+        "string": 1
+      },
+      "brand": {
+        "string": 1
+      },
+      "category": {
+        "string": 1
+      },
+      "currency": {
+        "string": 1
+      },
+      "description": {
+        "string": 1
+      },
+      "images": {
+        "array": 1
+      },
+      "images[]": {
+        "string": 1
+      },
+      "list_price": {
+        "number": 1
+      },
+      "name": {
+        "string": 1
+      },
+      "series": {
+        "string": 1
+      },
+      "specs.color": {
+        "string": 1
+      },
+      "specs.control_type": {
+        "string": 1
+      },
+      "specs.compatibility": {
+        "string": 1
+      },
+      "seo.keywords": {
+        "array": 1
+      },
+      "seo.keywords[]": {
+        "string": 1
+      },
+      "seo.meta_description": {
+        "string": 1
+      },
+      "subcategory": {
+        "string": 1
+      },
+      "product_family": {
+        "string": 1
+      },
+      "slug": {
+        "string": 1
+      },
+      "_source_file": {
+        "string": 1
+      },
+      "pricing.mrp": {
+        "number": 1
+      },
+      "pricing.discount": {
+        "null": 1
+      },
+      "pricing.selling_price": {
+        "null": 1
+      },
+      "pricing.std_pack": {
+        "string": 1
+      }
+    },
+    "Buzzer - 2 Module": {
+      "_id": {
+        "ObjectId": 8
+      },
+      "sku": {
+        "string": 8
+      },
+      "brand": {
+        "string": 8
+      },
+      "category": {
+        "string": 8
+      },
+      "currency": {
+        "string": 8
+      },
+      "description": {
+        "string": 8
+      },
+      "images": {
+        "array": 8
+      },
+      "images[]": {
+        "string": 2
+      },
+      "list_price": {
+        "number": 8
+      },
+      "name": {
+        "string": 8
+      },
+      "series": {
+        "string": 8
+      },
+      "specs.color": {
+        "string": 8
+      },
+      "specs.mw": {
+        "number": 8
+      },
+      "specs.type_detail": {
+        "string": 8
+      },
+      "seo.keywords": {
+        "array": 8
+      },
+      "seo.keywords[]": {
+        "string": 8
+      },
+      "seo.meta_description": {
+        "string": 8
+      },
+      "subcategory": {
+        "string": 8
+      },
+      "variant": {
+        "array": 7
+      },
+      "variant[]": {
+        "string": 7
+      },
+      "product_family": {
+        "string": 8
+      },
+      "slug": {
+        "string": 8
+      },
+      "_source_file": {
+        "string": 8
+      },
+      "pricing.mrp": {
+        "number": 8
+      },
+      "pricing.discount": {
+        "null": 8
+      },
+      "pricing.selling_price": {
+        "null": 8
+      },
+      "pricing.std_pack": {
+        "string": 8
+      },
+      "status.is_active": {
+        "bool": 6
+      },
+      "status.is_featured": {
+        "bool": 6
+      }
+    },
+    "Cable Outlet - 1 Module": {
+      "_id": {
+        "ObjectId": 14
+      },
+      "sku": {
+        "string": 14
+      },
+      "brand": {
+        "string": 14
+      },
+      "category": {
+        "string": 14
+      },
+      "currency": {
+        "string": 14
+      },
+      "description": {
+        "string": 14
+      },
+      "images": {
+        "array": 14
+      },
+      "images[]": {
+        "string": 2
+      },
+      "list_price": {
+        "number": 14
+      },
+      "name": {
+        "string": 14
+      },
+      "series": {
+        "string": 14
+      },
+      "specs.color": {
+        "string": 14
+      },
+      "specs.mw": {
+        "number": 14
+      },
+      "specs.type_detail": {
+        "string": 14
+      },
+      "seo.keywords": {
+        "array": 14
+      },
+      "seo.keywords[]": {
+        "string": 14
+      },
+      "seo.meta_description": {
+        "string": 14
+      },
+      "subcategory": {
+        "string": 14
+      },
+      "variant": {
+        "array": 14
+      },
+      "variant[]": {
+        "string": 14
+      },
+      "product_family": {
+        "string": 14
+      },
+      "slug": {
+        "string": 14
+      },
+      "_source_file": {
+        "string": 14
+      },
+      "pricing.mrp": {
+        "number": 14
+      },
+      "pricing.discount": {
+        "null": 14
+      },
+      "pricing.selling_price": {
+        "null": 14
+      },
+      "pricing.std_pack": {
+        "string": 14
+      },
+      "status.is_active": {
+        "bool": 10
+      },
+      "status.is_featured": {
+        "bool": 10
+      }
+    },
+    "Blank Off Unit - 1 Module": {
+      "_id": {
+        "ObjectId": 8
+      },
+      "sku": {
+        "string": 8
+      },
+      "brand": {
+        "string": 8
+      },
+      "category": {
+        "string": 8
+      },
+      "currency": {
+        "string": 8
+      },
+      "description": {
+        "string": 8
+      },
+      "images": {
+        "array": 8
+      },
+      "images[]": {
+        "string": 2
+      },
+      "list_price": {
+        "number": 8
+      },
+      "name": {
+        "string": 8
+      },
+      "series": {
+        "string": 8
+      },
+      "specs.color": {
+        "string": 8
+      },
+      "specs.mw": {
+        "number": 8
+      },
+      "specs.type_detail": {
+        "string": 8
+      },
+      "seo.keywords": {
+        "array": 8
+      },
+      "seo.keywords[]": {
+        "string": 8
+      },
+      "seo.meta_description": {
+        "string": 8
+      },
+      "subcategory": {
+        "string": 8
+      },
+      "variant": {
+        "array": 7
+      },
+      "variant[]": {
+        "string": 7
+      },
+      "product_family": {
+        "string": 8
+      },
+      "slug": {
+        "string": 8
+      },
+      "_source_file": {
+        "string": 8
+      },
+      "pricing.mrp": {
+        "number": 8
+      },
+      "pricing.discount": {
+        "null": 8
+      },
+      "pricing.selling_price": {
+        "null": 8
+      },
+      "pricing.std_pack": {
+        "string": 8
+      },
+      "status.is_active": {
+        "bool": 6
+      },
+      "status.is_featured": {
+        "bool": 6
+      }
+    },
+    "LED Foot Light - 2 Module": {
+      "_id": {
+        "ObjectId": 18
+      },
+      "sku": {
+        "string": 18
+      },
+      "brand": {
+        "string": 18
+      },
+      "category": {
+        "string": 18
+      },
+      "currency": {
+        "string": 18
+      },
+      "description": {
+        "string": 18
+      },
+      "images": {
+        "array": 18
+      },
+      "images[]": {
+        "string": 2
+      },
+      "list_price": {
+        "number": 18
+      },
+      "name": {
+        "string": 18
+      },
+      "series": {
+        "string": 18
+      },
+      "specs.color": {
+        "string": 18
+      },
+      "specs.mw": {
+        "number": 16
+      },
+      "specs.type_detail": {
+        "string": 18
+      },
+      "seo.keywords": {
+        "array": 18
+      },
+      "seo.keywords[]": {
+        "string": 18
+      },
+      "seo.meta_description": {
+        "string": 18
+      },
+      "subcategory": {
+        "string": 18
+      },
+      "variant": {
+        "array": 15
+      },
+      "variant[]": {
+        "string": 15
+      },
+      "product_family": {
+        "string": 18
+      },
+      "slug": {
+        "string": 18
+      },
+      "_source_file": {
+        "string": 18
+      },
+      "pricing.mrp": {
+        "number": 18
+      },
+      "pricing.discount": {
+        "null": 18
+      },
+      "pricing.selling_price": {
+        "null": 18
+      },
+      "pricing.std_pack": {
+        "string": 18
+      },
+      "specs.light_type": {
+        "string": 8
+      },
+      "specs.voltage": {
+        "string": 8
+      },
+      "specs.frequency": {
+        "string": 8
+      },
+      "status.is_active": {
+        "bool": 14
+      },
+      "status.is_featured": {
+        "bool": 14
+      }
+    },
+    "USB Chargers - 1 Module": {
+      "_id": {
+        "ObjectId": 24
+      },
+      "sku": {
+        "string": 24
+      },
+      "brand": {
+        "string": 24
+      },
+      "category": {
+        "string": 24
+      },
+      "currency": {
+        "string": 24
+      },
+      "description": {
+        "string": 24
+      },
+      "images": {
+        "array": 24
+      },
+      "images[]": {
+        "string": 6
+      },
+      "list_price": {
+        "number": 24
+      },
+      "name": {
+        "string": 24
+      },
+      "series": {
+        "string": 24
+      },
+      "specs.usb_type": {
+        "string": 10
+      },
+      "specs.output_current_a": {
+        "number": 6,
+        "null": 2
+      },
+      "specs.power_watt": {
+        "null": 2,
+        "number": 4
+      },
+      "specs.color": {
+        "string": 24
+      },
+      "specs.mw": {
+        "number": 24
+      },
+      "specs.type_detail": {
+        "string": 24
+      },
+      "seo.keywords": {
+        "array": 24
+      },
+      "seo.keywords[]": {
+        "string": 24
+      },
+      "seo.meta_description": {
+        "string": 24
+      },
+      "subcategory": {
+        "string": 24
+      },
+      "variant": {
+        "array": 22
+      },
+      "variant[]": {
+        "string": 22
+      },
+      "product_family": {
+        "string": 24
+      },
+      "slug": {
+        "string": 24
+      },
+      "_source_file": {
+        "string": 24
+      },
+      "pricing.mrp": {
+        "number": 24
+      },
+      "pricing.discount": {
+        "null": 24
+      },
+      "pricing.selling_price": {
+        "null": 24
+      },
+      "pricing.std_pack": {
+        "string": 24
+      },
+      "specs.output": {
+        "string": 6
+      },
+      "specs.certification": {
+        "string": 2
+      },
+      "status.is_active": {
+        "bool": 14
+      },
+      "status.is_featured": {
+        "bool": 14
+      },
+      "specs.port_type": {
+        "string": 4
+      },
+      "specs.ampere": {
+        "number": 4
+      }
+    },
+    "LED Phase Indicator - 1 Module": {
+      "_id": {
+        "ObjectId": 9
+      },
+      "sku": {
+        "string": 9
+      },
+      "brand": {
+        "string": 9
+      },
+      "category": {
+        "string": 9
+      },
+      "currency": {
+        "string": 9
+      },
+      "description": {
+        "string": 9
+      },
+      "images": {
+        "array": 9
+      },
+      "images[]": {
+        "string": 2
+      },
+      "list_price": {
+        "number": 9
+      },
+      "name": {
+        "string": 9
+      },
+      "series": {
+        "string": 9
+      },
+      "specs.color": {
+        "string": 9
+      },
+      "specs.mw": {
+        "number": 9
+      },
+      "specs.type_detail": {
+        "string": 9
+      },
+      "seo.keywords": {
+        "array": 9
+      },
+      "seo.keywords[]": {
+        "string": 9
+      },
+      "seo.meta_description": {
+        "string": 9
+      },
+      "subcategory": {
+        "string": 9
+      },
+      "variant": {
+        "array": 7
+      },
+      "variant[]": {
+        "string": 7
+      },
+      "product_family": {
+        "string": 9
+      },
+      "slug": {
+        "string": 9
+      },
+      "_source_file": {
+        "string": 9
+      },
+      "pricing.mrp": {
+        "number": 9
+      },
+      "pricing.discount": {
+        "null": 9
+      },
+      "pricing.selling_price": {
+        "null": 9
+      },
+      "pricing.std_pack": {
+        "string": 9
+      },
+      "pricing.note": {
+        "string": 1
+      },
+      "specs.indicator_color": {
+        "string": 2
+      },
+      "status.is_active": {
+        "bool": 6
+      },
+      "status.is_featured": {
+        "bool": 6
+      }
+    },
+    "Door Bells - 2 Module": {
+      "_id": {
+        "ObjectId": 6
+      },
+      "sku": {
+        "string": 6
+      },
+      "brand": {
+        "string": 6
+      },
+      "category": {
+        "string": 6
+      },
+      "currency": {
+        "string": 6
+      },
+      "description": {
+        "string": 6
+      },
+      "images": {
+        "array": 6
+      },
+      "images[]": {
+        "string": 2
+      },
+      "list_price": {
+        "number": 6
+      },
+      "name": {
+        "string": 6
+      },
+      "series": {
+        "string": 6
+      },
+      "specs.color": {
+        "string": 6
+      },
+      "specs.mw": {
+        "number": 6
+      },
+      "specs.type_detail": {
+        "string": 6
+      },
+      "seo.keywords": {
+        "array": 6
+      },
+      "seo.keywords[]": {
+        "string": 6
+      },
+      "seo.meta_description": {
+        "string": 6
+      },
+      "subcategory": {
+        "string": 6
+      },
+      "variant": {
+        "array": 6
+      },
+      "variant[]": {
+        "string": 6
+      },
+      "product_family": {
+        "string": 6
+      },
+      "slug": {
+        "string": 6
+      },
+      "_source_file": {
+        "string": 6
+      },
+      "pricing.mrp": {
+        "number": 6
+      },
+      "pricing.discount": {
+        "null": 6
+      },
+      "pricing.selling_price": {
+        "null": 6
+      },
+      "pricing.std_pack": {
+        "string": 6
+      },
+      "status.is_active": {
+        "bool": 4
+      },
+      "status.is_featured": {
+        "bool": 4
+      }
+    },
+    "Wi-fi Accessories": {
+      "_id": {
+        "ObjectId": 14
+      },
+      "sku": {
+        "string": 14
+      },
+      "brand": {
+        "string": 14
+      },
+      "category": {
+        "string": 14
+      },
+      "currency": {
+        "string": 14
+      },
+      "description": {
+        "string": 14
+      },
+      "images": {
+        "array": 14
+      },
+      "list_price": {
+        "number": 14
+      },
+      "name": {
+        "string": 14
+      },
+      "series": {
+        "string": 14
+      },
+      "specs.color": {
+        "string": 14
+      },
+      "specs.mw": {
+        "number": 14
+      },
+      "specs.channels": {
+        "number": 6
+      },
+      "specs.type_detail": {
+        "string": 14
+      },
+      "specs.packing": {
+        "string": 14
+      },
+      "specs.smart": {
+        "bool": 14
+      },
+      "status.is_active": {
+        "bool": 14
+      },
+      "status.is_featured": {
+        "bool": 14
+      },
+      "seo.keywords": {
+        "array": 14
+      },
+      "seo.keywords[]": {
+        "string": 14
+      },
+      "seo.meta_description": {
+        "string": 14
+      },
+      "subcategory": {
+        "string": 14
+      },
+      "variant": {
+        "array": 14
+      },
+      "variant[]": {
+        "string": 14
+      },
+      "_source_file": {
+        "string": 14
+      },
+      "pricing.mrp": {
+        "number": 14
+      },
+      "pricing.discount": {
+        "null": 14
+      },
+      "pricing.selling_price": {
+        "null": 14
+      },
+      "pricing.std_pack": {
+        "string": 14
+      },
+      "product_family": {
+        "string": 14
+      },
+      "slug": {
+        "string": 14
+      },
+      "specs.ampere": {
+        "number": 2
+      },
+      "specs.scenes": {
+        "number": 2
+      }
+    }
+  },
+  "Data Sockets": {
+    "Telephone Sockets - 1 Module": {
+      "_id": {
+        "ObjectId": 15
+      },
+      "sku": {
+        "string": 15
+      },
+      "brand": {
+        "string": 15
+      },
+      "category": {
+        "string": 15
+      },
+      "currency": {
+        "string": 15
+      },
+      "description": {
+        "string": 15
+      },
+      "images": {
+        "array": 15
+      },
+      "list_price": {
+        "number": 15
+      },
+      "name": {
+        "string": 15
+      },
+      "series": {
+        "string": 15
+      },
+      "specs.ampere": {
+        "null": 5
+      },
+      "specs.color": {
+        "string": 15
+      },
+      "specs.mw": {
+        "number": 15
+      },
+      "specs.has_indicator": {
+        "bool": 5
+      },
+      "specs.type_detail": {
+        "string": 15
+      },
+      "seo.keywords": {
+        "array": 15
+      },
+      "seo.keywords[]": {
+        "string": 15
+      },
+      "seo.meta_description": {
+        "string": 15
+      },
+      "subcategory": {
+        "string": 15
+      },
+      "variant": {
+        "array": 14
+      },
+      "variant[]": {
+        "string": 14
+      },
+      "product_family": {
+        "string": 15
+      },
+      "slug": {
+        "string": 15
+      },
+      "_source_file": {
+        "string": 15
+      },
+      "pricing.mrp": {
+        "number": 15
+      },
+      "pricing.discount": {
+        "null": 15
+      },
+      "pricing.selling_price": {
+        "null": 15
+      },
+      "pricing.std_pack": {
+        "string": 15
+      },
+      "images[]": {
+        "string": 2
+      },
+      "specs.with_shutter": {
+        "bool": 2
+      },
+      "status.is_active": {
+        "bool": 6
+      },
+      "status.is_featured": {
+        "bool": 6
+      }
+    },
+    "LAN Sockets - 1 Module": {
+      "_id": {
+        "ObjectId": 24
+      },
+      "sku": {
+        "string": 24
+      },
+      "brand": {
+        "string": 24
+      },
+      "category": {
+        "string": 24
+      },
+      "currency": {
+        "string": 24
+      },
+      "description": {
+        "string": 24
+      },
+      "images": {
+        "array": 24
+      },
+      "list_price": {
+        "number": 24
+      },
+      "name": {
+        "string": 24
+      },
+      "series": {
+        "string": 24
+      },
+      "specs.ampere": {
+        "null": 5
+      },
+      "specs.color": {
+        "string": 24
+      },
+      "specs.mw": {
+        "number": 24
+      },
+      "specs.has_indicator": {
+        "bool": 5
+      },
+      "specs.type_detail": {
+        "string": 24
+      },
+      "seo.keywords": {
+        "array": 24
+      },
+      "seo.keywords[]": {
+        "string": 24
+      },
+      "seo.meta_description": {
+        "string": 24
+      },
+      "subcategory": {
+        "string": 24
+      },
+      "variant": {
+        "array": 21
+      },
+      "variant[]": {
+        "string": 21
+      },
+      "product_family": {
+        "string": 24
+      },
+      "slug": {
+        "string": 24
+      },
+      "_source_file": {
+        "string": 24
+      },
+      "pricing.mrp": {
+        "number": 24
+      },
+      "pricing.discount": {
+        "null": 24
+      },
+      "pricing.selling_price": {
+        "null": 24
+      },
+      "pricing.std_pack": {
+        "string": 24
+      },
+      "images[]": {
+        "string": 2
+      },
+      "specs.with_shutter": {
+        "bool": 2
+      },
+      "status.is_active": {
+        "bool": 13
+      },
+      "status.is_featured": {
+        "bool": 13
+      },
+      "specs.category": {
+        "string": 4
+      }
+    },
+    "TV Sockets - 1 Module": {
+      "_id": {
+        "ObjectId": 21
+      },
+      "sku": {
+        "string": 21
+      },
+      "brand": {
+        "string": 21
+      },
+      "category": {
+        "string": 21
+      },
+      "currency": {
+        "string": 21
+      },
+      "description": {
+        "string": 21
+      },
+      "images": {
+        "array": 21
+      },
+      "list_price": {
+        "number": 21
+      },
+      "name": {
+        "string": 21
+      },
+      "series": {
+        "string": 21
+      },
+      "specs.ampere": {
+        "null": 5
+      },
+      "specs.color": {
+        "string": 21
+      },
+      "specs.mw": {
+        "number": 21
+      },
+      "specs.has_indicator": {
+        "bool": 5
+      },
+      "specs.type_detail": {
+        "string": 21
+      },
+      "seo.keywords": {
+        "array": 21
+      },
+      "seo.keywords[]": {
+        "string": 21
+      },
+      "seo.meta_description": {
+        "string": 21
+      },
+      "subcategory": {
+        "string": 21
+      },
+      "variant": {
+        "array": 20
+      },
+      "variant[]": {
+        "string": 20
+      },
+      "product_family": {
+        "string": 21
+      },
+      "slug": {
+        "string": 21
+      },
+      "_source_file": {
+        "string": 21
+      },
+      "pricing.mrp": {
+        "number": 21
+      },
+      "pricing.discount": {
+        "null": 21
+      },
+      "pricing.selling_price": {
+        "null": 21
+      },
+      "pricing.std_pack": {
+        "string": 21
+      },
+      "images[]": {
+        "string": 2
+      },
+      "status.is_active": {
+        "bool": 12
+      },
+      "status.is_featured": {
+        "bool": 12
+      }
+    }
+  },
+  "Plates": {
+    "PVC Cover Plates with Grid Frame": {
+      "_id": {
+        "ObjectId": 66
+      },
+      "sku": {
+        "string": 66
+      },
+      "brand": {
+        "string": 66
+      },
+      "category": {
+        "string": 66
+      },
+      "currency": {
+        "string": 66
+      },
+      "description": {
+        "string": 66
+      },
+      "images": {
+        "array": 66
+      },
+      "list_price": {
+        "number": 66
+      },
+      "name": {
+        "string": 66
+      },
+      "series": {
+        "string": 66
+      },
+      "specs.color": {
+        "string": 66
+      },
+      "specs.mw": {
+        "number": 66
+      },
+      "specs.type_detail": {
+        "string": 66
+      },
+      "specs.dimensions": {
+        "string": 60
+      },
+      "specs.Grid frame": {
+        "bool": 66
+      },
+      "seo.keywords": {
+        "array": 66
+      },
+      "seo.keywords[]": {
+        "string": 66
+      },
+      "seo.meta_description": {
+        "string": 66
+      },
+      "subcategory": {
+        "string": 66
+      },
+      "variant": {
+        "array": 66
+      },
+      "variant[]": {
+        "string": 66
+      },
+      "product_family": {
+        "string": 66
+      },
+      "slug": {
+        "string": 66
+      },
+      "_source_file": {
+        "string": 66
+      },
+      "pricing.mrp": {
+        "number": 66
+      },
+      "pricing.discount": {
+        "null": 66
+      },
+      "pricing.selling_price": {
+        "null": 66
+      },
+      "pricing.std_pack": {
+        "string": 66
+      },
+      "specs.orientation": {
+        "string": 18
+      }
+    },
+    "Cover Plates with grid frames": {
+      "_id": {
+        "ObjectId": 123
+      },
+      "sku": {
+        "string": 123
+      },
+      "brand": {
+        "string": 123
+      },
+      "category": {
+        "string": 123
+      },
+      "currency": {
+        "string": 123
+      },
+      "description": {
+        "string": 123
+      },
+      "images": {
+        "array": 123
+      },
+      "images[]": {
+        "string": 11
+      },
+      "list_price": {
+        "number": 123
+      },
+      "name": {
+        "string": 123
+      },
+      "series": {
+        "string": 123
+      },
+      "specs.color": {
+        "string": 123
+      },
+      "specs.mw": {
+        "number": 123
+      },
+      "specs.type_detail": {
+        "string": 123
+      },
+      "specs.dimensions": {
+        "string": 101
+      },
+      "specs.Grid frame": {
+        "bool": 101
+      },
+      "seo.keywords": {
+        "array": 123
+      },
+      "seo.keywords[]": {
+        "string": 123
+      },
+      "seo.meta_description": {
+        "string": 123
+      },
+      "subcategory": {
+        "string": 123
+      },
+      "product_family": {
+        "string": 123
+      },
+      "slug": {
+        "string": 123
+      },
+      "_source_file": {
+        "string": 123
+      },
+      "pricing.mrp": {
+        "number": 123
+      },
+      "pricing.discount": {
+        "null": 123
+      },
+      "pricing.selling_price": {
+        "null": 123
+      },
+      "pricing.std_pack": {
+        "string": 123
+      },
+      "specs.orientation": {
+        "string": 23
+      },
+      "specs.suitable_for": {
+        "string": 1
+      },
+      "variant": {
+        "array": 112
+      },
+      "variant[]": {
+        "string": 112
+      },
+      "specs.material": {
+        "string": 22
+      },
+      "specs.bezel": {
+        "string": 22
+      },
+      "status.is_active": {
+        "bool": 22
+      },
+      "status.is_featured": {
+        "bool": 22
+      }
+    },
+    "Cover Plates without grid frames - Vivid Shades": {
+      "_id": {
+        "ObjectId": 60
+      },
+      "sku": {
+        "string": 60
+      },
+      "brand": {
+        "string": 60
+      },
+      "category": {
+        "string": 60
+      },
+      "currency": {
+        "string": 60
+      },
+      "description": {
+        "string": 60
+      },
+      "images": {
+        "array": 60
+      },
+      "images[]": {
+        "string": 60
+      },
+      "list_price": {
+        "number": 60
+      },
+      "name": {
+        "string": 60
+      },
+      "series": {
+        "string": 60
+      },
+      "specs.color": {
+        "string": 60
+      },
+      "specs.mw": {
+        "number": 60
+      },
+      "specs.type_detail": {
+        "string": 60
+      },
+      "specs.Grid frame": {
+        "bool": 60
+      },
+      "seo.keywords": {
+        "array": 60
+      },
+      "seo.keywords[]": {
+        "string": 60
+      },
+      "seo.meta_description": {
+        "string": 60
+      },
+      "subcategory": {
+        "string": 60
+      },
+      "variant": {
+        "array": 60
+      },
+      "variant[]": {
+        "string": 60
+      },
+      "product_family": {
+        "string": 60
+      },
+      "slug": {
+        "string": 60
+      },
+      "_source_file": {
+        "string": 60
+      },
+      "pricing.mrp": {
+        "number": 60
+      },
+      "pricing.discount": {
+        "null": 60
+      },
+      "pricing.selling_price": {
+        "null": 60
+      },
+      "pricing.std_pack": {
+        "string": 60
+      }
+    },
+    "Cover Plates without grid frames - Vibrant Shades": {
+      "_id": {
+        "ObjectId": 40
+      },
+      "sku": {
+        "string": 40
+      },
+      "brand": {
+        "string": 40
+      },
+      "category": {
+        "string": 40
+      },
+      "currency": {
+        "string": 40
+      },
+      "description": {
+        "string": 40
+      },
+      "images": {
+        "array": 40
+      },
+      "images[]": {
+        "string": 40
+      },
+      "list_price": {
+        "number": 40
+      },
+      "name": {
+        "string": 40
+      },
+      "series": {
+        "string": 40
+      },
+      "specs.color": {
+        "string": 40
+      },
+      "specs.mw": {
+        "number": 40
+      },
+      "specs.type_detail": {
+        "string": 40
+      },
+      "specs.Grid frame": {
+        "bool": 40
+      },
+      "seo.keywords": {
+        "array": 40
+      },
+      "seo.keywords[]": {
+        "string": 40
+      },
+      "seo.meta_description": {
+        "string": 40
+      },
+      "subcategory": {
+        "string": 40
+      },
+      "variant": {
+        "array": 40
+      },
+      "variant[]": {
+        "string": 40
+      },
+      "product_family": {
+        "string": 40
+      },
+      "slug": {
+        "string": 40
+      },
+      "_source_file": {
+        "string": 40
+      },
+      "pricing.mrp": {
+        "number": 40
+      },
+      "pricing.discount": {
+        "null": 40
+      },
+      "pricing.selling_price": {
+        "null": 40
+      },
+      "pricing.std_pack": {
+        "string": 40
+      }
+    },
+    "Cover Plates without grid frames - Wooden Finishes": {
+      "_id": {
+        "ObjectId": 20
+      },
+      "sku": {
+        "string": 20
+      },
+      "brand": {
+        "string": 20
+      },
+      "category": {
+        "string": 20
+      },
+      "currency": {
+        "string": 20
+      },
+      "description": {
+        "string": 20
+      },
+      "images": {
+        "array": 20
+      },
+      "images[]": {
+        "string": 20
+      },
+      "list_price": {
+        "number": 20
+      },
+      "name": {
+        "string": 20
+      },
+      "series": {
+        "string": 20
+      },
+      "specs.color": {
+        "string": 20
+      },
+      "specs.mw": {
+        "number": 20
+      },
+      "specs.type_detail": {
+        "string": 20
+      },
+      "specs.Grid frame": {
+        "bool": 20
+      },
+      "seo.keywords": {
+        "array": 20
+      },
+      "seo.keywords[]": {
+        "string": 20
+      },
+      "seo.meta_description": {
+        "string": 20
+      },
+      "subcategory": {
+        "string": 20
+      },
+      "variant": {
+        "array": 20
+      },
+      "variant[]": {
+        "string": 20
+      },
+      "product_family": {
+        "string": 20
+      },
+      "slug": {
+        "string": 20
+      },
+      "_source_file": {
+        "string": 20
+      },
+      "pricing.mrp": {
+        "number": 20
+      },
+      "pricing.discount": {
+        "null": 20
+      },
+      "pricing.selling_price": {
+        "null": 20
+      },
+      "pricing.std_pack": {
+        "string": 20
+      }
+    },
+    "Glass Plates with grid frames": {
+      "_id": {
+        "ObjectId": 50
+      },
+      "sku": {
+        "string": 50
+      },
+      "brand": {
+        "string": 50
+      },
+      "category": {
+        "string": 50
+      },
+      "currency": {
+        "string": 50
+      },
+      "description": {
+        "string": 50
+      },
+      "images": {
+        "array": 50
+      },
+      "images[]": {
+        "string": 50
+      },
+      "list_price": {
+        "number": 50
+      },
+      "name": {
+        "string": 50
+      },
+      "series": {
+        "string": 50
+      },
+      "specs.color": {
+        "string": 50
+      },
+      "specs.mw": {
+        "number": 50
+      },
+      "specs.type_detail": {
+        "string": 50
+      },
+      "specs.Grid frame": {
+        "bool": 50
+      },
+      "seo.keywords": {
+        "array": 50
+      },
+      "seo.keywords[]": {
+        "string": 50
+      },
+      "seo.meta_description": {
+        "string": 50
+      },
+      "subcategory": {
+        "string": 50
+      },
+      "variant": {
+        "array": 50
+      },
+      "variant[]": {
+        "string": 50
+      },
+      "product_family": {
+        "string": 50
+      },
+      "slug": {
+        "string": 50
+      },
+      "_source_file": {
+        "string": 50
+      },
+      "pricing.mrp": {
+        "number": 50
+      },
+      "pricing.discount": {
+        "null": 50
+      },
+      "pricing.selling_price": {
+        "null": 50
+      },
+      "pricing.std_pack": {
+        "string": 50
+      },
+      "status.is_active": {
+        "bool": 29
+      },
+      "specs.orientation": {
+        "string": 10
+      }
+    },
+    "Marble finish plates with grid frames": {
+      "_id": {
+        "ObjectId": 20
+      },
+      "sku": {
+        "string": 20
+      },
+      "brand": {
+        "string": 20
+      },
+      "category": {
+        "string": 20
+      },
+      "currency": {
+        "string": 20
+      },
+      "description": {
+        "string": 20
+      },
+      "images": {
+        "array": 20
+      },
+      "images[]": {
+        "string": 20
+      },
+      "list_price": {
+        "number": 20
+      },
+      "name": {
+        "string": 20
+      },
+      "series": {
+        "string": 20
+      },
+      "specs.color": {
+        "string": 20
+      },
+      "specs.mw": {
+        "number": 20
+      },
+      "specs.type_detail": {
+        "string": 20
+      },
+      "specs.Grid frame": {
+        "bool": 20
+      },
+      "seo.keywords": {
+        "array": 20
+      },
+      "seo.keywords[]": {
+        "string": 20
+      },
+      "seo.meta_description": {
+        "string": 20
+      },
+      "subcategory": {
+        "string": 20
+      },
+      "variant": {
+        "array": 20
+      },
+      "variant[]": {
+        "string": 20
+      },
+      "product_family": {
+        "string": 20
+      },
+      "slug": {
+        "string": 20
+      },
+      "_source_file": {
+        "string": 20
+      },
+      "pricing.mrp": {
+        "number": 20
+      },
+      "pricing.discount": {
+        "null": 20
+      },
+      "pricing.selling_price": {
+        "null": 20
+      },
+      "pricing.std_pack": {
+        "string": 20
+      },
+      "specs.orientation": {
+        "string": 4
+      }
+    },
+    "Grid Frames": {
+      "_id": {
+        "ObjectId": 101
+      },
+      "sku": {
+        "string": 101
+      },
+      "brand": {
+        "string": 101
+      },
+      "category": {
+        "string": 101
+      },
+      "currency": {
+        "string": 101
+      },
+      "description": {
+        "string": 101
+      },
+      "images": {
+        "array": 101
+      },
+      "images[]": {
+        "string": 9
+      },
+      "list_price": {
+        "number": 101
+      },
+      "name": {
+        "string": 101
+      },
+      "series": {
+        "string": 101
+      },
+      "specs.mw": {
+        "number": 31
+      },
+      "specs.material_compatibility": {
+        "array": 18
+      },
+      "specs.material_compatibility[]": {
+        "string": 18
+      },
+      "specs.cutout_dimensions_mm": {
+        "string": 18
+      },
+      "specs.installation": {
+        "string": 18
+      },
+      "specs.Grid frame": {
+        "bool": 9
+      },
+      "seo.keywords": {
+        "array": 101
+      },
+      "seo.keywords[]": {
+        "string": 101
+      },
+      "seo.meta_description": {
+        "string": 101
+      },
+      "subcategory": {
+        "string": 101
+      },
+      "product_family": {
+        "string": 101
+      },
+      "slug": {
+        "string": 101
+      },
+      "_source_file": {
+        "string": 101
+      },
+      "pricing.mrp": {
+        "number": 101
+      },
+      "pricing.discount": {
+        "null": 101
+      },
+      "pricing.selling_price": {
+        "null": 101
+      },
+      "pricing.std_pack": {
+        "string": 101
+      },
+      "specs.orientation": {
+        "string": 18
+      },
+      "specs.color": {
+        "string": 73
+      },
+      "specs.type_detail": {
+        "string": 13
+      },
+      "specs.material": {
+        "string": 23
+      },
+      "status.is_active": {
+        "bool": 83
+      },
+      "status.is_featured": {
+        "bool": 83
+      },
+      "specs.modules": {
+        "number": 70
+      },
+      "specs.finish": {
+        "string": 70
+      },
+      "specs.with_pillar": {
+        "bool": 70
+      },
+      "specs.packing": {
+        "string": 70
+      },
+      "specs.cover_included": {
+        "bool": 60
+      },
+      "specs.grid_frame": {
+        "bool": 10
+      }
+    },
+    "Wood Plates without grid frames": {
+      "_id": {
+        "ObjectId": 50
+      },
+      "sku": {
+        "string": 50
+      },
+      "brand": {
+        "string": 50
+      },
+      "category": {
+        "string": 50
+      },
+      "currency": {
+        "string": 50
+      },
+      "description": {
+        "string": 50
+      },
+      "images": {
+        "array": 50
+      },
+      "list_price": {
+        "number": 50
+      },
+      "name": {
+        "string": 50
+      },
+      "series": {
+        "string": 50
+      },
+      "specs.color": {
+        "string": 50
+      },
+      "specs.mw": {
+        "number": 30
+      },
+      "specs.type_detail": {
+        "string": 30
+      },
+      "seo.keywords": {
+        "array": 50
+      },
+      "seo.keywords[]": {
+        "string": 50
+      },
+      "seo.meta_description": {
+        "string": 50
+      },
+      "subcategory": {
+        "string": 50
+      },
+      "variant": {
+        "array": 30
+      },
+      "variant[]": {
+        "string": 30
+      },
+      "product_family": {
+        "string": 50
+      },
+      "slug": {
+        "string": 50
+      },
+      "_source_file": {
+        "string": 50
+      },
+      "pricing.mrp": {
+        "number": 50
+      },
+      "pricing.discount": {
+        "null": 50
+      },
+      "pricing.selling_price": {
+        "null": 50
+      },
+      "pricing.std_pack": {
+        "string": 50
+      },
+      "images[]": {
+        "string": 10
+      },
+      "specs.modules": {
+        "number": 20
+      },
+      "specs.material": {
+        "string": 20
+      },
+      "specs.finish": {
+        "string": 20
+      },
+      "specs.with_pillar": {
+        "bool": 20
+      },
+      "specs.packing": {
+        "string": 20
+      },
+      "specs.grid_frame_included": {
+        "bool": 20
+      },
+      "status.is_active": {
+        "bool": 20
+      },
+      "status.is_featured": {
+        "bool": 20
+      },
+      "specs.orientation": {
+        "string": 4
+      }
+    },
+    "Metal (Aluminium) Plates without grid frames": {
+      "_id": {
+        "ObjectId": 60
+      },
+      "sku": {
+        "string": 60
+      },
+      "brand": {
+        "string": 60
+      },
+      "category": {
+        "string": 60
+      },
+      "currency": {
+        "string": 60
+      },
+      "description": {
+        "string": 60
+      },
+      "images": {
+        "array": 60
+      },
+      "list_price": {
+        "number": 60
+      },
+      "name": {
+        "string": 60
+      },
+      "series": {
+        "string": 60
+      },
+      "specs.color": {
+        "string": 60
+      },
+      "specs.mw": {
+        "number": 30
+      },
+      "specs.type_detail": {
+        "string": 30
+      },
+      "specs.Grid frame": {
+        "bool": 30
+      },
+      "seo.keywords": {
+        "array": 60
+      },
+      "seo.keywords[]": {
+        "string": 60
+      },
+      "seo.meta_description": {
+        "string": 60
+      },
+      "subcategory": {
+        "string": 60
+      },
+      "variant": {
+        "array": 30
+      },
+      "variant[]": {
+        "string": 30
+      },
+      "product_family": {
+        "string": 60
+      },
+      "slug": {
+        "string": 60
+      },
+      "_source_file": {
+        "string": 60
+      },
+      "pricing.mrp": {
+        "number": 60
+      },
+      "pricing.discount": {
+        "null": 60
+      },
+      "pricing.selling_price": {
+        "null": 60
+      },
+      "pricing.std_pack": {
+        "string": 60
+      },
+      "specs.modules": {
+        "number": 30
+      },
+      "specs.material": {
+        "string": 30
+      },
+      "specs.finish": {
+        "string": 30
+      },
+      "specs.with_pillar": {
+        "bool": 30
+      },
+      "specs.packing": {
+        "string": 30
+      },
+      "specs.grid_frame_included": {
+        "bool": 30
+      },
+      "status.is_active": {
+        "bool": 30
+      },
+      "status.is_featured": {
+        "bool": 30
+      },
+      "specs.orientation": {
+        "string": 6
+      }
+    },
+    "Glass Plates without grid frames": {
+      "_id": {
+        "ObjectId": 7
+      },
+      "sku": {
+        "string": 7
+      },
+      "brand": {
+        "string": 7
+      },
+      "category": {
+        "string": 7
+      },
+      "currency": {
+        "string": 7
+      },
+      "description": {
+        "string": 7
+      },
+      "images": {
+        "array": 7
+      },
+      "list_price": {
+        "number": 7
+      },
+      "name": {
+        "string": 7
+      },
+      "series": {
+        "string": 7
+      },
+      "specs.color": {
+        "string": 7
+      },
+      "specs.mw": {
+        "number": 7
+      },
+      "specs.type_detail": {
+        "string": 7
+      },
+      "specs.Grid frame": {
+        "bool": 7
+      },
+      "seo.keywords": {
+        "array": 7
+      },
+      "seo.keywords[]": {
+        "string": 7
+      },
+      "seo.meta_description": {
+        "string": 7
+      },
+      "subcategory": {
+        "string": 7
+      },
+      "variant": {
+        "array": 7
+      },
+      "variant[]": {
+        "string": 7
+      },
+      "product_family": {
+        "string": 7
+      },
+      "slug": {
+        "string": 7
+      },
+      "_source_file": {
+        "string": 7
+      },
+      "pricing.mrp": {
+        "number": 7
+      },
+      "pricing.discount": {
+        "null": 7
+      },
+      "pricing.selling_price": {
+        "null": 7
+      },
+      "pricing.std_pack": {
+        "string": 7
+      }
+    },
+    "Cover Plates without grid frames": {
+      "_id": {
+        "ObjectId": 335
+      },
+      "sku": {
+        "string": 335
+      },
+      "brand": {
+        "string": 335
+      },
+      "category": {
+        "string": 335
+      },
+      "currency": {
+        "string": 335
+      },
+      "description": {
+        "string": 335
+      },
+      "images": {
+        "array": 335
+      },
+      "list_price": {
+        "number": 335
+      },
+      "name": {
+        "string": 335
+      },
+      "series": {
+        "string": 335
+      },
+      "specs.color": {
+        "string": 295
+      },
+      "specs.mw": {
+        "number": 123
+      },
+      "specs.type_detail": {
+        "string": 123
+      },
+      "specs.material": {
+        "string": 123
+      },
+      "status.is_active": {
+        "bool": 335
+      },
+      "status.is_featured": {
+        "bool": 335
+      },
+      "seo.keywords": {
+        "array": 335
+      },
+      "seo.keywords[]": {
+        "string": 335
+      },
+      "seo.meta_description": {
+        "string": 335
+      },
+      "subcategory": {
+        "string": 335
+      },
+      "_source_file": {
+        "string": 335
+      },
+      "pricing.mrp": {
+        "number": 335
+      },
+      "pricing.discount": {
+        "null": 335
+      },
+      "pricing.selling_price": {
+        "null": 335
+      },
+      "pricing.std_pack": {
+        "string": 335
+      },
+      "product_family": {
+        "string": 335
+      },
+      "slug": {
+        "string": 335
+      },
+      "specs.module": {
+        "number": 212
+      },
+      "specs.orientation": {
+        "string": 212
+      },
+      "specs.design": {
+        "string": 40
+      },
+      "variant": {
+        "array": 33
+      },
+      "variant[]": {
+        "string": 33
+      }
+    },
+    "Plexy Glass Plates without grid frames": {
+      "_id": {
+        "ObjectId": 48
+      },
+      "sku": {
+        "string": 48
+      },
+      "brand": {
+        "string": 48
+      },
+      "category": {
+        "string": 48
+      },
+      "currency": {
+        "string": 48
+      },
+      "description": {
+        "string": 48
+      },
+      "images": {
+        "array": 48
+      },
+      "list_price": {
+        "number": 48
+      },
+      "name": {
+        "string": 48
+      },
+      "series": {
+        "string": 48
+      },
+      "specs.color": {
+        "string": 48
+      },
+      "specs.mw": {
+        "number": 48
+      },
+      "specs.type_detail": {
+        "string": 48
+      },
+      "specs.material": {
+        "string": 48
+      },
+      "status.is_active": {
+        "bool": 48
+      },
+      "status.is_featured": {
+        "bool": 48
+      },
+      "product_family": {
+        "string": 48
+      },
+      "seo.keywords": {
+        "array": 48
+      },
+      "seo.keywords[]": {
+        "string": 48
+      },
+      "seo.meta_description": {
+        "string": 48
+      },
+      "subcategory": {
+        "string": 48
+      },
+      "_source_file": {
+        "string": 48
+      },
+      "pricing.mrp": {
+        "number": 48
+      },
+      "pricing.discount": {
+        "null": 48
+      },
+      "pricing.selling_price": {
+        "null": 48
+      },
+      "pricing.std_pack": {
+        "string": 48
+      },
+      "slug": {
+        "string": 48
+      }
+    },
+    "PC Plates without grid frames": {
+      "_id": {
+        "ObjectId": 37
+      },
+      "sku": {
+        "string": 37
+      },
+      "brand": {
+        "string": 37
+      },
+      "category": {
+        "string": 37
+      },
+      "currency": {
+        "string": 37
+      },
+      "description": {
+        "string": 37
+      },
+      "images": {
+        "array": 37
+      },
+      "list_price": {
+        "number": 37
+      },
+      "name": {
+        "string": 37
+      },
+      "series": {
+        "string": 37
+      },
+      "specs.color": {
+        "string": 37
+      },
+      "specs.mw": {
+        "number": 37
+      },
+      "specs.type_detail": {
+        "string": 37
+      },
+      "specs.material": {
+        "string": 37
+      },
+      "status.is_active": {
+        "bool": 37
+      },
+      "status.is_featured": {
+        "bool": 37
+      },
+      "product_family": {
+        "string": 37
+      },
+      "seo.keywords": {
+        "array": 37
+      },
+      "seo.keywords[]": {
+        "string": 37
+      },
+      "seo.meta_description": {
+        "string": 37
+      },
+      "subcategory": {
+        "string": 37
+      },
+      "_source_file": {
+        "string": 37
+      },
+      "pricing.mrp": {
+        "number": 37
+      },
+      "pricing.discount": {
+        "null": 37
+      },
+      "pricing.selling_price": {
+        "null": 37
+      },
+      "pricing.std_pack": {
+        "string": 37
+      },
+      "slug": {
+        "string": 37
+      },
+      "variant": {
+        "array": 24
+      },
+      "variant[]": {
+        "string": 24
+      }
+    }
+  },
+  "Hospitality": {
+    "Mechanical Key Tag Switches": {
+      "_id": {
+        "ObjectId": 25
+      },
+      "sku": {
+        "string": 25
+      },
+      "brand": {
+        "string": 25
+      },
+      "category": {
+        "string": 25
+      },
+      "currency": {
+        "string": 25
+      },
+      "description": {
+        "string": 25
+      },
+      "images": {
+        "array": 25
+      },
+      "list_price": {
+        "number": 25
+      },
+      "name": {
+        "string": 25
+      },
+      "series": {
+        "string": 25
+      },
+      "specs.ampere": {
+        "number": 23,
+        "null": 2
+      },
+      "specs.color": {
+        "string": 25
+      },
+      "specs.mw": {
+        "number": 23,
+        "null": 2
+      },
+      "specs.has_indicator": {
+        "bool": 15
+      },
+      "specs.type_detail": {
+        "string": 25
+      },
+      "seo.keywords": {
+        "array": 25
+      },
+      "seo.keywords[]": {
+        "string": 25
+      },
+      "seo.meta_description": {
+        "string": 25
+      },
+      "subcategory": {
+        "string": 25
+      },
+      "variant": {
+        "array": 24
+      },
+      "variant[]": {
+        "string": 24
+      },
+      "product_family": {
+        "string": 25
+      },
+      "slug": {
+        "string": 25
+      },
+      "_source_file": {
+        "string": 25
+      },
+      "pricing.mrp": {
+        "number": 25
+      },
+      "pricing.discount": {
+        "null": 25
+      },
+      "pricing.selling_price": {
+        "null": 25
+      },
+      "pricing.std_pack": {
+        "string": 25
+      },
+      "images[]": {
+        "string": 4
+      },
+      "status.is_active": {
+        "bool": 6
+      },
+      "status.is_featured": {
+        "bool": 6
+      }
+    },
+    "Key Tag Accessories": {
+      "_id": {
+        "ObjectId": 13
+      },
+      "sku": {
+        "string": 13
+      },
+      "brand": {
+        "string": 13
+      },
+      "category": {
+        "string": 13
+      },
+      "currency": {
+        "string": 13
+      },
+      "description": {
+        "string": 13
+      },
+      "images": {
+        "array": 13
+      },
+      "list_price": {
+        "number": 13
+      },
+      "name": {
+        "string": 13
+      },
+      "series": {
+        "string": 13
+      },
+      "specs.ampere": {
+        "null": 5,
+        "number": 4
+      },
+      "specs.color": {
+        "string": 13
+      },
+      "specs.mw": {
+        "null": 7,
+        "number": 4
+      },
+      "specs.has_indicator": {
+        "bool": 5
+      },
+      "specs.type_detail": {
+        "string": 13
+      },
+      "seo.keywords": {
+        "array": 13
+      },
+      "seo.keywords[]": {
+        "string": 13
+      },
+      "seo.meta_description": {
+        "string": 13
+      },
+      "subcategory": {
+        "string": 13
+      },
+      "variant": {
+        "array": 12
+      },
+      "variant[]": {
+        "string": 12
+      },
+      "product_family": {
+        "string": 13
+      },
+      "slug": {
+        "string": 13
+      },
+      "_source_file": {
+        "string": 13
+      },
+      "pricing.mrp": {
+        "number": 13
+      },
+      "pricing.discount": {
+        "null": 13
+      },
+      "pricing.selling_price": {
+        "null": 13
+      },
+      "pricing.std_pack": {
+        "string": 13
+      },
+      "images[]": {
+        "string": 2
+      },
+      "status.is_active": {
+        "bool": 6
+      },
+      "status.is_featured": {
+        "bool": 6
+      },
+      "specs.voltage": {
+        "string": 4
+      }
+    },
+    "DND-MMR Units": {
+      "_id": {
+        "ObjectId": 30
+      },
+      "sku": {
+        "string": 30
+      },
+      "brand": {
+        "string": 30
+      },
+      "category": {
+        "string": 30
+      },
+      "currency": {
+        "string": 30
+      },
+      "description": {
+        "string": 30
+      },
+      "images": {
+        "array": 30
+      },
+      "list_price": {
+        "number": 30
+      },
+      "name": {
+        "string": 30
+      },
+      "series": {
+        "string": 30
+      },
+      "specs.ampere": {
+        "null": 14,
+        "number": 4
+      },
+      "specs.color": {
+        "string": 30
+      },
+      "specs.mw": {
+        "number": 30
+      },
+      "specs.has_indicator": {
+        "bool": 14
+      },
+      "specs.type_detail": {
+        "string": 30
+      },
+      "seo.keywords": {
+        "array": 30
+      },
+      "seo.keywords[]": {
+        "string": 30
+      },
+      "seo.meta_description": {
+        "string": 30
+      },
+      "subcategory": {
+        "string": 30
+      },
+      "variant": {
+        "array": 27
+      },
+      "variant[]": {
+        "string": 27
+      },
+      "product_family": {
+        "string": 30
+      },
+      "slug": {
+        "string": 30
+      },
+      "_source_file": {
+        "string": 30
+      },
+      "pricing.mrp": {
+        "number": 30
+      },
+      "pricing.discount": {
+        "null": 30
+      },
+      "pricing.selling_price": {
+        "null": 30
+      },
+      "pricing.std_pack": {
+        "string": 30
+      },
+      "images[]": {
+        "string": 4
+      },
+      "pricing.note": {
+        "string": 1
+      },
+      "specs.voltage": {
+        "string": 4
+      },
+      "status.is_active": {
+        "bool": 12
+      },
+      "status.is_featured": {
+        "bool": 12
+      }
+    },
+    "Electronic Key Tag Switches": {
+      "_id": {
+        "ObjectId": 4
+      },
+      "sku": {
+        "string": 4
+      },
+      "brand": {
+        "string": 4
+      },
+      "category": {
+        "string": 4
+      },
+      "currency": {
+        "string": 4
+      },
+      "description": {
+        "string": 4
+      },
+      "images": {
+        "array": 4
+      },
+      "list_price": {
+        "number": 4
+      },
+      "name": {
+        "string": 4
+      },
+      "series": {
+        "string": 4
+      },
+      "specs.ampere": {
+        "number": 4
+      },
+      "specs.color": {
+        "string": 4
+      },
+      "specs.mw": {
+        "number": 4
+      },
+      "specs.type_detail": {
+        "string": 4
+      },
+      "status.is_active": {
+        "bool": 4
+      },
+      "status.is_featured": {
+        "bool": 4
+      },
+      "seo.keywords": {
+        "array": 4
+      },
+      "seo.keywords[]": {
+        "string": 4
+      },
+      "seo.meta_description": {
+        "string": 4
+      },
+      "subcategory": {
+        "string": 4
+      },
+      "variant": {
+        "array": 4
+      },
+      "variant[]": {
+        "string": 4
+      },
+      "_source_file": {
+        "string": 4
+      },
+      "pricing.mrp": {
+        "number": 4
+      },
+      "pricing.discount": {
+        "null": 4
+      },
+      "pricing.selling_price": {
+        "null": 4
+      },
+      "pricing.std_pack": {
+        "string": 4
+      },
+      "product_family": {
+        "string": 4
+      },
+      "slug": {
+        "string": 4
+      }
+    },
+    "DND Switches": {
+      "_id": {
+        "ObjectId": 4
+      },
+      "sku": {
+        "string": 4
+      },
+      "brand": {
+        "string": 4
+      },
+      "category": {
+        "string": 4
+      },
+      "currency": {
+        "string": 4
+      },
+      "description": {
+        "string": 4
+      },
+      "images": {
+        "array": 4
+      },
+      "list_price": {
+        "number": 4
+      },
+      "name": {
+        "string": 4
+      },
+      "series": {
+        "string": 4
+      },
+      "specs.color": {
+        "string": 4
+      },
+      "specs.mw": {
+        "number": 4
+      },
+      "specs.type_detail": {
+        "string": 4
+      },
+      "status.is_active": {
+        "bool": 4
+      },
+      "status.is_featured": {
+        "bool": 4
+      },
+      "seo.keywords": {
+        "array": 4
+      },
+      "seo.keywords[]": {
+        "string": 4
+      },
+      "seo.meta_description": {
+        "string": 4
+      },
+      "subcategory": {
+        "string": 4
+      },
+      "variant": {
+        "array": 4
+      },
+      "variant[]": {
+        "string": 4
+      },
+      "_source_file": {
+        "string": 4
+      },
+      "pricing.mrp": {
+        "number": 4
+      },
+      "pricing.discount": {
+        "null": 4
+      },
+      "pricing.selling_price": {
+        "null": 4
+      },
+      "pricing.std_pack": {
+        "string": 4
+      },
+      "product_family": {
+        "string": 4
+      },
+      "slug": {
+        "string": 4
+      }
+    },
+    "MMR Switches": {
+      "_id": {
+        "ObjectId": 4
+      },
+      "sku": {
+        "string": 4
+      },
+      "brand": {
+        "string": 4
+      },
+      "category": {
+        "string": 4
+      },
+      "currency": {
+        "string": 4
+      },
+      "description": {
+        "string": 4
+      },
+      "images": {
+        "array": 4
+      },
+      "list_price": {
+        "number": 4
+      },
+      "name": {
+        "string": 4
+      },
+      "series": {
+        "string": 4
+      },
+      "specs.color": {
+        "string": 4
+      },
+      "specs.mw": {
+        "number": 4
+      },
+      "specs.type_detail": {
+        "string": 4
+      },
+      "status.is_active": {
+        "bool": 4
+      },
+      "status.is_featured": {
+        "bool": 4
+      },
+      "seo.keywords": {
+        "array": 4
+      },
+      "seo.keywords[]": {
+        "string": 4
+      },
+      "seo.meta_description": {
+        "string": 4
+      },
+      "subcategory": {
+        "string": 4
+      },
+      "variant": {
+        "array": 4
+      },
+      "variant[]": {
+        "string": 4
+      },
+      "_source_file": {
+        "string": 4
+      },
+      "pricing.mrp": {
+        "number": 4
+      },
+      "pricing.discount": {
+        "null": 4
+      },
+      "pricing.selling_price": {
+        "null": 4
+      },
+      "pricing.std_pack": {
+        "string": 4
+      },
+      "product_family": {
+        "string": 4
+      },
+      "slug": {
+        "string": 4
+      }
+    },
+    "Shaver Sockets": {
+      "_id": {
+        "ObjectId": 4
+      },
+      "sku": {
+        "string": 4
+      },
+      "brand": {
+        "string": 4
+      },
+      "category": {
+        "string": 4
+      },
+      "currency": {
+        "string": 4
+      },
+      "description": {
+        "string": 4
+      },
+      "images": {
+        "array": 4
+      },
+      "list_price": {
+        "number": 4
+      },
+      "name": {
+        "string": 4
+      },
+      "series": {
+        "string": 4
+      },
+      "specs.color": {
+        "string": 4
+      },
+      "specs.mw": {
+        "number": 4
+      },
+      "specs.type_detail": {
+        "string": 4
+      },
+      "status.is_active": {
+        "bool": 4
+      },
+      "status.is_featured": {
+        "bool": 4
+      },
+      "seo.keywords": {
+        "array": 4
+      },
+      "seo.keywords[]": {
+        "string": 4
+      },
+      "seo.meta_description": {
+        "string": 4
+      },
+      "subcategory": {
+        "string": 4
+      },
+      "variant": {
+        "array": 4
+      },
+      "variant[]": {
+        "string": 4
+      },
+      "_source_file": {
+        "string": 4
+      },
+      "pricing.mrp": {
+        "number": 4
+      },
+      "pricing.discount": {
+        "null": 4
+      },
+      "pricing.selling_price": {
+        "null": 4
+      },
+      "pricing.std_pack": {
+        "string": 4
+      },
+      "product_family": {
+        "string": 4
+      },
+      "slug": {
+        "string": 4
+      }
+    },
+    "LED Foot Lights": {
+      "_id": {
+        "ObjectId": 2
+      },
+      "sku": {
+        "string": 2
+      },
+      "brand": {
+        "string": 2
+      },
+      "category": {
+        "string": 2
+      },
+      "currency": {
+        "string": 2
+      },
+      "description": {
+        "string": 2
+      },
+      "images": {
+        "array": 2
+      },
+      "list_price": {
+        "number": 2
+      },
+      "name": {
+        "string": 2
+      },
+      "series": {
+        "string": 2
+      },
+      "specs.color": {
+        "string": 2
+      },
+      "specs.mw": {
+        "number": 2
+      },
+      "specs.type_detail": {
+        "string": 2
+      },
+      "status.is_active": {
+        "bool": 2
+      },
+      "status.is_featured": {
+        "bool": 2
+      },
+      "seo.keywords": {
+        "array": 2
+      },
+      "seo.keywords[]": {
+        "string": 2
+      },
+      "seo.meta_description": {
+        "string": 2
+      },
+      "subcategory": {
+        "string": 2
+      },
+      "variant": {
+        "array": 2
+      },
+      "variant[]": {
+        "string": 2
+      },
+      "_source_file": {
+        "string": 2
+      },
+      "pricing.mrp": {
+        "number": 2
+      },
+      "pricing.discount": {
+        "null": 2
+      },
+      "pricing.selling_price": {
+        "null": 2
+      },
+      "pricing.std_pack": {
+        "string": 2
+      },
+      "product_family": {
+        "string": 2
+      },
+      "slug": {
+        "string": 2
+      }
+    }
+  },
+  "Boxes": {
+    "GI Metal Mounting Boxes": {
+      "_id": {
+        "ObjectId": 18
+      },
+      "sku": {
+        "string": 18
+      },
+      "brand": {
+        "string": 18
+      },
+      "category": {
+        "string": 18
+      },
+      "currency": {
+        "string": 18
+      },
+      "description": {
+        "string": 18
+      },
+      "images": {
+        "array": 18
+      },
+      "list_price": {
+        "number": 18
+      },
+      "name": {
+        "string": 18
+      },
+      "series": {
+        "string": 18
+      },
+      "specs.mw": {
+        "string": 2,
+        "number": 16
+      },
+      "specs.dimensions_mm": {
+        "string": 18
+      },
+      "specs.material": {
+        "string": 18
+      },
+      "specs.mounting_type": {
+        "string": 18
+      },
+      "seo.keywords": {
+        "array": 18
+      },
+      "seo.keywords[]": {
+        "string": 18
+      },
+      "seo.meta_description": {
+        "string": 18
+      },
+      "subcategory": {
+        "string": 18
+      },
+      "product_family": {
+        "string": 18
+      },
+      "slug": {
+        "string": 18
+      },
+      "_source_file": {
+        "string": 18
+      },
+      "pricing.mrp": {
+        "number": 18
+      },
+      "pricing.discount": {
+        "null": 18
+      },
+      "pricing.selling_price": {
+        "null": 18
+      },
+      "pricing.std_pack": {
+        "string": 18
+      },
+      "specs.orientation": {
+        "string": 4
+      }
+    },
+    "Mounting Boxes - Plastic Surface": {
+      "_id": {
+        "ObjectId": 9
+      },
+      "sku": {
+        "string": 9
+      },
+      "brand": {
+        "string": 9
+      },
+      "category": {
+        "string": 9
+      },
+      "currency": {
+        "string": 9
+      },
+      "description": {
+        "string": 9
+      },
+      "images": {
+        "array": 9
+      },
+      "list_price": {
+        "number": 9
+      },
+      "name": {
+        "string": 9
+      },
+      "series": {
+        "string": 9
+      },
+      "specs.mw": {
+        "string": 1,
+        "number": 8
+      },
+      "specs.dimensions_mm": {
+        "string": 9
+      },
+      "specs.material": {
+        "string": 9
+      },
+      "specs.mounting_type": {
+        "string": 9
+      },
+      "seo.keywords": {
+        "array": 9
+      },
+      "seo.keywords[]": {
+        "string": 9
+      },
+      "seo.meta_description": {
+        "string": 9
+      },
+      "subcategory": {
+        "string": 9
+      },
+      "product_family": {
+        "string": 9
+      },
+      "slug": {
+        "string": 9
+      },
+      "_source_file": {
+        "string": 9
+      },
+      "pricing.mrp": {
+        "number": 9
+      },
+      "pricing.discount": {
+        "null": 9
+      },
+      "pricing.selling_price": {
+        "null": 9
+      },
+      "pricing.std_pack": {
+        "string": 9
+      },
+      "specs.orientation": {
+        "string": 2
+      }
+    }
+  }
+}

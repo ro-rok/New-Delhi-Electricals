@@ -1,0 +1,413 @@
+[
+  {
+    "_id": "6931d8a4b9a9b9042d413a1e",
+    "sku": "CB92101TM11",
+    "brand": "Lauritz Knudsen",
+    "category": "Data Sockets",
+    "currency": "INR",
+    "description": "Buy RJ 11 Socket with Shutter 1M Mountain Grey online at New Delhi Electricals. ENGLAZE data socket.",
+    "images": [],
+    "list_price": 439,
+    "name": "RJ 11 Socket with Shutter 1M - Mountain Grey",
+    "series": "Englaze",
+    "specs": {
+      "ampere": null,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 11 Socket with Shutter"
+    },
+    "seo": {
+      "slug": "englaze-rj11-socket-shutter-1m-mountain-grey",
+      "keywords": [
+        "Data Socket",
+        "RJ11",
+        "Socket",
+        "Shutter",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy RJ 11 Socket with Shutter 1M Mountain Grey online at New Delhi Electricals. ENGLAZE data socket."
+    },
+    "subcategory": "Telephone Sockets - 1 Module",
+    "variant": [
+      "CB92101TW11",
+      "CB92101TB11"
+    ],
+    "product_family": "Englaze",
+    "slug": "englaze-rj11-socket-shutter-1m-mountain-grey",
+    "_source_file": "englaze 3.json",
+    "pricing": {
+      "mrp": 439,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    }
+  },
+  {
+    "_id": "6931d8a4b9a9b9042d413a1d",
+    "sku": "CB92101TW11",
+    "brand": "Lauritz Knudsen",
+    "category": "Data Sockets",
+    "currency": "INR",
+    "description": "Buy RJ 11 Socket with Shutter 1M Snow White online at New Delhi Electricals. ENGLAZE data socket.",
+    "images": [],
+    "list_price": 351,
+    "name": "RJ 11 Socket with Shutter 1M - Snow White",
+    "series": "Englaze",
+    "specs": {
+      "ampere": null,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 11 Socket with Shutter"
+    },
+    "seo": {
+      "slug": "englaze-rj11-socket-shutter-1m-snow-white",
+      "keywords": [
+        "Data Socket",
+        "RJ11",
+        "Socket",
+        "Shutter",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy RJ 11 Socket with Shutter 1M Snow White online at New Delhi Electricals. ENGLAZE data socket."
+    },
+    "subcategory": "Telephone Sockets - 1 Module",
+    "variant": [
+      "CB92101TM11",
+      "CB92101TB11"
+    ],
+    "product_family": "Englaze",
+    "slug": "englaze-rj11-socket-shutter-1m-snow-white",
+    "_source_file": "englaze 3.json",
+    "pricing": {
+      "mrp": 351,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    }
+  },
+  {
+    "_id": "6931d8a4b9a9b9042d413a1f",
+    "sku": "CB92101TB11",
+    "brand": "Lauritz Knudsen",
+    "category": "Data Sockets",
+    "currency": "INR",
+    "description": "Buy RJ 11 Socket with Shutter 1M Sparkle Black online at New Delhi Electricals. ENGLAZE data socket.",
+    "images": [],
+    "list_price": 439,
+    "name": "RJ 11 Socket with Shutter 1M - Sparkle Black",
+    "series": "Englaze",
+    "specs": {
+      "ampere": null,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 11 Socket with Shutter"
+    },
+    "seo": {
+      "slug": "englaze-rj11-socket-shutter-1m-sparkle-black",
+      "keywords": [
+        "Data Socket",
+        "RJ11",
+        "Socket",
+        "Shutter",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy RJ 11 Socket with Shutter 1M Sparkle Black online at New Delhi Electricals. ENGLAZE data socket."
+    },
+    "subcategory": "Telephone Sockets - 1 Module",
+    "variant": [
+      "CB92101TW11",
+      "CB92101TM11"
+    ],
+    "product_family": "Englaze",
+    "slug": "englaze-rj11-socket-shutter-1m-sparkle-black",
+    "_source_file": "englaze 3.json",
+    "pricing": {
+      "mrp": 439,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    }
+  },
+  {
+    "_id": "6931d8a4b9a9b9042d413a21",
+    "sku": "CB92301TM45",
+    "brand": "Lauritz Knudsen",
+    "category": "Data Sockets",
+    "currency": "INR",
+    "description": "Buy RJ 45 Cat 6A Socket with Shutter 1M Mountain Grey online at New Delhi Electricals. ENGLAZE data socket.",
+    "images": [],
+    "list_price": 1570,
+    "name": "RJ 45 Cat 6A Socket with Shutter 1M - Mountain Grey",
+    "series": "Englaze",
+    "specs": {
+      "ampere": null,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 45 Cat 6A Socket with Shutter"
+    },
+    "seo": {
+      "slug": "englaze-rj45-cat6a-socket-shutter-1m-mountain-grey",
+      "keywords": [
+        "Data Socket",
+        "RJ45",
+        "Cat 6A",
+        "Socket",
+        "Shutter",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy RJ 45 Cat 6A Socket with Shutter 1M Mountain Grey online at New Delhi Electricals. ENGLAZE data socket."
+    },
+    "subcategory": "LAN Sockets - 1 Module",
+    "variant": [
+      "CB92301TW45",
+      "CB92301TB45"
+    ],
+    "product_family": "Englaze",
+    "slug": "englaze-rj45-cat6a-socket-shutter-1m-mountain-grey",
+    "_source_file": "englaze 3.json",
+    "pricing": {
+      "mrp": 1570,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    }
+  },
+  {
+    "_id": "6931d8a4b9a9b9042d413a20",
+    "sku": "CB92301TW45",
+    "brand": "Lauritz Knudsen",
+    "category": "Data Sockets",
+    "currency": "INR",
+    "description": "Buy RJ 45 Cat 6A Socket with Shutter 1M Snow White online at New Delhi Electricals. ENGLAZE data socket.",
+    "images": [],
+    "list_price": 1259,
+    "name": "RJ 45 Cat 6A Socket with Shutter 1M - Snow White",
+    "series": "Englaze",
+    "specs": {
+      "ampere": null,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 45 Cat 6A Socket with Shutter"
+    },
+    "seo": {
+      "slug": "englaze-rj45-cat6a-socket-shutter-1m-snow-white",
+      "keywords": [
+        "Data Socket",
+        "RJ45",
+        "Cat 6A",
+        "Socket",
+        "Shutter",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy RJ 45 Cat 6A Socket with Shutter 1M Snow White online at New Delhi Electricals. ENGLAZE data socket."
+    },
+    "subcategory": "LAN Sockets - 1 Module",
+    "variant": [
+      "CB92301TM45",
+      "CB92301TB45"
+    ],
+    "product_family": "Englaze",
+    "slug": "englaze-rj45-cat6a-socket-shutter-1m-snow-white",
+    "_source_file": "englaze 3.json",
+    "pricing": {
+      "mrp": 1259,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    }
+  },
+  {
+    "_id": "6931d8a4b9a9b9042d413a22",
+    "sku": "CB92301TB45",
+    "brand": "Lauritz Knudsen",
+    "category": "Data Sockets",
+    "currency": "INR",
+    "description": "Buy RJ 45 Cat 6A Socket with Shutter 1M Sparkle Black online at New Delhi Electricals. ENGLAZE data socket.",
+    "images": [],
+    "list_price": 1570,
+    "name": "RJ 45 Cat 6A Socket with Shutter 1M - Sparkle Black",
+    "series": "Englaze",
+    "specs": {
+      "ampere": null,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "RJ 45 Cat 6A Socket with Shutter"
+    },
+    "seo": {
+      "slug": "englaze-rj45-cat6a-socket-shutter-1m-sparkle-black",
+      "keywords": [
+        "Data Socket",
+        "RJ45",
+        "Cat 6A",
+        "Socket",
+        "Shutter",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy RJ 45 Cat 6A Socket with Shutter 1M Sparkle Black online at New Delhi Electricals. ENGLAZE data socket."
+    },
+    "subcategory": "LAN Sockets - 1 Module",
+    "variant": [
+      "CB92301TW45",
+      "CB92301TM45"
+    ],
+    "product_family": "Englaze",
+    "slug": "englaze-rj45-cat6a-socket-shutter-1m-sparkle-black",
+    "_source_file": "englaze 3.json",
+    "pricing": {
+      "mrp": 1570,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    }
+  },
+  {
+    "_id": "6931d8a4b9a9b9042d413a24",
+    "sku": "CB92101TM00",
+    "brand": "Lauritz Knudsen",
+    "category": "Data Sockets",
+    "currency": "INR",
+    "description": "Buy TV Socket 1M Mountain Grey online at New Delhi Electricals. ENGLAZE TV/data socket.",
+    "images": [],
+    "list_price": 427,
+    "name": "TV Socket 1M - Mountain Grey",
+    "series": "Englaze",
+    "specs": {
+      "ampere": null,
+      "color": "Mountain Grey",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "TV Socket"
+    },
+    "seo": {
+      "slug": "englaze-tv-socket-1m-mountain-grey",
+      "keywords": [
+        "Data Socket",
+        "TV Socket",
+        "1M",
+        "Mountain Grey",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy TV Socket 1M Mountain Grey online at New Delhi Electricals. ENGLAZE TV/data socket."
+    },
+    "subcategory": "TV Sockets - 1 Module",
+    "variant": [
+      "CB92101TW00",
+      "CB92101TB00"
+    ],
+    "product_family": "Englaze",
+    "slug": "englaze-tv-socket-1m-mountain-grey",
+    "_source_file": "englaze 3.json",
+    "pricing": {
+      "mrp": 427,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    }
+  },
+  {
+    "_id": "6931d8a4b9a9b9042d413a23",
+    "sku": "CB92101TW00",
+    "brand": "Lauritz Knudsen",
+    "category": "Data Sockets",
+    "currency": "INR",
+    "description": "Buy TV Socket 1M Snow White online at New Delhi Electricals. ENGLAZE TV/data socket.",
+    "images": [],
+    "list_price": 342,
+    "name": "TV Socket 1M - Snow White",
+    "series": "Englaze",
+    "specs": {
+      "ampere": null,
+      "color": "Snow White",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "TV Socket"
+    },
+    "seo": {
+      "slug": "englaze-tv-socket-1m-snow-white",
+      "keywords": [
+        "Data Socket",
+        "TV Socket",
+        "1M",
+        "Snow White",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy TV Socket 1M Snow White online at New Delhi Electricals. ENGLAZE TV/data socket."
+    },
+    "subcategory": "TV Sockets - 1 Module",
+    "variant": [
+      "CB92101TM00",
+      "CB92101TB00"
+    ],
+    "product_family": "Englaze",
+    "slug": "englaze-tv-socket-1m-snow-white",
+    "_source_file": "englaze 3.json",
+    "pricing": {
+      "mrp": 342,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    }
+  },
+  {
+    "_id": "6931d8a4b9a9b9042d413a25",
+    "sku": "CB92101TB00",
+    "brand": "Lauritz Knudsen",
+    "category": "Data Sockets",
+    "currency": "INR",
+    "description": "Buy TV Socket 1M Sparkle Black online at New Delhi Electricals. ENGLAZE TV/data socket.",
+    "images": [],
+    "list_price": 427,
+    "name": "TV Socket 1M - Sparkle Black",
+    "series": "Englaze",
+    "specs": {
+      "ampere": null,
+      "color": "Sparkle Black",
+      "mw": 1,
+      "has_indicator": false,
+      "type_detail": "TV Socket"
+    },
+    "seo": {
+      "slug": "englaze-tv-socket-1m-sparkle-black",
+      "keywords": [
+        "Data Socket",
+        "TV Socket",
+        "1M",
+        "Sparkle Black",
+        "ENGLAZE"
+      ],
+      "meta_description": "Buy TV Socket 1M Sparkle Black online at New Delhi Electricals. ENGLAZE TV/data socket."
+    },
+    "subcategory": "TV Sockets - 1 Module",
+    "variant": [
+      "CB92101TW00",
+      "CB92101TM00"
+    ],
+    "product_family": "Englaze",
+    "slug": "englaze-tv-socket-1m-sparkle-black",
+    "_source_file": "englaze 3.json",
+    "pricing": {
+      "mrp": 427,
+      "discount": null,
+      "selling_price": null,
+      "std_pack": "20"
+    }
+  }
+]
