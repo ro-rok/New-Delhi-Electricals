@@ -17,7 +17,7 @@ import { toast } from '@/hooks/use-toast';
 import { getProductUrl } from '@/lib/utils';
 
 const ProductSlugPage = () => {
-  const { brand, product_family, slug } = useParams<{ brand: string; product_family: string; slug: string }>();
+  const { brand, slug } = useParams<{ brand?: string; slug?: string; product_family?: string }>();
   const navigate = useNavigate();
   const location = useLocation();
   const {
@@ -50,12 +50,12 @@ const ProductSlugPage = () => {
     setLoading(true);
 
     const fetchProduct = async () => {
-      if (!brand || !product_family || !slug) {
+      if (!brand || !slug) {
         setLoading(false);
         return;
       }
       try {
-        const prod = await getProductBySlug(brand, product_family, slug);
+        const prod = await getProductBySlug(brand, slug);
         setProduct(prod);
         if (prod) {
           // Fetch similar products
@@ -73,7 +73,7 @@ const ProductSlugPage = () => {
       }
     };
     fetchProduct();
-  }, [brand, product_family, slug, location.key]);
+  }, [brand, slug, location.key]);
 
   useEffect(() => {
     if (product) {

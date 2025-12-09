@@ -25,6 +25,7 @@ class ProductBase(BaseModel):
     sku: str
     name: str
     brand: str
+    brand_slug: str | None = None
     category: str
     subcategory: str | None = None
     series: str | None = None
@@ -38,6 +39,7 @@ class ProductBase(BaseModel):
     # Free-form source metadata so we can store file/page/confidence/import ids
     catalog_source: CatalogSource
     slug: Optional[str] = None
+    url_path: str | None = None
 
 
 class ProductCreate(ProductBase):

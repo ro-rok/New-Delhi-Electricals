@@ -1,4 +1,5 @@
 import { Product, Category, Brand, CatalogSource } from '@/types/product';
+import { slugify } from '@/lib/utils';
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000';
 
@@ -19,11 +20,13 @@ function transformProduct(backendProduct: any): Product {
   const description = backendProduct.description || backendProduct.seo?.meta_description || '';
   const series = backendProduct.series || backendProduct.product_family || '';
 
+  const brandSlug = backendProduct.brand_slug || slugify(backendProduct.brand);
+
   // Extract slug from multiple possible locations
-  const slug = backendProduct.seo?.slug ||
+  const slug = backendProduct.slug ||
+    backendProduct.seo?.slug ||
     backendProduct.catalog_source?.slug ||
     backendProduct.specs?.slug ||
-    backendProduct.slug ||
     null;
 
   const status = backendProduct.status || {};
@@ -32,11 +35,14 @@ function transformProduct(backendProduct: any): Product {
 
   const catalogSource = transformCatalogSource(backendProduct.catalog_source, series);
 
+  const urlPath = backendProduct.url_path || (brandSlug && slug ? `/${brandSlug}/${slug}` : undefined);
+
   return {
     id: backendProduct._id || backendProduct.id || backendProduct.sku,
     sku: backendProduct.sku,
     name: backendProduct.name,
     brand: backendProduct.brand,
+    brandSlug,
     category: backendProduct.category,
     subcategory: backendProduct.subcategory || backendProduct.catalog_source?.subcategory,
     series: series,
@@ -48,6 +54,7 @@ function transformProduct(backendProduct: any): Product {
     description: description,
     badge: isFeatured || backendProduct.badge ? 'popular' : undefined,
     slug: slug,
+    urlPath,
     comingSoon: backendProduct.status?.coming_soon || backendProduct.comingSoon || false,
     isActive: isActive,
     status: status,
@@ -155,32 +162,25 @@ export async function getProductBySku(sku: string): Promise<Product | null> {
 
 export async function getProductBySlug(
   brand: string,
-  productFamily: string,
   slug: string
 ): Promise<Product | null> {
   try {
+    const brandSegment = slugify(brand);
+
+    // Try brand + slug endpoint first
+    const resBrand = await fetch(`${API_BASE}/api/products/brand/${brandSegment}/${slug}`);
+    if (resBrand.ok) {
+      const data = await resBrand.json();
+      return transformProduct(data);
+    }
+
+    // Fallback to legacy slug-only endpoint
     const res = await fetch(`${API_BASE}/api/products/slug/${slug}`);
     if (!res.ok) {
       return null;
     }
     const data = await res.json();
-    const product = transformProduct(data);
-
-    // Soft-check brand and family; don't fail hard to allow imperfect data
-    const brandSlug = (brand || '').toLowerCase().replace(/\s+/g, '-');
-    const productBrandSlug = (product.brand || '').toLowerCase().replace(/\s+/g, '-');
-    const productFamilySlug = (productFamily || '').toLowerCase().replace(/\s+/g, '-');
-    const productSeriesSlug = (product.series || '').toLowerCase().replace(/\s+/g, '-');
-
-    // If both brand and series are present and don't match, log but still return product
-    if (brandSlug && productBrandSlug && productBrandSlug !== brandSlug) {
-      console.warn('Brand mismatch for slug lookup', { brandSlug, productBrandSlug });
-    }
-    if (productFamilySlug && productSeriesSlug && productSeriesSlug !== productFamilySlug) {
-      console.warn('Series/family mismatch for slug lookup', { productFamilySlug, productSeriesSlug });
-    }
-
-    return product;
+    return transformProduct(data);
   } catch {
     return null;
   }

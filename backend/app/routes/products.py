@@ -5,6 +5,7 @@ from motor.motor_asyncio import AsyncIOMotorDatabase
 
 from ..db import get_db_dep
 from ..schemas import ProductCreate, ProductUpdate, ProductInDB, ProductListResponse
+from ..utils.slug_utils import extract_primary_slug, inject_brand_and_url, slugify_brand
 from ..security import get_current_admin
 
 
@@ -120,6 +121,11 @@ async def list_products(
     items: List[ProductInDB] = []
     async for doc in cursor:
         doc["_id"] = str(doc["_id"])
+        doc = inject_brand_and_url(doc)
+        # Ensure slug is present in response for clients
+        slug_val = extract_primary_slug(doc)
+        if slug_val and not doc.get("slug"):
+            doc["slug"] = slug_val
         items.append(ProductInDB(**doc))
     return ProductListResponse(items=items, total=total, page=page, pageSize=page_size)
 
@@ -162,7 +168,7 @@ async def get_categories(
     
     categories = []
     async for doc in db.products.aggregate(pipeline):
-        slug = doc["name"].lower().replace(" ", "-").replace("/", "-").replace("(", "").replace(")", "")
+        slug = slugify_brand(doc["name"]) or doc["name"]
         categories.append({
             "id": slug,
             "name": doc["name"],
@@ -202,7 +208,7 @@ async def get_brands(
     
     brands = []
     async for doc in db.products.aggregate(pipeline):
-        slug = doc["name"].lower().replace(" ", "-").replace("/", "-").replace("(", "").replace(")", "")
+        slug = slugify_brand(doc["name"]) or doc["name"]
         brands.append({
             "id": slug,
             "name": doc["name"],
@@ -218,14 +224,7 @@ async def get_brands(
 
 @router.get("/slug/{slug}", response_model=ProductInDB)
 async def get_product_by_slug(slug: str, db: AsyncIOMotorDatabase = Depends(get_db_dep)) -> Any:
-    """Fetch product by SEO slug. Checks multiple possible locations for the slug"""
-    # Try multiple possible locations for the slug
-    # Based on how products are transformed, slug can be in:
-    # - catalog_source.seo.slug (most common - from transform_product)
-    # - catalog_source.slug (from upload_mcb_products)
-    # - specs.slug (from upload_mcb_products)
-    # - seo.slug (if stored at top level)
-    # - slug (if stored at top level)
+    """Fetch product by slug only (legacy)."""
     doc = await db.products.find_one({
         "$or": [
             {"catalog_source.seo.slug": slug},
@@ -235,11 +234,9 @@ async def get_product_by_slug(slug: str, db: AsyncIOMotorDatabase = Depends(get_
             {"slug": slug},
         ]
     })
-    # Fallback: try matching name-derived slug or SKU
     if not doc:
-        # Replace dashes with spaces and match name loosely (case-insensitive)
+        # Fallback: try matching name-derived slug or SKU
         loose = slug.replace("-", " ")
-        # Token-based regex: require all tokens to appear (order flexible)
         tokens = [t for t in slug.split("-") if t]
         token_regex = [{"name": {"$regex": t, "$options": "i"}} for t in tokens]
         loose_query = {
@@ -255,6 +252,43 @@ async def get_product_by_slug(slug: str, db: AsyncIOMotorDatabase = Depends(get_
     if not doc:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
     doc["_id"] = str(doc["_id"])
+    doc = inject_brand_and_url(doc)
+    slug_val = extract_primary_slug(doc)
+    if slug_val and not doc.get("slug"):
+        doc["slug"] = slug_val
+    return ProductInDB(**doc)
+
+
+@router.get("/brand/{brand_slug}/{slug}", response_model=ProductInDB)
+async def get_product_by_brand_and_slug(
+    brand_slug: str,
+    slug: str,
+    db: AsyncIOMotorDatabase = Depends(get_db_dep),
+) -> Any:
+    """Fetch product by brand slug + product slug."""
+    # First attempt: find by slug in any known location
+    doc = await db.products.find_one({
+        "$or": [
+            {"catalog_source.seo.slug": slug},
+            {"catalog_source.slug": slug},
+            {"specs.slug": slug},
+            {"seo.slug": slug},
+            {"slug": slug},
+        ]
+    })
+    if not doc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
+
+    # Validate brand
+    doc_brand_slug = slugify_brand(doc.get("brand"))
+    if doc_brand_slug and doc_brand_slug != brand_slug:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
+
+    doc["_id"] = str(doc["_id"])
+    doc = inject_brand_and_url(doc)
+    slug_val = extract_primary_slug(doc)
+    if slug_val and not doc.get("slug"):
+        doc["slug"] = slug_val
     return ProductInDB(**doc)
 
 
@@ -274,6 +308,10 @@ async def get_product(product_id: str, db: AsyncIOMotorDatabase = Depends(get_db
     if not doc:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
     doc["_id"] = str(doc["_id"])
+    doc = inject_brand_and_url(doc)
+    slug_val = extract_primary_slug(doc)
+    if slug_val and not doc.get("slug"):
+        doc["slug"] = slug_val
     return ProductInDB(**doc)
 
 
@@ -303,6 +341,10 @@ async def update_product(
     if not res:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
     res["_id"] = str(res["_id"])
+    res = inject_brand_and_url(res)
+    slug_val = extract_primary_slug(res)
+    if slug_val and not res.get("slug"):
+        res["slug"] = slug_val
     return ProductInDB(**res)
 
 

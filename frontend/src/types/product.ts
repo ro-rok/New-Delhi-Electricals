@@ -31,6 +31,7 @@ export interface Product {
   sku: string;
   name: string;
   brand: string;
+  brandSlug?: string;
   category: string;
   subcategory?: string;
   series: string;
@@ -42,6 +43,7 @@ export interface Product {
   description: string;
   badge?: 'popular' | 'best-value' | 'new';
   slug?: string;
+  urlPath?: string;
   comingSoon?: boolean;
   isActive: boolean;
   status?: ProductStatus;

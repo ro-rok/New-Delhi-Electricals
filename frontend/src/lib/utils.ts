@@ -6,33 +6,45 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export function slugify(value?: string | null): string {
+  if (!value) return "";
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 /**
  * Generate product URL using slug-based format: /product/:brand/:product_family/:slug
  * Falls back to generated slug or ID-based format if slug is not available
  */
 export function getProductUrl(product: Product): string {
-  // Extract slug from product (could be in slug field, catalogSource, or specs)
-  const slug = product.slug || 
-               product.catalogSource?.slug || 
-               product.catalogSource?.seo?.slug ||
-               (product.specs && 'slug' in product.specs ? product.specs.slug : null) ||
-               null;
-  
-  // If slug is available, use slug-based URL
-  if (slug) {
-    const brandSlug = product.brand.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '');
-    const familySlug = product.series.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '') || 'product';
-    return `/product/${brandSlug}/${familySlug}/${slug}`;
+  // Prefer backend-provided url_path (already includes leading slash)
+  const providedPath = (product as any).url_path || product.urlPath;
+  if (providedPath) {
+    return providedPath.startsWith("/") ? providedPath : `/${providedPath}`;
   }
-  
+
+  // Extract slug from product (could be in slug field, catalogSource, or specs)
+  const slug =
+    product.slug ||
+    product.catalogSource?.slug ||
+    product.catalogSource?.seo?.slug ||
+    (product.specs && "slug" in product.specs ? (product.specs as any).slug : null) ||
+    null;
+
   // Generate slug from product name as fallback
-  const generatedSlug = product.name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '') || product.sku.toLowerCase().replace(/\s+/g, '-');
-  
-  const brandSlug = product.brand.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '');
-  const familySlug = product.series.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '') || 'product';
-  
-  return `/product/${brandSlug}/${familySlug}/${generatedSlug}`;
+  const finalSlug =
+    slug ||
+    slugify(product.name) ||
+    slugify(product.sku) ||
+    "product";
+
+  const brandSlug = product.brandSlug || slugify(product.brand);
+
+  if (brandSlug && finalSlug) {
+    return `/${brandSlug}/${finalSlug}`;
+  }
+
+  return `/product/${product.id}`;
 }

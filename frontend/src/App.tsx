@@ -80,6 +80,8 @@ const App = () => (
                   <Route path="/category/:slug" element={<CategoryPage />} />
                   <Route path="/brands" element={<BrandsListPage />} />
                   <Route path="/brand/:slug" element={<BrandPage />} />
+                  <Route path="/:brand/:slug" element={<ProductSlugPage />} />
+                  <Route path="/product/:brand/:slug" element={<ProductSlugPage />} />
                   <Route path="/product/:brand/:product_family/:slug" element={<ProductSlugPage />} />
                   <Route path="/shortlist" element={<ShortlistPage />} />
                   <Route path="/compare" element={<ComparePage />} />
