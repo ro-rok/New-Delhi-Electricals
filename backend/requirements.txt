@@ -10,6 +10,7 @@ passlib[bcrypt]
 pyotp
 httpx
 cloudinary
+aiohttp
 
 # PDF parsing & OCR
 pdfplumber
