@@ -47907,7 +47907,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-1-module-white"
+    "slug": "penta-xena-plate-1-module-white",
+    "variant": {
+      "65901ABU": "Blue"
+    }
   },
   {
     "_id": "6935c120b9a9b9042d41ea4a",
@@ -47948,7 +47951,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-1-module-blue"
+    "slug": "penta-xena-plate-1-module-blue",
+    "variant": {
+      "65901AWH": "White"
+    }
   },
   {
     "_id": "6935c120b9a9b9042d41ea4b",
@@ -48112,7 +48118,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-2-module-white"
+    "slug": "penta-xena-plate-2-module-white",
+    "variant": {
+      "65902ABU": "Blue"
+    }
   },
   {
     "_id": "6935c120b9a9b9042d41ea4f",
@@ -48153,7 +48162,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-2-module-blue"
+    "slug": "penta-xena-plate-2-module-blue",
+    "variant": {
+      "65902AWH": "White"
+    }
   },
   {
     "_id": "6935c120b9a9b9042d41ea50",
@@ -48317,7 +48329,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-3-module-white"
+    "slug": "penta-xena-plate-3-module-white",
+    "variant": {
+      "65903ABU": "Blue"
+    }
   },
   {
     "_id": "6935c120b9a9b9042d41ea54",
@@ -48358,7 +48373,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-3-module-blue"
+    "slug": "penta-xena-plate-3-module-blue",
+    "variant": {
+      "65903AWH": "White"
+    }
   },
   {
     "_id": "6935c120b9a9b9042d41ea55",
@@ -48522,7 +48540,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-4-module-white"
+    "slug": "penta-xena-plate-4-module-white",
+    "variant": {
+      "65904ABU": "Blue"
+    }
   },
   {
     "_id": "6935c121b9a9b9042d41ea59",
@@ -48563,7 +48584,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-4-module-blue"
+    "slug": "penta-xena-plate-4-module-blue",
+    "variant": {
+      "65904AWH": "White"
+    }
   },
   {
     "_id": "6935c121b9a9b9042d41ea5a",
@@ -48727,7 +48751,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-6-module-white"
+    "slug": "penta-xena-plate-6-module-white",
+    "variant": {
+      "65906ABU": "Blue"
+    }
   },
   {
     "_id": "6935c121b9a9b9042d41ea5e",
@@ -48768,7 +48795,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-6-module-blue"
+    "slug": "penta-xena-plate-6-module-blue",
+    "variant": {
+      "65906AWH": "White"
+    }
   },
   {
     "_id": "6935c121b9a9b9042d41ea5f",
@@ -48932,7 +48962,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-8-module-white"
+    "slug": "penta-xena-plate-8-module-white",
+    "variant": {
+      "65908ABU": "Blue"
+    }
   },
   {
     "_id": "6935c121b9a9b9042d41ea63",
@@ -48973,7 +49006,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-8-module-blue"
+    "slug": "penta-xena-plate-8-module-blue",
+    "variant": {
+      "65908AWH": "White"
+    }
   },
   {
     "_id": "6935c121b9a9b9042d41ea64",
@@ -49138,7 +49174,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-8-module-vertical-white"
+    "slug": "penta-xena-plate-8-module-vertical-white",
+    "variant": {
+      "65988ABU": "Blue"
+    }
   },
   {
     "_id": "6935c121b9a9b9042d41ea68",
@@ -49180,7 +49219,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-8-module-vertical-blue"
+    "slug": "penta-xena-plate-8-module-vertical-blue",
+    "variant": {
+      "65988AWH": "White"
+    }
   },
   {
     "_id": "6935c121b9a9b9042d41ea69",
@@ -49347,7 +49389,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-12-module-white"
+    "slug": "penta-xena-plate-12-module-white",
+    "variant": {
+      "65912ABU": "Blue"
+    }
   },
   {
     "_id": "6935c121b9a9b9042d41ea6d",
@@ -49388,7 +49433,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-12-module-blue"
+    "slug": "penta-xena-plate-12-module-blue",
+    "variant": {
+      "65912AWH": "White"
+    }
   },
   {
     "_id": "6935c121b9a9b9042d41ea6e",
@@ -49552,7 +49600,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-16-module-white"
+    "slug": "penta-xena-plate-16-module-white",
+    "variant": {
+      "65916ABU": "Blue"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea72",
@@ -49593,7 +49644,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-16-module-blue"
+    "slug": "penta-xena-plate-16-module-blue",
+    "variant": {
+      "65916AWH": "White"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea73",
@@ -49757,7 +49811,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-18-module-white"
+    "slug": "penta-xena-plate-18-module-white",
+    "variant": {
+      "65918ABU": "Blue"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea77",
@@ -49798,7 +49855,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-xena-plate-18-module-blue"
+    "slug": "penta-xena-plate-18-module-blue",
+    "variant": {
+      "65918AWH": "White"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea78",
@@ -49962,7 +50022,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-1-module-white"
+    "slug": "penta-thin-slim-plate-1-module-white",
+    "variant": {
+      "65351B": "Black"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea7c",
@@ -50003,7 +50066,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-2-module-white"
+    "slug": "penta-thin-slim-plate-2-module-white",
+    "variant": {
+      "65352B": "Black"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea7d",
@@ -50044,7 +50110,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-3-module-white"
+    "slug": "penta-thin-slim-plate-3-module-white",
+    "variant": {
+      "65353B": "Black"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea7e",
@@ -50085,7 +50154,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-4-module-white"
+    "slug": "penta-thin-slim-plate-4-module-white",
+    "variant": {
+      "65354B": "Black"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea7f",
@@ -50126,7 +50198,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-6-module-white"
+    "slug": "penta-thin-slim-plate-6-module-white",
+    "variant": {
+      "65356B": "Black"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea80",
@@ -50167,7 +50242,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-8-module-white"
+    "slug": "penta-thin-slim-plate-8-module-white",
+    "variant": {
+      "65358B": "Black"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea81",
@@ -50209,7 +50287,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-8-module-vertical-white"
+    "slug": "penta-thin-slim-plate-8-module-vertical-white",
+    "variant": {
+      "65388B": "Black"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea82",
@@ -50250,7 +50331,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-12-module-white"
+    "slug": "penta-thin-slim-plate-12-module-white",
+    "variant": {
+      "65312B": "Black"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea83",
@@ -50291,7 +50375,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-16-module-white"
+    "slug": "penta-thin-slim-plate-16-module-white",
+    "variant": {
+      "65316B": "Black"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea84",
@@ -50332,7 +50419,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-18-module-white"
+    "slug": "penta-thin-slim-plate-18-module-white",
+    "variant": {
+      "65318B": "Black"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea85",
@@ -50373,7 +50463,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-1-module-black"
+    "slug": "penta-thin-slim-plate-1-module-black",
+    "variant": {
+      "65351": "White"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea86",
@@ -50414,7 +50507,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-2-module-black"
+    "slug": "penta-thin-slim-plate-2-module-black",
+    "variant": {
+      "65352": "White"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea87",
@@ -50455,7 +50551,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-3-module-black"
+    "slug": "penta-thin-slim-plate-3-module-black",
+    "variant": {
+      "65353": "White"
+    }
   },
   {
     "_id": "6935c122b9a9b9042d41ea88",
@@ -50496,7 +50595,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-4-module-black"
+    "slug": "penta-thin-slim-plate-4-module-black",
+    "variant": {
+      "65354": "White"
+    }
   },
   {
     "_id": "6935c123b9a9b9042d41ea89",
@@ -50537,7 +50639,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-6-module-black"
+    "slug": "penta-thin-slim-plate-6-module-black",
+    "variant": {
+      "65356": "White"
+    }
   },
   {
     "_id": "6935c123b9a9b9042d41ea8a",
@@ -50578,7 +50683,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-8-module-black"
+    "slug": "penta-thin-slim-plate-8-module-black",
+    "variant": {
+      "65358": "White"
+    }
   },
   {
     "_id": "6935c123b9a9b9042d41ea8b",
@@ -50620,7 +50728,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-8-module-vertical-black"
+    "slug": "penta-thin-slim-plate-8-module-vertical-black",
+    "variant": {
+      "65388": "White"
+    }
   },
   {
     "_id": "6935c123b9a9b9042d41ea8c",
@@ -50661,7 +50772,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-12-module-black"
+    "slug": "penta-thin-slim-plate-12-module-black",
+    "variant": {
+      "65312": "White"
+    }
   },
   {
     "_id": "6935c123b9a9b9042d41ea8d",
@@ -50702,7 +50816,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-16-module-black"
+    "slug": "penta-thin-slim-plate-16-module-black",
+    "variant": {
+      "65316": "White"
+    }
   },
   {
     "_id": "6935c123b9a9b9042d41ea8e",
@@ -50743,7 +50860,10 @@
       "std_pack": "5"
     },
     "product_family": "Penta",
-    "slug": "penta-thin-slim-plate-18-module-black"
+    "slug": "penta-thin-slim-plate-18-module-black",
+    "variant": {
+      "65318": "White"
+    }
   },
   {
     "_id": "6935c123b9a9b9042d41ea8f",
@@ -52198,7 +52318,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-16a-3pin-socket-2-module-isi"
+    "slug": "penta-16a-3pin-socket-2-module-isi",
+    "variant": {
+      "65204B": "Graphite"
+    }
   },
   {
     "_id": "6935c124b9a9b9042d41eab0",
@@ -52241,7 +52364,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-6a-16a-twin-socket-2-module-isi"
+    "slug": "penta-6a-16a-twin-socket-2-module-isi",
+    "variant": {
+      "65205B": "Graphite"
+    }
   },
   {
     "_id": "6935c124b9a9b9042d41eab1",
@@ -52280,7 +52406,10 @@
       "std_pack": "50"
     },
     "product_family": "Penta",
-    "slug": "penta-blank-plate-1-module"
+    "slug": "penta-blank-plate-1-module",
+    "variant": {
+      "65503B": "Graphite"
+    }
   },
   {
     "_id": "6935c124b9a9b9042d41eab2",
@@ -52364,7 +52493,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-6a-resettable-fuse-unit-240v-1-module"
+    "slug": "penta-6a-resettable-fuse-unit-240v-1-module",
+    "variant": {
+      "65508B": "Graphite"
+    }
   },
   {
     "_id": "6935c124b9a9b9042d41eab4",
@@ -52407,7 +52539,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-16a-resettable-fuse-unit-240v-1-module"
+    "slug": "penta-16a-resettable-fuse-unit-240v-1-module",
+    "variant": {
+      "65509B": "Graphite"
+    }
   },
   {
     "_id": "6935c124b9a9b9042d41eab5",
@@ -52446,7 +52581,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-buzzer-2-module"
+    "slug": "penta-buzzer-2-module",
+    "variant": {
+      "65710B": "Graphite"
+    }
   },
   {
     "_id": "6935c124b9a9b9042d41eab6",
@@ -52891,7 +53029,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-rj45-computer-jack-cat5e-1-module"
+    "slug": "penta-rj45-computer-jack-cat5e-1-module",
+    "variant": {
+      "65621B": "Graphite"
+    }
   },
   {
     "_id": "6935c125b9a9b9042d41eac0",
@@ -52933,7 +53074,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-rj45-computer-jack-cat6-1-module"
+    "slug": "penta-rj45-computer-jack-cat6-1-module",
+    "variant": {
+      "65622B": "Graphite"
+    }
   },
   {
     "_id": "6935c125b9a9b9042d41eac1",
@@ -52979,7 +53123,10 @@
       "std_pack": "6"
     },
     "product_family": "Penta",
-    "slug": "penta-footlight-led-based-3-module-plate-cool-day-light-230v-50hz"
+    "slug": "penta-footlight-led-based-3-module-plate-cool-day-light-230v-50hz",
+    "variant": {
+      "65705B": "Graphite"
+    }
   },
   {
     "_id": "6935c125b9a9b9042d41eac2",
@@ -53207,7 +53354,10 @@
       "std_pack": "6"
     },
     "product_family": "Penta",
-    "slug": "penta-emergency-led-light-unit-3-module-gina-plate"
+    "slug": "penta-emergency-led-light-unit-3-module-gina-plate",
+    "variant": {
+      "65711B-C": "Graphite"
+    }
   },
   {
     "_id": "6935c125b9a9b9042d41eac7",
@@ -53294,7 +53444,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-100w-dura-fan-regulator-2-module"
+    "slug": "penta-100w-dura-fan-regulator-2-module",
+    "variant": {
+      "65302B#": "Graphite"
+    }
   },
   {
     "_id": "6935c125b9a9b9042d41eac9",
@@ -53336,7 +53489,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-100w-high-speed-fan-regulator-2-module"
+    "slug": "penta-100w-high-speed-fan-regulator-2-module",
+    "variant": {
+      "65303B": "Graphite"
+    }
   },
   {
     "_id": "6935c125b9a9b9042d41eaca",
@@ -53514,7 +53670,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-150w-led-dimmer-2-module"
+    "slug": "penta-150w-led-dimmer-2-module",
+    "variant": {
+      "65557B": "Graphite"
+    }
   },
   {
     "_id": "6935c125b9a9b9042d41eace",
@@ -53557,7 +53716,10 @@
       "std_pack": "6"
     },
     "product_family": "Penta",
-    "slug": "penta-32a-dp-switch-unit-with-keytag-2-module"
+    "slug": "penta-32a-dp-switch-unit-with-keytag-2-module",
+    "variant": {
+      "65701B": "Graphite"
+    }
   },
   {
     "_id": "6935c125b9a9b9042d41eacf",
@@ -53736,7 +53898,10 @@
       "std_pack": "6"
     },
     "product_family": "Penta",
-    "slug": "penta-20a-shaver-socket-4-module-plate-240v"
+    "slug": "penta-20a-shaver-socket-4-module-plate-240v",
+    "variant": {
+      "65707B": "Graphite"
+    }
   },
   {
     "_id": "6935c126b9a9b9042d41ead3",
@@ -53780,7 +53945,10 @@
       "std_pack": "6"
     },
     "product_family": "Penta",
-    "slug": "penta-20a-shaver-socket-4-module-gina-plate-240v"
+    "slug": "penta-20a-shaver-socket-4-module-gina-plate-240v",
+    "variant": {
+      "65707B-C": "Graphite"
+    }
   },
   {
     "_id": "6935c126b9a9b9042d41ead4",
@@ -53863,7 +54031,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-dnd-mmr-external-unit-3-module"
+    "slug": "penta-dnd-mmr-external-unit-3-module",
+    "variant": {
+      "65709B": "Graphite"
+    }
   },
   {
     "_id": "6935c126b9a9b9042d41ead6",
@@ -54779,7 +54950,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-16ax-1-way-switch-with-neon-1-module-200w-sbl-load-b"
+    "slug": "penta-16ax-1-way-switch-with-neon-1-module-200w-sbl-load-b",
+    "variant": {
+      "65077": "White"
+    }
   },
   {
     "_id": "6935c126b9a9b9042d41eaea",
@@ -54825,7 +54999,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-25a-sp-1-way-switch-with-neon-1-module-b"
+    "slug": "penta-25a-sp-1-way-switch-with-neon-1-module-b",
+    "variant": {
+      "65025": "White"
+    }
   },
   {
     "_id": "6935c126b9a9b9042d41eaeb",
@@ -54919,7 +55096,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-6a-3pin-round-socket-wo-shutter-2-module-isi-b"
+    "slug": "penta-6a-3pin-round-socket-wo-shutter-2-module-isi-b",
+    "variant": {
+      "65208": "White"
+    }
   },
   {
     "_id": "6935c127b9a9b9042d41eaed",
@@ -55333,7 +55513,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-usb-a-charger-single-port-21a-5v-dc-1-module-crs-certified-b"
+    "slug": "penta-usb-a-charger-single-port-21a-5v-dc-1-module-crs-certified-b",
+    "variant": {
+      "65611": "White"
+    }
   },
   {
     "_id": "6935c127b9a9b9042d41eaf6",
@@ -55426,7 +55609,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-18w-usb-type-a-fast-charger-1m-b"
+    "slug": "penta-18w-usb-type-a-fast-charger-1m-b",
+    "variant": {
+      "65613": "White"
+    }
   },
   {
     "_id": "6935c127b9a9b9042d41eaf8",
@@ -55468,7 +55654,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-20a-motor-starter-switch-2-module-b"
+    "slug": "penta-20a-motor-starter-switch-2-module-b",
+    "variant": {
+      "65120": "White"
+    }
   },
   {
     "_id": "6935c127b9a9b9042d41eaf9",
@@ -55510,7 +55699,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-25a-motor-starter-switch-2-module-b"
+    "slug": "penta-25a-motor-starter-switch-2-module-b",
+    "variant": {
+      "65125": "White"
+    }
   },
   {
     "_id": "6935c127b9a9b9042d41eafa",
@@ -55594,7 +55786,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-tv-socket-outlet-1-module-b"
+    "slug": "penta-tv-socket-outlet-1-module-b",
+    "variant": {
+      "65502": "White"
+    }
   },
   {
     "_id": "6935c127b9a9b9042d41eafc",
@@ -55636,7 +55831,10 @@
       "std_pack": "20"
     },
     "product_family": "Penta",
-    "slug": "penta-rj11-tel-jack-with-shutter-1-module-b"
+    "slug": "penta-rj11-tel-jack-with-shutter-1-module-b",
+    "variant": {
+      "65610": "White"
+    }
   },
   {
     "_id": "6935c127b9a9b9042d41eafd",
@@ -56243,7 +56441,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-100w-dura-fan-regulator-2-module-isi-b"
+    "slug": "penta-100w-dura-fan-regulator-2-module-isi-b",
+    "variant": {
+      "65322": "White"
+    }
   },
   {
     "_id": "6935c128b9a9b9042d41eb0a",
@@ -56332,7 +56533,10 @@
       "std_pack": "10"
     },
     "product_family": "Penta",
-    "slug": "penta-650w-dura-dimmer-2-module-b"
+    "slug": "penta-650w-dura-dimmer-2-module-b",
+    "variant": {
+      "65402#": "White"
+    }
   },
   {
     "_id": "6935c128b9a9b9042d41eb0c",
@@ -70113,7 +70317,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-1m-black"
+    "slug": "fabio-plexy-glass-plate-1m-black",
+    "variant": {
+      "AHXPTOLV01": "Gold",
+      "AHXPTOWV01": "White",
+      "AHXPTOAV01": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec53",
@@ -70154,7 +70363,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-1m-gold"
+    "slug": "fabio-plexy-glass-plate-1m-gold",
+    "variant": {
+      "AHXPTOBV01": "Black",
+      "AHXPTOWV01": "White",
+      "AHXPTOAV01": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec54",
@@ -70195,7 +70409,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-1m-white"
+    "slug": "fabio-plexy-glass-plate-1m-white",
+    "variant": {
+      "AHXPTOBV01": "Black",
+      "AHXPTOLV01": "Gold",
+      "AHXPTOAV01": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec55",
@@ -70236,7 +70455,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-1m-marble"
+    "slug": "fabio-plexy-glass-plate-1m-marble",
+    "variant": {
+      "AHXPTOBV01": "Black",
+      "AHXPTOLV01": "Gold",
+      "AHXPTOWV01": "White"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec56",
@@ -70277,7 +70501,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-2m-black"
+    "slug": "fabio-plexy-glass-plate-2m-black",
+    "variant": {
+      "AHXPTOLV02": "Gold",
+      "AHXPTOWV02": "White",
+      "AHXPTOAV02": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec57",
@@ -70318,7 +70547,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-2m-gold"
+    "slug": "fabio-plexy-glass-plate-2m-gold",
+    "variant": {
+      "AHXPTOBV02": "Black",
+      "AHXPTOWV02": "White",
+      "AHXPTOAV02": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec58",
@@ -70359,7 +70593,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-2m-white"
+    "slug": "fabio-plexy-glass-plate-2m-white",
+    "variant": {
+      "AHXPTOBV02": "Black",
+      "AHXPTOLV02": "Gold",
+      "AHXPTOAV02": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec59",
@@ -70400,7 +70639,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-2m-marble"
+    "slug": "fabio-plexy-glass-plate-2m-marble",
+    "variant": {
+      "AHXPTOBV02": "Black",
+      "AHXPTOLV02": "Gold",
+      "AHXPTOWV02": "White"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec5a",
@@ -70441,7 +70685,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-3m-black"
+    "slug": "fabio-plexy-glass-plate-3m-black",
+    "variant": {
+      "AHXPTOLV03": "Gold",
+      "AHXPTOWV03": "White",
+      "AHXPTOAV03": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec5b",
@@ -70482,7 +70731,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-3m-gold"
+    "slug": "fabio-plexy-glass-plate-3m-gold",
+    "variant": {
+      "AHXPTOBV03": "Black",
+      "AHXPTOWV03": "White",
+      "AHXPTOAV03": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec5c",
@@ -70523,7 +70777,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-3m-white"
+    "slug": "fabio-plexy-glass-plate-3m-white",
+    "variant": {
+      "AHXPTOBV03": "Black",
+      "AHXPTOLV03": "Gold",
+      "AHXPTOAV03": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec5d",
@@ -70564,7 +70823,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-3m-marble"
+    "slug": "fabio-plexy-glass-plate-3m-marble",
+    "variant": {
+      "AHXPTOBV03": "Black",
+      "AHXPTOLV03": "Gold",
+      "AHXPTOWV03": "White"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec5e",
@@ -70606,7 +70870,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-3m-without-pillar-black"
+    "slug": "fabio-plexy-glass-plate-3m-without-pillar-black",
+    "variant": {
+      "AHXPTOLH03": "Gold",
+      "AHXPTOWH03": "White",
+      "AHXPTOAH03": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec5f",
@@ -70648,7 +70917,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-3m-without-pillar-gold"
+    "slug": "fabio-plexy-glass-plate-3m-without-pillar-gold",
+    "variant": {
+      "AHXPTOBH03": "Black",
+      "AHXPTOWH03": "White",
+      "AHXPTOAH03": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec60",
@@ -70690,7 +70964,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-3m-without-pillar-white"
+    "slug": "fabio-plexy-glass-plate-3m-without-pillar-white",
+    "variant": {
+      "AHXPTOBH03": "Black",
+      "AHXPTOLH03": "Gold",
+      "AHXPTOAH03": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec61",
@@ -70732,7 +71011,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-3m-without-pillar-marble"
+    "slug": "fabio-plexy-glass-plate-3m-without-pillar-marble",
+    "variant": {
+      "AHXPTOBH03": "Black",
+      "AHXPTOLH03": "Gold",
+      "AHXPTOWH03": "White"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec62",
@@ -70773,7 +71057,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-4m-black"
+    "slug": "fabio-plexy-glass-plate-4m-black",
+    "variant": {
+      "AHXPTOLV04": "Gold",
+      "AHXPTOWV04": "White",
+      "AHXPTOAV04": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec63",
@@ -70814,7 +71103,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-4m-gold"
+    "slug": "fabio-plexy-glass-plate-4m-gold",
+    "variant": {
+      "AHXPTOBV04": "Black",
+      "AHXPTOWV04": "White",
+      "AHXPTOAV04": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec64",
@@ -70855,7 +71149,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-4m-white"
+    "slug": "fabio-plexy-glass-plate-4m-white",
+    "variant": {
+      "AHXPTOBV04": "Black",
+      "AHXPTOLV04": "Gold",
+      "AHXPTOAV04": "Marble"
+    }
   },
   {
     "_id": "6935c136b9a9b9042d41ec65",
@@ -70896,7 +71195,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-4m-marble"
+    "slug": "fabio-plexy-glass-plate-4m-marble",
+    "variant": {
+      "AHXPTOBV04": "Black",
+      "AHXPTOLV04": "Gold",
+      "AHXPTOWV04": "White"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec66",
@@ -70937,7 +71241,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-6m-black"
+    "slug": "fabio-plexy-glass-plate-6m-black",
+    "variant": {
+      "AHXPTOLV06": "Gold",
+      "AHXPTOWV06": "White",
+      "AHXPTOAV06": "Marble"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec67",
@@ -70978,7 +71287,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-6m-gold"
+    "slug": "fabio-plexy-glass-plate-6m-gold",
+    "variant": {
+      "AHXPTOBV06": "Black",
+      "AHXPTOWV06": "White",
+      "AHXPTOAV06": "Marble"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec68",
@@ -71019,7 +71333,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-6m-white"
+    "slug": "fabio-plexy-glass-plate-6m-white",
+    "variant": {
+      "AHXPTOBV06": "Black",
+      "AHXPTOLV06": "Gold",
+      "AHXPTOAV06": "Marble"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec69",
@@ -71060,7 +71379,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-6m-marble"
+    "slug": "fabio-plexy-glass-plate-6m-marble",
+    "variant": {
+      "AHXPTOBV06": "Black",
+      "AHXPTOLV06": "Gold",
+      "AHXPTOWV06": "White"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec6a",
@@ -71102,7 +71426,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-8m-horizontal-black"
+    "slug": "fabio-plexy-glass-plate-8m-horizontal-black",
+    "variant": {
+      "AHXPTOLH08": "Gold",
+      "AHXPTOWH08": "White",
+      "AHXPTOAH08": "Marble"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec6b",
@@ -71144,7 +71473,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-8m-horizontal-gold"
+    "slug": "fabio-plexy-glass-plate-8m-horizontal-gold",
+    "variant": {
+      "AHXPTOBH08": "Black",
+      "AHXPTOWH08": "White",
+      "AHXPTOAH08": "Marble"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec6c",
@@ -71186,7 +71520,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-8m-horizontal-white"
+    "slug": "fabio-plexy-glass-plate-8m-horizontal-white",
+    "variant": {
+      "AHXPTOBH08": "Black",
+      "AHXPTOLH08": "Gold",
+      "AHXPTOAH08": "Marble"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec6d",
@@ -71228,7 +71567,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-8m-horizontal-marble"
+    "slug": "fabio-plexy-glass-plate-8m-horizontal-marble",
+    "variant": {
+      "AHXPTOBH08": "Black",
+      "AHXPTOLH08": "Gold",
+      "AHXPTOWH08": "White"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec6e",
@@ -71558,7 +71902,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-8m-vertical-black"
+    "slug": "fabio-plexy-glass-plate-8m-vertical-black",
+    "variant": {
+      "AHXPTOLV08": "Gold",
+      "AHXPTOWV08": "White",
+      "AHXPTOAV08": "Marble"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec76",
@@ -71600,7 +71949,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-8m-vertical-gold"
+    "slug": "fabio-plexy-glass-plate-8m-vertical-gold",
+    "variant": {
+      "AHXPTOBV08": "Black",
+      "AHXPTOWV08": "White",
+      "AHXPTOAV08": "Marble"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec77",
@@ -71642,7 +71996,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-8m-vertical-white"
+    "slug": "fabio-plexy-glass-plate-8m-vertical-white",
+    "variant": {
+      "AHXPTOBV08": "Black",
+      "AHXPTOLV08": "Gold",
+      "AHXPTOAV08": "Marble"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec78",
@@ -71684,7 +72043,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-8m-vertical-marble"
+    "slug": "fabio-plexy-glass-plate-8m-vertical-marble",
+    "variant": {
+      "AHXPTOBV08": "Black",
+      "AHXPTOLV08": "Gold",
+      "AHXPTOWV08": "White"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec79",
@@ -71725,7 +72089,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-9m-black"
+    "slug": "fabio-plexy-glass-plate-9m-black",
+    "variant": {
+      "AHXPTOLV09": "Gold",
+      "AHXPTOWV09": "White",
+      "AHXPTOAV09": "Marble"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec7a",
@@ -71766,7 +72135,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-9m-gold"
+    "slug": "fabio-plexy-glass-plate-9m-gold",
+    "variant": {
+      "AHXPTOBV09": "Black",
+      "AHXPTOWV09": "White",
+      "AHXPTOAV09": "Marble"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec7b",
@@ -71807,7 +72181,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-9m-white"
+    "slug": "fabio-plexy-glass-plate-9m-white",
+    "variant": {
+      "AHXPTOBV09": "Black",
+      "AHXPTOLV09": "Gold",
+      "AHXPTOAV09": "Marble"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec7c",
@@ -71848,7 +72227,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-9m-marble"
+    "slug": "fabio-plexy-glass-plate-9m-marble",
+    "variant": {
+      "AHXPTOBV09": "Black",
+      "AHXPTOLV09": "Gold",
+      "AHXPTOWV09": "White"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec7d",
@@ -71889,7 +72273,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-12m-black"
+    "slug": "fabio-plexy-glass-plate-12m-black",
+    "variant": {
+      "AHXPTOLV12": "Gold",
+      "AHXPTOWV12": "White",
+      "AHXPTOAV12": "Marble"
+    }
   },
   {
     "_id": "6935c137b9a9b9042d41ec7e",
@@ -71930,7 +72319,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-12m-gold"
+    "slug": "fabio-plexy-glass-plate-12m-gold",
+    "variant": {
+      "AHXPTOBV12": "Black",
+      "AHXPTOWV12": "White",
+      "AHXPTOAV12": "Marble"
+    }
   },
   {
     "_id": "6935c138b9a9b9042d41ec7f",
@@ -71971,7 +72365,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-12m-white"
+    "slug": "fabio-plexy-glass-plate-12m-white",
+    "variant": {
+      "AHXPTOBV12": "Black",
+      "AHXPTOLV12": "Gold",
+      "AHXPTOAV12": "Marble"
+    }
   },
   {
     "_id": "6935c138b9a9b9042d41ec80",
@@ -72012,7 +72411,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-12m-marble"
+    "slug": "fabio-plexy-glass-plate-12m-marble",
+    "variant": {
+      "AHXPTOBV12": "Black",
+      "AHXPTOLV12": "Gold",
+      "AHXPTOWV12": "White"
+    }
   },
   {
     "_id": "6935c138b9a9b9042d41ec81",
@@ -72053,7 +72457,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-16m-black"
+    "slug": "fabio-plexy-glass-plate-16m-black",
+    "variant": {
+      "AHXPTOLV16": "Gold",
+      "AHXPTOWV16": "White",
+      "AHXPTOAV16": "Marble"
+    }
   },
   {
     "_id": "6935c138b9a9b9042d41ec82",
@@ -72094,7 +72503,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-16m-gold"
+    "slug": "fabio-plexy-glass-plate-16m-gold",
+    "variant": {
+      "AHXPTOBV16": "Black",
+      "AHXPTOWV16": "White",
+      "AHXPTOAV16": "Marble"
+    }
   },
   {
     "_id": "6935c138b9a9b9042d41ec83",
@@ -72135,7 +72549,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-16m-white"
+    "slug": "fabio-plexy-glass-plate-16m-white",
+    "variant": {
+      "AHXPTOBV16": "Black",
+      "AHXPTOLV16": "Gold",
+      "AHXPTOAV16": "Marble"
+    }
   },
   {
     "_id": "6935c138b9a9b9042d41ec84",
@@ -72176,7 +72595,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-16m-marble"
+    "slug": "fabio-plexy-glass-plate-16m-marble",
+    "variant": {
+      "AHXPTOBV16": "Black",
+      "AHXPTOLV16": "Gold",
+      "AHXPTOWV16": "White"
+    }
   },
   {
     "_id": "6935c138b9a9b9042d41ec85",
@@ -72217,7 +72641,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-18m-black"
+    "slug": "fabio-plexy-glass-plate-18m-black",
+    "variant": {
+      "AHXPTOLV18": "Gold",
+      "AHXPTOWV18": "White",
+      "AHXPTOAV18": "Marble"
+    }
   },
   {
     "_id": "6935c138b9a9b9042d41ec86",
@@ -72258,7 +72687,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-18m-gold"
+    "slug": "fabio-plexy-glass-plate-18m-gold",
+    "variant": {
+      "AHXPTOBV18": "Black",
+      "AHXPTOWV18": "White",
+      "AHXPTOAV18": "Marble"
+    }
   },
   {
     "_id": "6935c138b9a9b9042d41ec87",
@@ -72299,7 +72733,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-18m-white"
+    "slug": "fabio-plexy-glass-plate-18m-white",
+    "variant": {
+      "AHXPTOBV18": "Black",
+      "AHXPTOLV18": "Gold",
+      "AHXPTOAV18": "Marble"
+    }
   },
   {
     "_id": "6935c138b9a9b9042d41ec88",
@@ -72340,7 +72779,12 @@
       "selling_price": null,
       "std_pack": "3"
     },
-    "slug": "fabio-plexy-glass-plate-18m-marble"
+    "slug": "fabio-plexy-glass-plate-18m-marble",
+    "variant": {
+      "AHXPTOBV18": "Black",
+      "AHXPTOLV18": "Gold",
+      "AHXPTOWV18": "White"
+    }
   },
   {
     "_id": "6935c138b9a9b9042d41ec89",
