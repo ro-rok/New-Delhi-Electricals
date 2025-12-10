@@ -145,6 +145,7 @@ const CategoryPage = () => {
   const [sortBy, setSortBy] = useState<SortOption>('name-asc');
   const [localSearch, setLocalSearch] = useState(searchQuery);
   const debouncedSearch = useDebounce(localSearch, 500);
+  const [selectedModule, setSelectedModule] = useState<string | null>(null);
 
   // Pagination state
   const [page, setPage] = useState(1);
@@ -180,7 +181,7 @@ const CategoryPage = () => {
       // Fetch all products for this category to get bounds and families
       const initialResponse = await getProducts({
         category: foundCategory.name,
-        pageSize: 1000, // Fetch more to populate product family filter
+        pageSize: 2000, // Fetch more to populate filters (families/series/modules)
       });
 
       setAllProducts(initialResponse.items);
@@ -233,28 +234,40 @@ const CategoryPage = () => {
         category: category.name,
         brand: selectedBrands.length === 1 ? selectedBrands[0] : undefined,
         series: selectedSeries.length === 1 ? selectedSeries[0] : undefined,
+        productFamily: selectedProductFamily || undefined,
+        color: selectedColor || undefined,
         minPrice: priceRange[0],
         maxPrice: priceRange[1],
         sortBy: sortField,
         sortOrder: sortOrder,
         q: debouncedSearch || undefined,
         page: pageNum,
-        pageSize: fetchSize,
+        pageSize: selectedModule ? 2000 : fetchSize,
+      });
+
+      const filteredItems = response.items.filter((product) => {
+        if (selectedProductFamily && product.product_family !== selectedProductFamily) return false;
+        if (selectedColor && (product.specs?.color || '').trim() !== selectedColor) return false;
+        if (selectedModule) {
+          const moduleVal = (product.specs?.mw ?? product.specs?.module_size ?? '').toString().trim();
+          if (moduleVal !== selectedModule) return false;
+        }
+        return true;
       });
 
       if (isNewFilter) {
-        setProducts(response.items);
+        setProducts(filteredItems);
       } else {
-        setProducts(prev => [...prev, ...response.items]);
+        setProducts(prev => [...prev, ...filteredItems]);
       }
 
-      setHasMore(response.items.length === fetchSize);
+      setHasMore(response.items.length === (selectedModule ? 2000 : fetchSize));
     } catch (error) {
       console.error('Error fetching filtered products:', error);
     } finally {
       setFilterLoading(false);
     }
-  }, [category, selectedBrands, selectedSeries, priceRange, sortBy, debouncedSearch]);
+  }, [category, selectedBrands, selectedSeries, selectedProductFamily, selectedColor, selectedModule, priceRange, sortBy, debouncedSearch]);
 
   useEffect(() => {
     fetchInitialData();
@@ -268,7 +281,7 @@ const CategoryPage = () => {
       }, 100);
       return () => clearTimeout(timer);
     }
-  }, [selectedBrands, selectedSeries, priceRange, sortBy, debouncedSearch]);
+  }, [selectedBrands, selectedSeries, selectedProductFamily, selectedColor, selectedModule, priceRange, sortBy, debouncedSearch, loading, category, fetchFilteredProducts]);
 
   const loadMore = useCallback(() => {
     if (!filterLoading && hasMore) {
@@ -278,16 +291,78 @@ const CategoryPage = () => {
     }
   }, [page, filterLoading, hasMore, fetchFilteredProducts]);
 
-  // Get available series and brands from current products
-  const availableSeries = useMemo(() => {
-    const seriesSet = new Set(products.map(p => p.product_family).filter(Boolean));
-    return Array.from(seriesSet).sort();
-  }, [products]);
+  // Get available families/series/brands/modules from all category products
+  const productFamilies = useMemo(() => {
+    const families = new Map<string, Product[]>();
+    allProducts.forEach(product => {
+      const family = product.product_family || 'Unknown';
+      if (!families.has(family)) {
+        families.set(family, []);
+      }
+      families.get(family)!.push(product);
+    });
+    return Array.from(families.entries())
+      .map(([family, prods]) => ({ name: family, count: prods.length, products: prods }))
+      .sort((a, b) => b.count - a.count);
+  }, [allProducts]);
 
   const availableBrands = useMemo(() => {
-    const brandSet = new Set(products.map(p => p.brand));
+    const brandSet = new Set(allProducts.map(p => p.brand));
     return brands.filter(b => brandSet.has(b.name));
-  }, [products, brands]);
+  }, [allProducts, brands]);
+
+  const availableSeries = useMemo(() => {
+    const source = selectedBrands.length
+      ? allProducts.filter(p => selectedBrands.includes(p.brand))
+      : allProducts;
+    const seriesSet = new Set(source.map(p => p.product_family).filter(Boolean));
+    return Array.from(seriesSet).sort();
+  }, [allProducts, selectedBrands]);
+
+  const availableColors = useMemo(() => {
+    if (!selectedProductFamily) return [];
+    const familyProducts = productFamilies.find(f => f.name === selectedProductFamily)?.products || [];
+    const colors = new Set<string>();
+    familyProducts.forEach(p => {
+      const color = p.specs?.color;
+      if (color && color.trim()) colors.add(color.trim());
+    });
+    return Array.from(colors).sort();
+  }, [productFamilies, selectedProductFamily]);
+
+  const availableModules = useMemo(() => {
+    let source = allProducts;
+    if (selectedBrands.length) {
+      source = source.filter(p => selectedBrands.includes(p.brand));
+    }
+    if (selectedSeries.length) {
+      source = source.filter(p => selectedSeries.includes(p.product_family));
+    }
+    if (selectedProductFamily) {
+      source = source.filter(p => p.product_family === selectedProductFamily);
+    }
+    const modules = new Set<string>();
+    source.forEach(p => {
+      const moduleVal = (p.specs?.mw ?? p.specs?.module_size ?? '').toString().trim();
+      if (moduleVal) modules.add(moduleVal);
+    });
+    return Array.from(modules).sort();
+  }, [allProducts, selectedBrands, selectedSeries, selectedProductFamily]);
+
+  // When brand changes, auto-select first matching series (if any) and clear invalid ones
+  useEffect(() => {
+    if (!selectedBrands.length) {
+      setSelectedSeries([]);
+      return;
+    }
+    const validSeries = availableSeries;
+    setSelectedSeries(prev => {
+      const stillValid = prev.filter(s => validSeries.includes(s));
+      if (stillValid.length > 0) return stillValid;
+      if (validSeries.length > 0) return [validSeries[0]];
+      return [];
+    });
+  }, [availableSeries, selectedBrands]);
 
   // Infinite scroll hook
   const { elementRef: loadMoreRef } = useInfiniteScroll({
@@ -332,6 +407,7 @@ const CategoryPage = () => {
     setSelectedSeries([]);
     setSelectedProductFamily(null);
     setSelectedColor(null);
+    setSelectedModule(null);
     if (priceBounds.min !== undefined && priceBounds.max !== undefined) {
       setPriceRange([priceBounds.min, priceBounds.max]);
     }
@@ -339,7 +415,7 @@ const CategoryPage = () => {
   };
 
   const hasActiveFilters = selectedBrands.length > 0 || selectedSeries.length > 0 ||
-    selectedProductFamily !== null || selectedColor !== null ||
+    selectedProductFamily !== null || selectedColor !== null || selectedModule !== null ||
     (priceBounds.min !== undefined && priceBounds.max !== undefined &&
       (priceRange[0] > priceBounds.min || priceRange[1] < priceBounds.max)) ||
     localSearch;
@@ -360,6 +436,59 @@ const CategoryPage = () => {
         </div>
       </div>
 
+      {/* Product Families */}
+      {productFamilies.length > 0 && (
+        <div className="space-y-3">
+          <Label>Product Families</Label>
+          <div className="space-y-2 max-h-48 overflow-y-auto">
+            {productFamilies.map(family => (
+              <label
+                key={family.name}
+                className="flex items-center gap-3 cursor-pointer hover:bg-secondary/50 p-2 rounded-lg transition-colors"
+              >
+                <Checkbox
+                  checked={selectedProductFamily === family.name}
+                  onCheckedChange={() => {
+                    if (selectedProductFamily === family.name) {
+                      setSelectedProductFamily(null);
+                      setSelectedColor(null);
+                    } else {
+                      setSelectedProductFamily(family.name);
+                      setSelectedColor(null);
+                    }
+                  }}
+                />
+                <span className="text-sm">{family.name}</span>
+                <span className="text-xs text-muted-foreground ml-auto">
+                  ({family.count})
+                </span>
+              </label>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Colors (depends on family) */}
+      {selectedProductFamily && availableColors.length > 0 && (
+        <div className="space-y-3">
+          <Label>Available Colors</Label>
+          <div className="flex flex-wrap gap-2">
+            {availableColors.map(color => (
+              <Button
+                key={color}
+                variant={selectedColor === color ? "secondary" : "outline"}
+                size="sm"
+                onClick={() => setSelectedColor(prev => prev === color ? null : color)}
+                className="gap-2"
+              >
+                <span className="inline-block w-3 h-3 rounded-full bg-muted-foreground/40" />
+                {color}
+              </Button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Brands */}
       <div className="space-y-3">
         <Label>Brands</Label>
@@ -375,7 +504,7 @@ const CategoryPage = () => {
               />
               <span className="text-sm">{brand.name}</span>
               <span className="text-xs text-muted-foreground ml-auto">
-                ({products.filter(p => p.brand === brand.name).length})
+                ({allProducts.filter(p => p.brand === brand.name).length})
               </span>
             </label>
           ))}
@@ -398,6 +527,47 @@ const CategoryPage = () => {
                 />
                 <span className="text-sm">{series}</span>
               </label>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Series */}
+      {availableSeries.length > 0 && (
+        <div className="space-y-3">
+          <Label>Series</Label>
+          <div className="space-y-2 max-h-48 overflow-y-auto">
+            {availableSeries.map(series => (
+              <label
+                key={series}
+                className="flex items-center gap-3 cursor-pointer hover:bg-secondary/50 p-2 rounded-lg transition-colors"
+              >
+                <Checkbox
+                  checked={selectedSeries.includes(series)}
+                  onCheckedChange={() => toggleSeries(series)}
+                />
+                <span className="text-sm">{series}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Module (Plates) */}
+      {availableModules.length > 0 && (
+        <div className="space-y-3">
+          <Label>Module</Label>
+          <div className="flex flex-wrap gap-2">
+            {availableModules.map(moduleVal => (
+              <Button
+                key={moduleVal}
+                variant={selectedModule === moduleVal ? "secondary" : "outline"}
+                size="sm"
+                onClick={() => setSelectedModule(prev => prev === moduleVal ? null : moduleVal)}
+                className="gap-2"
+              >
+                {moduleVal}M
+              </Button>
             ))}
           </div>
         </div>
@@ -609,7 +779,7 @@ const CategoryPage = () => {
                           transition={{ type: "spring", stiffness: 500, damping: 30 }}
                         >
                           <Badge variant="default" className="ml-1 h-5 w-5 p-0 flex items-center justify-center">
-                            {selectedBrands.length + selectedSeries.length + (selectedProductFamily ? 1 : 0) + (selectedColor ? 1 : 0) + (localSearch ? 1 : 0)}
+                            {selectedBrands.length + selectedSeries.length + (selectedProductFamily ? 1 : 0) + (selectedColor ? 1 : 0) + (selectedModule ? 1 : 0) + (localSearch ? 1 : 0)}
                           </Badge>
                         </motion.div>
                       )}
@@ -624,7 +794,7 @@ const CategoryPage = () => {
                         Filters
                         {hasActiveFilters && (
                           <Badge variant="default" className="ml-1">
-                            {selectedBrands.length + selectedSeries.length + (selectedProductFamily ? 1 : 0) + (selectedColor ? 1 : 0)}
+                            {selectedBrands.length + selectedSeries.length + (selectedProductFamily ? 1 : 0) + (selectedColor ? 1 : 0) + (selectedModule ? 1 : 0)}
                           </Badge>
                         )}
                       </Button>
@@ -677,6 +847,63 @@ const CategoryPage = () => {
                         </Button>
                       </motion.div>
                     ))}
+                    {selectedProductFamily && (
+                      <motion.div
+                        key={`family-${selectedProductFamily}`}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                      >
+                        <Button
+                          variant="secondary"
+                          size="sm"
+                          onClick={() => {
+                            setSelectedProductFamily(null);
+                            setSelectedColor(null);
+                          }}
+                          className="gap-1.5"
+                        >
+                          {selectedProductFamily}
+                          <X className="h-3 w-3" />
+                        </Button>
+                      </motion.div>
+                    )}
+                    {selectedColor && (
+                      <motion.div
+                        key={`color-${selectedColor}`}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                      >
+                        <Button
+                          variant="secondary"
+                          size="sm"
+                          onClick={() => setSelectedColor(null)}
+                          className="gap-1.5"
+                        >
+                          {selectedColor}
+                          <X className="h-3 w-3" />
+                        </Button>
+                      </motion.div>
+                    )}
+                    {selectedModule && (
+                      <motion.div
+                        key={`module-${selectedModule}`}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                      >
+                        <Button
+                          variant="secondary"
+                          size="sm"
+                          onClick={() => setSelectedModule(null)}
+                          className="gap-1.5"
+                        >
+                          {selectedModule}M
+                          <X className="h-3 w-3" />
+                        </Button>
+                      </motion.div>
+                    )}
                   </AnimatePresence>
                 </div>
 
