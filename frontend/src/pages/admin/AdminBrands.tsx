@@ -49,6 +49,8 @@ const AdminBrands = () => {
   const [imageModalOpen, setImageModalOpen] = useState(false);
   const [selectedProductForImage, setSelectedProductForImage] = useState<Product | null>(null);
   const [categories, setCategories] = useState<Category[]>([]);
+  const [totalProducts, setTotalProducts] = useState(0);
+  const [missingImagesTotal, setMissingImagesTotal] = useState(0);
 
   // Filters for Image Upload tab
   const [searchQuery, setSearchQuery] = useState('');
@@ -62,14 +64,17 @@ const AdminBrands = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const [brandsList, productsResponse, catsList] = await Promise.all([
+        const [brandsList, productsResponse, catsList, missingStats] = await Promise.all([
           getBrands(),
           getProducts({ pageSize: 1000 }),
           getCategories(),
+          getProducts({ pageSize: 1, missingImages: true }),
         ]);
         setBrands(brandsList);
         setProducts(productsResponse.items);
         setCategories(catsList);
+        setTotalProducts(productsResponse.total ?? productsResponse.items.length);
+        setMissingImagesTotal(missingStats.total ?? missingStats.items.length);
       } catch (error) {
         console.error('Failed to fetch brands:', error);
       } finally {
@@ -120,6 +125,10 @@ const AdminBrands = () => {
     };
     fetchMissing();
   }, [debouncedSearchQuery, categoryFilter, brandFilter, productFamilyFilter]);
+
+  const uploadedPercentage = totalProducts === 0
+    ? 0
+    : Math.round(((totalProducts - missingImagesTotal) / totalProducts) * 100);
 
   const getProductCount = (brandName: string) => {
     return products.filter(p => p.brand === brandName).length;
@@ -302,10 +311,18 @@ const AdminBrands = () => {
           </Card>
 
           <Card>
-            <CardContent className="p-4 flex items-center justify-between">
-              <div>
-                <p className="text-sm text-muted-foreground">Products needing images</p>
-                <p className="text-2xl font-semibold">{missingImageProducts.length}</p>
+            <CardContent className="p-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8">
+                <div>
+                  <p className="text-sm text-muted-foreground">Products needing images (filtered)</p>
+                  <p className="text-2xl font-semibold">{missingImageProducts.length}</p>
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Overall image coverage</p>
+                  <p className="text-2xl font-semibold">
+                    {uploadedPercentage}% {totalProducts > 0 ? `(${totalProducts - missingImagesTotal}/${totalProducts})` : ''}
+                  </p>
+                </div>
               </div>
               <Button variant="outline" onClick={() => {
                 // Refresh missing images list
