@@ -220,15 +220,8 @@ const CategoryPage = () => {
 
     setFilterLoading(true);
     try {
-      let sortField = 'name';
-      let sortOrder = 'asc';
-
-      switch (sortBy) {
-        case 'name-desc': sortOrder = 'desc'; break;
-        case 'price-asc': sortField = 'listPrice'; break;
-        case 'price-desc': sortField = 'listPrice'; sortOrder = 'desc'; break;
-        case 'newest': sortField = 'created_at'; sortOrder = 'desc'; break;
-      }
+      const sortField: 'name' | 'price' = sortBy.startsWith('price') ? 'price' : 'name';
+      const sortOrder: 'asc' | 'desc' = sortBy.endsWith('desc') ? 'desc' : 'asc';
 
       const response = await getProducts({
         category: category.name,
@@ -247,9 +240,24 @@ const CategoryPage = () => {
 
       const filteredItems = response.items.filter((product) => {
         if (selectedProductFamily && product.product_family !== selectedProductFamily) return false;
-        if (selectedColor && (product.specs?.color || '').trim() !== selectedColor) return false;
+
+        if (selectedColor) {
+          const rawColor = product.specs?.color;
+          const color = typeof rawColor === 'string'
+            ? rawColor.trim()
+            : rawColor != null
+              ? String(rawColor).trim()
+              : '';
+          if (color !== selectedColor) return false;
+        }
+
         if (selectedModule) {
-          const moduleVal = (product.specs?.mw ?? product.specs?.module_size ?? '').toString().trim();
+          const rawModule = product.specs?.mw ?? product.specs?.module_size ?? '';
+          const moduleVal = typeof rawModule === 'string'
+            ? rawModule.trim()
+            : rawModule != null
+              ? String(rawModule).trim()
+              : '';
           if (moduleVal !== selectedModule) return false;
         }
         return true;
@@ -324,8 +332,14 @@ const CategoryPage = () => {
     const familyProducts = productFamilies.find(f => f.name === selectedProductFamily)?.products || [];
     const colors = new Set<string>();
     familyProducts.forEach(p => {
-      const color = p.specs?.color;
-      if (color && color.trim()) colors.add(color.trim());
+      const rawColor = p.specs?.color;
+      if (typeof rawColor === 'string') {
+        const trimmed = rawColor.trim();
+        if (trimmed) colors.add(trimmed);
+      } else if (rawColor != null) {
+        const trimmed = String(rawColor).trim();
+        if (trimmed) colors.add(trimmed);
+      }
     });
     return Array.from(colors).sort();
   }, [productFamilies, selectedProductFamily]);
@@ -343,7 +357,12 @@ const CategoryPage = () => {
     }
     const modules = new Set<string>();
     source.forEach(p => {
-      const moduleVal = (p.specs?.mw ?? p.specs?.module_size ?? '').toString().trim();
+      const rawModule = p.specs?.mw ?? p.specs?.module_size ?? '';
+      const moduleVal = typeof rawModule === 'string'
+        ? rawModule.trim()
+        : rawModule != null
+          ? String(rawModule).trim()
+          : '';
       if (moduleVal) modules.add(moduleVal);
     });
     return Array.from(modules).sort();

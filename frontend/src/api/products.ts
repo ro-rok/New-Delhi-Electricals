@@ -1,4 +1,4 @@
-import { Product, Category, Brand, CatalogSource } from '@/types/product';
+import { Product, Category, Brand } from '@/types/product';
 import { slugify } from '@/lib/utils';
 
 const API_BASE = (import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000').replace(/\/+$/, '');
@@ -75,6 +75,7 @@ function transformProduct(backendProduct: any): Product {
     sourceFile,
     category: backendProduct.category,
     subcategory: backendProduct.subcategory,
+    series: backendProduct.series ?? backendProduct.product_family ?? '',
     product_family: product_family,
     listPrice: typeof listPrice === 'number' ? listPrice : parseInt(String(listPrice), 10) || 0,
     currency: backendProduct.currency || 'INR',
@@ -92,13 +93,13 @@ function transformProduct(backendProduct: any): Product {
   };
 }
 
-function transformSpecs(specs: any): Record<string, string | number | boolean | null> {
+function transformSpecs(specs: Record<string, unknown> | null | undefined): Record<string, string | number | boolean | null> {
   if (!specs) return {};
   const result: Record<string, string | number | boolean | null> = {};
   Object.entries(specs).forEach(([key, value]) => {
     if (value === undefined) return;
     if (value === null || typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
-      result[key] = value;
+      result[key] = value as string | number | boolean | null;
     } else if (value && typeof value === 'object' && '$numberDouble' in value) {
       const num = parseFloat((value as any)['$numberDouble']);
       result[key] = Number.isNaN(num) ? null : num;
