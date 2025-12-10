@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/((?!api|public|assets|_next|static).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+
