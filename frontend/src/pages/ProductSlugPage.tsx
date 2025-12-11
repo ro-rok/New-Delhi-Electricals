@@ -364,74 +364,80 @@ const ProductSlugPage = () => {
       <main>
         {/* Hero Section with left image and right content */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-20 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 md:gap-12 lg:gap-16 items-center">
-          <div className="relative min-h-[320px] md:min-h-[420px] lg:min-h-[500px] max-h-[560px] bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black rounded-3xl overflow-hidden flex items-center justify-center shadow-lg border border-gray-100 dark:border-gray-900 p-4 sm:p-6 md:p-8">
-            <AnimatePresence mode="wait">
-              {productImages.length > 0 && !imageError ? (
-                <motion.img
-                  key={currentImageIndex}
-                  src={productImages[currentImageIndex]}
-                  alt={product.name}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="w-full h-full max-h-[420px] md:max-h-[500px] lg:max-h-[560px] object-contain"
-                  onError={() => {
-                    setImageError(true);
-                  }}
-                />
-              ) : (
-                <motion.div
-                  key="placeholder"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  className="text-center"
-                >
-                  <div className="text-[96px] md:text-[140px] font-extralight text-gray-200 dark:text-gray-800 leading-none">
-                    {product.brand.charAt(0).toUpperCase()}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+          <div className="space-y-3">
+            <div className="relative min-h-[320px] md:min-h-[420px] lg:min-h-[500px] max-h-[560px] bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black rounded-3xl overflow-hidden flex items-center justify-center shadow-lg border border-gray-100 dark:border-gray-900 p-4 sm:p-6 md:p-8">
+              <AnimatePresence mode="wait">
+                {productImages.length > 0 && !imageError ? (
+                  <motion.img
+                    key={currentImageIndex}
+                    src={productImages[currentImageIndex]}
+                    alt={product.name}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+                    className="w-full h-full max-h-[420px] md:max-h-[500px] lg:max-h-[560px] object-contain"
+                    onError={() => {
+                      setImageError(true);
+                    }}
+                  />
+                ) : (
+                  <motion.div
+                    key="placeholder"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-center"
+                  >
+                    <div className="text-[96px] md:text-[140px] font-extralight text-gray-200 dark:text-gray-800 leading-none">
+                      {product.brand.charAt(0).toUpperCase()}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
-            {/* Image Navigation */}
-            {productImages.length > 1 && !imageError && (
-              <>
-                <motion.button
-                  onClick={prevImage}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 dark:bg-black/90 backdrop-blur-md flex items-center justify-center hover:bg-white dark:hover:bg-black transition-all shadow-xl border border-gray-100 dark:border-gray-800"
-                >
-                  <ChevronLeft className="h-6 w-6 text-gray-900 dark:text-white" />
-                </motion.button>
-                <motion.button
-                  onClick={nextImage}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 dark:bg-black/90 backdrop-blur-md flex items-center justify-center hover:bg-white dark:hover:bg-black transition-all shadow-xl border border-gray-100 dark:border-gray-800"
-                >
-                  <ChevronRight className="h-6 w-6 text-gray-900 dark:text-white" />
-                </motion.button>
-                <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2.5">
-                  {productImages.map((_, idx) => (
-                    <motion.button
-                      key={idx}
-                      onClick={() => setCurrentImageIndex(idx)}
-                      whileHover={{ scale: 1.2 }}
-                      whileTap={{ scale: 0.9 }}
-                      className={cn(
-                        "h-1.5 rounded-full transition-all duration-300",
-                        idx === currentImageIndex
-                          ? "bg-gray-900 dark:bg-white w-8"
-                          : "bg-gray-300 dark:bg-gray-700 w-1.5"
-                      )}
-                    />
-                  ))}
-                </div>
-              </>
-            )}
+              {/* Image Navigation */}
+              {productImages.length > 1 && !imageError && (
+                <>
+                  <motion.button
+                    onClick={prevImage}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 dark:bg-black/90 backdrop-blur-md flex items-center justify-center hover:bg-white dark:hover:bg-black transition-all shadow-xl border border-gray-100 dark:border-gray-800"
+                  >
+                    <ChevronLeft className="h-6 w-6 text-gray-900 dark:text-white" />
+                  </motion.button>
+                  <motion.button
+                    onClick={nextImage}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 dark:bg-black/90 backdrop-blur-md flex items-center justify-center hover:bg-white dark:hover:bg-black transition-all shadow-xl border border-gray-100 dark:border-gray-800"
+                  >
+                    <ChevronRight className="h-6 w-6 text-gray-900 dark:text-white" />
+                  </motion.button>
+                  <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2.5">
+                    {productImages.map((_, idx) => (
+                      <motion.button
+                        key={idx}
+                        onClick={() => setCurrentImageIndex(idx)}
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.9 }}
+                        className={cn(
+                          "h-1.5 rounded-full transition-all duration-300",
+                          idx === currentImageIndex
+                            ? "bg-gray-900 dark:bg-white w-8"
+                            : "bg-gray-300 dark:bg-gray-700 w-1.5"
+                        )}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+
+            <p className="text-[11px] text-center leading-relaxed text-gray-600 dark:text-gray-400 bg-white/80 dark:bg-black/60 border border-gray-200/70 dark:border-gray-800/70 rounded-full px-4 py-2 shadow-sm backdrop-blur">
+              Note: Images are for color reference only. Actual module type, ampere rating, and plate configuration may differ.
+            </p>
           </div>
 
           <div className="space-y-6 w-full max-w-xl lg:max-w-2xl mx-auto lg:mx-0">
@@ -779,7 +785,7 @@ const ProductSlugPage = () => {
                         whileHover={{ y: -8, scale: 1.02 }}
                         className="bg-white dark:bg-black rounded-xl p-4 md:p-5 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-xl transition-all duration-300"
                       >
-                        <div className="aspect-square bg-gray-50 dark:bg-gray-900 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
+                        <div className="relative aspect-square bg-gray-50 dark:bg-gray-900 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                           {p.images && p.images.length > 0 && p.images[0] ? (
                             <img
                               src={p.images[0]}
@@ -791,6 +797,9 @@ const ProductSlugPage = () => {
                               {p.brand.charAt(0).toUpperCase()}
                             </span>
                           )}
+                          <div className="absolute inset-x-4 bottom-4 text-[10px] leading-snug text-center text-gray-600 dark:text-gray-400 bg-white/80 dark:bg-black/70 border border-gray-200/70 dark:border-gray-800/70 rounded-full px-3 py-1 shadow-sm backdrop-blur">
+                            Note: Images are for color reference only. Actual module type, ampere rating, and plate configuration may differ.
+                          </div>
                         </div>
                         <h3 className="font-normal text-gray-900 dark:text-white mb-2 line-clamp-2 text-sm">
                           {p.name}
