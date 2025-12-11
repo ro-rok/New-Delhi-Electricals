@@ -34,6 +34,18 @@ import PlatesBulkImageModal from '@/components/admin/PlatesBulkImageModal';
 const ITEMS_PER_PAGE = 10;
 
 const AdminProducts = () => {
+  const publicSiteBase =
+    (import.meta.env.VITE_PUBLIC_SITE_URL as string | undefined)?.replace(/\/+$/, "") ||
+    (typeof window !== "undefined" ? window.location.origin : "");
+
+  const buildPublicProductUrl = (product: Product) => {
+    const path = getProductUrl(product);
+    if (/^https?:\/\//i.test(path)) {
+      return path;
+    }
+    return `${publicSiteBase}${path.startsWith("/") ? path : `/${path}`}`;
+  };
+
   const [searchQuery, setSearchQuery] = useState('');
   const debouncedSearchQuery = useDebounce(searchQuery, 500);
   const [categoryFilter, setCategoryFilter] = useState('all');
@@ -344,7 +356,7 @@ const AdminProducts = () => {
                       </div>
                       <div>
                         <Link
-                          to={getProductUrl(product)}
+                          to={buildPublicProductUrl(product)}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="font-medium text-sm hover:text-primary hover:underline transition-colors"
@@ -391,7 +403,7 @@ const AdminProducts = () => {
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
                         <DropdownMenuItem asChild>
-                          <Link to={getProductUrl(product)}>
+                          <Link to={buildPublicProductUrl(product)}>
                             <Eye className="h-4 w-4 mr-2" />
                             View
                           </Link>

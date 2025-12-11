@@ -527,7 +527,7 @@ const ProductSlugPage = () => {
                       {/* Current Color Swatch */}
                       <div className="flex items-center gap-2">
                         <div
-                          className={cn(
+                        className={cn(
                             "w-12 h-12 rounded-full border-4 shadow-md transition-all cursor-default",
                             "ring-2 ring-offset-2 ring-gray-900 dark:ring-white ring-offset-white dark:ring-offset-black"
                           )}
@@ -539,7 +539,7 @@ const ProductSlugPage = () => {
                         />
                         <span className="text-sm font-medium text-gray-900 dark:text-white">
                           {product.specs.color as string}
-                        </span>
+                      </span>
                       </div>
                       {/* Variant Color Swatches from variant field */}
                       {colorVariantsFromVariant.map(({ sku, colorName }) => {
@@ -555,7 +555,7 @@ const ProductSlugPage = () => {
                         
                         if (variantUrl) {
                           return (
-                            <Link
+                        <Link
                               key={sku}
                               to={variantUrl}
                               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
@@ -570,7 +570,7 @@ const ProductSlugPage = () => {
                               <span className="text-xs text-gray-500 dark:text-gray-500">
                                 {colorName}
                               </span>
-                            </Link>
+                        </Link>
                           );
                         }
                         

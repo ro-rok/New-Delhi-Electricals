@@ -1,56 +1,165 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+const googleRating = {
+  score: 4.2,
+  count: 155,
+  link: "https://www.google.com/search?q=new+delhi+electricals#lrd=0x390ce21918d6304b:0xd38324f4dee9235b,1,,,"
+};
+
 const reviews = [
   {
-    name: "Rajesh Kumar",
+    name: "Yogesh Shrestha",
     rating: 5,
-    text: "Best electrical shop in South Delhi! Been buying from them for 15 years. Always genuine products and excellent service.",
+    text: "Variety of genuine electrical appliances with warranty and refund support; prices are reasonable and they accept cards.",
+    date: "5 years ago"
+  },
+  {
+    name: "Neeraj Kumar",
+    rating: 5,
+    text: "Lowest price this shop.",
     date: "2 months ago"
   },
   {
-    name: "Priya Sharma",
+    name: "SUNILKUMAR K R",
     rating: 5,
-    text: "Very reliable. Got all my home wiring materials from here. Quality products at honest prices. Highly recommended!",
-    date: "3 weeks ago"
+    text: "All electrical items available at reasonable rate. Good shop, but a bit crowded for pickups.",
+    date: "4 years ago"
   },
   {
-    name: "Amit Singh",
+    name: "Mohd Sultan",
     rating: 5,
-    text: "Professional service and quick delivery. They helped me choose the right MCBs for my entire project. Great technical knowledge.",
-    date: "1 month ago"
+    text: "Good electronic components and plenty of electrical items — great for bulk and retail buyers.",
+    date: "3 years ago"
   },
   {
-    name: "Neha Gupta",
+    name: "Kavita Upadhyay",
     rating: 5,
-    text: "Trusted them for my villa's electrical work. All products were genuine ABB and Polycab. Worth every rupee!",
-    date: "2 weeks ago"
+    text: "Cost affordable and discounted prices on wires, cables, switches and peripherals.",
+    date: "7 years ago"
   },
   {
-    name: "Vikram Malhotra",
+    name: "Vikas Kumar",
     rating: 5,
-    text: "Outstanding! Quick WhatsApp support and same-day delivery. This is how electrical shops should operate.",
-    date: "1 week ago"
+    text: "Best electrical shop in Malviya Nagar with good product quality at best prices.",
+    date: "4 years ago"
   },
   {
-    name: "Anita Verma",
+    name: "Abhishek Gupta",
     rating: 5,
-    text: "27 years in business and it shows. Knowledgeable staff, quality products, and they stand behind what they sell.",
-    date: "3 months ago"
+    text: "Best shop, best prices wholesale and retail; variety of electrical parts available.",
+    date: "5 years ago"
   },
   {
-    name: "Suresh Reddy",
+    name: "Gaurav Bahl",
     rating: 5,
-    text: "My go-to place for all electrical needs. Fair pricing, genuine products, and excellent after-sales support.",
-    date: "5 days ago"
+    text: "Best place to buy electrical stuff, offering the best possible discounts in South Delhi.",
+    date: "5 years ago"
   },
   {
-    name: "Kavita Jain",
+    name: "Vasu Narula",
     rating: 5,
-    text: "Impressed with their expertise. They suggested better alternatives that saved me money without compromising quality.",
-    date: "1 month ago"
+    text: "One-stop shop for electrical items at a great price — personal favourite.",
+    date: "7 years ago"
+  },
+  {
+    name: "Ved Gandhi",
+    rating: 5,
+    text: "Very good place for buying electric items at reasonable price.",
+    date: "7 years ago"
+  },
+  {
+    name: "sukant samal",
+    rating: 5,
+    text: "All kinds of electronic products available; good shop in Malviya Nagar.",
+    date: "4 years ago"
+  },
+  {
+    name: "M. DEV",
+    rating: 5,
+    text: "Good place to shop electrical items.",
+    date: "1 year ago"
+  },
+  {
+    name: "Himanshu Baluni",
+    rating: 5,
+    text: "Crowded place but you get good items at good price.",
+    date: "4 years ago"
+  },
+  {
+    name: "Sanjiv Bhardwaj",
+    rating: 5,
+    text: "Well behaved and reasonable price. All good.",
+    date: "3 years ago"
+  },
+  {
+    name: "Vijay Bisht",
+    rating: 5,
+    text: "Good products with very reasonable price.",
+    date: "4 years ago"
+  },
+  {
+    name: "Renu Saini",
+    rating: 5,
+    text: "They are behaving very good to their customers.",
+    date: "6 years ago"
+  },
+  {
+    name: "Jagdeep K Kataria",
+    rating: 5,
+    text: "Nice shop, got everything electrical components.",
+    date: "7 years ago"
+  },
+  {
+    name: "Dheeraj Ashiwal",
+    rating: 5,
+    text: "Best rates and variety of electrical material.",
+    date: "4 years ago"
+  },
+  {
+    name: "Bharat Chauhan",
+    rating: 5,
+    text: "Cheaper price as compared to other shops.",
+    date: "5 years ago"
+  },
+  {
+    name: "Mohit Tiwari",
+    rating: 5,
+    text: "Amazon se sasta and best maal yaha hai aayyii shapat (cheaper and best than Amazon).",
+    date: "3 years ago"
+  },
+  {
+    name: "vishal kapoor",
+    rating: 4,
+    text: "Huge variety from fans to lights to switches to cables; economical prices but usually crowded.",
+    date: "5 years ago"
+  },
+  {
+    name: "Asli Deep",
+    rating: 4,
+    text: "Little bit crowded, good products, cheapest electric goods available.",
+    date: "5 years ago"
+  },
+  {
+    name: "Ajay Jain",
+    rating: 4,
+    text: "For every electrical need at reasonable price.",
+    date: "5 years ago"
+  },
+  {
+    name: "Manish Kumar Singh",
+    rating: 4,
+    text: "Any electrical stuff from wires to fittings at reasonable price.",
+    date: "5 years ago"
+  },
+  {
+    name: "Kailash Kumar",
+    rating: 4,
+    text: "Wholesale electrical item shop in South Delhi.",
+    date: "4 years ago"
   }
 ];
 
@@ -94,17 +203,27 @@ const Testimonials = () => {
   return (
     <section ref={sectionRef} className="py-20 bg-gradient-to-b from-background to-secondary/30 overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
-        <motion.div style={{ y }} className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 tracking-tight">
+        <motion.div style={{ y }} className="text-center mb-12 space-y-3">
+          <h2 className="text-4xl font-bold tracking-tight">
             Trusted by Professionals & Homeowners
           </h2>
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <div className="flex gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-              ))}
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <div className="flex gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className={`w-5 h-5 ${i < Math.round(googleRating.score) ? "fill-accent text-accent" : "text-muted-foreground/40"}`}
+                  />
+                ))}
+              </div>
+              <span>{googleRating.score.toFixed(1)} on Google · {googleRating.count} reviews</span>
             </div>
-            <span className="text-sm text-muted-foreground">5.0 on Google</span>
+            <Button asChild variant="outline" size="sm" className="h-9">
+              <a href={googleRating.link} target="_blank" rel="noreferrer">
+                View on Google
+              </a>
+            </Button>
           </div>
         </motion.div>
 

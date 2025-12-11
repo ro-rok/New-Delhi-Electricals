@@ -1,9 +1,12 @@
+from datetime import datetime
+
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 
 from .config import settings
 from .db import get_db_dep
 from .routes import auth, catalog_import, products
+from .keepalive_service import keepalive_service
 
 
 app = FastAPI(title=settings.APP_NAME)
@@ -61,5 +64,25 @@ async def db_health(db=Depends(get_db_dep)):
     # simple ping; motor doesn't have explicit ping, but a find_one is enough
     await db.command("ping")
     return {"status": "ok"}
+
+
+@app.get("/api/keepalive", tags=["system"])
+async def keepalive():
+    """Endpoint the keep-alive loop pings to keep the service warm."""
+    return {
+        "message": "keepalive ok",
+        "timestamp": datetime.utcnow().isoformat() + "Z",
+    }
+
+
+@app.on_event("startup")
+async def start_keepalive():
+    # Only start once; service handles internal loop and cancellation
+    keepalive_service.start()
+
+
+@app.on_event("shutdown")
+async def stop_keepalive():
+    await keepalive_service.stop()
 
 

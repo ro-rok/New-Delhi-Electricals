@@ -13,6 +13,7 @@ export interface Product {
   sourceFile?: string;
   category: string;
   subcategory?: string;
+  series?: string;
   product_family: string;
   listPrice: number;
   currency: string;

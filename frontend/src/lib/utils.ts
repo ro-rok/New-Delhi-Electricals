@@ -22,6 +22,10 @@ export function getProductUrl(product: Product): string {
   // Prefer backend-provided url_path (already includes leading slash)
   const providedPath = (product as any).url_path || product.urlPath;
   if (providedPath) {
+    // If backend already sends an absolute URL, use it directly
+    if (/^https?:\/\//i.test(providedPath)) {
+      return providedPath;
+    }
     return providedPath.startsWith("/") ? providedPath : `/${providedPath}`;
   }
 
