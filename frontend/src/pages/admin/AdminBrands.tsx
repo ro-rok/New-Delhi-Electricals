@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useDebounce } from '@/hooks/useDebounce';
 import { Plus, Edit, Trash2, MoreHorizontal, ExternalLink, Image as ImageIcon, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -51,6 +51,7 @@ const AdminBrands = () => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [totalProducts, setTotalProducts] = useState(0);
   const [missingImagesTotal, setMissingImagesTotal] = useState(0);
+  const [filteredMissingImagesCount, setFilteredMissingImagesCount] = useState(0);
 
   // Filters for Image Upload tab
   const [searchQuery, setSearchQuery] = useState('');
@@ -58,6 +59,7 @@ const AdminBrands = () => {
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [brandFilter, setBrandFilter] = useState('all');
   const [productFamilyFilter, setProductFamilyFilter] = useState('all');
+  const [colorFilter, setColorFilter] = useState('all');
   const [allProductFamilies, setAllProductFamilies] = useState<string[]>([]);
 
   useEffect(() => {
@@ -86,7 +88,7 @@ const AdminBrands = () => {
 
   // Fetch all product families for filter options
   useEffect(() => {
-    const fetchFamilies = async () => {
+    const fetchFilterOptions = async () => {
       try {
         const response = await getProducts({ pageSize: 1000 });
         const families = new Set<string>();
@@ -97,11 +99,45 @@ const AdminBrands = () => {
         });
         setAllProductFamilies(Array.from(families).sort());
       } catch (error) {
-        console.error('Failed to fetch product families:', error);
+        console.error('Failed to fetch filter options:', error);
       }
     };
-    fetchFamilies();
+    fetchFilterOptions();
   }, []);
+
+  // Compute available colors based on selected product family
+  const availableColors = useMemo(() => {
+    if (productFamilyFilter === 'all') {
+      // If no product family selected, show all colors
+      const colors = new Set<string>();
+      products.forEach(product => {
+        const color = product.specs?.color;
+        if (color && typeof color === 'string' && color.trim()) {
+          colors.add(color.trim());
+        }
+      });
+      return Array.from(colors).sort();
+    } else {
+      // Only show colors for the selected product family
+      const colors = new Set<string>();
+      products.forEach(product => {
+        if (product.product_family === productFamilyFilter) {
+          const color = product.specs?.color;
+          if (color && typeof color === 'string' && color.trim()) {
+            colors.add(color.trim());
+          }
+        }
+      });
+      return Array.from(colors).sort();
+    }
+  }, [products, productFamilyFilter]);
+
+  // Reset color filter when product family changes if current color is not available
+  useEffect(() => {
+    if (colorFilter !== 'all' && !availableColors.includes(colorFilter)) {
+      setColorFilter('all');
+    }
+  }, [availableColors, colorFilter]);
 
   // Fetch products missing images with filters
   useEffect(() => {
@@ -115,8 +151,10 @@ const AdminBrands = () => {
           category: categoryFilter !== 'all' ? categoryFilter : undefined,
           brand: brandFilter !== 'all' ? brandFilter : undefined,
           series: productFamilyFilter !== 'all' ? productFamilyFilter : undefined,
+          color: colorFilter !== 'all' ? colorFilter : undefined,
         });
         setMissingImageProducts(missing.items);
+        setFilteredMissingImagesCount(missing.total ?? missing.items.length);
       } catch (error) {
         console.error('Failed to fetch products without images:', error);
       } finally {
@@ -124,7 +162,7 @@ const AdminBrands = () => {
       }
     };
     fetchMissing();
-  }, [debouncedSearchQuery, categoryFilter, brandFilter, productFamilyFilter]);
+  }, [debouncedSearchQuery, categoryFilter, brandFilter, productFamilyFilter, colorFilter]);
 
   const uploadedPercentage = totalProducts === 0
     ? 0
@@ -306,6 +344,17 @@ const AdminBrands = () => {
                     ))}
                   </SelectContent>
                 </Select>
+                <Select value={colorFilter} onValueChange={setColorFilter}>
+                  <SelectTrigger className="w-full md:w-48">
+                    <SelectValue placeholder="Color" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Colors</SelectItem>
+                    {availableColors.map(color => (
+                      <SelectItem key={color} value={color}>{color}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
             </CardContent>
           </Card>
@@ -315,7 +364,7 @@ const AdminBrands = () => {
               <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8">
                 <div>
                   <p className="text-sm text-muted-foreground">Products needing images (filtered)</p>
-                  <p className="text-2xl font-semibold">{missingImageProducts.length}</p>
+                  <p className="text-2xl font-semibold">{filteredMissingImagesCount}</p>
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Overall image coverage</p>
@@ -324,19 +373,35 @@ const AdminBrands = () => {
                   </p>
                 </div>
               </div>
-              <Button variant="outline" onClick={() => {
-                // Refresh missing images list
+              <Button variant="outline" onClick={async () => {
+                // Refresh missing images list and overall stats
                 setLoadingMissingImages(true);
-                getProducts({
-                  pageSize: 1000,
-                  missingImages: true,
-                  q: debouncedSearchQuery || undefined,
-                  category: categoryFilter !== 'all' ? categoryFilter : undefined,
-                  brand: brandFilter !== 'all' ? brandFilter : undefined,
-                  series: productFamilyFilter !== 'all' ? productFamilyFilter : undefined,
-                })
-                  .then(res => setMissingImageProducts(res.items))
-                  .finally(() => setLoadingMissingImages(false));
+                try {
+                  // Fetch filtered missing images
+                  const missingRes = await getProducts({
+                    pageSize: 1000,
+                    missingImages: true,
+                    q: debouncedSearchQuery || undefined,
+                    category: categoryFilter !== 'all' ? categoryFilter : undefined,
+                    brand: brandFilter !== 'all' ? brandFilter : undefined,
+                    series: productFamilyFilter !== 'all' ? productFamilyFilter : undefined,
+                    color: colorFilter !== 'all' ? colorFilter : undefined,
+                  });
+                  setMissingImageProducts(missingRes.items);
+                  setFilteredMissingImagesCount(missingRes.total ?? missingRes.items.length);
+
+                  // Fetch overall stats (without filters) to update coverage
+                  const [allProductsRes, missingStatsRes] = await Promise.all([
+                    getProducts({ pageSize: 1 }),
+                    getProducts({ pageSize: 1, missingImages: true }),
+                  ]);
+                  setTotalProducts(allProductsRes.total ?? allProductsRes.items.length);
+                  setMissingImagesTotal(missingStatsRes.total ?? missingStatsRes.items.length);
+                } catch (error) {
+                  console.error('Failed to refresh data:', error);
+                } finally {
+                  setLoadingMissingImages(false);
+                }
               }}>
                 Refresh
               </Button>
