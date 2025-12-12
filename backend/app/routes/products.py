@@ -1,3 +1,4 @@
+import re
 from typing import Any, List
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
@@ -62,10 +63,26 @@ async def list_products(
         and_conditions.append({"category": {"$regex": category, "$options": "i"}})
     
     if subcategory:
-        and_conditions.append({"subcategory": {"$regex": subcategory, "$options": "i"}})
+        # Use exact match (case-insensitive) for subcategory, handle whitespace
+        # Escape special regex characters (like parentheses in "Miniature Circuit Breakers (MCBs)")
+        subcategory_trimmed = subcategory.strip()
+        subcategory_escaped = re.escape(subcategory_trimmed)
+        and_conditions.append({
+            "subcategory": {
+                "$regex": f"^{subcategory_escaped}$",
+                "$options": "i"
+            }
+        })
         
     if brand:
-        and_conditions.append({"brand": {"$regex": brand, "$options": "i"}})
+        # Use exact match (case-insensitive) for brand, handle whitespace
+        brand_trimmed = brand.strip()
+        and_conditions.append({
+            "brand": {
+                "$regex": f"^{brand_trimmed}$",
+                "$options": "i"
+            }
+        })
         
     if series:
         and_conditions.append({
@@ -115,12 +132,19 @@ async def list_products(
     else:
         query = {}
     
+    # Debug logging (can be removed in production)
+    import logging
+    logger = logging.getLogger(__name__)
+    logger.debug(f"Query: {query}")
+    logger.debug(f"Filters - category: {category}, subcategory: {subcategory}, brand: {brand}")
+    
     # Build sort query
     sort_field = "name" if sort_by == "name" else "list_price"
     sort_direction = 1 if sort_order == "asc" else -1
     sort_query = [(sort_field, sort_direction)]
     
     total = await db.products.count_documents(query)
+    logger.debug(f"Total documents matching query: {total}")
     cursor = db.products.find(query).sort(sort_query).skip(skip).limit(page_size)
     items: List[ProductInDB] = []
     async for doc in cursor:

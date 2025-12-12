@@ -61,10 +61,11 @@ function transformProduct(backendProduct: any): Product {
   // Extract variant field (maps SKU -> Color Name) - it's at top level
   const variant = backendProduct.variant || undefined;
   
-  console.log('Transform product variant extraction:', {
-    'backendProduct.variant': backendProduct.variant,
-    'final variant': variant,
-  });
+  // Only log variant extraction in development if needed (commented out to reduce noise)
+  // console.log('Transform product variant extraction:', {
+  //   'backendProduct.variant': backendProduct.variant,
+  //   'final variant': variant,
+  // });
 
   return {
     id: backendProduct._id || backendProduct.id || backendProduct.sku,
@@ -114,6 +115,7 @@ function transformSpecs(specs: Record<string, unknown> | null | undefined): Reco
 export async function getProducts(params?: {
   q?: string;
   category?: string;
+  subcategory?: string;
   brand?: string;
   series?: string;
   productFamily?: string;
@@ -131,6 +133,7 @@ export async function getProducts(params?: {
   const searchParams = new URLSearchParams();
   if (params?.q) searchParams.append('q', params.q);
   if (params?.category) searchParams.append('category', params.category);
+  if (params?.subcategory) searchParams.append('subcategory', params.subcategory);
   if (params?.brand) searchParams.append('brand', params.brand);
   if (params?.series) searchParams.append('series', params.series);
   if (params?.productFamily) searchParams.append('product_family', params.productFamily);

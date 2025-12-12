@@ -138,6 +138,7 @@ const CategoryPage = () => {
   // Filter states
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [selectedSeries, setSelectedSeries] = useState<string[]>([]);
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const [selectedProductFamily, setSelectedProductFamily] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
@@ -223,10 +224,11 @@ const CategoryPage = () => {
       const sortField: 'name' | 'price' = sortBy.startsWith('price') ? 'price' : 'name';
       const sortOrder: 'asc' | 'desc' = sortBy.endsWith('desc') ? 'desc' : 'asc';
 
-      const response = await getProducts({
+      const requestParams = {
         category: category.name,
         brand: selectedBrands.length === 1 ? selectedBrands[0] : undefined,
         series: selectedSeries.length === 1 ? selectedSeries[0] : undefined,
+        subcategory: selectedSubcategory || undefined,
         productFamily: selectedProductFamily || undefined,
         color: selectedColor || undefined,
         minPrice: priceRange[0],
@@ -236,11 +238,50 @@ const CategoryPage = () => {
         q: debouncedSearch || undefined,
         page: pageNum,
         pageSize: selectedModule ? 2000 : fetchSize,
+      };
+      
+      console.log('🔍 Filter Request:', JSON.stringify(requestParams, null, 2));
+      console.log('🔍 Selected filters:', {
+        selectedBrands,
+        selectedSubcategory,
+        selectedProductFamily,
+        categoryName: category.name
       });
+      
+      const response = await getProducts(requestParams);
+      
+      console.log('📦 Response items count:', response.items.length);
+      if (response.items.length > 0) {
+        console.log('📦 First product sample:', {
+          brand: response.items[0].brand,
+          subcategory: response.items[0].subcategory,
+          product_family: response.items[0].product_family,
+        });
+      }
 
+      // Apply frontend filtering following the same pattern as Plates
+      // Backend filters: category, subcategory (if sent), brand (if 1 selected), productFamily, color
+      // Frontend filters: brand (if multiple), productFamily (double-check), color (double-check), module
       const filteredItems = response.items.filter((product) => {
+        // Filter by brand (if multiple brands selected, filter client-side)
+        // Backend only handles single brand, so we filter multiple brands here
+        if (selectedBrands.length > 0 && !selectedBrands.includes(product.brand)) {
+          return false;
+        }
+        
+        // Subcategory is filtered by backend, but double-check for consistency (like Plates does with productFamily/color)
+        if (selectedSubcategory) {
+          const productSubcat = product.subcategory?.trim() || '';
+          const selectedSubcat = selectedSubcategory.trim();
+          if (productSubcat.toLowerCase() !== selectedSubcat.toLowerCase()) {
+            return false;
+          }
+        }
+        
+        // ProductFamily is filtered by backend, but double-check (same as Plates)
         if (selectedProductFamily && product.product_family !== selectedProductFamily) return false;
 
+        // Color is filtered by backend, but double-check (same as Plates)
         if (selectedColor) {
           const rawColor = product.specs?.color;
           const color = typeof rawColor === 'string'
@@ -251,6 +292,7 @@ const CategoryPage = () => {
           if (color !== selectedColor) return false;
         }
 
+        // Module is only filtered frontend (not sent to backend, same as Plates)
         if (selectedModule) {
           const rawModule = product.specs?.mw ?? product.specs?.module_size ?? '';
           const moduleVal = typeof rawModule === 'string'
@@ -262,6 +304,8 @@ const CategoryPage = () => {
         }
         return true;
       });
+      
+      console.log('✅ Filtered items count:', filteredItems.length);
 
       if (isNewFilter) {
         setProducts(filteredItems);
@@ -275,11 +319,18 @@ const CategoryPage = () => {
     } finally {
       setFilterLoading(false);
     }
-  }, [category, selectedBrands, selectedSeries, selectedProductFamily, selectedColor, selectedModule, priceRange, sortBy, debouncedSearch]);
+  }, [category, selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, priceRange, sortBy, debouncedSearch]);
 
   useEffect(() => {
     fetchInitialData();
   }, [fetchInitialData]);
+
+  // Clear subcategory filter when switching away from Circuit Protection
+  useEffect(() => {
+    if (category && category.name !== 'Circuit Protection' && selectedSubcategory) {
+      setSelectedSubcategory(null);
+    }
+  }, [category, selectedSubcategory]);
 
   useEffect(() => {
     if (!loading && category) {
@@ -289,7 +340,7 @@ const CategoryPage = () => {
       }, 100);
       return () => clearTimeout(timer);
     }
-  }, [selectedBrands, selectedSeries, selectedProductFamily, selectedColor, selectedModule, priceRange, sortBy, debouncedSearch, loading, category, fetchFilteredProducts]);
+  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, priceRange, sortBy, debouncedSearch, loading, category, fetchFilteredProducts]);
 
   const loadMore = useCallback(() => {
     if (!filterLoading && hasMore) {
@@ -326,6 +377,47 @@ const CategoryPage = () => {
     const seriesSet = new Set(source.map(p => p.product_family).filter(Boolean));
     return Array.from(seriesSet).sort();
   }, [allProducts, selectedBrands]);
+
+  // Subcategories for Circuit Protection - ordered as specified
+  const availableSubcategories = useMemo(() => {
+    if (category?.name !== 'Circuit Protection') return [];
+    
+    // Filter products by selected brands if any are selected
+    let sourceProducts = allProducts;
+    if (selectedBrands.length > 0) {
+      sourceProducts = allProducts.filter(p => selectedBrands.includes(p.brand));
+    }
+    
+    const subcategoryMap = new Map<string, number>();
+    sourceProducts.forEach(p => {
+      if (p.subcategory) {
+        // Use the exact subcategory value from the product
+        const subcat = p.subcategory.trim();
+        subcategoryMap.set(subcat, (subcategoryMap.get(subcat) || 0) + 1);
+      }
+    });
+
+    // Log available subcategories for debugging
+    console.log('📋 Available subcategories:', Array.from(subcategoryMap.keys()));
+    console.log('📋 Source products count:', sourceProducts.length);
+    console.log('📋 Selected brands:', selectedBrands);
+
+    // Define the order: MCBs first, then ELCB/RCCB, then Isolators, then others
+    const orderPriority: Record<string, number> = {
+      'Miniature Circuit Breakers (MCBs)': 1,
+      'Residual Current Circuit Breakers (RCCBs/ELCBs)': 2,
+      'Isolators': 3,
+    };
+
+    return Array.from(subcategoryMap.entries())
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => {
+        const priorityA = orderPriority[a.name] || 999;
+        const priorityB = orderPriority[b.name] || 999;
+        if (priorityA !== priorityB) return priorityA - priorityB;
+        return a.name.localeCompare(b.name);
+      });
+  }, [allProducts, category, selectedBrands]);
 
   const availableColors = useMemo(() => {
     if (!selectedProductFamily) return [];
@@ -424,6 +516,7 @@ const CategoryPage = () => {
   const clearFilters = () => {
     setSelectedBrands([]);
     setSelectedSeries([]);
+    setSelectedSubcategory(null);
     setSelectedProductFamily(null);
     setSelectedColor(null);
     setSelectedModule(null);
@@ -434,7 +527,7 @@ const CategoryPage = () => {
   };
 
   const hasActiveFilters = selectedBrands.length > 0 || selectedSeries.length > 0 ||
-    selectedProductFamily !== null || selectedColor !== null || selectedModule !== null ||
+    selectedSubcategory !== null || selectedProductFamily !== null || selectedColor !== null || selectedModule !== null ||
     (priceBounds.min !== undefined && priceBounds.max !== undefined &&
       (priceRange[0] > priceBounds.min || priceRange[1] < priceBounds.max)) ||
     localSearch;
@@ -530,8 +623,8 @@ const CategoryPage = () => {
         </div>
       </div>
 
-      {/* Series */}
-      {availableSeries.length > 0 && (
+      {/* Series - Only show for non-Circuit Protection categories */}
+      {category?.name !== 'Circuit Protection' && availableSeries.length > 0 && (
         <div className="space-y-3">
           <Label>Series</Label>
           <div className="space-y-2 max-h-48 overflow-y-auto">
@@ -551,21 +644,27 @@ const CategoryPage = () => {
         </div>
       )}
 
-      {/* Series */}
-      {availableSeries.length > 0 && (
+      {/* Subcategory - Only show for Circuit Protection */}
+      {category?.name === 'Circuit Protection' && availableSubcategories.length > 0 && (
         <div className="space-y-3">
-          <Label>Series</Label>
+          <Label>Subcategory</Label>
           <div className="space-y-2 max-h-48 overflow-y-auto">
-            {availableSeries.map(series => (
+            {availableSubcategories.map(subcat => (
               <label
-                key={series}
+                key={subcat.name}
                 className="flex items-center gap-3 cursor-pointer hover:bg-secondary/50 p-2 rounded-lg transition-colors"
               >
                 <Checkbox
-                  checked={selectedSeries.includes(series)}
-                  onCheckedChange={() => toggleSeries(series)}
+                  checked={selectedSubcategory === subcat.name}
+                  onCheckedChange={() => {
+                    setSelectedSubcategory(prev => prev === subcat.name ? null : subcat.name);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
                 />
-                <span className="text-sm">{series}</span>
+                <span className="text-sm">{subcat.name}</span>
+                <span className="text-xs text-muted-foreground ml-auto">
+                  ({subcat.count})
+                </span>
               </label>
             ))}
           </div>
@@ -798,7 +897,7 @@ const CategoryPage = () => {
                           transition={{ type: "spring", stiffness: 500, damping: 30 }}
                         >
                           <Badge variant="default" className="ml-1 h-5 w-5 p-0 flex items-center justify-center">
-                            {selectedBrands.length + selectedSeries.length + (selectedProductFamily ? 1 : 0) + (selectedColor ? 1 : 0) + (selectedModule ? 1 : 0) + (localSearch ? 1 : 0)}
+                            {selectedBrands.length + selectedSeries.length + (selectedSubcategory ? 1 : 0) + (selectedProductFamily ? 1 : 0) + (selectedColor ? 1 : 0) + (selectedModule ? 1 : 0) + (localSearch ? 1 : 0)}
                           </Badge>
                         </motion.div>
                       )}
@@ -813,7 +912,7 @@ const CategoryPage = () => {
                         Filters
                         {hasActiveFilters && (
                           <Badge variant="default" className="ml-1">
-                            {selectedBrands.length + selectedSeries.length + (selectedProductFamily ? 1 : 0) + (selectedColor ? 1 : 0) + (selectedModule ? 1 : 0)}
+                            {selectedBrands.length + selectedSeries.length + (selectedSubcategory ? 1 : 0) + (selectedProductFamily ? 1 : 0) + (selectedColor ? 1 : 0) + (selectedModule ? 1 : 0)}
                           </Badge>
                         )}
                       </Button>
@@ -866,6 +965,24 @@ const CategoryPage = () => {
                         </Button>
                       </motion.div>
                     ))}
+                    {selectedSubcategory && (
+                      <motion.div
+                        key={`subcategory-${selectedSubcategory}`}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                      >
+                        <Button
+                          variant="secondary"
+                          size="sm"
+                          onClick={() => setSelectedSubcategory(null)}
+                          className="gap-1.5"
+                        >
+                          {selectedSubcategory}
+                          <X className="h-3 w-3" />
+                        </Button>
+                      </motion.div>
+                    )}
                     {selectedProductFamily && (
                       <motion.div
                         key={`family-${selectedProductFamily}`}
