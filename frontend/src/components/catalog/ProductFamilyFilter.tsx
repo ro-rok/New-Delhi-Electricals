@@ -46,18 +46,27 @@ export const ProductFamilyFilter = ({
   onProductFamilySelect,
   onColorSelect,
 }: ProductFamilyFilterProps) => {
-    // Group products by product_family (from series)
+  // Determine if this is the Wires & Cables category
+  const isWiresCategory = useMemo(
+    () => products.some((p) => p.category === 'Wires & Cables'),
+    [products]
+  );
+
+  // Group items:
+  // - For most categories: by product_family (series)
+  // - For Wires & Cables: by brand (acts as a brand filter)
   const productFamilies = useMemo(() => {
     const families = new Map<string, Product[]>();
     
     products.forEach(product => {
-      // Get product_family from series
-      const productFamily = product.product_family || 'Unknown';
+      const key = isWiresCategory
+        ? (product.brand || 'Unknown')
+        : (product.product_family || 'Unknown');
       
-      if (!families.has(productFamily)) {
-        families.set(productFamily, []);
+      if (!families.has(key)) {
+        families.set(key, []);
       }
-      families.get(productFamily)!.push(product);
+      families.get(key)!.push(product);
     });
     
     return Array.from(families.entries())
@@ -117,7 +126,7 @@ export const ProductFamilyFilter = ({
       <div>
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-            Product Families
+            {isWiresCategory ? 'Brands' : 'Product Families'}
           </h3>
           {hasActiveFilters && (
             <Button
@@ -266,9 +275,10 @@ export const ProductFamilyFilter = ({
           animate={{ opacity: 1, y: 0 }}
           className="flex flex-wrap gap-2 pt-4 border-t border-gray-200 dark:border-gray-800"
         >
+          {/* For Wires & Cables we show a single Brand chip; CategoryPage shows brand chips too */}
           {selectedProductFamily && (
             <Badge variant="secondary" className="gap-1.5 px-3 py-1.5">
-              Family: {selectedProductFamily}
+              {isWiresCategory ? 'Brand' : 'Family'}: {selectedProductFamily}
               <button
                 onClick={() => {
                   onProductFamilySelect(null);

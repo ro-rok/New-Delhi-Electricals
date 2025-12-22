@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo, useCallback } from 'react';
+import { useEffect, useState, useMemo, useCallback, useRef } from 'react';
 import { useParams, useSearchParams, useLocation } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
@@ -10,7 +10,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Slider } from '@/components/ui/slider';
 import {
   Sheet,
   SheetContent,
@@ -39,6 +38,10 @@ import { ProductCardSkeleton } from '@/components/ui/SkeletonLoader';
 import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 
 type SortOption = 'name-asc' | 'name-desc' | 'price-asc' | 'price-desc' | 'newest';
+
+// Display label overrides for specific categories
+const getCategoryDisplayName = (name: string) =>
+  name === 'Circuit Protection' ? "MCB's and more" : name;
 
 const iconMap: Record<string, LucideIcon> = {
   ToggleRight,
@@ -103,13 +106,15 @@ const CategoryCard = ({ cat, isActive, iconMap, Package }: {
             </div>
           )}
         </div>
-        <h3 className={cn(
-          "text-lg font-medium mb-2 transition-colors",
-          isActive
-            ? "text-gray-900 dark:text-white"
-            : "text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-400"
-        )}>
-          {cat.name}
+        <h3
+          className={cn(
+            "text-lg font-medium mb-2 transition-colors",
+            isActive
+              ? "text-gray-900 dark:text-white"
+              : "text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-400",
+          )}
+        >
+          {getCategoryDisplayName(cat.name)}
         </h3>
         <p className="text-sm text-gray-500 dark:text-gray-500">
           {cat.productCount || 0} {(cat.productCount || 0) === 1 ? 'product' : 'products'}
@@ -122,7 +127,7 @@ const CategoryCard = ({ cat, isActive, iconMap, Package }: {
 const CategoryPage = () => {
   const { slug } = useParams();
   const location = useLocation();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
   const { trackCategoryView } = useApp();
 
@@ -141,8 +146,9 @@ const CategoryPage = () => {
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const [selectedProductFamily, setSelectedProductFamily] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
-  const [priceBounds, setPriceBounds] = useState<{ min: number; max: number }>({ min: 0, max: 10000 });
+  const [selectedAmpere, setSelectedAmpere] = useState<string | null>(null);
+  const [selectedWireSize, setSelectedWireSize] = useState<string | null>(null);
+  const [selectedCoreCount, setSelectedCoreCount] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<SortOption>('name-asc');
   const [localSearch, setLocalSearch] = useState(searchQuery);
   const debouncedSearch = useDebounce(localSearch, 500);
@@ -155,6 +161,16 @@ const CategoryPage = () => {
 
   const [view, setView] = useState<'grid' | 'list'>('grid');
   const [showFilters, setShowFilters] = useState(false);
+
+  const isWiresCategory = category?.name === 'Wires & Cables';
+
+  const normalizeAmpere = (value: unknown) => {
+    if (value === null || value === undefined) return '';
+    const raw = String(value).trim();
+    if (!raw) return '';
+    const numericMatch = raw.match(/^(\d+(?:\.\d+)?)/);
+    return numericMatch ? numericMatch[1] : raw.toLowerCase();
+  };
 
   const fetchInitialData = useCallback(async () => {
     if (!slug) return;
@@ -186,14 +202,6 @@ const CategoryPage = () => {
       });
 
       setAllProducts(initialResponse.items);
-
-      if (initialResponse.items.length > 0) {
-        const prices = initialResponse.items.map(p => p.listPrice);
-        const min = Math.min(...prices);
-        const max = Math.max(...prices);
-        setPriceBounds({ min, max });
-        setPriceRange([min, max]);
-      }
 
       // Initial filtered fetch
       const filteredResponse = await getProducts({
@@ -229,10 +237,11 @@ const CategoryPage = () => {
         brand: selectedBrands.length === 1 ? selectedBrands[0] : undefined,
         series: selectedSeries.length === 1 ? selectedSeries[0] : undefined,
         subcategory: selectedSubcategory || undefined,
-        productFamily: selectedProductFamily || undefined,
+        // For non-wires categories, treat selectedProductFamily as actual product_family
+        productFamily: !isWiresCategory ? selectedProductFamily || undefined : undefined,
         color: selectedColor || undefined,
-        minPrice: priceRange[0],
-        maxPrice: priceRange[1],
+        wireSize: selectedWireSize ? Number(selectedWireSize) : undefined,
+        coreCount: selectedCoreCount ? Number(selectedCoreCount) : undefined,
         sortBy: sortField,
         sortOrder: sortOrder,
         q: debouncedSearch || undefined,
@@ -279,7 +288,14 @@ const CategoryPage = () => {
         }
         
         // ProductFamily is filtered by backend, but double-check (same as Plates)
-        if (selectedProductFamily && product.product_family !== selectedProductFamily) return false;
+        if (selectedProductFamily) {
+          if (isWiresCategory) {
+            // For wires, use selectedProductFamily as a brand selector
+            if (product.brand !== selectedProductFamily) return false;
+          } else if (product.product_family !== selectedProductFamily) {
+            return false;
+          }
+        }
 
         // Color is filtered by backend, but double-check (same as Plates)
         if (selectedColor) {
@@ -302,6 +318,23 @@ const CategoryPage = () => {
               : '';
           if (moduleVal !== selectedModule) return false;
         }
+
+        if (selectedAmpere) {
+          const ampVal = normalizeAmpere(product.specs?.ampere);
+          if (ampVal !== selectedAmpere) return false;
+        }
+
+        if (selectedWireSize) {
+          const rawSize = (product.specs as any)?.size_sqmm ?? (product.specs as any)?.sizeSqmm;
+          const sizeVal = rawSize != null ? String(rawSize) : '';
+          if (sizeVal !== selectedWireSize) return false;
+        }
+
+        if (selectedCoreCount) {
+          const rawCore = (product.specs as any)?.core_count ?? (product.specs as any)?.coreCount ?? 1;
+          const coreVal = String(rawCore);
+          if (coreVal !== selectedCoreCount) return false;
+        }
         return true;
       });
       
@@ -319,11 +352,140 @@ const CategoryPage = () => {
     } finally {
       setFilterLoading(false);
     }
-  }, [category, selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, priceRange, sortBy, debouncedSearch]);
+  }, [category, selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, sortBy, debouncedSearch, isWiresCategory]);
 
   useEffect(() => {
     fetchInitialData();
   }, [fetchInitialData]);
+
+  // Helper functions to serialize/deserialize filters to/from URL params
+  const serializeFiltersToUrl = useCallback(() => {
+    const params = new URLSearchParams();
+    
+    if (selectedBrands.length > 0) {
+      params.set('brands', selectedBrands.join(','));
+    }
+    if (selectedSeries.length > 0) {
+      params.set('series', selectedSeries.join(','));
+    }
+    if (selectedSubcategory) {
+      params.set('subcategory', selectedSubcategory);
+    }
+    if (selectedProductFamily) {
+      params.set('family', selectedProductFamily);
+    }
+    if (selectedColor) {
+      params.set('color', selectedColor);
+    }
+    if (selectedModule) {
+      params.set('module', selectedModule);
+    }
+    if (selectedAmpere) {
+      params.set('ampere', selectedAmpere);
+    }
+    if (selectedWireSize) {
+      params.set('wireSize', selectedWireSize);
+    }
+    if (selectedCoreCount) {
+      params.set('coreCount', selectedCoreCount);
+    }
+    if (sortBy !== 'name-asc') {
+      params.set('sort', sortBy);
+    }
+    if (localSearch) {
+      params.set('search', localSearch);
+    }
+    
+    return params;
+  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, sortBy, localSearch]);
+
+  // Track if we're restoring filters to avoid saving during restoration
+  const isRestoringFilters = useRef(false);
+  
+  // Restore filters from URL when component mounts or slug changes
+  useEffect(() => {
+    isRestoringFilters.current = true;
+    
+    // First clear all filters
+    setSelectedBrands([]);
+    setSelectedSeries([]);
+    setSelectedSubcategory(null);
+    setSelectedProductFamily(null);
+    setSelectedColor(null);
+    setSelectedModule(null);
+    setSelectedAmpere(null);
+    setSelectedWireSize(null);
+    setSelectedCoreCount(null);
+    setLocalSearch('');
+    setPage(1);
+    
+    // Then restore from URL if present
+    const brandsParam = searchParams.get('brands');
+    const seriesParam = searchParams.get('series');
+    const subcategoryParam = searchParams.get('subcategory');
+    const familyParam = searchParams.get('family');
+    const colorParam = searchParams.get('color');
+    const moduleParam = searchParams.get('module');
+    const ampereParam = searchParams.get('ampere');
+    const wireSizeParam = searchParams.get('wireSize');
+    const coreCountParam = searchParams.get('coreCount');
+    const sortParam = searchParams.get('sort');
+    const searchParam = searchParams.get('search');
+
+    if (brandsParam) {
+      setSelectedBrands(brandsParam.split(',').filter(Boolean));
+    }
+    if (seriesParam) {
+      setSelectedSeries(seriesParam.split(',').filter(Boolean));
+    }
+    if (subcategoryParam) {
+      setSelectedSubcategory(subcategoryParam);
+    }
+    if (familyParam) {
+      setSelectedProductFamily(familyParam);
+    }
+    if (colorParam) {
+      setSelectedColor(colorParam);
+    }
+    if (moduleParam) {
+      setSelectedModule(moduleParam);
+    }
+    if (ampereParam) {
+      setSelectedAmpere(ampereParam);
+    }
+    if (wireSizeParam) {
+      setSelectedWireSize(wireSizeParam);
+    }
+    if (coreCountParam) {
+      setSelectedCoreCount(coreCountParam);
+    }
+    if (sortParam && ['name-asc', 'name-desc', 'price-asc', 'price-desc', 'newest'].includes(sortParam)) {
+      setSortBy(sortParam as SortOption);
+    }
+    if (searchParam !== null) {
+      setLocalSearch(searchParam);
+    }
+    
+    // Mark restoration as complete after a brief delay
+    setTimeout(() => {
+      isRestoringFilters.current = false;
+    }, 200);
+  }, [slug]); // Only depend on slug to avoid loops
+
+  // Save filters to URL when they change (but not during restoration)
+  useEffect(() => {
+    if (isRestoringFilters.current) {
+      return;
+    }
+    
+    const params = serializeFiltersToUrl();
+    // Preserve existing search param if not set by filters
+    if (!params.has('search') && searchQuery) {
+      params.set('search', searchQuery);
+    }
+    
+    setSearchParams(params, { replace: true });
+  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, sortBy, localSearch, serializeFiltersToUrl, setSearchParams, searchQuery]);
 
   // Clear subcategory filter when switching away from Circuit Protection
   useEffect(() => {
@@ -340,7 +502,20 @@ const CategoryPage = () => {
       }, 100);
       return () => clearTimeout(timer);
     }
-  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, priceRange, sortBy, debouncedSearch, loading, category, fetchFilteredProducts]);
+  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, sortBy, debouncedSearch, loading, category, fetchFilteredProducts]);
+
+  // For wires category, keep the top brand selector (ProductFamilyFilter) and sidebar Brands in sync
+  useEffect(() => {
+    if (!isWiresCategory) return;
+    if (selectedProductFamily) {
+      setSelectedBrands((prev) =>
+        prev.length === 1 && prev[0] === selectedProductFamily ? prev : [selectedProductFamily]
+      );
+    } else if (selectedBrands.length === 1) {
+      // If brand chip is cleared, also clear sidebar single-brand selection
+      setSelectedBrands([]);
+    }
+  }, [isWiresCategory, selectedProductFamily, selectedBrands.length]);
 
   const loadMore = useCallback(() => {
     if (!filterLoading && hasMore) {
@@ -460,6 +635,89 @@ const CategoryPage = () => {
     return Array.from(modules).sort();
   }, [allProducts, selectedBrands, selectedSeries, selectedProductFamily]);
 
+  // For non-Wires categories, compute product families limited to the currently selected brands
+  const brandFilteredFamilies = useMemo(() => {
+    if (isWiresCategory) return [];
+    if (!selectedBrands.length) return [];
+
+    return productFamilies
+      .map(family => {
+        const brandMatchedProducts = family.products.filter(p => selectedBrands.includes(p.brand));
+        return {
+          ...family,
+          count: brandMatchedProducts.length,
+          products: brandMatchedProducts,
+        };
+      })
+      .filter(family => family.count > 0)
+      .sort((a, b) => b.count - a.count);
+  }, [productFamilies, selectedBrands, isWiresCategory]);
+
+  const availableWireSizes = useMemo(() => {
+    if (category?.name !== 'Wires & Cables') return [];
+    const sizes = new Set<string>();
+    allProducts.forEach(p => {
+      const raw = (p.specs as any)?.size_sqmm ?? (p.specs as any)?.sizeSqmm;
+      if (raw !== undefined && raw !== null && raw !== '') {
+        sizes.add(String(raw));
+      }
+    });
+    return Array.from(sizes).sort((a, b) => Number(a) - Number(b));
+  }, [allProducts, category]);
+
+  const availableCoreCounts = useMemo(() => {
+    if (category?.name !== 'Wires & Cables') return [];
+    const cores = new Set<string>();
+    allProducts.forEach(p => {
+      const raw = (p.specs as any)?.core_count ?? (p.specs as any)?.coreCount;
+      if (raw !== undefined && raw !== null && raw !== '') {
+        cores.add(String(raw));
+      }
+    });
+    return Array.from(cores).sort((a, b) => Number(a) - Number(b));
+  }, [allProducts, category]);
+
+  const availableAmperes = useMemo(() => {
+    if (category?.name !== 'Circuit Protection') return [];
+
+    let source = allProducts;
+    if (selectedBrands.length) {
+      source = source.filter(p => selectedBrands.includes(p.brand));
+    }
+    if (selectedSubcategory) {
+      const selected = selectedSubcategory.trim().toLowerCase();
+      source = source.filter(p => (p.subcategory || '').trim().toLowerCase() === selected);
+    }
+    if (selectedProductFamily) {
+      source = source.filter(p => p.product_family === selectedProductFamily);
+    }
+
+    const ampereCounts = new Map<string, { label: string; count: number }>();
+
+    source.forEach(p => {
+      const normalized = normalizeAmpere(p.specs?.ampere);
+      if (!normalized) return;
+      const label = /^[\d.]+$/.test(normalized) ? `${normalized}A` : (String(p.specs?.ampere).trim() || normalized);
+      const existing = ampereCounts.get(normalized);
+      if (existing) {
+        ampereCounts.set(normalized, { ...existing, count: existing.count + 1 });
+      } else {
+        ampereCounts.set(normalized, { label, count: 1 });
+      }
+    });
+
+    return Array.from(ampereCounts.entries())
+      .map(([value, meta]) => ({ value, label: meta.label, count: meta.count }))
+      .sort((a, b) => {
+        const numA = Number(a.value);
+        const numB = Number(b.value);
+        if (!Number.isNaN(numA) && !Number.isNaN(numB)) {
+          return numA - numB;
+        }
+        return a.label.localeCompare(b.label);
+      });
+  }, [allProducts, category, selectedBrands, selectedSubcategory, selectedProductFamily]);
+
   // When brand changes, auto-select first matching series (if any) and clear invalid ones
   useEffect(() => {
     if (!selectedBrands.length) {
@@ -520,16 +778,15 @@ const CategoryPage = () => {
     setSelectedProductFamily(null);
     setSelectedColor(null);
     setSelectedModule(null);
-    if (priceBounds.min !== undefined && priceBounds.max !== undefined) {
-      setPriceRange([priceBounds.min, priceBounds.max]);
-    }
+    setSelectedAmpere(null);
+    setSelectedWireSize(null);
+    setSelectedCoreCount(null);
     setLocalSearch('');
   };
 
   const hasActiveFilters = selectedBrands.length > 0 || selectedSeries.length > 0 ||
     selectedSubcategory !== null || selectedProductFamily !== null || selectedColor !== null || selectedModule !== null ||
-    (priceBounds.min !== undefined && priceBounds.max !== undefined &&
-      (priceRange[0] > priceBounds.min || priceRange[1] < priceBounds.max)) ||
+    selectedAmpere !== null || selectedWireSize !== null || selectedCoreCount !== null ||
     localSearch;
 
   const FilterContent = () => (
@@ -623,6 +880,44 @@ const CategoryPage = () => {
         </div>
       </div>
 
+      {/* Wire Size (sqmm) - Wires & Cables */}
+      {category?.name === 'Wires & Cables' && availableWireSizes.length > 0 && (
+        <div className="space-y-3">
+          <Label>Wire Size (sqmm)</Label>
+          <div className="flex flex-wrap gap-2">
+            {availableWireSizes.map(size => (
+              <Button
+                key={size}
+                variant={selectedWireSize === size ? "secondary" : "outline"}
+                size="sm"
+                onClick={() => setSelectedWireSize(prev => prev === size ? null : size)}
+              >
+                {size}
+              </Button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Core Count - Wires & Cables */}
+      {category?.name === 'Wires & Cables' && availableCoreCounts.length > 0 && (
+        <div className="space-y-3">
+          <Label>Wire Core</Label>
+          <div className="flex flex-wrap gap-2">
+            {availableCoreCounts.map(core => (
+              <Button
+                key={core}
+                variant={selectedCoreCount === core ? "secondary" : "outline"}
+                size="sm"
+                onClick={() => setSelectedCoreCount(prev => prev === core ? null : core)}
+              >
+                {core} Core
+              </Button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Series - Only show for non-Circuit Protection categories */}
       {category?.name !== 'Circuit Protection' && availableSeries.length > 0 && (
         <div className="space-y-3">
@@ -691,44 +986,24 @@ const CategoryPage = () => {
         </div>
       )}
 
-      {/* Price Range */}
-      <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <Label>Price Range</Label>
-          <span className="text-sm text-muted-foreground">
-            ₹{priceRange[0].toLocaleString()} - ₹{priceRange[1].toLocaleString()}
-          </span>
+      {/* Ampere - Circuit Protection */}
+      {category?.name === 'Circuit Protection' && availableAmperes.length > 0 && (
+        <div className="space-y-3">
+          <Label>Ampere</Label>
+          <div className="flex flex-wrap gap-2">
+            {availableAmperes.map(amp => (
+              <Button
+                key={amp.value}
+                variant={selectedAmpere === amp.value ? "secondary" : "outline"}
+                size="sm"
+                onClick={() => setSelectedAmpere(prev => prev === amp.value ? null : amp.value)}
+              >
+                {amp.label}
+              </Button>
+            ))}
+          </div>
         </div>
-        <Slider
-          min={priceBounds.min}
-          max={priceBounds.max}
-          step={100}
-          value={priceRange}
-          onValueChange={(value) => {
-            setPriceRange(value as [number, number]);
-            // Debounce scroll to top for price changes
-            setTimeout(() => {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }, 500);
-          }}
-          className="w-full"
-        />
-        <div className="flex items-center gap-2">
-          <Input
-            type="number"
-            value={priceRange[0]}
-            onChange={(e) => setPriceRange([Number(e.target.value), priceRange[1]])}
-            className="h-8 text-sm"
-          />
-          <span className="text-muted-foreground">to</span>
-          <Input
-            type="number"
-            value={priceRange[1]}
-            onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])}
-            className="h-8 text-sm"
-          />
-        </div>
-      </div>
+      )}
 
       {/* Clear Filters */}
       {hasActiveFilters && (
@@ -825,20 +1100,166 @@ const CategoryPage = () => {
 
             {/* Right Side - Products Section */}
             <div className="flex-1 min-w-0">
-              {/* Product Family Filter - Prominently displayed */}
+              {/* Top brand & family cards */}
               {allProducts.length > 0 && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mb-8"
+                  className="mb-8 space-y-8"
                 >
-                  <ProductFamilyFilter
-                    products={allProducts}
-                    selectedProductFamily={selectedProductFamily}
-                    selectedColor={selectedColor}
-                    onProductFamilySelect={setSelectedProductFamily}
-                    onColorSelect={setSelectedColor}
-                  />
+                  {isWiresCategory ? (
+                    // For Wires & Cables, keep existing ProductFamilyFilter behavior (brands + colors)
+                    <ProductFamilyFilter
+                      products={allProducts}
+                      selectedProductFamily={selectedProductFamily}
+                      selectedColor={selectedColor}
+                      onProductFamilySelect={setSelectedProductFamily}
+                      onColorSelect={setSelectedColor}
+                    />
+                  ) : (
+                    <>
+                      {/* Brand cards */}
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                            Brands
+                          </h3>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                          {availableBrands.map(brand => {
+                            const isSelected = selectedBrands.includes(brand.name);
+                            const brandProducts = allProducts.filter(p => p.brand === brand.name);
+                            const count = brandProducts.length;
+
+                            return (
+                              <motion.div
+                                key={brand.id}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                              >
+                                <button
+                                  onClick={() => toggleBrand(brand.name)}
+                                  className={cn(
+                                    "w-full p-6 rounded-2xl border-2 transition-all duration-200 text-left",
+                                    "hover:shadow-lg",
+                                    isSelected
+                                      ? "border-gray-900 dark:border-white bg-gray-900 dark:bg-white text-white dark:text-black shadow-xl"
+                                      : "border-gray-200 dark:border-gray-800 bg-white dark:bg-black hover:border-gray-400 dark:hover:border-gray-600"
+                                  )}
+                                >
+                                  <div className="flex items-start justify-between mb-2">
+                                    <h4
+                                      className={cn(
+                                        "text-lg font-semibold",
+                                        isSelected
+                                          ? "text-white dark:text-black"
+                                          : "text-gray-900 dark:text-white"
+                                      )}
+                                    >
+                                      {brand.name}
+                                    </h4>
+                                    <Badge
+                                      variant={isSelected ? "secondary" : "outline"}
+                                      className={cn(
+                                        isSelected && "bg-white/20 dark:bg-black/20"
+                                      )}
+                                    >
+                                      {count}
+                                    </Badge>
+                                  </div>
+                                  <p
+                                    className={cn(
+                                      "text-sm",
+                                      isSelected
+                                        ? "text-white/80 dark:text-black/80"
+                                        : "text-gray-600 dark:text-gray-400"
+                                    )}
+                                  >
+                                    {count} {count === 1 ? "product" : "products"}
+                                  </p>
+                                </button>
+                              </motion.div>
+                            );
+                          })}
+                        </div>
+                      </div>
+
+                      {/* Product families filtered by selected brands */}
+                      {brandFilteredFamilies.length > 0 && (
+                        <div className="space-y-4">
+                          <div className="flex items-center justify-between">
+                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                              Product Families
+                            </h3>
+                          </div>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                            {brandFilteredFamilies.map(family => {
+                              const isSelected = selectedProductFamily === family.name;
+
+                              return (
+                                <motion.div
+                                  key={family.name}
+                                  initial={{ opacity: 0, scale: 0.9 }}
+                                  animate={{ opacity: 1, scale: 1 }}
+                                  whileHover={{ scale: 1.02 }}
+                                  whileTap={{ scale: 0.98 }}
+                                >
+                                  <button
+                                    onClick={() =>
+                                      setSelectedProductFamily(prev =>
+                                        prev === family.name ? null : family.name
+                                      )
+                                    }
+                                    className={cn(
+                                      "w-full p-6 rounded-2xl border-2 transition-all duration-200 text-left",
+                                      "hover:shadow-lg",
+                                      isSelected
+                                        ? "border-gray-900 dark:border-white bg-gray-900 dark:bg-white text-white dark:text-black shadow-xl"
+                                        : "border-gray-200 dark:border-gray-800 bg-white dark:bg-black hover:border-gray-400 dark:hover:border-gray-600"
+                                    )}
+                                  >
+                                    <div className="flex items-start justify-between mb-2">
+                                      <h4
+                                        className={cn(
+                                          "text-lg font-semibold",
+                                          isSelected
+                                            ? "text-white dark:text-black"
+                                            : "text-gray-900 dark:text-white"
+                                        )}
+                                      >
+                                        {family.name}
+                                      </h4>
+                                      <Badge
+                                        variant={isSelected ? "secondary" : "outline"}
+                                        className={cn(
+                                          isSelected && "bg-white/20 dark:bg-black/20"
+                                        )}
+                                      >
+                                        {family.count}
+                                      </Badge>
+                                    </div>
+                                    <p
+                                      className={cn(
+                                        "text-sm",
+                                        isSelected
+                                          ? "text-white/80 dark:text-black/80"
+                                          : "text-gray-600 dark:text-gray-400"
+                                      )}
+                                    >
+                                      {family.count}{" "}
+                                      {family.count === 1 ? "product" : "products"}
+                                    </p>
+                                  </button>
+                                </motion.div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+                    </>
+                  )}
                 </motion.div>
               )}
 
@@ -897,7 +1318,13 @@ const CategoryPage = () => {
                           transition={{ type: "spring", stiffness: 500, damping: 30 }}
                         >
                           <Badge variant="default" className="ml-1 h-5 w-5 p-0 flex items-center justify-center">
-                            {selectedBrands.length + selectedSeries.length + (selectedSubcategory ? 1 : 0) + (selectedProductFamily ? 1 : 0) + (selectedColor ? 1 : 0) + (selectedModule ? 1 : 0) + (localSearch ? 1 : 0)}
+                            {selectedBrands.length
+                              + selectedSeries.length
+                              + (selectedSubcategory ? 1 : 0)
+                              + (!isWiresCategory && selectedProductFamily ? 1 : 0)
+                              + (selectedColor ? 1 : 0)
+                              + (selectedModule ? 1 : 0)
+                              + (localSearch ? 1 : 0)}
                           </Badge>
                         </motion.div>
                       )}
@@ -912,7 +1339,12 @@ const CategoryPage = () => {
                         Filters
                         {hasActiveFilters && (
                           <Badge variant="default" className="ml-1">
-                            {selectedBrands.length + selectedSeries.length + (selectedSubcategory ? 1 : 0) + (selectedProductFamily ? 1 : 0) + (selectedColor ? 1 : 0) + (selectedModule ? 1 : 0)}
+                            {selectedBrands.length
+                              + selectedSeries.length
+                              + (selectedSubcategory ? 1 : 0)
+                              + (!isWiresCategory && selectedProductFamily ? 1 : 0)
+                              + (selectedColor ? 1 : 0)
+                              + (selectedModule ? 1 : 0)}
                           </Badge>
                         )}
                       </Button>
@@ -983,7 +1415,7 @@ const CategoryPage = () => {
                         </Button>
                       </motion.div>
                     )}
-                    {selectedProductFamily && (
+                    {!isWiresCategory && selectedProductFamily && (
                       <motion.div
                         key={`family-${selectedProductFamily}`}
                         initial={{ opacity: 0, scale: 0.8 }}

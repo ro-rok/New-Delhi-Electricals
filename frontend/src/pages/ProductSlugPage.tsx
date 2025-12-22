@@ -44,6 +44,9 @@ const ProductSlugPage = () => {
   const [variantProducts, setVariantProducts] = useState<Record<string, Product>>({});
 
   useEffect(() => {
+    // Scroll to top when product detail page opens
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
     // Reset state immediately when route params change
     setProduct(null);
     setSimilarProducts([]);
