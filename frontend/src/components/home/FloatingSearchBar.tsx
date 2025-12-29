@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
 import { searchProducts } from '@/api/products';
 import { Product } from '@/types/product';
+import { getProductUrl } from '@/lib/utils';
 
 const FloatingSearchBar = () => {
   const [isFocused, setIsFocused] = useState(false);
@@ -51,7 +52,7 @@ const FloatingSearchBar = () => {
       setRecentSearches(updated);
       localStorage.setItem('recentSearches', JSON.stringify(updated));
       
-      navigate(`/categories?search=${encodeURIComponent(searchQuery)}`);
+      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
       setQuery('');
       setIsFocused(false);
     }
@@ -75,6 +76,15 @@ const FloatingSearchBar = () => {
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
       setSelectedIndex(prev => Math.max(prev - 1, -1));
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (selectedIndex >= 0 && suggestions[selectedIndex]) {
+        navigate(getProductUrl(suggestions[selectedIndex]));
+        setQuery('');
+        setIsFocused(false);
+      } else {
+        handleSearch(query);
+      }
     } else if (e.key === 'Escape') {
       setIsFocused(false);
       inputRef.current?.blur();

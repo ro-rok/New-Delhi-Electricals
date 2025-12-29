@@ -1,16 +1,43 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 import { Search, Heart, GitCompare, Menu, X, Sun, Moon, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { useApp } from '@/contexts/AppContext';
 import { useTheme } from 'next-themes';
-import SearchModal from '@/components/catalog/SearchModal';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
   const { shortlistCount, comparisonCount, cartCount } = useApp();
   const { theme, setTheme } = useTheme();
+  
+  // Get current search query from URL if on search page
+  const currentQuery = location.pathname === '/search' ? (searchParams.get('q') || '') : '';
+  const [searchQuery, setSearchQuery] = useState(currentQuery);
+  
+  // Update search query when URL changes
+  useEffect(() => {
+    if (location.pathname === '/search') {
+      setSearchQuery(searchParams.get('q') || '');
+    } else {
+      setSearchQuery('');
+    }
+  }, [location.pathname, searchParams]);
+  
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
+  
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+  };
 
   return (
     <>
@@ -25,7 +52,7 @@ const Header = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-8 flex-1 max-w-md mx-4">
               <Link 
                 to="/categories" 
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300"
@@ -44,18 +71,28 @@ const Header = () => {
               >
                 About
               </Link>
+              
+              {/* Search Bar */}
+              <form onSubmit={handleSearch} className="flex-1 max-w-xs">
+                <div className={`relative flex items-center bg-background/50 border border-border/50 rounded-full px-3 py-1.5 transition-all ${
+                  isSearchFocused ? 'border-foreground/30 bg-background ring-1 ring-foreground/10' : ''
+                }`}>
+                  <Search className="absolute left-3 h-4 w-4 text-muted-foreground pointer-events-none" />
+                  <Input
+                    type="text"
+                    value={searchQuery}
+                    onChange={handleSearchChange}
+                    onFocus={() => setIsSearchFocused(true)}
+                    onBlur={() => setIsSearchFocused(false)}
+                    placeholder="Search products..."
+                    className="pl-8 pr-2 border-0 focus-visible:ring-0 bg-transparent text-sm h-7"
+                  />
+                </div>
+              </form>
             </nav>
 
             {/* Actions */}
             <div className="flex items-center gap-1">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setIsSearchOpen(true)}
-                className="rounded-full h-10 w-10 hover:bg-foreground/5"
-              >
-                <Search className="h-[18px] w-[18px]" strokeWidth={1.5} />
-              </Button>
               
               <Link to="/shortlist">
                 <Button 
@@ -128,6 +165,24 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-border/50 bg-background/95 backdrop-blur-xl">
             <nav className="container px-6 py-4 flex flex-col gap-1">
+              {/* Mobile Search Bar */}
+              <form onSubmit={handleSearch} className="mb-2">
+                <div className={`relative flex items-center bg-background/50 border border-border/50 rounded-full px-3 py-2 transition-all ${
+                  isSearchFocused ? 'border-foreground/30 bg-background ring-1 ring-foreground/10' : ''
+                }`}>
+                  <Search className="absolute left-3 h-4 w-4 text-muted-foreground pointer-events-none" />
+                  <Input
+                    type="text"
+                    value={searchQuery}
+                    onChange={handleSearchChange}
+                    onFocus={() => setIsSearchFocused(true)}
+                    onBlur={() => setIsSearchFocused(false)}
+                    placeholder="Search products..."
+                    className="pl-8 pr-2 border-0 focus-visible:ring-0 bg-transparent text-sm"
+                  />
+                </div>
+              </form>
+              
               <Link
                 to="/categories"
                 className="px-4 py-3 text-sm font-medium hover:bg-foreground/5 rounded-xl transition-colors"
@@ -161,8 +216,6 @@ const Header = () => {
           </div>
         )}
       </header>
-
-      <SearchModal open={isSearchOpen} onOpenChange={setIsSearchOpen} />
     </>
   );
 };

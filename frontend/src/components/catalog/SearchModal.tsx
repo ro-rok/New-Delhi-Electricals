@@ -63,24 +63,49 @@ const SearchModal = ({ open, onOpenChange }: SearchModalProps) => {
     setQuery(suggestion);
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (query.trim()) {
+      onOpenChange(false);
+      navigate(`/search?q=${encodeURIComponent(query.trim())}`);
+      setQuery('');
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (query.trim()) {
+        onOpenChange(false);
+        navigate(`/search?q=${encodeURIComponent(query.trim())}`);
+        setQuery('');
+      }
+    }
+  };
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-xl p-0 gap-0 overflow-hidden">
-        <div className="flex items-center gap-3 px-4 py-3 border-b border-border">
+        <form onSubmit={handleSubmit} className="flex items-center gap-3 px-4 py-3 border-b border-border">
           <Search className="h-5 w-5 text-muted-foreground" />
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
             placeholder="Search products, SKUs, brands..."
             className="border-0 focus-visible:ring-0 text-base px-0"
             autoFocus
           />
           {query && (
-            <button onClick={() => setQuery('')} className="p-1 hover:bg-secondary rounded-full transition-colors">
+            <button 
+              type="button"
+              onClick={() => setQuery('')} 
+              className="p-1 hover:bg-secondary rounded-full transition-colors"
+            >
               <X className="h-4 w-4 text-muted-foreground" />
             </button>
           )}
-        </div>
+        </form>
 
         <AnimatePresence mode="wait">
           {suggestions.length > 0 && (

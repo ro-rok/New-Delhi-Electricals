@@ -235,10 +235,10 @@ const CategoryPage = () => {
       const requestParams = {
         category: category.name,
         brand: selectedBrands.length === 1 ? selectedBrands[0] : undefined,
-        series: selectedSeries.length === 1 ? selectedSeries[0] : undefined,
+        series: selectedSeries.length > 0 ? (selectedSeries.length === 1 ? selectedSeries[0] : undefined) : undefined,
         subcategory: selectedSubcategory || undefined,
-        // For non-wires categories, treat selectedProductFamily as actual product_family
-        productFamily: !isWiresCategory ? selectedProductFamily || undefined : undefined,
+        // For wires category, treat selectedProductFamily as brand selector
+        productFamily: isWiresCategory ? selectedProductFamily || undefined : undefined,
         color: selectedColor || undefined,
         wireSize: selectedWireSize ? Number(selectedWireSize) : undefined,
         coreCount: selectedCoreCount ? Number(selectedCoreCount) : undefined,
@@ -269,12 +269,18 @@ const CategoryPage = () => {
       }
 
       // Apply frontend filtering following the same pattern as Plates
-      // Backend filters: category, subcategory (if sent), brand (if 1 selected), productFamily, color
-      // Frontend filters: brand (if multiple), productFamily (double-check), color (double-check), module
+      // Backend filters: category, subcategory (if sent), brand (if 1 selected), series (if 1 selected), productFamily, color
+      // Frontend filters: brand (if multiple), series (if multiple), productFamily (double-check), color (double-check), module
       const filteredItems = response.items.filter((product) => {
         // Filter by brand (if multiple brands selected, filter client-side)
         // Backend only handles single brand, so we filter multiple brands here
         if (selectedBrands.length > 0 && !selectedBrands.includes(product.brand)) {
+          return false;
+        }
+        
+        // Filter by series (if multiple series selected, filter client-side)
+        // Backend only handles single series, so we filter multiple series here
+        if (selectedSeries.length > 0 && !selectedSeries.includes(product.product_family)) {
           return false;
         }
         
@@ -288,14 +294,11 @@ const CategoryPage = () => {
         }
         
         // ProductFamily is filtered by backend, but double-check (same as Plates)
-        if (selectedProductFamily) {
-          if (isWiresCategory) {
-            // For wires, use selectedProductFamily as a brand selector
-            if (product.brand !== selectedProductFamily) return false;
-          } else if (product.product_family !== selectedProductFamily) {
-            return false;
-          }
+        // For wires category, use selectedProductFamily as a brand selector
+        if (isWiresCategory && selectedProductFamily) {
+          if (product.brand !== selectedProductFamily) return false;
         }
+        // For non-wires categories, series filtering is handled above
 
         // Color is filtered by backend, but double-check (same as Plates)
         if (selectedColor) {
@@ -340,10 +343,43 @@ const CategoryPage = () => {
       
       console.log('✅ Filtered items count:', filteredItems.length);
 
+      // For Plates category, sort by module width (ascending)
+      let sortedItems = filteredItems;
+      if (category?.name === 'Plates') {
+        sortedItems = [...filteredItems].sort((a, b) => {
+          // Extract module value from product
+          const getModuleValue = (product: Product): number => {
+            const rawModule = product.specs?.mw ?? product.specs?.module_size ?? '';
+            if (typeof rawModule === 'number') {
+              return rawModule;
+            } else if (typeof rawModule === 'string') {
+              const match = rawModule.trim().match(/^(\d+(?:\.\d+)?)/);
+              return match ? parseFloat(match[1]) : 0;
+            }
+            return 0;
+          };
+          
+          const moduleA = getModuleValue(a);
+          const moduleB = getModuleValue(b);
+          
+          // Sort by module value ascending
+          if (moduleA > 0 && moduleB > 0) {
+            return moduleA - moduleB;
+          }
+          
+          // Products with modules come first
+          if (moduleA > 0 && moduleB === 0) return -1;
+          if (moduleA === 0 && moduleB > 0) return 1;
+          
+          // If both have no module, maintain original order (or sort by name)
+          return a.name.localeCompare(b.name);
+        });
+      }
+
       if (isNewFilter) {
-        setProducts(filteredItems);
+        setProducts(sortedItems);
       } else {
-        setProducts(prev => [...prev, ...filteredItems]);
+        setProducts(prev => [...prev, ...sortedItems]);
       }
 
       setHasMore(response.items.length === (selectedModule ? 2000 : fetchSize));
@@ -371,7 +407,8 @@ const CategoryPage = () => {
     if (selectedSubcategory) {
       params.set('subcategory', selectedSubcategory);
     }
-    if (selectedProductFamily) {
+    // Only serialize selectedProductFamily for wires category
+    if (isWiresCategory && selectedProductFamily) {
       params.set('family', selectedProductFamily);
     }
     if (selectedColor) {
@@ -397,29 +434,31 @@ const CategoryPage = () => {
     }
     
     return params;
-  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, sortBy, localSearch]);
+  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, sortBy, localSearch, isWiresCategory]);
 
   // Track if we're restoring filters to avoid saving during restoration
   const isRestoringFilters = useRef(false);
+  const previousCategoryRef = useRef<string | null>(null);
+  const preservedFiltersRef = useRef<{
+    brands: string[];
+    series: string[];
+    color: string | null;
+  }>({ brands: [], series: [], color: null });
   
+  // Categories that should clear brand/series/color filters when switching TO them
+  const categoriesThatClearBrandSeriesColor = ['Boxes', 'Circuit Protection', 'Wires & Cables'];
+
   // Restore filters from URL when component mounts or slug changes
   useEffect(() => {
     isRestoringFilters.current = true;
     
-    // First clear all filters
-    setSelectedBrands([]);
-    setSelectedSeries([]);
-    setSelectedSubcategory(null);
-    setSelectedProductFamily(null);
-    setSelectedColor(null);
-    setSelectedModule(null);
-    setSelectedAmpere(null);
-    setSelectedWireSize(null);
-    setSelectedCoreCount(null);
-    setLocalSearch('');
-    setPage(1);
+    const currentCategoryName = category?.name || null;
+    const previousCategoryName = previousCategoryRef.current;
     
-    // Then restore from URL if present
+    // Check if we should clear brand/series/color filters
+    const shouldClearBrandSeriesColor = currentCategoryName && categoriesThatClearBrandSeriesColor.includes(currentCategoryName);
+    
+    // Get URL params
     const brandsParam = searchParams.get('brands');
     const seriesParam = searchParams.get('series');
     const subcategoryParam = searchParams.get('subcategory');
@@ -431,51 +470,143 @@ const CategoryPage = () => {
     const coreCountParam = searchParams.get('coreCount');
     const sortParam = searchParams.get('sort');
     const searchParam = searchParams.get('search');
-
-    if (brandsParam) {
-      setSelectedBrands(brandsParam.split(',').filter(Boolean));
+    
+    // Handle brand, series, and color filters - preserve across categories unless switching TO excluded categories
+    if (shouldClearBrandSeriesColor) {
+      // Clear brand, series, and color when switching TO excluded categories
+      setSelectedBrands([]);
+      setSelectedSeries([]);
+      setSelectedColor(null);
+      preservedFiltersRef.current = { brands: [], series: [], color: null };
+    } else {
+      // Preserve brand, series, and color across category switches
+      // Priority: URL params > preserved filters > empty
+      if (brandsParam) {
+        const brands = brandsParam.split(',').filter(Boolean);
+        setSelectedBrands(brands);
+        preservedFiltersRef.current.brands = brands;
+      } else if (previousCategoryName && !categoriesThatClearBrandSeriesColor.includes(previousCategoryName)) {
+        // If coming from a non-excluded category, preserve previous filters
+        if (preservedFiltersRef.current.brands.length > 0) {
+          setSelectedBrands(preservedFiltersRef.current.brands);
+        } else {
+          setSelectedBrands([]);
+        }
+      } else {
+        setSelectedBrands([]);
+      }
+      
+      if (seriesParam) {
+        const series = seriesParam.split(',').filter(Boolean);
+        setSelectedSeries(series);
+        preservedFiltersRef.current.series = series;
+      } else if (previousCategoryName && !categoriesThatClearBrandSeriesColor.includes(previousCategoryName)) {
+        if (preservedFiltersRef.current.series.length > 0) {
+          setSelectedSeries(preservedFiltersRef.current.series);
+        } else {
+          setSelectedSeries([]);
+        }
+      } else {
+        setSelectedSeries([]);
+      }
+      
+      if (colorParam) {
+        setSelectedColor(colorParam);
+        preservedFiltersRef.current.color = colorParam;
+      } else if (previousCategoryName && !categoriesThatClearBrandSeriesColor.includes(previousCategoryName)) {
+        if (preservedFiltersRef.current.color) {
+          setSelectedColor(preservedFiltersRef.current.color);
+        } else {
+          setSelectedColor(null);
+        }
+      } else {
+        setSelectedColor(null);
+      }
     }
-    if (seriesParam) {
-      setSelectedSeries(seriesParam.split(',').filter(Boolean));
-    }
+    
+    // Restore other filters (category-specific)
     if (subcategoryParam) {
       setSelectedSubcategory(subcategoryParam);
+    } else {
+      // Clear subcategory when switching categories (it's category-specific)
+      setSelectedSubcategory(null);
     }
-    if (familyParam) {
+    
+    // Only restore selectedProductFamily for wires category
+    if (category?.name === 'Wires & Cables' && familyParam) {
       setSelectedProductFamily(familyParam);
+    } else {
+      setSelectedProductFamily(null);
     }
-    if (colorParam) {
-      setSelectedColor(colorParam);
-    }
+    
+    // Clear category-specific filters when switching categories
     if (moduleParam) {
       setSelectedModule(moduleParam);
+    } else {
+      setSelectedModule(null);
     }
+    
     if (ampereParam) {
       setSelectedAmpere(ampereParam);
+    } else {
+      setSelectedAmpere(null);
     }
+    
     if (wireSizeParam) {
       setSelectedWireSize(wireSizeParam);
+    } else {
+      setSelectedWireSize(null);
     }
+    
     if (coreCountParam) {
       setSelectedCoreCount(coreCountParam);
+    } else {
+      setSelectedCoreCount(null);
     }
+    
     if (sortParam && ['name-asc', 'name-desc', 'price-asc', 'price-desc', 'newest'].includes(sortParam)) {
       setSortBy(sortParam as SortOption);
     }
+    
     if (searchParam !== null) {
       setLocalSearch(searchParam);
+    } else {
+      setLocalSearch('');
     }
+    
+    setPage(1);
+    
+    // Update preserved filters from current state (for next category switch)
+    if (!shouldClearBrandSeriesColor && currentCategoryName) {
+      preservedFiltersRef.current = {
+        brands: brandsParam ? brandsParam.split(',').filter(Boolean) : preservedFiltersRef.current.brands,
+        series: seriesParam ? seriesParam.split(',').filter(Boolean) : preservedFiltersRef.current.series,
+        color: colorParam || preservedFiltersRef.current.color,
+      };
+    }
+    
+    // Update previous category ref
+    previousCategoryRef.current = currentCategoryName;
     
     // Mark restoration as complete after a brief delay
     setTimeout(() => {
       isRestoringFilters.current = false;
     }, 200);
-  }, [slug]); // Only depend on slug to avoid loops
+  }, [slug, category, searchParams]); // Depend on slug, category, and searchParams to handle category changes
 
   // Save filters to URL when they change (but not during restoration)
   useEffect(() => {
     if (isRestoringFilters.current) {
       return;
+    }
+    
+    // Update preserved filters ref when brand/series/color change (for non-excluded categories)
+    if (category && !categoriesThatClearBrandSeriesColor.includes(category.name)) {
+      preservedFiltersRef.current = {
+        brands: selectedBrands,
+        series: selectedSeries,
+        color: selectedColor,
+      };
     }
     
     const params = serializeFiltersToUrl();
@@ -485,7 +616,7 @@ const CategoryPage = () => {
     }
     
     setSearchParams(params, { replace: true });
-  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, sortBy, localSearch, serializeFiltersToUrl, setSearchParams, searchQuery]);
+  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, sortBy, localSearch, serializeFiltersToUrl, setSearchParams, searchQuery, category]);
 
   // Clear subcategory filter when switching away from Circuit Protection
   useEffect(() => {
@@ -595,10 +726,29 @@ const CategoryPage = () => {
   }, [allProducts, category, selectedBrands]);
 
   const availableColors = useMemo(() => {
-    if (!selectedProductFamily) return [];
-    const familyProducts = productFamilies.find(f => f.name === selectedProductFamily)?.products || [];
+    // For wires category, use selectedProductFamily
+    if (isWiresCategory) {
+      if (!selectedProductFamily) return [];
+      const familyProducts = productFamilies.find(f => f.name === selectedProductFamily)?.products || [];
+      const colors = new Set<string>();
+      familyProducts.forEach(p => {
+        const rawColor = p.specs?.color;
+        if (typeof rawColor === 'string') {
+          const trimmed = rawColor.trim();
+          if (trimmed) colors.add(trimmed);
+        } else if (rawColor != null) {
+          const trimmed = String(rawColor).trim();
+          if (trimmed) colors.add(trimmed);
+        }
+      });
+      return Array.from(colors).sort();
+    }
+    
+    // For non-wires categories, use selectedSeries
+    if (selectedSeries.length === 0) return [];
+    const seriesProducts = allProducts.filter(p => selectedSeries.includes(p.product_family));
     const colors = new Set<string>();
-    familyProducts.forEach(p => {
+    seriesProducts.forEach(p => {
       const rawColor = p.specs?.color;
       if (typeof rawColor === 'string') {
         const trimmed = rawColor.trim();
@@ -609,7 +759,7 @@ const CategoryPage = () => {
       }
     });
     return Array.from(colors).sort();
-  }, [productFamilies, selectedProductFamily]);
+  }, [productFamilies, selectedProductFamily, selectedSeries, allProducts, isWiresCategory]);
 
   const availableModules = useMemo(() => {
     let source = allProducts;
@@ -619,27 +769,59 @@ const CategoryPage = () => {
     if (selectedSeries.length) {
       source = source.filter(p => selectedSeries.includes(p.product_family));
     }
-    if (selectedProductFamily) {
-      source = source.filter(p => p.product_family === selectedProductFamily);
+    // For wires category, also filter by selectedProductFamily (which acts as brand)
+    if (isWiresCategory && selectedProductFamily) {
+      source = source.filter(p => p.brand === selectedProductFamily);
     }
     const modules = new Set<string>();
     source.forEach(p => {
       const rawModule = p.specs?.mw ?? p.specs?.module_size ?? '';
-      const moduleVal = typeof rawModule === 'string'
-        ? rawModule.trim()
-        : rawModule != null
-          ? String(rawModule).trim()
-          : '';
+      let moduleVal = '';
+      
+      if (typeof rawModule === 'number') {
+        // If it's a number, convert to string
+        moduleVal = String(rawModule);
+      } else if (typeof rawModule === 'string') {
+        // If it's a string, extract the number part (e.g., "2M" -> "2", "12" -> "12")
+        const match = rawModule.trim().match(/^(\d+(?:\.\d+)?)/);
+        moduleVal = match ? match[1] : rawModule.trim();
+      }
+      
       if (moduleVal) modules.add(moduleVal);
     });
-    return Array.from(modules).sort();
-  }, [allProducts, selectedBrands, selectedSeries, selectedProductFamily]);
+    
+    // Sort modules numerically: 1, 2, 3, 4, 6, 8, 12, 16, 18, etc.
+    const sorted = Array.from(modules).sort((a, b) => {
+      // Extract numeric value from module string
+      const numA = parseFloat(a) || 0;
+      const numB = parseFloat(b) || 0;
+      
+      // If both are valid numbers, sort numerically
+      if (numA > 0 && numB > 0) {
+        return numA - numB;
+      }
+      
+      // If one is not a number, put numbers first
+      if (numA > 0 && numB === 0) return -1;
+      if (numA === 0 && numB > 0) return 1;
+      
+      // If neither is a number, sort alphabetically
+      return a.localeCompare(b);
+    });
+    
+    return sorted;
+  }, [allProducts, selectedBrands, selectedSeries, selectedProductFamily, isWiresCategory]);
 
-  // For non-Wires categories, compute product families limited to the currently selected brands
+  // For non-Wires categories, compute product families (series) limited to the currently selected brands
   const brandFilteredFamilies = useMemo(() => {
     if (isWiresCategory) return [];
-    if (!selectedBrands.length) return [];
+    
+    // If no brands selected, show all families
+    if (!selectedBrands.length) {
+      return productFamilies;
+    }
 
+    // If brands selected, filter families by those brands
     return productFamilies
       .map(family => {
         const brandMatchedProducts = family.products.filter(p => selectedBrands.includes(p.brand));
@@ -688,8 +870,8 @@ const CategoryPage = () => {
       const selected = selectedSubcategory.trim().toLowerCase();
       source = source.filter(p => (p.subcategory || '').trim().toLowerCase() === selected);
     }
-    if (selectedProductFamily) {
-      source = source.filter(p => p.product_family === selectedProductFamily);
+    if (selectedSeries.length) {
+      source = source.filter(p => selectedSeries.includes(p.product_family));
     }
 
     const ampereCounts = new Map<string, { label: string; count: number }>();
@@ -716,9 +898,9 @@ const CategoryPage = () => {
         }
         return a.label.localeCompare(b.label);
       });
-  }, [allProducts, category, selectedBrands, selectedSubcategory, selectedProductFamily]);
+      }, [allProducts, category, selectedBrands, selectedSubcategory, selectedSeries]);
 
-  // When brand changes, auto-select first matching series (if any) and clear invalid ones
+  // When brand changes, clear invalid series (but don't auto-select)
   useEffect(() => {
     if (!selectedBrands.length) {
       setSelectedSeries([]);
@@ -726,10 +908,10 @@ const CategoryPage = () => {
     }
     const validSeries = availableSeries;
     setSelectedSeries(prev => {
+      // Only keep valid series, remove invalid ones
       const stillValid = prev.filter(s => validSeries.includes(s));
-      if (stillValid.length > 0) return stillValid;
-      if (validSeries.length > 0) return [validSeries[0]];
-      return [];
+      // If more than one series is selected, keep only the first one
+      return stillValid.length > 0 ? [stillValid[0]] : [];
     });
   }, [availableSeries, selectedBrands]);
 
@@ -762,11 +944,14 @@ const CategoryPage = () => {
   };
 
   const toggleSeries = (seriesName: string) => {
-    setSelectedSeries(prev =>
-      prev.includes(seriesName)
-        ? prev.filter(s => s !== seriesName)
-        : [...prev, seriesName]
-    );
+    setSelectedSeries(prev => {
+      // Single selection: if already selected, deselect; otherwise, select only this one
+      if (prev.includes(seriesName)) {
+        return [];
+      } else {
+        return [seriesName];
+      }
+    });
     // Smooth scroll to top when filter changes
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -785,9 +970,45 @@ const CategoryPage = () => {
   };
 
   const hasActiveFilters = selectedBrands.length > 0 || selectedSeries.length > 0 ||
-    selectedSubcategory !== null || selectedProductFamily !== null || selectedColor !== null || selectedModule !== null ||
+    selectedSubcategory !== null || selectedColor !== null || selectedModule !== null ||
     selectedAmpere !== null || selectedWireSize !== null || selectedCoreCount !== null ||
     localSearch;
+
+  // Sort products by module width for Plates category
+  const sortedProducts = useMemo(() => {
+    if (category?.name !== 'Plates') {
+      return products;
+    }
+    
+    return [...products].sort((a, b) => {
+      // Extract module value from product
+      const getModuleValue = (product: Product): number => {
+        const rawModule = product.specs?.mw ?? product.specs?.module_size ?? '';
+        if (typeof rawModule === 'number') {
+          return rawModule;
+        } else if (typeof rawModule === 'string') {
+          const match = rawModule.trim().match(/^(\d+(?:\.\d+)?)/);
+          return match ? parseFloat(match[1]) : 0;
+        }
+        return 0;
+      };
+      
+      const moduleA = getModuleValue(a);
+      const moduleB = getModuleValue(b);
+      
+      // Sort by module value ascending
+      if (moduleA > 0 && moduleB > 0) {
+        return moduleA - moduleB;
+      }
+      
+      // Products with modules come first
+      if (moduleA > 0 && moduleB === 0) return -1;
+      if (moduleA === 0 && moduleB > 0) return 1;
+      
+      // If both have no module, maintain original order (or sort by name)
+      return a.name.localeCompare(b.name);
+    });
+  }, [products, category]);
 
   const FilterContent = () => (
     <div className="space-y-6">
@@ -805,40 +1026,9 @@ const CategoryPage = () => {
         </div>
       </div>
 
-      {/* Product Families */}
-      {productFamilies.length > 0 && (
-        <div className="space-y-3">
-          <Label>Product Families</Label>
-          <div className="space-y-2 max-h-48 overflow-y-auto">
-            {productFamilies.map(family => (
-              <label
-                key={family.name}
-                className="flex items-center gap-3 cursor-pointer hover:bg-secondary/50 p-2 rounded-lg transition-colors"
-              >
-                <Checkbox
-                  checked={selectedProductFamily === family.name}
-                  onCheckedChange={() => {
-                    if (selectedProductFamily === family.name) {
-                      setSelectedProductFamily(null);
-                      setSelectedColor(null);
-                    } else {
-                      setSelectedProductFamily(family.name);
-                      setSelectedColor(null);
-                    }
-                  }}
-                />
-                <span className="text-sm">{family.name}</span>
-                <span className="text-xs text-muted-foreground ml-auto">
-                  ({family.count})
-                </span>
-              </label>
-            ))}
-          </div>
-        </div>
-      )}
 
-      {/* Colors (depends on family) */}
-      {selectedProductFamily && availableColors.length > 0 && (
+      {/* Colors (depends on series/family) */}
+      {((isWiresCategory && selectedProductFamily) || (!isWiresCategory && selectedSeries.length > 0)) && availableColors.length > 0 && (
         <div className="space-y-3">
           <Label>Available Colors</Label>
           <div className="flex flex-wrap gap-2">
@@ -918,7 +1108,7 @@ const CategoryPage = () => {
         </div>
       )}
 
-      {/* Series - Only show for non-Circuit Protection categories */}
+      {/* Series - Only show for non-Circuit Protection categories, filtered by selected brands */}
       {category?.name !== 'Circuit Protection' && availableSeries.length > 0 && (
         <div className="space-y-3">
           <Label>Series</Label>
@@ -933,6 +1123,9 @@ const CategoryPage = () => {
                   onCheckedChange={() => toggleSeries(series)}
                 />
                 <span className="text-sm">{series}</span>
+                <span className="text-xs text-muted-foreground ml-auto">
+                  ({allProducts.filter(p => p.product_family === series && (selectedBrands.length === 0 || selectedBrands.includes(p.brand))).length})
+                </span>
               </label>
             ))}
           </div>
@@ -1186,17 +1379,17 @@ const CategoryPage = () => {
                         </div>
                       </div>
 
-                      {/* Product families filtered by selected brands */}
+                      {/* Series filtered by selected brands */}
                       {brandFilteredFamilies.length > 0 && (
                         <div className="space-y-4">
                           <div className="flex items-center justify-between">
                             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                              Product Families
+                              Series
                             </h3>
                           </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                             {brandFilteredFamilies.map(family => {
-                              const isSelected = selectedProductFamily === family.name;
+                              const isSelected = selectedSeries.includes(family.name);
 
                               return (
                                 <motion.div
@@ -1207,11 +1400,17 @@ const CategoryPage = () => {
                                   whileTap={{ scale: 0.98 }}
                                 >
                                   <button
-                                    onClick={() =>
-                                      setSelectedProductFamily(prev =>
-                                        prev === family.name ? null : family.name
-                                      )
-                                    }
+                                    onClick={() => {
+                                      // Single selection: if already selected, deselect; otherwise, select only this one
+                                      setSelectedSeries(prev => {
+                                        if (prev.includes(family.name)) {
+                                          return [];
+                                        } else {
+                                          return [family.name];
+                                        }
+                                      });
+                                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    }}
                                     className={cn(
                                       "w-full p-6 rounded-2xl border-2 transition-all duration-200 text-left",
                                       "hover:shadow-lg",
@@ -1321,9 +1520,11 @@ const CategoryPage = () => {
                             {selectedBrands.length
                               + selectedSeries.length
                               + (selectedSubcategory ? 1 : 0)
-                              + (!isWiresCategory && selectedProductFamily ? 1 : 0)
                               + (selectedColor ? 1 : 0)
                               + (selectedModule ? 1 : 0)
+                              + (selectedAmpere ? 1 : 0)
+                              + (selectedWireSize ? 1 : 0)
+                              + (selectedCoreCount ? 1 : 0)
                               + (localSearch ? 1 : 0)}
                           </Badge>
                         </motion.div>
@@ -1342,9 +1543,11 @@ const CategoryPage = () => {
                             {selectedBrands.length
                               + selectedSeries.length
                               + (selectedSubcategory ? 1 : 0)
-                              + (!isWiresCategory && selectedProductFamily ? 1 : 0)
                               + (selectedColor ? 1 : 0)
-                              + (selectedModule ? 1 : 0)}
+                              + (selectedModule ? 1 : 0)
+                              + (selectedAmpere ? 1 : 0)
+                              + (selectedWireSize ? 1 : 0)
+                              + (selectedCoreCount ? 1 : 0)}
                           </Badge>
                         )}
                       </Button>
@@ -1415,27 +1618,6 @@ const CategoryPage = () => {
                         </Button>
                       </motion.div>
                     )}
-                    {!isWiresCategory && selectedProductFamily && (
-                      <motion.div
-                        key={`family-${selectedProductFamily}`}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.8 }}
-                      >
-                        <Button
-                          variant="secondary"
-                          size="sm"
-                          onClick={() => {
-                            setSelectedProductFamily(null);
-                            setSelectedColor(null);
-                          }}
-                          className="gap-1.5"
-                        >
-                          {selectedProductFamily}
-                          <X className="h-3 w-3" />
-                        </Button>
-                      </motion.div>
-                    )}
                     {selectedColor && (
                       <motion.div
                         key={`color-${selectedColor}`}
@@ -1496,8 +1678,8 @@ const CategoryPage = () => {
                   </motion.div>
 
                   <span className="text-sm text-muted-foreground hidden sm:inline">
-                    {products.length} {products.length === 1 ? 'product' : 'products'}
-                    {selectedProductFamily || selectedColor ? ` (filtered)` : ''}
+                    {sortedProducts.length} {sortedProducts.length === 1 ? 'product' : 'products'}
+                    {(selectedSeries.length > 0 || selectedProductFamily || selectedColor || selectedBrands.length > 0 || selectedSubcategory || selectedModule || selectedAmpere || selectedWireSize || selectedCoreCount) ? ` (filtered)` : ''}
                   </span>
 
                   {/* View Toggle */}
@@ -1556,7 +1738,7 @@ const CategoryPage = () => {
                     >
                       <ProductCardSkeleton count={view === 'grid' ? 8 : 4} />
                     </motion.div>
-                  ) : products.length > 0 ? (
+                  ) : sortedProducts.length > 0 ? (
                     <motion.div
                       layout
                       className={`grid gap-4 ${view === 'grid'
@@ -1565,7 +1747,7 @@ const CategoryPage = () => {
                         }`}
                     >
                       <AnimatePresence mode="popLayout">
-                        {products.map((product, idx) => (
+                        {sortedProducts.map((product, idx) => (
                           <motion.div
                             key={product.id}
                             layout
@@ -1599,13 +1781,13 @@ const CategoryPage = () => {
                       )}
 
                       {/* End of results message */}
-                      {!hasMore && products.length > 0 && (
+                      {!hasMore && sortedProducts.length > 0 && (
                         <motion.div
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           className="col-span-full text-center py-8 text-sm text-muted-foreground"
                         >
-                          Showing all {products.length} products
+                          Showing all {sortedProducts.length} products
                         </motion.div>
                       )}
                     </motion.div>

@@ -23,6 +23,7 @@ const ComparePage = lazy(() => import("./pages/ComparePage"));
 const CartPage = lazy(() => import("./pages/CartPage"));
 const BrandsListPage = lazy(() => import("./pages/BrandsListPage"));
 const CategoriesListPage = lazy(() => import("./pages/CategoriesListPage"));
+const SearchResultsPage = lazy(() => import("./pages/SearchResultsPage"));
 
 const AdminLayout = lazy(() => import("./pages/admin/AdminLayout"));
 const AdminLogin = lazy(() => import("./pages/admin/AdminLogin"));
@@ -76,6 +77,7 @@ const App = () => (
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/about" element={<AboutPage />} />
+                  <Route path="/search" element={<SearchResultsPage />} />
                   <Route path="/categories" element={<CategoriesListPage />} />
                   <Route path="/category/:slug" element={<CategoryPage />} />
                   <Route path="/brands" element={<BrandsListPage />} />
