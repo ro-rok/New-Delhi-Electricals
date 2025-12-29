@@ -1,4 +1,3 @@
-import re
 from typing import Any, List
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
@@ -6,7 +5,6 @@ from motor.motor_asyncio import AsyncIOMotorDatabase
 
 from ..db import get_db_dep
 from ..schemas import ProductCreate, ProductUpdate, ProductInDB, ProductListResponse
-from ..utils.slug_utils import extract_primary_slug, inject_brand_and_url, slugify_brand
 from ..security import get_current_admin
 
 
@@ -17,22 +15,15 @@ router = APIRouter(prefix="/api/products", tags=["products"])
 async def list_products(
     q: str | None = Query(default=None, description="Search query"),
     category: str | None = Query(default=None, description="Filter by category name"),
-    subcategory: str | None = Query(default=None, description="Filter by subcategory name"),
     brand: str | None = Query(default=None, description="Filter by brand name"),
     series: str | None = Query(default=None, description="Filter by product series/family"),
-    product_family: str | None = Query(default=None, description="Filter by exact product_family match"),
-    color: str | None = Query(default=None, description="Filter by color from specs"),
-    module_size: str | None = Query(default=None, alias="moduleSize", description="Filter by module_size from specs"),
+    wire_size: float | None = Query(default=None, alias="wireSize", description="Filter wires by size_sqmm"),
+    core_count: int | None = Query(default=None, alias="coreCount", description="Filter wires by core_count"),
     min_price: float | None = Query(default=None, ge=0, description="Minimum price"),
     max_price: float | None = Query(default=None, ge=0, description="Maximum price"),
     sort_by: str | None = Query(default="name", description="Sort field: name or price"),
     sort_order: str | None = Query(default="asc", description="Sort order: asc or desc"),
     is_active: bool | None = Query(default=None, description="Filter by active status"),
-    missing_images: bool | None = Query(
-        default=None,
-        alias="missingImages",
-        description="When true, only return products without images",
-    ),
     page: int = Query(1, ge=1),
     page_size: int = Query(20, ge=1, le=10000, alias="pageSize"),
     db: AsyncIOMotorDatabase = Depends(get_db_dep),
@@ -61,28 +52,9 @@ async def list_products(
     
     if category:
         and_conditions.append({"category": {"$regex": category, "$options": "i"}})
-    
-    if subcategory:
-        # Use exact match (case-insensitive) for subcategory, handle whitespace
-        # Escape special regex characters (like parentheses in "Miniature Circuit Breakers (MCBs)")
-        subcategory_trimmed = subcategory.strip()
-        subcategory_escaped = re.escape(subcategory_trimmed)
-        and_conditions.append({
-            "subcategory": {
-                "$regex": f"^{subcategory_escaped}$",
-                "$options": "i"
-            }
-        })
         
     if brand:
-        # Use exact match (case-insensitive) for brand, handle whitespace
-        brand_trimmed = brand.strip()
-        and_conditions.append({
-            "brand": {
-                "$regex": f"^{brand_trimmed}$",
-                "$options": "i"
-            }
-        })
+        and_conditions.append({"brand": {"$regex": brand, "$options": "i"}})
         
     if series:
         and_conditions.append({
@@ -91,15 +63,13 @@ async def list_products(
                 {"product_family": {"$regex": series, "$options": "i"}}
             ]
         })
-    
-    if product_family:
-        and_conditions.append({"product_family": {"$regex": product_family, "$options": "i"}})
-    
-    if color:
-        and_conditions.append({"specs.color": {"$regex": color, "$options": "i"}})
-    
-    if module_size:
-        and_conditions.append({"specs.module_size": {"$regex": module_size, "$options": "i"}})
+
+    # Wires & Cables specific filters
+    if wire_size is not None:
+        and_conditions.append({"specs.size_sqmm": wire_size})
+
+    if core_count is not None:
+        and_conditions.append({"specs.core_count": core_count})
         
     if min_price is not None or max_price is not None:
         price_query = {}
@@ -117,26 +87,11 @@ async def list_products(
             })
         else:
             and_conditions.append({"status.is_active": False})
-
-    if missing_images:
-        # Products where images is missing or empty
-        and_conditions.append({
-            "$or": [
-                {"images": {"$exists": False}},
-                {"images": {"$size": 0}},
-            ]
-        })
             
     if and_conditions:
         query = {"$and": and_conditions}
     else:
         query = {}
-    
-    # Debug logging (can be removed in production)
-    import logging
-    logger = logging.getLogger(__name__)
-    logger.debug(f"Query: {query}")
-    logger.debug(f"Filters - category: {category}, subcategory: {subcategory}, brand: {brand}")
     
     # Build sort query
     sort_field = "name" if sort_by == "name" else "list_price"
@@ -144,17 +99,10 @@ async def list_products(
     sort_query = [(sort_field, sort_direction)]
     
     total = await db.products.count_documents(query)
-    logger.debug(f"Total documents matching query: {total}")
     cursor = db.products.find(query).sort(sort_query).skip(skip).limit(page_size)
     items: List[ProductInDB] = []
     async for doc in cursor:
         doc["_id"] = str(doc["_id"])
-        doc = inject_brand_and_url(doc)
-        # Ensure slug is present in response for clients
-        slug_val = extract_primary_slug(doc)
-        if slug_val and not doc.get("slug"):
-            doc["slug"] = slug_val
-        # Variant field is already at top level, no extraction needed
         items.append(ProductInDB(**doc))
     return ProductListResponse(items=items, total=total, page=page, pageSize=page_size)
 
@@ -197,7 +145,7 @@ async def get_categories(
     
     categories = []
     async for doc in db.products.aggregate(pipeline):
-        slug = slugify_brand(doc["name"]) or doc["name"]
+        slug = doc["name"].lower().replace(" ", "-").replace("/", "-").replace("(", "").replace(")", "")
         categories.append({
             "id": slug,
             "name": doc["name"],
@@ -237,7 +185,7 @@ async def get_brands(
     
     brands = []
     async for doc in db.products.aggregate(pipeline):
-        slug = slugify_brand(doc["name"]) or doc["name"]
+        slug = doc["name"].lower().replace(" ", "-").replace("/", "-").replace("(", "").replace(")", "")
         brands.append({
             "id": slug,
             "name": doc["name"],
@@ -253,61 +201,26 @@ async def get_brands(
 
 @router.get("/slug/{slug}", response_model=ProductInDB)
 async def get_product_by_slug(slug: str, db: AsyncIOMotorDatabase = Depends(get_db_dep)) -> Any:
-    """Fetch product by slug only (legacy)."""
+    """Fetch product by SEO slug. Checks multiple possible locations for the slug"""
+    # Try multiple possible locations for the slug
+    # Based on how products are transformed, slug can be in:
+    # - catalog_source.seo.slug (most common - from transform_product)
+    # - catalog_source.slug (from upload_mcb_products)
+    # - specs.slug (from upload_mcb_products)
+    # - seo.slug (if stored at top level)
+    # - slug (if stored at top level)
     doc = await db.products.find_one({
-        "slug": slug
-    })
-    if not doc:
-        # Fallback: try matching name-derived slug or SKU
-        loose = slug.replace("-", " ")
-        tokens = [t for t in slug.split("-") if t]
-        token_regex = [{"name": {"$regex": t, "$options": "i"}} for t in tokens]
-        loose_query = {
-            "$or": [
-                {"name": {"$regex": f"^{loose}$", "$options": "i"}},
-                {"name": {"$regex": loose, "$options": "i"}},
-                {"sku": {"$regex": f"^{slug}$", "$options": "i"}},
-                {"sku": {"$regex": slug, "$options": "i"}},
-                {"$and": token_regex} if token_regex else {},
-            ]
-        }
-        doc = await db.products.find_one(loose_query)
-    if not doc:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
-    doc["_id"] = str(doc["_id"])
-    doc = inject_brand_and_url(doc)
-    slug_val = extract_primary_slug(doc)
-    if slug_val and not doc.get("slug"):
-        doc["slug"] = slug_val
-    # Variant field is already at top level, no extraction needed
-    return ProductInDB(**doc)
-
-
-@router.get("/brand/{brand_slug}/{slug}", response_model=ProductInDB)
-async def get_product_by_brand_and_slug(
-    brand_slug: str,
-    slug: str,
-    db: AsyncIOMotorDatabase = Depends(get_db_dep),
-) -> Any:
-    """Fetch product by brand slug + product slug."""
-    # First attempt: find by slug in any known location
-    doc = await db.products.find_one({
-        "slug": slug
+        "$or": [
+            {"catalog_source.seo.slug": slug},
+            {"catalog_source.slug": slug},
+            {"specs.slug": slug},
+            {"seo.slug": slug},
+            {"slug": slug},
+        ]
     })
     if not doc:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
-
-    # Validate brand
-    doc_brand_slug = slugify_brand(doc.get("brand"))
-    if doc_brand_slug and doc_brand_slug != brand_slug:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
-
     doc["_id"] = str(doc["_id"])
-    doc = inject_brand_and_url(doc)
-    slug_val = extract_primary_slug(doc)
-    if slug_val and not doc.get("slug"):
-        doc["slug"] = slug_val
-    # Variant field is already at top level, no extraction needed
     return ProductInDB(**doc)
 
 
@@ -327,11 +240,6 @@ async def get_product(product_id: str, db: AsyncIOMotorDatabase = Depends(get_db
     if not doc:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
     doc["_id"] = str(doc["_id"])
-    doc = inject_brand_and_url(doc)
-    slug_val = extract_primary_slug(doc)
-    if slug_val and not doc.get("slug"):
-        doc["slug"] = slug_val
-    # Variant field is already at top level, no extraction needed
     return ProductInDB(**doc)
 
 
@@ -361,10 +269,6 @@ async def update_product(
     if not res:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found")
     res["_id"] = str(res["_id"])
-    res = inject_brand_and_url(res)
-    slug_val = extract_primary_slug(res)
-    if slug_val and not res.get("slug"):
-        res["slug"] = slug_val
     return ProductInDB(**res)
 
 

@@ -43,7 +43,17 @@ function transformProduct(backendProduct: any): Product {
   const datasheetUrl = normalizeMediaUrl(
     backendProduct.datasheet_url || backendProduct.media?.documents?.[0]
   ) || undefined;
-  const description = backendProduct.description || backendProduct.seo?.meta_description || '';
+
+  // Prefer explicit description, then fall back to SEO meta description
+  let description = backendProduct.description || backendProduct.seo?.meta_description || '';
+
+  // Wires meta cleanup: remove in-text SKU mention and "inverter" from the tail phrase
+  if (description) {
+    // Drop patterns like " (SKU ABC-123)" inside the sentence
+    description = description.replace(/\s*\(SKU [^)]+\)/gi, '');
+    // Simplify "...residential and inverter wiring." -> "...residential wiring."
+    description = description.replace(/residential and inverter wiring\./gi, 'residential wiring.');
+  }
   const product_family = backendProduct.product_family || backendProduct.series || '';
 
   const brandSlug = backendProduct.brand_slug || slugify(backendProduct.brand);
@@ -121,6 +131,8 @@ export async function getProducts(params?: {
   productFamily?: string;
   color?: string;
   moduleSize?: string;
+  wireSize?: number;
+  coreCount?: number;
   minPrice?: number;
   maxPrice?: number;
   sortBy?: 'name' | 'price';
@@ -139,6 +151,8 @@ export async function getProducts(params?: {
   if (params?.productFamily) searchParams.append('product_family', params.productFamily);
   if (params?.color) searchParams.append('color', params.color);
   if (params?.moduleSize) searchParams.append('moduleSize', params.moduleSize);
+  if (params?.wireSize !== undefined) searchParams.append('wireSize', String(params.wireSize));
+  if (params?.coreCount !== undefined) searchParams.append('coreCount', String(params.coreCount));
   if (params?.minPrice !== undefined) searchParams.append('min_price', String(params.minPrice));
   if (params?.maxPrice !== undefined) searchParams.append('max_price', String(params.maxPrice));
   if (params?.sortBy) searchParams.append('sort_by', params.sortBy);
