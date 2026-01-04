@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation, useSearchParams } from 'react-router-dom';
-import { Search, Heart, GitCompare, Menu, X, Sun, Moon, ShoppingCart } from 'lucide-react';
+import { Search, Heart, Menu, X, Sun, Moon, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useApp } from '@/contexts/AppContext';
@@ -12,7 +12,7 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [searchParams] = useSearchParams();
-  const { shortlistCount, comparisonCount, cartCount } = useApp();
+  const { shortlistCount, cartCount } = useApp();
   const { theme, setTheme } = useTheme();
   
   // Get current search query from URL if on search page
@@ -104,21 +104,6 @@ const Header = () => {
                   {shortlistCount > 0 && (
                     <span className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-foreground text-background text-[10px] font-semibold flex items-center justify-center">
                       {shortlistCount}
-                    </span>
-                  )}
-                </Button>
-              </Link>
-              
-              <Link to="/compare">
-                <Button 
-                  variant="ghost" 
-                  size="icon" 
-                  className="rounded-full h-10 w-10 hover:bg-foreground/5 relative"
-                >
-                  <GitCompare className="h-[18px] w-[18px]" strokeWidth={1.5} />
-                  {comparisonCount > 0 && (
-                    <span className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-foreground text-background text-[10px] font-semibold flex items-center justify-center">
-                      {comparisonCount}
                     </span>
                   )}
                 </Button>

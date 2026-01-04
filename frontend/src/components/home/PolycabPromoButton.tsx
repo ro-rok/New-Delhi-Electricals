@@ -24,7 +24,7 @@ const PolycabPromoButton = () => {
                 Polycab Wires & Cables
               </span>
               <span className="text-xs sm:text-sm text-blue-100">
-                • Up to 54% OFF • Premium Quality
+                • Up to 60% OFF • Premium Quality
               </span>
             </div>
           </div>

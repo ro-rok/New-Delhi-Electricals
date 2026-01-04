@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Heart, GitCompare } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Product } from '@/types/product';
@@ -22,9 +22,8 @@ const badgeConfig = {
 };
 
 const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardProps) => {
-  const { toggleShortlist, isInShortlist, toggleComparison, isInComparison } = useApp();
+  const { toggleShortlist, isInShortlist } = useApp();
   const heartBtnRef = useMagneticEffect(0.25);
-  const compareBtnRef = useMagneticEffect(0.25);
 
   const handleShortlist = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -32,14 +31,7 @@ const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardPro
     toggleShortlist(product.id);
   };
 
-  const handleCompare = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    toggleComparison(product.id);
-  };
-
   const inShortlist = isInShortlist(product.id);
-  const inComparison = isInComparison(product.id);
 
   // Calculate final price with discount and GST
   const calculateFinalPrice = () => {
@@ -100,18 +92,6 @@ const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardPro
                 onClick={handleShortlist}
               >
                 <Heart className={cn('h-4 w-4', inShortlist && 'fill-current')} strokeWidth={1.5} />
-              </Button>
-              <Button
-                ref={compareBtnRef as any}
-                variant="secondary"
-                size="icon"
-                className={cn(
-                  'h-9 w-9 rounded-full shadow-sm bg-background/80 backdrop-blur-xl hover:bg-background transition-all duration-200',
-                  inComparison && 'text-accent'
-                )}
-                onClick={handleCompare}
-              >
-                <GitCompare className="h-4 w-4" strokeWidth={1.5} />
               </Button>
             </div>
           </div>
