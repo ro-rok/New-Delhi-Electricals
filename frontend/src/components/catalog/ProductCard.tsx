@@ -41,6 +41,20 @@ const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardPro
   const inShortlist = isInShortlist(product.id);
   const inComparison = isInComparison(product.id);
 
+  // Calculate final price with discount and GST
+  const calculateFinalPrice = () => {
+    if (product.discount && product.discount > 0) {
+      const discountedPrice = product.listPrice * (1 - product.discount / 100);
+      const priceWithGST = discountedPrice * 1.18;
+      return Math.ceil(priceWithGST);
+    }
+    // If no discount, show list price with GST
+    return Math.ceil(product.listPrice * 1.18);
+  };
+
+  const hasDiscount = product.discount && product.discount > 0;
+  const finalPrice = calculateFinalPrice();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -110,11 +124,36 @@ const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardPro
             <h3 className="font-medium text-base mb-3 line-clamp-2 leading-snug tracking-tight">
               {product.name}
             </h3>
-            <div className="flex items-baseline gap-2">
-              <span className="text-sm text-muted-foreground">From</span>
-              <span className="font-semibold text-lg tracking-tight">
-                ₹{product.listPrice.toLocaleString()}
-              </span>
+            <div className="space-y-1">
+              {hasDiscount ? (
+                <>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-muted-foreground line-through">
+                      ₹{product.listPrice.toLocaleString()}
+                    </span>
+                    <Badge variant="secondary" className="text-xs bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-300">
+                      {product.discount}% OFF
+                    </Badge>
+                  </div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-sm text-muted-foreground">From</span>
+                    <span className="font-semibold text-lg tracking-tight">
+                      ₹{finalPrice.toLocaleString()}
+                    </span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">incl. 18% GST</p>
+                </>
+              ) : (
+                <>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-sm text-muted-foreground">From</span>
+                    <span className="font-semibold text-lg tracking-tight">
+                      ₹{finalPrice.toLocaleString()}
+                    </span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">incl. 18% GST</p>
+                </>
+              )}
             </div>
           </div>
         </div>

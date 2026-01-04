@@ -1,4 +1,4 @@
-import asyncio
+image.pngimport asyncio
 import sys
 sys.path.insert(0, '.')
 from motor.motor_asyncio import AsyncIOMotorClient

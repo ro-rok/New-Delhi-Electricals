@@ -10,6 +10,7 @@ import RecentlyViewed from '@/components/catalog/RecentlyViewed';
 import WhatsAppFab from '@/components/WhatsAppFab';
 import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
+import PolycabPromoButton from '@/components/home/PolycabPromoButton';
 import { useApp } from '@/contexts/AppContext';
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <div className="h-16" /> {/* Spacer for fixed header */}
+      <PolycabPromoButton />
       <main>
         <PremiumHero />
         <CategoryGrid />

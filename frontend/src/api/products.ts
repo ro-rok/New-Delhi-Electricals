@@ -77,6 +77,11 @@ function transformProduct(backendProduct: any): Product {
   //   'final variant': variant,
   // });
 
+
+  // Extract discount from catalog_source.pricing.discount
+  const discount = backendProduct.catalog_source?.pricing?.discount ??
+                   backendProduct.pricing?.discount ??
+                   null;
   return {
     id: backendProduct._id || backendProduct.id || backendProduct.sku,
     sku: backendProduct.sku,
@@ -89,6 +94,7 @@ function transformProduct(backendProduct: any): Product {
     series: backendProduct.series ?? backendProduct.product_family ?? '',
     product_family: product_family,
     listPrice: typeof listPrice === 'number' ? listPrice : parseInt(String(listPrice), 10) || 0,
+    discount: typeof discount === 'number' ? discount : null,
     currency: backendProduct.currency || 'INR',
     images: images,
     datasheetUrl: datasheetUrl,

@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, computed_field
 
 from .product import ProductStatus
 
@@ -68,6 +68,16 @@ class ProductUpdate(BaseModel):
 
 class ProductInDB(ProductBase):
     id: str = Field(..., alias="_id")
+    
+    @computed_field
+    @property
+    def discount(self) -> Optional[float]:
+        """Extract discount from catalog_source.pricing.discount"""
+        if self.catalog_source and isinstance(self.catalog_source, dict):
+            pricing = self.catalog_source.get("pricing")
+            if pricing and isinstance(pricing, dict):
+                return pricing.get("discount")
+        return None
 
 
 class ProductListResponse(BaseModel):
