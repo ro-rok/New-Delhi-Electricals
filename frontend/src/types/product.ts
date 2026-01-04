@@ -1,4 +1,3 @@
-
 export interface ProductStatus {
   is_active: boolean;
   is_featured?: boolean;
@@ -16,6 +15,7 @@ export interface Product {
   series?: string;
   product_family: string;
   listPrice: number;
+  discount?: number | null; // Discount percentage from catalog_source.pricing.discount
   currency: string;
   images: string[];
   datasheetUrl?: string;

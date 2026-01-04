@@ -476,7 +476,7 @@ const ProductSlugPage = () => {
                             ₹{Math.round(discountedPrice).toLocaleString('en-IN')}
                           </p>
                           <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
-                            ₹{Math.round(priceWithGST).toLocaleString('en-IN')} <span className="text-xs">(incl. 18% GST)</span>
+                            ₹{Math.ceil(priceWithGST).toLocaleString('en-IN')} <span className="text-xs">(incl. 18% GST)</span>
                           </p>
                         </div>
                       );
@@ -491,7 +491,7 @@ const ProductSlugPage = () => {
                       const priceWithGST = product.listPrice * 1.18;
                       return (
                         <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
-                          ₹{Math.round(priceWithGST).toLocaleString('en-IN')} <span className="text-xs">(incl. 18% GST)</span>
+                          ₹{Math.ceil(priceWithGST).toLocaleString('en-IN')} <span className="text-xs">(incl. 18% GST)</span>
                         </p>
                       );
                     })()}
