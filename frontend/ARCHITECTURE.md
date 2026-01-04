@@ -16,7 +16,7 @@ This document explains how the app is structured today and gives you a clean men
 
 ---
 
-## High-level Layers
+## High-level Layers  
 
 Think of the app in these layers:
 
