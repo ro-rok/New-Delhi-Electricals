@@ -55,6 +55,7 @@ class ProductUpdate(BaseModel):
     subcategory: Optional[str] = None
     series: Optional[str] = None
     list_price: Optional[int] = None
+    discount: Optional[float] = Field(default=None, description="Discount percentage (0-100). Stored in catalog_source.pricing.discount")
     currency: Optional[str] = None
     images: Optional[List[str]] = None
     datasheet_url: Optional[str] = None

@@ -456,9 +456,48 @@ const ProductSlugPage = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-900 dark:text-white leading-[1.1] tracking-tight">
                 {product.name}
               </h1>
-              <p className="text-3xl md:text-4xl font-light text-gray-900 dark:text-white">
-                ₹{product.listPrice.toLocaleString('en-IN')}
-              </p>
+              <div className="space-y-2">
+                {product.discount !== undefined && product.discount !== null && product.discount > 0 ? (
+                  <>
+                    <div className="flex items-baseline gap-3">
+                      <p className="text-2xl md:text-3xl font-light text-gray-500 dark:text-gray-400 line-through">
+                        ₹{product.listPrice.toLocaleString('en-IN')}
+                      </p>
+                      <span className="text-sm md:text-base font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 px-2 py-1 rounded">
+                        {product.discount}% OFF
+                      </span>
+                    </div>
+                    {(() => {
+                      const discountedPrice = product.listPrice * (1 - product.discount / 100);
+                      const priceWithGST = discountedPrice * 1.18;
+                      return (
+                        <div className="space-y-1">
+                          <p className="text-3xl md:text-4xl font-light text-gray-900 dark:text-white">
+                            ₹{Math.round(discountedPrice).toLocaleString('en-IN')}
+                          </p>
+                          <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
+                            ₹{Math.round(priceWithGST).toLocaleString('en-IN')} <span className="text-xs">(incl. 18% GST)</span>
+                          </p>
+                        </div>
+                      );
+                    })()}
+                  </>
+                ) : (
+                  <>
+                    <p className="text-3xl md:text-4xl font-light text-gray-900 dark:text-white">
+                      ₹{product.listPrice.toLocaleString('en-IN')}
+                    </p>
+                    {(() => {
+                      const priceWithGST = product.listPrice * 1.18;
+                      return (
+                        <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
+                          ₹{Math.round(priceWithGST).toLocaleString('en-IN')} <span className="text-xs">(incl. 18% GST)</span>
+                        </p>
+                      );
+                    })()}
+                  </>
+                )}
+              </div>
               <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                 <button
                   onClick={copySku}

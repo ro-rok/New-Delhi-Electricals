@@ -22,6 +22,15 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { Label } from '@/components/ui/label';
 import { getProducts, getCategories, getBrands, updateProduct } from '@/api/products';
 import { Product, Category, Brand } from '@/types/product';
 import { toast } from 'sonner';
@@ -62,6 +71,12 @@ const AdminProducts = () => {
   const [imageModalOpen, setImageModalOpen] = useState(false);
   const [selectedProductForImage, setSelectedProductForImage] = useState<Product | null>(null);
   const [selectedProductForBulk, setSelectedProductForBulk] = useState<Product | null>(null);
+  const [priceEditModalOpen, setPriceEditModalOpen] = useState(false);
+  const [selectedProductForPriceEdit, setSelectedProductForPriceEdit] = useState<Product | null>(null);
+  const [newPrice, setNewPrice] = useState<string>('');
+  const [discountEditModalOpen, setDiscountEditModalOpen] = useState(false);
+  const [selectedProductForDiscountEdit, setSelectedProductForDiscountEdit] = useState<Product | null>(null);
+  const [newDiscount, setNewDiscount] = useState<string>('');
 
   // Fetch products with server-side filtering
   useEffect(() => {
@@ -145,6 +160,85 @@ const AdminProducts = () => {
   const handleEdit = (product: Product) => {
     setSelectedProduct(product);
     setEditModalOpen(true);
+  };
+
+  const handlePriceDoubleClick = (product: Product) => {
+    setSelectedProductForPriceEdit(product);
+    setNewPrice(product.listPrice.toString());
+    setPriceEditModalOpen(true);
+  };
+
+  const handlePriceUpdate = async () => {
+    if (!selectedProductForPriceEdit) return;
+    
+    const priceValue = parseFloat(newPrice);
+    if (isNaN(priceValue) || priceValue < 0) {
+      toast.error('Please enter a valid price');
+      return;
+    }
+
+    try {
+      await updateProduct(selectedProductForPriceEdit.id, {
+        listPrice: priceValue,
+      });
+      
+      // Update the product in the local state
+      setProducts(products.map(p => 
+        p.id === selectedProductForPriceEdit.id 
+          ? { ...p, listPrice: priceValue }
+          : p
+      ));
+      
+      toast.success('Price updated successfully');
+      setPriceEditModalOpen(false);
+      setSelectedProductForPriceEdit(null);
+      setNewPrice('');
+    } catch (error) {
+      console.error('Failed to update price:', error);
+      toast.error('Failed to update price');
+    }
+  };
+
+  const handleDiscountDoubleClick = (product: Product) => {
+    setSelectedProductForDiscountEdit(product);
+    setNewDiscount(product.discount !== undefined && product.discount !== null ? product.discount.toString() : '');
+    setDiscountEditModalOpen(true);
+  };
+
+  const handleDiscountUpdate = async () => {
+    if (!selectedProductForDiscountEdit) return;
+    
+    // Allow empty string to clear discount - send null to explicitly remove it
+    let discountValue: number | null = null;
+    if (newDiscount.trim() !== '') {
+      const parsed = parseFloat(newDiscount);
+      if (isNaN(parsed) || parsed < 0 || parsed > 100) {
+        toast.error('Please enter a valid discount percentage (0-100)');
+        return;
+      }
+      discountValue = parsed;
+    }
+
+    try {
+      await updateProduct(selectedProductForDiscountEdit.id, {
+        discount: discountValue,
+      });
+      
+      // Update the product in the local state
+      setProducts(products.map(p => 
+        p.id === selectedProductForDiscountEdit.id 
+          ? { ...p, discount: discountValue }
+          : p
+      ));
+      
+      toast.success('Discount updated successfully');
+      setDiscountEditModalOpen(false);
+      setSelectedProductForDiscountEdit(null);
+      setNewDiscount('');
+    } catch (error) {
+      console.error('Failed to update discount:', error);
+      toast.error('Failed to update discount');
+    }
   };
 
   const handleImageScraper = (product: Product) => {
@@ -330,6 +424,7 @@ const AdminProducts = () => {
                 <th className="text-left p-4 text-sm font-medium text-muted-foreground">Subcategory</th>
                 <th className="text-left p-4 text-sm font-medium text-muted-foreground">Brand</th>
                 <th className="text-left p-4 text-sm font-medium text-muted-foreground">Price</th>
+                <th className="text-left p-4 text-sm font-medium text-muted-foreground">Discount</th>
                 <th className="text-left p-4 text-sm font-medium text-muted-foreground">Badge</th>
                 <th className="text-right p-4 text-sm font-medium text-muted-foreground">Actions</th>
               </tr>
@@ -379,7 +474,26 @@ const AdminProducts = () => {
                   <td className="p-4 text-sm">{product.category}</td>
                   <td className="p-4 text-sm">{product.subcategory || '-'}</td>
                   <td className="p-4 text-sm">{product.brand}</td>
-                  <td className="p-4 text-sm font-medium">₹{product.listPrice.toLocaleString()}</td>
+                  <td 
+                    className="p-4 text-sm font-medium cursor-pointer hover:bg-muted/50 transition-colors rounded"
+                    onDoubleClick={() => handlePriceDoubleClick(product)}
+                    title="Double-click to edit price"
+                  >
+                    ₹{product.listPrice.toLocaleString()}
+                  </td>
+                  <td 
+                    className="p-4 text-sm cursor-pointer hover:bg-muted/50 transition-colors rounded"
+                    onDoubleClick={() => handleDiscountDoubleClick(product)}
+                    title="Double-click to edit discount"
+                  >
+                    {product.discount !== undefined && product.discount !== null ? (
+                      <Badge variant="secondary" className="text-xs bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-300">
+                        {product.discount}%
+                      </Badge>
+                    ) : (
+                      <span className="text-muted-foreground">-</span>
+                    )}
+                  </td>
                   <td className="p-4">
                     <div className="flex flex-wrap gap-1">
                       {product.badge && (
@@ -507,6 +621,146 @@ const AdminProducts = () => {
         onSuccess={handleBulkImageSuccess}
         initialProduct={selectedProductForBulk}
       />
+
+      {/* Price Edit Modal */}
+      <Dialog open={priceEditModalOpen} onOpenChange={setPriceEditModalOpen}>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>Edit Product Price</DialogTitle>
+            <DialogDescription>
+              Update the price for this product. Changes will be saved immediately.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            <div className="grid gap-2">
+              <Label htmlFor="sku-display">SKU</Label>
+              <Input
+                id="sku-display"
+                value={selectedProductForPriceEdit?.sku || ''}
+                disabled
+                className="bg-muted font-mono"
+              />
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="old-price">Current Price</Label>
+              <Input
+                id="old-price"
+                value={selectedProductForPriceEdit ? `₹${selectedProductForPriceEdit.listPrice.toLocaleString()}` : ''}
+                disabled
+                className="bg-muted"
+              />
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="new-price">New Price (₹)</Label>
+              <Input
+                id="new-price"
+                type="number"
+                min="0"
+                step="0.01"
+                value={newPrice}
+                onChange={(e) => setNewPrice(e.target.value)}
+                placeholder="Enter new price"
+                className="text-lg font-semibold"
+                autoFocus
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    handlePriceUpdate();
+                  }
+                }}
+              />
+            </div>
+          </div>
+          <DialogFooter>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setPriceEditModalOpen(false);
+                setSelectedProductForPriceEdit(null);
+                setNewPrice('');
+              }}
+            >
+              Cancel
+            </Button>
+            <Button onClick={handlePriceUpdate}>
+              Confirm
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* Discount Edit Modal */}
+      <Dialog open={discountEditModalOpen} onOpenChange={setDiscountEditModalOpen}>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>Edit Product Discount</DialogTitle>
+            <DialogDescription>
+              Update the discount percentage for this product. Leave empty to remove discount. Changes will be saved immediately.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            <div className="grid gap-2">
+              <Label htmlFor="discount-sku-display">SKU</Label>
+              <Input
+                id="discount-sku-display"
+                value={selectedProductForDiscountEdit?.sku || ''}
+                disabled
+                className="bg-muted font-mono"
+              />
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="old-discount">Current Discount</Label>
+              <Input
+                id="old-discount"
+                value={selectedProductForDiscountEdit?.discount !== undefined && selectedProductForDiscountEdit?.discount !== null 
+                  ? `${selectedProductForDiscountEdit.discount}%` 
+                  : 'No discount'}
+                disabled
+                className="bg-muted"
+              />
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="new-discount">New Discount (%)</Label>
+              <Input
+                id="new-discount"
+                type="number"
+                min="0"
+                max="100"
+                step="0.1"
+                value={newDiscount}
+                onChange={(e) => setNewDiscount(e.target.value)}
+                placeholder="Enter discount percentage (0-100) or leave empty to remove"
+                className="text-lg font-semibold"
+                autoFocus
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    handleDiscountUpdate();
+                  }
+                }}
+              />
+              <p className="text-xs text-muted-foreground">
+                Enter a value between 0 and 100, or leave empty to remove the discount.
+              </p>
+            </div>
+          </div>
+          <DialogFooter>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setDiscountEditModalOpen(false);
+                setSelectedProductForDiscountEdit(null);
+                setNewDiscount('');
+              }}
+            >
+              Cancel
+            </Button>
+            <Button onClick={handleDiscountUpdate}>
+              Confirm
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
