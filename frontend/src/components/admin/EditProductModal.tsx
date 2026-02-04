@@ -168,8 +168,7 @@ const EditProductModal = ({
       setKeywords([]);
       setVariants([]);
     } catch (error) {
-      console.error('Error fetching product data:', error);
-      toast.error('Failed to load product data');
+            toast.error('Failed to load product data');
     } finally {
       setFetching(false);
     }
@@ -229,8 +228,7 @@ const EditProductModal = ({
       setImages(newImages);
       toast.success('Images updated successfully');
     } catch (error) {
-      console.error('Error updating images:', error);
-      throw error;
+            throw error;
     }
   };
 
@@ -293,8 +291,7 @@ const EditProductModal = ({
       onSuccess?.();
       onClose();
     } catch (error: any) {
-      console.error('Error updating product:', error);
-      toast.error(error.message || 'Failed to update product. Please try again.');
+            toast.error(error.message || 'Failed to update product. Please try again.');
     } finally {
       setLoading(false);
     }

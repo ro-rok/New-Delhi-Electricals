@@ -78,8 +78,7 @@ const AdminBrands = () => {
         setTotalProducts(productsResponse.total ?? productsResponse.items.length);
         setMissingImagesTotal(missingStats.total ?? missingStats.items.length);
       } catch (error) {
-        console.error('Failed to fetch brands:', error);
-      } finally {
+              } finally {
         setLoading(false);
       }
     };
@@ -99,8 +98,7 @@ const AdminBrands = () => {
         });
         setAllProductFamilies(Array.from(families).sort());
       } catch (error) {
-        console.error('Failed to fetch filter options:', error);
-      }
+              }
     };
     fetchFilterOptions();
   }, []);
@@ -156,8 +154,7 @@ const AdminBrands = () => {
         setMissingImageProducts(missing.items);
         setFilteredMissingImagesCount(missing.total ?? missing.items.length);
       } catch (error) {
-        console.error('Failed to fetch products without images:', error);
-      } finally {
+              } finally {
         setLoadingMissingImages(false);
       }
     };
@@ -187,8 +184,7 @@ const AdminBrands = () => {
       );
       toast.success('Images updated successfully');
     } catch (error) {
-      console.error('Error saving images:', error);
-      throw error;
+            throw error;
     } finally {
       setImageModalOpen(false);
       setSelectedProductForImage(null);
@@ -398,8 +394,7 @@ const AdminBrands = () => {
                   setTotalProducts(allProductsRes.total ?? allProductsRes.items.length);
                   setMissingImagesTotal(missingStatsRes.total ?? missingStatsRes.items.length);
                 } catch (error) {
-                  console.error('Failed to refresh data:', error);
-                } finally {
+                                  } finally {
                   setLoadingMissingImages(false);
                 }
               }}>

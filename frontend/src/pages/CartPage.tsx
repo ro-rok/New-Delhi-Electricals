@@ -21,6 +21,8 @@ import { Link } from 'react-router-dom';
 import { getProductUrl } from '@/lib/utils';
 import { toast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
+import { SEOHead } from '@/components/SEOHead';
+import { PAGE_SEO } from '@/lib/seo';
 
 const CartPage = () => {
   const { cart, removeFromCart, updateQuantity, clearCart, totalPrice, trackWhatsAppClick } = useApp();
@@ -127,6 +129,7 @@ const CartPage = () => {
   if (cart.length === 0) {
     return (
       <div className="min-h-screen bg-background">
+        <SEOHead {...PAGE_SEO.cart} />
         <Header />
         <main className="pt-24 pb-16">
           <div className="container max-w-4xl mx-auto px-6">
@@ -148,6 +151,7 @@ const CartPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead {...PAGE_SEO.cart} />
       <Header />
       <main className="pt-24 pb-16">
         <div className="container max-w-6xl mx-auto px-6">

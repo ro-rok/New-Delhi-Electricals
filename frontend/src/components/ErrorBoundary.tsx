@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -24,6 +25,12 @@ class ErrorBoundaryClass extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // Call optional onError callback if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+    
+    // Log error for debugging (will be removed in production build optimization)
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
@@ -78,8 +85,8 @@ class ErrorBoundaryClass extends Component<Props, State> {
 }
 
 // Wrapper component
-export const ErrorBoundary = ({ children, fallback }: Props) => {
-  return <ErrorBoundaryClass fallback={fallback}>{children}</ErrorBoundaryClass>;
+export const ErrorBoundary = ({ children, fallback, onError }: Props) => {
+  return <ErrorBoundaryClass fallback={fallback} onError={onError}>{children}</ErrorBoundaryClass>;
 };
 
 export default ErrorBoundary;

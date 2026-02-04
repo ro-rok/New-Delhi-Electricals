@@ -8,6 +8,7 @@ import {
   Download,
   Image as ImageIcon,
   Link as LinkIcon,
+  Loader2,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -26,6 +27,7 @@ import {
 import { toast } from 'sonner';
 import { motion, AnimatePresence } from 'framer-motion';
 import { uploadCatalogPdf, getCatalogPreview, getCatalogProgress, applyCatalogImport, CatalogPreviewLog, CatalogPreviewResponse } from '@/api/catalog';
+import { uploadImageToCloudinary } from '@/api/products';
 
 interface ParsedProduct {
   tempId: string;
@@ -53,6 +55,8 @@ const AdminImport = () => {
   const [previewLogs, setPreviewLogs] = useState<CatalogPreviewLog[]>([]);
   const [defaultStatus, setDefaultStatus] = useState<boolean>(true); // Default to active
   const [isImporting, setIsImporting] = useState(false);
+  const [uploadingImageFor, setUploadingImageFor] = useState<string | null>(null);
+  const [imagePreview, setImagePreview] = useState<{ [key: string]: string }>({});
 
   const handleDragOver = useCallback((e: any) => {
     e.preventDefault();
@@ -140,8 +144,7 @@ const AdminImport = () => {
               setTimeout(poll, 1000);
             }
           } catch (err) {
-            console.error('Error polling progress:', err);
-            attempts++;
+                        attempts++;
             if (attempts < maxAttempts) {
               setTimeout(poll, 1000);
             } else {
@@ -157,8 +160,7 @@ const AdminImport = () => {
       
       await pollProgress();
     } catch (err) {
-      console.error(err);
-      setIsParsing(false);
+            setIsParsing(false);
       toast.error('Failed to parse catalog. Please try again.');
     }
   };
@@ -249,8 +251,7 @@ const AdminImport = () => {
       setUploadedFile(null);
       setImportId(null);
     } catch (error: any) {
-      console.error('Import error:', error);
-      toast.error(error.message || 'Failed to import products');
+            toast.error(error.message || 'Failed to import products');
     } finally {
       setIsImporting(false);
     }
@@ -260,6 +261,25 @@ const AdminImport = () => {
     setParsedProducts(prev =>
       prev.map(p => p.tempId === tempId ? { ...p, [field]: value } : p)
     );
+  };
+
+  const handleImageUpload = async (tempId: string, file: File) => {
+    setUploadingImageFor(tempId);
+    try {
+      const imageUrl = await uploadImageToCloudinary(file);
+      
+      // Update product with new image URL
+      updateProduct(tempId, 'imageUrl', imageUrl);
+      
+      // Set preview
+      setImagePreview(prev => ({ ...prev, [tempId]: imageUrl }));
+      
+      toast.success('Image uploaded successfully');
+    } catch (error: any) {
+            toast.error(error.message || 'Failed to upload image');
+    } finally {
+      setUploadingImageFor(null);
+    }
   };
 
   return (
@@ -540,15 +560,44 @@ const AdminImport = () => {
                             className="h-8 text-xs"
                             aria-label="Product image URL"
                           />
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            className="h-8 w-8 p-0"
-                            type="button"
-                            title="Attach image (Cloudinary upload TODO)"
-                          >
-                            <ImageIcon className="h-4 w-4" />
-                          </Button>
+                          <input
+                            type="file"
+                            id={`image-upload-${product.tempId}`}
+                            className="hidden"
+                            accept="image/*"
+                            onChange={(e) => {
+                              const file = e.target.files?.[0];
+                              if (file) {
+                                handleImageUpload(product.tempId, file);
+                              }
+                            }}
+                          />
+                          <label htmlFor={`image-upload-${product.tempId}`}>
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              className="h-8 w-8 p-0"
+                              type="button"
+                              title="Upload image to Cloudinary"
+                              disabled={uploadingImageFor === product.tempId}
+                              asChild
+                            >
+                              <span>
+                                {uploadingImageFor === product.tempId ? (
+                                  <Loader2 className="h-4 w-4 animate-spin" />
+                                ) : (
+                                  <ImageIcon className="h-4 w-4" />
+                                )}
+                              </span>
+                            </Button>
+                          </label>
+                          {imagePreview[product.tempId] && (
+                            <img
+                              src={imagePreview[product.tempId]}
+                              alt="Preview"
+                              className="h-8 w-8 rounded object-cover"
+                            />
+                          )}
                         </div>
                       </td>
                     </motion.tr>

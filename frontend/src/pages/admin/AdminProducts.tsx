@@ -31,7 +31,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/label';
-import { getProducts, getCategories, getBrands, updateProduct } from '@/api/products';
+import { getProducts, getCategories, getBrands, updateProduct, deleteProduct } from '@/api/products';
 import { Product, Category, Brand } from '@/types/product';
 import { toast } from 'sonner';
 import { motion } from 'framer-motion';
@@ -77,6 +77,9 @@ const AdminProducts = () => {
   const [discountEditModalOpen, setDiscountEditModalOpen] = useState(false);
   const [selectedProductForDiscountEdit, setSelectedProductForDiscountEdit] = useState<Product | null>(null);
   const [newDiscount, setNewDiscount] = useState<string>('');
+  const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
+  const [productToDelete, setProductToDelete] = useState<Product | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   // Fetch products with server-side filtering
   useEffect(() => {
@@ -108,8 +111,7 @@ const AdminProducts = () => {
         setCategories(catsList);
         setBrands(brandsList);
       } catch (error) {
-        console.error('Failed to fetch products:', error);
-      } finally {
+              } finally {
         setLoading(false);
       }
     };
@@ -132,8 +134,7 @@ const AdminProducts = () => {
         });
         setAllProductFamilies(Array.from(families).sort());
       } catch (error) {
-        console.error('Failed to fetch product families:', error);
-      }
+              }
     };
     fetchFamilies();
   }, []);
@@ -194,8 +195,7 @@ const AdminProducts = () => {
       setSelectedProductForPriceEdit(null);
       setNewPrice('');
     } catch (error) {
-      console.error('Failed to update price:', error);
-      toast.error('Failed to update price');
+            toast.error('Failed to update price');
     }
   };
 
@@ -236,8 +236,7 @@ const AdminProducts = () => {
       setSelectedProductForDiscountEdit(null);
       setNewDiscount('');
     } catch (error) {
-      console.error('Failed to update discount:', error);
-      toast.error('Failed to update discount');
+            toast.error('Failed to update discount');
     }
   };
 
@@ -273,8 +272,7 @@ const AdminProducts = () => {
         });
         setProducts(productsResponse.items);
       } catch (error) {
-        console.error('Failed to refresh products:', error);
-      } finally {
+              } finally {
         setLoading(false);
       }
     };
@@ -282,11 +280,28 @@ const AdminProducts = () => {
   };
 
   const handleDelete = async (product: Product) => {
-    if (!confirm(`Are you sure you want to delete "${product.name}"?`)) {
-      return;
+    setProductToDelete(product);
+    setDeleteConfirmOpen(true);
+  };
+
+  const confirmDelete = async () => {
+    if (!productToDelete) return;
+
+    setIsDeleting(true);
+    try {
+      await deleteProduct(productToDelete.id);
+      
+      // Remove from local state
+      setProducts(products.filter(p => p.id !== productToDelete.id));
+      
+      toast.success('Product deleted successfully');
+      setDeleteConfirmOpen(false);
+      setProductToDelete(null);
+    } catch (error: any) {
+            toast.error(error.message || 'Failed to delete product');
+    } finally {
+      setIsDeleting(false);
     }
-    // TODO: Implement delete functionality
-    toast.info('Delete functionality not yet implemented');
   };
 
   const handleEditSuccess = () => {
@@ -311,8 +326,7 @@ const AdminProducts = () => {
         });
         setProducts(productsResponse.items);
       } catch (error) {
-        console.error('Failed to refresh products:', error);
-      } finally {
+              } finally {
         setLoading(false);
       }
     };
@@ -332,8 +346,7 @@ const AdminProducts = () => {
       ));
       toast.success('Images updated successfully');
     } catch (error) {
-      console.error('Error saving images:', error);
-      throw error;
+            throw error;
     }
   };
 
@@ -757,6 +770,54 @@ const AdminProducts = () => {
             </Button>
             <Button onClick={handleDiscountUpdate}>
               Confirm
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* Delete Confirmation Dialog */}
+      <Dialog open={deleteConfirmOpen} onOpenChange={setDeleteConfirmOpen}>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>Delete Product</DialogTitle>
+            <DialogDescription>
+              Are you sure you want to delete this product? This action cannot be undone.
+            </DialogDescription>
+          </DialogHeader>
+          {productToDelete && (
+            <div className="py-4">
+              <div className="flex items-center gap-3 p-3 bg-muted rounded-lg">
+                {productToDelete.images[0] && (
+                  <img
+                    src={productToDelete.images[0]}
+                    alt={productToDelete.name}
+                    className="w-12 h-12 rounded object-cover"
+                  />
+                )}
+                <div>
+                  <p className="font-medium">{productToDelete.name}</p>
+                  <p className="text-sm text-muted-foreground font-mono">{productToDelete.sku}</p>
+                </div>
+              </div>
+            </div>
+          )}
+          <DialogFooter>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setDeleteConfirmOpen(false);
+                setProductToDelete(null);
+              }}
+              disabled={isDeleting}
+            >
+              Cancel
+            </Button>
+            <Button
+              variant="destructive"
+              onClick={confirmDelete}
+              disabled={isDeleting}
+            >
+              {isDeleting ? 'Deleting...' : 'Delete Product'}
             </Button>
           </DialogFooter>
         </DialogContent>

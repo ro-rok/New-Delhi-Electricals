@@ -13,14 +13,11 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 # Set auto_error=False to allow OPTIONS requests to pass through
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login", auto_error=False)
 
-
 def hash_password(password: str) -> str:
     return pwd_context.hash(password)
 
-
 def verify_password(plain_password: str, hashed_password: str) -> bool:
     return pwd_context.verify(plain_password, hashed_password)
-
 
 def create_access_token(
     subject: str,
@@ -38,7 +35,6 @@ def create_access_token(
     )
     return encoded_jwt
 
-
 def decode_token(token: str) -> dict[str, Any]:
     try:
         payload = jwt.decode(
@@ -50,7 +46,6 @@ def decode_token(token: str) -> dict[str, Any]:
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Could not validate credentials",
         ) from e
-
 
 async def get_current_admin(
     request: Request,
@@ -79,14 +74,10 @@ async def get_current_admin(
         )
     return {"email": sub}
 
-
 def generate_totp_secret() -> str:
     return pyotp.random_base32()
-
 
 def verify_totp(token: str, secret: str) -> bool:
     totp = pyotp.TOTP(secret)
     return totp.verify(token, valid_window=1)
-
-
 

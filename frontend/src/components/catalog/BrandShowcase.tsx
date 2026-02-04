@@ -2,18 +2,18 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getBrands } from '@/api/products';
 import { Brand } from '@/types/product';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const BrandShowcase = () => {
   const [featuredBrands, setFeaturedBrands] = useState<Brand[]>([]);
-  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const fetchBrands = async () => {
       try {
         const brandsList = await getBrands();
-        setFeaturedBrands(brandsList.filter(b => b.featured));
+        const featured = brandsList.filter(b => b.featured);
+        // If no featured brands, show all brands (up to 8)
+        setFeaturedBrands(featured.length > 0 ? featured : brandsList.slice(0, 8));
       } catch (error) {
         console.error('Failed to fetch brands:', error);
       }
@@ -21,18 +21,15 @@ const BrandShowcase = () => {
     fetchBrands();
   }, []);
 
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"]
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
+  // Don't render if no brands available
+  if (featuredBrands.length === 0) {
+    return null;
+  }
 
   return (
-    <section ref={sectionRef} className="py-24 border-y border-border/50">
+    <section className="py-24 border-y border-border/50">
       <div className="container max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
-          style={{ y }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

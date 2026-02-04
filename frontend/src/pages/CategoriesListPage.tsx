@@ -8,6 +8,9 @@ import { Category, Product } from '@/types/product';
 import { ToggleRight, Cable, Zap, Lightbulb, Fan, Smartphone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
+import { SEOHead } from '@/components/SEOHead';
+import { PAGE_SEO } from '@/lib/seo';
+import { LoadingSpinner } from '@/components/LoadingSpinner';
 
 const iconMap: Record<string, LucideIcon> = {
   ToggleRight,
@@ -33,8 +36,7 @@ const CategoriesListPage = () => {
         setCategories(catsList);
         setProducts(productsResponse.items);
       } catch (error) {
-        console.error('Failed to fetch categories:', error);
-      } finally {
+              } finally {
         setLoading(false);
       }
     };
@@ -50,7 +52,9 @@ const CategoriesListPage = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="pt-24 container">
-          <p className="text-center text-muted-foreground">Loading...</p>
+          <div className="flex justify-center items-center py-20">
+            <LoadingSpinner size="lg" text="Loading categories..." />
+          </div>
         </main>
       </div>
     );
@@ -58,6 +62,7 @@ const CategoriesListPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead {...PAGE_SEO.categories} />
       <Header />
       <main className="pt-24 pb-16">
         <div className="container">

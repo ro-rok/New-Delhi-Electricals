@@ -7,9 +7,7 @@ from ..config import settings
 from ..schemas import Token
 from ..security import create_access_token
 
-
 router = APIRouter(prefix="/auth", tags=["auth"])
-
 
 @router.post("/login", response_model=Token)
 async def login(form_data: OAuth2PasswordRequestForm = Depends()) -> Token:
@@ -34,7 +32,6 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()) -> Token:
         subject=expected_username, expires_delta=access_token_expires
     )
     return Token(access_token=token)
-
 
 @router.get("/me")
 async def me() -> dict:

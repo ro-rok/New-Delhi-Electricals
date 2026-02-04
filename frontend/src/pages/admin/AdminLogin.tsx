@@ -50,8 +50,7 @@ const AdminLogin = () => {
       toast.success('Welcome back!');
       navigate('/admin');
     } catch (error) {
-      console.error(error);
-      toast.error('Unable to sign in. Please try again.');
+            toast.error('Unable to sign in. Please try again.');
     } finally {
       setIsLoading(false);
     }

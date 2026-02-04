@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { getFeaturedProducts, getBrands } from '@/api/products';
 import { Brand, Product } from '@/types/product';
 import ProductCard from './ProductCard';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useRef } from 'react';
 import switchImage from '@/assets/product-switch-premium.jpg';
 import mcbImage from '@/assets/product-mcb-premium.jpg';
 import wireImage from '@/assets/product-wire-premium.jpg';
@@ -15,7 +14,6 @@ const featuredImages = [switchImage, mcbImage, wireImage];
 const FeaturedProducts = () => {
   const [brands, setBrands] = useState<Brand[]>([]);
   const [brandProducts, setBrandProducts] = useState<Record<string, Product[]>>({});
-  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,24 +29,15 @@ const FeaturedProducts = () => {
         }
         setBrandProducts(productsMap);
       } catch (error) {
-        console.error('Failed to fetch featured products:', error);
-      }
+              }
     };
     fetchData();
   }, []);
 
   const featuredBrands = brands;
 
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"]
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-
   return (
-    <section ref={sectionRef} className="py-32 bg-secondary/20">
+    <section className="py-32 bg-secondary/20">
       <div className="container max-w-7xl mx-auto px-6 lg:px-12">
         {featuredBrands.map((brand, brandIdx) => {
           const products = brandProducts[brand.name] || [];
@@ -97,6 +86,7 @@ const FeaturedProducts = () => {
                       <img
                         src={featuredImages[brandIdx % featuredImages.length]}
                         alt={`${brand.name} products`}
+                        loading="lazy"
                         className="w-full h-auto object-contain drop-shadow-xl"
                       />
                     </div>

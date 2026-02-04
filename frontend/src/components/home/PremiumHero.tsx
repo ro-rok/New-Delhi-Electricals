@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useRef } from "react";
 import heroImage from "@/assets/hero-premium.jpg";
 import { useApp } from "@/contexts/AppContext";
 import { useMagneticEffect } from "@/hooks/useMagneticEffect";
@@ -10,20 +9,8 @@ import { useMagneticEffect } from "@/hooks/useMagneticEffect";
 const PremiumHero = () => {
   const { trackWhatsAppClick } = useApp();
   const navigate = useNavigate();
-  const containerRef = useRef<HTMLDivElement>(null);
   const primaryBtnRef = useMagneticEffect(0.2);
   const secondaryBtnRef = useMagneticEffect(0.2);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  });
-
-  // Parallax effects
-  const yText = useTransform(scrollYProgress, [0, 1], [0, -50]);
-  const yImage = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const rotate = useTransform(scrollYProgress, [0, 0.5], [0, 4]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
 
   const handleWhatsApp = () => {
     trackWhatsAppClick();
@@ -32,12 +19,11 @@ const PremiumHero = () => {
   };
 
   return (
-    <section ref={containerRef} className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-b from-background via-secondary/20 to-background">
+    <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-b from-background via-secondary/20 to-background">
       <div className="container relative z-10 mx-auto px-6 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content - ultra-clean typography */}
           <motion.div
-            style={{ y: yText, opacity }}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
@@ -112,9 +98,8 @@ const PremiumHero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right side - Floating product with scroll-based rotation and ambient light */}
+          {/* Right side - Floating product with ambient light */}
           <motion.div
-            style={{ y: yImage, rotate }}
             initial={{ opacity: 0, scale: 0.96, x: 40 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}

@@ -12,7 +12,6 @@ It then maps series to their associated brands automatically.
 from typing import Dict, List, Optional, Set, Tuple
 from motor.motor_asyncio import AsyncIOMotorDatabase
 
-
 class SearchParser:
     """Parses search queries to extract category, brand, and series filters."""
     

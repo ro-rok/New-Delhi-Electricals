@@ -2,7 +2,6 @@ from enum import Enum
 from typing import List, Optional, Union
 from pydantic import BaseModel, Field
 
-
 # -------------------------------------------------
 # Core shared models
 # -------------------------------------------------
@@ -19,7 +18,6 @@ class ProductCategory(str, Enum):
     POWER_SOCKETS = "Power Sockets"
     SWITCHES = "Switches"
 
-
 class ProductPricing(BaseModel):
     """
     Commercial pricing for a product.
@@ -31,7 +29,6 @@ class ProductPricing(BaseModel):
     std_pack: str
     note: Optional[str] = None
 
-
 class MediaImage(BaseModel):
     """
     Single product image with an optional label.
@@ -40,14 +37,12 @@ class MediaImage(BaseModel):
     url: str
     label: str
 
-
 class ProductMedia(BaseModel):
     """
     Media attached to the product.
     """
     images: List[MediaImage] = []
     documents: List[str] = []
-
 
 class ProductSEO(BaseModel):
     """
@@ -58,7 +53,6 @@ class ProductSEO(BaseModel):
     keywords: List[str] = []
     meta_description: str
 
-
 class ProductStatus(BaseModel):
     """
     Flags to control product visibility and merchandising.
@@ -66,7 +60,6 @@ class ProductStatus(BaseModel):
     is_active: bool = True
     is_featured: bool = False
     coming_soon: bool = False
-
 
 # -------------------------------------------------
 # Category-wise Specs models
@@ -118,7 +111,6 @@ class AccessoriesSpecs(BaseModel):
     scenes: Optional[int] = None
     smart: Optional[bool] = None
 
-
 class BoxesSpecs(BaseModel):
     """
     Specs for Category: Boxes
@@ -132,7 +124,6 @@ class BoxesSpecs(BaseModel):
     mounting_type: Optional[str] = None     # e.g. "Surface", "Flush"
     mw: Optional[Union[float, str]] = None  # some rows have "2", some numeric
     orientation: Optional[str] = None       # e.g. "Horizontal", "Vertical"
-
 
 class CircuitProtectionSpecs(BaseModel):
     """
@@ -159,7 +150,6 @@ class CircuitProtectionSpecs(BaseModel):
     packing: Optional[str] = None
     voltage: Optional[str] = None
 
-
 class DataSocketSpecs(BaseModel):
     """
     Specs for Category: Data Sockets
@@ -177,7 +167,6 @@ class DataSocketSpecs(BaseModel):
     mw: Optional[float] = None
     type_detail: Optional[str] = None       # e.g. "RJ45 LAN", "TV socket"
     with_shutter: Optional[bool] = None
-
 
 class DimmerSpecs(BaseModel):
     """
@@ -202,7 +191,6 @@ class DimmerSpecs(BaseModel):
     # IR dimmer specific
     control_type: Optional[str] = None      # e.g. "IR remote dimmer"
     module_size: Optional[str] = None       # e.g. "1M", "2M"
-
 
 class FanControlSpecs(BaseModel):
     """
@@ -235,7 +223,6 @@ class FanControlSpecs(BaseModel):
     packing: Optional[str] = None
     smart: Optional[bool] = None
 
-
 class HospitalitySpecs(BaseModel):
     """
     Specs for Category: Hospitality
@@ -254,7 +241,6 @@ class HospitalitySpecs(BaseModel):
     mw: Optional[float] = None
     type_detail: Optional[str] = None
     voltage: Optional[str] = None           # e.g. "230V", shaver socket voltage
-
 
 class PowerSocketSpecs(BaseModel):
     """
@@ -276,7 +262,6 @@ class PowerSocketSpecs(BaseModel):
     socket_type: Optional[str] = None       # e.g. "Universal"
     type_detail: Optional[str] = None
     with_shutter: Optional[bool] = None
-
 
 class CoverPlateSpecs(BaseModel):
     """
@@ -336,7 +321,6 @@ class CoverPlateSpecs(BaseModel):
     # Packaging
     packing: Optional[str] = None           # e.g. "10 pcs / box"
 
-
 class SwitchSpecs(BaseModel):
     """
     Specs for Category: Switches
@@ -369,7 +353,6 @@ class SwitchSpecs(BaseModel):
     channels: Optional[int] = None
     control_type: Optional[str] = None      # e.g. "Touch IR Switch", "Wi-Fi Switch"
     module_size: Optional[str] = None
-
 
 # -------------------------------------------------
 # Final Product model

@@ -15,7 +15,6 @@ from ..utils.search_parser import SearchParser
 
 logger = logging.getLogger(__name__)
 
-
 class SearchEngine:
     """
     Clean, reliable search engine for products.

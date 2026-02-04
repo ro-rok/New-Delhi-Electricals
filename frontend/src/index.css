@@ -141,6 +141,12 @@
     text-wrap: balance;
   }
 
+  /* Touch optimization for mobile */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   /* Premium animations */
   .animate-breathe {
     animation: breathe 12s ease-in-out infinite;

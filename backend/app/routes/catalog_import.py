@@ -17,21 +17,18 @@ from fastapi import (
 )
 from motor.motor_asyncio import AsyncIOMotorDatabase
 
-from ..cloudinary_client import generate_signed_upload_params
+from ..cloudinary_client import generate_signed_upload_params, cloudinary_service
 from ..db import get_db_dep
 from ..parsing.catalog_parser import PageImage, ParsedRow, parse_catalog_pdf
 from ..schemas import AdminLog, CatalogImport, CatalogImportRow
 from ..security import get_current_admin
 
-
 logger = logging.getLogger(__name__)
-
 
 router = APIRouter(prefix="/api/admin/catalogs", tags=["catalog-import"])
 
 BASE_DIR = Path(__file__).resolve().parents[2]  # backend/
 CATALOG_UPLOAD_DIR = BASE_DIR / "public" / "uploads" / "catalogs"
-
 
 async def _log_admin_action(
     db: AsyncIOMotorDatabase,
@@ -52,7 +49,6 @@ async def _log_admin_action(
     )
     # Let Mongo generate _id; don't send an explicit null _id
     await db.admin_logs.insert_one(log.model_dump(by_alias=True, exclude_none=True))
-
 
 async def _save_parsed_rows(
     db: AsyncIOMotorDatabase,
@@ -132,7 +128,6 @@ async def _save_parsed_rows(
         docs.append(doc)
     if docs:
         await db.catalog_import_rows.insert_many(docs)
-
 
 async def _run_parse_job(
     db: AsyncIOMotorDatabase,
@@ -268,7 +263,6 @@ async def _run_parse_job(
             },
         )
 
-
 @router.options("/upload")
 async def upload_catalog_options():
     """Handle OPTIONS preflight requests for CORS."""
@@ -281,7 +275,6 @@ async def upload_catalog_options():
             "Access-Control-Max-Age": "3600",
         },
     )
-
 
 @router.post(
     "/upload",
@@ -381,7 +374,6 @@ async def upload_catalog(
         "existing": bool(existing),
     }
 
-
 @router.get("/{import_id}/progress")
 async def get_catalog_progress(
     import_id: str,
@@ -405,7 +397,6 @@ async def get_catalog_progress(
             "percentage": progress.get("percentage", 0),
         },
     }
-
 
 @router.get("/{import_id}/preview")
 async def get_catalog_preview(
@@ -446,7 +437,6 @@ async def get_catalog_preview(
         "rows": rows,
         "logs": logs,
     }
-
 
 @router.post("/{import_id}/apply")
 async def apply_catalog_import(
@@ -579,7 +569,6 @@ async def apply_catalog_import(
         "failed": failed,
     }
 
-
 @router.post("/{import_id}/rerun")
 async def rerun_catalog_parse(
     import_id: str,
@@ -638,9 +627,7 @@ async def rerun_catalog_parse(
 
     return {"status": "processing"}
 
-
 cloudinary_router = APIRouter(prefix="/api/admin/cloudinary", tags=["cloudinary"])
-
 
 @cloudinary_router.get("/signature")
 async def get_cloudinary_signature(
@@ -656,4 +643,46 @@ async def get_cloudinary_signature(
     """
     params = generate_signed_upload_params()
     return params
+
+@cloudinary_router.post("/upload/image")
+async def upload_image(
+    file: UploadFile = File(...),
+    folder: str = "products",
+    db: AsyncIOMotorDatabase = Depends(get_db_dep),  # noqa: ARG001 - reserved for auditing
+    admin=Depends(get_current_admin),
+) -> Dict[str, Any]:
+    """
+    Upload an image to Cloudinary (admin only).
+    
+    Returns:
+        Dictionary with url, public_id, width, height
+    """
+    # Validate file type
+    if not file.content_type or not file.content_type.startswith("image/"):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Only image files are supported"
+        )
+    
+    # Read file bytes
+    file_bytes = await file.read()
+    
+    # Upload to Cloudinary
+    try:
+        result = await cloudinary_service.upload_image(
+            file_bytes=file_bytes,
+            folder=folder
+        )
+        return result
+    except RuntimeError as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(e)
+        )
+    except Exception as e:
+        logger.error(f"Failed to upload image: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to upload image to storage service"
+        )
 

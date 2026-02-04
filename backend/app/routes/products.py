@@ -9,15 +9,13 @@ from ..schemas import ProductCreate, ProductUpdate, ProductInDB, ProductListResp
 from ..security import get_current_admin
 from ..utils.search_parser import SearchParser
 from ..services.search_engine import SearchEngine
-
+from ..cloudinary_client import cloudinary_service
 
 def escape_regex(text: str) -> str:
     """Escape special regex characters in text."""
     return re.escape(text)
 
-
 router = APIRouter(prefix="/api/products", tags=["products"])
-
 
 @router.get("", response_model=ProductListResponse)
 async def list_products(
@@ -42,13 +40,9 @@ async def list_products(
     logger = logging.getLogger(__name__)
     
     # Log at the very start to verify function is being called
-    print(f"\n{'='*70}")
-    print(f"=== LIST_PRODUCTS CALLED ===")
-    print(f"Query parameter 'q': {q}")
+
     print(f"Query type: {type(q)}")
-    print(f"Category: {category}, Brand: {brand}, Series: {series}")
-    print(f"{'='*70}\n")
-    
+
     logger.info(f"=== LIST_PRODUCTS CALLED ===")
     logger.info(f"Query parameter 'q': {q}")
     logger.info(f"Query type: {type(q)}")
@@ -58,7 +52,7 @@ async def list_products(
     search_engine_used = False
     
     if q:
-        print(f"Query is not None, entering search engine path...")
+
         logger.info(f"Query is not None, entering search engine path...")
         # Strip quotes and whitespace from query (handle both single and double quotes)
         clean_query = q.strip()
@@ -71,7 +65,7 @@ async def list_products(
             logger.info(f"Cleaned query: '{q}'")
             try:
                 logger.info(f"🔍 SEARCH ENGINE: Query='{q}', Category={category}, Brand={brand}, Series={series}")
-                print(f"🔍 SEARCH ENGINE: Query='{q}'")  # Also print to console
+
                 
                 search_engine = SearchEngine(db)
                 result = await search_engine.search(
@@ -139,7 +133,7 @@ async def list_products(
                 logger.error(f"❌ Search engine failed for query '{q}': {e}", exc_info=True)
                 logger.error(f"❌ Exception type: {type(e).__name__}")
                 logger.error(f"❌ Exception message: {str(e)}")
-                print(f"ERROR: Search engine failed: {e}")  # Also print for debugging
+
                 import traceback
                 traceback.print_exc()
                 # Restore original q for fallback
@@ -153,10 +147,7 @@ async def list_products(
     # If search engine wasn't used, use original search logic
     # Original search logic for non-query requests or fallback
     if not search_engine_used:
-        print(f"\n{'='*70}")
-        print("=== USING FALLBACK SEARCH LOGIC ===")
-        print(f"search_engine_used = {search_engine_used}")
-        print(f"{'='*70}\n")
+
         logger.info("=== USING FALLBACK SEARCH LOGIC ===")
     
     skip = (page - 1) * page_size
@@ -405,7 +396,6 @@ async def list_products(
     
     return ProductListResponse(items=items, total=total, page=page, pageSize=page_size)
 
-
 @router.post("", response_model=ProductInDB, status_code=status.HTTP_201_CREATED)
 async def create_product(
     payload: ProductCreate,
@@ -416,7 +406,6 @@ async def create_product(
     res = await db.products.insert_one(doc)
     doc["_id"] = str(res.inserted_id)
     return ProductInDB(**doc)
-
 
 @router.get("/categories", response_model=List[dict])
 async def get_categories(
@@ -457,7 +446,6 @@ async def get_categories(
     
     return categories
 
-
 @router.get("/brands", response_model=List[dict])
 async def get_brands(
     db: AsyncIOMotorDatabase = Depends(get_db_dep),
@@ -497,7 +485,6 @@ async def get_brands(
     
     return brands
 
-
 @router.get("/slug/{slug}", response_model=ProductInDB)
 async def get_product_by_slug(slug: str, db: AsyncIOMotorDatabase = Depends(get_db_dep)) -> Any:
     """Fetch product by SEO slug. Checks multiple possible locations for the slug"""
@@ -522,7 +509,6 @@ async def get_product_by_slug(slug: str, db: AsyncIOMotorDatabase = Depends(get_
     doc["_id"] = str(doc["_id"])
     return ProductInDB(**doc)
 
-
 from bson import ObjectId
 from bson.errors import InvalidId
 
@@ -541,7 +527,6 @@ async def get_product(product_id: str, db: AsyncIOMotorDatabase = Depends(get_db
     doc["_id"] = str(doc["_id"])
     return ProductInDB(**doc)
 
-
 @router.patch("/{product_id}", response_model=ProductInDB)
 async def update_product(
     product_id: str,
@@ -558,26 +543,23 @@ async def update_product(
         body_bytes = await request.body()
         raw_body = json.loads(body_bytes) if body_bytes else {}
     except Exception as e:
-        print(f"ERROR parsing request body: {e}")
+
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid JSON in request body")
-    
-    print(f"\n{'='*70}")
+
     # Use print for immediate visibility
-    print(f"UPDATE PRODUCT - ID: {product_id}, Body: {raw_body}")
-    
+
     # Check if discount was in the raw body FIRST
     if not isinstance(raw_body, dict):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Request body must be a JSON object")
     
     discount_was_provided = "discount" in raw_body
     discount_value = raw_body.get("discount") if discount_was_provided else None
-    print(f"Discount provided: {discount_was_provided}, value: {discount_value}")
-    
+
     # Validate with Pydantic
     try:
         payload = ProductUpdate(**raw_body)
     except Exception as e:
-        print(f"Validation error: {e}")
+
         raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(e))
     
     # Get all fields (excluding discount)
@@ -589,19 +571,15 @@ async def update_product(
     if discount_was_provided:
         if discount_value is None:
             unset_fields["catalog_source.pricing.discount"] = ""
-            print("Unsetting discount")
+
         else:
             update["catalog_source.pricing.discount"] = discount_value
-            print(f"Setting discount to: {discount_value}")
+
     elif "discount" in payload_dict:
         update["catalog_source.pricing.discount"] = payload_dict["discount"]
-    
-    print(f"Update: {update}, Unset: {unset_fields}")
-    print(f"{'='*70}\n")
-    
-    
+
     if not update and not unset_fields:
-        print(f"ERROR: No fields to update")
+
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="No fields to update")
     
 
@@ -628,18 +606,70 @@ async def update_product(
     res["_id"] = str(res["_id"])
     return ProductInDB(**res)
 
-
 @router.delete("/{product_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_product(
     product_id: str,
     db: AsyncIOMotorDatabase = Depends(get_db_dep),
     admin=Depends(get_current_admin),
 ) -> None:
+    """
+    Delete a product and its associated Cloudinary images.
+    """
+    import logging
+    logger = logging.getLogger(__name__)
+    
     try:
         query_id = ObjectId(product_id)
     except InvalidId:
         query_id = product_id
-        
-    await db.products.delete_one({"_id": query_id})
+    
+    # First, fetch the product to get image URLs
+    product = await db.products.find_one({"_id": query_id})
+    
+    if not product:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Product not found"
+        )
+    
+    # Extract Cloudinary public IDs from images
+    images = product.get("images", [])
+    public_ids = []
+    
+    for image_url in images:
+        if isinstance(image_url, str) and "cloudinary.com" in image_url:
+            # Extract public_id from Cloudinary URL
+            # URL format: https://res.cloudinary.com/{cloud_name}/image/upload/v{version}/{public_id}.{format}
+            try:
+                parts = image_url.split("/upload/")
+                if len(parts) > 1:
+                    # Get everything after /upload/ and remove version prefix if present
+                    path = parts[1]
+                    # Remove version prefix (v1234567890/)
+                    if path.startswith("v") and "/" in path:
+                        path = path.split("/", 1)[1]
+                    # Remove file extension
+                    public_id = path.rsplit(".", 1)[0]
+                    public_ids.append(public_id)
+            except Exception as e:
+                logger.warning(f"Failed to extract public_id from URL {image_url}: {e}")
+    
+    # Delete the product from database
+    delete_result = await db.products.delete_one({"_id": query_id})
+    
+    if delete_result.deleted_count == 0:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Product not found"
+        )
+    
+    # Delete associated images from Cloudinary (non-blocking, don't fail if deletion fails)
+    for public_id in public_ids:
+        try:
+            await cloudinary_service.delete_image(public_id)
+        except Exception as e:
+            # Log error but don't fail the request since product is already deleted
+            logger.error(f"Failed to delete Cloudinary image {public_id}: {e}")
+    
     return None
 

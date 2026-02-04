@@ -38,7 +38,8 @@ interface ActivityLog {
   metadata?: Record<string, string | number>;
 }
 
-// TODO: Replace with API call when backend endpoint is available
+// Activity logs are currently not tracked by the backend
+// This page displays an empty state until logging is implemented
 const mockLogs: ActivityLog[] = [];
 
 const actionIcons: Record<LogAction, typeof FileUp> = {

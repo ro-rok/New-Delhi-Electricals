@@ -80,16 +80,17 @@ const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardPro
             )}
 
             {/* Quick Actions */}
-            <div className="absolute top-4 right-4 z-10 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+            <div className="absolute top-4 right-4 z-10 flex flex-col gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300">
               <Button
                 ref={heartBtnRef as any}
                 variant="secondary"
                 size="icon"
                 className={cn(
-                  'h-9 w-9 rounded-full shadow-sm bg-background/80 backdrop-blur-xl hover:bg-background transition-all duration-200',
+                  'h-10 w-10 rounded-full shadow-sm bg-background/80 backdrop-blur-xl hover:bg-background transition-all duration-200 touch-manipulation',
                   inShortlist && 'text-red-500'
                 )}
                 onClick={handleShortlist}
+                aria-label={inShortlist ? 'Remove from shortlist' : 'Add to shortlist'}
               >
                 <Heart className={cn('h-4 w-4', inShortlist && 'fill-current')} strokeWidth={1.5} />
               </Button>

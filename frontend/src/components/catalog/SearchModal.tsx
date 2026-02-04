@@ -40,8 +40,7 @@ const SearchModal = ({ open, onOpenChange }: SearchModalProps) => {
             .slice(0, 3);
           setSuggestions([...new Set([...skuSuggestions, ...nameSuggestions])].slice(0, 4));
         } catch (error) {
-          console.error('Failed to search products:', error);
-          setResults([]);
+                    setResults([]);
           setSuggestions([]);
         }
       } else {

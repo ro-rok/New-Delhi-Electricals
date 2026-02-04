@@ -3,7 +3,6 @@ from __future__ import annotations
 import re
 from typing import Any, Mapping, Optional
 
-
 def slugify_brand(brand: Optional[str]) -> Optional[str]:
     """
     Normalize brand to lowercase, dash-separated slug.
@@ -14,14 +13,12 @@ def slugify_brand(brand: Optional[str]) -> Optional[str]:
     slug = re.sub(r"[^a-z0-9]+", "-", brand.lower())
     return slug.strip("-") or None
 
-
 def extract_primary_slug(doc: Mapping[str, Any]) -> Optional[str]:
     """
     Extract the product slug from the top-level field only.
     Returns doc["slug"] or None if not present.
     """
     return doc.get("slug")
-
 
 def inject_brand_and_url(doc: dict[str, Any]) -> dict[str, Any]:
     """

@@ -32,7 +32,6 @@ from .models import (
     serialize_catalog_root,
 )
 
-
 try:  # Camelot is optional but recommended
     import camelot  # type: ignore[import]
 
@@ -48,7 +47,6 @@ try:
 except Exception:  # pragma: no cover - optional dependency
     pd = None  # type: ignore[assignment]
     _HAS_PANDAS = False
-
 
 @dataclass
 class ParsedRow:
@@ -70,7 +68,6 @@ class ParsedRow:
     finish: Optional[str]
     rating_text: Optional[str]
     confidence: float
-
 
 CATEGORY_KEYWORDS = [
     "switch",
@@ -100,10 +97,8 @@ COLOR_TOKENS = [
     "gold",
 ]
 
-
 def _tokenize(text: str) -> List[str]:
     return re.findall(r"[A-Za-z0-9/+-]+", text or "")
-
 
 def _extract_price(tokens: Sequence[str]) -> Tuple[Optional[int], Optional[int]]:
     """
@@ -127,14 +122,12 @@ def _extract_price(tokens: Sequence[str]) -> Tuple[Optional[int], Optional[int]]
         price_val = val
     return price_val, price_idx
 
-
 def _looks_like_cat_no(token: str) -> bool:
     if len(token) < 4:
         return False
     has_alpha = any(c.isalpha() for c in token)
     has_digit = any(c.isdigit() for c in token)
     return has_alpha and has_digit
-
 
 def _extract_cat_no(tokens: Sequence[str], price_idx: Optional[int]) -> Tuple[Optional[str], Optional[int]]:
     candidates: List[Tuple[int, str]] = []
@@ -149,13 +142,11 @@ def _extract_cat_no(tokens: Sequence[str], price_idx: Optional[int]) -> Tuple[Op
     best = min(candidates, key=lambda c: abs(c[0] - price_idx))
     return best[1], best[0]
 
-
 def _extract_std_pack(tokens: Sequence[str]) -> Optional[str]:
     for tok in tokens:
         if re.fullmatch(r"\d+/\d+", tok):
             return tok
     return None
-
 
 def _extract_module_width(tokens: Sequence[str]) -> Optional[int]:
     for tok in tokens:
@@ -163,7 +154,6 @@ def _extract_module_width(tokens: Sequence[str]) -> Optional[int]:
         if m:
             return int(m.group(1))
     return None
-
 
 def _extract_current_rating(tokens: Sequence[str]) -> Tuple[Optional[int], Optional[str]]:
     for tok in tokens:
@@ -180,7 +170,6 @@ def _extract_current_rating(tokens: Sequence[str]) -> Tuple[Optional[int], Optio
                 return None, t
     return None, None
 
-
 def _extract_poles(tokens: Sequence[str]) -> Optional[str]:
     for tok in tokens:
         t = tok.upper()
@@ -190,14 +179,12 @@ def _extract_poles(tokens: Sequence[str]) -> Optional[str]:
             return t
     return None
 
-
 def _extract_color_finish(text: str) -> Tuple[Optional[str], Optional[str]]:
     lowered = text.lower()
     for c in COLOR_TOKENS:
         if c in lowered:
             return c.title(), None
     return None, None
-
 
 def _compute_confidence(source: str, has_cat_no: bool, has_price: bool) -> float:
     base = {
@@ -215,7 +202,6 @@ def _compute_confidence(source: str, has_cat_no: bool, has_price: bool) -> float
     if base > 1.0:
         base = 1.0
     return base
-
 
 def _detect_headings_for_page(page_text: str) -> Tuple[Optional[str], Optional[str]]:
     """
@@ -248,7 +234,6 @@ def _detect_headings_for_page(page_text: str) -> Tuple[Optional[str], Optional[s
                 break
 
     return candidate_category, candidate_subcategory
-
 
 def _extract_tables_for_page(pdf_path: str, page_no: int) -> Tuple[List[List[str]], str]:
     """
@@ -300,7 +285,6 @@ def _extract_tables_for_page(pdf_path: str, page_no: int) -> Tuple[List[List[str
                 if any(c for c in row_cells):
                     rows.append(row_cells)
     return rows, "plumber"
-
 
 def _parse_row_from_cells(
     page_no: int,
@@ -367,7 +351,6 @@ def _parse_row_from_cells(
         confidence=confidence,
     )
 
-
 def _parse_rows_from_ocr_text(
     page_no: int,
     text: str,
@@ -426,10 +409,8 @@ def _parse_rows_from_ocr_text(
         )
     return rows
 
-
 def _ensure_output_dir(path: str) -> None:
     os.makedirs(path, exist_ok=True)
-
 
 def _save_images_and_ocr(
     pdf_filename: str,
@@ -479,7 +460,6 @@ def _save_images_and_ocr(
         ocr_map[(img.page_no, filename)] = text
 
     return images_index, ocr_map
-
 
 def _group_rows_into_items(rows: Sequence[ParsedRow]) -> List[CategoryNode]:
     """
@@ -581,7 +561,6 @@ def _group_rows_into_items(rows: Sequence[ParsedRow]) -> List[CategoryNode]:
 
     return list(category_map.values())
 
-
 def _map_images_to_items(
     categories: Sequence[CategoryNode],
     images_index: Sequence[ImageIndexEntry],
@@ -672,7 +651,6 @@ def _map_images_to_items(
                             cloudinary_url=cloud_url,
                         )
                     )
-
 
 def run_catalog_extraction(
     pdf_path: str,
@@ -768,7 +746,6 @@ def run_catalog_extraction(
 
     return serialize_catalog_root(root)
 
-
 def main() -> None:
     parser = argparse.ArgumentParser(description="Extract structured catalog JSON from a PDF.")
     parser.add_argument(
@@ -792,8 +769,6 @@ def main() -> None:
     else:
         print(json.dumps(result, ensure_ascii=False))
 
-
 if __name__ == "__main__":  # pragma: no cover
     main()
-
 

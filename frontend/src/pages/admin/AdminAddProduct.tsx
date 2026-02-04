@@ -90,8 +90,7 @@ const AdminAddProduct = () => {
                     }));
                 }
             } catch (error) {
-                console.error('Failed to fetch brands:', error);
-                toast.error('Failed to load brands');
+                                toast.error('Failed to load brands');
             } finally {
                 setBrandsLoading(false);
             }
@@ -223,10 +222,8 @@ const AdminAddProduct = () => {
             }
         };
 
-        console.log('Submitting Product:', JSON.stringify(finalProduct, null, 2));
-
+        
         try {
-            // TODO: Replace with actual API call
             const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000';
             const response = await fetch(`${API_BASE}/api/products`, {
                 method: 'POST',
@@ -243,8 +240,7 @@ const AdminAddProduct = () => {
             toast.success('Product added successfully!');
             navigate('/admin/products');
         } catch (error) {
-            console.error('Error creating product:', error);
-            toast.error('Failed to create product. Please try again.');
+                        toast.error('Failed to create product. Please try again.');
         } finally {
             setLoading(false);
         }

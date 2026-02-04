@@ -35,8 +35,7 @@ const FloatingSearchBar = () => {
           setSuggestions(results.slice(0, 6));
           setSelectedIndex(-1);
         } catch (error) {
-          console.error('Failed to search products:', error);
-          setSuggestions([]);
+                    setSuggestions([]);
         }
       } else {
         setSuggestions([]);

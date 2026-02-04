@@ -7,6 +7,9 @@ import { getBrands } from '@/api/products';
 import { Brand } from '@/types/product';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { SEOHead } from '@/components/SEOHead';
+import { PAGE_SEO } from '@/lib/seo';
+import { LoadingSpinner } from '@/components/LoadingSpinner';
 
 const BrandsListPage = () => {
   const [brands, setBrands] = useState<Brand[]>([]);
@@ -19,8 +22,7 @@ const BrandsListPage = () => {
         const brandsList = await getBrands();
         setBrands(brandsList);
       } catch (error) {
-        console.error('Failed to fetch brands:', error);
-      } finally {
+              } finally {
         setLoading(false);
       }
     };
@@ -32,7 +34,9 @@ const BrandsListPage = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="pt-24 container">
-          <p className="text-center text-muted-foreground">Loading...</p>
+          <div className="flex justify-center items-center py-20">
+            <LoadingSpinner size="lg" text="Loading brands..." />
+          </div>
         </main>
       </div>
     );
@@ -40,6 +44,7 @@ const BrandsListPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead {...PAGE_SEO.brands} />
       <Header />
       <main className="pt-24 pb-16">
         <div className="container">

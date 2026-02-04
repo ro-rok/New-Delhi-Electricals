@@ -10,6 +10,8 @@ import { useApp } from '@/contexts/AppContext';
 import { motion } from 'framer-motion';
 import { GitCompare, X, Plus } from 'lucide-react';
 import { cn, getProductUrl } from '@/lib/utils';
+import { SEOHead } from '@/components/SEOHead';
+import { PAGE_SEO } from '@/lib/seo';
 
 const ComparePage = () => {
   const { comparison, removeFromComparison, maxItems } = useApp();
@@ -24,8 +26,7 @@ const ComparePage = () => {
         const fetchedProducts = await Promise.all(productPromises);
         setProducts(fetchedProducts);
       } catch (error) {
-        console.error('Failed to fetch products:', error);
-      } finally {
+              } finally {
         setLoading(false);
       }
     };
@@ -50,6 +51,7 @@ const ComparePage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead {...PAGE_SEO.compare} />
       <Header />
       <main className="pt-24 pb-16">
         <div className="container">

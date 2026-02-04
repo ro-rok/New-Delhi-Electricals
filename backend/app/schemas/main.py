@@ -7,11 +7,9 @@ from pydantic import BaseModel, Field, computed_field
 
 from .product import ProductStatus
 
-
 class Token(BaseModel):
     access_token: str
     token_type: str = "bearer"
-
 
 class AdminUser(BaseModel):
     id: str | None = None
@@ -19,7 +17,6 @@ class AdminUser(BaseModel):
     hashed_password: str
     twofa_secret: str | None = Field(default=None, alias="twofaSecret")
     last_login: Optional[datetime] = Field(default=None, alias="lastLogin")
-
 
 class ProductBase(BaseModel):
     sku: str
@@ -43,10 +40,8 @@ class ProductBase(BaseModel):
     variant: Optional[Dict[str, str]] = Field(default=None, description="Variant map: SKU -> Color Name")
     catalog_source: Optional[Dict[str, Any]] = Field(default=None, description="Catalog source metadata")
 
-
 class ProductCreate(ProductBase):
     pass
-
 
 class ProductUpdate(BaseModel):
     name: Optional[str] = None
@@ -65,7 +60,6 @@ class ProductUpdate(BaseModel):
     slug: Optional[str] = None
     highlights: Optional[List[Any]] = None
 
-
 class ProductInDB(ProductBase):
     id: str = Field(..., alias="_id")
     
@@ -79,13 +73,11 @@ class ProductInDB(ProductBase):
                 return pricing.get("discount")
         return None
 
-
 class ProductListResponse(BaseModel):
     items: List[ProductInDB]
     total: int
     page: int
     page_size: int = Field(..., alias="pageSize")
-
 
 class ImageCandidate(BaseModel):
     url: str
@@ -94,7 +86,6 @@ class ImageCandidate(BaseModel):
         description="pdf_page | pdf_inline | web_stub | manual | upload",
     )
     score: float = 0.0
-
 
 class CatalogImportRow(BaseModel):
     id: Optional[str] = Field(default=None, alias="_id")
@@ -118,7 +109,6 @@ class CatalogImportRow(BaseModel):
         default=None, description="created | updated | ignored | failed"
     )
 
-
 class CatalogImport(BaseModel):
     id: str | None = Field(default=None, alias="_id")
     file_name: str
@@ -133,19 +123,36 @@ class CatalogImport(BaseModel):
     admin_id: str
     parsing_summary: Dict[str, Any] = {}
 
-
 class Inquiry(BaseModel):
     id: str | None = Field(default=None, alias="_id")
-    name: str
-    company: Optional[str] = None
+    name: str = Field(..., min_length=1, max_length=100)
     email: str
     phone: str
-    product_sku: Optional[str] = None
-    message: str
-    source: str = "form"
-    status: str = "new"
-    created_at: datetime
+    subject: str = Field(..., min_length=1, max_length=200)
+    message: str = Field(..., min_length=1, max_length=2000)
+    status: str = Field(default="new", pattern=r'^(new|in-progress|resolved)$')
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    updated_at: datetime = Field(default_factory=datetime.utcnow)
 
+class InquiryCreate(BaseModel):
+    """Schema for creating a new inquiry"""
+    name: str = Field(..., min_length=1, max_length=100)
+    email: str
+    phone: str
+    subject: str = Field(..., min_length=1, max_length=200)
+    message: str = Field(..., min_length=1, max_length=2000)
+
+class InquiryResponse(BaseModel):
+    """Schema for inquiry response"""
+    id: str = Field(..., alias="_id")
+    name: str
+    email: str
+    phone: str
+    subject: str
+    message: str
+    status: str
+    created_at: datetime
+    updated_at: datetime
 
 class AdminLog(BaseModel):
     id: str | None = Field(default=None, alias="_id")
@@ -155,4 +162,11 @@ class AdminLog(BaseModel):
     metadata: Dict[str, Any] = {}
     admin_email: str
     created_at: datetime
+
+class ErrorResponse(BaseModel):
+    """Consistent error response format for all API endpoints"""
+    message: str
+    code: str
+    details: Optional[Dict[str, Any]] = None
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
 

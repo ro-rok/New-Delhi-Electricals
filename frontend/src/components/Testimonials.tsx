@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const googleRating = {
   score: 4.2,
@@ -165,15 +165,7 @@ const reviews = [
 
 const Testimonials = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"]
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -201,9 +193,15 @@ const Testimonials = () => {
   }, [isPaused]);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-background to-secondary/30 overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-background to-secondary/30 overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
-        <motion.div style={{ y }} className="text-center mb-12 space-y-3">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 space-y-3"
+        >
           <h2 className="text-4xl font-bold tracking-tight">
             Trusted by Professionals & Homeowners
           </h2>

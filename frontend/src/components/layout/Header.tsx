@@ -55,19 +55,51 @@ const Header = () => {
             <nav className="hidden md:flex items-center gap-8 flex-1 max-w-md mx-4">
               <Link 
                 to="/categories" 
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300"
+                className={`text-sm font-medium transition-colors duration-300 ${
+                  location.pathname.startsWith('/categories') || location.pathname.startsWith('/category')
+                    ? 'text-foreground font-semibold border-b-2 border-foreground pb-0.5'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
                 Categories
               </Link>
               <Link 
                 to="/brands" 
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300"
+                className={`text-sm font-medium transition-colors duration-300 ${
+                  location.pathname.startsWith('/brands') || location.pathname.startsWith('/brand')
+                    ? 'text-foreground font-semibold border-b-2 border-foreground pb-0.5'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
                 Brands
               </Link>
               <Link 
+                to="/services" 
+                className={`text-sm font-medium transition-colors duration-300 ${
+                  location.pathname === '/services'
+                    ? 'text-foreground font-semibold border-b-2 border-foreground pb-0.5'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Services
+              </Link>
+              <Link 
+                to="/contact" 
+                className={`text-sm font-medium transition-colors duration-300 ${
+                  location.pathname === '/contact'
+                    ? 'text-foreground font-semibold border-b-2 border-foreground pb-0.5'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Contact
+              </Link>
+              <Link 
                 to="/about" 
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300"
+                className={`text-sm font-medium transition-colors duration-300 ${
+                  location.pathname === '/about'
+                    ? 'text-foreground font-semibold border-b-2 border-foreground pb-0.5'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
                 About
               </Link>
@@ -98,7 +130,8 @@ const Header = () => {
                 <Button 
                   variant="ghost" 
                   size="icon" 
-                  className="rounded-full h-10 w-10 hover:bg-foreground/5 relative"
+                  className="rounded-full h-10 w-10 md:h-10 md:w-10 hover:bg-foreground/5 relative touch-manipulation"
+                  aria-label="View shortlist"
                 >
                   <Heart className="h-[18px] w-[18px]" strokeWidth={1.5} />
                   {shortlistCount > 0 && (
@@ -113,7 +146,8 @@ const Header = () => {
                 <Button 
                   variant="ghost" 
                   size="icon" 
-                  className="rounded-full h-10 w-10 hover:bg-foreground/5 relative"
+                  className="rounded-full h-10 w-10 md:h-10 md:w-10 hover:bg-foreground/5 relative touch-manipulation"
+                  aria-label="View cart"
                 >
                   <ShoppingCart className="h-[18px] w-[18px]" strokeWidth={1.5} />
                   {cartCount > 0 && (
@@ -128,7 +162,8 @@ const Header = () => {
                 variant="ghost"
                 size="icon"
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="rounded-full h-10 w-10 hover:bg-foreground/5"
+                className="rounded-full h-10 w-10 md:h-10 md:w-10 hover:bg-foreground/5 touch-manipulation"
+                aria-label="Toggle theme"
               >
                 <Sun className="h-[18px] w-[18px] rotate-0 scale-100 transition-all duration-300 dark:-rotate-90 dark:scale-0" strokeWidth={1.5} />
                 <Moon className="absolute h-[18px] w-[18px] rotate-90 scale-0 transition-all duration-300 dark:rotate-0 dark:scale-100" strokeWidth={1.5} />
@@ -137,8 +172,9 @@ const Header = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden rounded-full h-10 w-10 hover:bg-foreground/5"
+                className="md:hidden rounded-full h-10 w-10 hover:bg-foreground/5 touch-manipulation"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle menu"
               >
                 {isMenuOpen ? <X className="h-5 w-5" strokeWidth={1.5} /> : <Menu className="h-5 w-5" strokeWidth={1.5} />}
               </Button>
@@ -170,21 +206,55 @@ const Header = () => {
               
               <Link
                 to="/categories"
-                className="px-4 py-3 text-sm font-medium hover:bg-foreground/5 rounded-xl transition-colors"
+                className={`px-4 py-3 text-sm font-medium rounded-xl transition-colors ${
+                  location.pathname.startsWith('/categories') || location.pathname.startsWith('/category')
+                    ? 'bg-foreground/10 text-foreground font-semibold'
+                    : 'hover:bg-foreground/5'
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Categories
               </Link>
               <Link
                 to="/brands"
-                className="px-4 py-3 text-sm font-medium hover:bg-foreground/5 rounded-xl transition-colors"
+                className={`px-4 py-3 text-sm font-medium rounded-xl transition-colors ${
+                  location.pathname.startsWith('/brands') || location.pathname.startsWith('/brand')
+                    ? 'bg-foreground/10 text-foreground font-semibold'
+                    : 'hover:bg-foreground/5'
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Brands
               </Link>
               <Link
+                to="/services"
+                className={`px-4 py-3 text-sm font-medium rounded-xl transition-colors ${
+                  location.pathname === '/services'
+                    ? 'bg-foreground/10 text-foreground font-semibold'
+                    : 'hover:bg-foreground/5'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link
+                to="/contact"
+                className={`px-4 py-3 text-sm font-medium rounded-xl transition-colors ${
+                  location.pathname === '/contact'
+                    ? 'bg-foreground/10 text-foreground font-semibold'
+                    : 'hover:bg-foreground/5'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              <Link
                 to="/about"
-                className="px-4 py-3 text-sm font-medium hover:bg-foreground/5 rounded-xl transition-colors"
+                className={`px-4 py-3 text-sm font-medium rounded-xl transition-colors ${
+                  location.pathname === '/about'
+                    ? 'bg-foreground/10 text-foreground font-semibold'
+                    : 'hover:bg-foreground/5'
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 About

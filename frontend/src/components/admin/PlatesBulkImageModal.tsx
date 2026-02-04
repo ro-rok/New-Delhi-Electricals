@@ -100,28 +100,22 @@ const PlatesBulkImageModal = ({
 
   // Filter products based on initialProduct if provided
   const displayedFamilies = useMemo(() => {
-    console.log('displayedFamilies - initialProduct:', initialProduct);
-    console.log('displayedFamilies - productFamilies:', productFamilies.length);
-
+        
     if (!initialProduct) {
-      console.log('No initialProduct, showing all families');
-      return productFamilies;
+            return productFamilies;
     }
 
     const targetFamily = initialProduct.product_family || 'Unknown Family';
     const targetColor = initialProduct.specs?.color?.trim() || 'Unknown Color';
     const targetKey = `${targetFamily}|${targetColor}`;
 
-    console.log('Filtering for targetKey:', targetKey);
-
+    
     // Only show the matching family+color group
     const filtered = productFamilies.filter(f => {
-      console.log('Checking family:', f.id, 'against', targetKey);
-      return f.id === targetKey;
+            return f.id === targetKey;
     });
 
-    console.log('Filtered families:', filtered.length);
-    return filtered;
+        return filtered;
   }, [productFamilies, initialProduct]);
 
   // Fetch Plates products when modal opens
@@ -156,8 +150,7 @@ const PlatesBulkImageModal = ({
       const platesProducts = await getProductsByCategory('Plates');
       setProducts(platesProducts);
     } catch (error) {
-      console.error('Error fetching Plates products:', error);
-      toast.error('Failed to load Plates products');
+            toast.error('Failed to load Plates products');
     } finally {
       setLoading(false);
     }
@@ -214,8 +207,7 @@ const PlatesBulkImageModal = ({
       setMasterImageUrl(imageUrl);
       toast.success('Image uploaded successfully');
     } catch (error: any) {
-      console.error('Error uploading image:', error);
-      toast.error(error.message || 'Failed to upload image');
+            toast.error(error.message || 'Failed to upload image');
     } finally {
       setUploading(false);
     }
@@ -250,8 +242,7 @@ const PlatesBulkImageModal = ({
       // Reset selection but keep image
       setSelectedFamily(null);
     } catch (error: any) {
-      console.error('Error applying image:', error);
-      toast.error(error.message || 'Failed to apply image to products');
+            toast.error(error.message || 'Failed to apply image to products');
     } finally {
       setApplying(false);
     }
@@ -288,8 +279,7 @@ const PlatesBulkImageModal = ({
       // Reset selection
       setSelectedFamily(null);
     } catch (error: any) {
-      console.error('Error deactivating products:', error);
-      toast.error(error.message || 'Failed to deactivate products');
+            toast.error(error.message || 'Failed to deactivate products');
     } finally {
       setMarkingComingSoon(false);
     }

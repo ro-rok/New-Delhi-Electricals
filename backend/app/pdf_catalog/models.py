@@ -4,13 +4,11 @@ from dataclasses import dataclass, field, asdict
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 
-
 @dataclass
 class VariantAttributes:
     color: Optional[str] = None
     finish: Optional[str] = None
     rating: Optional[str] = None
-
 
 @dataclass
 class Variant:
@@ -21,7 +19,6 @@ class Variant:
     confidence: float = 0.0
     raw_line: str = ""
 
-
 @dataclass
 class ImageRef:
     page: int
@@ -29,12 +26,10 @@ class ImageRef:
     role: str  # "packshot" | "hero" | "group"
     cloudinary_url: Optional[str] = None
 
-
 @dataclass
 class InlineImageRef:
     page: int
     note: str
-
 
 @dataclass
 class Item:
@@ -53,18 +48,15 @@ class Item:
     confidence: float = 0.0
     raw_line: str = ""
 
-
 @dataclass
 class SubcategoryNode:
     subcategory: str
     items: List[Item] = field(default_factory=list)
 
-
 @dataclass
 class CategoryNode:
     category: str
     subcategories: List[SubcategoryNode] = field(default_factory=list)
-
 
 @dataclass
 class ImageIndexEntry:
@@ -72,12 +64,10 @@ class ImageIndexEntry:
     filename: str
     ocr_text_summary: str
 
-
 @dataclass
 class CatalogSourceMeta:
     filename: str
     parsed_date: str
-
 
 @dataclass
 class CatalogRoot:
@@ -86,14 +76,12 @@ class CatalogRoot:
     images_index: List[ImageIndexEntry]
     log: Dict[str, Any]
 
-
 def _serialize_variant_attributes(attrs: VariantAttributes) -> Dict[str, Any]:
     return {
         "color": attrs.color,
         "finish": attrs.finish,
         "rating": attrs.rating,
     }
-
 
 def _serialize_variant(v: Variant) -> Dict[str, Any]:
     return {
@@ -105,7 +93,6 @@ def _serialize_variant(v: Variant) -> Dict[str, Any]:
         "raw_line": v.raw_line,
     }
 
-
 def _serialize_image(img: ImageRef) -> Dict[str, Any]:
     return {
         "page": img.page,
@@ -114,13 +101,11 @@ def _serialize_image(img: ImageRef) -> Dict[str, Any]:
         "cloudinary_url": img.cloudinary_url,
     }
 
-
 def _serialize_inline_image_ref(ref: InlineImageRef) -> Dict[str, Any]:
     return {
         "page": ref.page,
         "note": ref.note,
     }
-
 
 def _serialize_item(item: Item) -> Dict[str, Any]:
     return {
@@ -140,13 +125,11 @@ def _serialize_item(item: Item) -> Dict[str, Any]:
         "raw_line": item.raw_line,
     }
 
-
 def _serialize_subcategory(subcat: SubcategoryNode) -> Dict[str, Any]:
     return {
         "subcategory": subcat.subcategory,
         "items": [_serialize_item(item) for item in subcat.items],
     }
-
 
 def _serialize_category(cat: CategoryNode) -> Dict[str, Any]:
     return {
@@ -154,14 +137,12 @@ def _serialize_category(cat: CategoryNode) -> Dict[str, Any]:
         "subcategories": [_serialize_subcategory(sc) for sc in cat.subcategories],
     }
 
-
 def _serialize_image_index_entry(entry: ImageIndexEntry) -> Dict[str, Any]:
     return {
         "page": entry.page,
         "filename": entry.filename,
         "ocr_text_summary": entry.ocr_text_summary,
     }
-
 
 def serialize_catalog_root(root: CatalogRoot) -> Dict[str, Any]:
     """
@@ -177,12 +158,9 @@ def serialize_catalog_root(root: CatalogRoot) -> Dict[str, Any]:
         "log": root.log,
     }
 
-
 def make_source_meta(filename: str) -> CatalogSourceMeta:
     return CatalogSourceMeta(
         filename=filename,
         parsed_date=datetime.utcnow().isoformat(timespec="seconds") + "Z",
     )
-
-
 

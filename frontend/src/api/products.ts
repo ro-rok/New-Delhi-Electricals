@@ -70,13 +70,6 @@ function transformProduct(backendProduct: any): Product {
 
   // Extract variant field (maps SKU -> Color Name) - it's at top level
   const variant = backendProduct.variant || undefined;
-  
-  // Only log variant extraction in development if needed (commented out to reduce noise)
-  // console.log('Transform product variant extraction:', {
-  //   'backendProduct.variant': backendProduct.variant,
-  //   'final variant': variant,
-  // });
-
 
   // Extract discount from catalog_source.pricing.discount
   const discount = backendProduct.catalog_source?.pricing?.discount ??
@@ -126,7 +119,6 @@ function transformSpecs(specs: Record<string, unknown> | null | undefined): Reco
   });
   return result;
 }
-
 
 export async function getProducts(params?: {
   q?: string;
@@ -259,12 +251,10 @@ export async function getCategories(): Promise<Category[]> {
   try {
     const res = await fetch(`${API_BASE}/api/products/categories`);
     if (!res.ok) {
-      console.error('Failed to fetch categories:', res.status, res.statusText);
-      throw new Error('Failed to fetch categories');
+            throw new Error('Failed to fetch categories');
     }
     const data = await res.json();
-    console.log('Categories fetched from backend:', data);
-    return data.map((cat: any) => ({
+        return data.map((cat: any) => ({
       id: cat.id,
       name: cat.name,
       slug: cat.slug,
@@ -274,8 +264,7 @@ export async function getCategories(): Promise<Category[]> {
       productCount: cat.productCount,
     }));
   } catch (error) {
-    console.error('Failed to fetch categories:', error);
-    return [];
+        return [];
   }
 }
 
@@ -296,8 +285,7 @@ export async function getBrands(): Promise<Brand[]> {
       productCount: brand.productCount,
     }));
   } catch (error) {
-    console.error('Failed to fetch brands:', error);
-    return [];
+        return [];
   }
 }
 
@@ -368,8 +356,7 @@ export async function getCloudinarySignature(): Promise<CloudinarySignature> {
   const token = localStorage.getItem('admin_token');
 
   if (!token) {
-    console.error('No admin_token found in localStorage');
-    throw new Error('Not authenticated. Please log in again.');
+        throw new Error('Not authenticated. Please log in again.');
   }
 
   const headers: HeadersInit = {
@@ -389,16 +376,10 @@ export async function getCloudinarySignature(): Promise<CloudinarySignature> {
         // Clear invalid token
         localStorage.removeItem('admin_token');
         localStorage.removeItem('admin_auth');
-        console.error('Authentication failed - token may be expired');
-        throw new Error('Not authenticated. Please log in again.');
+                throw new Error('Not authenticated. Please log in again.');
       }
       const errorData = await res.json().catch(() => ({}));
-      console.error('Failed to get Cloudinary signature:', {
-        status: res.status,
-        statusText: res.statusText,
-        error: errorData
-      });
-      throw new Error(errorData.detail || `Failed to get Cloudinary signature (${res.status})`);
+            throw new Error(errorData.detail || `Failed to get Cloudinary signature (${res.status})`);
     }
 
     return res.json();
@@ -408,8 +389,7 @@ export async function getCloudinarySignature(): Promise<CloudinarySignature> {
       throw error;
     }
     // Otherwise wrap it
-    console.error('Error fetching Cloudinary signature:', error);
-    throw new Error(error.message || 'Failed to get Cloudinary signature');
+        throw new Error(error.message || 'Failed to get Cloudinary signature');
   }
 }
 
@@ -443,25 +423,13 @@ export async function uploadImageToCloudinary(file: File): Promise<string> {
     if (!uploadRes.ok) {
       const error = await uploadRes.json().catch(() => ({ error: { message: 'Unknown error' } }));
       const errorMessage = error.error?.message || error.message || `Failed to upload image (${uploadRes.status})`;
-      console.error('Cloudinary upload error:', {
-        status: uploadRes.status,
-        statusText: uploadRes.statusText,
-        error,
-        signature: {
-          cloudName: signature.cloudName,
-          timestamp: signature.timestamp,
-          folder: signature.folder,
-          resourceType: signature.resourceType,
-        }
-      });
-      throw new Error(errorMessage);
+            throw new Error(errorMessage);
     }
 
     const result = await uploadRes.json();
     return result.secure_url;
   } catch (error: any) {
-    console.error('Error uploading image:', error);
-    // Re-throw with a more user-friendly message if it's an authentication error
+        // Re-throw with a more user-friendly message if it's an authentication error
     if (error.message?.includes('Not authenticated')) {
       throw error;
     }
@@ -491,11 +459,31 @@ export async function bulkUpdateProducts(
   // Update products in parallel
   const updatePromises = productIds.map(id =>
     updateProduct(id, data).catch(error => {
-      console.error(`Failed to update product ${id}:`, error);
-      throw error;
+            throw error;
     })
   );
 
   await Promise.all(updatePromises);
 }
 
+/**
+ * Delete a product (admin only)
+ */
+export async function deleteProduct(id: string): Promise<void> {
+  const token = localStorage.getItem('admin_token');
+  const headers: HeadersInit = {};
+
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+
+  const res = await fetch(`${API_BASE}/api/products/${id}`, {
+    method: 'DELETE',
+    headers,
+  });
+
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({}));
+    throw new Error(errorData.detail || 'Failed to delete product');
+  }
+}

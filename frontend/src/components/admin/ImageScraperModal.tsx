@@ -42,7 +42,6 @@ const ImageScraperModal = ({
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [skuInput, setSkuInput] = useState('');
 
-
   // Reset state when modal opens
   useEffect(() => {
     if (isOpen) {
@@ -177,8 +176,7 @@ const ImageScraperModal = ({
           toast.success('Image uploaded to Cloudinary');
           finalImages = [uploadedUrl, ...finalImages];
         } catch (error: any) {
-          console.error('Error uploading image:', error);
-          toast.error(error.message || 'Failed to upload image to Cloudinary');
+                    toast.error(error.message || 'Failed to upload image to Cloudinary');
           setLoading(false);
           setUploading(false);
           return;
@@ -249,8 +247,7 @@ const ImageScraperModal = ({
       
       onClose();
     } catch (error) {
-      console.error('Error saving images:', error);
-      toast.error('Failed to save images');
+            toast.error('Failed to save images');
     } finally {
       setLoading(false);
       setUploading(false);

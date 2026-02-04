@@ -8,6 +8,8 @@ import { useApp } from '@/contexts/AppContext';
 import { Shield, Award, Heart, Zap, Target, Users } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { useMagneticEffect } from '@/hooks/useMagneticEffect';
+import { SEOHead } from '@/components/SEOHead';
+import { PAGE_SEO } from '@/lib/seo';
 
 const values = [
   {
@@ -50,6 +52,7 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead {...PAGE_SEO.about} />
       <Header />
       <div className="h-16" />
       

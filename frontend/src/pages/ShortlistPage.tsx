@@ -10,6 +10,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Trash2, MessageCircle, ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { getProductUrl } from '@/lib/utils';
+import { SEOHead } from '@/components/SEOHead';
+import { PAGE_SEO } from '@/lib/seo';
 
 const ShortlistPage = () => {
   const { shortlist, removeFromShortlist, trackWhatsAppClick } = useApp();
@@ -24,8 +26,7 @@ const ShortlistPage = () => {
         const fetchedProducts = await Promise.all(productPromises);
         setProducts(fetchedProducts);
       } catch (error) {
-        console.error('Failed to fetch products:', error);
-      } finally {
+              } finally {
         setLoading(false);
       }
     };
@@ -46,6 +47,7 @@ const ShortlistPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead {...PAGE_SEO.shortlist} />
       <Header />
       <main className="pt-24 pb-16">
         <div className="container max-w-3xl">

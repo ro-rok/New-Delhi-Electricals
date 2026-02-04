@@ -41,8 +41,7 @@ const AdminCategories = () => {
         setCategories(catsList);
         setProducts(productsResponse.items);
       } catch (error) {
-        console.error('Failed to fetch categories:', error);
-      } finally {
+              } finally {
         setLoading(false);
       }
     };

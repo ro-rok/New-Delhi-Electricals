@@ -11,6 +11,8 @@ import { useApp } from '@/contexts/AppContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Grid, List } from 'lucide-react';
 import { ProductCardSkeleton } from '@/components/ui/SkeletonLoader';
+import { SEOHead } from '@/components/SEOHead';
+import { getSearchSEO } from '@/lib/seo';
 
 type SortOption = 'name-asc' | 'name-desc' | 'price-asc' | 'price-desc';
 
@@ -68,8 +70,7 @@ const SearchResultsPage = () => {
           trackSearch(activeSearchQuery.trim());
         }
       } catch (error) {
-        console.error('Failed to fetch search results:', error);
-        setProducts([]);
+                setProducts([]);
         setTotal(0);
       } finally {
         setLoading(false);
@@ -79,14 +80,13 @@ const SearchResultsPage = () => {
     fetchProducts();
   }, [activeSearchQuery, page, sortBy, trackSearch, pageSize]);
 
-
-
   const sortedProducts = useMemo(() => {
     return [...products];
   }, [products, sortBy]);
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead {...getSearchSEO(activeSearchQuery, total)} />
       <Header />
       <main className="flex-1 pt-20">
         <div className="container mx-auto px-4 py-6">

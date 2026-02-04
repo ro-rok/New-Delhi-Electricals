@@ -8,6 +8,7 @@ import { ThemeProvider } from "next-themes";
 import { AppProvider } from "@/contexts/AppContext";
 import { PageLoader } from "@/components/ui/PageLoader";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { OfflineBanner } from "@/components/OfflineBanner";
 
 // Eagerly loaded components (critical path)
 import Home from "./pages/Home";
@@ -15,6 +16,9 @@ import NotFound from "./pages/NotFound";
 
 // Lazy loaded components (code splitting)
 const AboutPage = lazy(() => import("./pages/AboutPage"));
+const ServicesPage = lazy(() => import("./pages/ServicesPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+const FAQPage = lazy(() => import("./pages/FAQPage"));
 const CategoryPage = lazy(() => import("./pages/CategoryPage"));
 const BrandPage = lazy(() => import("./pages/BrandPage"));
 const ProductSlugPage = lazy(() => import("./pages/ProductSlugPage"));
@@ -65,6 +69,7 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
+          <OfflineBanner />
           <BrowserRouter
             future={{
               v7_startTransition: true,
@@ -75,33 +80,35 @@ const App = () => (
             <ErrorBoundary>
               <Suspense fallback={<PageLoader />}>
                 <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/search" element={<SearchResultsPage />} />
-                  <Route path="/categories" element={<CategoriesListPage />} />
-                  <Route path="/category/:slug" element={<CategoryPage />} />
-                  <Route path="/brands" element={<BrandsListPage />} />
-                  <Route path="/brand/:slug" element={<BrandPage />} />
-                  <Route path="/:brand/:slug" element={<ProductSlugPage />} />
-                  <Route path="/product/:brand/:slug" element={<ProductSlugPage />} />
-                  <Route path="/product/:brand/:product_family/:slug" element={<ProductSlugPage />} />
-                  <Route path="/shortlist" element={<ShortlistPage />} />
-                  <Route path="/compare" element={<ComparePage />} />
-                  <Route path="/cart" element={<CartPage />} />
-
+                  <Route path="/" element={<ErrorBoundary><Home /></ErrorBoundary>} />
+                  <Route path="/about" element={<ErrorBoundary><AboutPage /></ErrorBoundary>} />
+                  <Route path="/services" element={<ErrorBoundary><ServicesPage /></ErrorBoundary>} />
+                  <Route path="/contact" element={<ErrorBoundary><ContactPage /></ErrorBoundary>} />
+                  <Route path="/faq" element={<ErrorBoundary><FAQPage /></ErrorBoundary>} />
+                  <Route path="/search" element={<ErrorBoundary><SearchResultsPage /></ErrorBoundary>} />
+                  <Route path="/categories" element={<ErrorBoundary><CategoriesListPage /></ErrorBoundary>} />
+                  <Route path="/category/:slug" element={<ErrorBoundary><CategoryPage /></ErrorBoundary>} />
+                  <Route path="/brands" element={<ErrorBoundary><BrandsListPage /></ErrorBoundary>} />
+                  <Route path="/brand/:slug" element={<ErrorBoundary><BrandPage /></ErrorBoundary>} />
+                  <Route path="/:brand/:slug" element={<ErrorBoundary><ProductSlugPage /></ErrorBoundary>} />
+                  <Route path="/product/:brand/:slug" element={<ErrorBoundary><ProductSlugPage /></ErrorBoundary>} />
+                  <Route path="/product/:brand/:product_family/:slug" element={<ErrorBoundary><ProductSlugPage /></ErrorBoundary>} />
+                  <Route path="/shortlist" element={<ErrorBoundary><ShortlistPage /></ErrorBoundary>} />
+                  <Route path="/compare" element={<ErrorBoundary><ComparePage /></ErrorBoundary>} />
+                  <Route path="/cart" element={<ErrorBoundary><CartPage /></ErrorBoundary>} />
 
                   {/* Admin Routes */}
-                  <Route path="/admin/login" element={<AdminLogin />} />
-                  <Route path="/admin" element={<AdminLayout />}>
-                    <Route index element={<AdminDashboard />} />
-                    <Route path="products" element={<AdminProducts />} />
-                    <Route path="products/add" element={<AdminAddProduct />} />
-                    <Route path="categories" element={<AdminCategories />} />
-                    <Route path="brands" element={<AdminBrands />} />
-                    <Route path="import" element={<AdminImport />} />
-                    <Route path="inquiries" element={<AdminInquiries />} />
-                    <Route path="logs" element={<AdminLogs />} />
-                    <Route path="settings" element={<AdminSettings />} />
+                  <Route path="/admin/login" element={<ErrorBoundary><AdminLogin /></ErrorBoundary>} />
+                  <Route path="/admin" element={<ErrorBoundary><AdminLayout /></ErrorBoundary>}>
+                    <Route index element={<ErrorBoundary><AdminDashboard /></ErrorBoundary>} />
+                    <Route path="products" element={<ErrorBoundary><AdminProducts /></ErrorBoundary>} />
+                    <Route path="products/add" element={<ErrorBoundary><AdminAddProduct /></ErrorBoundary>} />
+                    <Route path="categories" element={<ErrorBoundary><AdminCategories /></ErrorBoundary>} />
+                    <Route path="brands" element={<ErrorBoundary><AdminBrands /></ErrorBoundary>} />
+                    <Route path="import" element={<ErrorBoundary><AdminImport /></ErrorBoundary>} />
+                    <Route path="inquiries" element={<ErrorBoundary><AdminInquiries /></ErrorBoundary>} />
+                    <Route path="logs" element={<ErrorBoundary><AdminLogs /></ErrorBoundary>} />
+                    <Route path="settings" element={<ErrorBoundary><AdminSettings /></ErrorBoundary>} />
                   </Route>
 
                   <Route path="*" element={<NotFound />} />

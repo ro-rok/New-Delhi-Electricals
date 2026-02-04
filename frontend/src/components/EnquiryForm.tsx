@@ -1,21 +1,22 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Upload, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const EnquiryForm = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     address: "",
     requirements: "",
   });
-  const [files, setFiles] = useState<FileList | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,20 +31,13 @@ const EnquiryForm = () => {
       return;
     }
 
-    // Create WhatsApp message
-    const message = `*New Enquiry from Website*\n\nName: ${formData.name}\nPhone: ${formData.phone}\nAddress: ${formData.address}\nRequirements: ${formData.requirements}`;
-    const whatsappUrl = `https://wa.me/919654102758?text=${encodeURIComponent(message)}`;
-    
-    window.open(whatsappUrl, "_blank");
+    // Redirect to contact page instead of WhatsApp
+    navigate('/contact');
     
     toast({
-      title: "Redirecting to WhatsApp",
-      description: "You can also attach photos/PDFs in WhatsApp chat",
+      title: "Redirecting to Contact Page",
+      description: "Please fill out the complete contact form to submit your inquiry",
     });
-
-    // Reset form
-    setFormData({ name: "", phone: "", address: "", requirements: "" });
-    setFiles(null);
   };
 
   return (
@@ -103,34 +97,9 @@ const EnquiryForm = () => {
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="file">Upload Photos/PDF (Optional)</Label>
-                  <div className="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary transition-colors">
-                    <Input
-                      id="file"
-                      type="file"
-                      multiple
-                      accept="image/*,.pdf"
-                      onChange={(e) => setFiles(e.target.files)}
-                      className="hidden"
-                    />
-                    <label htmlFor="file" className="cursor-pointer">
-                      <Upload className="mx-auto mb-2 text-muted-foreground" size={32} />
-                      <p className="text-sm text-muted-foreground">
-                        {files && files.length > 0
-                          ? `${files.length} file(s) selected`
-                          : "Click to upload site photos, product lists, or requirements"}
-                      </p>
-                    </label>
-                  </div>
-                  <p className="text-xs text-muted-foreground">
-                    Note: Files will be shared via WhatsApp after form submission
-                  </p>
-                </div>
-
                 <Button type="submit" size="lg" variant="cta" className="w-full">
                   <Send className="mr-2" />
-                  Send Enquiry via WhatsApp
+                  Go to Contact Form
                 </Button>
               </form>
             </CardContent>

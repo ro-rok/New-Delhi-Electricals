@@ -36,6 +36,9 @@ import { cn } from '@/lib/utils';
 import { useDebounce } from '@/hooks/useDebounce';
 import { ProductCardSkeleton } from '@/components/ui/SkeletonLoader';
 import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
+import { SEOHead } from '@/components/SEOHead';
+import { getCategorySEO } from '@/lib/seo';
+import { LoadingSpinner } from '@/components/LoadingSpinner';
 
 type SortOption = 'name-asc' | 'name-desc' | 'price-asc' | 'price-desc' | 'newest';
 
@@ -217,8 +220,7 @@ const CategoryPage = () => {
       setPage(1);
 
     } catch (err) {
-      console.error('Error fetching category data:', err);
-      setError('Failed to load category data');
+            setError('Failed to load category data');
     } finally {
       setLoading(false);
     }
@@ -249,24 +251,11 @@ const CategoryPage = () => {
         pageSize: selectedModule ? 2000 : fetchSize,
       };
       
-      console.log('🔍 Filter Request:', JSON.stringify(requestParams, null, 2));
-      console.log('🔍 Selected filters:', {
-        selectedBrands,
-        selectedSubcategory,
-        selectedProductFamily,
-        categoryName: category.name
-      });
-      
+                  
       const response = await getProducts(requestParams);
       
-      console.log('📦 Response items count:', response.items.length);
-      if (response.items.length > 0) {
-        console.log('📦 First product sample:', {
-          brand: response.items[0].brand,
-          subcategory: response.items[0].subcategory,
-          product_family: response.items[0].product_family,
-        });
-      }
+            if (response.items.length > 0) {
+              }
 
       // Apply frontend filtering following the same pattern as Plates
       // Backend filters: category, subcategory (if sent), brand (if 1 selected), series (if 1 selected), productFamily, color
@@ -341,8 +330,7 @@ const CategoryPage = () => {
         return true;
       });
       
-      console.log('✅ Filtered items count:', filteredItems.length);
-
+      
       // For Plates category, sort by module width (ascending)
       let sortedItems = filteredItems;
       if (category?.name === 'Plates') {
@@ -384,8 +372,7 @@ const CategoryPage = () => {
 
       setHasMore(response.items.length === (selectedModule ? 2000 : fetchSize));
     } catch (error) {
-      console.error('Error fetching filtered products:', error);
-    } finally {
+          } finally {
       setFilterLoading(false);
     }
   }, [category, selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, sortBy, debouncedSearch, isWiresCategory]);
@@ -704,10 +691,7 @@ const CategoryPage = () => {
     });
 
     // Log available subcategories for debugging
-    console.log('📋 Available subcategories:', Array.from(subcategoryMap.keys()));
-    console.log('📋 Source products count:', sourceProducts.length);
-    console.log('📋 Selected brands:', selectedBrands);
-
+            
     // Define the order: MCBs first, then ELCB/RCCB, then Isolators, then others
     const orderPriority: Record<string, number> = {
       'Miniature Circuit Breakers (MCBs)': 1,
@@ -1026,7 +1010,6 @@ const CategoryPage = () => {
         </div>
       </div>
 
-
       {/* Colors (depends on series/family) */}
       {((isWiresCategory && selectedProductFamily) || (!isWiresCategory && selectedSeries.length > 0)) && availableColors.length > 0 && (
         <div className="space-y-3">
@@ -1212,7 +1195,6 @@ const CategoryPage = () => {
     </div>
   );
 
-
   // Simplified Category List Item for Sidebar
   const CategoryListItem = ({ cat, isActive }: { cat: Category; isActive: boolean }) => {
     const IconComponent = iconMap[cat.icon] || Package;
@@ -1246,8 +1228,45 @@ const CategoryPage = () => {
     );
   };
 
+  // Initial loading state
+  if (loading && !category) {
+    return (
+      <div className="min-h-screen bg-white dark:bg-black">
+        <Header />
+        <main className="pt-24 pb-16">
+          <div className="flex justify-center items-center py-20">
+            <LoadingSpinner size="lg" text="Loading category..." />
+          </div>
+        </main>
+        <Footer />
+        <WhatsAppFab />
+      </div>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className="min-h-screen bg-white dark:bg-black">
+        <Header />
+        <main className="pt-24 pb-16">
+          <div className="max-w-[1600px] mx-auto px-4 md:px-6">
+            <div className="text-center py-20">
+              <h1 className="text-2xl font-semibold mb-4">Error Loading Category</h1>
+              <p className="text-muted-foreground mb-6">{error}</p>
+              <Button onClick={() => window.location.reload()}>Retry</Button>
+            </div>
+          </div>
+        </main>
+        <Footer />
+        <WhatsAppFab />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white dark:bg-black">
+      {category && <SEOHead {...getCategorySEO(category.name, products.length)} />}
       <Header />
       <main className="pt-24 pb-16">
         <div className="max-w-[1600px] mx-auto px-4 md:px-6">

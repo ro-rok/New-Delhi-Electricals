@@ -16,6 +16,8 @@ import { cn } from '@/lib/utils';
 import { toast } from '@/hooks/use-toast';
 import { getProductUrl } from '@/lib/utils';
 import { getColorHex } from '@/lib/colors';
+import { SEOHead } from '@/components/SEOHead';
+import { getProductSEO } from '@/lib/seo';
 
 const ProductSlugPage = () => {
   const { brand, slug } = useParams<{ brand?: string; slug?: string; product_family?: string }>();
@@ -71,8 +73,7 @@ const ProductSlugPage = () => {
           setSimilarProducts(similar);
         }
       } catch (error) {
-        console.error('Failed to fetch product:', error);
-        setProduct(null);
+                setProduct(null);
       } finally {
         setLoading(false);
       }
@@ -98,57 +99,34 @@ const ProductSlugPage = () => {
 
       // Fetch variant products from SKUs in variant field
       if (product.variant && Object.keys(product.variant).length > 0) {
-        console.log('=== Fetching variant products from SKUs ===');
-        console.log('Variant SKUs:', Object.keys(product.variant));
-        console.log('Variant object:', product.variant);
-        const variantSkus = Object.keys(product.variant);
+                                const variantSkus = Object.keys(product.variant);
         const variantProductsMap: Record<string, Product> = {};
         
         await Promise.all(
           variantSkus.map(async (sku) => {
             try {
-              console.log(`Fetching product for SKU: ${sku}`);
-              const variantProduct = await getProductBySku(sku);
+                            const variantProduct = await getProductBySku(sku);
               if (variantProduct) {
                 variantProductsMap[sku] = variantProduct;
-                console.log(`✓ Fetched variant product for SKU ${sku}:`, {
-                  slug: variantProduct.slug,
-                  brandSlug: variantProduct.brandSlug,
-                  urlPath: variantProduct.urlPath,
-                  name: variantProduct.name,
-                });
-              } else {
-                console.log(`✗ No product found for SKU: ${sku}`);
-              }
+                              } else {
+                              }
             } catch (error) {
-              console.error(`✗ Error fetching product for SKU ${sku}:`, error);
-            }
+                          }
           })
         );
         
         setVariantProducts(variantProductsMap);
-        console.log('All variant products fetched:', variantProductsMap);
-        console.log('=== End Fetching variant products ===');
-      } else {
-        console.log('No variant field or empty variant field in product');
-      }
+                      } else {
+              }
 
       try {
         const productFamily = product.product_family;
         const currentColor = product.specs?.color as string | undefined;
         const currentModuleSize = product.specs?.module_size as string | undefined;
 
-        console.log('Fetching variants for product:', {
-          productFamily,
-          currentColor,
-          currentModuleSize,
-          specs: product.specs,
-          variant: product.variant,
-        });
-
+        
         if (!productFamily) {
-          console.log('No product_family found, skipping variant fetch');
-          setModuleVariants([]);
+                    setModuleVariants([]);
           setColorVariants([]);
           return;
         }
@@ -160,8 +138,7 @@ const ProductSlugPage = () => {
             color: currentColor,
             pageSize: 100,
           });
-          console.log('Module variants response:', moduleResponse.items.length);
-          const moduleVars = moduleResponse.items
+                    const moduleVars = moduleResponse.items
             .filter(p => {
               const pModuleSize = p.specs?.module_size as string | undefined;
               const pColor = p.specs?.color as string | undefined;
@@ -183,11 +160,9 @@ const ProductSlugPage = () => {
               const bSize = (b.specs?.module_size as string) || '';
               return aSize.localeCompare(bSize);
             });
-          console.log('Filtered module variants:', moduleVars.length);
-          setModuleVariants(moduleVars);
+                    setModuleVariants(moduleVars);
         } else {
-          console.log('No color found, skipping module variants');
-          setModuleVariants([]);
+                    setModuleVariants([]);
         }
 
         // Fetch color variants: same product_family and module_size (if exists), different color
@@ -203,8 +178,7 @@ const ProductSlugPage = () => {
                 productFamily,
                 pageSize: 100,
               });
-          console.log('Color variants response:', colorResponse.items.length);
-          const colorVars = colorResponse.items
+                    const colorVars = colorResponse.items
             .filter(p => {
               const pColor = p.specs?.color as string | undefined;
               const pModuleSize = p.specs?.module_size as string | undefined;
@@ -223,15 +197,12 @@ const ProductSlugPage = () => {
               const bColor = (b.specs?.color as string) || '';
               return aColor.localeCompare(bColor);
             });
-          console.log('Filtered color variants:', colorVars.length);
-          setColorVariants(colorVars);
+                    setColorVariants(colorVars);
         } else {
-          console.log('No color found, skipping color variants');
-          setColorVariants([]);
+                    setColorVariants([]);
         }
       } catch (error) {
-        console.error('Failed to fetch variants:', error);
-        setModuleVariants([]);
+                setModuleVariants([]);
         setColorVariants([]);
       }
     };
@@ -250,44 +221,29 @@ const ProductSlugPage = () => {
 
   // Extract color variants from product.variant field (maps SKU -> Color Name)
   const colorVariantsFromVariant = useMemo(() => {
-    console.log('=== Color Variants From Variant useMemo ===');
-    console.log('Product:', product);
-    console.log('Product variant field:', product?.variant);
-    console.log('Product variant type:', typeof product?.variant);
-    
+                    
     if (!product?.variant) {
-      console.log('No variant field found in product');
-      return [];
+            return [];
     }
     
-    console.log('Product variant keys:', Object.keys(product.variant || {}));
-    console.log('Product variant values:', Object.values(product.variant || {}));
-    console.log('Product variant entries:', Object.entries(product.variant || {}));
-    
+                
     const currentColor = product.specs?.color as string | undefined;
-    console.log('Current color from specs:', currentColor);
-    
+        
     const variantColors: Array<{ sku: string; colorName: string }> = [];
     
     // Get all unique color names from variant object with their SKUs
     Object.entries(product.variant).forEach(([sku, colorName]) => {
-      console.log(`Processing variant entry: SKU=${sku}, Color=${colorName}`);
-      if (colorName && typeof colorName === 'string' && colorName !== currentColor) {
+            if (colorName && typeof colorName === 'string' && colorName !== currentColor) {
         // Check if we already have this color (avoid duplicates)
         if (!variantColors.find(v => v.colorName === colorName)) {
           variantColors.push({ sku, colorName });
-          console.log(`Added variant: ${sku} -> ${colorName}`);
-        } else {
-          console.log(`Skipping duplicate color: ${colorName}`);
-        }
+                  } else {
+                  }
       } else {
-        console.log(`Skipping variant: ${sku} -> ${colorName} (reason: ${!colorName ? 'no color' : typeof colorName !== 'string' ? 'not string' : colorName === currentColor ? 'same as current' : 'unknown'})`);
-      }
+              }
     });
     
-    console.log('Final extracted variant colors:', variantColors);
-    console.log('=== End Color Variants From Variant useMemo ===');
-    return variantColors;
+            return variantColors;
   }, [product]);
 
   const handleWhatsApp = () => {
@@ -361,6 +317,7 @@ const ProductSlugPage = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">
+      <SEOHead {...getProductSEO(product.name, product.description || '', product.images?.[0])} />
       <Header />
       <div className="h-16" /> {/* Spacer for fixed header */}
 
@@ -588,13 +545,7 @@ const ProductSlugPage = () => {
                         const variantProduct = variantProducts[sku];
                         const variantUrl = variantProduct?.urlPath || (variantProduct?.slug && variantProduct?.brandSlug ? `/${variantProduct.brandSlug}/${variantProduct.slug}` : null);
                         
-                        console.log(`Variant ${sku} (${colorName}):`, {
-                          variantProduct,
-                          variantUrl,
-                          slug: variantProduct?.slug,
-                          brandSlug: variantProduct?.brandSlug,
-                        });
-                        
+                                                
                         if (variantUrl) {
                           return (
                         <Link

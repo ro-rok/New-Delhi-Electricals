@@ -1,6 +1,8 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { useEffect, useState } from "react";
+import { getCategories } from "@/api/products";
+import { Category } from "@/types/product";
 import switchesImg from "@/assets/switches.jpg";
 import wiresImg from "@/assets/wires-cables.jpg";
 import mcbsImg from "@/assets/mcb-hero.jpg";
@@ -8,78 +10,87 @@ import dbsImg from "@/assets/db-hero.jpg";
 import smartHomeImg from "@/assets/smart-home-hero.jpg";
 import industrialImg from "@/assets/industrial-hero.jpg";
 
-const categories = [
-  {
-    name: "Switches",
-    slug: "switches",
-    image: switchesImg,
-    description: "Modular switches and sockets",
-  },
-  {
-    name: "Wires & Cables",
-    slug: "wires-cables",
-    image: wiresImg,
-    description: "Premium electrical wires",
-  },
-  {
-    name: "MCBs",
-    slug: "mcbs",
-    image: mcbsImg,
-    description: "Circuit protection devices",
-  },
-  {
-    name: "Distribution Boards",
-    slug: "distribution-boards",
-    image: dbsImg,
-    description: "Power distribution solutions",
-  },
-  {
-    name: "Smart Home",
-    slug: "smart-home",
-    image: smartHomeImg,
-    description: "Connected home solutions",
-  },
-  {
-    name: "Industrial",
-    slug: "industrial",
-    image: industrialImg,
-    description: "Heavy-duty components",
-  },
-];
+// Image mapping for categories
+const categoryImages: Record<string, string> = {
+  "switches": switchesImg,
+  "wires---cables": wiresImg,
+  "wires-&-cables": wiresImg,
+  "circuit-protection": mcbsImg,
+  "distribution-boards": dbsImg,
+  "smart-home": smartHomeImg,
+  "industrial": industrialImg,
+  "bell-push": switchesImg,
+  "boxes": dbsImg,
+};
 
 const CategoryGrid = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"]
-  });
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const cats = await getCategories();
+        // Limit to first 6 categories for the home page
+        setCategories(cats.slice(0, 6));
+      } catch (error) {
+        console.error("Failed to fetch categories:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchCategories();
+  }, []);
 
-  const y = useTransform(scrollYProgress, [0, 1], [80, -80]);
+  // Get image for category based on slug
+  const getCategoryImage = (slug: string) => {
+    return categoryImages[slug] || mcbsImg; // Default to MCB image
+  };
+
+  if (loading) {
+    return (
+      <section className="py-16 md:py-24 px-4 md:px-6 lg:px-16 bg-background">
+        <div className="container mx-auto">
+          <div className="text-center mb-12 md:mb-16 space-y-3">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight text-foreground">
+              Shop by Category
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg font-light max-w-2xl mx-auto">
+              Discover our comprehensive range of precision electrical components
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {[...Array(6)].map((_, i) => (
+              <div key={i} className="aspect-[4/3] bg-muted animate-pulse rounded-2xl" />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 lg:px-16 bg-background">
+    <section className="py-16 md:py-24 px-4 md:px-6 lg:px-16 bg-background">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16 space-y-3"
+          className="text-center mb-12 md:mb-16 space-y-3"
         >
-          <h2 className="text-4xl md:text-5xl font-light tracking-tight text-foreground">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight text-foreground">
             Shop by Category
           </h2>
-          <p className="text-muted-foreground text-lg font-light max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base md:text-lg font-light max-w-2xl mx-auto">
             Discover our comprehensive range of precision electrical components
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {categories.map((category, index) => (
             <motion.div
-              key={category.slug}
-              style={{ y: index % 2 === 0 ? y : useTransform(scrollYProgress, [0, 1], [-40, 40]) }}
+              key={category.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -94,8 +105,9 @@ const CategoryGrid = () => {
                   {/* Product image with soft gradient overlay */}
                   <div className="aspect-[4/3] overflow-hidden bg-gradient-to-br from-muted/30 to-muted/10">
                     <motion.img
-                      src={category.image}
+                      src={getCategoryImage(category.slug)}
                       alt={category.name}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     {/* Subtle overlay gradient */}

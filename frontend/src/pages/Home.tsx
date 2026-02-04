@@ -12,6 +12,8 @@ import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
 import PolycabPromoButton from '@/components/home/PolycabPromoButton';
 import { useApp } from '@/contexts/AppContext';
+import { SEOHead } from '@/components/SEOHead';
+import { PAGE_SEO } from '@/lib/seo';
 
 const Home = () => {
   const { trackPageView } = useApp();
@@ -22,6 +24,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead {...PAGE_SEO.home} />
       <Header />
       <div className="h-16" /> {/* Spacer for fixed header */}
       <PolycabPromoButton />

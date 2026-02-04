@@ -12,6 +12,9 @@ import WhatsAppCTA from '@/components/brand/WhatsAppCTA';
 import { getBrands, getProductsByBrand, getCategories } from '@/api/products';
 import { Brand, Product, Category } from '@/types/product';
 import { useApp } from '@/contexts/AppContext';
+import { SEOHead } from '@/components/SEOHead';
+import { getBrandSEO } from '@/lib/seo';
+import { LoadingSpinner } from '@/components/LoadingSpinner';
 
 const BrandPage = () => {
   const { slug } = useParams();
@@ -50,8 +53,7 @@ const BrandPage = () => {
           setBrandProducts(products);
         }
       } catch (error) {
-        console.error('Failed to fetch brand data:', error);
-        setBrand(null);
+                setBrand(null);
         setBrandProducts([]);
       } finally {
         setLoading(false);
@@ -92,7 +94,9 @@ const BrandPage = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="pt-24 container">
-          <p className="text-center text-muted-foreground">Loading...</p>
+          <div className="flex justify-center items-center py-20">
+            <LoadingSpinner size="lg" text="Loading brand..." />
+          </div>
         </main>
       </div>
     );
@@ -120,6 +124,7 @@ const BrandPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead {...getBrandSEO(brand.name, brandProducts.length)} />
       <Header />
       
       <main className="pt-16">
