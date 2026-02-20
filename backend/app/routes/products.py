@@ -30,6 +30,7 @@ async def list_products(
     sort_by: str | None = Query(default="name", description="Sort field: name or price"),
     sort_order: str | None = Query(default="asc", description="Sort order: asc or desc"),
     is_active: bool | None = Query(default=None, description="Filter by active status"),
+    missing_images: bool | None = Query(default=None, alias="missingImages", description="Filter products without images"),
     page: int = Query(1, ge=1),
     page_size: int = Query(20, ge=1, le=10000, alias="pageSize"),
     db: AsyncIOMotorDatabase = Depends(get_db_dep),
@@ -357,6 +358,16 @@ async def list_products(
             })
         else:
             and_conditions.append({"status.is_active": False})
+    
+    # Filter products without images
+    if missing_images is True:
+        and_conditions.append({
+            "$or": [
+                {"images": {"$exists": False}},
+                {"images": None},
+                {"images": []},
+            ]
+        })
             
     if and_conditions:
         query = {"$and": and_conditions}
