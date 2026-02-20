@@ -18,6 +18,7 @@ import { getProductUrl } from '@/lib/utils';
 import { getColorHex } from '@/lib/colors';
 import { SEOHead } from '@/components/SEOHead';
 import { getProductSEO } from '@/lib/seo';
+import { ProductImagePlaceholder } from '@/components/ui/ProductImagePlaceholder';
 
 const ProductSlugPage = () => {
   const { brand, slug } = useParams<{ brand?: string; slug?: string; product_family?: string }>();
@@ -342,17 +343,7 @@ const ProductSlugPage = () => {
                     }}
                   />
                 ) : (
-                  <motion.div
-                    key="placeholder"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="text-center"
-                  >
-                    <div className="text-[96px] md:text-[140px] font-extralight text-gray-200 dark:text-gray-800 leading-none">
-                      {product.brand.charAt(0).toUpperCase()}
-                    </div>
-                  </motion.div>
+                  <ProductImagePlaceholder className="w-full h-full" />
                 )}
               </AnimatePresence>
 

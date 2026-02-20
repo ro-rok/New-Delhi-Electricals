@@ -105,14 +105,57 @@ export const PAGE_SEO: Record<string, SEOMetadata> = {
 };
 
 /**
+ * Get the site base URL (production or development)
+ */
+function getSiteUrl(): string {
+  // Use environment variable if available
+  const envUrl = import.meta.env.VITE_SITE_URL;
+  if (envUrl) {
+    return envUrl;
+  }
+  
+  // In production, use the actual domain
+  if (typeof window !== 'undefined') {
+    const hostname = window.location.hostname;
+    if (hostname === 'www.newdelhielectricals.com' || hostname === 'newdelhielectricals.com') {
+      return 'https://www.newdelhielectricals.com';
+    }
+  }
+  
+  // Fallback for development
+  return 'http://localhost:5173';
+}
+
+/**
+ * Convert relative image URL to absolute URL
+ */
+function getAbsoluteImageUrl(imageUrl?: string): string | undefined {
+  if (!imageUrl) return undefined;
+  
+  // If already absolute, return as is
+  if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+    return imageUrl;
+  }
+  
+  // Convert relative to absolute
+  const siteUrl = getSiteUrl();
+  const cleanUrl = imageUrl.startsWith('/') ? imageUrl : `/${imageUrl}`;
+  return `${siteUrl}${cleanUrl}`;
+}
+
+/**
  * Generate dynamic SEO metadata for product pages
  */
 export function getProductSEO(productName: string, description: string, imageUrl?: string): SEOMetadata {
+  // Create a compelling description if none provided
+  const defaultDescription = `Buy ${productName} at best prices from New Delhi Electricals. Premium quality electrical products with warranty. Shop online or visit our store in South Delhi.`;
+  const finalDescription = description || defaultDescription;
+  
   return {
-    title: `${productName} - New Delhi Electricals`,
-    description: description.length > 160 ? `${description.substring(0, 157)}...` : description,
+    title: `${productName} - Buy Online at Best Price | New Delhi Electricals`,
+    description: finalDescription.length > 160 ? `${finalDescription.substring(0, 157)}...` : finalDescription,
     type: "product",
-    image: imageUrl,
+    image: getAbsoluteImageUrl(imageUrl),
     twitterCard: imageUrl ? "summary_large_image" : "summary"
   };
 }

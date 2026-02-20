@@ -3,7 +3,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFab from '@/components/WhatsAppFab';
 import { Button } from '@/components/ui/button';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { getProductById } from '@/api/products';
 import { Product } from '@/types/product';
 import { useApp } from '@/contexts/AppContext';
@@ -12,6 +12,7 @@ import { GitCompare, X, Plus } from 'lucide-react';
 import { cn, getProductUrl } from '@/lib/utils';
 import { SEOHead } from '@/components/SEOHead';
 import { PAGE_SEO } from '@/lib/seo';
+import { ProductImagePlaceholder } from '@/components/ui/ProductImagePlaceholder';
 
 const ComparePage = () => {
   const { comparison, removeFromComparison, maxItems } = useApp();
@@ -90,10 +91,16 @@ const ComparePage = () => {
                       <X className="h-4 w-4" />
                     </Button>
                     
-                    <div className="aspect-square bg-secondary rounded-xl flex items-center justify-center mb-4">
-                      <span className="text-4xl font-bold text-muted-foreground/20">
-                        {product!.brand.charAt(0)}
-                      </span>
+                    <div className="aspect-square bg-secondary rounded-xl flex items-center justify-center mb-4 overflow-hidden">
+                      {product!.images && product!.images.length > 0 ? (
+                        <img
+                          src={product!.images[0]}
+                          alt={product!.name}
+                          className="w-full h-full object-contain"
+                        />
+                      ) : (
+                        <ProductImagePlaceholder className="w-full h-full scale-75" />
+                      )}
                     </div>
                     
                     <Link to={getProductUrl(product!)} className="hover:text-accent transition-colors">

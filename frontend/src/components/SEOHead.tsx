@@ -44,31 +44,38 @@ export function SEOHead({
     setMetaTag('og:title', title);
     setMetaTag('og:description', description);
     setMetaTag('og:type', type);
+    setMetaTag('og:site_name', 'New Delhi Electricals');
     
     if (image) {
       setMetaTag('og:image', image);
+      setMetaTag('og:image:secure_url', image);
+      setMetaTag('og:image:width', '1200');
+      setMetaTag('og:image:height', '630');
+      setMetaTag('og:image:alt', title);
     }
     
-    if (url) {
-      setMetaTag('og:url', url);
-      
-      // Set canonical URL
-      let canonical = document.querySelector('link[rel="canonical"]');
-      if (!canonical) {
-        canonical = document.createElement('link');
-        canonical.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonical);
-      }
-      canonical.setAttribute('href', url);
+    // Set current URL if not provided
+    const currentUrl = url || window.location.href;
+    setMetaTag('og:url', currentUrl);
+    
+    // Set canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
     }
+    canonical.setAttribute('href', currentUrl);
 
     // Set Twitter Card tags
     setMetaTag('twitter:card', image ? 'summary_large_image' : 'summary', true);
     setMetaTag('twitter:title', title, true);
     setMetaTag('twitter:description', description, true);
+    setMetaTag('twitter:site', '@newdelhielec', true);
     
     if (image) {
       setMetaTag('twitter:image', image, true);
+      setMetaTag('twitter:image:alt', title, true);
     }
 
     // Cleanup function (optional - meta tags typically persist across page changes in SPAs)

@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { cn, getProductUrl } from '@/lib/utils';
 import { useMagneticEffect } from '@/hooks/useMagneticEffect';
 import { LazyImage } from '@/components/ui/LazyImage';
+import { ProductImagePlaceholder } from '@/components/ui/ProductImagePlaceholder';
 
 interface ProductCardProps {
   product: Product;
@@ -65,11 +66,7 @@ const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardPro
                 placeholder={product.images[0]}
               />
             ) : (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-muted-foreground/20 text-6xl font-light">
-                  {product.brand.charAt(0)}
-                </span>
-              </div>
+              <ProductImagePlaceholder className="w-full h-full" />
             )}
             
             {/* Badge */}

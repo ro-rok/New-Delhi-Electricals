@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import { getProductUrl } from '@/lib/utils';
 import { SEOHead } from '@/components/SEOHead';
 import { PAGE_SEO } from '@/lib/seo';
+import { ProductImagePlaceholder } from '@/components/ui/ProductImagePlaceholder';
 
 const ShortlistPage = () => {
   const { shortlist, removeFromShortlist, trackWhatsAppClick } = useApp();
@@ -88,10 +89,16 @@ const ShortlistPage = () => {
                     transition={{ delay: idx * 0.05 }}
                     className="bg-card rounded-2xl border border-border p-4 flex items-center gap-4"
                   >
-                    <div className="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl font-bold text-muted-foreground/30">
-                        {product!.brand.charAt(0)}
-                      </span>
+                    <div className="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden">
+                      {product!.images && product!.images.length > 0 ? (
+                        <img
+                          src={product!.images[0]}
+                          alt={product!.name}
+                          className="w-full h-full object-contain"
+                        />
+                      ) : (
+                        <ProductImagePlaceholder className="w-full h-full scale-[0.3]" />
+                      )}
                     </div>
 
                     <div className="flex-1 min-w-0">

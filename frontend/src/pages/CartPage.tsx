@@ -23,6 +23,7 @@ import { toast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 import { SEOHead } from '@/components/SEOHead';
 import { PAGE_SEO } from '@/lib/seo';
+import { ProductImagePlaceholder } from '@/components/ui/ProductImagePlaceholder';
 
 const CartPage = () => {
   const { cart, removeFromCart, updateQuantity, clearCart, totalPrice, trackWhatsAppClick } = useApp();
@@ -195,9 +196,7 @@ const CartPage = () => {
                             className="w-full h-full object-cover"
                           />
                         ) : (
-                          <span className="text-2xl font-light text-muted-foreground">
-                            {item.product.brand.charAt(0)}
-                          </span>
+                          <ProductImagePlaceholder className="w-full h-full scale-[0.4]" />
                         )}
                       </Link>
 
