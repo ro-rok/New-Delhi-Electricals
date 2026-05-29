@@ -35,7 +35,14 @@ export function TallySalesLineTable({
 }: TallySalesLineTableProps) {
   const [editingDiscId, setEditingDiscId] = useState<string | null>(null);
   const [discDraft, setDiscDraft] = useState('');
+  const [editingQtyId, setEditingQtyId] = useState<string | null>(null);
+  const [qtyDraft, setQtyDraft] = useState('');
   const focusPendingRef = useRef<string | null>(null);
+
+  const commitQuantity = (productId: string, raw: string) => {
+    const v = Math.max(1, parseInt(raw, 10) || 1);
+    onUpdateItem(productId, { quantity: v });
+  };
 
   const commitDiscount = (productId: string, raw: string) => {
     const v =
@@ -78,6 +85,10 @@ export function TallySalesLineTable({
     commitDiscount(productId, discDraft);
     setEditingDiscId(null);
     setDiscDraft('');
+  };
+
+  const stopRowTouch = (e: React.PointerEvent | React.TouchEvent | React.MouseEvent) => {
+    e.stopPropagation();
   };
 
   return (
@@ -142,23 +153,39 @@ export function TallySalesLineTable({
                       </p>
                     )}
                   </td>
-                  <td className={cn(td, 'p-1')} onClick={(e) => e.stopPropagation()}>
+                  <td
+                    className={cn(td, 'p-1')}
+                    data-no-row-click
+                    onPointerDown={stopRowTouch}
+                    onClick={stopRowTouch}
+                  >
                     <Input
                       type="number"
                       min={1}
-                      className="h-9 w-full text-center text-base font-semibold border-[#8ca0b3] bg-white rounded-none focus-visible:ring-[#236192]"
-                      value={item.quantity}
-                      onChange={(e) => {
-                        const raw = e.target.value;
-                        if (raw === '') return;
-                        const v = parseInt(raw, 10);
-                        if (!Number.isNaN(v) && v >= 1) {
-                          onUpdateItem(item.productId, { quantity: v });
-                        }
+                      inputMode="numeric"
+                      data-cart-field="quantity"
+                      className="h-10 w-full min-w-[3.5rem] text-center text-base font-semibold border-[#8ca0b3] bg-white rounded-none focus-visible:ring-[#236192] touch-manipulation"
+                      value={
+                        editingQtyId === item.productId ? qtyDraft : String(item.quantity)
+                      }
+                      onFocus={() => {
+                        setEditingQtyId(item.productId);
+                        setQtyDraft(String(item.quantity));
                       }}
-                      onBlur={(e) => {
-                        const v = Math.max(1, parseInt(e.target.value, 10) || 1);
-                        onUpdateItem(item.productId, { quantity: v });
+                      onChange={(e) => setQtyDraft(e.target.value)}
+                      onBlur={() => {
+                        if (editingQtyId !== item.productId) return;
+                        commitQuantity(item.productId, qtyDraft);
+                        setEditingQtyId(null);
+                        setQtyDraft('');
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key !== 'Enter') return;
+                        e.preventDefault();
+                        commitQuantity(item.productId, qtyDraft);
+                        setEditingQtyId(null);
+                        setQtyDraft('');
+                        (e.target as HTMLInputElement).blur();
                       }}
                     />
                   </td>
@@ -168,17 +195,24 @@ export function TallySalesLineTable({
                   <td className={cn(td, 'text-right tabular-nums text-[#5a6a7a] whitespace-nowrap')}>
                     {formatInr(item.listPrice)}
                   </td>
-                  <td className={cn(td, 'p-1')} onClick={(e) => e.stopPropagation()}>
+                  <td
+                    className={cn(td, 'p-1')}
+                    data-no-row-click
+                    onPointerDown={stopRowTouch}
+                    onClick={stopRowTouch}
+                  >
                     <Input
                       type="number"
                       min={0}
                       max={100}
                       step={0.5}
+                      inputMode="decimal"
                       disabled={hasOverride}
                       data-disc-input={item.productId}
+                      data-cart-field="discount"
                       placeholder="0"
                       className={cn(
-                        'h-9 w-full text-center text-base font-semibold border-[#8ca0b3] bg-white rounded-none focus-visible:ring-[#236192]',
+                        'h-10 w-full text-center text-base font-semibold border-[#8ca0b3] bg-white rounded-none focus-visible:ring-[#236192] touch-manipulation',
                         hasOverride && 'opacity-50',
                         isNew && 'ring-2 ring-primary/40'
                       )}
@@ -203,14 +237,21 @@ export function TallySalesLineTable({
                   <td className={cn(td, 'text-right tabular-nums font-bold text-[#1a3a5c] whitespace-nowrap')}>
                     {formatInr(item.lineTotals.lineAmount)}
                   </td>
-                  <td className={cn(td, 'p-1 print-hide')} onClick={(e) => e.stopPropagation()}>
+                  <td
+                    className={cn(td, 'p-1 print-hide')}
+                    data-no-row-click
+                    onPointerDown={stopRowTouch}
+                    onClick={stopRowTouch}
+                  >
                     <Input
                       type="number"
                       min={0}
                       step={0.01}
+                      inputMode="decimal"
+                      data-cart-field="net-rate"
                       placeholder="—"
                       title="Override net rate per unit"
-                      className="h-9 w-full text-right text-sm border-[#8ca0b3] bg-white rounded-none"
+                      className="h-10 w-full text-right text-sm border-[#8ca0b3] bg-white rounded-none touch-manipulation"
                       value={item.manualUnitPrice ?? ''}
                       onChange={(e) =>
                         onUpdateItem(item.productId, {

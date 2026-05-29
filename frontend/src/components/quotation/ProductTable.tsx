@@ -92,18 +92,31 @@ export function ProductTable({
         header: 'Add',
         size: 140,
         cell: ({ row }) => (
-          <div className="flex items-center gap-1.5" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="flex items-center gap-1.5"
+            data-no-row-click
+            onPointerDown={(e) => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
+          >
             <Input
               type="number"
               min={1}
-              className="h-9 w-16 text-sm px-1 text-center font-semibold"
+              inputMode="numeric"
+              className="h-9 w-16 text-sm px-1 text-center font-semibold touch-manipulation"
               value={getQty(row.original.id)}
+              onPointerDown={(e) => e.stopPropagation()}
+              onClick={(e) => e.stopPropagation()}
+              onFocus={(e) => e.stopPropagation()}
               onChange={(e) => setQty(row.original.id, Number(e.target.value) || 1)}
             />
             <Button
               size="sm"
-              className="h-9 px-3 text-sm font-semibold"
-              onClick={() => onAdd(row.original, getQty(row.original.id))}
+              className="h-9 px-3 text-sm font-semibold touch-manipulation"
+              onPointerDown={(e) => e.stopPropagation()}
+              onClick={(e) => {
+                e.stopPropagation();
+                onAdd(row.original, getQty(row.original.id));
+              }}
             >
               <Plus className="h-4 w-4 mr-1" />
               Add
@@ -158,6 +171,10 @@ export function ProductTable({
     );
   }
 
+  const isInteractiveTarget = (target: EventTarget | null) =>
+    target instanceof HTMLElement &&
+    !!target.closest('input, button, a, [data-no-row-click]');
+
   const renderRow = (rowIndex: number) => {
     const row = rows[rowIndex];
     if (!row) return null;
@@ -171,8 +188,12 @@ export function ProductTable({
           isFocused && 'bg-accent/10 ring-1 ring-inset ring-accent/30',
           inBill && 'bg-green-500/5'
         )}
-        onClick={() => {
+        onClick={(e) => {
+          if (isInteractiveTarget(e.target)) return;
           onFocusIndexChange(rowIndex);
+        }}
+        onDoubleClick={(e) => {
+          if (isInteractiveTarget(e.target)) return;
           onAdd(row.original, getQty(row.original.id));
         }}
       >
@@ -244,10 +265,16 @@ export function ProductTable({
                       height: `${vRow.size}px`,
                       transform: `translateY(${vRow.start}px)`,
                     }}
-                    onClick={() => {
+                    onClick={(e) => {
+                      if (isInteractiveTarget(e.target)) return;
                       const product = products[vRow.index];
                       if (!product) return;
                       onFocusIndexChange(vRow.index);
+                    }}
+                    onDoubleClick={(e) => {
+                      if (isInteractiveTarget(e.target)) return;
+                      const product = products[vRow.index];
+                      if (!product) return;
                       onAdd(product, getQty(product.id));
                     }}
                   >
