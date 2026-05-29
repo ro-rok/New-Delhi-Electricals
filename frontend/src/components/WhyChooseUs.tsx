@@ -24,7 +24,7 @@ const reasons = [
   },
   {
     icon: Clock,
-    title: "30,000+ Customers",
+    title: "3000+ Customers",
     description: "Serving families, contractors, and builders with excellence",
   },
   {

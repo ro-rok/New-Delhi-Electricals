@@ -3,7 +3,7 @@ import { Heart, Award, Users, TrendingUp } from "lucide-react";
 
 const stats = [
   { icon: Award, value: "27", label: "Years of Service", suffix: "+" },
-  { icon: Users, value: "30,000", label: "Happy Customers", suffix: "+" },
+  { icon: Users, value: "3000", label: "Happy Customers", suffix: "+" },
   { icon: Heart, value: "100", label: "Genuine Products", suffix: "%" },
   { icon: TrendingUp, value: "1000", label: "Homes Built", suffix: "s" },
 ];
@@ -33,7 +33,7 @@ const AboutUs = () => {
               
               <p className="text-base leading-relaxed mb-4">
                 Over <span className="font-semibold text-primary">27 years</span>, we've had the privilege of serving 
-                over 30,000 customers—from families building their dream homes to contractors constructing major projects. 
+                over 3000 customers—from families building their dream homes to contractors constructing major projects. 
                 Each relationship is built on three simple principles: <span className="font-semibold">honesty, quality, and speed</span>.
               </p>
 

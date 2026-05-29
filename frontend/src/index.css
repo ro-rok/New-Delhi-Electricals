@@ -297,3 +297,86 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Tally-style quotation voucher */
+.tally-voucher input,
+.tally-voucher textarea,
+.tally-voucher [role="combobox"] {
+  font-family: inherit;
+}
+
+.tally-voucher table {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Quotation Maker print */
+@media print {
+  @page {
+    margin: 12mm;
+    size: A4 portrait;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  /* Hide admin chrome and product finder */
+  aside,
+  header,
+  .print\\:hidden,
+  [class*='print:hidden'] {
+    display: none !important;
+  }
+
+  .quotation-maker-page {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .quotation-maker-page .print-quotation-panel,
+  main,
+  main > * {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+  }
+
+  .print-quotation-panel {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .tally-voucher input,
+  .tally-voucher textarea {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .tally-voucher .print-hide {
+    display: none !important;
+  }
+
+  .tally-voucher table {
+    page-break-inside: auto;
+  }
+
+  .tally-voucher tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}

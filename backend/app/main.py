@@ -9,7 +9,7 @@ from pydantic import ValidationError
 
 from .config import settings
 from .db import get_db_dep
-from .routes import auth, catalog_import, products, inquiries
+from .routes import auth, catalog_import, products, inquiries, quotations, price_update
 from .keepalive_service import keepalive_service
 from .schemas import ErrorResponse
 
@@ -45,7 +45,9 @@ app.include_router(auth.router)
 app.include_router(products.router)
 app.include_router(catalog_import.router)
 app.include_router(catalog_import.cloudinary_router)
+app.include_router(price_update.router)
 app.include_router(inquiries.router)
+app.include_router(quotations.router)
 
 # Exception handlers for consistent error responses
 @app.exception_handler(RequestValidationError)

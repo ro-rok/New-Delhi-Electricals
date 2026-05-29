@@ -31,7 +31,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 bg-card/10 backdrop-blur-sm border border-card/20 rounded-full px-4 py-2 mb-6">
             <span className="text-trust-gold font-bold text-sm">★</span>
             <span className="text-primary-foreground text-sm font-medium">
-              27 Years of Trusted Service | 30,000+ Happy Customers
+              27 Years of Trusted Service | 3000+ Happy Customers
             </span>
           </div>
 

@@ -138,7 +138,7 @@ const HeroSection = () => {
               className="flex items-center justify-center gap-8 md:gap-12 text-sm"
             >
               {[
-                { value: '30K+', label: 'Customers' },
+                { value: '3K+', label: 'Customers' },
                 { value: 'Same Day', label: 'Delivery' },
                 { value: '100%', label: 'Genuine' },
               ].map((stat, idx) => (

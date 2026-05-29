@@ -28,6 +28,8 @@ import { toast } from 'sonner';
 import { motion, AnimatePresence } from 'framer-motion';
 import { uploadCatalogPdf, getCatalogPreview, getCatalogProgress, applyCatalogImport, CatalogPreviewLog, CatalogPreviewResponse } from '@/api/catalog';
 import { uploadImageToCloudinary } from '@/api/products';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { PriceUpdaterPanel } from '@/components/admin/PriceUpdaterPanel';
 
 interface ParsedProduct {
   tempId: string;
@@ -286,9 +288,18 @@ const AdminImport = () => {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-semibold mb-2">Import Catalog</h1>
-        <p className="text-muted-foreground">Upload PDF or CSV files to import products</p>
+        <p className="text-muted-foreground">
+          Import new products from PDF or update existing prices from a brand price list
+        </p>
       </div>
 
+      <Tabs defaultValue="import">
+        <TabsList>
+          <TabsTrigger value="import">Import products</TabsTrigger>
+          <TabsTrigger value="prices">Update prices</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="import" className="space-y-6 mt-6">
       {/* Upload Area */}
       <Card>
         <CardContent className="p-8">
@@ -624,6 +635,12 @@ const AdminImport = () => {
           </div>
         </DialogContent>
       </Dialog>
+        </TabsContent>
+
+        <TabsContent value="prices" className="mt-6">
+          <PriceUpdaterPanel />
+        </TabsContent>
+      </Tabs>
     </div>
   );
 };

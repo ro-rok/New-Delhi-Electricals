@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="mt-4 text-center text-xs text-muted-foreground">
-          27 Years of Trusted Service · 30,000+ Happy Customers
+          27 Years of Trusted Service · 3000+ Happy Customers
         </p>
       </div>
     </footer>

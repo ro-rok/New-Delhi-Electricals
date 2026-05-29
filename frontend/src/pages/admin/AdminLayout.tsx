@@ -3,7 +3,7 @@ import { Link, Outlet, useLocation, Navigate } from 'react-router-dom';
 import {
   LayoutDashboard, Package, FolderOpen, Tags, FileUp,
   MessageSquare, Settings, LogOut, Menu, X, ChevronRight,
-  Sun, Moon
+  Sun, Moon, FileText, ClipboardList
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTheme } from 'next-themes';
@@ -17,6 +17,8 @@ const navItems = [
   { icon: FolderOpen, label: 'Categories', path: '/admin/categories' },
   { icon: Tags, label: 'Brands', path: '/admin/brands' },
   { icon: FileUp, label: 'Import', path: '/admin/import' },
+  { icon: FileText, label: 'Quotation Maker', path: '/admin/quotation-maker' },
+  { icon: ClipboardList, label: 'Quotations', path: '/admin/quotations' },
   { icon: MessageSquare, label: 'Inquiries', path: '/admin/inquiries' },
   { icon: History, label: 'Logs', path: '/admin/logs' },
   { icon: Settings, label: 'Settings', path: '/admin/settings' },
@@ -89,7 +91,7 @@ const AdminLayout = () => {
             animate={{ x: 0 }}
             exit={{ x: -256 }}
             transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="fixed inset-y-0 left-0 z-50 w-64 bg-card border-r border-border flex flex-col lg:relative lg:translate-x-0"
+            className="fixed inset-y-0 left-0 z-50 w-64 bg-card border-r border-border flex flex-col lg:relative lg:translate-x-0 print:hidden"
           >
             <div className="p-6 border-b border-border">
               <Link to="/admin" className="flex items-center gap-3">
@@ -157,7 +159,7 @@ const AdminLayout = () => {
 
       {/* Main content */}
       <div className="flex-1 flex flex-col min-h-screen">
-        <header className="sticky top-0 z-40 bg-card/80 backdrop-blur-xl border-b border-border">
+        <header className="sticky top-0 z-40 bg-card/80 backdrop-blur-xl border-b border-border print:hidden">
           <div className="flex items-center justify-between px-6 py-4">
             {!isDesktop && (
               <Button
@@ -181,7 +183,7 @@ const AdminLayout = () => {
           </div>
         </header>
 
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-6 print:p-0 print:overflow-visible">
           <Outlet />
         </main>
       </div>

@@ -61,11 +61,7 @@ const PremiumHero = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-foreground/40" />
-                <span className="font-light">30,000+ Products</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-foreground/40" />
-                <span className="font-light">50+ Brands</span>
+                <span className="font-light">3000+ Products</span>
               </div>
             </motion.div>
 

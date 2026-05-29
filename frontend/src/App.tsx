@@ -40,6 +40,8 @@ const AdminInquiries = lazy(() => import("./pages/admin/AdminInquiries"));
 const AdminLogs = lazy(() => import("./pages/admin/AdminLogs"));
 const AdminSettings = lazy(() => import("./pages/admin/AdminSettings"));
 const AdminAddProduct = lazy(() => import("./pages/admin/AdminAddProduct"));
+const AdminQuotationMaker = lazy(() => import("./pages/admin/AdminQuotationMaker"));
+const AdminQuotationsList = lazy(() => import("./pages/admin/AdminQuotationsList"));
 
 const queryClient = new QueryClient();
 
@@ -107,6 +109,8 @@ const App = () => (
                     <Route path="brands" element={<ErrorBoundary><AdminBrands /></ErrorBoundary>} />
                     <Route path="import" element={<ErrorBoundary><AdminImport /></ErrorBoundary>} />
                     <Route path="inquiries" element={<ErrorBoundary><AdminInquiries /></ErrorBoundary>} />
+                    <Route path="quotation-maker" element={<ErrorBoundary><AdminQuotationMaker /></ErrorBoundary>} />
+                    <Route path="quotations" element={<ErrorBoundary><AdminQuotationsList /></ErrorBoundary>} />
                     <Route path="logs" element={<ErrorBoundary><AdminLogs /></ErrorBoundary>} />
                     <Route path="settings" element={<ErrorBoundary><AdminSettings /></ErrorBoundary>} />
                   </Route>
