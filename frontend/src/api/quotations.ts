@@ -308,6 +308,7 @@ export function useQuotationProducts(
     queryFn: () =>
       fetchQuotationProducts({ category: scope, filters, q, page, pageSize }),
     placeholderData: (prev) => prev,
+    staleTime: q.trim() ? 0 : 30_000,
   });
 }
 

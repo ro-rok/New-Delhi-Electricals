@@ -1,4 +1,4 @@
-import { useRef, useState, useMemo, useEffect } from 'react';
+import { useRef, useState, useMemo, useEffect, useCallback } from 'react';
 import {
   flexRender,
   getCoreRowModel,
@@ -8,12 +8,12 @@ import {
 import { useVirtualizer } from '@tanstack/react-virtual';
 import { Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { formatInr } from '@/lib/quotationPricing';
 import { cn } from '@/lib/utils';
 import type { QuotationProductRow } from '@/types/quotation';
+import { AddQtyInput } from './AddQtyInput';
 
 const QTY_PRESETS = [1, 5, 10, 25, 50];
 
@@ -21,6 +21,9 @@ interface ProductTableProps {
   products: QuotationProductRow[];
   total: number;
   loading?: boolean;
+  fetching?: boolean;
+  searchQuery?: string;
+  debouncedSearch?: string;
   focusedIndex: number;
   onFocusIndexChange: (index: number) => void;
   onAdd: (product: QuotationProductRow, quantity: number) => void;
@@ -35,6 +38,9 @@ export function ProductTable({
   products,
   total,
   loading,
+  fetching,
+  searchQuery = '',
+  debouncedSearch = '',
   focusedIndex,
   onFocusIndexChange,
   onAdd,
@@ -48,8 +54,9 @@ export function ProductTable({
   const parentRef = useRef<HTMLDivElement>(null);
 
   const getQty = (id: string) => qtyById[id] ?? 1;
-  const setQty = (id: string, q: number) =>
+  const commitQty = useCallback((id: string, q: number) => {
     setQtyById((prev) => ({ ...prev, [id]: Math.max(1, q) }));
+  }, []);
 
   const columns = useMemo<ColumnDef<QuotationProductRow>[]>(
     () => [
@@ -96,23 +103,20 @@ export function ProductTable({
             className="flex items-center gap-1.5"
             data-no-row-click
             onPointerDown={(e) => e.stopPropagation()}
+            onMouseDown={(e) => e.stopPropagation()}
             onClick={(e) => e.stopPropagation()}
           >
-            <Input
-              type="number"
-              min={1}
-              inputMode="numeric"
-              className="h-9 w-16 text-sm px-1 text-center font-semibold touch-manipulation"
-              value={getQty(row.original.id)}
-              onPointerDown={(e) => e.stopPropagation()}
-              onClick={(e) => e.stopPropagation()}
-              onFocus={(e) => e.stopPropagation()}
-              onChange={(e) => setQty(row.original.id, Number(e.target.value) || 1)}
+            <AddQtyInput
+              productId={row.original.id}
+              quantity={getQty(row.original.id)}
+              onCommit={commitQty}
+              onEnter={(qty) => onAdd(row.original, qty)}
             />
             <Button
               size="sm"
-              className="h-9 px-3 text-sm font-semibold touch-manipulation"
+              className="h-10 px-3 text-sm font-semibold touch-manipulation"
               onPointerDown={(e) => e.stopPropagation()}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={(e) => {
                 e.stopPropagation();
                 onAdd(row.original, getQty(row.original.id));
@@ -125,7 +129,7 @@ export function ProductTable({
         ),
       },
     ],
-    [qtyById, onAdd, cartQtyByProductId, showCategoryColumn]
+    [qtyById, onAdd, cartQtyByProductId, showCategoryColumn, commitQty]
   );
 
   const table = useReactTable({
@@ -146,16 +150,24 @@ export function ProductTable({
   });
 
   useEffect(() => {
+    const editing = document.activeElement?.closest('[data-product-qty-input]');
+    if (editing) return;
     if (focusedIndex >= 0 && focusedIndex < rows.length && useVirtual) {
       virtualizer.scrollToIndex(focusedIndex, { align: 'auto' });
     }
   }, [focusedIndex, rows.length, useVirtual, virtualizer]);
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const searchPending = searchQuery.trim() !== debouncedSearch.trim();
+  const isSearchActive = debouncedSearch.trim().length > 0;
+  const showLoading = (loading || fetching || searchPending) && !products.length;
 
-  if (loading && !products.length) {
+  if (showLoading) {
     return (
       <div className="p-4 space-y-2">
+        <p className="text-xs text-muted-foreground text-center pb-2">
+          {searchPending || fetching ? `Searching “${searchQuery.trim()}”…` : 'Loading products…'}
+        </p>
         {Array.from({ length: 8 }).map((_, i) => (
           <Skeleton key={i} className="h-10 w-full" />
         ))}
@@ -165,15 +177,22 @@ export function ProductTable({
 
   if (!products.length) {
     return (
-      <div className="flex items-center justify-center h-48 text-muted-foreground text-sm">
-        Select a category or adjust filters
+      <div className="flex flex-col items-center justify-center h-48 text-muted-foreground text-sm gap-2 px-4 text-center">
+        {isSearchActive ? (
+          <>
+            <p>No products found for &quot;{debouncedSearch.trim()}&quot;</p>
+            <p className="text-xs">Try clearing filters or a shorter search term</p>
+          </>
+        ) : (
+          <p>Type in the search box or adjust filters to find products</p>
+        )}
       </div>
     );
   }
 
   const isInteractiveTarget = (target: EventTarget | null) =>
     target instanceof HTMLElement &&
-    !!target.closest('input, button, a, [data-no-row-click]');
+    !!target.closest('input, button, a, [data-no-row-click], [data-product-qty-input]');
 
   const renderRow = (rowIndex: number) => {
     const row = rows[rowIndex];
@@ -218,13 +237,14 @@ export function ProductTable({
             className="h-6 px-2 text-xs"
             onClick={() => {
               const focused = products[focusedIndex];
-              if (focused) setQty(focused.id, q);
+              if (focused) commitQty(focused.id, q);
             }}
           >
             {q}
           </Button>
         ))}
-        <span className="ml-auto text-xs text-muted-foreground">
+        <span className="ml-auto text-xs text-muted-foreground tabular-nums">
+          {fetching && !searchPending ? 'Updating… · ' : ''}
           {total} products · page {page}/{totalPages}
         </span>
       </div>

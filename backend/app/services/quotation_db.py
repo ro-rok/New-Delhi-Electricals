@@ -57,41 +57,43 @@ def word_to_boundary_pattern(word: str) -> str:
 
 
 def build_text_search_conditions(q: str) -> Optional[Dict[str, Any]]:
-    """Mongo $or clause for quotation-maker text search with spec-aware boundaries."""
+    """Mongo clause for quotation-maker text search with spec-aware boundaries."""
     q = q.strip()
     if not q:
         return None
 
     q_compact = normalize_compact(q)
-    search_fields = ["name", "sku", "brand", "series", "description"]
+    search_fields = ["name", "sku", "brand", "series", "description", "subcategory"]
+    words = [w.strip() for w in q.split() if w.strip()]
 
-    # Spec queries like "6 ax" / "6ax" / "16ax" — single boundary pattern only (avoids "ax" matching "16AX")
-    if re.fullmatch(r"\d+[a-zA-Z]+", q_compact):
+    # Spec queries like "6 ax" / "6ax" — single token only
+    if len(words) == 1 and re.fullmatch(r"\d+[a-zA-Z]+", q_compact):
         regex = {"$regex": compact_to_boundary_pattern(q_compact), "$options": "i"}
         return {"$or": [{field: regex} for field in search_fields]}
 
+    # Multi-word: each word must match (e.g. "Switch 6AX" → switch AND 6ax)
+    # Do NOT also require the joined "switch6ax" — names contain spaces between words.
+    if len(words) > 1:
+        or_groups: List[Dict[str, Any]] = []
+        for word in words:
+            wp = word_to_boundary_pattern(word)
+            if not wp:
+                continue
+            regex = {"$regex": wp, "$options": "i"}
+            or_groups.append({"$or": [{field: regex} for field in search_fields]})
+        if or_groups:
+            return or_groups[0] if len(or_groups) == 1 else {"$and": or_groups}
+        return None
+
+    # Single word / phrase
     patterns: List[str] = []
     if len(q_compact) >= 2:
         patterns.append(compact_to_boundary_pattern(q_compact))
-
-    words = [w.strip() for w in q.split() if w.strip()]
-    if len(words) > 1:
-        for word in words:
-            wp = word_to_boundary_pattern(word)
-            if wp and wp not in patterns:
-                patterns.append(wp)
-
     if not patterns:
         patterns.append(escape_regex(q))
 
-    or_groups: List[Dict[str, Any]] = []
-    for pat in patterns:
-        regex = {"$regex": pat, "$options": "i"}
-        or_groups.append({"$or": [{field: regex} for field in search_fields]})
-
-    if len(or_groups) == 1:
-        return or_groups[0]
-    return {"$and": or_groups}
+    regex = {"$regex": patterns[0], "$options": "i"}
+    return {"$or": [{field: regex} for field in search_fields]}
 
 
 def score_product_relevance(doc: Dict[str, Any], query: str) -> float:

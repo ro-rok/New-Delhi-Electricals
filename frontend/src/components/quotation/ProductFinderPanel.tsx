@@ -15,6 +15,9 @@ interface ProductFinderPanelProps {
   products: QuotationProductRow[];
   total: number;
   productsLoading?: boolean;
+  productsFetching?: boolean;
+  searchQuery?: string;
+  debouncedSearch?: string;
   focusedIndex: number;
   onFocusIndexChange: (i: number) => void;
   cartQtyByProductId: Record<string, number>;
@@ -37,6 +40,9 @@ export function ProductFinderPanel({
   products,
   total,
   productsLoading,
+  productsFetching,
+  searchQuery,
+  debouncedSearch,
   focusedIndex,
   onFocusIndexChange,
   cartQtyByProductId,
@@ -62,6 +68,9 @@ export function ProductFinderPanel({
         products={products}
         total={total}
         loading={productsLoading}
+        fetching={productsFetching}
+        searchQuery={searchQuery}
+        debouncedSearch={debouncedSearch}
         focusedIndex={focusedIndex}
         onFocusIndexChange={onFocusIndexChange}
         onAdd={onAdd}

@@ -49,7 +49,7 @@ const AdminQuotationMaker = () => {
 
   const maker = useQuotationMaker();
   const [search, setSearch] = useState('');
-  const debouncedSearch = useDebouncedValue(search, 300);
+  const debouncedSearch = useDebouncedValue(search, 150);
   const [page, setPage] = useState(1);
   const [focusedIndex, setFocusedIndex] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -111,7 +111,8 @@ const AdminQuotationMaker = () => {
     browseCategory,
     browseFilters
   );
-  const { data: productData, isLoading: productsLoading } = useQuotationProducts(
+  const { data: productData, isLoading: productsLoading, isFetching: productsFetching } =
+    useQuotationProducts(
     browseCategory,
     browseFilters,
     debouncedSearch,
@@ -435,6 +436,9 @@ const AdminQuotationMaker = () => {
                 products={products}
                 total={productData?.total ?? 0}
                 productsLoading={productsLoading}
+                productsFetching={productsFetching}
+                searchQuery={search}
+                debouncedSearch={debouncedSearch}
                 focusedIndex={focusedIndex}
                 onFocusIndexChange={setFocusedIndex}
                 cartQtyByProductId={cartQtyByProductId}

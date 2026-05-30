@@ -34,6 +34,7 @@ export function useQuotationKeyboard(handlers: {
       }
 
       if (isInput && target.getAttribute('data-product-search') !== 'true') return;
+      if (target.getAttribute('data-product-qty-input')) return;
 
       if (e.key === 'ArrowDown') {
         e.preventDefault();
