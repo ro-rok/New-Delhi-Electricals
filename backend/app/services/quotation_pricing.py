@@ -62,6 +62,7 @@ def build_quotation_item(
     manual_unit_price: Optional[float] = None,
     series: Optional[str] = None,
     color: Optional[str] = None,
+    is_manual: bool = False,
 ) -> QuotationItem:
     line_totals = compute_line_totals(
         float(list_price), quantity, item_discount_pct, manual_unit_price
@@ -77,6 +78,7 @@ def build_quotation_item(
         quantity=quantity,
         item_discount_pct=item_discount_pct,
         manual_unit_price=manual_unit_price,
+        is_manual=is_manual,
         line_totals=line_totals,
     )
 

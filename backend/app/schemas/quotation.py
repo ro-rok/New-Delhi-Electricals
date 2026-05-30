@@ -60,6 +60,7 @@ class QuotationItem(BaseModel):
     quantity: int = Field(1, ge=1)
     item_discount_pct: float = Field(0, ge=0, le=100, alias="itemDiscountPct")
     manual_unit_price: Optional[float] = Field(None, ge=0, alias="manualUnitPrice")
+    is_manual: bool = Field(False, alias="isManual")
     line_totals: QuotationLineTotals = Field(default_factory=QuotationLineTotals, alias="lineTotals")
 
     model_config = {"populate_by_name": True}

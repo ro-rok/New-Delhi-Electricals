@@ -140,10 +140,12 @@ export function useQuotationMaker(initial?: {
     }) => {
       setQuotationId(data.id);
       setCart(
-        data.items.map((item) => ({
-          ...item,
-          isManual: item.isManual ?? item.productId.startsWith('manual-'),
-        }))
+        data.items.map((item) =>
+          recomputeCartItem({
+            ...item,
+            isManual: item.isManual ?? item.productId.startsWith('manual-'),
+          })
+        )
       );
       setCustomer(data.customer);
       setOverallDiscountPct(data.overallDiscountPct);

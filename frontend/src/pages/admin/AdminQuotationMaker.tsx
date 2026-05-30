@@ -23,6 +23,7 @@ import { SavedQuotationsDrawer } from '@/components/quotation/SavedQuotationsDra
 import {
   downloadQuotationPdf,
   duplicateQuotation,
+  fetchQuotation,
   useQuotation,
   useQuotationFacets,
   useQuotationProducts,
@@ -153,7 +154,7 @@ const AdminQuotationMaker = () => {
         quantity: i.quantity,
         itemDiscountPct: i.itemDiscountPct,
         manualUnitPrice: i.manualUnitPrice,
-        ...(i.isManual
+        ...(i.isManual || i.productId.startsWith('manual-')
           ? {
               isManual: true,
               name: i.name,
@@ -213,21 +214,26 @@ const AdminQuotationMaker = () => {
     setSearchParams({});
   };
 
-  const handleLoad = (q: Quotation) => {
-    maker.loadQuotation({
-      id: q.id,
-      items: q.items,
-      customer: q.customer,
-      overallDiscountPct: q.pricing.overallDiscountPct,
-      gstMode: q.pricing.gstMode,
-      gstRate: q.pricing.gstRate,
-      status: q.status,
-      notes: q.notes ?? null,
-    });
-    setQuotationNumber(q.quotationNumber);
-    setSearchParams({ id: q.id });
-    setDrawerOpen(false);
-    toast.success(`Loaded ${q.quotationNumber}`);
+  const handleLoad = async (q: Quotation) => {
+    try {
+      const fresh = await fetchQuotation(q.id);
+      maker.loadQuotation({
+        id: fresh.id,
+        items: fresh.items,
+        customer: fresh.customer,
+        overallDiscountPct: fresh.pricing.overallDiscountPct,
+        gstMode: fresh.pricing.gstMode,
+        gstRate: fresh.pricing.gstRate,
+        status: fresh.status,
+        notes: fresh.notes ?? null,
+      });
+      setQuotationNumber(fresh.quotationNumber);
+      setSearchParams({ id: fresh.id });
+      setDrawerOpen(false);
+      toast.success(`Loaded ${fresh.quotationNumber}`);
+    } catch (e) {
+      toast.error(e instanceof Error ? e.message : 'Failed to load quotation');
+    }
   };
 
   const handleDuplicate = async (id: string) => {

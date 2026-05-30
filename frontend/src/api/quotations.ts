@@ -5,6 +5,7 @@ import {
   type FrequentProduct,
   type GstMode,
   type Quotation,
+  type QuotationCartItem,
   type QuotationCategory,
   type QuotationCreatePayload,
   type QuotationProductRow,
@@ -47,9 +48,94 @@ function snakeToCamel(obj: unknown): unknown {
   return obj;
 }
 
+function mapQuotationItem(raw: Record<string, unknown>): QuotationCartItem {
+  const d = snakeToCamel(raw) as Record<string, unknown>;
+  const productId = String(d.productId ?? '');
+  const lineTotalsRaw = (d.lineTotals ?? {}) as Record<string, unknown>;
+  const listPrice = Number(d.listPrice ?? 0);
+  const quantity = Number(d.quantity ?? 1);
+  const itemDiscountPct = Number(d.itemDiscountPct ?? 0);
+  const manualUnitPrice =
+    d.manualUnitPrice === null || d.manualUnitPrice === undefined
+      ? null
+      : Number(d.manualUnitPrice);
+
+  return {
+    productId,
+    sku: String(d.sku ?? ''),
+    name: String(d.name ?? ''),
+    brand: String(d.brand ?? ''),
+    series: (d.series as string | null) ?? null,
+    color: (d.color as string | null) ?? null,
+    listPrice,
+    quantity,
+    itemDiscountPct,
+    manualUnitPrice,
+    lineTotals: {
+      lpTotal: Number(lineTotalsRaw.lpTotal ?? listPrice * quantity),
+      lineSellingUnit: Number(lineTotalsRaw.lineSellingUnit ?? 0),
+      lineAmount: Number(lineTotalsRaw.lineAmount ?? 0),
+    },
+    isManual: Boolean(d.isManual) || productId.startsWith('manual-'),
+  };
+}
+
 function mapQuotation(raw: Record<string, unknown>): Quotation {
-  const d = snakeToCamel(raw) as Quotation;
-  return d;
+  const d = snakeToCamel(raw) as Record<string, unknown>;
+  const itemsRaw = (raw.items ?? d.items) as Record<string, unknown>[] | undefined;
+  const pricingRaw = (snakeToCamel(raw.pricing ?? d.pricing) ?? {}) as Record<string, unknown>;
+
+  return {
+    id: String(d.id ?? raw._id ?? ''),
+    quotationNumber: String(d.quotationNumber ?? ''),
+    status: (d.status as Quotation['status']) ?? 'draft',
+    customer: {
+      name: String((d.customer as Record<string, unknown>)?.name ?? ''),
+      phone: String((d.customer as Record<string, unknown>)?.phone ?? ''),
+      gstNumber: String(
+        (d.customer as Record<string, unknown>)?.gstNumber ??
+          (d.customer as Record<string, unknown>)?.gst_number ??
+          ''
+      ),
+      address: String((d.customer as Record<string, unknown>)?.address ?? ''),
+    },
+    items: (itemsRaw ?? []).map((item) =>
+      mapQuotationItem(item as Record<string, unknown>)
+    ),
+    pricing: {
+      lpSubtotal: Number(pricingRaw.lpSubtotal ?? 0),
+      subtotal: Number(pricingRaw.subtotal ?? 0),
+      overallDiscountPct: Number(pricingRaw.overallDiscountPct ?? 0),
+      discountedSubtotal: Number(pricingRaw.discountedSubtotal ?? 0),
+      gstMode: (pricingRaw.gstMode as Quotation['pricing']['gstMode']) ?? 'exclusive',
+      gstRate: Number(pricingRaw.gstRate ?? 18),
+      gstAmount: Number(pricingRaw.gstAmount ?? 0),
+      grandTotal: Number(pricingRaw.grandTotal ?? 0),
+    },
+    notes: (d.notes as string | null) ?? null,
+    createdAt: String(d.createdAt ?? ''),
+    updatedAt: String(d.updatedAt ?? ''),
+    createdBy: String(d.createdBy ?? ''),
+  };
+}
+
+/** Serialize cart lines for create/update — manual lines need name + listPrice for PDF/print. */
+function serializeQuotationItem(i: QuotationCreatePayload['items'][number]) {
+  const isManual = Boolean(i.isManual) || i.productId.startsWith('manual-');
+  const base: Record<string, unknown> = {
+    product_id: i.productId,
+    quantity: i.quantity,
+    item_discount_pct: i.itemDiscountPct,
+    manual_unit_price: i.manualUnitPrice ?? null,
+  };
+  if (isManual) {
+    base.is_manual = true;
+    base.name = i.name?.trim() || 'Custom item';
+    base.list_price = i.listPrice ?? 0;
+    base.brand = i.brand?.trim() || 'Misc';
+    base.sku = i.sku?.trim() || 'MISC';
+  }
+  return base;
 }
 
 function mapProductRow(raw: Record<string, unknown>): QuotationProductRow {
@@ -200,12 +286,7 @@ export async function createQuotation(payload: QuotationCreatePayload): Promise<
         gst_number: payload.customer.gstNumber,
         address: payload.customer.address,
       },
-      items: payload.items.map((i) => ({
-        product_id: i.productId,
-        quantity: i.quantity,
-        item_discount_pct: i.itemDiscountPct,
-        manual_unit_price: i.manualUnitPrice ?? null,
-      })),
+      items: payload.items.map(serializeQuotationItem),
       overall_discount_pct: payload.overallDiscountPct,
       gst_mode: payload.gstMode,
       gst_rate: payload.gstRate,
@@ -231,12 +312,7 @@ export async function updateQuotation(
     };
   }
   if (payload.items) {
-    body.items = payload.items.map((i) => ({
-      product_id: i.productId,
-      quantity: i.quantity,
-      item_discount_pct: i.itemDiscountPct,
-      manual_unit_price: i.manualUnitPrice ?? null,
-    }));
+    body.items = payload.items.map(serializeQuotationItem);
   }
   if (payload.overallDiscountPct != null) body.overall_discount_pct = payload.overallDiscountPct;
   if (payload.gstMode) body.gst_mode = payload.gstMode;

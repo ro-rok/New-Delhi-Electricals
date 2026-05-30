@@ -281,6 +281,7 @@ async def resolve_items_from_inputs(
                     data.get("item_discount_pct", data.get("itemDiscountPct", 0))
                 ),
                 manual_unit_price=data.get("manual_unit_price", data.get("manualUnitPrice")),
+                is_manual=True,
             )
             resolved.append(item.model_dump(by_alias=True))
             continue
