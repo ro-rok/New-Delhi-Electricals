@@ -41,19 +41,22 @@ const AdminQuotationsList = () => {
           {(data?.items ?? []).map((q) => (
             <Card key={q.id} className="hover:shadow-md transition-shadow">
               <CardContent className="p-4 flex flex-wrap items-center justify-between gap-4">
-                <div className="flex items-start gap-3">
-                  <FileText className="h-5 w-5 text-muted-foreground mt-0.5" />
-                  <div>
+                <Link
+                  to={`/admin/quotation-maker?id=${q.id}`}
+                  className="flex items-start gap-3 min-w-0 flex-1 touch-manipulation"
+                >
+                  <FileText className="h-5 w-5 text-muted-foreground mt-0.5 shrink-0" />
+                  <div className="min-w-0">
                     <p className="font-mono font-medium">{q.quotationNumber}</p>
                     <p className="text-sm text-muted-foreground">
                       {q.customer.name || 'No customer'} · {q.items.length} items
                     </p>
                   </div>
-                </div>
-                <div className="flex items-center gap-4">
+                </Link>
+                <div className="flex items-center gap-3 w-full sm:w-auto sm:shrink-0">
                   <Badge variant={q.status === 'final' ? 'default' : 'secondary'}>{q.status}</Badge>
-                  <span className="font-semibold">{formatInr(q.pricing.grandTotal)}</span>
-                  <Button variant="outline" size="sm" asChild>
+                  <span className="font-semibold tabular-nums">{formatInr(q.pricing.grandTotal)}</span>
+                  <Button variant="default" className="min-h-11 touch-manipulation ml-auto sm:ml-0" asChild>
                     <Link to={`/admin/quotation-maker?id=${q.id}`}>Open</Link>
                   </Button>
                 </div>

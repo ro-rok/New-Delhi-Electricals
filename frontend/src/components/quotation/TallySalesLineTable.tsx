@@ -37,7 +37,10 @@ export function TallySalesLineTable({
   const [discDraft, setDiscDraft] = useState('');
   const [editingQtyId, setEditingQtyId] = useState<string | null>(null);
   const [qtyDraft, setQtyDraft] = useState('');
+  const [editingPriceId, setEditingPriceId] = useState<string | null>(null);
+  const [priceDraft, setPriceDraft] = useState('');
   const focusPendingRef = useRef<string | null>(null);
+  const priceFocusPendingRef = useRef<string | null>(null);
 
   const commitQuantity = (productId: string, raw: string) => {
     const v = Math.max(1, parseInt(raw, 10) || 1);
@@ -48,6 +51,17 @@ export function TallySalesLineTable({
     const v =
       raw.trim() === '' ? 0 : Math.min(100, Math.max(0, Number.parseFloat(raw) || 0));
     onUpdateItem(productId, { itemDiscountPct: v, manualUnitPrice: null });
+  };
+
+  const commitListPrice = (productId: string, raw: string) => {
+    const v = Math.max(0, Number.parseFloat(raw) || 0);
+    onUpdateItem(productId, { listPrice: v, manualUnitPrice: null });
+  };
+
+  const startPriceEdit = (productId: string, listPrice: number) => {
+    setEditingPriceId(productId);
+    setPriceDraft(String(listPrice));
+    priceFocusPendingRef.current = productId;
   };
 
   useEffect(() => {
@@ -70,6 +84,35 @@ export function TallySalesLineTable({
     });
     return () => cancelAnimationFrame(t);
   }, [lastAddedId, cart.length, editingDiscId]);
+
+  useEffect(() => {
+    const id = priceFocusPendingRef.current;
+    if (!id) return;
+    const t = requestAnimationFrame(() => {
+      const el = document.querySelector<HTMLInputElement>(`[data-price-input="${id}"]`);
+      if (el) {
+        el.focus();
+        el.select();
+        priceFocusPendingRef.current = null;
+      }
+    });
+    return () => cancelAnimationFrame(t);
+  }, [editingPriceId]);
+
+  const handlePriceKeyDown = (productId: string, e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key !== 'Enter') return;
+    e.preventDefault();
+    commitListPrice(productId, priceDraft);
+    setEditingPriceId(null);
+    setPriceDraft('');
+  };
+
+  const handlePriceBlur = (productId: string) => {
+    if (editingPriceId !== productId) return;
+    commitListPrice(productId, priceDraft);
+    setEditingPriceId(null);
+    setPriceDraft('');
+  };
 
   const handleDiscKeyDown = (productId: string, e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key !== 'Enter') return;
@@ -189,11 +232,55 @@ export function TallySalesLineTable({
                       }}
                     />
                   </td>
-                  <td className={cn(td, 'text-right tabular-nums font-medium whitespace-nowrap')}>
-                    {formatInr(item.lineTotals.lineSellingUnit)}
+                  <td
+                    className={cn(
+                      td,
+                      'p-1 text-right',
+                      editingPriceId === item.productId && 'bg-[#fff9c4]'
+                    )}
+                    data-no-row-click
+                    onPointerDown={stopRowTouch}
+                    onClick={stopRowTouch}
+                    onDoubleClick={() => startPriceEdit(item.productId, item.listPrice)}
+                    title="Double-click to edit list price"
+                  >
+                    {editingPriceId === item.productId ? (
+                      <span className="block tabular-nums font-medium whitespace-nowrap py-2 px-1 text-[#5a6a7a]">
+                        {formatInr(item.lineTotals.lineSellingUnit)}
+                      </span>
+                    ) : (
+                      <span className="block tabular-nums font-medium whitespace-nowrap cursor-text select-none py-2 px-1">
+                        {formatInr(item.lineTotals.lineSellingUnit)}
+                      </span>
+                    )}
                   </td>
-                  <td className={cn(td, 'text-right tabular-nums text-[#5a6a7a] whitespace-nowrap')}>
-                    {formatInr(item.listPrice)}
+                  <td
+                    className={cn(td, 'p-1 text-right')}
+                    data-no-row-click
+                    onPointerDown={stopRowTouch}
+                    onClick={stopRowTouch}
+                    onDoubleClick={() => startPriceEdit(item.productId, item.listPrice)}
+                    title="Double-click to edit list price"
+                  >
+                    {editingPriceId === item.productId ? (
+                      <Input
+                        type="number"
+                        min={0}
+                        step={0.01}
+                        inputMode="decimal"
+                        data-price-input={item.productId}
+                        data-cart-field="list-price"
+                        className="h-10 w-full text-right text-base font-semibold border-[#8ca0b3] bg-white rounded-none focus-visible:ring-[#236192] touch-manipulation"
+                        value={priceDraft}
+                        onChange={(e) => setPriceDraft(e.target.value)}
+                        onBlur={() => handlePriceBlur(item.productId)}
+                        onKeyDown={(e) => handlePriceKeyDown(item.productId, e)}
+                      />
+                    ) : (
+                      <span className="block tabular-nums text-[#5a6a7a] whitespace-nowrap cursor-text select-none py-2 px-1">
+                        {formatInr(item.listPrice)}
+                      </span>
+                    )}
                   </td>
                   <td
                     className={cn(td, 'p-1')}

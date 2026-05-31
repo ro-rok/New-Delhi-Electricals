@@ -57,9 +57,13 @@ const AdminQuotationMaker = () => {
   const [quotationNumber, setQuotationNumber] = useState<string | undefined>();
   const [duplicatingId, setDuplicatingId] = useState<string | null>(null);
   const [lastAddedId, setLastAddedId] = useState<string | null>(null);
-  const [productPanelMinimized, setProductPanelMinimized] = useState(false);
+  const [productPanelMinimized, setProductPanelMinimized] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(max-width: 1023px)').matches;
+  });
   const searchRef = useRef<HTMLInputElement>(null);
   const billScrollRef = useRef<HTMLDivElement>(null);
+  const lastAppliedQuotationIdRef = useRef<string | null>(null);
 
   const cartQtyByProductId = useMemo(() => {
     const map: Record<string, number> = {};
@@ -124,26 +128,39 @@ const AdminQuotationMaker = () => {
   const { data: loadedQuotation } = useQuotation(editId);
   const saveMutation = useSaveQuotation();
 
+  const applyLoadedQuotation = useCallback(
+    (fresh: Quotation) => {
+      lastAppliedQuotationIdRef.current = fresh.id;
+      maker.loadQuotation({
+        id: fresh.id,
+        items: fresh.items,
+        customer: fresh.customer,
+        overallDiscountPct: fresh.pricing.overallDiscountPct,
+        gstMode: fresh.pricing.gstMode,
+        gstRate: fresh.pricing.gstRate,
+        status: fresh.status,
+        notes: fresh.notes ?? null,
+      });
+      setQuotationNumber(fresh.quotationNumber);
+      setSearchParams({ id: fresh.id });
+      setProductPanelMinimized(true);
+      requestAnimationFrame(() => {
+        billScrollRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    },
+    [maker, setSearchParams]
+  );
+
   useEffect(() => {
     setPage(1);
     setFocusedIndex(0);
   }, [browseCategory, maker.filters, debouncedSearch]);
 
   useEffect(() => {
-    if (!loadedQuotation) return;
-    maker.loadQuotation({
-      id: loadedQuotation.id,
-      items: loadedQuotation.items,
-      customer: loadedQuotation.customer,
-      overallDiscountPct: loadedQuotation.pricing.overallDiscountPct,
-      gstMode: loadedQuotation.pricing.gstMode,
-      gstRate: loadedQuotation.pricing.gstRate,
-      status: loadedQuotation.status,
-      notes: loadedQuotation.notes ?? null,
-    });
-    setQuotationNumber(loadedQuotation.quotationNumber);
-    maker.setQuotationId(loadedQuotation.id);
-  }, [loadedQuotation?.id]);
+    if (!loadedQuotation || !editId) return;
+    if (lastAppliedQuotationIdRef.current === loadedQuotation.id) return;
+    applyLoadedQuotation(loadedQuotation);
+  }, [loadedQuotation?.id, editId, applyLoadedQuotation]);
 
   const buildPayload = useCallback(
     (): QuotationCreatePayload => ({
@@ -206,6 +223,7 @@ const AdminQuotationMaker = () => {
   };
 
   const handleNew = () => {
+    lastAppliedQuotationIdRef.current = null;
     maker.resetCart();
     maker.setQuotationId(null);
     setQuotationNumber(undefined);
@@ -217,18 +235,7 @@ const AdminQuotationMaker = () => {
   const handleLoad = async (q: Quotation) => {
     try {
       const fresh = await fetchQuotation(q.id);
-      maker.loadQuotation({
-        id: fresh.id,
-        items: fresh.items,
-        customer: fresh.customer,
-        overallDiscountPct: fresh.pricing.overallDiscountPct,
-        gstMode: fresh.pricing.gstMode,
-        gstRate: fresh.pricing.gstRate,
-        status: fresh.status,
-        notes: fresh.notes ?? null,
-      });
-      setQuotationNumber(fresh.quotationNumber);
-      setSearchParams({ id: fresh.id });
+      applyLoadedQuotation(fresh);
       setDrawerOpen(false);
       toast.success(`Loaded ${fresh.quotationNumber}`);
     } catch (e) {
@@ -415,7 +422,7 @@ const AdminQuotationMaker = () => {
             </span>
           </button>
         ) : (
-          <div className="h-[min(52vh,560px)] min-h-[340px] shrink-0 flex flex-col print:hidden border-t">
+          <div className="h-[min(42vh,480px)] min-h-[240px] max-md:min-h-[200px] shrink-0 flex flex-col print:hidden border-t">
             <div className="flex items-center justify-between gap-2 px-3 py-1.5 border-b bg-muted/30 shrink-0">
               <span className="text-sm font-semibold">Find &amp; add products</span>
               <Button
