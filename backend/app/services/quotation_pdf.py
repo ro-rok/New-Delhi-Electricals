@@ -4,22 +4,66 @@ from __future__ import annotations
 
 from datetime import datetime
 from io import BytesIO
-from typing import Any, Dict, List
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 
 from fpdf import FPDF
 
+APP_DIR = Path(__file__).resolve().parent.parent
+SHOP_FRONT_IMAGE = APP_DIR / "assets" / "shop_front.jpg"
+# Fallback if only frontend asset exists (local dev monorepo)
+SHOP_FRONT_IMAGE_FALLBACK = (
+    APP_DIR.parent.parent / "frontend" / "src" / "assets" / "new delhi elec front.jpg"
+)
 
 COMPANY_NAME = "New Delhi Electricals"
 COMPANY_TAGLINE = "Electrical Products & Solutions"
+SHOP_IMAGE_WIDTH_MM = 72
+SHOP_IMAGE_MAX_HEIGHT_MM = 48
+SHOP_IMAGE_RIGHT_INSET_MM = 2
+SHOP_IMAGE_TOP_MM = 3
+
+
+def _shop_image_path() -> Optional[Path]:
+    if SHOP_FRONT_IMAGE.is_file():
+        return SHOP_FRONT_IMAGE
+    if SHOP_FRONT_IMAGE_FALLBACK.is_file():
+        return SHOP_FRONT_IMAGE_FALLBACK
+    return None
 
 
 class QuotationPDF(FPDF):
     def header(self):
+        page_w = self.w - self.l_margin - self.r_margin
+        header_top = self.t_margin
+        text_block_w = page_w
+        content_bottom = header_top
+
+        img_path = _shop_image_path()
+        if img_path and self.page_no() == 1:
+            img_w = SHOP_IMAGE_WIDTH_MM
+            img_h = SHOP_IMAGE_MAX_HEIGHT_MM
+            img_x = self.w - img_w - SHOP_IMAGE_RIGHT_INSET_MM
+            img_y = SHOP_IMAGE_TOP_MM
+            text_block_w = page_w - img_w - 8
+            self.image(
+                str(img_path),
+                x=img_x,
+                y=img_y,
+                w=img_w,
+                h=img_h,
+                keep_aspect_ratio=True,
+            )
+            content_bottom = max(content_bottom, img_y + img_h)
+
+        self.set_xy(self.l_margin, header_top)
         self.set_font("Helvetica", "B", 16)
-        self.cell(0, 10, COMPANY_NAME, ln=True, align="C")
+        self.cell(text_block_w, 10, COMPANY_NAME, ln=True, align="L")
+        self.set_x(self.l_margin)
         self.set_font("Helvetica", "", 10)
-        self.cell(0, 6, COMPANY_TAGLINE, ln=True, align="C")
-        self.ln(4)
+        self.cell(text_block_w, 6, COMPANY_TAGLINE, ln=True, align="L")
+        content_bottom = max(content_bottom, self.get_y())
+        self.set_y(content_bottom + 3)
 
 
 def _safe_text(text: str, max_len: int = 80) -> str:

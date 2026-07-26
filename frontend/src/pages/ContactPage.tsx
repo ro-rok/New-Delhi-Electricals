@@ -200,8 +200,8 @@ const ContactPageContent = () => {
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
                       <p className="text-sm text-muted-foreground">
-                        <a href="mailto:contact@newdelhielectricals.com" className="hover:text-primary transition-colors">
-                          contact@newdelhielectricals.com
+                        <a href="mailto:newdelhielectricals30@gmail.com" className="hover:text-primary transition-colors">
+                          newdelhielectricals30@gmail.com
                         </a>
                       </p>
                     </div>
