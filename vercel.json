@@ -1,8 +1,26 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/category/switches", "destination": "/category/switches-sockets", "permanent": true },
+    { "source": "/category/power-sockets", "destination": "/category/switches-sockets", "permanent": true },
+    { "source": "/category/fan-controls", "destination": "/category/switches-sockets", "permanent": true },
+    { "source": "/category/dimmers", "destination": "/category/switches-sockets", "permanent": true },
+    { "source": "/category/data-sockets", "destination": "/category/switches-sockets", "permanent": true },
+    { "source": "/category/accessories", "destination": "/category/switches-sockets", "permanent": true },
+    { "source": "/category/hospitality", "destination": "/category/switches-sockets", "permanent": true },
+    { "source": "/category/wires-%26-cables", "destination": "/category/wires-cables", "permanent": true },
+    { "source": "/category/water-heaters", "destination": "/category/geysers", "permanent": true },
+    { "source": "/product/:brand/:slug", "destination": "/:brand/:slug", "permanent": true },
+    { "source": "/product/:brand/:family/:slug", "destination": "/:brand/:slug", "permanent": true }
+  ],
   "rewrites": [
+    { "source": "/admin/:path*", "destination": "/index.html" }
+  ],
+  "headers": [
     {
-      "source": "/((?!api|public|assets|_next|static).*)",
-      "destination": "/index.html"
+      "source": "/admin/:path*",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }]
     }
   ]
 }

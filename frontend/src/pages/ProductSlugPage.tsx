@@ -85,7 +85,7 @@ const ProductSlugPage = () => {
   useEffect(() => {
     if (product) {
       addToRecentlyViewed(product.id);
-      trackProductView(product.id);
+      trackProductView(product.id, product.name, product.brand, product.category);
     }
   }, [product, addToRecentlyViewed, trackProductView]);
 
@@ -318,11 +318,20 @@ const ProductSlugPage = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">
-      <SEOHead {...getProductSEO(product.name, product.description || '', product.images?.[0])} />
+      <SEOHead {...getProductSEO(product.name, product.description || '', product.images?.[0], product.brand, product.category, product.sku, getProductUrl(product))} />
       <Header />
       <div className="h-16" /> {/* Spacer for fixed header */}
 
       <main>
+        <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 sm:px-6 pt-24 text-sm text-gray-600 dark:text-gray-400">
+          <ol className="flex flex-wrap items-center gap-2">
+            <li><Link to="/">Home</Link></li>
+            <li aria-hidden="true">/</li>
+            <li><Link to={`/brand/${product.brandSlug || product.brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>{product.brand}</Link></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page">{product.name}</li>
+          </ol>
+        </nav>
         {/* Hero Section with left image and right content */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-20 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 md:gap-12 lg:gap-16 items-center">
           <div className="space-y-3">
@@ -807,4 +816,3 @@ const ProductSlugPage = () => {
 };
 
 export default ProductSlugPage;
-

@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://newdelhielectricals.com/sitemap.xml
+Sitemap: https://www.newdelhielectricals.com/sitemap.xml
 
 # Disallow admin and API routes
 Disallow: /admin

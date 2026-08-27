@@ -11,6 +11,9 @@ export interface SEOMetadata {
   url?: string;
   type?: 'website' | 'product' | 'article';
   twitterCard?: 'summary' | 'summary_large_image';
+  robots?: string;
+  canonicalPath?: string;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 /**
@@ -79,28 +82,32 @@ export const PAGE_SEO: Record<string, SEOMetadata> = {
     title: "Shopping Cart - New Delhi Electricals",
     description: "Review your selected items and proceed to checkout. Your cart for electrical components and supplies.",
     keywords: ["cart", "shopping cart", "checkout"],
-    type: "website"
+    type: "website",
+    robots: "noindex, follow"
   },
   
   shortlist: {
     title: "Shortlist - Saved Products | New Delhi Electricals",
     description: "View your shortlisted products. Save items for later and compare electrical components.",
     keywords: ["shortlist", "saved products", "wishlist"],
-    type: "website"
+    type: "website",
+    robots: "noindex, follow"
   },
   
   compare: {
     title: "Compare Products - New Delhi Electricals",
     description: "Compare electrical products side by side. View specifications, features, and pricing to make informed decisions.",
     keywords: ["compare", "product comparison", "specifications"],
-    type: "website"
+    type: "website",
+    robots: "noindex, follow"
   },
   
   search: {
     title: "Search Results - New Delhi Electricals",
     description: "Search results for electrical components, switches, wires, and more. Find the products you need.",
     keywords: ["search", "find products", "electrical search"],
-    type: "website"
+    type: "website",
+    robots: "noindex, follow"
   }
 };
 
@@ -146,17 +153,39 @@ function getAbsoluteImageUrl(imageUrl?: string): string | undefined {
 /**
  * Generate dynamic SEO metadata for product pages
  */
-export function getProductSEO(productName: string, description: string, imageUrl?: string): SEOMetadata {
+export function getProductSEO(productName: string, description: string, imageUrl?: string, brandName?: string, categoryName?: string, sku?: string, canonicalPath?: string): SEOMetadata {
   // Create a compelling description if none provided
   const defaultDescription = `Buy ${productName} at best prices from New Delhi Electricals. Premium quality electrical products with warranty. Shop online or visit our store in South Delhi.`;
   const finalDescription = description || defaultDescription;
   
   return {
-    title: `${productName} - Buy Online at Best Price | New Delhi Electricals`,
+    title: `${productName} | ${brandName ? `${brandName} Dealer in Delhi` : 'New Delhi Electricals'}`,
     description: finalDescription.length > 160 ? `${finalDescription.substring(0, 157)}...` : finalDescription,
     type: "product",
     image: getAbsoluteImageUrl(imageUrl),
-    twitterCard: imageUrl ? "summary_large_image" : "summary"
+    twitterCard: imageUrl ? "summary_large_image" : "summary",
+    canonicalPath,
+    structuredData: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: productName,
+        description: finalDescription,
+        ...(imageUrl ? { image: [getAbsoluteImageUrl(imageUrl)] } : {}),
+        ...(sku ? { sku } : {}),
+        ...(brandName ? { brand: { '@type': 'Brand', name: brandName } } : {}),
+        ...(categoryName ? { category: categoryName } : {}),
+      },
+      ...(canonicalPath && brandName ? [{
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${getSiteUrl()}/` },
+          { '@type': 'ListItem', position: 2, name: brandName, item: `${getSiteUrl()}/brand/${brandName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}` },
+          { '@type': 'ListItem', position: 3, name: productName, item: `${getSiteUrl()}${canonicalPath}` },
+        ],
+      }] : []),
+    ],
   };
 }
 
@@ -168,7 +197,17 @@ export function getCategorySEO(categoryName: string, productCount?: number): SEO
   return {
     title: `${categoryName}${count} - New Delhi Electricals`,
     description: `Browse ${categoryName.toLowerCase()} products at New Delhi Electricals. Quality electrical components with competitive pricing.`,
-    type: "website"
+    type: "website",
+    canonicalPath: `/category/${categoryName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${getSiteUrl()}/` },
+        { '@type': 'ListItem', position: 2, name: 'Categories', item: `${getSiteUrl()}/categories` },
+        { '@type': 'ListItem', position: 3, name: categoryName },
+      ],
+    },
   };
 }
 
@@ -180,7 +219,17 @@ export function getBrandSEO(brandName: string, productCount?: number): SEOMetada
   return {
     title: `${brandName}${count} - New Delhi Electricals`,
     description: `Shop ${brandName} electrical products at New Delhi Electricals. Authorized dealer with genuine products and warranty.`,
-    type: "website"
+    type: "website",
+    canonicalPath: `/brand/${brandName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${getSiteUrl()}/` },
+        { '@type': 'ListItem', position: 2, name: 'Brands', item: `${getSiteUrl()}/brands` },
+        { '@type': 'ListItem', position: 3, name: brandName },
+      ],
+    },
   };
 }
 
@@ -192,6 +241,8 @@ export function getSearchSEO(query: string, resultCount?: number): SEOMetadata {
   return {
     title: `Search: ${query}${count} - New Delhi Electricals`,
     description: `Search results for "${query}". Find electrical components, switches, wires, and more at New Delhi Electricals.`,
-    type: "website"
+    type: "website",
+    robots: "noindex, follow",
+    canonicalPath: "/search"
   };
 }

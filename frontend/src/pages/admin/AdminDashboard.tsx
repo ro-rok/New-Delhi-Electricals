@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import { 
   Package, FolderOpen, Tags, MessageSquare, TrendingUp,
-  ArrowUpRight, Clock, FileUp
+  ArrowUpRight, Clock, FileUp, Eye, MousePointer, MessageCircle, Search
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
 import { getProducts, getCategories, getBrands } from '@/api/products';
+import { getTrackingSummary, TrackingSummary } from '@/api/tracking';
 import { motion } from 'framer-motion';
 
 const AdminDashboard = () => {
@@ -14,19 +15,22 @@ const AdminDashboard = () => {
   const [categoriesCount, setCategoriesCount] = useState(0);
   const [brandsCount, setBrandsCount] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [tracking, setTracking] = useState<TrackingSummary | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const [productsResponse, catsList, brandsList] = await Promise.all([
+        const [productsResponse, catsList, brandsList, trackingData] = await Promise.all([
           getProducts({ pageSize: 1 }),
           getCategories(),
           getBrands(),
+          getTrackingSummary('7d'),
         ]);
         setProductsCount(productsResponse.total);
         setCategoriesCount(catsList.length);
         setBrandsCount(brandsList.length);
+        setTracking(trackingData);
       } catch (error) {
               } finally {
         setLoading(false);
@@ -153,20 +157,70 @@ const AdminDashboard = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-3 gap-6 text-center">
-            <div>
-              <p className="text-3xl font-semibold">284</p>
+          <div className="grid grid-cols-4 gap-6 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+            >
+              <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center mx-auto mb-2">
+                <Eye className="h-5 w-5 text-blue-600" />
+              </div>
+              <p className="text-3xl font-semibold">{tracking?.pageViews ?? 0}</p>
               <p className="text-sm text-muted-foreground">Page Views</p>
-            </div>
-            <div>
-              <p className="text-3xl font-semibold">47</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center mx-auto mb-2">
+                <MousePointer className="h-5 w-5 text-purple-600" />
+              </div>
+              <p className="text-3xl font-semibold">{tracking?.productViews ?? 0}</p>
               <p className="text-sm text-muted-foreground">Product Views</p>
-            </div>
-            <div>
-              <p className="text-3xl font-semibold">12</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center mx-auto mb-2">
+                <MessageCircle className="h-5 w-5 text-emerald-600" />
+              </div>
+              <p className="text-3xl font-semibold">{tracking?.whatsappClicks ?? 0}</p>
               <p className="text-sm text-muted-foreground">WhatsApp Clicks</p>
-            </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center mx-auto mb-2">
+                <Search className="h-5 w-5 text-amber-600" />
+              </div>
+              <p className="text-3xl font-semibold">{tracking?.searches ?? 0}</p>
+              <p className="text-sm text-muted-foreground">Searches</p>
+            </motion.div>
           </div>
+
+          {/* Top Viewed Products */}
+          {tracking?.topProducts && tracking.topProducts.length > 0 && (
+            <div className="mt-6 pt-6 border-t border-border">
+              <h4 className="text-sm font-medium mb-3">Most Viewed Products</h4>
+              <div className="space-y-2">
+                {tracking.topProducts.slice(0, 5).map((product, idx) => (
+                  <div key={product.productId} className="flex items-center justify-between py-1.5">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs text-muted-foreground w-5">#{idx + 1}</span>
+                      <span className="text-sm">{product.name}</span>
+                    </div>
+                    <span className="text-sm font-medium">{product.views} views</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </CardContent>
       </Card>
     </div>

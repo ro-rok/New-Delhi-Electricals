@@ -19,3 +19,6 @@ backend/public/catalog_images
 /backend/public/uploads/catalogs
 CV_POINTS.md
 .kiro/*
+frontend/audit-baseline/
+frontend/audit-after/
+frontend/*.tsbuildinfo

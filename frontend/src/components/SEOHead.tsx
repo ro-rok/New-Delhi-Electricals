@@ -6,6 +6,9 @@ export interface SEOHeadProps {
   image?: string;
   url?: string;
   type?: 'website' | 'product' | 'article';
+  robots?: string;
+  canonicalPath?: string;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 /**
@@ -17,7 +20,10 @@ export function SEOHead({
   description, 
   image, 
   url, 
-  type = 'website' 
+  type = 'website',
+  robots = 'index, follow',
+  canonicalPath,
+  structuredData,
 }: SEOHeadProps): null {
   useEffect(() => {
     // Set document title
@@ -39,6 +45,7 @@ export function SEOHead({
 
     // Set description meta tag
     setMetaTag('description', description, true);
+    setMetaTag('robots', robots, true);
 
     // Set Open Graph tags
     setMetaTag('og:title', title);
@@ -55,7 +62,9 @@ export function SEOHead({
     }
     
     // Set current URL if not provided
-    const currentUrl = url || window.location.href;
+    const siteUrl = 'https://www.newdelhielectricals.com';
+    const currentPath = canonicalPath || (url ? new URL(url, siteUrl).pathname : window.location.pathname);
+    const currentUrl = new URL(currentPath || '/', siteUrl).toString();
     setMetaTag('og:url', currentUrl);
     
     // Set canonical URL
@@ -74,15 +83,28 @@ export function SEOHead({
     setMetaTag('twitter:site', '@newdelhielec', true);
     
     if (image) {
-      setMetaTag('twitter:image', image, true);
+      const absoluteImage = new URL(image, siteUrl).toString();
+      setMetaTag('og:image', absoluteImage);
+      setMetaTag('og:image:secure_url', absoluteImage);
+      setMetaTag('twitter:image', absoluteImage, true);
       setMetaTag('twitter:image:alt', title, true);
     }
+
+    document.querySelectorAll('script[data-seo-schema]').forEach((element) => element.remove());
+    const schemas = structuredData ? (Array.isArray(structuredData) ? structuredData : [structuredData]) : [];
+    schemas.forEach((schema) => {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.dataset.seoSchema = 'true';
+      script.text = JSON.stringify(schema).replace(/</g, '\\u003c');
+      document.head.appendChild(script);
+    });
 
     // Cleanup function (optional - meta tags typically persist across page changes in SPAs)
     return () => {
       // We don't remove meta tags on unmount as they should be replaced by the next page
     };
-  }, [title, description, image, url, type]);
+  }, [title, description, image, url, type, robots, canonicalPath, structuredData]);
 
   // This component doesn't render anything
   return null;

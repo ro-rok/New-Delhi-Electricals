@@ -22,6 +22,7 @@ import { getProductUrl } from '@/lib/utils';
 import { toast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 import { SEOHead } from '@/components/SEOHead';
+import { trackConversion } from '@/lib/conversionTracking';
 import { PAGE_SEO } from '@/lib/seo';
 import { ProductImagePlaceholder } from '@/components/ui/ProductImagePlaceholder';
 
@@ -52,6 +53,7 @@ const CartPage = () => {
 
   const handleEnquirySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    trackConversion('quote_enquiry_start', { cta_location: 'cart_form', item_count: cart.length });
     
     // Validate required fields
     if (!formData.name || !formData.businessName || !formData.whatsappNumber) {
@@ -102,7 +104,8 @@ const CartPage = () => {
 
     // Open WhatsApp with pre-filled message
     const whatsappUrl = `https://wa.me/919654102758?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    trackConversion('quote_enquiry_submit', { cta_location: 'cart_form', item_count: cart.length });
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 
     // Clear cart and form
     clearCart();

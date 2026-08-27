@@ -4,12 +4,14 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { AppProvider } from "@/contexts/AppContext";
 import { PageLoader } from "@/components/ui/PageLoader";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { OfflineBanner } from "@/components/OfflineBanner";
+import { trackConversion } from "@/lib/conversionTracking";
+import { trackPageView } from "@/api/tracking";
 
 // Eagerly loaded components (critical path)
 import Home from "./pages/Home";
@@ -66,6 +68,35 @@ const GlobalShortcuts = () => {
   return null;
 };
 
+const RouteTracker = () => {
+  const location = useLocation();
+  useEffect(() => {
+    trackPageView(location.pathname + location.search);
+  }, [location.pathname, location.search]);
+  return null;
+};
+
+const GlobalConversionTracking = () => {
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      const target = event.target instanceof Element ? event.target.closest<HTMLElement>('a,button') : null;
+      if (!target) return;
+      const href = target instanceof HTMLAnchorElement ? target.href : '';
+      const label = (target.getAttribute('aria-label') || target.textContent || '').trim().slice(0, 80);
+      if (href.includes('wa.me') || /whats\s*app/i.test(label)) {
+        const properties = { cta_location: target.dataset.ctaLocation || label || 'unknown' };
+        trackConversion('whatsapp_click', properties);
+        trackConversion('whatsapp_enquiry_start', properties);
+      } else if (href.startsWith('tel:')) {
+        trackConversion('phone_click', { cta_location: target.dataset.ctaLocation || label || 'unknown' });
+      }
+    };
+    document.addEventListener('click', handleClick, true);
+    return () => document.removeEventListener('click', handleClick, true);
+  }, []);
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
@@ -82,6 +113,8 @@ const App = () => (
             }}
           >
             <GlobalShortcuts />
+            <RouteTracker />
+            <GlobalConversionTracking />
             <ErrorBoundary>
               <Suspense fallback={<PageLoader />}>
                 <Routes>

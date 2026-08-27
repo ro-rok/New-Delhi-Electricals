@@ -29,9 +29,9 @@ interface AppContextType {
   maxItems: number;
   
   trackPageView: (page: string) => void;
-  trackProductView: (id: string) => void;
+  trackProductView: (id: string, productName?: string, brand?: string, category?: string) => void;
   trackSearch: (query: string) => void;
-  trackWhatsAppClick: () => void;
+  trackWhatsAppClick: (productId?: string, productName?: string) => void;
   trackCategoryView: (category: string) => void;
   
   cart: CartItem[];

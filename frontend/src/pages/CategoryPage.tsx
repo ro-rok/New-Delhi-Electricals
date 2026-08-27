@@ -47,6 +47,7 @@ import {
   SubSection,
 } from '@/config/shoppingCategories';
 import { fetchProductsForShoppingCategory } from '@/lib/categoryUtils';
+import { getCategorySEO } from '@/lib/seo';
 
 type SortOption = 'name-asc' | 'name-desc' | 'price-asc' | 'price-desc';
 
@@ -846,10 +847,7 @@ const CategoryPage = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">
-      <SEOHead
-        title={`${shoppingCategory.displayName} - New Delhi Electricals`}
-        description={shoppingCategory.description}
-      />
+      <SEOHead {...getCategorySEO(shoppingCategory.displayName, filteredProducts.length)} canonicalPath={`/category/${shoppingCategory.slug}`} />
       <Header />
       <main className="pt-24 pb-16">
         <div className="max-w-[1600px] mx-auto px-4 md:px-6">

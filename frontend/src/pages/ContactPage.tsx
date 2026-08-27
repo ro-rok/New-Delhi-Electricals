@@ -12,6 +12,7 @@ import { LoadingSpinner } from "@/components/LoadingSpinner";
 import { apiPost } from "@/lib/api";
 import { z } from "zod";
 import Footer from "@/components/Footer";
+import { trackConversion } from "@/lib/conversionTracking";
 
 // Contact form validation schema
 const contactFormSchema = z.object({
@@ -76,6 +77,7 @@ const ContactPageContent = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    trackConversion('quote_enquiry_start', { cta_location: 'contact_form' });
     
     // Clear previous messages
     setSubmitSuccess(false);
@@ -105,6 +107,8 @@ const ContactPageContent = () => {
       const response = await apiPost("/api/inquiries", formData);
 
       if (response.success) {
+        trackConversion('contact_form_submit', { cta_location: 'contact_form' });
+        trackConversion('quote_enquiry_submit', { cta_location: 'contact_form' });
         // Show success message
         setSubmitSuccess(true);
         setSubmitError(null);
