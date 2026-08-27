@@ -422,7 +422,7 @@ async def create_product(
 async def get_categories(
     db: AsyncIOMotorDatabase = Depends(get_db_dep),
 ) -> Any:
-    """Get all unique categories from products with product counts"""
+    """Get all unique categories from products with product counts, plus custom categories"""
     pipeline = [
         {
             "$group": {
@@ -442,9 +442,12 @@ async def get_categories(
         }
     ]
     
+    # Get product-derived categories
+    product_categories = set()
     categories = []
     async for doc in db.products.aggregate(pipeline):
         slug = doc["name"].lower().replace(" ", "-").replace("/", "-").replace("(", "").replace(")", "")
+        product_categories.add(doc["name"])
         categories.append({
             "id": slug,
             "name": doc["name"],
@@ -455,13 +458,30 @@ async def get_categories(
             "productCount": doc["productCount"]
         })
     
+    # Merge custom categories (from custom_categories collection)
+    async for doc in db.custom_categories.find().sort("name", 1):
+        name = doc["name"]
+        if name not in product_categories:
+            slug = doc.get("slug", name.lower().replace(" ", "-"))
+            categories.append({
+                "id": slug,
+                "name": name,
+                "slug": slug,
+                "description": doc.get("description", f"{name} products"),
+                "icon": "Package",
+                "image": doc.get("image", f"/category-images/{slug}.jpg"),
+                "productCount": 0
+            })
+    
+    # Sort all by name
+    categories.sort(key=lambda c: c["name"])
     return categories
 
 @router.get("/brands", response_model=List[dict])
 async def get_brands(
     db: AsyncIOMotorDatabase = Depends(get_db_dep),
 ) -> Any:
-    """Get all unique brands from products with product counts"""
+    """Get all unique brands from products with product counts, plus custom brands"""
     pipeline = [
         {
             "$group": {
@@ -481,9 +501,12 @@ async def get_brands(
         }
     ]
     
+    # Get product-derived brands
+    product_brands = set()
     brands = []
     async for doc in db.products.aggregate(pipeline):
         slug = doc["name"].lower().replace(" ", "-").replace("/", "-").replace("(", "").replace(")", "")
+        product_brands.add(doc["name"])
         brands.append({
             "id": slug,
             "name": doc["name"],
@@ -494,7 +517,81 @@ async def get_brands(
             "productCount": doc["productCount"]
         })
     
+    # Merge custom brands (from custom_brands collection)
+    async for doc in db.custom_brands.find().sort("name", 1):
+        name = doc["name"]
+        if name not in product_brands:
+            slug = doc.get("slug", name.lower().replace(" ", "-"))
+            brands.append({
+                "id": slug,
+                "name": name,
+                "slug": slug,
+                "logo": doc.get("logo", f"/brands/{slug}.svg"),
+                "description": doc.get("description", f"{name} products"),
+                "featured": doc.get("featured", False),
+                "productCount": 0
+            })
+    
+    # Sort all by name
+    brands.sort(key=lambda b: b["name"])
     return brands
+
+
+@router.post("/categories", status_code=status.HTTP_201_CREATED)
+async def create_custom_category(
+    request: Request,
+    db: AsyncIOMotorDatabase = Depends(get_db_dep),
+    admin=Depends(get_current_admin),
+) -> Any:
+    """Create a custom category (persisted to MongoDB)"""
+    import json
+    body = json.loads(await request.body())
+    name = body.get("name", "").strip()
+    if not name:
+        raise HTTPException(status_code=400, detail="Category name is required")
+    # Check for duplicate
+    existing = await db.custom_categories.find_one({"name": name})
+    if existing:
+        raise HTTPException(status_code=409, detail="Category already exists")
+    slug = name.lower().replace(" ", "-").replace("/", "-").replace("(", "").replace(")", "")
+    doc = {
+        "name": name,
+        "slug": slug,
+        "description": body.get("description", f"{name} products"),
+        "image": body.get("image", ""),
+    }
+    res = await db.custom_categories.insert_one(doc)
+    doc["_id"] = str(res.inserted_id)
+    return {"id": doc["_id"], "name": name, "slug": slug, "productCount": 0}
+
+
+@router.post("/brands", status_code=status.HTTP_201_CREATED)
+async def create_custom_brand(
+    request: Request,
+    db: AsyncIOMotorDatabase = Depends(get_db_dep),
+    admin=Depends(get_current_admin),
+) -> Any:
+    """Create a custom brand (persisted to MongoDB)"""
+    import json
+    body = json.loads(await request.body())
+    name = body.get("name", "").strip()
+    if not name:
+        raise HTTPException(status_code=400, detail="Brand name is required")
+    # Check for duplicate
+    existing = await db.custom_brands.find_one({"name": name})
+    if existing:
+        raise HTTPException(status_code=409, detail="Brand already exists")
+    slug = name.lower().replace(" ", "-").replace("/", "-").replace("(", "").replace(")", "")
+    doc = {
+        "name": name,
+        "slug": slug,
+        "description": body.get("description", f"{name} products"),
+        "logo": body.get("logo", ""),
+        "featured": body.get("featured", False),
+    }
+    res = await db.custom_brands.insert_one(doc)
+    doc["_id"] = str(res.inserted_id)
+    return {"id": doc["_id"], "name": name, "slug": slug, "productCount": 0}
 
 @router.get("/slug/{slug}", response_model=ProductInDB)
 async def get_product_by_slug(slug: str, db: AsyncIOMotorDatabase = Depends(get_db_dep)) -> Any:

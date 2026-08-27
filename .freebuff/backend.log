@@ -1,0 +1,11 @@
+INFO:     Started server process [21148]
+INFO:     Waiting for application startup.
+2026-08-26 12:26:00,177 - app.keepalive_service - INFO - Keep-alive service started
+2026-08-26 12:26:00,177 - app.keepalive_service - INFO - Starting keep-alive service
+2026-08-26 12:26:00,177 - app.keepalive_service - INFO - Backend URL: http://localhost:0
+2026-08-26 12:26:00,177 - app.keepalive_service - INFO - Ping interval: 840 seconds (14.0 minutes)
+INFO:     Application startup complete.
+ERROR:    [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+INFO:     Waiting for application shutdown.
+2026-08-26 12:26:00,177 - app.keepalive_service - INFO - Keep-alive service stopped
+INFO:     Application shutdown complete.

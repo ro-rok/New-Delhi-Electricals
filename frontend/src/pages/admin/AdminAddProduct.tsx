@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Save, Plus, X } from 'lucide-react';
+import { ArrowLeft, Save, Plus, X, PlusCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -15,13 +15,14 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
 import { toast } from 'sonner';
-import { getBrands } from '@/api/products';
-import { Brand } from '@/types/product';
+import { getBrands, getCategories, createCategory, createBrand } from '@/api/products';
+import { Brand, Category } from '@/types/product';
 
 const AdminAddProduct = () => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [brands, setBrands] = useState<Brand[]>([]);
+    const [categories, setCategories] = useState<Category[]>([]);
     const [brandsLoading, setBrandsLoading] = useState(true);
 
     // Form State
@@ -61,6 +62,9 @@ const AdminAddProduct = () => {
         curve: '',
         poles: '',
         sensitivity_ma: '',
+        // Geyser fields
+        capacity_liters: '',
+        wattage: '',
     });
 
     // Keywords State
@@ -79,8 +83,9 @@ const AdminAddProduct = () => {
     useEffect(() => {
         const fetchBrands = async () => {
             try {
-                const brandsList = await getBrands();
+                const [brandsList, catsList] = await Promise.all([getBrands(), getCategories()]);
                 setBrands(brandsList);
+                setCategories(catsList);
                 // Set default brand if available
                 if (brandsList.length > 0) {
                     const lauritzKnudsen = brandsList.find(b => b.name === 'Lauritz Knudsen');
@@ -189,46 +194,53 @@ const AdminAddProduct = () => {
             if (specs.poles) specsObj.poles = parseInt(specs.poles);
             if (specs.mw) specsObj.mw = parseFloat(specs.mw);
             if (specs.sensitivity_ma) specsObj.sensitivity_ma = parseFloat(specs.sensitivity_ma);
+        } else if (formData.category.toLowerCase() === 'geyser') {
+            // Geyser specs
+            if (specs.capacity_liters) specsObj.capacity_liters = parseFloat(specs.capacity_liters);
+            if (specs.wattage) specsObj.wattage = parseFloat(specs.wattage);
         }
 
-        // Construct the final JSON object matching Lauritz Knudsen schema
+        // Construct the final JSON object matching ProductCreate schema (flat format)
         const finalProduct = {
             sku: formData.sku,
             name: formData.name,
-            product_family: formData.product_family,
+            brand: formData.brand,
             category: formData.category,
             subcategory: formData.subcategory,
-            brand: formData.brand,
+            series: formData.product_family || undefined,
+            list_price: Math.round(parseFloat(formData.mrp) || 0),
+            currency: 'INR',
+            images: imageUrl ? [imageUrl] : [],
             specs: specsObj,
-            variant: variants,
-            pricing: {
-                mrp: parseFloat(formData.mrp),
-                discount: null,
-                selling_price: null,
-                std_pack: formData.std_pack,
-            },
-            media: {
-                images: imageUrl ? [{ url: imageUrl, label: imageLabel }] : [],
-                documents: [],
-            },
-            seo: {
-                slug: formData.slug || formData.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, ''),
-                keywords: keywords,
-                meta_description: formData.meta_description,
-            },
+            description: formData.meta_description || undefined,
+            slug: formData.slug || formData.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, ''),
             status: {
                 is_active: formData.is_active,
                 is_featured: formData.is_featured,
-            }
+            },
+            catalog_source: {
+                product_family: formData.product_family || undefined,
+                pricing: {
+                    std_pack: formData.std_pack || undefined,
+                },
+                seo: {
+                    slug: formData.slug || undefined,
+                    keywords: keywords,
+                    meta_description: formData.meta_description || undefined,
+                },
+                variant: variants.length > 0 ? variants : undefined,
+            },
         };
 
         
         try {
-            const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000';
+            const API_BASE = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/+$/, '');
+            const token = localStorage.getItem('admin_token');
             const response = await fetch(`${API_BASE}/api/products`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    ...(token ? { 'Authorization': `Bearer ${token}` } : {}),
                 },
                 body: JSON.stringify(finalProduct),
             });
@@ -294,7 +306,23 @@ const AdminAddProduct = () => {
                             ) : (
                                 <Select
                                     value={formData.brand}
-                                    onValueChange={(val) => setFormData(prev => ({ ...prev, brand: val }))}
+                                    onValueChange={async (val) => {
+                                        if (val === '_create_new') {
+                                            const name = prompt('Enter new brand name:');
+                                            if (name && name.trim()) {
+                                                try {
+                                                    const newBrand = await createBrand(name.trim());
+                                                    setBrands(prev => [...prev, newBrand]);
+                                                    setFormData(prev => ({ ...prev, brand: newBrand.name }));
+                                                    toast.success('Brand created!');
+                                                } catch (err: any) {
+                                                    toast.error(err.message || 'Failed to create brand');
+                                                }
+                                            }
+                                        } else {
+                                            setFormData(prev => ({ ...prev, brand: val }));
+                                        }
+                                    }}
                                     required
                                 >
                                     <SelectTrigger>
@@ -306,6 +334,9 @@ const AdminAddProduct = () => {
                                                 {brand.name}
                                             </SelectItem>
                                         ))}
+                                        <SelectItem value="_create_new" className="text-primary font-medium">
+                                            <span className="flex items-center gap-2"><PlusCircle className="h-3 w-3" /> Add New Brand</span>
+                                        </SelectItem>
                                     </SelectContent>
                                 </Select>
                             )}
@@ -324,26 +355,68 @@ const AdminAddProduct = () => {
                             <Label htmlFor="category">Category</Label>
                             <Select
                                 value={formData.category}
-                                onValueChange={(val) => setFormData(prev => ({ ...prev, category: val }))}
+                                onValueChange={async (val) => {
+                                    if (val === '_create_new') {
+                                        const name = prompt('Enter new category name:');
+                                        if (name && name.trim()) {
+                                            try {
+                                                const newCat = await createCategory(name.trim());
+                                                setCategories(prev => [...prev, newCat]);
+                                                setFormData(prev => ({ ...prev, category: newCat.name }));
+                                                toast.success('Category created!');
+                                            } catch (err: any) {
+                                                toast.error(err.message || 'Failed to create category');
+                                            }
+                                        }
+                                    } else {
+                                        setFormData(prev => ({ ...prev, category: val }));
+                                    }
+                                }}
                             >
                                 <SelectTrigger>
                                     <SelectValue placeholder="Select Category" />
                                 </SelectTrigger>
                                 <SelectContent>
-                                    <SelectItem value="Switches">Switches</SelectItem>
-                                    <SelectItem value="Circuit Protection">Circuit Protection (MCBs)</SelectItem>
+                                    {categories.length > 0 ? (
+                                        categories.map(cat => (
+                                            <SelectItem key={cat.id} value={cat.name}>{cat.name}</SelectItem>
+                                        ))
+                                    ) : (
+                                        <>
+                                            <SelectItem value="Switches">Switches</SelectItem>
+                                            <SelectItem value="Circuit Protection">Circuit Protection (MCBs)</SelectItem>
+                                        </>
+                                    )}
+                                    <SelectItem value="_create_new" className="text-primary font-medium">
+                                        <span className="flex items-center gap-2"><PlusCircle className="h-3 w-3" /> Add New Category</span>
+                                    </SelectItem>
                                 </SelectContent>
                             </Select>
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="subcategory">Subcategory</Label>
-                            <Input
-                                id="subcategory"
-                                name="subcategory"
-                                value={formData.subcategory}
-                                onChange={handleInputChange}
-                                placeholder="e.g. Wi-fi Switch"
-                            />
+                            {formData.category.toLowerCase() === 'geyser' ? (
+                                <Select
+                                    value={formData.subcategory}
+                                    onValueChange={(val) => setFormData(prev => ({ ...prev, subcategory: val }))}
+                                >
+                                    <SelectTrigger>
+                                        <SelectValue placeholder="Select type" />
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                        <SelectItem value="Instant">Instant</SelectItem>
+                                        <SelectItem value="Storage">Storage</SelectItem>
+                                    </SelectContent>
+                                </Select>
+                            ) : (
+                                <Input
+                                    id="subcategory"
+                                    name="subcategory"
+                                    value={formData.subcategory}
+                                    onChange={handleInputChange}
+                                    placeholder="e.g. Wi-fi Switch"
+                                />
+                            )}
                         </div>
                     </CardContent>
                 </Card>
@@ -354,6 +427,33 @@ const AdminAddProduct = () => {
                         <CardTitle>Specifications</CardTitle>
                     </CardHeader>
                     <CardContent className="grid md:grid-cols-2 gap-6">
+                        {/* Geyser-specific fields */}
+                        {formData.category.toLowerCase() === 'geyser' && (
+                            <>
+                                <div className="space-y-2">
+                                    <Label htmlFor="capacity_liters">Capacity (Liters)</Label>
+                                    <Input
+                                        id="capacity_liters"
+                                        name="capacity_liters"
+                                        type="number"
+                                        value={specs.capacity_liters}
+                                        onChange={handleSpecChange}
+                                        placeholder="e.g. 15, 25, 50"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="wattage">Wattage (W)</Label>
+                                    <Input
+                                        id="wattage"
+                                        name="wattage"
+                                        type="number"
+                                        value={specs.wattage}
+                                        onChange={handleSpecChange}
+                                        placeholder="e.g. 3000, 4500"
+                                    />
+                                </div>
+                            </>
+                        )}
                         <div className="space-y-2">
                             <Label htmlFor="ampere">Ampere (A)</Label>
                             <Input

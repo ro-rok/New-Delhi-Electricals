@@ -1,4 +1,5 @@
 import { useEffect, Suspense, lazy } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -42,6 +43,7 @@ const AdminSettings = lazy(() => import("./pages/admin/AdminSettings"));
 const AdminAddProduct = lazy(() => import("./pages/admin/AdminAddProduct"));
 const AdminQuotationMaker = lazy(() => import("./pages/admin/AdminQuotationMaker"));
 const AdminQuotationsList = lazy(() => import("./pages/admin/AdminQuotationsList"));
+const AdminAnalytics = lazy(() => import("./pages/admin/AdminAnalytics"));
 
 const queryClient = new QueryClient();
 
@@ -71,6 +73,7 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
+          <Analytics />
           <OfflineBanner />
           <BrowserRouter
             future={{
@@ -111,6 +114,7 @@ const App = () => (
                     <Route path="inquiries" element={<ErrorBoundary><AdminInquiries /></ErrorBoundary>} />
                     <Route path="quotation-maker" element={<ErrorBoundary><AdminQuotationMaker /></ErrorBoundary>} />
                     <Route path="quotations" element={<ErrorBoundary><AdminQuotationsList /></ErrorBoundary>} />
+                    <Route path="analytics" element={<ErrorBoundary><AdminAnalytics /></ErrorBoundary>} />
                     <Route path="logs" element={<ErrorBoundary><AdminLogs /></ErrorBoundary>} />
                     <Route path="settings" element={<ErrorBoundary><AdminSettings /></ErrorBoundary>} />
                   </Route>

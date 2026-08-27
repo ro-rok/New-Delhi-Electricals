@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8f9fa"/>
+      <stop offset="100%" stop-color="#e9ecef"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg3)"/>
+  <!-- MCB unit 1 -->
+  <rect x="240" y="100" width="100" height="280" rx="8" fill="#dee2e6" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="260" y="130" width="60" height="120" rx="4" fill="#495057"/>
+  <rect x="280" y="270" width="20" height="80" rx="4" fill="#6c757d"/>
+  <circle cx="290" cy="160" r="8" fill="#fff" opacity="0.9"/>
+  <!-- MCB unit 2 -->
+  <rect x="360" y="100" width="100" height="280" rx="8" fill="#dee2e6" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="380" y="130" width="60" height="120" rx="4" fill="#212529"/>
+  <rect x="400" y="270" width="20" height="80" rx="4" fill="#6c757d"/>
+  <circle cx="410" cy="160" r="8" fill="#fff" opacity="0.9"/>
+  <!-- MCB unit 3 -->
+  <rect x="480" y="100" width="100" height="280" rx="8" fill="#dee2e6" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="500" y="130" width="60" height="120" rx="4" fill="#343a40"/>
+  <rect x="520" y="270" width="20" height="80" rx="4" fill="#6c757d"/>
+  <circle cx="530" cy="160" r="8" fill="#fff" opacity="0.9"/>
+  <!-- DIN rail -->
+  <rect x="220" y="400" width="380" height="12" rx="2" fill="#adb5bd"/>
+  <!-- Status indicators -->
+  <circle cx="290" cy="220" r="5" fill="#28a745"/>
+  <circle cx="410" cy="220" r="5" fill="#28a745"/>
+  <circle cx="530" cy="220" r="5" fill="#dc3545"/>
+  <text x="400" y="520" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="300" fill="#495057">Circuit Protection</text>
+</svg>

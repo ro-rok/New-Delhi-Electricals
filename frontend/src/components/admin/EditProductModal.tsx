@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { X, Save, Image as ImageIcon } from 'lucide-react';
+import { X, Save, Image as ImageIcon, PlusCircle } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -21,7 +21,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
 import { toast } from 'sonner';
-import { getProductById, updateProduct, getBrands, getCategories } from '@/api/products';
+import { getProductById, updateProduct, getBrands, getCategories, createCategory, createBrand } from '@/api/products';
 import { Product, Brand, Category } from '@/types/product';
 import ImageScraperModal from './ImageScraperModal';
 
@@ -82,6 +82,8 @@ const EditProductModal = ({
     curve: '',
     poles: '',
     sensitivity_ma: '',
+    capacity_liters: '',
+    wattage: '',
   });
 
   // Keywords State
@@ -159,6 +161,8 @@ const EditProductModal = ({
         curve: productSpecs.curve || '',
         poles: productSpecs.poles ? String(productSpecs.poles) : '',
         sensitivity_ma: productSpecs.sensitivity_ma ? String(productSpecs.sensitivity_ma) : '',
+        capacity_liters: productSpecs.capacity_liters ? String(productSpecs.capacity_liters) : '',
+        wattage: productSpecs.wattage ? String(productSpecs.wattage) : '',
       });
 
       // Populate images
@@ -269,6 +273,9 @@ const EditProductModal = ({
       if (specs.poles) specsObj.poles = parseInt(specs.poles);
       if (specs.mw) specsObj.mw = parseFloat(specs.mw);
       if (specs.sensitivity_ma) specsObj.sensitivity_ma = parseFloat(specs.sensitivity_ma);
+    } else if (formData.category.toLowerCase() === 'geyser') {
+      if (specs.capacity_liters) specsObj.capacity_liters = parseFloat(specs.capacity_liters);
+      if (specs.wattage) specsObj.wattage = parseFloat(specs.wattage);
     }
 
     // Prepare update payload matching ProductUpdate schema
@@ -344,7 +351,23 @@ const EditProductModal = ({
                     <Label htmlFor="brand">Brand</Label>
                     <Select
                       value={formData.brand}
-                      onValueChange={(val) => setFormData(prev => ({ ...prev, brand: val }))}
+                      onValueChange={async (val) => {
+                        if (val === '_create_new') {
+                          const name = prompt('Enter new brand name:');
+                          if (name && name.trim()) {
+                            try {
+                              const newBrand = await createBrand(name.trim());
+                              setBrands(prev => [...prev, newBrand]);
+                              setFormData(prev => ({ ...prev, brand: newBrand.name }));
+                              toast.success('Brand created!');
+                            } catch (err: any) {
+                              toast.error(err.message || 'Failed to create brand');
+                            }
+                          }
+                        } else {
+                          setFormData(prev => ({ ...prev, brand: val }));
+                        }
+                      }}
                       required
                     >
                       <SelectTrigger>
@@ -356,6 +379,9 @@ const EditProductModal = ({
                             {brand.name}
                           </SelectItem>
                         ))}
+                        <SelectItem value="_create_new" className="text-primary font-medium">
+                          <span className="flex items-center gap-2"><PlusCircle className="h-3 w-3" /> Add New Brand</span>
+                        </SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -372,7 +398,23 @@ const EditProductModal = ({
                     <Label htmlFor="category">Category</Label>
                     <Select
                       value={formData.category}
-                      onValueChange={(val) => setFormData(prev => ({ ...prev, category: val }))}
+                      onValueChange={async (val) => {
+                        if (val === '_create_new') {
+                          const name = prompt('Enter new category name:');
+                          if (name && name.trim()) {
+                            try {
+                              const newCat = await createCategory(name.trim());
+                              setCategories(prev => [...prev, newCat]);
+                              setFormData(prev => ({ ...prev, category: newCat.name }));
+                              toast.success('Category created!');
+                            } catch (err: any) {
+                              toast.error(err.message || 'Failed to create category');
+                            }
+                          }
+                        } else {
+                          setFormData(prev => ({ ...prev, category: val }));
+                        }
+                      }}
                     >
                       <SelectTrigger>
                         <SelectValue placeholder="Select Category" />
@@ -385,17 +427,35 @@ const EditProductModal = ({
                           .map(cat => (
                             <SelectItem key={cat.id} value={cat.name}>{cat.name}</SelectItem>
                           ))}
+                        <SelectItem value="_create_new" className="text-primary font-medium">
+                          <span className="flex items-center gap-2"><PlusCircle className="h-3 w-3" /> Add New Category</span>
+                        </SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="subcategory">Subcategory</Label>
-                    <Input
-                      id="subcategory"
-                      name="subcategory"
-                      value={formData.subcategory}
-                      onChange={handleInputChange}
-                    />
+                    {formData.category.toLowerCase() === 'geyser' ? (
+                      <Select
+                        value={formData.subcategory}
+                        onValueChange={(val) => setFormData(prev => ({ ...prev, subcategory: val }))}
+                      >
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select type" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="Instant">Instant</SelectItem>
+                          <SelectItem value="Storage">Storage</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    ) : (
+                      <Input
+                        id="subcategory"
+                        name="subcategory"
+                        value={formData.subcategory}
+                        onChange={handleInputChange}
+                      />
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -406,6 +466,33 @@ const EditProductModal = ({
                   <CardTitle>Specifications</CardTitle>
                 </CardHeader>
                 <CardContent className="grid md:grid-cols-2 gap-6">
+                  {/* Geyser-specific fields */}
+                  {formData.category.toLowerCase() === 'geyser' && (
+                    <>
+                      <div className="space-y-2">
+                        <Label htmlFor="capacity_liters">Capacity (Liters)</Label>
+                        <Input
+                          id="capacity_liters"
+                          name="capacity_liters"
+                          type="number"
+                          value={specs.capacity_liters}
+                          onChange={handleSpecChange}
+                          placeholder="e.g. 15, 25, 50"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="wattage">Wattage (W)</Label>
+                        <Input
+                          id="wattage"
+                          name="wattage"
+                          type="number"
+                          value={specs.wattage}
+                          onChange={handleSpecChange}
+                          placeholder="e.g. 3000, 4500"
+                        />
+                      </div>
+                    </>
+                  )}
                   <div className="space-y-2">
                     <Label htmlFor="ampere">Ampere (A)</Label>
                     <Input

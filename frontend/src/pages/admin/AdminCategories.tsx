@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Plus, Edit, Trash2, MoreHorizontal, FolderOpen } from 'lucide-react';
+import { Plus, Edit, Trash2, MoreHorizontal, FolderOpen, Package } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -92,8 +92,8 @@ const AdminCategories = () => {
               <CardContent className="p-6">
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center text-2xl">
-                      {category.icon}
+                    <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center">
+                      <FolderOpen className="h-5 w-5 text-muted-foreground" />
                     </div>
                     <div>
                       <h3 className="font-semibold">{category.name}</h3>

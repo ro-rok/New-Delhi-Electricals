@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,109 +6,111 @@
 
 @layer base {
   :root {
-    /* Apple-inspired ultra-minimal palette */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 7%;
+    /* Electrical store palette — deep navy + electric blue */
+    --background: 220 20% 99%;
+    --foreground: 220 25% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 7%;
+    --card-foreground: 220 25% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 7%;
+    --popover-foreground: 220 25% 11%;
 
-    --primary: 0 0% 7%;
+    --primary: 220 25% 11%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 97%;
-    --secondary-foreground: 0 0% 7%;
+    --secondary: 220 16% 96%;
+    --secondary-foreground: 220 25% 11%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 220 14% 95%;
+    --muted-foreground: 220 10% 46%;
 
-    --accent: 211 100% 50%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 93%;
-    --input: 0 0% 93%;
-    --ring: 0 0% 7%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
 
-    --radius: 1rem;
+    --radius: 0.875rem;
 
-    --success: 142 70% 45%;
+    --success: 152 60% 42%;
     --warning: 38 92% 50%;
-    
-    /* Apple-style soft shadows */
-    --shadow-xs: 0 1px 2px hsl(0 0% 0% / 0.02);
-    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.03);
-    --shadow-md: 0 4px 20px hsl(0 0% 0% / 0.04);
-    --shadow-lg: 0 8px 40px hsl(0 0% 0% / 0.05);
-    --shadow-xl: 0 20px 60px hsl(0 0% 0% / 0.08);
-    
-    /* Apple-style ambient gradients */
-    --gradient-ambient: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(0 0% 96%), transparent);
-    --gradient-soft: linear-gradient(135deg, hsl(0 0% 98%), hsl(0 0% 100%));
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 7%;
-    --sidebar-primary: 0 0% 7%;
+    /* Electrical store shadows — crisper, more defined */
+    --shadow-xs: 0 1px 2px hsl(220 25% 11% / 0.04);
+    --shadow-sm: 0 2px 8px hsl(220 25% 11% / 0.06);
+    --shadow-md: 0 4px 16px hsl(220 25% 11% / 0.08);
+    --shadow-lg: 0 8px 32px hsl(220 25% 11% / 0.10);
+    --shadow-xl: 0 16px 48px hsl(220 25% 11% / 0.14);
+
+    /* Electrical gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 30% 13%) 0%, hsl(217 40% 20%) 50%, hsl(213 45% 25%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 16% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(199 89% 48%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(220 16% 98%) 0%, hsl(0 0% 100%) 100%);
+
+    --sidebar-background: 220 20% 99%;
+    --sidebar-foreground: 220 25% 11%;
+    --sidebar-primary: 220 25% 11%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 97%;
-    --sidebar-accent-foreground: 0 0% 7%;
-    --sidebar-border: 0 0% 93%;
-    --sidebar-ring: 0 0% 7%;
+    --sidebar-accent: 220 16% 96%;
+    --sidebar-accent-foreground: 220 25% 11%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
   }
 
   .dark {
-    /* Apple-inspired dark mode */
-    --background: 0 0% 7%;
-    --foreground: 0 0% 95%;
+    --background: 222 30% 7%;
+    --foreground: 210 20% 94%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 222 25% 10%;
+    --card-foreground: 210 20% 94%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 222 25% 10%;
+    --popover-foreground: 210 20% 94%;
 
-    --primary: 0 0% 95%;
-    --primary-foreground: 0 0% 7%;
+    --primary: 210 20% 94%;
+    --primary-foreground: 222 30% 7%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 220 18% 14%;
+    --secondary-foreground: 210 20% 94%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 220 18% 14%;
+    --muted-foreground: 215 12% 56%;
 
-    --accent: 211 100% 55%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 0 0% 95%;
-    
-    /* Dark mode shadows */
-    --shadow-xs: 0 1px 2px hsl(0 0% 0% / 0.2);
-    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
-    --shadow-md: 0 4px 20px hsl(0 0% 0% / 0.4);
-    --shadow-lg: 0 8px 40px hsl(0 0% 0% / 0.5);
-    --shadow-xl: 0 20px 60px hsl(0 0% 0% / 0.6);
-    
-    --gradient-ambient: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(0 0% 15%), transparent);
-    --gradient-soft: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 10%));
-    
-    --sidebar-background: 0 0% 7%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 0 0% 95%;
-    --sidebar-primary-foreground: 0 0% 7%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 0 0% 95%;
+    --border: 220 16% 18%;
+    --input: 220 16% 18%;
+    --ring: 217 91% 60%;
+
+    --shadow-xs: 0 1px 2px hsl(0 0% 0% / 0.3);
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.35);
+    --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.5);
+    --shadow-xl: 0 16px 48px hsl(0 0% 0% / 0.6);
+
+    --gradient-hero: linear-gradient(135deg, hsl(222 30% 7%) 0%, hsl(217 35% 12%) 50%, hsl(213 40% 15%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(222 25% 10%) 0%, hsl(222 30% 8%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(199 89% 48%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(220 18% 14%) 0%, hsl(222 30% 7%) 100%);
+
+    --sidebar-background: 222 30% 7%;
+    --sidebar-foreground: 210 20% 94%;
+    --sidebar-primary: 210 20% 94%;
+    --sidebar-primary-foreground: 222 30% 7%;
+    --sidebar-accent: 220 18% 14%;
+    --sidebar-accent-foreground: 210 20% 94%;
+    --sidebar-border: 220 16% 18%;
+    --sidebar-ring: 217 91% 60%;
   }
 }
 
@@ -120,21 +122,23 @@
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
   }
 }
 
 @layer utilities {
-  /* Apple-style glass morphism */
+  /* Electrical store glass morphism */
   .glass {
-    @apply bg-card/70 backdrop-blur-2xl border border-border/30;
+    @apply bg-card/80 backdrop-blur-xl border border-border/50;
   }
   
   .glass-strong {
-    @apply bg-card/85 backdrop-blur-3xl border border-border/40;
+    @apply bg-card/90 backdrop-blur-2xl border border-border/60 shadow-sm;
   }
 
   .text-balance {
@@ -147,57 +151,36 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* Premium animations */
-  .animate-breathe {
-    animation: breathe 12s ease-in-out infinite;
+  /* Scrollbar hiding */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 
-  .animate-float {
-    animation: float 8s ease-in-out infinite;
-  }
-
-  .animate-pulse-subtle {
-    animation: pulse-subtle 3s ease-in-out infinite;
-  }
-  
-  .animate-fade-in {
-    animation: fade-in 0.8s ease-out forwards;
-  }
-  
-  .animate-slide-up {
-    animation: slide-up 0.8s ease-out forwards;
-  }
-  
-  .animate-rotate-subtle {
-    animation: rotate-subtle 8s ease-in-out infinite;
-  }
-  
-  .animate-gradient-shift {
-    animation: gradient-shift 10s ease infinite;
-    background-size: 200% 200%;
-  }
-
-  /* Apple-style hover effects */
+  /* Electrical store hover effects */
   .hover-lift {
-    @apply transition-all duration-500 ease-out;
+    @apply transition-all duration-300 ease-out;
   }
 
   .hover-lift:hover {
-    @apply -translate-y-1.5;
+    @apply -translate-y-1;
     box-shadow: var(--shadow-lg);
   }
 
   .card-hover {
-    @apply transition-all duration-500 ease-out;
+    @apply transition-all duration-300 ease-out;
   }
 
   .card-hover:hover {
-    @apply -translate-y-1 shadow-lg;
+    @apply -translate-y-0.5 shadow-lg;
   }
   
-  /* Apple-style focus states */
+  /* Focus states */
   .apple-focus {
-    @apply focus:outline-none focus:ring-2 focus:ring-foreground/10 focus:ring-offset-4 focus:ring-offset-background;
+    @apply focus:outline-none focus:ring-2 focus:ring-accent/40 focus:ring-offset-2 focus:ring-offset-background;
   }
 }
 

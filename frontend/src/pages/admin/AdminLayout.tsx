@@ -3,7 +3,7 @@ import { Link, Outlet, useLocation, Navigate } from 'react-router-dom';
 import {
   LayoutDashboard, Package, FolderOpen, Tags, FileUp,
   MessageSquare, Settings, LogOut, Menu, X, ChevronRight,
-  Sun, Moon, FileText, ClipboardList
+  Sun, Moon, FileText, ClipboardList, BarChart2
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTheme } from 'next-themes';
@@ -20,6 +20,7 @@ const navItems = [
   { icon: FileText, label: 'Quotation Maker', path: '/admin/quotation-maker' },
   { icon: ClipboardList, label: 'Quotations', path: '/admin/quotations' },
   { icon: MessageSquare, label: 'Inquiries', path: '/admin/inquiries' },
+  { icon: BarChart2, label: 'Analytics', path: '/admin/analytics' },
   { icon: History, label: 'Logs', path: '/admin/logs' },
   { icon: Settings, label: 'Settings', path: '/admin/settings' },
 ];

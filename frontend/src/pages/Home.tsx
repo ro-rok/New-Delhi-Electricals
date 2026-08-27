@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Header from '@/components/layout/Header';
 import PremiumHero from '@/components/home/PremiumHero';
+import BrandMarquee from '@/components/home/BrandMarquee';
 import CategoryGrid from '@/components/catalog/CategoryGrid';
 import BrandShowcase from '@/components/catalog/BrandShowcase';
 import FeaturedProducts from '@/components/catalog/FeaturedProducts';
@@ -30,6 +31,7 @@ const Home = () => {
       <PolycabPromoButton />
       <main>
         <PremiumHero />
+        <BrandMarquee />
         <CategoryGrid />
         <FloatingSearchBar />
         <FeaturedProducts />

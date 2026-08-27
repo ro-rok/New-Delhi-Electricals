@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8f9fa"/>
+      <stop offset="100%" stop-color="#e9ecef"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#212529"/>
+      <stop offset="100%" stop-color="#495057"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- Switchboard plate -->
+  <rect x="250" y="120" width="300" height="360" rx="20" fill="#dee2e6" stroke="#adb5bd" stroke-width="2"/>
+  <!-- Module slots -->
+  <rect x="280" y="160" width="120" height="90" rx="8" fill="url(#accent)"/>
+  <rect x="420" y="160" width="100" height="90" rx="8" fill="#6c757d"/>
+  <rect x="280" y="270" width="120" height="90" rx="8" fill="#495057"/>
+  <rect x="420" y="270" width="100" height="90" rx="8" fill="url(#accent)"/>
+  <rect x="280" y="380" width="120" height="90" rx="8" fill="#6c757d"/>
+  <rect x="420" y="380" width="100" height="90" rx="8" fill="#343a40"/>
+  <!-- Toggle switches -->
+  <circle cx="310" cy="205" r="12" fill="#fff" opacity="0.9"/>
+  <circle cx="360" cy="205" r="12" fill="#fff" opacity="0.9"/>
+  <!-- Socket pins -->
+  <circle cx="445" cy="200" r="5" fill="#fff" opacity="0.7"/>
+  <circle cx="495" cy="200" r="5" fill="#fff" opacity="0.7"/>
+  <circle cx="470" cy="215" r="5" fill="#fff" opacity="0.7"/>
+  <!-- Label -->
+  <text x="400" y="540" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="300" fill="#495057">Switches &amp; Sockets</text>
+</svg>

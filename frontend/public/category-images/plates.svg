@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8f9fa"/>
+      <stop offset="100%" stop-color="#e9ecef"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <!-- Plate grid -->
+  <rect x="200" y="100" width="400" height="380" rx="16" fill="#dee2e6" stroke="#adb5bd" stroke-width="2"/>
+  <!-- Grid lines for 4M plate -->
+  <line x1="300" y1="100" x2="300" y2="480" stroke="#adb5bd" stroke-width="1"/>
+  <line x1="400" y1="100" x2="400" y2="480" stroke="#adb5bd" stroke-width="1"/>
+  <line x1="500" y1="100" x2="500" y2="480" stroke="#adb5bd" stroke-width="1"/>
+  <!-- Module outlines -->
+  <rect x="210" y="110" width="80" height="360" rx="4" fill="#f1f3f5" stroke="#ced4da" stroke-width="1"/>
+  <rect x="310" y="110" width="80" height="360" rx="4" fill="#f1f3f5" stroke="#ced4da" stroke-width="1"/>
+  <rect x="410" y="110" width="80" height="360" rx="4" fill="#f1f3f5" stroke="#ced4da" stroke-width="1"/>
+  <rect x="510" y="110" width="80" height="360" rx="4" fill="#f1f3f5" stroke="#ced4da" stroke-width="1"/>
+  <!-- Decorative finish swatches -->
+  <rect x="220" y="520" width="40" height="40" rx="8" fill="#fff" stroke="#dee2e6" stroke-width="2"/>
+  <rect x="280" y="520" width="40" height="40" rx="8" fill="#212529" stroke="#212529" stroke-width="2"/>
+  <rect x="340" y="520" width="40" height="40" rx="8" fill="#c19a6b" stroke="#b8860b" stroke-width="2"/>
+  <rect x="400" y="520" width="40" height="40" rx="8" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
+  <rect x="460" y="520" width="40" height="40" rx="8" fill="#2c3e50" stroke="#2c3e50" stroke-width="2"/>
+  <rect x="520" y="520" width="40" height="40" rx="8" fill="#dc3545" stroke="#dc3545" stroke-width="2"/>
+  <text x="400" y="590" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="300" fill="#495057">Plates</text>
+</svg>

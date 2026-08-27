@@ -1,0 +1,47 @@
+
+  [32m[1mVITE[22m v7.2.6[39m  [2mready in [0m[1m1055[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8080[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.29.31:[1m8080[22m/[39m
+Browserslist: browsers data (caniuse-lite) is 14 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2m2:48:03 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminAddProduct.tsx, /src/index.css[22m
+[2m2:53:01 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/catalog/BrandShowcase.tsx, /src/components/catalog/FeaturedProducts.tsx, /src/components/catalog/RecentlyViewed.tsx, /src/components/home/FloatingSearchBar.tsx, /src/pages/admin/AdminAddProduct.tsx, /src/pages/admin/AdminDashboard.tsx, /src/pages/admin/AdminProducts.tsx, /src/components/admin/ImageScraperModal.tsx, /src/components/admin/PlatesBulkImageModal.tsx, /src/components/admin/EditProductModal.tsx, /src/pages/CategoryPage.tsx[22m
+[2m2:53:21 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminProducts.tsx, /src/index.css[22m
+[2m2:53:43 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/admin/EditProductModal.tsx[22m
+[2m2:54:04 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminAddProduct.tsx, /src/index.css[22m
+[2m3:20:54 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminAddProduct.tsx, /src/index.css[22m
+[2m3:28:49 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/catalog/CategoryGrid.tsx, /src/pages/CategoryPage.tsx[22m
+[2m3:29:11 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/catalog/CategoryGrid.tsx, /src/pages/CategoryPage.tsx[22m
+[2m3:29:22 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/catalog/CategoryGrid.tsx[22m
+[2m3:30:05 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m3:35:06 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/catalog/CategoryGrid.tsx, /src/pages/CategoryPage.tsx[22m
+[2m3:35:42 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminCategories.tsx, /src/index.css[22m
+[2m3:40:56 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m3:41:06 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m3:41:24 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m3:41:57 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m3:42:09 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m3:42:24 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m3:51:01 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminAddProduct.tsx, /src/index.css[22m
+[2m3:52:13 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/admin/EditProductModal.tsx[22m
+[2m3:58:36 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminAddProduct.tsx, /src/index.css[22m
+[2m3:59:44 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/admin/EditProductModal.tsx[22m
+[2m4:00:12 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/admin/EditProductModal.tsx[22m
+[2m4:01:33 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/admin/EditProductModal.tsx[22m
+[2m4:01:53 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/admin/EditProductModal.tsx[22m
+[2m4:02:25 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m4:02:38 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m4:02:57 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m4:03:36 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m4:03:53 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m4:04:30 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m4:04:43 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m4:04:54 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m4:05:36 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m4:06:42 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m4:09:48 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m
+[2m4:24:56 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m4:25:05 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m11:54:48 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CategoryPage.tsx, /src/index.css[22m

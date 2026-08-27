@@ -3,7 +3,7 @@ import { useDebounce } from '@/hooks/useDebounce';
 import { Link } from 'react-router-dom';
 import {
   Plus, Search, Filter, MoreHorizontal, Edit, Trash2,
-  Eye, Copy, ChevronLeft, ChevronRight, Image as ImageIcon
+  Eye, Copy, ChevronLeft, ChevronRight, Image as ImageIcon, PlusCircle
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -31,7 +31,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/label';
-import { getProducts, getCategories, getBrands, updateProduct, deleteProduct } from '@/api/products';
+import { getProducts, getCategories, getBrands, updateProduct, deleteProduct, createCategory, createBrand } from '@/api/products';
 import { Product, Category, Brand } from '@/types/product';
 import { toast } from 'sonner';
 import { motion } from 'framer-motion';
@@ -378,7 +378,23 @@ const AdminProducts = () => {
                 className="pl-10"
               />
             </div>
-            <Select value={categoryFilter} onValueChange={setCategoryFilter}>
+            <Select value={categoryFilter} onValueChange={async (val) => {
+              if (val === '_create_new') {
+                const name = prompt('Enter new category name:');
+                if (name && name.trim()) {
+                  try {
+                    const newCat = await createCategory(name.trim());
+                    setCategories(prev => [...prev, newCat]);
+                    setCategoryFilter(newCat.name);
+                    toast.success('Category created!');
+                  } catch (err: any) {
+                    toast.error(err.message || 'Failed to create category');
+                  }
+                }
+              } else {
+                setCategoryFilter(val);
+              }
+            }}>
               <SelectTrigger className="w-full md:w-48">
                 <SelectValue placeholder="Category" />
               </SelectTrigger>
@@ -387,9 +403,28 @@ const AdminProducts = () => {
                 {categories.map(cat => (
                   <SelectItem key={cat.id} value={cat.name}>{cat.name}</SelectItem>
                 ))}
+                <SelectItem value="_create_new" className="text-primary font-medium">
+                  <span className="flex items-center gap-2"><PlusCircle className="h-3 w-3" /> Add New Category</span>
+                </SelectItem>
               </SelectContent>
             </Select>
-            <Select value={brandFilter} onValueChange={setBrandFilter}>
+            <Select value={brandFilter} onValueChange={async (val) => {
+              if (val === '_create_new') {
+                const name = prompt('Enter new brand name:');
+                if (name && name.trim()) {
+                  try {
+                    const newBrand = await createBrand(name.trim());
+                    setBrands(prev => [...prev, newBrand]);
+                    setBrandFilter(newBrand.name);
+                    toast.success('Brand created!');
+                  } catch (err: any) {
+                    toast.error(err.message || 'Failed to create brand');
+                  }
+                }
+              } else {
+                setBrandFilter(val);
+              }
+            }}>
               <SelectTrigger className="w-full md:w-48">
                 <SelectValue placeholder="Brand" />
               </SelectTrigger>
@@ -398,6 +433,9 @@ const AdminProducts = () => {
                 {brands.map(brand => (
                   <SelectItem key={brand.id} value={brand.name}>{brand.name}</SelectItem>
                 ))}
+                <SelectItem value="_create_new" className="text-primary font-medium">
+                  <span className="flex items-center gap-2"><PlusCircle className="h-3 w-3" /> Add New Brand</span>
+                </SelectItem>
               </SelectContent>
             </Select>
             <Select value={productFamilyFilter} onValueChange={setProductFamilyFilter}>

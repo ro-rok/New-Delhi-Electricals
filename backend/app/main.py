@@ -9,7 +9,7 @@ from pydantic import ValidationError
 
 from .config import settings
 from .db import get_db_dep
-from .routes import auth, catalog_import, products, inquiries, quotations, price_update
+from .routes import auth, catalog_import, products, inquiries, quotations, price_update, analytics
 from .keepalive_service import keepalive_service
 from .schemas import ErrorResponse
 
@@ -48,6 +48,7 @@ app.include_router(catalog_import.cloudinary_router)
 app.include_router(price_update.router)
 app.include_router(inquiries.router)
 app.include_router(quotations.router)
+app.include_router(analytics.router)
 
 # Exception handlers for consistent error responses
 @app.exception_handler(RequestValidationError)
@@ -93,11 +94,11 @@ async def general_exception_handler(request: Request, exc: Exception):
     
     return JSONResponse(
         status_code=500,
-        content=ErrorResponse(
-            message=error_message,
-            code="INTERNAL_ERROR",
-            timestamp=datetime.utcnow()
-        ).model_dump(by_alias=True)
+        content={
+            "message": error_message,
+            "code": "INTERNAL_ERROR",
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+        }
     )
 
 # Mount public directory for static files

@@ -289,6 +289,42 @@ export async function getBrands(): Promise<Brand[]> {
   }
 }
 
+export async function createCategory(name: string, description?: string): Promise<Category> {
+  const token = localStorage.getItem('admin_token');
+  const res = await fetch(`${API_BASE}/api/products/categories`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { 'Authorization': `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify({ name, description }),
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.detail || 'Failed to create category');
+  }
+  const data = await res.json();
+  return { id: data.id, name: data.name, slug: data.slug, description: description || '', icon: 'Package', image: '', productCount: 0 };
+}
+
+export async function createBrand(name: string, description?: string): Promise<Brand> {
+  const token = localStorage.getItem('admin_token');
+  const res = await fetch(`${API_BASE}/api/products/brands`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { 'Authorization': `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify({ name, description }),
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.detail || 'Failed to create brand');
+  }
+  const data = await res.json();
+  return { id: data.id, name: data.name, slug: data.slug, description: description || '', logo: '', featured: false, productCount: 0 };
+}
+
 export async function updateProduct(
   id: string,
   data: Partial<Product>

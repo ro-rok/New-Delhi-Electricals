@@ -4,7 +4,6 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFab from '@/components/WhatsAppFab';
 import ProductCard from '@/components/catalog/ProductCard';
-import { ProductFamilyFilter } from '@/components/catalog/ProductFamilyFilter';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -24,107 +23,41 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { getCategories, getProducts, getBrands } from '@/api/products';
-import { Category, Product, Brand } from '@/types/product';
+import { getBrands } from '@/api/products';
+import { Product, Brand } from '@/types/product';
 import { useApp } from '@/contexts/AppContext';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SlidersHorizontal, Grid, List, X, Search, ChevronDown } from 'lucide-react';
+import { SlidersHorizontal, Grid, List, X, Search, ChevronRight, ChevronLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ToggleRight, Cable, Zap, Lightbulb, Fan, Smartphone, Package } from 'lucide-react';
+import { ToggleRight, Shield, Cable, Box, LayoutGrid, Package, Thermometer } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { PlateSelectionWizard } from '@/components/catalog/PlateSelectionWizard';
+import { BrandModelSelector } from '@/components/catalog/BrandModelSelector';
 import { useDebounce } from '@/hooks/useDebounce';
 import { ProductCardSkeleton } from '@/components/ui/SkeletonLoader';
-import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 import { SEOHead } from '@/components/SEOHead';
-import { getCategorySEO } from '@/lib/seo';
 import { LoadingSpinner } from '@/components/LoadingSpinner';
+import {
+  SHOPPING_CATEGORIES,
+  getShoppingCategory,
+  isLegacySlug,
+  getCanonicalSlug,
+  ShoppingCategory,
+  SubSection,
+} from '@/config/shoppingCategories';
+import { fetchProductsForShoppingCategory } from '@/lib/categoryUtils';
 
-type SortOption = 'name-asc' | 'name-desc' | 'price-asc' | 'price-desc' | 'newest';
-
-// Display label overrides for specific categories
-const getCategoryDisplayName = (name: string) =>
-  name === 'Circuit Protection' ? "MCB's and more" : name;
+type SortOption = 'name-asc' | 'name-desc' | 'price-asc' | 'price-desc';
 
 const iconMap: Record<string, LucideIcon> = {
   ToggleRight,
+  Shield,
   Cable,
-  Zap,
-  Lightbulb,
-  Fan,
-  Smartphone,
-};
-
-// Category Card Component with image error handling
-const CategoryCard = ({ cat, isActive, iconMap, Package }: {
-  cat: Category;
-  isActive: boolean;
-  iconMap: Record<string, LucideIcon>;
-  Package: LucideIcon;
-}) => {
-  const [imageError, setImageError] = useState(false);
-  const IconComponent = iconMap[cat.icon] || Package;
-  const categoryImage = cat.image || `/category-images/${cat.slug}.jpg`;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -4 }}
-    >
-      <Link
-        to={`/category/${cat.slug}`}
-        className={cn(
-          "block group relative bg-white dark:bg-black rounded-2xl p-8 border transition-all duration-300 overflow-hidden",
-          isActive
-            ? "border-gray-900 dark:border-white shadow-lg"
-            : "border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 hover:shadow-xl"
-        )}
-      >
-        {/* Category Image */}
-        <div className={cn(
-          "w-full h-32 rounded-xl mb-6 overflow-hidden bg-gray-100 dark:bg-gray-900 flex items-center justify-center transition-all",
-          isActive && "ring-2 ring-gray-900 dark:ring-white"
-        )}>
-          {!imageError && categoryImage ? (
-            <img
-              src={categoryImage}
-              alt={cat.name}
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-              onError={() => setImageError(true)}
-            />
-          ) : (
-            <div className={cn(
-              "w-full h-full flex items-center justify-center transition-colors",
-              isActive
-                ? "bg-gray-900 dark:bg-white"
-                : "bg-gray-100 dark:bg-gray-900 group-hover:bg-gray-200 dark:group-hover:bg-gray-800"
-            )}>
-              <IconComponent className={cn(
-                "h-12 w-12 transition-colors",
-                isActive
-                  ? "text-white dark:text-black"
-                  : "text-gray-600 dark:text-gray-400"
-              )} />
-            </div>
-          )}
-        </div>
-        <h3
-          className={cn(
-            "text-lg font-medium mb-2 transition-colors",
-            isActive
-              ? "text-gray-900 dark:text-white"
-              : "text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-400",
-          )}
-        >
-          {getCategoryDisplayName(cat.name)}
-        </h3>
-        <p className="text-sm text-gray-500 dark:text-gray-500">
-          {cat.productCount || 0} {(cat.productCount || 0) === 1 ? 'product' : 'products'}
-        </p>
-      </Link>
-    </motion.div>
-  );
+  Box,
+  LayoutGrid,
+  Package,
+  Thermometer,
 };
 
 const CategoryPage = () => {
@@ -132,12 +65,21 @@ const CategoryPage = () => {
   const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
+  const subTab = searchParams.get('tab') || 'all';
   const { trackCategoryView } = useApp();
 
-  const [category, setCategory] = useState<Category | null>(null);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [products, setProducts] = useState<Product[]>([]);
+  // Shopping category (new architecture)
+  const shoppingCategory = useMemo(() => getShoppingCategory(slug || ''), [slug]);
+  // Handle legacy slugs by redirecting to canonical URL
+  const navigate_ref = useRef<ReturnType<typeof useNavigate> extends () => infer R ? R : never>(null);
+  const resolvedSlug = useMemo(() => {
+    if (!slug) return '';
+    if (isLegacySlug(slug)) return getCanonicalSlug(slug);
+    return slug;
+  }, [slug]);
+
   const [allProducts, setAllProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [loading, setLoading] = useState(true);
   const [filterLoading, setFilterLoading] = useState(false);
@@ -147,25 +89,27 @@ const CategoryPage = () => {
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [selectedSeries, setSelectedSeries] = useState<string[]>([]);
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
-  const [selectedProductFamily, setSelectedProductFamily] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
+  const [selectedModule, setSelectedModule] = useState<string | null>(null);
   const [selectedAmpere, setSelectedAmpere] = useState<string | null>(null);
   const [selectedWireSize, setSelectedWireSize] = useState<string | null>(null);
   const [selectedCoreCount, setSelectedCoreCount] = useState<string | null>(null);
+  const [selectedCapacity, setSelectedCapacity] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<SortOption>('name-asc');
   const [localSearch, setLocalSearch] = useState(searchQuery);
   const debouncedSearch = useDebounce(localSearch, 500);
-  const [selectedModule, setSelectedModule] = useState<string | null>(null);
-
-  // Pagination state
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
-  const fetchSize = 20;
-
   const [view, setView] = useState<'grid' | 'list'>('grid');
   const [showFilters, setShowFilters] = useState(false);
+  const fetchSize = 20;
 
-  const isWiresCategory = category?.name === 'Wires & Cables';
+  // Active sub-section tab
+  const [activeTab, setActiveTab] = useState(subTab);
+
+  const isWiresCategory = shoppingCategory?.slug === 'wires-cables';
+  const isCircuitProtection = shoppingCategory?.slug === 'circuit-protection';
+  const isGeysersCategory = shoppingCategory?.slug === 'geysers';
 
   const normalizeAmpere = (value: unknown) => {
     if (value === null || value === undefined) return '';
@@ -175,824 +119,524 @@ const CategoryPage = () => {
     return numericMatch ? numericMatch[1] : raw.toLowerCase();
   };
 
-  const fetchInitialData = useCallback(async () => {
-    if (!slug) return;
+  // Smart sort priority for Switches & Sockets — the natural shopping order:
+  // 1. Switches (6A→10A→16A→20A) → 2. Sockets (6A→16A) → 3. Fan regulators/dimmers
+  // → 4. Data sockets/USB → 5. Mini MCBs (after regulators, NOT with switches) → 6. Accessories
+  const getSmartSortPriority = useCallback((product: Product): number => {
+    const cat = (product.category || '').toLowerCase();
+    const name = (product.name || '').toLowerCase();
+    const amp = normalizeAmpere(product.specs?.ampere);
 
-    setLoading(true);
-    setError(null);
-    try {
-      const [cats, brandsList] = await Promise.all([
-        getCategories(),
-        getBrands()
-      ]);
+    // Detect Mini MCBs early — these are circuit protection, NOT switches
+    const isMiniMCB = name.includes('mini mcb') || name.includes('mini-mcb') ||
+      (name.includes('mcb') && !name.includes('switch'));
 
-      const foundCategory = cats.find(c => c.slug === slug);
+    // Base category priority — MCBs go AFTER regulators/data, NOT with switches
+    let catPriority = 100;
+    if (cat === 'switches' && !isMiniMCB) catPriority = 0;
+    else if (cat === 'power sockets') catPriority = 10;
+    else if (cat === 'fan controls') catPriority = 20;
+    else if (cat === 'dimmers') catPriority = 25;
+    else if (cat === 'data sockets') catPriority = 35;
+    else if (isMiniMCB) catPriority = 40; // After data/USB, before accessories
+    else if (cat === 'accessories' || cat === 'hospitality') catPriority = 50;
 
-      if (!foundCategory) {
-        setError('Category not found');
-        setLoading(false);
-        return;
-      }
+    // Ampere sub-priority within each category: 6A < 10A < 16A < 20A < 25A < 32A < 40A < 63A
+    let ampPriority = 0;
+    const ampNum = parseFloat(amp);
+    if (ampNum <= 6) ampPriority = 0;
+    else if (ampNum <= 10) ampPriority = 1;
+    else if (ampNum <= 16) ampPriority = 2;
+    else if (ampNum <= 20) ampPriority = 3;
+    else if (ampNum <= 25) ampPriority = 4;
+    else if (ampNum <= 32) ampPriority = 5;
+    else if (ampNum <= 40) ampPriority = 6;
+    else ampPriority = 7;
 
-      setCategory(foundCategory);
-      setCategories(cats);
-      setBrands(brandsList);
+    // Module size sub-priority: 1M < 2M < 3M < 4M < 6M < 8M < 12M
+    let modulePriority = 0;
+    const rawModule = product.specs?.mw ?? product.specs?.module_size ?? '';
+    let moduleVal = 0;
+    if (typeof rawModule === 'number') moduleVal = rawModule;
+    else if (typeof rawModule === 'string') {
+      const match = rawModule.trim().match(/^(\d+(?:\.\d+)?)/);
+      moduleVal = match ? parseFloat(match[1]) : 0;
+    }
+    if (moduleVal <= 1) modulePriority = 0;
+    else if (moduleVal <= 2) modulePriority = 1;
+    else if (moduleVal <= 3) modulePriority = 2;
+    else if (moduleVal <= 4) modulePriority = 3;
+    else if (moduleVal <= 6) modulePriority = 4;
+    else if (moduleVal <= 8) modulePriority = 5;
+    else modulePriority = 6;
 
-      // Fetch all products for this category to get bounds and families
-      const initialResponse = await getProducts({
-        category: foundCategory.name,
-        pageSize: 2000, // Fetch more to populate filters (families/series/modules)
-      });
+    // Within switches: 1-way before 2-way, standard before soft-feel, etc.
+    let typePriority = 0;
+    if (cat === 'switches' && !isMiniMCB) {
+      if (name.includes('2-way') || name.includes('two way')) typePriority = 1;
+      if (name.includes('indicator')) typePriority = 2;
+      if (name.includes('soft feel') || name.includes('softfeel')) typePriority = 3;
+      if (name.includes('dp switch')) typePriority = 4;
+      if (name.includes('mega') || name.includes('2 module')) typePriority = 5;
+      if (name.includes('motor starter')) typePriority = 6;
+      if (name.includes('wi-fi') || name.includes('wifi')) typePriority = 7;
+      if (name.includes('ir ')) typePriority = 8;
+    }
 
-      setAllProducts(initialResponse.items);
+    return catPriority * 10000 + ampPriority * 1000 + modulePriority * 100 + typePriority * 10;
+  }, []);
 
-      // Initial filtered fetch
-      const filteredResponse = await getProducts({
-        category: foundCategory.name,
-        page: 1,
-        pageSize: fetchSize,
-        sortBy: 'name',
-        sortOrder: 'asc'
-      });
-
-      setProducts(filteredResponse.items);
-      setHasMore(filteredResponse.items.length === fetchSize);
-      setPage(1);
-
-    } catch (err) {
-            setError('Failed to load category data');
-    } finally {
-      setLoading(false);
+  // Redirect legacy slugs
+  useEffect(() => {
+    if (slug && isLegacySlug(slug)) {
+      const canonical = getCanonicalSlug(slug);
+      // Use replaceState to update URL without navigation loop
+      const url = new URL(window.location.href);
+      url.pathname = `/category/${canonical}`;
+      window.history.replaceState({}, '', url.toString());
     }
   }, [slug]);
 
-  const fetchFilteredProducts = useCallback(async (pageNum: number, isNewFilter: boolean = false) => {
-    if (!category) return;
+  // Determine which DB categories to fetch for the active tab
+  const activeDbCategories = useMemo(() => {
+    if (!shoppingCategory) return [];
+    const tab = shoppingCategory.subSections.find(s => s.id === activeTab);
+    return tab ? tab.dbCategories : shoppingCategory.dbCategories;
+  }, [shoppingCategory, activeTab]);
 
-    setFilterLoading(true);
+  // Fetch all products for this shopping category
+  const fetchInitialData = useCallback(async () => {
+    if (!resolvedSlug) return;
+    setLoading(true);
+    setError(null);
+
     try {
-      const sortField: 'name' | 'price' = sortBy.startsWith('price') ? 'price' : 'name';
-      const sortOrder: 'asc' | 'desc' = sortBy.endsWith('desc') ? 'desc' : 'asc';
+      const brandsList = await getBrands();
+      setBrands(brandsList);
 
-      const requestParams = {
-        category: category.name,
-        brand: selectedBrands.length === 1 ? selectedBrands[0] : undefined,
-        series: selectedSeries.length > 0 ? (selectedSeries.length === 1 ? selectedSeries[0] : undefined) : undefined,
-        subcategory: selectedSubcategory || undefined,
-        // For wires category, treat selectedProductFamily as brand selector
-        productFamily: isWiresCategory ? selectedProductFamily || undefined : undefined,
-        color: selectedColor || undefined,
-        wireSize: selectedWireSize ? Number(selectedWireSize) : undefined,
-        coreCount: selectedCoreCount ? Number(selectedCoreCount) : undefined,
-        sortBy: sortField,
-        sortOrder: sortOrder,
-        q: debouncedSearch || undefined,
-        page: pageNum,
-        pageSize: selectedModule ? 2000 : fetchSize,
-      };
-      
-                  
-      const response = await getProducts(requestParams);
-      
-            if (response.items.length > 0) {
-              }
-
-      // Apply frontend filtering following the same pattern as Plates
-      // Backend filters: category, subcategory (if sent), brand (if 1 selected), series (if 1 selected), productFamily, color
-      // Frontend filters: brand (if multiple), series (if multiple), productFamily (double-check), color (double-check), module
-      const filteredItems = response.items.filter((product) => {
-        // Filter by brand (if multiple brands selected, filter client-side)
-        // Backend only handles single brand, so we filter multiple brands here
-        if (selectedBrands.length > 0 && !selectedBrands.includes(product.brand)) {
-          return false;
-        }
-        
-        // Filter by series (if multiple series selected, filter client-side)
-        // Backend only handles single series, so we filter multiple series here
-        if (selectedSeries.length > 0 && !selectedSeries.includes(product.product_family)) {
-          return false;
-        }
-        
-        // Subcategory is filtered by backend, but double-check for consistency (like Plates does with productFamily/color)
-        if (selectedSubcategory) {
-          const productSubcat = product.subcategory?.trim() || '';
-          const selectedSubcat = selectedSubcategory.trim();
-          if (productSubcat.toLowerCase() !== selectedSubcat.toLowerCase()) {
-            return false;
-          }
-        }
-        
-        // ProductFamily is filtered by backend, but double-check (same as Plates)
-        // For wires category, use selectedProductFamily as a brand selector
-        if (isWiresCategory && selectedProductFamily) {
-          if (product.brand !== selectedProductFamily) return false;
-        }
-        // For non-wires categories, series filtering is handled above
-
-        // Color is filtered by backend, but double-check (same as Plates)
-        if (selectedColor) {
-          const rawColor = product.specs?.color;
-          const color = typeof rawColor === 'string'
-            ? rawColor.trim()
-            : rawColor != null
-              ? String(rawColor).trim()
-              : '';
-          if (color !== selectedColor) return false;
-        }
-
-        // Module is only filtered frontend (not sent to backend, same as Plates)
-        if (selectedModule) {
-          const rawModule = product.specs?.mw ?? product.specs?.module_size ?? '';
-          const moduleVal = typeof rawModule === 'string'
-            ? rawModule.trim()
-            : rawModule != null
-              ? String(rawModule).trim()
-              : '';
-          if (moduleVal !== selectedModule) return false;
-        }
-
-        if (selectedAmpere) {
-          const ampVal = normalizeAmpere(product.specs?.ampere);
-          if (ampVal !== selectedAmpere) return false;
-        }
-
-        if (selectedWireSize) {
-          const rawSize = (product.specs as any)?.size_sqmm ?? (product.specs as any)?.sizeSqmm;
-          const sizeVal = rawSize != null ? String(rawSize) : '';
-          if (sizeVal !== selectedWireSize) return false;
-        }
-
-        if (selectedCoreCount) {
-          const rawCore = (product.specs as any)?.core_count ?? (product.specs as any)?.coreCount ?? 1;
-          const coreVal = String(rawCore);
-          if (coreVal !== selectedCoreCount) return false;
-        }
-        return true;
-      });
-      
-      
-      // For Plates category, sort by module width (ascending)
-      let sortedItems = filteredItems;
-      if (category?.name === 'Plates') {
-        sortedItems = [...filteredItems].sort((a, b) => {
-          // Extract module value from product
-          const getModuleValue = (product: Product): number => {
-            const rawModule = product.specs?.mw ?? product.specs?.module_size ?? '';
-            if (typeof rawModule === 'number') {
-              return rawModule;
-            } else if (typeof rawModule === 'string') {
-              const match = rawModule.trim().match(/^(\d+(?:\.\d+)?)/);
-              return match ? parseFloat(match[1]) : 0;
-            }
-            return 0;
-          };
-          
-          const moduleA = getModuleValue(a);
-          const moduleB = getModuleValue(b);
-          
-          // Sort by module value ascending
-          if (moduleA > 0 && moduleB > 0) {
-            return moduleA - moduleB;
-          }
-          
-          // Products with modules come first
-          if (moduleA > 0 && moduleB === 0) return -1;
-          if (moduleA === 0 && moduleB > 0) return 1;
-          
-          // If both have no module, maintain original order (or sort by name)
-          return a.name.localeCompare(b.name);
-        });
-      }
-
-      if (isNewFilter) {
-        setProducts(sortedItems);
+      if (shoppingCategory) {
+        // Fetch all products across all DB categories in this shopping family
+        const response = await fetchProductsForShoppingCategory(resolvedSlug, { pageSize: 2000 });
+        setAllProducts(response.items);
+        setProducts(response.items.slice(0, fetchSize));
+        setHasMore(response.items.length > fetchSize);
       } else {
-        setProducts(prev => [...prev, ...sortedItems]);
+        setError('Category not found');
       }
-
-      setHasMore(response.items.length === (selectedModule ? 2000 : fetchSize));
-    } catch (error) {
-          } finally {
-      setFilterLoading(false);
+    } catch (err) {
+      setError('Failed to load category data');
+    } finally {
+      setLoading(false);
     }
-  }, [category, selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, sortBy, debouncedSearch, isWiresCategory]);
+  }, [resolvedSlug, shoppingCategory]);
 
   useEffect(() => {
     fetchInitialData();
   }, [fetchInitialData]);
 
-  // Helper functions to serialize/deserialize filters to/from URL params
+  // Filter products by active tab and filters
+  const filteredProducts = useMemo(() => {
+    let filtered = allProducts;
+
+    // Filter by active sub-section tab
+    if (activeTab !== 'all' && shoppingCategory) {
+      const tab = shoppingCategory.subSections.find(s => s.id === activeTab);
+      if (tab) {
+        filtered = filtered.filter(p => tab.dbCategories.includes(p.category));
+      }
+    }
+
+    // Apply brand filter
+    if (selectedBrands.length > 0) {
+      filtered = filtered.filter(p => selectedBrands.includes(p.brand));
+    }
+
+    // Apply series filter
+    if (selectedSeries.length > 0) {
+      filtered = filtered.filter(p => selectedSeries.includes(p.product_family));
+    }
+
+    // Apply subcategory filter
+    if (selectedSubcategory) {
+      filtered = filtered.filter(p =>
+        (p.subcategory || '').trim().toLowerCase() === selectedSubcategory.trim().toLowerCase()
+      );
+    }
+
+    // Apply color filter
+    if (selectedColor) {
+      filtered = filtered.filter(p => {
+        const rawColor = p.specs?.color;
+        const color = typeof rawColor === 'string' ? rawColor.trim() : rawColor != null ? String(rawColor).trim() : '';
+        return color === selectedColor;
+      });
+    }
+
+    // Apply module filter
+    if (selectedModule) {
+      filtered = filtered.filter(p => {
+        const rawModule = p.specs?.mw ?? p.specs?.module_size ?? '';
+        let moduleVal = '';
+        if (typeof rawModule === 'number') moduleVal = String(rawModule);
+        else if (typeof rawModule === 'string') {
+          const match = rawModule.trim().match(/^(\d+(?:\.\d+)?)/);
+          moduleVal = match ? match[1] : rawModule.trim();
+        }
+        return moduleVal === selectedModule;
+      });
+    }
+
+    // Apply ampere filter
+    if (selectedAmpere) {
+      filtered = filtered.filter(p => {
+        const ampVal = normalizeAmpere(p.specs?.ampere);
+        return ampVal === selectedAmpere;
+      });
+    }
+
+    // Apply wire size filter
+    if (selectedWireSize) {
+      filtered = filtered.filter(p => {
+        const rawSize = (p.specs as any)?.size_sqmm ?? (p.specs as any)?.sizeSqmm;
+        const sizeVal = rawSize != null ? String(rawSize) : '';
+        return sizeVal === selectedWireSize;
+      });
+    }
+
+    // Apply core count filter
+    if (selectedCoreCount) {
+      filtered = filtered.filter(p => {
+        const rawCore = (p.specs as any)?.core_count ?? (p.specs as any)?.coreCount ?? 1;
+        return String(rawCore) === selectedCoreCount;
+      });
+    }
+
+    // Apply capacity filter (for Geysers)
+    if (selectedCapacity) {
+      filtered = filtered.filter(p => {
+        const rawCap = (p.specs as any)?.capacity_liters;
+        return rawCap !== undefined && rawCap !== null && String(rawCap).trim() === selectedCapacity;
+      });
+    }
+
+    // Apply search
+    if (debouncedSearch) {
+      const q = debouncedSearch.toLowerCase();
+      filtered = filtered.filter(p =>
+        p.name.toLowerCase().includes(q) ||
+        p.brand.toLowerCase().includes(q) ||
+        p.sku.toLowerCase().includes(q) ||
+        (p.product_family || '').toLowerCase().includes(q)
+      );
+    }
+
+    // Apply sort
+    const sorted = [...filtered];
+    if (sortBy === 'price-asc') sorted.sort((a, b) => a.listPrice - b.listPrice);
+    else if (sortBy === 'price-desc') sorted.sort((a, b) => b.listPrice - a.listPrice);
+    else if (sortBy === 'name-desc') sorted.sort((a, b) => b.name.localeCompare(a.name));
+    else if (sortBy === 'name-asc') {
+      // Smart sort for shopping categories — natural product order
+      if (shoppingCategory?.slug === 'switches-sockets' || shoppingCategory?.slug === 'plates') {
+        sorted.sort((a, b) => {
+          const priorityDiff = getSmartSortPriority(a) - getSmartSortPriority(b);
+          if (priorityDiff !== 0) return priorityDiff;
+          return a.name.localeCompare(b.name);
+        });
+      } else {
+        sorted.sort((a, b) => a.name.localeCompare(b.name));
+      }
+    }
+
+    return sorted;
+  }, [
+    allProducts, activeTab, shoppingCategory, selectedBrands, selectedSeries,
+    selectedSubcategory, selectedColor, selectedModule, selectedAmpere,
+    selectedWireSize, selectedCoreCount, selectedCapacity, sortBy, debouncedSearch,
+  ]);
+
+  // Paginated products
+  const displayedProducts = useMemo(() => {
+    return filteredProducts.slice(0, page * fetchSize);
+  }, [filteredProducts, page, fetchSize]);
+
+  useEffect(() => {
+    setHasMore(displayedProducts.length < filteredProducts.length);
+  }, [displayedProducts, filteredProducts]);
+
+  // Available filter options computed from filtered products
+  const availableBrands = useMemo(() => {
+    const brandSet = new Set(filteredProducts.map(p => p.brand));
+    return brands.filter(b => brandSet.has(b.name));
+  }, [filteredProducts, brands]);
+
+  const availableSeries = useMemo(() => {
+    const seriesSet = new Set(filteredProducts.map(p => p.product_family).filter(Boolean));
+    return Array.from(seriesSet).sort();
+  }, [filteredProducts]);
+
+  const availableModules = useMemo(() => {
+    const modules = new Set<string>();
+    filteredProducts.forEach(p => {
+      const rawModule = p.specs?.mw ?? p.specs?.module_size ?? '';
+      let moduleVal = '';
+      if (typeof rawModule === 'number') moduleVal = String(rawModule);
+      else if (typeof rawModule === 'string') {
+        const match = rawModule.trim().match(/^(\d+(?:\.\d+)?)/);
+        moduleVal = match ? match[1] : rawModule.trim();
+      }
+      if (moduleVal) modules.add(moduleVal);
+    });
+    return Array.from(modules).sort((a, b) => (parseFloat(a) || 0) - (parseFloat(b) || 0));
+  }, [filteredProducts]);
+
+  const availableColors = useMemo(() => {
+    if (selectedSeries.length === 0 && !isWiresCategory) return [];
+    const source = isWiresCategory
+      ? filteredProducts
+      : filteredProducts.filter(p => selectedSeries.includes(p.product_family));
+    const colors = new Set<string>();
+    source.forEach(p => {
+      const rawColor = p.specs?.color;
+      const color = typeof rawColor === 'string' ? rawColor.trim() : rawColor != null ? String(rawColor).trim() : '';
+      if (color) colors.add(color);
+    });
+    return Array.from(colors).sort();
+  }, [filteredProducts, selectedSeries, isWiresCategory]);
+
+  const availableAmperes = useMemo(() => {
+    if (!isCircuitProtection) return [];
+    const ampereCounts = new Map<string, { label: string; count: number }>();
+    filteredProducts.forEach(p => {
+      const normalized = normalizeAmpere(p.specs?.ampere);
+      if (!normalized) return;
+      const label = /^[\d.]+$/.test(normalized) ? `${normalized}A` : (String(p.specs?.ampere).trim() || normalized);
+      const existing = ampereCounts.get(normalized);
+      if (existing) ampereCounts.set(normalized, { ...existing, count: existing.count + 1 });
+      else ampereCounts.set(normalized, { label, count: 1 });
+    });
+    return Array.from(ampereCounts.entries())
+      .map(([value, meta]) => ({ value, label: meta.label, count: meta.count }))
+      .sort((a, b) => (Number(a.value) || 0) - (Number(b.value) || 0));
+  }, [filteredProducts, isCircuitProtection]);
+
+  const availableWireSizes = useMemo(() => {
+    if (!isWiresCategory) return [];
+    const sizes = new Set<string>();
+    filteredProducts.forEach(p => {
+      const raw = (p.specs as any)?.size_sqmm ?? (p.specs as any)?.sizeSqmm;
+      if (raw !== undefined && raw !== null && raw !== '') sizes.add(String(raw));
+    });
+    return Array.from(sizes).sort((a, b) => Number(a) - Number(b));
+  }, [filteredProducts, isWiresCategory]);
+
+  const availableCoreCounts = useMemo(() => {
+    if (!isWiresCategory) return [];
+    const cores = new Set<string>();
+    filteredProducts.forEach(p => {
+      const raw = (p.specs as any)?.core_count ?? (p.specs as any)?.coreCount;
+      if (raw !== undefined && raw !== null && raw !== '') cores.add(String(raw));
+    });
+    return Array.from(cores).sort((a, b) => Number(a) - Number(b));
+  }, [filteredProducts, isWiresCategory]);
+
+  const availableSubcategories = useMemo(() => {
+    if (!isGeysersCategory) return [];
+    const subcats = new Map<string, number>();
+    allProducts.forEach(p => {
+      const sub = (p.subcategory || '').trim();
+      if (sub) subcats.set(sub, (subcats.get(sub) || 0) + 1);
+    });
+    return Array.from(subcats.entries())
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }, [allProducts, isGeysersCategory]);
+
+  const availableCapacities = useMemo(() => {
+    if (!isGeysersCategory) return [];
+    const caps = new Map<string, number>();
+    allProducts.forEach(p => {
+      const raw = p.specs?.capacity_liters;
+      if (raw !== undefined && raw !== null && raw !== '') {
+        const val = String(raw).trim();
+        if (val) caps.set(val, (caps.get(val) || 0) + 1);
+      }
+    });
+    return Array.from(caps.entries())
+      .map(([value, count]) => ({ value, count }))
+      .sort((a, b) => (parseFloat(a.value) || 0) - (parseFloat(b.value) || 0));
+  }, [allProducts, isGeysersCategory]);
+
+  // Tab counts
+  const tabCounts = useMemo(() => {
+    if (!shoppingCategory) return {};
+    const counts: Record<string, number> = {};
+    for (const tab of shoppingCategory.subSections) {
+      counts[tab.id] = allProducts.filter(p => tab.dbCategories.includes(p.category)).length;
+    }
+    return counts;
+  }, [allProducts, shoppingCategory]);
+
+  // URL filter sync
   const serializeFiltersToUrl = useCallback(() => {
     const params = new URLSearchParams();
-    
-    if (selectedBrands.length > 0) {
-      params.set('brands', selectedBrands.join(','));
-    }
-    if (selectedSeries.length > 0) {
-      params.set('series', selectedSeries.join(','));
-    }
-    if (selectedSubcategory) {
-      params.set('subcategory', selectedSubcategory);
-    }
-    // Only serialize selectedProductFamily for wires category
-    if (isWiresCategory && selectedProductFamily) {
-      params.set('family', selectedProductFamily);
-    }
-    if (selectedColor) {
-      params.set('color', selectedColor);
-    }
-    if (selectedModule) {
-      params.set('module', selectedModule);
-    }
-    if (selectedAmpere) {
-      params.set('ampere', selectedAmpere);
-    }
-    if (selectedWireSize) {
-      params.set('wireSize', selectedWireSize);
-    }
-    if (selectedCoreCount) {
-      params.set('coreCount', selectedCoreCount);
-    }
-    if (sortBy !== 'name-asc') {
-      params.set('sort', sortBy);
-    }
-    if (localSearch) {
-      params.set('search', localSearch);
-    }
-    
+    if (selectedBrands.length > 0) params.set('brands', selectedBrands.join(','));
+    if (selectedSeries.length > 0) params.set('series', selectedSeries.join(','));
+    if (selectedSubcategory) params.set('subcategory', selectedSubcategory);
+    if (selectedColor) params.set('color', selectedColor);
+    if (selectedModule) params.set('module', selectedModule);
+    if (selectedAmpere) params.set('ampere', selectedAmpere);
+    if (selectedWireSize) params.set('wireSize', selectedWireSize);
+    if (selectedCoreCount) params.set('coreCount', selectedCoreCount);
+    if (selectedCapacity) params.set('capacity', selectedCapacity);
+    if (sortBy !== 'name-asc') params.set('sort', sortBy);
+    if (localSearch) params.set('search', localSearch);
+    if (activeTab !== 'all') params.set('tab', activeTab);
     return params;
-  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, sortBy, localSearch, isWiresCategory]);
+  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, selectedCapacity, sortBy, localSearch, activeTab]);
 
-  // Track if we're restoring filters to avoid saving during restoration
   const isRestoringFilters = useRef(false);
-  const previousCategoryRef = useRef<string | null>(null);
-  const preservedFiltersRef = useRef<{
-    brands: string[];
-    series: string[];
-    color: string | null;
-  }>({ brands: [], series: [], color: null });
-  
-  // Categories that should clear brand/series/color filters when switching TO them
-  const categoriesThatClearBrandSeriesColor = ['Boxes', 'Circuit Protection', 'Wires & Cables'];
+  const hasInitializedFromUrl = useRef(false);
 
-  // Restore filters from URL when component mounts or slug changes
+  // Restore filters from URL
   useEffect(() => {
     isRestoringFilters.current = true;
-    
-    const currentCategoryName = category?.name || null;
-    const previousCategoryName = previousCategoryRef.current;
-    
-    // Check if we should clear brand/series/color filters
-    const shouldClearBrandSeriesColor = currentCategoryName && categoriesThatClearBrandSeriesColor.includes(currentCategoryName);
-    
-    // Get URL params
+    hasInitializedFromUrl.current = true;
     const brandsParam = searchParams.get('brands');
     const seriesParam = searchParams.get('series');
     const subcategoryParam = searchParams.get('subcategory');
-    const familyParam = searchParams.get('family');
     const colorParam = searchParams.get('color');
     const moduleParam = searchParams.get('module');
     const ampereParam = searchParams.get('ampere');
     const wireSizeParam = searchParams.get('wireSize');
     const coreCountParam = searchParams.get('coreCount');
+    const capacityParam = searchParams.get('capacity');
     const sortParam = searchParams.get('sort');
     const searchParam = searchParams.get('search');
-    
-    // Handle brand, series, and color filters - preserve across categories unless switching TO excluded categories
-    if (shouldClearBrandSeriesColor) {
-      // Clear brand, series, and color when switching TO excluded categories
-      setSelectedBrands([]);
-      setSelectedSeries([]);
-      setSelectedColor(null);
-      preservedFiltersRef.current = { brands: [], series: [], color: null };
-    } else {
-      // Preserve brand, series, and color across category switches
-      // Priority: URL params > preserved filters > empty
-      if (brandsParam) {
-        const brands = brandsParam.split(',').filter(Boolean);
-        setSelectedBrands(brands);
-        preservedFiltersRef.current.brands = brands;
-      } else if (previousCategoryName && !categoriesThatClearBrandSeriesColor.includes(previousCategoryName)) {
-        // If coming from a non-excluded category, preserve previous filters
-        if (preservedFiltersRef.current.brands.length > 0) {
-          setSelectedBrands(preservedFiltersRef.current.brands);
-        } else {
-          setSelectedBrands([]);
-        }
-      } else {
-        setSelectedBrands([]);
-      }
-      
-      if (seriesParam) {
-        const series = seriesParam.split(',').filter(Boolean);
-        setSelectedSeries(series);
-        preservedFiltersRef.current.series = series;
-      } else if (previousCategoryName && !categoriesThatClearBrandSeriesColor.includes(previousCategoryName)) {
-        if (preservedFiltersRef.current.series.length > 0) {
-          setSelectedSeries(preservedFiltersRef.current.series);
-        } else {
-          setSelectedSeries([]);
-        }
-      } else {
-        setSelectedSeries([]);
-      }
-      
-      if (colorParam) {
-        setSelectedColor(colorParam);
-        preservedFiltersRef.current.color = colorParam;
-      } else if (previousCategoryName && !categoriesThatClearBrandSeriesColor.includes(previousCategoryName)) {
-        if (preservedFiltersRef.current.color) {
-          setSelectedColor(preservedFiltersRef.current.color);
-        } else {
-          setSelectedColor(null);
-        }
-      } else {
-        setSelectedColor(null);
-      }
-    }
-    
-    // Restore other filters (category-specific)
-    if (subcategoryParam) {
-      setSelectedSubcategory(subcategoryParam);
-    } else {
-      // Clear subcategory when switching categories (it's category-specific)
-      setSelectedSubcategory(null);
-    }
-    
-    // Only restore selectedProductFamily for wires category
-    if (category?.name === 'Wires & Cables' && familyParam) {
-      setSelectedProductFamily(familyParam);
-    } else {
-      setSelectedProductFamily(null);
-    }
-    
-    // Clear category-specific filters when switching categories
-    if (moduleParam) {
-      setSelectedModule(moduleParam);
-    } else {
-      setSelectedModule(null);
-    }
-    
-    if (ampereParam) {
-      setSelectedAmpere(ampereParam);
-    } else {
-      setSelectedAmpere(null);
-    }
-    
-    if (wireSizeParam) {
-      setSelectedWireSize(wireSizeParam);
-    } else {
-      setSelectedWireSize(null);
-    }
-    
-    if (coreCountParam) {
-      setSelectedCoreCount(coreCountParam);
-    } else {
-      setSelectedCoreCount(null);
-    }
-    
-    if (sortParam && ['name-asc', 'name-desc', 'price-asc', 'price-desc', 'newest'].includes(sortParam)) {
+    const tabParam = searchParams.get('tab');
+
+    if (brandsParam) setSelectedBrands(brandsParam.split(',').filter(Boolean));
+    if (seriesParam) setSelectedSeries(seriesParam.split(',').filter(Boolean));
+    if (subcategoryParam) setSelectedSubcategory(subcategoryParam);
+    if (colorParam) setSelectedColor(colorParam);
+    if (moduleParam) setSelectedModule(moduleParam);
+    if (ampereParam) setSelectedAmpere(ampereParam);
+    if (wireSizeParam) setSelectedWireSize(wireSizeParam);
+    if (coreCountParam) setSelectedCoreCount(coreCountParam);
+    if (capacityParam) setSelectedCapacity(capacityParam);
+    if (sortParam && ['name-asc', 'name-desc', 'price-asc', 'price-desc'].includes(sortParam)) {
       setSortBy(sortParam as SortOption);
     }
-    
-    if (searchParam !== null) {
-      setLocalSearch(searchParam);
-    } else {
-      setLocalSearch('');
-    }
-    
+    if (searchParam !== null) setLocalSearch(searchParam);
+    if (tabParam) setActiveTab(tabParam);
+
     setPage(1);
-    
-    // Update preserved filters from current state (for next category switch)
-    if (!shouldClearBrandSeriesColor && currentCategoryName) {
-      preservedFiltersRef.current = {
-        brands: brandsParam ? brandsParam.split(',').filter(Boolean) : preservedFiltersRef.current.brands,
-        series: seriesParam ? seriesParam.split(',').filter(Boolean) : preservedFiltersRef.current.series,
-        color: colorParam || preservedFiltersRef.current.color,
-      };
-    }
-    
-    // Update previous category ref
-    previousCategoryRef.current = currentCategoryName;
-    
-    // Mark restoration as complete after a brief delay
-    setTimeout(() => {
-      isRestoringFilters.current = false;
-    }, 200);
-  }, [slug, category, searchParams]); // Depend on slug, category, and searchParams to handle category changes
+    setTimeout(() => { isRestoringFilters.current = false; }, 200);
+  }, [slug, searchParams]);
 
-  // Save filters to URL when they change (but not during restoration)
+  // Save filters to URL
   useEffect(() => {
-    if (isRestoringFilters.current) {
-      return;
-    }
-    
-    // Update preserved filters ref when brand/series/color change (for non-excluded categories)
-    if (category && !categoriesThatClearBrandSeriesColor.includes(category.name)) {
-      preservedFiltersRef.current = {
-        brands: selectedBrands,
-        series: selectedSeries,
-        color: selectedColor,
-      };
-    }
-    
+    if (isRestoringFilters.current || !hasInitializedFromUrl.current) return;
     const params = serializeFiltersToUrl();
-    // Preserve existing search param if not set by filters
-    if (!params.has('search') && searchQuery) {
-      params.set('search', searchQuery);
-    }
-    
+    if (!params.has('search') && searchQuery) params.set('search', searchQuery);
     setSearchParams(params, { replace: true });
-  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, sortBy, localSearch, serializeFiltersToUrl, setSearchParams, searchQuery, category]);
+  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, selectedCapacity, sortBy, localSearch, activeTab, serializeFiltersToUrl, setSearchParams, searchQuery]);
 
-  // Clear subcategory filter when switching away from Circuit Protection
+  // Track category view
   useEffect(() => {
-    if (category && category.name !== 'Circuit Protection' && selectedSubcategory) {
-      setSelectedSubcategory(null);
-    }
-  }, [category, selectedSubcategory]);
+    if (shoppingCategory) trackCategoryView(shoppingCategory.displayName);
+  }, [shoppingCategory, trackCategoryView]);
 
-  useEffect(() => {
-    if (!loading && category) {
-      const timer = setTimeout(() => {
-        setPage(1);
-        fetchFilteredProducts(1, true);
-      }, 100);
-      return () => clearTimeout(timer);
-    }
-  }, [selectedBrands, selectedSeries, selectedSubcategory, selectedProductFamily, selectedColor, selectedModule, selectedAmpere, selectedWireSize, selectedCoreCount, sortBy, debouncedSearch, loading, category, fetchFilteredProducts]);
-
-  // For wires category, keep the top brand selector (ProductFamilyFilter) and sidebar Brands in sync
-  useEffect(() => {
-    if (!isWiresCategory) return;
-    if (selectedProductFamily) {
-      setSelectedBrands((prev) =>
-        prev.length === 1 && prev[0] === selectedProductFamily ? prev : [selectedProductFamily]
-      );
-    } else if (selectedBrands.length === 1) {
-      // If brand chip is cleared, also clear sidebar single-brand selection
-      setSelectedBrands([]);
-    }
-  }, [isWiresCategory, selectedProductFamily, selectedBrands.length]);
-
-  const loadMore = useCallback(() => {
-    if (!filterLoading && hasMore) {
-      const nextPage = page + 1;
-      setPage(nextPage);
-      fetchFilteredProducts(nextPage, false);
-    }
-  }, [page, filterLoading, hasMore, fetchFilteredProducts]);
-
-  // Get available families/series/brands/modules from all category products
-  const productFamilies = useMemo(() => {
-    const families = new Map<string, Product[]>();
-    allProducts.forEach(product => {
-      const family = product.product_family || 'Unknown';
-      if (!families.has(family)) {
-        families.set(family, []);
-      }
-      families.get(family)!.push(product);
-    });
-    return Array.from(families.entries())
-      .map(([family, prods]) => ({ name: family, count: prods.length, products: prods }))
-      .sort((a, b) => b.count - a.count);
-  }, [allProducts]);
-
-  const availableBrands = useMemo(() => {
-    const brandSet = new Set(allProducts.map(p => p.brand));
-    return brands.filter(b => brandSet.has(b.name));
-  }, [allProducts, brands]);
-
-  const availableSeries = useMemo(() => {
-    const source = selectedBrands.length
-      ? allProducts.filter(p => selectedBrands.includes(p.brand))
-      : allProducts;
-    const seriesSet = new Set(source.map(p => p.product_family).filter(Boolean));
-    return Array.from(seriesSet).sort();
-  }, [allProducts, selectedBrands]);
-
-  // Subcategories for Circuit Protection - ordered as specified
-  const availableSubcategories = useMemo(() => {
-    if (category?.name !== 'Circuit Protection') return [];
-    
-    // Filter products by selected brands if any are selected
-    let sourceProducts = allProducts;
-    if (selectedBrands.length > 0) {
-      sourceProducts = allProducts.filter(p => selectedBrands.includes(p.brand));
-    }
-    
-    const subcategoryMap = new Map<string, number>();
-    sourceProducts.forEach(p => {
-      if (p.subcategory) {
-        // Use the exact subcategory value from the product
-        const subcat = p.subcategory.trim();
-        subcategoryMap.set(subcat, (subcategoryMap.get(subcat) || 0) + 1);
-      }
-    });
-
-    // Log available subcategories for debugging
-            
-    // Define the order: MCBs first, then ELCB/RCCB, then Isolators, then others
-    const orderPriority: Record<string, number> = {
-      'Miniature Circuit Breakers (MCBs)': 1,
-      'Residual Current Circuit Breakers (RCCBs/ELCBs)': 2,
-      'Isolators': 3,
-    };
-
-    return Array.from(subcategoryMap.entries())
-      .map(([name, count]) => ({ name, count }))
-      .sort((a, b) => {
-        const priorityA = orderPriority[a.name] || 999;
-        const priorityB = orderPriority[b.name] || 999;
-        if (priorityA !== priorityB) return priorityA - priorityB;
-        return a.name.localeCompare(b.name);
-      });
-  }, [allProducts, category, selectedBrands]);
-
-  const availableColors = useMemo(() => {
-    // For wires category, use selectedProductFamily
-    if (isWiresCategory) {
-      if (!selectedProductFamily) return [];
-      const familyProducts = productFamilies.find(f => f.name === selectedProductFamily)?.products || [];
-      const colors = new Set<string>();
-      familyProducts.forEach(p => {
-        const rawColor = p.specs?.color;
-        if (typeof rawColor === 'string') {
-          const trimmed = rawColor.trim();
-          if (trimmed) colors.add(trimmed);
-        } else if (rawColor != null) {
-          const trimmed = String(rawColor).trim();
-          if (trimmed) colors.add(trimmed);
-        }
-      });
-      return Array.from(colors).sort();
-    }
-    
-    // For non-wires categories, use selectedSeries
-    if (selectedSeries.length === 0) return [];
-    const seriesProducts = allProducts.filter(p => selectedSeries.includes(p.product_family));
-    const colors = new Set<string>();
-    seriesProducts.forEach(p => {
-      const rawColor = p.specs?.color;
-      if (typeof rawColor === 'string') {
-        const trimmed = rawColor.trim();
-        if (trimmed) colors.add(trimmed);
-      } else if (rawColor != null) {
-        const trimmed = String(rawColor).trim();
-        if (trimmed) colors.add(trimmed);
-      }
-    });
-    return Array.from(colors).sort();
-  }, [productFamilies, selectedProductFamily, selectedSeries, allProducts, isWiresCategory]);
-
-  const availableModules = useMemo(() => {
-    let source = allProducts;
-    if (selectedBrands.length) {
-      source = source.filter(p => selectedBrands.includes(p.brand));
-    }
-    if (selectedSeries.length) {
-      source = source.filter(p => selectedSeries.includes(p.product_family));
-    }
-    // For wires category, also filter by selectedProductFamily (which acts as brand)
-    if (isWiresCategory && selectedProductFamily) {
-      source = source.filter(p => p.brand === selectedProductFamily);
-    }
-    const modules = new Set<string>();
-    source.forEach(p => {
-      const rawModule = p.specs?.mw ?? p.specs?.module_size ?? '';
-      let moduleVal = '';
-      
-      if (typeof rawModule === 'number') {
-        // If it's a number, convert to string
-        moduleVal = String(rawModule);
-      } else if (typeof rawModule === 'string') {
-        // If it's a string, extract the number part (e.g., "2M" -> "2", "12" -> "12")
-        const match = rawModule.trim().match(/^(\d+(?:\.\d+)?)/);
-        moduleVal = match ? match[1] : rawModule.trim();
-      }
-      
-      if (moduleVal) modules.add(moduleVal);
-    });
-    
-    // Sort modules numerically: 1, 2, 3, 4, 6, 8, 12, 16, 18, etc.
-    const sorted = Array.from(modules).sort((a, b) => {
-      // Extract numeric value from module string
-      const numA = parseFloat(a) || 0;
-      const numB = parseFloat(b) || 0;
-      
-      // If both are valid numbers, sort numerically
-      if (numA > 0 && numB > 0) {
-        return numA - numB;
-      }
-      
-      // If one is not a number, put numbers first
-      if (numA > 0 && numB === 0) return -1;
-      if (numA === 0 && numB > 0) return 1;
-      
-      // If neither is a number, sort alphabetically
-      return a.localeCompare(b);
-    });
-    
-    return sorted;
-  }, [allProducts, selectedBrands, selectedSeries, selectedProductFamily, isWiresCategory]);
-
-  // For non-Wires categories, compute product families (series) limited to the currently selected brands
-  const brandFilteredFamilies = useMemo(() => {
-    if (isWiresCategory) return [];
-    
-    // If no brands selected, show all families
-    if (!selectedBrands.length) {
-      return productFamilies;
-    }
-
-    // If brands selected, filter families by those brands
-    return productFamilies
-      .map(family => {
-        const brandMatchedProducts = family.products.filter(p => selectedBrands.includes(p.brand));
-        return {
-          ...family,
-          count: brandMatchedProducts.length,
-          products: brandMatchedProducts,
-        };
-      })
-      .filter(family => family.count > 0)
-      .sort((a, b) => b.count - a.count);
-  }, [productFamilies, selectedBrands, isWiresCategory]);
-
-  const availableWireSizes = useMemo(() => {
-    if (category?.name !== 'Wires & Cables') return [];
-    const sizes = new Set<string>();
-    allProducts.forEach(p => {
-      const raw = (p.specs as any)?.size_sqmm ?? (p.specs as any)?.sizeSqmm;
-      if (raw !== undefined && raw !== null && raw !== '') {
-        sizes.add(String(raw));
-      }
-    });
-    return Array.from(sizes).sort((a, b) => Number(a) - Number(b));
-  }, [allProducts, category]);
-
-  const availableCoreCounts = useMemo(() => {
-    if (category?.name !== 'Wires & Cables') return [];
-    const cores = new Set<string>();
-    allProducts.forEach(p => {
-      const raw = (p.specs as any)?.core_count ?? (p.specs as any)?.coreCount;
-      if (raw !== undefined && raw !== null && raw !== '') {
-        cores.add(String(raw));
-      }
-    });
-    return Array.from(cores).sort((a, b) => Number(a) - Number(b));
-  }, [allProducts, category]);
-
-  const availableAmperes = useMemo(() => {
-    if (category?.name !== 'Circuit Protection') return [];
-
-    let source = allProducts;
-    if (selectedBrands.length) {
-      source = source.filter(p => selectedBrands.includes(p.brand));
-    }
-    if (selectedSubcategory) {
-      const selected = selectedSubcategory.trim().toLowerCase();
-      source = source.filter(p => (p.subcategory || '').trim().toLowerCase() === selected);
-    }
-    if (selectedSeries.length) {
-      source = source.filter(p => selectedSeries.includes(p.product_family));
-    }
-
-    const ampereCounts = new Map<string, { label: string; count: number }>();
-
-    source.forEach(p => {
-      const normalized = normalizeAmpere(p.specs?.ampere);
-      if (!normalized) return;
-      const label = /^[\d.]+$/.test(normalized) ? `${normalized}A` : (String(p.specs?.ampere).trim() || normalized);
-      const existing = ampereCounts.get(normalized);
-      if (existing) {
-        ampereCounts.set(normalized, { ...existing, count: existing.count + 1 });
-      } else {
-        ampereCounts.set(normalized, { label, count: 1 });
-      }
-    });
-
-    return Array.from(ampereCounts.entries())
-      .map(([value, meta]) => ({ value, label: meta.label, count: meta.count }))
-      .sort((a, b) => {
-        const numA = Number(a.value);
-        const numB = Number(b.value);
-        if (!Number.isNaN(numA) && !Number.isNaN(numB)) {
-          return numA - numB;
-        }
-        return a.label.localeCompare(b.label);
-      });
-      }, [allProducts, category, selectedBrands, selectedSubcategory, selectedSeries]);
-
-  // When brand changes, clear invalid series (but don't auto-select)
-  useEffect(() => {
-    if (!selectedBrands.length) {
-      setSelectedSeries([]);
-      return;
-    }
-    const validSeries = availableSeries;
-    setSelectedSeries(prev => {
-      // Only keep valid series, remove invalid ones
-      const stillValid = prev.filter(s => validSeries.includes(s));
-      // If more than one series is selected, keep only the first one
-      return stillValid.length > 0 ? [stillValid[0]] : [];
-    });
-  }, [availableSeries, selectedBrands]);
-
-  // Infinite scroll hook
-  const { elementRef: loadMoreRef } = useInfiniteScroll({
-    hasMore,
-    loading: filterLoading,
-    onLoadMore: loadMore,
-    threshold: 300,
-  });
-
-  useEffect(() => {
-    if (category) {
-      trackCategoryView(category.name);
-    }
-  }, [category, trackCategoryView]);
-
-  useEffect(() => {
-    setLocalSearch(searchQuery);
-  }, [searchQuery]);
-
-  const toggleBrand = (brandName: string) => {
-    setSelectedBrands(prev =>
-      prev.includes(brandName)
-        ? prev.filter(b => b !== brandName)
-        : [...prev, brandName]
-    );
-    // Smooth scroll to top when filter changes
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const toggleSeries = (seriesName: string) => {
-    setSelectedSeries(prev => {
-      // Single selection: if already selected, deselect; otherwise, select only this one
-      if (prev.includes(seriesName)) {
-        return [];
-      } else {
-        return [seriesName];
-      }
-    });
-    // Smooth scroll to top when filter changes
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const clearFilters = () => {
+  // Clear filters when tab changes
+  const handleTabChange = useCallback((tabId: string) => {
+    setActiveTab(tabId);
     setSelectedBrands([]);
     setSelectedSeries([]);
     setSelectedSubcategory(null);
-    setSelectedProductFamily(null);
     setSelectedColor(null);
     setSelectedModule(null);
     setSelectedAmpere(null);
     setSelectedWireSize(null);
     setSelectedCoreCount(null);
+    setSelectedCapacity(null);
+    setPage(1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  const clearFilters = useCallback(() => {
+    setSelectedBrands([]);
+    setSelectedSeries([]);
+    setSelectedSubcategory(null);
+    setSelectedColor(null);
+    setSelectedModule(null);
+    setSelectedAmpere(null);
+    setSelectedWireSize(null);
+    setSelectedCoreCount(null);
+    setSelectedCapacity(null);
     setLocalSearch('');
-  };
+    setPage(1);
+  }, []);
 
   const hasActiveFilters = selectedBrands.length > 0 || selectedSeries.length > 0 ||
     selectedSubcategory !== null || selectedColor !== null || selectedModule !== null ||
-    selectedAmpere !== null || selectedWireSize !== null || selectedCoreCount !== null ||
-    localSearch;
+    selectedAmpere !== null || selectedWireSize !== null || selectedCoreCount !== null || selectedCapacity !== null || localSearch;
 
-  // Sort products by module width for Plates category
-  const sortedProducts = useMemo(() => {
-    if (category?.name !== 'Plates') {
-      return products;
-    }
-    
-    return [...products].sort((a, b) => {
-      // Extract module value from product
-      const getModuleValue = (product: Product): number => {
-        const rawModule = product.specs?.mw ?? product.specs?.module_size ?? '';
-        if (typeof rawModule === 'number') {
-          return rawModule;
-        } else if (typeof rawModule === 'string') {
-          const match = rawModule.trim().match(/^(\d+(?:\.\d+)?)/);
-          return match ? parseFloat(match[1]) : 0;
-        }
-        return 0;
-      };
-      
-      const moduleA = getModuleValue(a);
-      const moduleB = getModuleValue(b);
-      
-      // Sort by module value ascending
-      if (moduleA > 0 && moduleB > 0) {
-        return moduleA - moduleB;
-      }
-      
-      // Products with modules come first
-      if (moduleA > 0 && moduleB === 0) return -1;
-      if (moduleA === 0 && moduleB > 0) return 1;
-      
-      // If both have no module, maintain original order (or sort by name)
-      return a.name.localeCompare(b.name);
-    });
-  }, [products, category]);
+  const toggleBrand = (brandName: string) => {
+    setSelectedBrands(prev => prev.includes(brandName) ? prev.filter(b => b !== brandName) : [...prev, brandName]);
+    setPage(1);
+  };
+
+  const toggleSeries = (seriesName: string) => {
+    setSelectedSeries(prev => prev.includes(seriesName) ? [] : [seriesName]);
+    setPage(1);
+  };
+
+  // Next category in shopping flow
+  const nextCategory = shoppingCategory?.nextStepSlug
+    ? getShoppingCategory(shoppingCategory.nextStepSlug)
+    : undefined;
+
+  // Loading state
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-white dark:bg-black">
+        <Header />
+        <main className="pt-24 pb-16">
+          <div className="flex justify-center items-center py-20">
+            <LoadingSpinner size="lg" text="Loading products..." />
+          </div>
+        </main>
+        <Footer />
+        <WhatsAppFab />
+      </div>
+    );
+  }
+
+  // Error state
+  if (error || !shoppingCategory) {
+    return (
+      <div className="min-h-screen bg-white dark:bg-black">
+        <Header />
+        <main className="pt-24 pb-16">
+          <div className="max-w-[1600px] mx-auto px-4 md:px-6">
+            <div className="text-center py-20">
+              <h1 className="text-2xl font-semibold mb-4">
+                {error || 'Category not found'}
+              </h1>
+              <p className="text-muted-foreground mb-6">
+                The category you're looking for doesn't exist or has been moved.
+              </p>
+              <Link to="/categories">
+                <Button>Browse All Categories</Button>
+              </Link>
+            </div>
+          </div>
+        </main>
+        <Footer />
+        <WhatsAppFab />
+      </div>
+    );
+  }
 
   const FilterContent = () => (
     <div className="space-y-6">
@@ -1004,14 +648,14 @@ const CategoryPage = () => {
           <Input
             placeholder="Search products..."
             value={localSearch}
-            onChange={(e) => setLocalSearch(e.target.value)}
+            onChange={(e) => { setLocalSearch(e.target.value); setPage(1); }}
             className="pl-10"
           />
         </div>
       </div>
 
-      {/* Colors (depends on series/family) */}
-      {((isWiresCategory && selectedProductFamily) || (!isWiresCategory && selectedSeries.length > 0)) && availableColors.length > 0 && (
+      {/* Colors */}
+      {availableColors.length > 0 && (
         <div className="space-y-3">
           <Label>Available Colors</Label>
           <div className="flex flex-wrap gap-2">
@@ -1020,10 +664,8 @@ const CategoryPage = () => {
                 key={color}
                 variant={selectedColor === color ? "secondary" : "outline"}
                 size="sm"
-                onClick={() => setSelectedColor(prev => prev === color ? null : color)}
-                className="gap-2"
+                onClick={() => { setSelectedColor(prev => prev === color ? null : color); setPage(1); }}
               >
-                <span className="inline-block w-3 h-3 rounded-full bg-muted-foreground/40" />
                 {color}
               </Button>
             ))}
@@ -1032,67 +674,69 @@ const CategoryPage = () => {
       )}
 
       {/* Brands */}
-      <div className="space-y-3">
-        <Label>Brands</Label>
-        <div className="space-y-2 max-h-48 overflow-y-auto">
-          {availableBrands.map(brand => (
-            <label
-              key={brand.id}
-              className="flex items-center gap-3 cursor-pointer hover:bg-secondary/50 p-2 rounded-lg transition-colors"
-            >
-              <Checkbox
-                checked={selectedBrands.includes(brand.name)}
-                onCheckedChange={() => toggleBrand(brand.name)}
-              />
-              <span className="text-sm">{brand.name}</span>
-              <span className="text-xs text-muted-foreground ml-auto">
-                ({allProducts.filter(p => p.brand === brand.name).length})
-              </span>
-            </label>
-          ))}
-        </div>
-      </div>
-
-      {/* Wire Size (sqmm) - Wires & Cables */}
-      {category?.name === 'Wires & Cables' && availableWireSizes.length > 0 && (
+      {availableBrands.length > 0 && (
         <div className="space-y-3">
-          <Label>Wire Size (sqmm)</Label>
-          <div className="flex flex-wrap gap-2">
-            {availableWireSizes.map(size => (
-              <Button
-                key={size}
-                variant={selectedWireSize === size ? "secondary" : "outline"}
-                size="sm"
-                onClick={() => setSelectedWireSize(prev => prev === size ? null : size)}
+          <Label>Brands</Label>
+          <div className="space-y-2 max-h-48 overflow-y-auto">
+            {availableBrands.map(brand => (
+              <label
+                key={brand.id}
+                className="flex items-center gap-3 cursor-pointer hover:bg-secondary/50 p-2 rounded-lg transition-colors"
               >
-                {size}
+                <Checkbox
+                  checked={selectedBrands.includes(brand.name)}
+                  onCheckedChange={() => toggleBrand(brand.name)}
+                />
+                <span className="text-sm">{brand.name}</span>
+                <span className="text-xs text-muted-foreground ml-auto">
+                  ({allProducts.filter(p => p.brand === brand.name && (activeTab === 'all' || shoppingCategory.subSections.find(s => s.id === activeTab)?.dbCategories.includes(p.category))).length})
+                </span>
+              </label>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Subcategory / Type (for Geysers) */}
+      {availableSubcategories.length > 0 && (
+        <div className="space-y-3">
+          <Label>Type</Label>
+          <div className="flex flex-wrap gap-2">
+            {availableSubcategories.map(sub => (
+              <Button
+                key={sub.name}
+                variant={selectedSubcategory === sub.name ? "secondary" : "outline"}
+                size="sm"
+                onClick={() => { setSelectedSubcategory(prev => prev === sub.name ? null : sub.name); setPage(1); }}
+              >
+                {sub.name} ({sub.count})
               </Button>
             ))}
           </div>
         </div>
       )}
 
-      {/* Core Count - Wires & Cables */}
-      {category?.name === 'Wires & Cables' && availableCoreCounts.length > 0 && (
+      {/* Capacity (for Geysers) */}
+      {availableCapacities.length > 0 && (
         <div className="space-y-3">
-          <Label>Wire Core</Label>
+          <Label>Capacity (Liters)</Label>
           <div className="flex flex-wrap gap-2">
-            {availableCoreCounts.map(core => (
+            {availableCapacities.map(cap => (
               <Button
-                key={core}
-                variant={selectedCoreCount === core ? "secondary" : "outline"}
+                key={cap.value}
+                variant={selectedCapacity === cap.value ? "secondary" : "outline"}
                 size="sm"
-                onClick={() => setSelectedCoreCount(prev => prev === core ? null : core)}
+                onClick={() => { setSelectedCapacity(prev => prev === cap.value ? null : cap.value); setPage(1); }}
               >
-                {core} Core
+                {cap.value}L ({cap.count})
               </Button>
             ))}
           </div>
         </div>
       )}
 
-      {/* Series - Only show for non-Circuit Protection categories, filtered by selected brands */}
-      {category?.name !== 'Circuit Protection' && availableSeries.length > 0 && (
+      {/* Series */}
+      {availableSeries.length > 0 && (
         <div className="space-y-3">
           <Label>Series</Label>
           <div className="space-y-2 max-h-48 overflow-y-auto">
@@ -1107,7 +751,7 @@ const CategoryPage = () => {
                 />
                 <span className="text-sm">{series}</span>
                 <span className="text-xs text-muted-foreground ml-auto">
-                  ({allProducts.filter(p => p.product_family === series && (selectedBrands.length === 0 || selectedBrands.includes(p.brand))).length})
+                  ({filteredProducts.filter(p => p.product_family === series).length})
                 </span>
               </label>
             ))}
@@ -1115,45 +759,17 @@ const CategoryPage = () => {
         </div>
       )}
 
-      {/* Subcategory - Only show for Circuit Protection */}
-      {category?.name === 'Circuit Protection' && availableSubcategories.length > 0 && (
-        <div className="space-y-3">
-          <Label>Subcategory</Label>
-          <div className="space-y-2 max-h-48 overflow-y-auto">
-            {availableSubcategories.map(subcat => (
-              <label
-                key={subcat.name}
-                className="flex items-center gap-3 cursor-pointer hover:bg-secondary/50 p-2 rounded-lg transition-colors"
-              >
-                <Checkbox
-                  checked={selectedSubcategory === subcat.name}
-                  onCheckedChange={() => {
-                    setSelectedSubcategory(prev => prev === subcat.name ? null : subcat.name);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                />
-                <span className="text-sm">{subcat.name}</span>
-                <span className="text-xs text-muted-foreground ml-auto">
-                  ({subcat.count})
-                </span>
-              </label>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Module (Plates) */}
+      {/* Module size */}
       {availableModules.length > 0 && (
         <div className="space-y-3">
-          <Label>Module</Label>
+          <Label>Module Size</Label>
           <div className="flex flex-wrap gap-2">
             {availableModules.map(moduleVal => (
               <Button
                 key={moduleVal}
                 variant={selectedModule === moduleVal ? "secondary" : "outline"}
                 size="sm"
-                onClick={() => setSelectedModule(prev => prev === moduleVal ? null : moduleVal)}
-                className="gap-2"
+                onClick={() => { setSelectedModule(prev => prev === moduleVal ? null : moduleVal); setPage(1); }}
               >
                 {moduleVal}M
               </Button>
@@ -1163,7 +779,7 @@ const CategoryPage = () => {
       )}
 
       {/* Ampere - Circuit Protection */}
-      {category?.name === 'Circuit Protection' && availableAmperes.length > 0 && (
+      {isCircuitProtection && availableAmperes.length > 0 && (
         <div className="space-y-3">
           <Label>Ampere</Label>
           <div className="flex flex-wrap gap-2">
@@ -1172,7 +788,7 @@ const CategoryPage = () => {
                 key={amp.value}
                 variant={selectedAmpere === amp.value ? "secondary" : "outline"}
                 size="sm"
-                onClick={() => setSelectedAmpere(prev => prev === amp.value ? null : amp.value)}
+                onClick={() => { setSelectedAmpere(prev => prev === amp.value ? null : amp.value); setPage(1); }}
               >
                 {amp.label}
               </Button>
@@ -1181,310 +797,322 @@ const CategoryPage = () => {
         </div>
       )}
 
+      {/* Wire Size */}
+      {isWiresCategory && availableWireSizes.length > 0 && (
+        <div className="space-y-3">
+          <Label>Wire Size (sqmm)</Label>
+          <div className="flex flex-wrap gap-2">
+            {availableWireSizes.map(size => (
+              <Button
+                key={size}
+                variant={selectedWireSize === size ? "secondary" : "outline"}
+                size="sm"
+                onClick={() => { setSelectedWireSize(prev => prev === size ? null : size); setPage(1); }}
+              >
+                {size}
+              </Button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Core Count */}
+      {isWiresCategory && availableCoreCounts.length > 0 && (
+        <div className="space-y-3">
+          <Label>Wire Core</Label>
+          <div className="flex flex-wrap gap-2">
+            {availableCoreCounts.map(core => (
+              <Button
+                key={core}
+                variant={selectedCoreCount === core ? "secondary" : "outline"}
+                size="sm"
+                onClick={() => { setSelectedCoreCount(prev => prev === core ? null : core); setPage(1); }}
+              >
+                {core} Core
+              </Button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Clear Filters */}
       {hasActiveFilters && (
-        <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-          <Button variant="outline" className="w-full" onClick={() => {
-            clearFilters();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}>
-            Clear All Filters
-          </Button>
-        </motion.div>
+        <Button variant="outline" className="w-full" onClick={() => { clearFilters(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+          Clear All Filters
+        </Button>
       )}
     </div>
   );
 
-  // Simplified Category List Item for Sidebar
-  const CategoryListItem = ({ cat, isActive }: { cat: Category; isActive: boolean }) => {
-    const IconComponent = iconMap[cat.icon] || Package;
-
-    return (
-      <Link
-        to={`/category/${cat.slug}`}
-        className={cn(
-          "flex items-center gap-3 p-3 rounded-lg transition-all duration-200 group",
-          isActive
-            ? "bg-gray-900 dark:bg-white text-white dark:text-black font-medium"
-            : "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
-        )}
-      >
-        <IconComponent className={cn(
-          "h-5 w-5 flex-shrink-0",
-          isActive
-            ? "text-white dark:text-black"
-            : "text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300"
-        )} />
-        <span className="flex-1 text-sm truncate">{cat.name}</span>
-        <span className={cn(
-          "text-xs px-2 py-0.5 rounded-full",
-          isActive
-            ? "bg-white/20 dark:bg-black/20"
-            : "bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400"
-        )}>
-          {cat.productCount || 0}
-        </span>
-      </Link>
-    );
-  };
-
-  // Initial loading state
-  if (loading && !category) {
-    return (
-      <div className="min-h-screen bg-white dark:bg-black">
-        <Header />
-        <main className="pt-24 pb-16">
-          <div className="flex justify-center items-center py-20">
-            <LoadingSpinner size="lg" text="Loading category..." />
-          </div>
-        </main>
-        <Footer />
-        <WhatsAppFab />
-      </div>
-    );
-  }
-
-  // Error state
-  if (error) {
-    return (
-      <div className="min-h-screen bg-white dark:bg-black">
-        <Header />
-        <main className="pt-24 pb-16">
-          <div className="max-w-[1600px] mx-auto px-4 md:px-6">
-            <div className="text-center py-20">
-              <h1 className="text-2xl font-semibold mb-4">Error Loading Category</h1>
-              <p className="text-muted-foreground mb-6">{error}</p>
-              <Button onClick={() => window.location.reload()}>Retry</Button>
-            </div>
-          </div>
-        </main>
-        <Footer />
-        <WhatsAppFab />
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-white dark:bg-black">
-      {category && <SEOHead {...getCategorySEO(category.name, products.length)} />}
+      <SEOHead
+        title={`${shoppingCategory.displayName} - New Delhi Electricals`}
+        description={shoppingCategory.description}
+      />
       <Header />
       <main className="pt-24 pb-16">
         <div className="max-w-[1600px] mx-auto px-4 md:px-6">
-          {/* Header */}
+          {/* Category Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-8"
+            className="mb-6"
           >
-            <h1 className="text-4xl md:text-5xl font-light text-gray-900 dark:text-white mb-2">
-              {category?.name || 'All Products'}
-            </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-400 font-light">
-              {category?.description || 'Browse our complete catalog'}
-            </p>
+            {/* Breadcrumb */}
+            <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
+              <Link to="/categories" className="hover:text-accent transition-colors">Shop</Link>
+              <ChevronRight className="h-3 w-3" />
+              <span className="text-foreground font-medium">{shoppingCategory.displayName}</span>
+            </div>
+
+            <div className="flex items-start gap-3 md:gap-4">
+              <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                {(() => {
+                  const IconComp = iconMap[shoppingCategory.id] || Package;
+                  return <IconComp className="h-5 w-5 text-accent" />;
+                })()}
+              </div>
+              <div>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-1">
+                  {shoppingCategory.displayName}
+                </h1>
+                <p className="text-sm text-muted-foreground">
+                  {shoppingCategory.description}
+                </p>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Main Content Layout: Sidebar + Products */}
+          {/* Sub-Section Tabs */}
+          {shoppingCategory.subSections.length > 1 && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="mb-6"
+            >
+              <div className="flex gap-1.5 overflow-x-auto pb-2 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
+                {shoppingCategory.subSections.map(tab => {
+                  const isActive = activeTab === tab.id;
+                  const count = tabCounts[tab.id] || 0;
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => handleTabChange(tab.id)}
+                      className={cn(
+                        "flex-shrink-0 px-3.5 py-2 rounded-lg text-xs font-semibold transition-all duration-200 whitespace-nowrap",
+                        isActive
+                          ? "bg-accent text-white shadow-sm shadow-accent/20"
+                          : "bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-foreground"
+                      )}
+                    >
+                      {tab.name}
+                      <span className={cn(
+                        "ml-1",
+                        isActive ? "opacity-80" : "opacity-50"
+                      )}>
+                        {count}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </motion.div>
+          )}
+
+          {/* Brand + Model Visual Selector (prominent, above products) */}
+          {(shoppingCategory?.slug === 'switches-sockets' || shoppingCategory?.slug === 'plates' || shoppingCategory?.slug === 'circuit-protection') && allProducts.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+            >
+              <BrandModelSelector
+                allProducts={allProducts}
+                selectedBrands={selectedBrands}
+                selectedSeries={selectedSeries}
+                onBrandToggle={(brand) => {
+                  setSelectedBrands(prev => prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]);
+                  setSelectedSeries([]);
+                  setPage(1);
+                }}
+                onSeriesToggle={(series) => {
+                  setSelectedSeries(prev => prev.includes(series) ? [] : [series]);
+                  setPage(1);
+                }}
+                onClearAll={() => {
+                  setSelectedBrands([]);
+                  setSelectedSeries([]);
+                  setPage(1);
+                }}
+              />
+            </motion.div>
+          )}
+
+          {/* Main Content */}
           <div className="flex gap-6">
-            {/* Left Sidebar - Categories (Desktop) */}
+            {/* Left Sidebar - Shopping Flow + Plate Wizard */}
             <aside className="hidden lg:block w-64 flex-shrink-0">
-              <div className="sticky top-24 bg-card rounded-2xl border border-border p-5">
-                <h2 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-                  Categories
-                </h2>
-                <div className="space-y-1 max-h-[calc(100vh-200px)] overflow-y-auto">
-                  {categories.length > 0 ? (
-                    categories.map((cat) => (
-                      <CategoryListItem
-                        key={cat.id}
-                        cat={cat}
-                        isActive={category?.slug === cat.slug}
-                      />
-                    ))
-                  ) : (
-                    <p className="text-sm text-gray-500 dark:text-gray-400 py-4">
-                      No categories found
-                    </p>
+              <div className="sticky top-24 space-y-4">
+                {/* Shopping Flow Nav */}
+                <div className="bg-card rounded-2xl border border-border/60 p-4">
+                  <h2 className="text-[10px] font-bold mb-3 text-muted-foreground uppercase tracking-widest">
+                    Shopping Flow
+                  </h2>
+                  <div className="space-y-0.5">
+                    {SHOPPING_CATEGORIES.map((cat) => {
+                      const isActive = cat.slug === slug;
+                      const IconComp = iconMap[cat.id] || Package;
+                      return (
+                        <Link
+                          key={cat.id}
+                          to={`/category/${cat.slug}`}
+                          className={cn(
+                            "flex items-center gap-2.5 px-3 py-2 rounded-lg transition-all duration-200 group",
+                            isActive
+                              ? "bg-accent text-white font-semibold shadow-sm shadow-accent/20"
+                              : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+                          )}
+                        >
+                          <IconComp className={cn(
+                            "h-3.5 w-3.5 flex-shrink-0",
+                            isActive ? "text-white" : "text-muted-foreground/60"
+                          )} />
+                          <span className="flex-1 text-xs truncate">{cat.displayName}</span>
+                          <span className={cn(
+                            "text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-semibold",
+                            isActive
+                              ? "bg-white/20 text-white"
+                              : "bg-secondary text-muted-foreground"
+                          )}>
+                            {cat.step}
+                          </span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+
+                  {/* Next Step CTA */}
+                  {nextCategory && (
+                    <div className="mt-4 pt-3 border-t border-border/60">
+                      <Link
+                        to={`/category/${nextCategory.slug}`}
+                        className="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-secondary hover:bg-accent/10 hover:text-accent transition-all text-xs font-medium"
+                      >
+                        <span className="text-muted-foreground">Next:</span>
+                        <span className="font-semibold">{nextCategory.displayName}</span>
+                        <ChevronRight className="h-3.5 w-3.5 ml-auto text-muted-foreground group-hover:text-accent" />
+                      </Link>
+                    </div>
                   )}
                 </div>
+
+                {/* Plate Selection Wizard (only for Plates category) */}
+                {slug === 'plates' && allProducts.length > 0 && (
+                  <div className="bg-card rounded-2xl border border-border/60 p-4">
+                    <h2 className="text-[10px] font-bold mb-3 text-muted-foreground uppercase tracking-widest">
+                      Find Your Plates
+                    </h2>
+                    <PlateSelectionWizard
+                      allProducts={allProducts}
+                      selectedBrand={selectedBrands[0] || null}
+                      selectedSeries={selectedSeries[0] || null}
+                      selectedColor={selectedColor}
+                      onBrandSelect={(brand) => {
+                        setSelectedBrands(brand ? [brand] : []);
+                        setSelectedSeries([]);
+                        setSelectedColor(null);
+                        setPage(1);
+                      }}
+                      onSeriesSelect={(series) => {
+                        setSelectedSeries(series ? [series] : []);
+                        setSelectedColor(null);
+                        setPage(1);
+                      }}
+                      onColorSelect={(color) => {
+                        setSelectedColor(color === '__all__' ? null : color);
+                        setPage(1);
+                      }}
+                      onClearAll={() => {
+                        setSelectedBrands([]);
+                        setSelectedSeries([]);
+                        setSelectedColor(null);
+                        setPage(1);
+                      }}
+                    />
+                  </div>
+                )}
               </div>
             </aside>
 
-            {/* Right Side - Products Section */}
+            {/* Right Side - Products */}
             <div className="flex-1 min-w-0">
-              {/* Top brand & family cards */}
-              {allProducts.length > 0 && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="mb-8 space-y-8"
-                >
-                  {isWiresCategory ? (
-                    // For Wires & Cables, keep existing ProductFamilyFilter behavior (brands + colors)
-                    <ProductFamilyFilter
-                      products={allProducts}
-                      selectedProductFamily={selectedProductFamily}
-                      selectedColor={selectedColor}
-                      onProductFamilySelect={setSelectedProductFamily}
-                      onColorSelect={setSelectedColor}
-                    />
-                  ) : (
-                    <>
-                      {/* Brand cards */}
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                            Brands
-                          </h3>
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                          {availableBrands.map(brand => {
-                            const isSelected = selectedBrands.includes(brand.name);
-                            const brandProducts = allProducts.filter(p => p.brand === brand.name);
-                            const count = brandProducts.length;
+              {/* Mobile Plate Wizard (inline, always visible for plates) */}
+              {slug === 'plates' && allProducts.length > 0 && (
+                <div className="lg:hidden mb-4 bg-card rounded-2xl border border-border/60 p-4">
+                  <h2 className="text-[10px] font-bold mb-3 text-muted-foreground uppercase tracking-widest">
+                    Find Your Plates
+                  </h2>
+                  <PlateSelectionWizard
+                    allProducts={allProducts}
+                    selectedBrand={selectedBrands[0] || null}
+                    selectedSeries={selectedSeries[0] || null}
+                    selectedColor={selectedColor}
+                    onBrandSelect={(brand) => {
+                      setSelectedBrands(brand ? [brand] : []);
+                      setSelectedSeries([]);
+                      setSelectedColor(null);
+                      setPage(1);
+                    }}
+                    onSeriesSelect={(series) => {
+                      setSelectedSeries(series ? [series] : []);
+                      setSelectedColor(null);
+                      setPage(1);
+                    }}
+                    onColorSelect={(color) => {
+                      setSelectedColor(color === '__all__' ? null : color);
+                      setPage(1);
+                    }}
+                    onClearAll={() => {
+                      setSelectedBrands([]);
+                      setSelectedSeries([]);
+                      setSelectedColor(null);
+                      setPage(1);
+                    }}
+                  />
+                </div>
+              )}
 
-                            return (
-                              <motion.div
-                                key={brand.id}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                              >
-                                <button
-                                  onClick={() => toggleBrand(brand.name)}
-                                  className={cn(
-                                    "w-full p-6 rounded-2xl border-2 transition-all duration-200 text-left",
-                                    "hover:shadow-lg",
-                                    isSelected
-                                      ? "border-gray-900 dark:border-white bg-gray-900 dark:bg-white text-white dark:text-black shadow-xl"
-                                      : "border-gray-200 dark:border-gray-800 bg-white dark:bg-black hover:border-gray-400 dark:hover:border-gray-600"
-                                  )}
-                                >
-                                  <div className="flex items-start justify-between mb-2">
-                                    <h4
-                                      className={cn(
-                                        "text-lg font-semibold",
-                                        isSelected
-                                          ? "text-white dark:text-black"
-                                          : "text-gray-900 dark:text-white"
-                                      )}
-                                    >
-                                      {brand.name}
-                                    </h4>
-                                    <Badge
-                                      variant={isSelected ? "secondary" : "outline"}
-                                      className={cn(
-                                        isSelected && "bg-white/20 dark:bg-black/20"
-                                      )}
-                                    >
-                                      {count}
-                                    </Badge>
-                                  </div>
-                                  <p
-                                    className={cn(
-                                      "text-sm",
-                                      isSelected
-                                        ? "text-white/80 dark:text-black/80"
-                                        : "text-gray-600 dark:text-gray-400"
-                                    )}
-                                  >
-                                    {count} {count === 1 ? "product" : "products"}
-                                  </p>
-                                </button>
-                              </motion.div>
-                            );
-                          })}
-                        </div>
-                      </div>
-
-                      {/* Series filtered by selected brands */}
-                      {brandFilteredFamilies.length > 0 && (
-                        <div className="space-y-4">
-                          <div className="flex items-center justify-between">
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                              Series
-                            </h3>
-                          </div>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                            {brandFilteredFamilies.map(family => {
-                              const isSelected = selectedSeries.includes(family.name);
-
-                              return (
-                                <motion.div
-                                  key={family.name}
-                                  initial={{ opacity: 0, scale: 0.9 }}
-                                  animate={{ opacity: 1, scale: 1 }}
-                                  whileHover={{ scale: 1.02 }}
-                                  whileTap={{ scale: 0.98 }}
-                                >
-                                  <button
-                                    onClick={() => {
-                                      // Single selection: if already selected, deselect; otherwise, select only this one
-                                      setSelectedSeries(prev => {
-                                        if (prev.includes(family.name)) {
-                                          return [];
-                                        } else {
-                                          return [family.name];
-                                        }
-                                      });
-                                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                                    }}
-                                    className={cn(
-                                      "w-full p-6 rounded-2xl border-2 transition-all duration-200 text-left",
-                                      "hover:shadow-lg",
-                                      isSelected
-                                        ? "border-gray-900 dark:border-white bg-gray-900 dark:bg-white text-white dark:text-black shadow-xl"
-                                        : "border-gray-200 dark:border-gray-800 bg-white dark:bg-black hover:border-gray-400 dark:hover:border-gray-600"
-                                    )}
-                                  >
-                                    <div className="flex items-start justify-between mb-2">
-                                      <h4
-                                        className={cn(
-                                          "text-lg font-semibold",
-                                          isSelected
-                                            ? "text-white dark:text-black"
-                                            : "text-gray-900 dark:text-white"
-                                        )}
-                                      >
-                                        {family.name}
-                                      </h4>
-                                      <Badge
-                                        variant={isSelected ? "secondary" : "outline"}
-                                        className={cn(
-                                          isSelected && "bg-white/20 dark:bg-black/20"
-                                        )}
-                                      >
-                                        {family.count}
-                                      </Badge>
-                                    </div>
-                                    <p
-                                      className={cn(
-                                        "text-sm",
-                                        isSelected
-                                          ? "text-white/80 dark:text-black/80"
-                                          : "text-gray-600 dark:text-gray-400"
-                                      )}
-                                    >
-                                      {family.count}{" "}
-                                      {family.count === 1 ? "product" : "products"}
-                                    </p>
-                                  </button>
-                                </motion.div>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      )}
-                    </>
-                  )}
-                </motion.div>
+              {/* Mobile Tabs */}
+              {shoppingCategory.subSections.length > 1 && (
+                <div className="lg:hidden mb-4">
+                  <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+                    {shoppingCategory.subSections.map(tab => {
+                      const isActive = activeTab === tab.id;
+                      return (
+                        <button
+                          key={tab.id}
+                          onClick={() => handleTabChange(tab.id)}
+                          className={cn(
+                            "flex-shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap",
+                            isActive
+                              ? "bg-gray-900 dark:bg-white text-white dark:text-black"
+                              : "bg-secondary text-muted-foreground"
+                          )}
+                        >
+                          {tab.name}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
               )}
 
               {/* Toolbar */}
               <div className="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-gray-200 dark:border-gray-800">
                 <div className="flex items-center gap-2 flex-wrap">
-                  {/* Mobile Categories Sheet */}
+                  {/* Mobile Categories */}
                   <Sheet>
                     <SheetTrigger asChild>
                       <Button variant="ghost" size="sm" className="gap-2 lg:hidden">
@@ -1497,81 +1125,54 @@ const CategoryPage = () => {
                         <SheetTitle>Categories</SheetTitle>
                       </SheetHeader>
                       <div className="mt-6 space-y-1">
-                        {categories.length > 0 ? (
-                          categories.map((cat) => (
-                            <CategoryListItem
+                        {SHOPPING_CATEGORIES.map(cat => {
+                          const isActive = cat.slug === slug;
+                          const IconComp = iconMap[cat.id] || Package;
+                          return (
+                            <Link
                               key={cat.id}
-                              cat={cat}
-                              isActive={category?.slug === cat.slug}
-                            />
-                          ))
-                        ) : (
-                          <p className="text-sm text-gray-500 dark:text-gray-400 py-4">
-                            No categories found
-                          </p>
-                        )}
+                              to={`/category/${cat.slug}`}
+                              className={cn(
+                                "flex items-center gap-3 p-3 rounded-lg transition-all",
+                                isActive
+                                  ? "bg-gray-900 dark:bg-white text-white dark:text-black font-medium"
+                                  : "hover:bg-gray-100 dark:hover:bg-gray-800"
+                              )}
+                              onClick={() => {}}
+                            >
+                              <IconComp className="h-4 w-4" />
+                              <span className="text-sm">{cat.displayName}</span>
+                            </Link>
+                          );
+                        })}
                       </div>
                     </SheetContent>
                   </Sheet>
 
                   {/* Desktop Filters Toggle */}
-                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    <Button
-                      variant={showFilters ? 'secondary' : 'ghost'}
-                      size="sm"
-                      onClick={() => setShowFilters(!showFilters)}
-                      className="gap-2 hidden md:flex"
-                    >
-                      <motion.div
-                        animate={{ rotate: showFilters ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <SlidersHorizontal className="h-4 w-4" />
-                      </motion.div>
-                      Filters
-                      {hasActiveFilters && (
-                        <motion.div
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                        >
-                          <Badge variant="default" className="ml-1 h-5 w-5 p-0 flex items-center justify-center">
-                            {selectedBrands.length
-                              + selectedSeries.length
-                              + (selectedSubcategory ? 1 : 0)
-                              + (selectedColor ? 1 : 0)
-                              + (selectedModule ? 1 : 0)
-                              + (selectedAmpere ? 1 : 0)
-                              + (selectedWireSize ? 1 : 0)
-                              + (selectedCoreCount ? 1 : 0)
-                              + (localSearch ? 1 : 0)}
-                          </Badge>
-                        </motion.div>
-                      )}
-                    </Button>
-                  </motion.div>
+                  <Button
+                    variant={showFilters ? 'secondary' : 'ghost'}
+                    size="sm"
+                    onClick={() => setShowFilters(!showFilters)}
+                    className="gap-2 hidden md:flex"
+                  >
+                    <SlidersHorizontal className="h-4 w-4" />
+                    Filters
+                    {hasActiveFilters && (
+                      <Badge variant="default" className="ml-1 h-5 w-5 p-0 flex items-center justify-center">
+                        {selectedBrands.length + selectedSeries.length + (selectedSubcategory ? 1 : 0) + (selectedColor ? 1 : 0) + (selectedModule ? 1 : 0) + (selectedAmpere ? 1 : 0) + (selectedWireSize ? 1 : 0) + (selectedCoreCount ? 1 : 0) + (selectedCapacity ? 1 : 0) + (localSearch ? 1 : 0)}
+                      </Badge>
+                    )}
+                  </Button>
 
-                  {/* Mobile Filters Sheet */}
+                  {/* Mobile Filters */}
                   <Sheet>
                     <SheetTrigger asChild>
                       <Button variant="ghost" size="sm" className="gap-2 md:hidden">
                         <SlidersHorizontal className="h-4 w-4" />
                         Filters
-                        {hasActiveFilters && (
-                          <Badge variant="default" className="ml-1">
-                            {selectedBrands.length
-                              + selectedSeries.length
-                              + (selectedSubcategory ? 1 : 0)
-                              + (selectedColor ? 1 : 0)
-                              + (selectedModule ? 1 : 0)
-                              + (selectedAmpere ? 1 : 0)
-                              + (selectedWireSize ? 1 : 0)
-                              + (selectedCoreCount ? 1 : 0)}
-                          </Badge>
-                        )}
                       </Button>
-                    </SheetTrigger>
-                    <SheetContent side="left" className="w-80">
+                    </SheetTrigger>                      <SheetContent side="left" className="w-80">
                       <SheetHeader>
                         <SheetTitle>Filters</SheetTitle>
                       </SheetHeader>
@@ -1584,92 +1185,44 @@ const CategoryPage = () => {
                   {/* Active Filter Badges */}
                   <AnimatePresence>
                     {selectedBrands.map(brand => (
-                      <motion.div
-                        key={brand}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.8 }}
-                      >
-                        <Button
-                          variant="secondary"
-                          size="sm"
-                          onClick={() => toggleBrand(brand)}
-                          className="gap-1.5"
-                        >
-                          {brand}
-                          <X className="h-3 w-3" />
+                      <motion.div key={brand} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }}>
+                        <Button variant="secondary" size="sm" onClick={() => toggleBrand(brand)} className="gap-1.5">
+                          {brand} <X className="h-3 w-3" />
                         </Button>
                       </motion.div>
                     ))}
                     {selectedSeries.map(series => (
-                      <motion.div
-                        key={series}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.8 }}
-                      >
-                        <Button
-                          variant="secondary"
-                          size="sm"
-                          onClick={() => toggleSeries(series)}
-                          className="gap-1.5"
-                        >
-                          {series}
-                          <X className="h-3 w-3" />
+                      <motion.div key={series} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }}>
+                        <Button variant="secondary" size="sm" onClick={() => toggleSeries(series)} className="gap-1.5">
+                          {series} <X className="h-3 w-3" />
                         </Button>
                       </motion.div>
                     ))}
-                    {selectedSubcategory && (
-                      <motion.div
-                        key={`subcategory-${selectedSubcategory}`}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.8 }}
-                      >
-                        <Button
-                          variant="secondary"
-                          size="sm"
-                          onClick={() => setSelectedSubcategory(null)}
-                          className="gap-1.5"
-                        >
-                          {selectedSubcategory}
-                          <X className="h-3 w-3" />
-                        </Button>
-                      </motion.div>
-                    )}
                     {selectedColor && (
-                      <motion.div
-                        key={`color-${selectedColor}`}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.8 }}
-                      >
-                        <Button
-                          variant="secondary"
-                          size="sm"
-                          onClick={() => setSelectedColor(null)}
-                          className="gap-1.5"
-                        >
-                          {selectedColor}
-                          <X className="h-3 w-3" />
+                      <motion.div key="color" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }}>
+                        <Button variant="secondary" size="sm" onClick={() => setSelectedColor(null)} className="gap-1.5">
+                          {selectedColor} <X className="h-3 w-3" />
                         </Button>
                       </motion.div>
                     )}
                     {selectedModule && (
-                      <motion.div
-                        key={`module-${selectedModule}`}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.8 }}
-                      >
-                        <Button
-                          variant="secondary"
-                          size="sm"
-                          onClick={() => setSelectedModule(null)}
-                          className="gap-1.5"
-                        >
-                          {selectedModule}M
-                          <X className="h-3 w-3" />
+                      <motion.div key="module" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }}>
+                        <Button variant="secondary" size="sm" onClick={() => setSelectedModule(null)} className="gap-1.5">
+                          {selectedModule}M <X className="h-3 w-3" />
+                        </Button>
+                      </motion.div>
+                    )}
+                    {selectedSubcategory && (
+                      <motion.div key="subcategory" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }}>
+                        <Button variant="secondary" size="sm" onClick={() => setSelectedSubcategory(null)} className="gap-1.5">
+                          {selectedSubcategory} <X className="h-3 w-3" />
+                        </Button>
+                      </motion.div>
+                    )}
+                    {selectedCapacity && (
+                      <motion.div key="capacity" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }}>
+                        <Button variant="secondary" size="sm" onClick={() => setSelectedCapacity(null)} className="gap-1.5">
+                          {selectedCapacity}L <X className="h-3 w-3" />
                         </Button>
                       </motion.div>
                     )}
@@ -1677,58 +1230,41 @@ const CategoryPage = () => {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  {/* Sort */}
-                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    <Select value={sortBy} onValueChange={(value: SortOption) => {
-                      setSortBy(value);
-                      // Smooth scroll to top on sort change
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}>
-                      <SelectTrigger className="w-40 h-9 text-sm">
-                        <SelectValue placeholder="Sort by" />
-                      </SelectTrigger>
-                      <SelectContent>
+                  <Select value={sortBy} onValueChange={(value: SortOption) => { setSortBy(value); setPage(1); }}>
+                    <SelectTrigger className="w-40 h-9 text-sm">
+                      <SelectValue placeholder="Sort by" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {(shoppingCategory?.slug === 'switches-sockets' || shoppingCategory?.slug === 'plates') && (
+                        <SelectItem value="name-asc">Recommended</SelectItem>
+                      )}
+                      {shoppingCategory?.slug !== 'switches-sockets' && shoppingCategory?.slug !== 'plates' && (
                         <SelectItem value="name-asc">Name A-Z</SelectItem>
-                        <SelectItem value="name-desc">Name Z-A</SelectItem>
-                        <SelectItem value="price-asc">Price Low-High</SelectItem>
-                        <SelectItem value="price-desc">Price High-Low</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </motion.div>
+                      )}
+                      <SelectItem value="name-desc">Name Z-A</SelectItem>
+                      <SelectItem value="price-asc">Price Low-High</SelectItem>
+                      <SelectItem value="price-desc">Price High-Low</SelectItem>
+                    </SelectContent>
+                  </Select>
 
                   <span className="text-sm text-muted-foreground hidden sm:inline">
-                    {sortedProducts.length} {sortedProducts.length === 1 ? 'product' : 'products'}
-                    {(selectedSeries.length > 0 || selectedProductFamily || selectedColor || selectedBrands.length > 0 || selectedSubcategory || selectedModule || selectedAmpere || selectedWireSize || selectedCoreCount) ? ` (filtered)` : ''}
+                    {filteredProducts.length} {filteredProducts.length === 1 ? 'product' : 'products'}
                   </span>
 
-                  {/* View Toggle */}
                   <div className="flex border border-border rounded-lg overflow-hidden">
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                      <Button
-                        variant={view === 'grid' ? 'secondary' : 'ghost'}
-                        size="icon"
-                        className="h-9 w-9 rounded-none"
-                        onClick={() => setView('grid')}
-                      >
-                        <Grid className="h-4 w-4" />
-                      </Button>
-                    </motion.div>
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                      <Button
-                        variant={view === 'list' ? 'secondary' : 'ghost'}
-                        size="icon"
-                        className="h-9 w-9 rounded-none"
-                        onClick={() => setView('list')}
-                      >
-                        <List className="h-4 w-4" />
-                      </Button>
-                    </motion.div>
+                    <Button variant={view === 'grid' ? 'secondary' : 'ghost'} size="icon" className="h-9 w-9 rounded-none" onClick={() => setView('grid')}>
+                      <Grid className="h-4 w-4" />
+                    </Button>
+                    <Button variant={view === 'list' ? 'secondary' : 'ghost'} size="icon" className="h-9 w-9 rounded-none" onClick={() => setView('list')}>
+                      <List className="h-4 w-4" />
+                    </Button>
                   </div>
                 </div>
               </div>
 
+              {/* Products with sidebar filters */}
               <div className="flex gap-6">
-                {/* Filters Sidebar (Desktop) */}
+                {/* Desktop Filter Sidebar */}
                 <AnimatePresence>
                   {showFilters && (
                     <motion.aside
@@ -1746,81 +1282,74 @@ const CategoryPage = () => {
 
                 {/* Products Grid */}
                 <div className="flex-1">
-                  {filterLoading ? (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      className={`grid gap-4 ${view === 'grid'
-                        ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
-                        : 'grid-cols-1'
-                        }`}
-                    >
-                      <ProductCardSkeleton count={view === 'grid' ? 8 : 4} />
-                    </motion.div>
-                  ) : sortedProducts.length > 0 ? (
-                    <motion.div
-                      layout
-                      className={`grid gap-4 ${view === 'grid'
-                        ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
-                        : 'grid-cols-1'
-                        }`}
-                    >
+                  {displayedProducts.length > 0 ? (
+                    <div className={cn(
+                      "grid gap-4",
+                      view === 'grid' ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-4" : "grid-cols-1"
+                    )}>
                       <AnimatePresence mode="popLayout">
-                        {sortedProducts.map((product, idx) => (
+                        {displayedProducts.map((product, idx) => (
                           <motion.div
                             key={product.id}
                             layout
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: -20 }}
-                            transition={{
-                              delay: idx * 0.02,
-                              duration: 0.3,
-                              ease: [0.25, 0.1, 0.25, 1]
-                            }}
+                            transition={{ delay: Math.min(idx * 0.02, 0.5), duration: 0.3 }}
                           >
                             <ProductCard product={product} index={idx} />
                           </motion.div>
                         ))}
                       </AnimatePresence>
-
-                      {/* Infinite scroll trigger */}
-                      {hasMore && (
-                        <div ref={loadMoreRef} className="col-span-full py-8">
-                          {filterLoading && (
-                            <motion.div
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              className="flex justify-center"
-                            >
-                              <ProductCardSkeleton count={view === 'grid' ? 4 : 2} />
-                            </motion.div>
-                          )}
-                        </div>
-                      )}
-
-                      {/* End of results message */}
-                      {!hasMore && sortedProducts.length > 0 && (
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          className="col-span-full text-center py-8 text-sm text-muted-foreground"
-                        >
-                          Showing all {sortedProducts.length} products
-                        </motion.div>
-                      )}
-                    </motion.div>
+                    </div>
                   ) : (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="text-center py-16"
-                    >
-                      <p className="text-muted-foreground mb-4">No products found matching your criteria</p>
-                      <Button variant="outline" onClick={clearFilters}>
-                        Clear Filters
+                    <div className="text-center py-16">
+                      <p className="text-muted-foreground mb-4">
+                        {allProducts.length === 0
+                          ? 'No products in this category yet.'
+                          : 'No products found matching your criteria'}
+                      </p>
+                      <Button variant="outline" onClick={clearFilters}>Clear Filters</Button>
+                    </div>
+                  )}
+
+                  {/* Load More */}
+                  {hasMore && displayedProducts.length > 0 && (
+                    <div className="mt-8 text-center">
+                      <Button
+                        variant="outline"
+                        onClick={() => setPage(p => p + 1)}
+                        disabled={filterLoading}
+                      >
+                        {filterLoading ? 'Loading...' : `Load More (${filteredProducts.length - displayedProducts.length} remaining)`}
                       </Button>
+                    </div>
+                  )}
+
+                  {/* End of results */}
+                  {!hasMore && displayedProducts.length > 0 && (
+                    <div className="mt-8 text-center text-sm text-muted-foreground">
+                      Showing all {displayedProducts.length} products
+                    </div>
+                  )}
+
+                  {/* Next Step CTA */}
+                  {nextCategory && displayedProducts.length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.3 }}
+                      className="mt-12 p-6 rounded-2xl bg-secondary/50 border border-border/50 text-center"
+                    >
+                      <p className="text-muted-foreground mb-3">
+                        {shoppingCategory.nextStepText}
+                      </p>
+                      <Link to={`/category/${nextCategory.slug}`}>
+                        <Button className="gap-2">
+                          Browse {nextCategory.displayName}
+                          <ChevronRight className="h-4 w-4" />
+                        </Button>
+                      </Link>
                     </motion.div>
                   )}
                 </div>
