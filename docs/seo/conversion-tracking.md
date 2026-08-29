@@ -1,5 +1,9 @@
 # Conversion Tracking
 
+## 2026-08-29 production validation status
+
+No production event validation was performed because the release gate blocked deployment. Repository inspection confirms Vercel Analytics custom-event dispatch code exists; the local recovery adds quote_enquiry_handoff for the WhatsApp quotation handoff and removes query text from analytics dispatch. No test enquiry or customer data was sent.
+
 ## Implemented analytics layer
 
 `frontend/src/lib/conversionTracking.ts` sends named custom events through the existing `@vercel/analytics` integration. `frontend/src/App.tsx` uses one capturing click listener, registered once, to classify WhatsApp and telephone CTAs. This avoids event duplication from React rerenders and covers CTA components that open WhatsApp imperatively.

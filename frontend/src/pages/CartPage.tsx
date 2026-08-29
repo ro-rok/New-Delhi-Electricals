@@ -78,6 +78,8 @@ const CartPage = () => {
     }
 
     setIsSubmitting(true);
+    trackConversion('whatsapp_click', { cta_location: 'cart_form', item_count: cart.length });
+    trackConversion('whatsapp_enquiry_start', { cta_location: 'cart_form', item_count: cart.length });
     trackWhatsAppClick();
 
     // Build product list message
@@ -104,7 +106,7 @@ const CartPage = () => {
 
     // Open WhatsApp with pre-filled message
     const whatsappUrl = `https://wa.me/919654102758?text=${encodeURIComponent(message)}`;
-    trackConversion('quote_enquiry_submit', { cta_location: 'cart_form', item_count: cart.length });
+    trackConversion('quote_enquiry_handoff', { cta_location: 'cart_form', item_count: cart.length });
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 
     // Clear cart and form

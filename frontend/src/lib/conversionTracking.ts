@@ -5,12 +5,13 @@ export type ConversionEvent =
   | 'whatsapp_enquiry_start'
   | 'quote_enquiry_start'
   | 'quote_enquiry_submit'
+  | 'quote_enquiry_handoff'
   | 'contact_form_submit'
   | 'phone_click';
 
 type EventProperties = Record<string, string | number | boolean | null | undefined>;
 
-export function getPageType(pathname = window.location.pathname): string {
+export function getPageType(pathname = typeof window === 'undefined' ? '/' : window.location.pathname): string {
   if (pathname === '/') return 'home';
   if (pathname.startsWith('/category/')) return 'category';
   if (pathname.startsWith('/brand/')) return 'brand';
@@ -21,9 +22,14 @@ export function getPageType(pathname = window.location.pathname): string {
 }
 
 export function trackConversion(name: ConversionEvent, properties: EventProperties = {}): void {
-  track(name, {
+  if (typeof window === 'undefined') return;
+  const event = {
     page_type: getPageType(),
     page_path: window.location.pathname,
     ...properties,
-  });
+  };
+  // A local, side-effect-free hook lets browser tests verify the shared analytics
+  // contract without relying on Vercel ingestion.
+  window.dispatchEvent(new CustomEvent('nde:conversion', { detail: { name, properties: event } }));
+  track(name, event);
 }

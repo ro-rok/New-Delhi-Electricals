@@ -78,6 +78,12 @@ Google Search Console data unavailable in repository environment.
 
 GA4 data unavailable in repository environment.
 
+## 2026-08-29 final release-gate addendum
+
+This checkout cannot be treated as a production-ready SSR release. The documented historical build output is not a substitute for the final gate: `frontend/node_modules` is absent, so `npm run build` cannot invoke Vite; the SEO test consequently cannot find `dist/seo-build-report.json`; and `package.json` has no `test:browser` script or Playwright test assets. No production deployment or production validation was performed.
+
+The checked-in generator also contains a repository catalogue fallback and injects a `.seo-static-shell`, both of which conflict with the required release criteria. Google Search Console access remains unavailable in this environment; no metrics or indexing figures were invented.
+
 SEMrush data unavailable in repository environment.
 
 PageSpeed field/CrUX data unavailable in repository environment.

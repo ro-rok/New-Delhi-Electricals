@@ -1,15 +1,17 @@
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const FRONTEND_DIR = path.resolve(SCRIPT_DIR, '..');
 const REPO_DIR = path.resolve(FRONTEND_DIR, '..');
 const DIST_DIR = path.join(FRONTEND_DIR, 'dist');
 const TEMPLATE_PATH = path.join(DIST_DIR, 'index.html');
+const SERVER_ENTRY = path.join(DIST_DIR, 'server', 'entry-server.js');
 const FALLBACK_DATA_PATH = path.join(REPO_DIR, 'backend', 'app', 'parsing', 'output', 'all_products_full.json');
 const SITE_URL = 'https://www.newdelhielectricals.com';
-const DEFAULT_IMAGE = `${SITE_URL}/android-chrome-512x512.png`;
+const FALLBACK_ENABLED = process.env.SEO_ALLOW_CATALOG_FALLBACK === 'true';
 
 const CATEGORIES = [
   { slug: 'switches-sockets', name: 'Switches & Sockets', raw: ['Switches', 'Power Sockets', 'Fan Controls', 'Dimmers', 'Data Sockets', 'Accessories', 'Hospitality'], description: 'Browse switches, sockets, fan controls, dimmers, data sockets and electrical accessories for Delhi NCR projects.' },
@@ -19,212 +21,75 @@ const CATEGORIES = [
   { slug: 'geysers', name: 'Geysers & Water Heaters', raw: ['geyser'], description: 'Browse instant and storage water heaters available for enquiry in Delhi NCR.' },
   { slug: 'wires-cables', name: 'Wires & Cables', raw: ['Wires & Cables'], description: 'Browse electrical wires and cables for residential and commercial projects in Delhi NCR.' },
 ];
-
 const STATIC_PAGES = [
-  { path: '/', title: 'Electrical Products & Authorised Brand Dealer in Delhi | New Delhi Electricals', description: 'Browse switches, sockets, plates, circuit protection, mounting boxes, geysers, wires and cables from authorised brands. Serving Delhi NCR.', h1: 'Electrical Products for Delhi NCR', text: 'New Delhi Electricals supplies genuine electrical products for homeowners, electricians, contractors, builders and designers across Delhi NCR.' },
-  { path: '/about', title: 'About New Delhi Electricals | Electrical Dealer in Delhi', description: 'Learn about New Delhi Electricals, an electrical products dealer serving homeowners and trade customers across Delhi NCR.', h1: 'About New Delhi Electricals', text: 'We help customers select electrical products for homes, offices and commercial projects across Delhi NCR.' },
-  { path: '/services', title: 'Electrical Product Supply & Quotations in Delhi | New Delhi Electricals', description: 'Request product selection help, bulk electrical supply and quotations for projects across Delhi NCR.', h1: 'Electrical Product Supply & Quotations', text: 'Browse the catalogue, select products and send your requirements for a quotation or WhatsApp enquiry.' },
-  { path: '/contact', title: 'Contact New Delhi Electricals | Malviya Nagar, New Delhi', description: 'Contact New Delhi Electricals in Malviya Nagar for electrical product enquiries and quotations across Delhi NCR.', h1: 'Contact New Delhi Electricals', text: 'Visit or contact our Malviya Nagar store for electrical products, selection help and project quotations.' },
-  { path: '/faq', title: 'Electrical Product Enquiry FAQ | New Delhi Electricals', description: 'Answers about electrical product enquiries, quotations, delivery and catalogue selection from New Delhi Electricals.', h1: 'Frequently Asked Questions', text: 'Find answers about browsing products, requesting a quotation and sending an enquiry.' },
-  { path: '/categories', title: 'Electrical Product Categories in Delhi | New Delhi Electricals', description: 'Browse switches, sockets, plates, circuit protection, boxes, geysers, wires and cables available for enquiry in Delhi NCR.', h1: 'Electrical Product Categories', text: 'Choose a category to browse genuine electrical products for residential and commercial projects.' },
-  { path: '/brands', title: 'Authorised Electrical Brands Dealer in Delhi | New Delhi Electricals', description: 'Browse genuine electrical products from Lauritz Knudsen, Havells, Anchor, Polycab and Finolex in Delhi NCR.', h1: 'Electrical Brands', text: 'Explore verified catalogue products by brand and send a WhatsApp enquiry for your requirements.' },
+  ['/', 'Electrical Products & Authorised Brand Dealer in Delhi | New Delhi Electricals', 'Browse switches, sockets, plates, circuit protection, mounting boxes, geysers, wires and cables from authorised brands. Serving Delhi NCR.', 'Electrical Products for Delhi NCR', 'New Delhi Electricals supplies genuine electrical products for homeowners, electricians, contractors, builders and designers across Delhi NCR.'],
+  ['/about', 'About New Delhi Electricals | Electrical Dealer in Delhi', 'Learn about New Delhi Electricals, an electrical products dealer serving homeowners and trade customers across Delhi NCR.', 'About New Delhi Electricals', 'We help customers select electrical products for homes, offices and commercial projects across Delhi NCR.'],
+  ['/services', 'Electrical Product Supply & Quotations in Delhi | New Delhi Electricals', 'Request product selection help, bulk electrical supply and quotations for projects across Delhi NCR.', 'Electrical Product Supply & Quotations', 'Browse the catalogue, select products and send your requirements for a quotation or WhatsApp enquiry.'],
+  ['/contact', 'Contact New Delhi Electricals | Malviya Nagar, New Delhi', 'Contact New Delhi Electricals in Malviya Nagar for electrical product enquiries and quotations across Delhi NCR.', 'Contact New Delhi Electricals', 'Visit or contact our Malviya Nagar store for electrical products, selection help and project quotations.'],
+  ['/faq', 'Electrical Product Enquiry FAQ | New Delhi Electricals', 'Answers about electrical product enquiries, quotations, delivery and catalogue selection from New Delhi Electricals.', 'Frequently Asked Questions', 'Find answers about browsing products, requesting a quotation and sending an enquiry.'],
+  ['/categories', 'Electrical Product Categories in Delhi | New Delhi Electricals', 'Browse switches, sockets, plates, circuit protection, boxes, geysers, wires and cables available for enquiry in Delhi NCR.', 'Electrical Product Categories', 'Choose a category to browse genuine electrical products for residential and commercial projects.'],
+  ['/brands', 'Authorised Electrical Brands Dealer in Delhi | New Delhi Electricals', 'Browse genuine electrical products from Lauritz Knudsen, Havells, Anchor, Polycab and Finolex in Delhi NCR.', 'Electrical Brands', 'Explore verified catalogue products by brand and send a WhatsApp enquiry for your requirements.'],
 ];
+const UTILITY_PAGES = [['/search', 'Search Electrical Products | New Delhi Electricals', 'Search Products'], ['/cart', 'Quotation Cart | New Delhi Electricals', 'Quotation Cart'], ['/shortlist', 'Saved Products | New Delhi Electricals', 'Saved Products'], ['/compare', 'Compare Products | New Delhi Electricals', 'Compare Products']];
 
-const NOINDEX_PAGES = [
-  { path: '/search', title: 'Search Electrical Products | New Delhi Electricals', h1: 'Search Products' },
-  { path: '/cart', title: 'Quotation Cart | New Delhi Electricals', h1: 'Quotation Cart' },
-  { path: '/shortlist', title: 'Saved Products | New Delhi Electricals', h1: 'Saved Products' },
-  { path: '/compare', title: 'Compare Products | New Delhi Electricals', h1: 'Compare Products' },
-];
-
-function escapeHtml(value = '') {
-  return String(value)
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;');
-}
-
-function safeJson(value) {
-  return JSON.stringify(value).replaceAll('<', '\\u003c');
-}
-
-function slugify(value = '') {
-  return String(value).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-}
-
+function slugify(value = '') { return String(value).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, ''); }
+function escapeHtml(value = '') { return String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;'); }
+function safeJson(value) { return JSON.stringify(value).replace(/&/g, '\\u0026').replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029'); }
 function normaliseProduct(raw) {
-  const brand = raw.brand || '';
-  const slug = raw.slug || raw.catalog_source?.seo?.slug;
-  const urlPath = raw.url_path || (brand && slug ? `/${slugify(brand)}/${slug}` : null);
-  const images = raw.images || raw.media?.images?.map((image) => typeof image === 'string' ? image : image.url) || [];
-  return {
-    id: raw._id || raw.id || raw.sku,
-    sku: raw.sku,
-    name: raw.name,
-    brand,
-    category: raw.category,
-    description: raw.description || raw.seo?.meta_description || '',
-    images: images.filter(Boolean),
-    listPrice: Number(raw.list_price || raw.pricing?.mrp || 0),
-    currency: raw.currency || null,
-    urlPath,
-    active: raw.status?.is_active !== false,
-  };
+  const images = raw.images || raw.media?.images?.map(image => typeof image === 'string' ? image : image.url) || [];
+  const brand = raw.brand || ''; const slug = raw.slug || raw.catalog_source?.seo?.slug || '';
+  return { id: String(raw._id || raw.id || raw.sku || ''), sku: String(raw.sku || ''), name: raw.name || '', brand, brandSlug: raw.brand_slug || slugify(brand), category: raw.category || '', subcategory: raw.subcategory, series: raw.series || raw.product_family || '', product_family: raw.product_family || raw.series || '', listPrice: Number(raw.list_price || raw.pricing?.mrp || 0), discount: raw.catalog_source?.pricing?.discount || raw.pricing?.discount || null, currency: raw.currency || 'INR', images: images.filter(Boolean), specs: raw.specs || {}, description: raw.description || raw.seo?.meta_description || '', slug, urlPath: raw.url_path || (brand && slug ? `/${slugify(brand)}/${slug}` : undefined), comingSoon: raw.status?.coming_soon || false, isActive: raw.status?.is_active !== false, status: raw.status || {}, variant: raw.variant };
 }
-
-async function loadProducts() {
-  const envFile = fs.readFileSync(path.join(FRONTEND_DIR, '.env.production'), 'utf8');
-  const configuredApi = envFile.match(/^VITE_API_BASE_URL=(.+)$/m)?.[1]?.trim();
-  if (configuredApi) {
-    try {
-      const response = await fetch(`${configuredApi.replace(/\/$/, '')}/api/products?pageSize=10000&is_active=true`, { signal: AbortSignal.timeout(60000) });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const payload = await response.json();
-      if (!Array.isArray(payload.items) || payload.items.length === 0) throw new Error('API returned no products');
-      return { products: payload.items.map(normaliseProduct), source: 'production API' };
-    } catch (error) {
-      console.warn(`SEO generation: production API unavailable (${error.message}); using repository export.`);
-    }
+function apiUrl() { return fs.readFileSync(path.join(FRONTEND_DIR, '.env.production'), 'utf8').match(/^VITE_API_BASE_URL=(.+)$/m)?.[1]?.trim(); }
+async function loadCatalogue() {
+  const configuredApi = apiUrl(); const report = { apiUrl: configuredApi || null, apiFailure: null, fallbackUsed: false, fallback: null };
+  try {
+    if (!configuredApi) throw new Error('VITE_API_BASE_URL is not configured');
+    const response = await fetch(`${configuredApi.replace(/\/$/, '')}/api/products?pageSize=10000&is_active=true`, { signal: AbortSignal.timeout(60000) });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const payload = await response.json();
+    if (!Array.isArray(payload.items) || !payload.items.length) throw new Error('API returned no products');
+    return { products: payload.items.map(normaliseProduct), source: 'production API', report };
+  } catch (error) {
+    report.apiFailure = error instanceof Error ? error.message : String(error);
+    if (!FALLBACK_ENABLED) throw new Error(`Production catalogue API is required for SEO builds: ${report.apiFailure}. Set SEO_ALLOW_CATALOG_FALLBACK=true only for an explicitly labelled non-production fallback build.`);
+    const stat = fs.statSync(FALLBACK_DATA_PATH); const body = fs.readFileSync(FALLBACK_DATA_PATH);
+    report.fallbackUsed = true; report.fallback = { file: path.relative(REPO_DIR, FALLBACK_DATA_PATH), productCount: JSON.parse(body).length, modifiedAt: stat.mtime.toISOString(), sha256: crypto.createHash('sha256').update(body).digest('hex') };
+    console.warn(`WARNING: SEO_ALLOW_CATALOG_FALLBACK=true; using stale repository catalogue after API failure: ${report.apiFailure}`);
+    return { products: JSON.parse(body).map(normaliseProduct), source: 'repository fallback (explicit opt-in)', report };
   }
-  const products = JSON.parse(fs.readFileSync(FALLBACK_DATA_PATH, 'utf8')).map(normaliseProduct);
-  return { products, source: 'repository product export' };
 }
-
-function cleanTemplate(template) {
-  return template
-    .replace(/\s*<title>[\s\S]*?<\/title>/i, '')
-    .replace(/\s*<meta\s+(?:name|property)="(?:description|keywords|author|og:[^"]+|twitter:[^"]+)"[^>]*>/gi, '')
-    .replace(/\s*<link\s+rel="canonical"[^>]*>/gi, '')
-    .replace(/\s*<meta\s+name="robots"[^>]*>/gi, '')
-    .replace(/\s*<script\s+type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '');
+function cleanTemplate(template) { return template.replace(/\s*<title>[\s\S]*?<\/title>/i, '').replace(/\s*<meta\s+(?:name|property)="(?:description|robots|author|og:[^"]+|twitter:[^"]+)"[^>]*>/gi, '').replace(/\s*<link\s+rel="canonical"[^>]*>/gi, '').replace(/\s*<script\s+type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, ''); }
+function documentFor(template, html, metadata, routeData) {
+  const schema = metadata.schema.map(item => `<script type="application/ld+json" data-seo-schema>${safeJson(item)}</script>`).join('\n    ');
+  const head = `<title>${escapeHtml(metadata.title)}</title>\n    <meta name="description" content="${escapeHtml(metadata.description)}">\n    <meta name="robots" content="${escapeHtml(metadata.robots)}">\n    <link rel="canonical" href="${escapeHtml(metadata.canonical)}">\n    <meta property="og:title" content="${escapeHtml(metadata.title)}">\n    <meta property="og:description" content="${escapeHtml(metadata.description)}">\n    <meta property="og:type" content="${metadata.type}">\n    <meta property="og:url" content="${escapeHtml(metadata.canonical)}">\n    <meta property="og:site_name" content="New Delhi Electricals">\n    <meta property="og:image" content="${escapeHtml(metadata.image)}">\n    <meta name="twitter:card" content="summary_large_image">\n    <meta name="twitter:title" content="${escapeHtml(metadata.title)}">\n    <meta name="twitter:description" content="${escapeHtml(metadata.description)}">\n    <meta name="twitter:image" content="${escapeHtml(metadata.image)}">${schema ? `\n    ${schema}` : ''}`;
+  return cleanTemplate(template).replace('</head>', `    ${head}\n  </head>`).replace('<div id="root"></div>', `<div id="root">${html}</div><script>window.__NDE_INITIAL_ROUTE_DATA__=${safeJson(routeData)};</script>`);
 }
+function outputPath(routePath) { return routePath === '/' ? TEMPLATE_PATH : path.join(DIST_DIR, `${routePath.replace(/^\//, '')}.html`); }
+function writeRoute(routePath, content) { const target = outputPath(routePath); fs.mkdirSync(path.dirname(target), { recursive: true }); fs.writeFileSync(target, content); }
 
-function pageHtml(template, { title, description, canonicalPath, h1, text, links = [], image, robots = 'index, follow', schema = [] }) {
-  const canonical = `${SITE_URL}${canonicalPath === '/' ? '/' : canonicalPath}`;
-  const socialImage = image?.startsWith('http') ? image : DEFAULT_IMAGE;
-  const head = [
-    `<title>${escapeHtml(title)}</title>`,
-    `<meta name="description" content="${escapeHtml(description)}">`,
-    `<meta name="robots" content="${escapeHtml(robots)}">`,
-    `<link rel="canonical" href="${escapeHtml(canonical)}">`,
-    `<meta property="og:title" content="${escapeHtml(title)}">`,
-    `<meta property="og:description" content="${escapeHtml(description)}">`,
-    `<meta property="og:type" content="website">`,
-    `<meta property="og:url" content="${escapeHtml(canonical)}">`,
-    `<meta property="og:site_name" content="New Delhi Electricals">`,
-    `<meta property="og:image" content="${escapeHtml(socialImage)}">`,
-    `<meta name="twitter:card" content="summary_large_image">`,
-    `<meta name="twitter:title" content="${escapeHtml(title)}">`,
-    `<meta name="twitter:description" content="${escapeHtml(description)}">`,
-    `<meta name="twitter:image" content="${escapeHtml(socialImage)}">`,
-    ...schema.map((item) => `<script type="application/ld+json" data-seo-schema>${safeJson(item)}</script>`),
-  ].join('\n    ');
-  const navLinks = [
-    ['/', 'Home'], ['/categories', 'Categories'], ['/brands', 'Brands'], ['/contact', 'Contact'],
-  ];
-  const shell = `<div class="seo-static-shell" style="font-family:system-ui,sans-serif;max-width:1120px;margin:auto;padding:24px;color:#111"><header><a href="/" style="font-weight:700">New Delhi Electricals</a><nav aria-label="Primary" style="display:flex;gap:16px;flex-wrap:wrap;margin:20px 0">${navLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join('')}</nav></header><main><h1>${escapeHtml(h1)}</h1><p>${escapeHtml(text)}</p>${image ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(h1)}" width="640" height="640" loading="eager" style="max-width:100%;height:auto;object-fit:contain">` : ''}${links.length ? `<nav aria-label="Related pages"><ul>${links.map((link) => `<li><a href="${escapeHtml(link.href)}">${escapeHtml(link.label)}</a></li>`).join('')}</ul></nav>` : ''}</main></div>`;
-  return cleanTemplate(template)
-    .replace('</head>', `    ${head}\n  </head>`)
-    .replace('<div id="root"></div>', `<div id="root">${shell}</div>`);
-}
+const renderer = await import(`${pathToFileURL(SERVER_ENTRY).href}?v=${Date.now()}`);
+const { products: rawProducts, source, report: sourceReport } = await loadCatalogue();
+const eligible = rawProducts.filter(product => product.isActive && product.id && product.name && product.brand && product.urlPath);
+const byPath = new Map(); const collisions = [];
+for (const product of eligible) { const key = product.urlPath.toLowerCase(); const previous = byPath.get(key); if (previous) { collisions.push([product, previous]); byPath.delete(key); } else if (!collisions.some(([a, b]) => a.urlPath.toLowerCase() === key || b.urlPath.toLowerCase() === key)) byPath.set(key, product); }
+const products = [...byPath.values()].sort((a, b) => a.name.localeCompare(b.name));
+const template = fs.readFileSync(TEMPLATE_PATH, 'utf8'); const routes = new Set();
+function emit(data, indexable = true) { const result = renderer.render(data.path, data); writeRoute(data.path, documentFor(template, result.html, result.metadata, data)); if (indexable) routes.add(data.path); }
 
-function outputPathFor(routePath) {
-  if (routePath === '/') return TEMPLATE_PATH;
-  return path.join(DIST_DIR, `${routePath.replace(/^\//, '')}.html`);
-}
+for (const [pathName, title, description, heading, text] of STATIC_PAGES) emit({ kind: pathName === '/' ? 'home' : 'static', path: pathName, title, description, heading, text, products: pathName === '/' ? products.slice(0, 12) : undefined });
+for (const [pathName, title, heading] of UTILITY_PAGES) emit({ kind: 'utility', path: pathName, title, description: `${heading} for New Delhi Electricals catalogue visitors.`, heading, text: 'This utility page is not included in search indexes.', robots: 'noindex, follow' }, false);
+for (const category of CATEGORIES) { const matches = products.filter(product => category.raw.some(raw => raw.toLowerCase() === product.category.toLowerCase())); emit({ kind: 'category', path: `/category/${category.slug}`, title: `${category.name} in Delhi | New Delhi Electricals`, description: category.description, heading: category.name, text: `${category.description} ${matches.length} catalogue products are available to browse.`, category, products: matches.slice(0, 24) }); }
+const brands = [...new Set(products.map(product => product.brand))].sort();
+for (const brandName of brands) { const matches = products.filter(product => product.brand === brandName); const brand = { slug: slugify(brandName), name: brandName }; emit({ kind: 'brand', path: `/brand/${brand.slug}`, title: `${brandName} Electrical Products Dealer in Delhi | New Delhi Electricals`, description: `Browse ${matches.length} ${brandName} electrical products and send an enquiry to New Delhi Electricals in Delhi NCR.`, heading: `${brandName} Electrical Products`, text: `Browse genuine ${brandName} catalogue products available for enquiry from New Delhi Electricals.`, brand, products: matches.slice(0, 24) }); }
+for (const product of products) { const category = CATEGORIES.find(item => item.raw.some(raw => raw.toLowerCase() === product.category.toLowerCase())); const brand = { slug: slugify(product.brand), name: product.brand }; const variantOptions = Object.entries(product.variant || {}).map(([sku, color]) => { const match = products.find(candidate => candidate.sku === sku); return match?.urlPath ? { sku, color, name: match.name, urlPath: match.urlPath } : null; }).filter(Boolean); emit({ kind: 'product', path: product.urlPath, title: `${product.name} | ${product.brand} Dealer in Delhi | New Delhi Electricals`, description: (product.description || `${product.name} by ${product.brand}. Send an enquiry to New Delhi Electricals for product details in Delhi NCR.`).slice(0, 160), heading: product.name, product, brand, category, variantOptions }); }
 
-function writeRoute(routePath, html) {
-  const outputPath = outputPathFor(routePath);
-  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-  fs.writeFileSync(outputPath, html, 'utf8');
-}
-
-const { products: loadedProducts, source } = await loadProducts();
-const products = loadedProducts.filter((product) => product.active && product.name && product.brand && product.urlPath);
-const dedupedProducts = [...new Map(products.map((product) => [product.urlPath.toLowerCase(), product])).values()];
-const template = fs.readFileSync(TEMPLATE_PATH, 'utf8');
-const routeSet = new Set();
-
-const organisation = {
-  '@context': 'https://schema.org', '@type': 'LocalBusiness', name: 'New Delhi Electricals', url: `${SITE_URL}/`,
-  telephone: '+91-9654102758',
-  address: { '@type': 'PostalAddress', streetAddress: '30 A Corner Market, Malviya Nagar', addressLocality: 'New Delhi', postalCode: '110017', addressCountry: 'IN' },
-  areaServed: 'Delhi NCR', openingHours: 'Mo-Su 10:00-19:30',
-};
-
-for (const page of STATIC_PAGES) {
-  let links = [];
-  if (page.path === '/' || page.path === '/categories') links = CATEGORIES.map((category) => ({ href: `/category/${category.slug}`, label: category.name }));
-  if (page.path === '/brands') links = [...new Set(dedupedProducts.map((product) => product.brand))].sort().map((brand) => ({ href: `/brand/${slugify(brand)}`, label: brand }));
-  writeRoute(page.path, pageHtml(template, { ...page, canonicalPath: page.path, links, schema: page.path === '/' ? [organisation] : [] }));
-  routeSet.add(page.path);
-}
-
-for (const page of NOINDEX_PAGES) {
-  writeRoute(page.path, pageHtml(template, { ...page, canonicalPath: page.path, description: `${page.h1} for New Delhi Electricals catalogue visitors.`, text: 'This utility page is not included in search indexes.', robots: 'noindex, follow' }));
-}
-
-for (const category of CATEGORIES) {
-  const matches = dedupedProducts.filter((product) => category.raw.some((raw) => raw.toLowerCase() === String(product.category).toLowerCase()));
-  const links = matches.slice(0, 24).map((product) => ({ href: product.urlPath, label: `${product.name} — ${product.brand}` }));
-  const canonicalPath = `/category/${category.slug}`;
-  const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-    { '@type': 'ListItem', position: 2, name: 'Categories', item: `${SITE_URL}/categories` },
-    { '@type': 'ListItem', position: 3, name: category.name, item: `${SITE_URL}${canonicalPath}` },
-  ] };
-  writeRoute(canonicalPath, pageHtml(template, { title: `${category.name} in Delhi | New Delhi Electricals`, description: category.description, canonicalPath, h1: category.name, text: `${category.description} ${matches.length} catalogue products are available to browse.`, links, schema: [breadcrumb] }));
-  routeSet.add(canonicalPath);
-}
-
-const brands = [...new Set(dedupedProducts.map((product) => product.brand))].sort();
-for (const brand of brands) {
-  const matches = dedupedProducts.filter((product) => product.brand === brand);
-  const canonicalPath = `/brand/${slugify(brand)}`;
-  const links = matches.slice(0, 24).map((product) => ({ href: product.urlPath, label: product.name }));
-  const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-    { '@type': 'ListItem', position: 2, name: 'Brands', item: `${SITE_URL}/brands` },
-    { '@type': 'ListItem', position: 3, name: brand, item: `${SITE_URL}${canonicalPath}` },
-  ] };
-  writeRoute(canonicalPath, pageHtml(template, { title: `${brand} Electrical Products Dealer in Delhi | New Delhi Electricals`, description: `Browse ${matches.length} ${brand} electrical products and send an enquiry to New Delhi Electricals in Delhi NCR.`, canonicalPath, h1: `${brand} Electrical Products`, text: `Browse genuine ${brand} catalogue products available for enquiry from New Delhi Electricals.`, links, schema: [breadcrumb] }));
-  routeSet.add(canonicalPath);
-}
-
-for (const product of dedupedProducts) {
-  const category = CATEGORIES.find((item) => item.raw.some((raw) => raw.toLowerCase() === String(product.category).toLowerCase()));
-  const categoryPath = category ? `/category/${category.slug}` : '/categories';
-  const description = (product.description || `${product.name} by ${product.brand}. Send an enquiry to New Delhi Electricals for product details in Delhi NCR.`).slice(0, 160);
-  const schema = {
-    '@context': 'https://schema.org', '@type': 'Product', name: product.name, description,
-    ...(product.sku ? { sku: String(product.sku) } : {}),
-    brand: { '@type': 'Brand', name: product.brand },
-    category: product.category,
-    ...(product.images.length ? { image: product.images } : {}),
-    url: `${SITE_URL}${product.urlPath}`,
-    ...(product.listPrice > 0 && product.currency ? { offers: { '@type': 'Offer', price: product.listPrice, priceCurrency: product.currency, url: `${SITE_URL}${product.urlPath}` } } : {}),
-  };
-  const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-    { '@type': 'ListItem', position: 2, name: category?.name || 'Categories', item: `${SITE_URL}${categoryPath}` },
-    { '@type': 'ListItem', position: 3, name: product.brand, item: `${SITE_URL}/brand/${slugify(product.brand)}` },
-    { '@type': 'ListItem', position: 4, name: product.name, item: `${SITE_URL}${product.urlPath}` },
-  ] };
-  const links = [
-    { href: categoryPath, label: category?.name || 'All categories' },
-    { href: `/brand/${slugify(product.brand)}`, label: `${product.brand} products` },
-  ];
-  const priceText = product.listPrice > 0 && product.currency === 'INR' ? ` Listed price: ₹${product.listPrice.toLocaleString('en-IN')}.` : '';
-  writeRoute(product.urlPath, pageHtml(template, { title: `${product.name} | ${product.brand} Dealer in Delhi | New Delhi Electricals`, description, canonicalPath: product.urlPath, h1: product.name, text: `${product.brand} ${product.category} product.${priceText} Send a WhatsApp enquiry for selection and quotation support in Delhi NCR.`, links, image: product.images[0], schema: [schema, breadcrumb] }));
-  routeSet.add(product.urlPath);
-}
-
-const sitemapUrls = [...routeSet].sort().map((routePath) => `  <url><loc>${escapeHtml(`${SITE_URL}${routePath === '/' ? '/' : routePath}`)}</loc></url>`).join('\n');
-fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls}\n</urlset>\n`, 'utf8');
-fs.writeFileSync(path.join(DIST_DIR, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\n\nSitemap: ${SITE_URL}/sitemap.xml\n`, 'utf8');
-fs.writeFileSync(path.join(DIST_DIR, '404.html'), pageHtml(template, { title: 'Page Not Found | New Delhi Electricals', description: 'The requested page could not be found.', canonicalPath: '/404', h1: 'Page Not Found', text: 'Return to the catalogue to continue browsing.', robots: 'noindex, nofollow' }), 'utf8');
-fs.writeFileSync(path.join(DIST_DIR, 'seo-build-report.json'), `${JSON.stringify({ source, loadedProducts: loadedProducts.length, indexableProducts: dedupedProducts.length, categories: CATEGORIES.length, brands: brands.length, indexableRoutes: routeSet.size, noindexRoutes: NOINDEX_PAGES.length }, null, 2)}\n`, 'utf8');
-
-console.log(`SEO generation complete: ${routeSet.size} indexable routes (${dedupedProducts.length} products, ${CATEGORIES.length} categories, ${brands.length} brands) from ${source}.`);
+const sitemap = [...routes].sort().map(route => `  <url><loc>${escapeHtml(`${SITE_URL}${route === '/' ? '/' : route}`)}</loc></url>`).join('\n');
+fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemap}\n</urlset>\n`);
+fs.writeFileSync(path.join(DIST_DIR, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+emit({ kind: 'not-found', path: '/404', title: 'Page Not Found | New Delhi Electricals', description: 'The requested page could not be found.', heading: 'Page Not Found', text: 'Return to the catalogue to continue browsing.', robots: 'noindex, nofollow' }, false); fs.renameSync(outputPath('/404'), path.join(DIST_DIR, '404.html'));
+const excluded = ['# Excluded duplicate canonical products', '', 'Products below are active API records sharing a canonical product path. They are excluded from the sitemap and generated output until catalogue data is corrected.', '', ...collisions.flatMap(([excludedProduct, retained]) => [`## ${excludedProduct.urlPath}`, `- Identifier: ${excludedProduct.id}`, `- Product name: ${excludedProduct.name}`, `- Brand: ${excludedProduct.brand}`, `- Canonical candidate: ${excludedProduct.urlPath}`, `- Conflicting record: ${retained.id} — ${retained.name}`, '- Reason excluded: duplicate canonical path would overwrite another product document.', '- Recommended data fix: assign a unique, stable product slug/url_path and rebuild from the production API.', ''])];
+fs.mkdirSync(path.join(REPO_DIR, 'docs', 'seo'), { recursive: true }); fs.writeFileSync(path.join(REPO_DIR, 'docs', 'seo', 'excluded-products.md'), `${excluded.join('\n')}\n`);
+const buildReport = { source, loadedProducts: rawProducts.length, indexableProducts: products.length, excludedDuplicateProducts: collisions.length, categories: CATEGORIES.length, brands: brands.length, indexableRoutes: routes.size, noindexRoutes: UTILITY_PAGES.length, catalogue: sourceReport };
+fs.writeFileSync(path.join(DIST_DIR, 'seo-build-report.json'), `${JSON.stringify(buildReport, null, 2)}\n`);
+console.log(`React SSR SEO generation complete: ${routes.size} indexable routes (${products.length} products) from ${source}.`);

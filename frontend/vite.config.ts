@@ -4,7 +4,7 @@ import path from "path";
 import { visualizer } from "rollup-plugin-visualizer";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({ mode, isSsrBuild }) => ({
   server: {
     host: "::",
     port: 8080,
@@ -50,7 +50,7 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         // Manual chunks for better code splitting
-        manualChunks: {
+        ...(isSsrBuild ? {} : { manualChunks: {
           // Vendor chunks
           "react-vendor": ["react", "react-dom", "react-router-dom"],
           "ui-vendor": [
@@ -63,10 +63,10 @@ export default defineConfig(({ mode }) => ({
           ],
           "form-vendor": ["react-hook-form", "@hookform/resolvers", "zod"],
           "animation-vendor": ["framer-motion", "gsap", "lenis"],
-        },
+        } }),
         // Optimize chunk file names
         chunkFileNames: "assets/js/[name]-[hash].js",
-        entryFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: isSsrBuild ? "[name].js" : "assets/js/[name]-[hash].js",
         assetFileNames: "assets/[ext]/[name]-[hash].[ext]",
       },
     },

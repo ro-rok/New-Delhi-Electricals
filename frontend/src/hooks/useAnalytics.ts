@@ -55,10 +55,11 @@ export const useAnalytics = () => {
   const trackSearch = useCallback((query: string) => {
     // Local storage
     const data = getAnalyticsData();
-    data.searchQueries = [query, ...data.searchQueries.slice(0, 99)];
+    // Keep a count locally only; search text is not analytics data.
+    data.searchQueries = ['search', ...data.searchQueries.slice(0, 99)];
     saveAnalyticsData(data);
     // Server tracking
-    sendTrackEvent({ type: 'search', query });
+    sendTrackEvent({ type: 'search' });
   }, []);
 
   const trackWhatsAppClick = useCallback((productId?: string, productName?: string) => {

@@ -47,8 +47,8 @@ export function trackWhatsAppClick(productId?: string, productName?: string): vo
   trackEvent({ type: 'whatsapp_click', productId, productName });
 }
 
-export function trackSearch(query: string): void {
-  trackEvent({ type: 'search', query });
+export function trackSearch(_query: string): void {
+  trackEvent({ type: 'search' });
 }
 
 // Summary data type for admin dashboard

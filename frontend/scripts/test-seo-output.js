@@ -4,45 +4,48 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
-const report = JSON.parse(fs.readFileSync(path.join(dist, 'seo-build-report.json'), 'utf8'));
-
-function assert(condition, message) {
-  if (!condition) throw new Error(message);
-}
-
-function read(relativePath) {
-  const value = fs.readFileSync(path.join(dist, relativePath), 'utf8');
-  assert(/<title>[^<]+<\/title>/.test(value), `${relativePath}: missing title`);
-  assert(/<meta name="description" content="[^"]+">/.test(value), `${relativePath}: missing description`);
-  assert(/<link rel="canonical" href="https:\/\/www\.newdelhielectricals\.com\/[^"]*">/.test(value), `${relativePath}: missing absolute canonical`);
-  assert(/<h1>[^<]+<\/h1>/.test(value), `${relativePath}: missing H1`);
-  assert(/<a href="\/[^"]*">/.test(value), `${relativePath}: missing crawlable links`);
-  return value;
-}
-
-assert(report.indexableRoutes > 1000, 'Expected more than 1,000 indexable catalogue routes');
-assert(report.categories === 6, 'Expected six commercial category routes');
-assert(report.brands >= 3, 'Expected at least three brands with inventory');
-
-const home = read('index.html');
-const category = read(path.join('category', 'switches-sockets.html'));
-const brand = read(path.join('brand', 'havells.html'));
-const productFiles = fs.readdirSync(path.join(dist, 'havells')).filter((file) => file.endsWith('.html'));
-assert(productFiles.length > 0, 'Expected at least one Havells product page');
-const product = read(path.join('havells', productFiles[0]));
-assert(home.includes('LocalBusiness'), 'Homepage missing LocalBusiness schema');
-assert(category.includes('BreadcrumbList'), 'Category missing BreadcrumbList schema');
-assert(brand.includes('BreadcrumbList'), 'Brand missing BreadcrumbList schema');
-assert(product.includes('"@type":"Product"'), 'Product missing Product schema');
-assert(product.includes('"@type":"Offer"'), 'Product with verified price missing Offer schema');
-
-const search = read('search.html');
-assert(search.includes('noindex, follow'), 'Search route must be noindex');
+const site = 'https://www.newdelhielectricals.com';
+const build = JSON.parse(fs.readFileSync(path.join(dist, 'seo-build-report.json'), 'utf8'));
 const sitemap = fs.readFileSync(path.join(dist, 'sitemap.xml'), 'utf8');
-assert(!sitemap.includes('/search'), 'Sitemap must exclude search');
-assert(!sitemap.includes('/admin'), 'Sitemap must exclude admin');
-assert(!sitemap.includes('/cart'), 'Sitemap must exclude cart');
-assert(!fs.readFileSync(path.join(dist, 'robots.txt'), 'utf8').includes('Disallow: /assets'), 'robots.txt must not block render assets');
-assert(![home, category, brand, product].some((html) => /InStock|aggregateRating|reviewCount/.test(html)), 'Generated schema contains unverified inventory or review data');
+const routes = [...sitemap.matchAll(/<loc>https:\/\/www\.newdelhielectricals\.com([^<]*)<\/loc>/g)].map(match => match[1] || '/');
+const failures = []; const warnings = []; const counters = { missingTitle: 0, missingH1: 0, schemaErrors: 0, canonicalErrors: 0 };
 
-console.log(`SEO output verified: ${report.indexableRoutes} indexable routes and ${report.noindexRoutes} noindex utility routes.`);
+function outputPath(route) { return route === '/' ? path.join(dist, 'index.html') : path.join(dist, `${route.replace(/^\//, '')}.html`); }
+function fail(route, message) { failures.push({ route, message }); }
+function schemas(html, route) {
+  const results = [];
+  for (const match of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
+    try { results.push(JSON.parse(match[1])); } catch { counters.schemaErrors++; fail(route, 'invalid JSON-LD'); }
+  }
+  return results;
+}
+for (const route of routes) {
+  const filename = outputPath(route);
+  if (!fs.existsSync(filename)) { fail(route, 'generated document missing'); continue; }
+  const html = fs.readFileSync(filename, 'utf8');
+  if (!/^<!doctype html>/i.test(html) || !/<html[\s>]/i.test(html)) fail(route, 'invalid HTML document');
+  if (!/<title>[^<]+<\/title>/i.test(html)) { counters.missingTitle++; fail(route, 'missing title'); }
+  const canonical = [...html.matchAll(/<link\s+rel="canonical"\s+href="([^"]+)"[^>]*>/gi)].map(match => match[1]);
+  if (canonical.length !== 1 || canonical[0] !== `${site}${route}`) { counters.canonicalErrors++; fail(route, 'canonical is missing, duplicated, or incorrect'); }
+  if (!/^https:\/\/www\.newdelhielectricals\.com\//.test(canonical[0] || '')) { counters.canonicalErrors++; fail(route, 'canonical must be HTTPS www'); }
+  if (!/<h1(?:\s[^>]*)?>[^<]+<\/h1>/i.test(html)) { counters.missingH1++; fail(route, 'missing H1'); }
+  if (!/<main(?:\s[^>]*)?>[\s\S]*\S[\s\S]*?<\/main>/i.test(html)) fail(route, 'missing meaningful root content');
+  if (/\.seo-static-shell/i.test(html)) fail(route, 'obsolete fake SEO shell present');
+  if (/noindex/i.test(html)) fail(route, 'indexable sitemap document is noindex');
+  const jsonLd = schemas(html, route);
+  if (!jsonLd.length && route === '/') fail(route, 'home page missing JSON-LD');
+  for (const schema of jsonLd) {
+    const serialized = JSON.stringify(schema);
+    if (/"@type":"Offer"|"availability"|"aggregateRating"|"review"|"priceValidUntil"|"gtin"|"mpn"/i.test(serialized)) fail(route, 'unsupported schema property');
+  }
+}
+for (const route of ['/search', '/cart', '/shortlist', '/compare']) {
+  const html = fs.readFileSync(outputPath(route), 'utf8');
+  if (!/noindex, follow/i.test(html)) fail(route, 'utility route must be noindex');
+  if (sitemap.includes(`<loc>${site}${route}</loc>`)) fail(route, 'utility route must not be in sitemap');
+}
+if (/Disallow: \/assets/i.test(fs.readFileSync(path.join(dist, 'robots.txt'), 'utf8'))) fail('robots.txt', 'render assets are blocked');
+const report = { routesChecked: routes.length, passed: routes.length - new Set(failures.map(item => item.route)).size, failed: failures.length, warnings: warnings.length, ...counters, failures, warningDetails: warnings };
+fs.writeFileSync(path.join(dist, 'seo-validation-report.json'), `${JSON.stringify(report, null, 2)}\n`);
+if (failures.length) throw new Error(`SEO validation failed for ${new Set(failures.map(item => item.route)).size} route(s). See dist/seo-validation-report.json.`);
+console.log(`SEO output verified: ${report.routesChecked} canonical routes, ${report.passed} passed, ${report.warnings} warnings.`);

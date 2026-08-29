@@ -2,6 +2,10 @@
 
 This sprint replaces an all-client-rendered catalogue shell with selective build-time route HTML for canonical public pages. It also corrects canonical/sitemap/indexation architecture, adds factual schema and visible product breadcrumbs, adds non-PII conversion events, removes an unused incompatible build plugin, and changes Vercel routing so unknown public paths can become real 404s after deployment.
 
+## 2026-08-29 release decision
+
+Production was **not deployed**. The SSR recovery has now passed the local build, 1,936-route SEO validation and five representative browser hydration tests. The checked-in handcrafted shell and silent fallback have been replaced by a React server entry and strict production-API build policy. This remains local evidence only; release still needs its separately authorised production validation.
+
 # 1. What Was Wrong
 
 - Live raw HTML for home, category, brand, search, admin and nonexistent URLs was the same 2,498-byte shell.

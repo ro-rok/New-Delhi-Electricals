@@ -12,6 +12,8 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { OfflineBanner } from "@/components/OfflineBanner";
 import { trackConversion } from "@/lib/conversionTracking";
 import { trackPageView } from "@/api/tracking";
+import { PrerenderRoute } from "@/components/PrerenderRoute";
+import type { RouteData } from "@/lib/routeData";
 
 // Eagerly loaded components (critical path)
 import Home from "./pages/Home";
@@ -71,8 +73,9 @@ const GlobalShortcuts = () => {
 const RouteTracker = () => {
   const location = useLocation();
   useEffect(() => {
-    trackPageView(location.pathname + location.search);
-  }, [location.pathname, location.search]);
+    // Queries can contain customer intent and must not enter page-view analytics.
+    trackPageView(location.pathname);
+  }, [location.pathname]);
   return null;
 };
 
@@ -82,13 +85,13 @@ const GlobalConversionTracking = () => {
       const target = event.target instanceof Element ? event.target.closest<HTMLElement>('a,button') : null;
       if (!target) return;
       const href = target instanceof HTMLAnchorElement ? target.href : '';
-      const label = (target.getAttribute('aria-label') || target.textContent || '').trim().slice(0, 80);
+      const label = (target.getAttribute('aria-label') || '').trim();
       if (href.includes('wa.me') || /whats\s*app/i.test(label)) {
-        const properties = { cta_location: target.dataset.ctaLocation || label || 'unknown' };
+        const properties = { cta_location: target.dataset.ctaLocation || 'whatsapp_cta' };
         trackConversion('whatsapp_click', properties);
         trackConversion('whatsapp_enquiry_start', properties);
       } else if (href.startsWith('tel:')) {
-        trackConversion('phone_click', { cta_location: target.dataset.ctaLocation || label || 'unknown' });
+        trackConversion('phone_click', { cta_location: target.dataset.ctaLocation || 'phone_cta' });
       }
     };
     document.addEventListener('click', handleClick, true);
@@ -97,43 +100,53 @@ const GlobalConversionTracking = () => {
   return null;
 };
 
-const App = () => (
+export const AppProviders = ({ children, prerender = false }: { children: React.ReactNode; prerender?: boolean }) => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <AppProvider>
         <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <Analytics />
-          <OfflineBanner />
-          <BrowserRouter
-            future={{
-              v7_startTransition: true,
-              v7_relativeSplatPath: true,
-            }}
-          >
-            <GlobalShortcuts />
-            <RouteTracker />
-            <GlobalConversionTracking />
-            <ErrorBoundary>
-              <Suspense fallback={<PageLoader />}>
-                <Routes>
-                  <Route path="/" element={<ErrorBoundary><Home /></ErrorBoundary>} />
-                  <Route path="/about" element={<ErrorBoundary><AboutPage /></ErrorBoundary>} />
-                  <Route path="/services" element={<ErrorBoundary><ServicesPage /></ErrorBoundary>} />
-                  <Route path="/contact" element={<ErrorBoundary><ContactPage /></ErrorBoundary>} />
-                  <Route path="/faq" element={<ErrorBoundary><FAQPage /></ErrorBoundary>} />
-                  <Route path="/search" element={<ErrorBoundary><SearchResultsPage /></ErrorBoundary>} />
-                  <Route path="/categories" element={<ErrorBoundary><CategoriesListPage /></ErrorBoundary>} />
-                  <Route path="/category/:slug" element={<ErrorBoundary><CategoryPage /></ErrorBoundary>} />
-                  <Route path="/brands" element={<ErrorBoundary><BrandsListPage /></ErrorBoundary>} />
-                  <Route path="/brand/:slug" element={<ErrorBoundary><BrandPage /></ErrorBoundary>} />
-                  <Route path="/:brand/:slug" element={<ErrorBoundary><ProductSlugPage /></ErrorBoundary>} />
-                  <Route path="/product/:brand/:slug" element={<ErrorBoundary><ProductSlugPage /></ErrorBoundary>} />
-                  <Route path="/product/:brand/:product_family/:slug" element={<ErrorBoundary><ProductSlugPage /></ErrorBoundary>} />
-                  <Route path="/shortlist" element={<ErrorBoundary><ShortlistPage /></ErrorBoundary>} />
-                  <Route path="/compare" element={<ErrorBoundary><ComparePage /></ErrorBoundary>} />
-                  <Route path="/cart" element={<ErrorBoundary><CartPage /></ErrorBoundary>} />
+          {!prerender && <><Toaster /><Sonner /><Analytics /><OfflineBanner /></>}
+          {children}
+        </TooltipProvider>
+      </AppProvider>
+    </ThemeProvider>
+  </QueryClientProvider>
+);
+
+const InitialOrLegacy = ({ initialRouteData, children }: { initialRouteData?: RouteData; children: React.ReactNode }) => {
+  const location = useLocation();
+  // The embedded payload describes one document only. Once the client navigates,
+  // render the normal interactive route instead of reusing stale initial markup.
+  return initialRouteData?.path === location.pathname
+    ? <PrerenderRoute data={initialRouteData} />
+    : <>{children}</>;
+};
+
+/** One logical route table used by BrowserRouter and StaticRouter. */
+export const AppContent = ({ initialRouteData }: { initialRouteData?: RouteData }) => (
+  <>
+    <GlobalShortcuts />
+    <RouteTracker />
+    <GlobalConversionTracking />
+    <ErrorBoundary>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><Home /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/about" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><AboutPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/services" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ServicesPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/contact" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ContactPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/faq" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><FAQPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/search" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><SearchResultsPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/categories" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><CategoriesListPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/category/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><CategoryPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/brands" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><BrandsListPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/brand/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><BrandPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/:brand/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ProductSlugPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/product/:brand/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ProductSlugPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/product/:brand/:product_family/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ProductSlugPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/shortlist" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ShortlistPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/compare" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ComparePage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/cart" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><CartPage /></ErrorBoundary></InitialOrLegacy>} />
 
                   {/* Admin Routes */}
                   <Route path="/admin/login" element={<ErrorBoundary><AdminLogin /></ErrorBoundary>} />
@@ -153,14 +166,18 @@ const App = () => (
                   </Route>
 
                   <Route path="*" element={<NotFound />} />
-                </Routes>
-              </Suspense>
-            </ErrorBoundary>
-          </BrowserRouter>
-        </TooltipProvider>
-      </AppProvider>
-    </ThemeProvider>
-  </QueryClientProvider>
+        </Routes>
+      </Suspense>
+    </ErrorBoundary>
+  </>
+);
+
+const App = ({ initialRouteData }: { initialRouteData?: RouteData }) => (
+  <AppProviders prerender={Boolean(initialRouteData)}>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <AppContent initialRouteData={initialRouteData} />
+    </BrowserRouter>
+  </AppProviders>
 );
 
 export default App;

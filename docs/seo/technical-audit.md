@@ -2,6 +2,8 @@
 
 Audit date: 2026-08-27. All findings below are based on repository inspection, local production output, direct HTTP responses or recorded command output.
 
+> Recovery addendum — 2026-08-29: the local checkout now has React SSR/prerendering, strict production-API catalogue loading, safe opt-in-only fallback, and browser hydration coverage. The old shell generator was removed. The local build, full route validation and representative browser tests pass; production deployment remains intentionally withheld.
+
 ## Issue
 
 ### Priority

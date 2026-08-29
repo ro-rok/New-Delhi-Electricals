@@ -4,7 +4,7 @@ The 1,000-organic-visits/month objective is a target, not a guarantee. This plan
 
 ## Days 1–3: deploy and verify the technical release
 
-- Deploy the generated static output to a Vercel preview, then production after approval.
+- Resolve the documented P0 release-gate failures, complete the local validation gate, then deploy the tested release directly to Production. Do not create a Preview deployment for this release.
 - Verify HTTP status, raw HTML, canonical, robots and schema on home, two categories, all five brands, representative products, search, admin and unknown URLs.
 - Confirm legacy category/product redirects have one hop and unknown paths return HTTP 404.
 - Confirm the production runtime API setting points to the working catalogue service.
