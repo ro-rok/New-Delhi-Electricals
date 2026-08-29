@@ -47,7 +47,7 @@ The deployed API is reachable from the production origin. `GET /api/products?pag
 
 ## CLS and mobile Lighthouse
 
-Local browser-suite CLS values were Home 0.002106, Category 0.002116, Brand 0.017030, Havells product 0.001290 and Finolex product 0.001290. Production Lighthouse lab CLS was 0 for sampled home/category/brand/product routes; all are within the 0.1 release budget.
+Local browser-suite CLS values were Home 0.002106, Category 0.002116, Brand 0.017030, Havells product 0.001290 and Finolex product 0.001290. Production Lighthouse lab CLS was 0 for all five sampled routes; all are within the 0.1 release budget.
 
 | Route | Performance | SEO | LCP | CLS | TBT | Speed Index |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -55,6 +55,7 @@ Local browser-suite CLS values were Home 0.002106, Category 0.002116, Brand 0.01
 | Category | 83 | 100 | 3.48 s | 0 | 0 ms | 4.60 s |
 | Brand | 84 | 100 | 3.49 s | 0 | 0 ms | 3.24 s |
 | Product | 85 | 100 | 3.48 s | 0 | 0 ms | 3.18 s |
+| Finolex product | 80 | 100 | 3.74 s | 0 | 0 ms | 4.17 s |
 
 ## Sitemap, robots, canonicals and schema
 
