@@ -86,4 +86,8 @@ The checked-in generator also contains a repository catalogue fallback and injec
 
 SEMrush data unavailable in repository environment.
 
+## 2026-08-29 production-release validation
+
+The deployed React SSR release was observed on the preferred `https://www.newdelhielectricals.com` host. The current production sitemap contains 1,936 unique canonical URLs, all on HTTPS `www`; local generation used 1,986 API products, emitted 1,918 canonical product documents, excluded 32 duplicate canonical collisions, and did not use a repository fallback. Production mobile Lighthouse lab baseline is Home 82, Category 83, Brand 84 and Product 85 performance, with SEO 100 and CLS 0 for each sampled route. Google Search Console remains unavailable, so no clicks, impressions, index coverage or query history has been invented.
+
 PageSpeed field/CrUX data unavailable in repository environment.

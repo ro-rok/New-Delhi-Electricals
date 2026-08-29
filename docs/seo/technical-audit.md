@@ -389,3 +389,7 @@ Partially fixed. Existing lazy catalogue-image behavior was preserved; no image 
 ### How It Was Tested
 
 - Final local-preview Lighthouse reports were captured for home/category/brand/product, but are not a like-for-like replacement for the live baseline and are documented in the implementation report.
+
+## Production validation update — 2026-08-29
+
+The deployed `main` release was verified on Vercel Production. Canonical home/category/brand/product routes returned 200 with React SSR HTML; invalid public routes returned 404; legacy category and product URLs made one 308 permanent hop. The 1,936-URL sitemap, robots policy, query canonical policy and schema passed the documented checks. Production CORS allowed the preferred `www` origin, and the five representative hydrated pages had no browser console errors. See `production-validation.md` for measured results.

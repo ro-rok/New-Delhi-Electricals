@@ -81,4 +81,4 @@ Pre-change Lighthouse was collected against the live deployment; final Lighthous
 
 # 8. Next SEO Task
 
-Deploy this release to a Vercel preview/production environment and perform a live HTTP + Google Search Console URL Inspection validation of homepage, category, brand, product, search, admin, legacy and nonexistent routes before submitting the sitemap.
+Production validation is complete for the technical release; do not create a Preview solely for this work. Next, obtain Google Search Console access, submit the 1,936-URL sitemap, and use real historical/search data to prioritise content work. Keep the existing non-SEO TypeScript errors as a separate P1 cleanup before making type checking a required release gate.

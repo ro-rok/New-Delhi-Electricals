@@ -4,11 +4,11 @@ The 1,000-organic-visits/month objective is a target, not a guarantee. This plan
 
 ## Days 1–3: deploy and verify the technical release
 
-- Resolve the documented P0 release-gate failures, complete the local validation gate, then deploy the tested release directly to Production. Do not create a Preview deployment for this release.
+- Completed 2026-08-29: the verified `main` release was observed on Production; no Preview was created. The local gate passed build, 1,936-route SEO validation and 15 browser tests. Production HTTP, raw SSR, hydration, CORS, sitemap, robots, canonical, schema and Lighthouse checks are recorded in `production-validation.md`.
 - Verify HTTP status, raw HTML, canonical, robots and schema on home, two categories, all five brands, representative products, search, admin and unknown URLs.
 - Confirm legacy category/product redirects have one hop and unknown paths return HTTP 404.
 - Confirm the production runtime API setting points to the working catalogue service.
-- Validate the 1,972-URL sitemap response and submit it in Google Search Console.
+- Submit the current 1,936-URL sitemap in Google Search Console when access is available.
 
 ## Days 4–7: establish search and conversion measurement
 

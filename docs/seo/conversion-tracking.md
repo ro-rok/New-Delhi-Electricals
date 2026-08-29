@@ -2,7 +2,7 @@
 
 ## 2026-08-29 production validation status
 
-No production event validation was performed because the release gate blocked deployment. Repository inspection confirms Vercel Analytics custom-event dispatch code exists; the local recovery adds quote_enquiry_handoff for the WhatsApp quotation handoff and removes query text from analytics dispatch. No test enquiry or customer data was sent.
+Production browser hydration completed without errors. The exact event-dispatch contract was exercised by the 15-test browser suite without sending a customer enquiry or WhatsApp message: generic WhatsApp is `whatsapp_click` then `whatsapp_enquiry_start`; cart quotation handoff is `quote_enquiry_start`, `whatsapp_click`, `whatsapp_enquiry_start`, `quote_enquiry_handoff`; telephone is `phone_click`. The assertions reject PII, query text and WhatsApp-message contents. This proves application dispatch, not Vercel account ingestion; account-level ingestion remains unverified.
 
 ## Implemented analytics layer
 

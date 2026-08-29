@@ -16,3 +16,7 @@ There is no crawler-only hidden content: the H1, breadcrumbs, visible catalogue/
 Metadata and JSON-LD come from getRouteMetadata in frontend/src/lib/routeData.ts, the same model used by the server renderer and hydrated route. Product schema intentionally has no Offer, availability, ratings, reviews, GTIN or MPN.
 
 The build fails if the production API cannot be loaded. A repository catalogue fallback is possible only with SEO_ALLOW_CATALOG_FALLBACK=true; the report then records the API failure, fallback count, file timestamp and SHA-256.
+
+## Production confirmation — 2026-08-29
+
+Production served the same React-rendered route structure for home, category, brand, Havells product and Finolex product. Raw HTML included the expected route data, metadata and schema; browser hydration retained matching H1/canonical/breadcrumb content with no console diagnostics. The release build used the production API, generated 1,936 indexable routes from 1,918 canonical products, and did not use the explicit fallback.
