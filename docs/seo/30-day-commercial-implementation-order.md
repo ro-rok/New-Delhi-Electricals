@@ -1,0 +1,84 @@
+# Prompt 2 — 30-Day Commercial SEO Implementation Order
+
+This sprint order assumes technical deployment validation is either complete or being closed separately. Do not reopen the entire technical SEO project inside Prompt 2.
+
+## Days 1–3 — Existing-page quick wins
+1. Optimize `/brand/finolex` around `finolex dealers in delhi`; preserve authorised-dealer proof.
+2. Rework homepage targeting around `electrical shops in delhi`, Delhi NCR wholesale/retail and buyer segments.
+3. Resolve homepage `/about` `/brands` content overlap for `electrical company in delhi`.
+4. Improve `/category/wires-cables` for price/range/house-wire decision intent.
+5. Improve `/category/circuit-protection` with strong RCCB + MCB taxonomy/range.
+6. Improve `/category/switches-sockets` for modular-switch selection/price.
+7. Strengthen exact-model product pages where model/spec search demand exists.
+
+## Days 4–10 — Build only the highest-confidence new hubs
+Inventory-gate each page before publishing.
+
+1. Polycab wires & cables
+2. Finolex wires & cables
+3. Havells wires & cables
+4. Anchor switches & sockets
+5. Havells circuit protection
+
+Each page must contain:
+- actual live catalogue items
+- useful selection/specification structure
+- factual dealer status
+- Delhi NCR service context
+- WhatsApp quote CTA
+- quotation/form CTA
+- parent/sibling/product internal links
+
+## Days 11–15 — Second commercial batch
+If inventory is strong:
+6. Havells switches & sockets
+7. Havells water heaters
+
+Do not create Lauritz Knudsen × category pages yet without measured query demand.
+
+## Days 16–20 — Content that assists commercial rankings
+Publish first:
+1. Best wire for house wiring
+2. MCB vs MCCB
+3. How to choose MCB for home
+4. RCCB explained
+5. How to identify original Finolex wire
+
+Each guide should link into one primary commercial cluster.
+
+## Days 21–24 — Location decision
+- Homepage remains Delhi/Delhi NCR hub.
+- Consider Gurgaon page (260/KD24) only if unique operational content is available.
+- Consider Noida page (110/KD28) second.
+- No Ghaziabad/Faridabad page in first sprint.
+- No duplicate Gurugram page.
+
+## Days 25–27 — Product indexation pilot
+- score a representative product sample using `product-indexation-strategy.md`
+- fix collision records
+- identify cosmetic/duplicate variants
+- strengthen exact-model pages with evidence
+- do not mass-noindex before GSC evidence
+
+## Days 28–30 — Measurement + iteration
+When GSC export is available:
+- merge query/page data into master
+- identify positions 4–20
+- identify high-impression/low-CTR pages
+- confirm/refute cannibalization
+- choose batch 2 based on actual impressions and WhatsApp/quote events
+
+## 30-day success measures
+Primary:
+- qualified WhatsApp enquiries from organic landing pages
+- quotation/form starts/submits
+- growth in non-brand commercial impressions/clicks
+- movement of Finolex/Polycab/Havells commercial clusters
+
+Secondary:
+- top-20 keyword count
+- top-10 commercial keyword count
+- number of commercial hubs receiving impressions
+- indexed quality pages, not raw indexed-page count
+
+The 1,000 visits/month objective remains a target, not a guarantee.
