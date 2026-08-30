@@ -128,3 +128,40 @@ Create only after the higher-priority commercial hubs and only with unique servi
 - Gurgaon + Gurugram duplicate pages
 - Ghaziabad/Faridabad dedicated pages in sprint one
 - Generic MCB child page solely because `mcb` volume is large; KD is 45 and circuit-protection page should build authority first
+
+
+---
+
+# Prompt 3 implementation outcome (2026-08-31)
+
+The research above is preserved as written on 2026-08-30. This section records what the **live
+catalogue** allowed, which differs from the ranking above in three places. Full evidence:
+`commercial-pages-implemented.md`.
+
+| Researched page | Prompt 2 priority | Live inventory | Decision |
+|---|---|---:|---|
+| `/brand/polycab/wires-cables` | P0, 94 | 8 records, complete size ladder, 100% priced | **BUILT** |
+| `/brand/finolex/wires-cables` | P0, 94 | 16 records, FR + FRLS, 100% priced | **BUILT** |
+| `/brand/havells/wires-cables` | P0, 89 | **0 records** | **REJECTED** |
+| `/brand/anchor/switches-sockets` | P0, 89 | 162 records, Penta | **BUILT** |
+| `/brand/havells/circuit-protection` | P1, 87 | **0 records** | **REJECTED** |
+| `/brand/havells/switches-sockets` | P1, 84 | 201 records, Signia + Fabio | **BUILT** |
+| `/brand/havells/water-heaters` | P1, 82 | **1 record** | **REJECTED** |
+| `/category/wires-cables/house-wires` | Conditional, 86 | 24 records = the entire parent category | **REJECTED — would duplicate the parent** |
+| `/electrical-shop-gurgaon` | Conditional, 78 | n/a | **DEFERRED — no unique operational content in repo** |
+| `/electrical-shop-noida` | Conditional, 72 | n/a | **DEFERRED** |
+
+Why the three rejections matter for planning: Havells demand for wire (`havells wire` 9,900/KD27)
+and MCBs (`havells mcb` 2,900/KD31) is real and unserved. These pages become buildable the moment
+the catalogue gains Havells wire or circuit-protection inventory — the keyword case does not need
+re-researching, only the stock does.
+
+Inverse mismatch: **Lauritz Knudsen circuit protection is the deepest technical inventory in the
+catalogue** (132 records, MCB/RCCB/RCBO/isolator/changeover, 6–125 A, 1–4 pole, 30/100/300 mA) with
+no measured query cluster. Prompt 2's deferral was preserved and no LK hub was built; the inventory
+was used to strengthen `/category/circuit-protection` instead. If a query set for Lauritz Knudsen
+(or its L&T legacy naming) is ever measured, this is the highest-inventory hub candidate on the site.
+
+Existing-page work in the table at the top of this document was completed for priorities 1–10, with
+one correction: the geysers category slug is `/category/geysers`, not `/category/geysers-water-heaters`,
+and it holds a single record, so it cannot compete for `water heater` 22,200/KD31 until inventory exists.

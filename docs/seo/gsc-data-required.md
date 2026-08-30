@@ -2,7 +2,11 @@
 
 ## Status
 
-**GSC DATA UNAVAILABLE IN THIS SESSION**
+**GSC DATA UNAVAILABLE — STILL PENDING AS OF 2026-08-31 (after Prompt 3).**
+
+Prompt 3 shipped the commercial architecture without fabricating any GSC metric. The items below
+remain blocked, and the second commercial batch and any product consolidation decision depend on
+this export.
 
 No Google Search Console connector is exposed to this ChatGPT session, and no Search Console performance export was found among the available SEO files. No clicks, impressions, CTR, average-position or URL-Inspection values are fabricated.
 

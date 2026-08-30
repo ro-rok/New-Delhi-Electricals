@@ -22,6 +22,8 @@ Volume is deliberately capped at 10/100 so a high-volume vanity query cannot dom
 
 ## P0 cluster — Finolex wires & cables
 
+> **Prompt 3 status: OWNED — page built** on 16 FR/FRLS records.
+
 **Recommended owner:** `/brand/finolex/wires-cables`
 
 Core evidence:
@@ -37,6 +39,8 @@ Do **not** create separate dealer, price, price-list, cable and Delhi URLs. One 
 
 ## P0 cluster — Polycab wires & cables
 
+> **Prompt 3 status: OWNED — page built** on 8 FR-LSH records.
+
 **Recommended owner:** `/brand/polycab/wires-cables`
 
 Core evidence:
@@ -49,6 +53,11 @@ SERP evidence: local/specialist provider pages rank #2, #3, #7 and #10 for `poly
 
 ## P0 cluster — Havells wires & cables
 
+> **Prompt 3 status (2026-08-31): UNOWNED — page not built.** The catalogue holds zero Havells
+> records in `Wires & Cables`; all 24 wire records are Polycab and Finolex. The keyword evidence
+> below is unchanged and still valid; only the inventory is missing. Build when Havells wire
+> inventory exists.
+
 **Recommended owner:** `/brand/havells/wires-cables`
 
 Core evidence:
@@ -58,6 +67,8 @@ Core evidence:
 - Havells wire dealer in Delhi — 20 (low volume but high local conversion fit)
 
 ## P0 cluster — Anchor switches & sockets
+
+> **Prompt 3 status: OWNED — page built** on 162 Penta records.
 
 **Recommended owner:** `/brand/anchor/switches-sockets`
 
@@ -82,6 +93,10 @@ Core evidence:
 Because RCCB is substantially easier than MCB, strengthen the existing circuit-protection page around RCCB/MCB taxonomy first. A dedicated RCCB child page can be created later if inventory depth and GSC query separation justify it.
 
 ### Havells circuit protection
+
+> **Prompt 3 status: UNOWNED — page not built.** Zero Havells circuit-protection records; all 132
+> are Lauritz Knudsen (Tripper). Keyword evidence unchanged.
+
 Proposed owner: `/brand/havells/circuit-protection`
 
 - Havells MCB — 2,900 / KD 31
@@ -99,13 +114,17 @@ Proposed owner: `/brand/havells/circuit-protection`
 Keep generic modular-switch intent on the existing category in sprint one; do not split merely for keyword matching.
 
 ### Havells switches
+
+> **Prompt 3 status: OWNED — `/brand/havells/switches-sockets` built** on 201 Signia and Fabio records.
+
 Proposed owner: `/brand/havells/switches-sockets`
 - Havells switches — 4,400 / KD 31
 - Havells modular switches — 590 / KD 23
 
 ## P1 cluster — Water heaters
 
-**Existing owner:** `/category/geysers-water-heaters`
+**Existing owner:** `/category/geysers` (the `-water-heaters` slug does not exist; `/category/water-heaters`
+redirects here). Holds one record as of 2026-08-31, so this cluster is effectively unserved.
 
 - Water heater — 22,200 / KD 31
 - Geyser — 201,000 / KD 34
@@ -113,6 +132,10 @@ Proposed owner: `/brand/havells/switches-sockets`
 Head-term volume is huge but broad. Do not let it outrank higher-converting wire/dealer work.
 
 ### Havells water heaters
+
+> **Prompt 3 status: UNOWNED — page not built.** One geyser SKU in the catalogue
+> (`GHWACAPWH005`). Keyword evidence unchanged.
+
 Proposed owner: `/brand/havells/water-heaters`
 - Havells water heater — 12,100 / KD 30
 - Havells geyser — 18,100 / KD 34
@@ -160,3 +183,14 @@ Patterns **not** supported strongly enough for sprint-one page multiplication:
 ## Factual-language guardrail
 
 The business handoff says **authorised dealer**. Several valuable keywords use **distributor**. Do not optimize copy to claim “distributor” unless that appointment is separately verified. Search demand never overrides factual accuracy.
+
+
+## Unmeasured cluster with the deepest inventory — Lauritz Knudsen circuit protection
+
+Recorded 2026-08-31 during Prompt 3 inventory gating, not from SEMrush.
+
+Lauritz Knudsen holds 132 circuit-protection records — MCB (C curve), RCCB at 30/100/300 mA, RCBO,
+isolators and automatic changeovers, 1–4 pole, 6–125 A, all priced and imaged. It is the deepest
+single-brand technical inventory on the site and has **no measured query cluster**, so no hub was
+built and Prompt 2's deferral stands. If a Lauritz Knudsen (or L&T legacy-naming) query set is ever
+measured, this is the strongest inventory-backed hub candidate available.

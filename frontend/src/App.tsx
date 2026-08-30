@@ -26,6 +26,7 @@ const ContactPage = lazy(() => import("./pages/ContactPage"));
 const FAQPage = lazy(() => import("./pages/FAQPage"));
 const CategoryPage = lazy(() => import("./pages/CategoryPage"));
 const BrandPage = lazy(() => import("./pages/BrandPage"));
+const CommercialHubPage = lazy(() => import("./pages/CommercialHubPage"));
 const ProductSlugPage = lazy(() => import("./pages/ProductSlugPage"));
 const ShortlistPage = lazy(() => import("./pages/ShortlistPage"));
 const ComparePage = lazy(() => import("./pages/ComparePage"));
@@ -141,6 +142,7 @@ export const AppContent = ({ initialRouteData }: { initialRouteData?: RouteData 
                   <Route path="/category/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><CategoryPage /></ErrorBoundary></InitialOrLegacy>} />
                   <Route path="/brands" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><BrandsListPage /></ErrorBoundary></InitialOrLegacy>} />
                   <Route path="/brand/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><BrandPage /></ErrorBoundary></InitialOrLegacy>} />
+                  <Route path="/brand/:slug/:hub" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><CommercialHubPage /></ErrorBoundary></InitialOrLegacy>} />
                   <Route path="/:brand/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ProductSlugPage /></ErrorBoundary></InitialOrLegacy>} />
                   <Route path="/product/:brand/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ProductSlugPage /></ErrorBoundary></InitialOrLegacy>} />
                   <Route path="/product/:brand/:product_family/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ProductSlugPage /></ErrorBoundary></InitialOrLegacy>} />

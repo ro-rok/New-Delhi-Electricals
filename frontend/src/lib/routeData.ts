@@ -1,9 +1,13 @@
 import type { Product } from '@/types/product';
+import { findHub } from '@/lib/commercialHubs';
 
 export const SITE_URL = 'https://www.newdelhielectricals.com';
 export const DEFAULT_IMAGE = `${SITE_URL}/android-chrome-512x512.png`;
 
-export type RouteKind = 'home' | 'static' | 'category' | 'brand' | 'product' | 'utility' | 'not-found';
+export type RouteKind = 'home' | 'static' | 'category' | 'brand' | 'hub' | 'product' | 'utility' | 'not-found';
+
+/** A named group of crawlable internal links rendered under the page body. */
+export interface RouteLinkGroup { heading: string; items: Array<{ label: string; path: string }> }
 
 export interface RouteData {
   kind: RouteKind;
@@ -15,10 +19,17 @@ export interface RouteData {
   text?: string;
   category?: { slug: string; name: string; description: string };
   brand?: { slug: string; name: string; description?: string };
+  /** Reference into COMMERCIAL_HUBS; the hub body itself is static and shared, not serialised. */
+  hub?: { brandSlug: string; slug: string };
   product?: Product;
   /** Active product records explicitly linked by the catalogue's variant map. */
   variantOptions?: Array<{ sku: string; name: string; color: string; urlPath: string }>;
   products?: Product[];
+  /** Short factual statements shown above the fold on commercial landing pages. */
+  propositions?: string[];
+  links?: RouteLinkGroup[];
+  /** Complete crawlable listing for a category, so no catalogue product is left unlinked. */
+  catalogIndex?: { heading: string; groups: RouteLinkGroup[] };
 }
 
 export interface RouteMetadata {
@@ -67,6 +78,24 @@ export function getRouteMetadata(data: RouteData): RouteMetadata {
   if (data.kind === 'brand' && data.brand) schema.push(breadcrumb([
     { name: 'Home', path: '/' }, { name: 'Brands', path: '/brands' }, { name: data.brand.name, path: data.path },
   ]));
+  if (data.kind === 'hub' && data.hub) {
+    const hub = findHub(data.hub.brandSlug, data.hub.slug);
+    if (hub) {
+      schema.push(breadcrumb([
+        { name: 'Home', path: '/' }, { name: 'Brands', path: '/brands' },
+        { name: hub.brandName, path: `/brand/${hub.brandSlug}` }, { name: hub.categoryName, path: data.path },
+      ]));
+      // The visible page is the product list this describes; no offers or availability are claimed.
+      if (data.products?.length) schema.push({
+        '@context': 'https://schema.org', '@type': 'ItemList', name: hub.heading, url: canonical,
+        numberOfItems: data.products.length,
+        itemListElement: data.products.map((product, index) => ({
+          '@type': 'ListItem', position: index + 1, name: product.name,
+          url: canonicalUrl(product.urlPath || `/${product.brandSlug}/${product.slug}`),
+        })),
+      });
+    }
+  }
   if (data.kind === 'product' && data.product) {
     const product = data.product;
     schema.push({

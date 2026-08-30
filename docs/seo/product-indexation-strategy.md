@@ -2,7 +2,7 @@
 
 ## Finding
 
-The catalogue contains roughly 1,954 canonical product pages, but SEMrush currently sees only one product URL with a keyword ranking in the top 100:
+The catalogue contains 1,918 canonical product pages (production build, 2026-08-31), but SEMrush currently sees only one product URL with a keyword ranking in the top 100:
 
 - `/havells/hdmi-socket-1m-white`
 - query `nl90053nm01w`
@@ -74,4 +74,24 @@ A 60–90 day observation window is a sensible operational checkpoint, not a Goo
 
 ## Canonical collisions
 
-The previously identified ~36 active records with canonical collisions should be fixed, but a collision fix does not automatically earn indexation. Each record still needs to satisfy the quality rule above.
+**Current build value: 32** excluded duplicate canonical records (the earlier "~36" was a provisional
+estimate and is superseded). They are enumerated in `excluded-products.md` and regenerated on every
+build. A collision fix does not automatically earn indexation; each record still needs to satisfy the
+quality rule above.
+
+## Prompt 3 outcome (2026-08-31)
+
+Implemented — see `commercial-pages-implemented.md`:
+
+- **No mass noindex.** All 1,918 canonical product routes remain indexable. Tier scoring was not used
+  to consolidate or deindex anything, because GSC evidence is still unavailable.
+- **Duplicate metadata fixed.** 136 product documents shared a title and description with a sibling
+  (colour and range variants never renamed at source). Titles and descriptions are now disambiguated
+  from the record's own `series`, `specs.color` or SKU. A build test now fails on any duplicate.
+- **Orphans eliminated.** Products linked from a non-product page went from 166 to 1,918 via
+  per-category catalogue indexes and full-range commercial hubs.
+- **Exact-model finding.** `nl90053nm01w` does not exist anywhere in the current catalogue. The real
+  SKU of `/havells/hdmi-socket-1m-white` is `AHFKXXW061`. The page was strengthened around its real
+  identifier; the unrelated model code was not inserted to chase the query.
+- **Root-cause recommendation.** 165 name groups covering 343 records share a product name. The
+  durable fix is unique product names in the catalogue source, not page-level workarounds.

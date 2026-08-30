@@ -2,8 +2,14 @@
 
 This sprint order assumes technical deployment validation is either complete or being closed separately. Do not reopen the entire technical SEO project inside Prompt 2.
 
+> **Status 2026-08-31 (Prompt 3):** Days 1–15 are complete. Days 16–20 (guides) are Prompt 4 and
+> were not started. Days 21–24 location decision: homepage owns Delhi/Delhi NCR; Gurgaon and Noida
+> remain deferred backlog with no page created. Days 25–27 product indexation: collisions confirmed
+> at 32, duplicate metadata fixed on 136 documents, orphans reduced from 1,752 to 0, no mass noindex.
+> Days 28–30 measurement is blocked on GSC. See `commercial-pages-implemented.md`.
+
 ## Days 1–3 — Existing-page quick wins
-1. Optimize `/brand/finolex` around `finolex dealers in delhi`; preserve authorised-dealer proof.
+1. Optimize `/brand/finolex` around `finolex dealers in delhi`; preserve authorised-dealer proof. **Done.**
 2. Rework homepage targeting around `electrical shops in delhi`, Delhi NCR wholesale/retail and buyer segments.
 3. Resolve homepage `/about` `/brands` content overlap for `electrical company in delhi`.
 4. Improve `/category/wires-cables` for price/range/house-wire decision intent.
@@ -14,11 +20,11 @@ This sprint order assumes technical deployment validation is either complete or 
 ## Days 4–10 — Build only the highest-confidence new hubs
 Inventory-gate each page before publishing.
 
-1. Polycab wires & cables
-2. Finolex wires & cables
-3. Havells wires & cables
-4. Anchor switches & sockets
-5. Havells circuit protection
+1. Polycab wires & cables — **BUILT** (8 records)
+2. Finolex wires & cables — **BUILT** (16 records)
+3. Havells wires & cables — **REJECTED at the gate: 0 records in the catalogue**
+4. Anchor switches & sockets — **BUILT** (162 records)
+5. Havells circuit protection — **REJECTED at the gate: 0 records in the catalogue**
 
 Each page must contain:
 - actual live catalogue items
@@ -31,8 +37,8 @@ Each page must contain:
 
 ## Days 11–15 — Second commercial batch
 If inventory is strong:
-6. Havells switches & sockets
-7. Havells water heaters
+6. Havells switches & sockets — **BUILT** (201 records)
+7. Havells water heaters — **REJECTED at the gate: 1 record in the catalogue**
 
 Do not create Lauritz Knudsen × category pages yet without measured query demand.
 

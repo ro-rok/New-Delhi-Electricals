@@ -14,7 +14,8 @@ type EventProperties = Record<string, string | number | boolean | null | undefin
 export function getPageType(pathname = typeof window === 'undefined' ? '/' : window.location.pathname): string {
   if (pathname === '/') return 'home';
   if (pathname.startsWith('/category/')) return 'category';
-  if (pathname.startsWith('/brand/')) return 'brand';
+  // /brand/<brand>/<hub> is a commercial hub; /brand/<brand> stays a brand page.
+  if (pathname.startsWith('/brand/')) return pathname.split('/').filter(Boolean).length === 3 ? 'commercial-hub' : 'brand';
   if (pathname === '/search') return 'search';
   if (pathname === '/cart') return 'cart';
   if (pathname.split('/').filter(Boolean).length === 2) return 'product';

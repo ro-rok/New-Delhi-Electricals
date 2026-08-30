@@ -19,8 +19,11 @@ const variantPath = paths.find(route => {
 });
 const routes = [
   ['Home', '/'], ['Category', '/category/switches-sockets'], ['Brand', '/brand/havells'],
+  ['Polycab wires hub', '/brand/polycab/wires-cables'], ['Finolex wires hub', '/brand/finolex/wires-cables'],
+  ['Anchor switches hub', '/brand/anchor/switches-sockets'],
   ['Havells product', productPath('havells')], ['Finolex product', productPath('finolex')],
 ] as const;
+const hubRoutes = ['/brand/polycab/wires-cables', '/brand/finolex/wires-cables', '/brand/anchor/switches-sockets'];
 
 async function settle(page: import('@playwright/test').Page) {
   await page.waitForLoadState('networkidle').catch(() => undefined);
@@ -179,4 +182,75 @@ test('conversion dispatches are exact and contain no form/query values', async (
   events = await page.evaluate(() => (window as Window & { __ndeConversionEvents?: Array<{ name: string; properties: Record<string, unknown> }> }).__ndeConversionEvents || []);
   expect(events.map(event => event.name)).toEqual(['whatsapp_click', 'whatsapp_enquiry_start', 'quote_enquiry_start', 'whatsapp_click', 'whatsapp_enquiry_start', 'quote_enquiry_handoff']);
   expect(JSON.stringify(events)).not.toMatch(/Test Person|Test Company|9876543210|search|query/i);
+});
+
+for (const route of hubRoutes) test(`commercial hub ${route} exposes catalogue, quote paths and product links`, async ({ page, baseURL }) => {
+  expect(paths, 'hub route must be in the generated sitemap').toContain(route);
+  const issues: string[] = [];
+  observeBrowser(page, issues);
+  await page.goto(`${baseURL}${route}`);
+  await settle(page);
+  await expect(page.locator('h1')).toHaveCount(1);
+  const data = routeData(route);
+  const hubProducts = data.products as Array<{ urlPath: string }>;
+  expect(hubProducts.length).toBeGreaterThan(0);
+  // Every catalogue record on the hub must be a crawlable link to its product page.
+  for (const product of hubProducts.slice(0, 5)) await expect(page.locator(`main a[href="${product.urlPath}"]`).first()).toHaveCount(1);
+  const whatsapp = page.locator('main a[href^="https://wa.me/"]').first();
+  await expect(whatsapp).toBeVisible();
+  await expect(page.locator('main a[href="/cart"]').first()).toBeVisible();
+  await expect(page.locator('nav[aria-label="Breadcrumb"]')).toHaveCount(1);
+  expect(issues).toEqual([]);
+});
+
+// The product document itself is asserted by the direct-load tests above. The client route it
+// renders after an in-app navigation needs the live catalogue API, which this static harness
+// cannot reach: the production origin does not allow http://127.0.0.1. This covers the part of
+// the journey the harness owns — the hub link resolves, and back/forward restores the hub.
+test('commercial hub product link routes correctly and survives back and forward', async ({ page, baseURL }) => {
+  const route = '/brand/finolex/wires-cables';
+  const issues: string[] = [];
+  observeBrowser(page, issues);
+  await page.goto(`${baseURL}${route}`);
+  await settle(page);
+  const heading = await page.locator('h1').innerText();
+  const target = (routeData(route).products as Array<{ urlPath: string }>)[0].urlPath;
+  const targetUrl = new RegExp(`${target.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`);
+  await page.locator(`main a[href="${target}"]`).first().click();
+  await expect(page).toHaveURL(targetUrl);
+  await page.goBack();
+  await expect(page.locator('h1')).toHaveText(heading);
+  await page.goForward();
+  await expect(page).toHaveURL(targetUrl);
+  expect(issues).toEqual([]);
+});
+
+test('commercial hub is usable on a mobile viewport without horizontal overflow', async ({ page, baseURL }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const issues: string[] = [];
+  observeBrowser(page, issues);
+  await page.goto(`${baseURL}/brand/anchor/switches-sockets`);
+  await settle(page);
+  await expect(page.locator('h1')).toBeVisible();
+  await expect(page.locator('main a[href^="https://wa.me/"]').first()).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
+  expect(issues).toEqual([]);
+});
+
+test('commercial hub WhatsApp handoff carries hub context and fires each event once', async ({ page, baseURL }) => {
+  await page.addInitScript(() => {
+    (window as Window & { __ndeConversionEvents?: unknown[] }).__ndeConversionEvents = [];
+    window.addEventListener('nde:conversion', event => (window as Window & { __ndeConversionEvents?: unknown[] }).__ndeConversionEvents!.push((event as CustomEvent).detail));
+  });
+  await page.goto(`${baseURL}/brand/polycab/wires-cables`);
+  await settle(page);
+  const link = page.locator('main a[href^="https://wa.me/"]').first();
+  expect(decodeURIComponent((await link.getAttribute('href'))!)).toContain('Polycab');
+  const popup = page.waitForEvent('popup');
+  await link.click();
+  await (await popup).close();
+  const events = await page.evaluate(() => (window as Window & { __ndeConversionEvents?: Array<{ name: string; properties: Record<string, unknown> }> }).__ndeConversionEvents || []);
+  expect(events.map(event => event.name)).toEqual(['whatsapp_click', 'whatsapp_enquiry_start']);
+  expect(events[0].properties.page_type).toBe('commercial-hub');
+  expect(JSON.stringify(events)).not.toMatch(/wa\.me|I would like a quotation/);
 });

@@ -22,6 +22,9 @@ Additional evidence/archive files:
 - `gsc-data-required.md`
 - `30-day-commercial-implementation-order.md`
 
+Prompt 3 implementation record (2026-08-31):
+- `commercial-pages-implemented.md` — inventory gate, pages built, pages rejected, internal-link map, CRO, analytics, schema, tests and Lighthouse
+
 All SEMrush metrics are from India desktop reports run on 2026-08-30 unless a note says a second SEMrush report showed a different refreshed value.
 
-GSC metrics remain unavailable in this session and are not fabricated.
+GSC metrics remain unavailable and are not fabricated. Status: GSC DATA PENDING as of 2026-08-31.
