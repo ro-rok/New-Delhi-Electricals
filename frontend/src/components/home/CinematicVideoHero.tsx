@@ -1,15 +1,17 @@
 import { useEffect, useRef, useCallback } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useNavigate } from 'react-router-dom';
 
-gsap.registerPlugin(ScrollTrigger);
+// ─── GSAP is browser-only ─────────────────────────────────────────────────────
+// Do NOT import gsap or ScrollTrigger at module level.
+// This file is bundled into entry-server.js for SSR pre-rendering.
+// A module-level gsap.registerPlugin() call crashes Node with:
+//   "TypeError: dt.registerPlugin is not a function"
+// All GSAP usage lives inside useEffect (client-only, never runs on server).
 
 // ─── constants ────────────────────────────────────────────────────────────────
 const VIDEO_SRC       = '/ndehero_1440p_seek.mp4';
 const VIDEO_FPS       = 24;
 const FRAME_DURATION  = 1 / VIDEO_FPS;
-const VIDEO_START_TIME = 2;
 const SCRUB_SCROLL_PX = 2800;
 
 const TEXT_STAGES = [
@@ -19,6 +21,7 @@ const TEXT_STAGES = [
   { enter: 0.88, exit: 1.00, label: 'Explore the Range',     sub: 'Scroll down to shop ↓' },
 ] as const;
 
+// ─── component ────────────────────────────────────────────────────────────────
 export default function CinematicVideoHero() {
   const wrapperRef   = useRef<HTMLDivElement>(null);
   const videoRef     = useRef<HTMLVideoElement>(null);
@@ -28,33 +31,23 @@ export default function CinematicVideoHero() {
   const textRefs     = useRef<(HTMLDivElement | null)[]>([]);
   const navigate     = useNavigate();
 
-  // Seek-gate refs — reset on every mount inside the effect
+  // Seek-gate — all refs, zero React state on animation frames
   const progressRef = useRef(0);
   const isSeeking   = useRef(false);
   const rafPending  = useRef(false);
   const videoReady  = useRef(false);
-
-  const getVideoStartTime = useCallback((video: HTMLVideoElement) => {
-    if (!Number.isFinite(video.duration)) return VIDEO_START_TIME;
-    return Math.min(VIDEO_START_TIME, Math.max(0, video.duration - FRAME_DURATION));
-  }, []);
-
-  const getTargetTime = useCallback((video: HTMLVideoElement, progress: number) => {
-    const startTime = getVideoStartTime(video);
-    return startTime + progress * Math.max(0, video.duration - startTime);
-  }, [getVideoStartTime]);
 
   // ── seek gate ────────────────────────────────────────────────────────────
   const flushSeek = useCallback(() => {
     rafPending.current = false;
     const video = videoRef.current;
     if (!video || !videoReady.current) return;
-    const target = getTargetTime(video, progressRef.current);
+    const target = progressRef.current * video.duration;
     if (Math.abs(target - video.currentTime) < FRAME_DURATION * 0.5) return;
     if (isSeeking.current) return;
     isSeeking.current = true;
     video.currentTime = target;
-  }, [getTargetTime]);
+  }, []);
 
   const scheduleSeek = useCallback((progress: number) => {
     progressRef.current = Math.max(0, Math.min(1, progress));
@@ -86,42 +79,16 @@ export default function CinematicVideoHero() {
     });
   }, []);
 
-  // ── helper: dismiss preloader and activate hero ──────────────────────────
-  const activateHero = useCallback(() => {
-    videoReady.current = true;
-
-    const pre = preloaderRef.current;
-    if (pre && pre.style.display !== 'none') {
-      gsap.to(pre, {
-        opacity: 0, duration: 0.8, ease: 'power2.out',
-        onComplete: () => {
-          pre.style.display = 'none';
-        },
-      });
-    }
-
-    if (overlayRef.current) {
-      gsap.fromTo(
-        overlayRef.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 1.4, ease: 'power2.out' }
-      );
-    }
-
-    // Start on a bright, intentional frame instead of the dark opening frame.
-    scheduleSeek(0);
-
-    // Refresh after layout settles so the pin calculates correctly
-    requestAnimationFrame(() => {
-      ScrollTrigger.refresh();
-    });
-  }, [scheduleSeek]);
-
-  // ── main effect — runs fresh on every mount including SPA navigation ─────
+  // ── main effect — client-only, runs on every mount (SPA navigation safe) ─
   useEffect(() => {
     const video   = videoRef.current;
     const wrapper = wrapperRef.current;
     if (!video || !wrapper) return;
+
+    // Cleanup handle for the GSAP context (set after dynamic import resolves)
+    // eslint-disable-next-line prefer-const
+    let gsapCtx: { revert: () => void } | null = null;
+    let destroyed = false;
 
     // Reset all gate refs for this mount
     progressRef.current = 0;
@@ -129,21 +96,16 @@ export default function CinematicVideoHero() {
     rafPending.current  = false;
     videoReady.current  = false;
 
-    // Reset preloader DOM state in case it was hidden by a previous mount
+    // Reset DOM state (previous mount may have left stale inline styles)
     const pre = preloaderRef.current;
-    if (pre) {
-      pre.style.display  = 'flex';
-      pre.style.opacity  = '1';
-    }
+    if (pre) { pre.style.display = 'flex'; pre.style.opacity = '1'; }
     if (overlayRef.current) overlayRef.current.style.opacity = '0';
-    // Reset text
     textRefs.current.forEach(el => {
       if (el) { el.style.opacity = '0'; el.style.transform = 'translateY(16px)'; }
     });
-    // Reset scroll cue
     if (scrollCueRef.current) scrollCueRef.current.style.opacity = '1';
 
-    // ── reduced-motion bypass ────────────────────────────────────────────
+    // ── reduced-motion bypass (no GSAP needed) ──────────────────────────
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       if (pre) { pre.style.opacity = '0'; pre.style.pointerEvents = 'none'; }
       if (textRefs.current[0]) {
@@ -154,100 +116,141 @@ export default function CinematicVideoHero() {
       return;
     }
 
-    // ── mobile: autoplay loop, no scrub ─────────────────────────────────
-    if (window.innerWidth < 768) {
-      video.muted       = true;
-      video.playsInline  = true;
-      video.loop        = true;
+    // ── dynamic import: GSAP runs in browser only ────────────────────────
+    Promise.all([
+      import('gsap'),
+      import('gsap/ScrollTrigger'),
+    ]).then(([gsapMod, stMod]) => {
+      if (destroyed) return;   // component unmounted while import was in-flight
 
-      const onMobileReady = () => {
-        video.currentTime = getVideoStartTime(video);
-        if (pre) {
-          pre.style.transition = 'opacity 0.6s ease';
-          pre.style.opacity    = '0';
-          setTimeout(() => { pre.style.display = 'none'; }, 650);
+      const gsap          = gsapMod.default;
+      const ScrollTrigger = stMod.ScrollTrigger;
+      gsap.registerPlugin(ScrollTrigger);
+
+      // ── helper: dismiss preloader, show overlay, seed frame 0 ─────────
+      const activateHero = () => {
+        videoReady.current = true;
+        if (pre && pre.style.display !== 'none') {
+          gsap.to(pre, {
+            opacity: 0, duration: 0.8, ease: 'power2.out',
+            onComplete: () => { pre.style.display = 'none'; },
+          });
         }
-        if (overlayRef.current) gsap.to(overlayRef.current, { opacity: 1, duration: 1 });
-        if (textRefs.current[0]) {
-          gsap.to(textRefs.current[0], { opacity: 1, y: 0, duration: 0.7, delay: 0.4 });
+        if (overlayRef.current) {
+          gsap.fromTo(overlayRef.current,
+            { opacity: 0 },
+            { opacity: 1, duration: 1.4, ease: 'power2.out' }
+          );
         }
-        video.play().catch(() => {});
+        scheduleSeek(0);
+        requestAnimationFrame(() => { ScrollTrigger.refresh(); });
       };
 
-      // Fire immediately if already buffered (cached from prior visit)
+      // ── mobile: autoplay loop, no scrub ──────────────────────────────
+      if (window.innerWidth < 768) {
+        video.muted       = true;
+        video.playsInline  = true;
+        video.loop        = true;
+
+        const onMobileReady = () => {
+          if (pre) {
+            pre.style.transition = 'opacity 0.6s ease';
+            pre.style.opacity    = '0';
+            setTimeout(() => { pre.style.display = 'none'; }, 650);
+          }
+          if (overlayRef.current) gsap.to(overlayRef.current, { opacity: 1, duration: 1 });
+          if (textRefs.current[0]) {
+            gsap.to(textRefs.current[0], { opacity: 1, y: 0, duration: 0.7, delay: 0.4 });
+          }
+          video.play().catch(() => {});
+        };
+
+        if (video.readyState >= 2) {
+          onMobileReady();
+        } else {
+          video.addEventListener('canplay', onMobileReady, { once: true });
+          video.load();
+        }
+        return;
+      }
+
+      // ── Desktop: full scroll-scrub experience ────────────────────────
+      video.muted       = true;
+      video.playsInline  = true;
+      video.preload      = 'auto';
+      video.pause();
+      video.currentTime  = 0;
+
+      // Re-seek to latest target after seek completes
+      const onSeeked = () => {
+        isSeeking.current = false;
+        const target = progressRef.current * video.duration;
+        if (Math.abs(target - video.currentTime) >= FRAME_DURATION * 0.5) {
+          isSeeking.current = true;
+          video.currentTime = target;
+        }
+      };
+      video.addEventListener('seeked', onSeeked);
+
+      const onCanPlay = () => activateHero();
+
+      // KEY FIX: check readyState AFTER attaching listeners.
+      // Cached video (SPA nav) won't re-fire canplay — call directly.
       if (video.readyState >= 2) {
-        onMobileReady();
+        activateHero();
       } else {
-        video.addEventListener('canplay', onMobileReady, { once: true });
+        video.addEventListener('canplay',    onCanPlay, { once: true });
+        video.addEventListener('loadeddata', onCanPlay, { once: true });
         video.load();
       }
 
-      return () => {
-        video.removeEventListener('canplay', onMobileReady);
-      };
-    }
+      // ── GSAP ScrollTrigger ──────────────────────────────────────────
+      gsapCtx = gsap.context(() => {
+        ScrollTrigger.create({
+          trigger:       wrapper,
+          start:         'top top',
+          end:           `+=${SCRUB_SCROLL_PX}`,
+          pin:           true,
+          anticipatePin: 1,
+          scrub:         true,
+          onUpdate: (self) => {
+            scheduleSeek(self.progress);
+            updateText(self.progress);
+            const cue = scrollCueRef.current;
+            if (cue) {
+              cue.style.opacity = String(Math.max(0, 1 - self.progress / 0.05));
+            }
+          },
+        });
+      }, wrapper);
 
-    // ── Desktop: full scroll-scrub experience ───────────────────────────
-    video.muted       = true;
-    video.playsInline  = true;
-    video.preload      = 'auto';
-
-    // Reset to the 2-second opening frame so the dark first frame is never shown.
-    video.pause();
-    video.currentTime = VIDEO_START_TIME;
-
-    const onSeeked = () => {
-      isSeeking.current = false;
-      const target = getTargetTime(video, progressRef.current);
-      if (Math.abs(target - video.currentTime) >= FRAME_DURATION * 0.5) {
-        isSeeking.current = true;
-        video.currentTime = target;
-      }
-    };
-    video.addEventListener('seeked', onSeeked);
-
-    // KEY FIX: check readyState synchronously AFTER attaching the listener.
-    // If the browser already has the video buffered (cache hit on SPA nav),
-    // canplay/loadeddata will never fire again — so we call activateHero directly.
-    const onCanPlay = () => activateHero();
-
-    if (video.readyState >= 2) {
-      // Video already buffered — no event will fire, activate immediately
-      activateHero();
-    } else {
-      video.addEventListener('canplay',    onCanPlay, { once: true });
-      video.addEventListener('loadeddata', onCanPlay, { once: true });
-      video.load();
-    }
-
-    // ── GSAP ScrollTrigger ───────────────────────────────────────────────
-    const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger:       wrapper,
-        start:         'top top',
-        end:           `+=${SCRUB_SCROLL_PX}`,
-        pin:           true,
-        anticipatePin: 1,
-        scrub:         true,
-        onUpdate: (self) => {
-          scheduleSeek(self.progress);
-          updateText(self.progress);
-
-          const cue = scrollCueRef.current;
-          if (cue) {
-            cue.style.opacity = String(Math.max(0, 1 - self.progress / 0.05));
-          }
-        },
+      // Store cleanup so the return fn below can call it
+      // (we assign into the outer let so the cleanup closure sees it)
+      Object.assign(cleanup, {
+        _gsapCtx:   gsapCtx,
+        _onSeeked:  onSeeked,
+        _onCanPlay: onCanPlay,
+        _video:     video,
       });
-    }, wrapper);
+    });
+
+    // Cleanup object — populated async once the import resolves
+    // eslint-disable-next-line prefer-const
+    const cleanup: {
+      _gsapCtx?:   { revert: () => void };
+      _onSeeked?:  () => void;
+      _onCanPlay?: () => void;
+      _video?:     HTMLVideoElement;
+    } = {};
 
     return () => {
-      ctx.revert();
-      video.removeEventListener('seeked',      onSeeked);
-      video.removeEventListener('canplay',     onCanPlay);
-      video.removeEventListener('loadeddata',  onCanPlay);
+      destroyed = true;
+      cleanup._gsapCtx?.revert();
+      if (cleanup._video && cleanup._onSeeked)  cleanup._video.removeEventListener('seeked',      cleanup._onSeeked);
+      if (cleanup._video && cleanup._onCanPlay) cleanup._video.removeEventListener('canplay',     cleanup._onCanPlay);
+      if (cleanup._video && cleanup._onCanPlay) cleanup._video.removeEventListener('loadeddata',  cleanup._onCanPlay);
     };
-  }, [activateHero, getTargetTime, getVideoStartTime, scheduleSeek, updateText]);
+  }, [scheduleSeek, updateText]);
 
   // ── render ───────────────────────────────────────────────────────────────
   return (
@@ -436,7 +439,7 @@ export default function CinematicVideoHero() {
         </button>
       </div>
 
-      {/* Scroll to enter — z-index 40 so it's above the preloader from first render */}
+      {/* Scroll to enter — z-index 40, above preloader, visible from first render */}
       <div
         ref={scrollCueRef}
         aria-label="Scroll to explore"
