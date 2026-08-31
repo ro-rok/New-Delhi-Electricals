@@ -10,12 +10,16 @@ import { ArrowRight } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
 import { PAGE_SEO } from '@/lib/seo';
 import { LoadingSpinner } from '@/components/LoadingSpinner';
+import { useInitialRouteData } from '@/lib/initialRouteData';
 
 const BrandsListPage = () => {
-  const [brands, setBrands] = useState<Brand[]>([]);
-  const [loading, setLoading] = useState(true);
+  const initialData = useInitialRouteData();
+  const hasInitialData = initialData?.pathname === '/brands' && Array.isArray(initialData.brands);
+  const [brands, setBrands] = useState<Brand[]>(() => hasInitialData ? initialData?.brands ?? [] : []);
+  const [loading, setLoading] = useState(!hasInitialData);
 
   useEffect(() => {
+    if (hasInitialData) return;
     const fetchData = async () => {
       setLoading(true);
       try {
@@ -27,7 +31,7 @@ const BrandsListPage = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [hasInitialData]);
 
   if (loading) {
     return (

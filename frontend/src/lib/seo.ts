@@ -26,56 +26,78 @@ export const PAGE_SEO: Record<string, SEOMetadata> = {
     description: "Leading supplier of electrical components, switches, wires, MCBs, and industrial equipment in New Delhi. Browse our extensive catalog of premium electrical products.",
     keywords: ["electrical components", "switches", "wires", "MCB", "electrical supplies", "New Delhi"],
     type: "website",
-    image: "/hero-shop.jpg"
+    image: "/hero-shop.jpg",
+    canonicalPath: '/',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'New Delhi Electricals',
+      url: 'https://www.newdelhielectricals.com/',
+      telephone: '+919654102758',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '30 A Corner Market, Malviya Nagar',
+        addressLocality: 'New Delhi',
+        postalCode: '110017',
+        addressCountry: 'IN',
+      },
+    },
   },
   
   products: {
     title: "Products - New Delhi Electricals",
     description: "Browse our extensive catalog of electrical components, switches, MCBs, wires, cables, and more. Quality products from trusted brands.",
     keywords: ["electrical products", "switches", "MCB", "wires", "cables", "electrical catalog"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/products'
   },
   
   services: {
     title: "Services - New Delhi Electricals",
     description: "Professional electrical services including bulk ordering, technical consultation, installation support, warranty services, and custom solutions.",
     keywords: ["electrical services", "bulk ordering", "technical consultation", "installation support"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/services'
   },
   
   contact: {
     title: "Contact Us - New Delhi Electricals",
     description: "Get in touch with New Delhi Electricals for inquiries, quotes, and support. We're here to help with all your electrical component needs.",
     keywords: ["contact", "inquiry", "quote", "support", "electrical supplier"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/contact'
   },
   
   about: {
     title: "About Us - New Delhi Electricals",
     description: "Learn about New Delhi Electricals, your trusted partner for quality electrical components and supplies. Serving customers with excellence since years.",
     keywords: ["about", "company", "electrical supplier", "New Delhi"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/about'
   },
   
   faq: {
     title: "FAQ - Frequently Asked Questions | New Delhi Electricals",
     description: "Find answers to common questions about ordering, shipping, returns, technical specifications, and more at New Delhi Electricals.",
     keywords: ["FAQ", "questions", "help", "support", "ordering", "shipping"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/faq'
   },
   
   categories: {
     title: "Categories - Browse by Category | New Delhi Electricals",
     description: "Explore our product categories including switches, MCBs, wires, cables, lighting, fans, and industrial equipment.",
     keywords: ["categories", "product categories", "electrical categories"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/categories'
   },
   
   brands: {
     title: "Brands - Shop by Brand | New Delhi Electricals",
     description: "Shop electrical products from top brands. We carry a wide selection of trusted manufacturers and premium brands.",
     keywords: ["brands", "manufacturers", "electrical brands"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/brands'
   },
   
   cart: {
@@ -121,16 +143,7 @@ function getSiteUrl(): string {
     return envUrl;
   }
   
-  // In production, use the actual domain
-  if (typeof window !== 'undefined') {
-    const hostname = window.location.hostname;
-    if (hostname === 'www.newdelhielectricals.com' || hostname === 'newdelhielectricals.com') {
-      return 'https://www.newdelhielectricals.com';
-    }
-  }
-  
-  // Fallback for development
-  return 'http://localhost:5173';
+  return 'https://www.newdelhielectricals.com';
 }
 
 /**

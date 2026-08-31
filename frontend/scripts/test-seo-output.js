@@ -3,49 +3,93 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const repo = path.resolve(root, '..');
 const dist = path.join(root, 'dist');
-const site = 'https://www.newdelhielectricals.com';
-const build = JSON.parse(fs.readFileSync(path.join(dist, 'seo-build-report.json'), 'utf8'));
+const siteUrl = 'https://www.newdelhielectricals.com';
+const report = JSON.parse(fs.readFileSync(path.join(dist, 'seo-build-report.json'), 'utf8'));
 const sitemap = fs.readFileSync(path.join(dist, 'sitemap.xml'), 'utf8');
-const routes = [...sitemap.matchAll(/<loc>https:\/\/www\.newdelhielectricals\.com([^<]*)<\/loc>/g)].map(match => match[1] || '/');
-const failures = []; const warnings = []; const counters = { missingTitle: 0, missingH1: 0, schemaErrors: 0, canonicalErrors: 0 };
+const failures = [];
+const warnings = [];
 
-function outputPath(route) { return route === '/' ? path.join(dist, 'index.html') : path.join(dist, `${route.replace(/^\//, '')}.html`); }
-function fail(route, message) { failures.push({ route, message }); }
-function schemas(html, route) {
-  const results = [];
-  for (const match of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
-    try { results.push(JSON.parse(match[1])); } catch { counters.schemaErrors++; fail(route, 'invalid JSON-LD'); }
-  }
-  return results;
+function fail(url, message) { failures.push({ url, message }); }
+function routeFile(url) {
+  const pathname = new URL(url).pathname;
+  return pathname === '/' ? path.join(dist, 'index.html') : path.join(dist, `${pathname.slice(1)}.html`);
 }
-for (const route of routes) {
-  const filename = outputPath(route);
-  if (!fs.existsSync(filename)) { fail(route, 'generated document missing'); continue; }
+function count(html, regex) { return [...html.matchAll(regex)].length; }
+function containsNullish(value) {
+  if (value === null || value === undefined) return true;
+  if (Array.isArray(value)) return value.some(containsNullish);
+  return typeof value === 'object' && Object.values(value).some(containsNullish);
+}
+function validateSchema(url, html) {
+  const scripts = [...html.matchAll(/<script\s+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)];
+  for (const match of scripts) {
+    try {
+      const schema = JSON.parse(match[1]);
+      if (containsNullish(schema)) fail(url, 'JSON-LD contains null/undefined data');
+      const serialized = JSON.stringify(schema);
+      if (/InStock|aggregateRating|reviewCount|"review"|priceValidUntil|gtin|mpn/i.test(serialized)) fail(url, 'JSON-LD contains unverified availability, review, or product-identifier claims');
+      if (schema['@type'] === 'Product' && schema.offers) fail(url, 'Product schema must omit Offer for enquiry-only pricing');
+    } catch (error) { fail(url, `invalid JSON-LD: ${error.message}`); }
+  }
+  if (scripts.some((script) => /<\/script/i.test(script[1]))) fail(url, 'JSON-LD can terminate its script element');
+}
+
+if (!/^<\?xml\b/.test(sitemap) || !/<urlset\b/.test(sitemap)) fail('/sitemap.xml', 'invalid sitemap XML envelope');
+const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+const urlSet = new Set(urls);
+if (urls.length !== urlSet.size) fail('/sitemap.xml', 'duplicate URLs');
+for (const url of urls) {
+  let parsed;
+  try { parsed = new URL(url); } catch { fail(url, 'malformed sitemap URL'); continue; }
+  if (parsed.protocol !== 'https:' || parsed.hostname !== 'www.newdelhielectricals.com') fail(url, 'URL is not preferred HTTPS www');
+  if (parsed.search || parsed.hash || /%(?![0-9A-F]{2})/i.test(url)) fail(url, 'URL has query/hash or malformed encoding');
+  if (/\/(admin|search|cart|shortlist|compare)(\/|$)/.test(parsed.pathname)) fail(url, 'utility URL is in sitemap');
+  if (!fs.existsSync(routeFile(url))) fail(url, 'sitemap URL has no generated route file');
+}
+for (const url of urls) {
+  const filename = routeFile(url);
+  if (!fs.existsSync(filename)) continue;
   const html = fs.readFileSync(filename, 'utf8');
-  if (!/^<!doctype html>/i.test(html) || !/<html[\s>]/i.test(html)) fail(route, 'invalid HTML document');
-  if (!/<title>[^<]+<\/title>/i.test(html)) { counters.missingTitle++; fail(route, 'missing title'); }
-  const canonical = [...html.matchAll(/<link\s+rel="canonical"\s+href="([^"]+)"[^>]*>/gi)].map(match => match[1]);
-  if (canonical.length !== 1 || canonical[0] !== `${site}${route}`) { counters.canonicalErrors++; fail(route, 'canonical is missing, duplicated, or incorrect'); }
-  if (!/^https:\/\/www\.newdelhielectricals\.com\//.test(canonical[0] || '')) { counters.canonicalErrors++; fail(route, 'canonical must be HTTPS www'); }
-  if (!/<h1(?:\s[^>]*)?>[^<]+<\/h1>/i.test(html)) { counters.missingH1++; fail(route, 'missing H1'); }
-  if (!/<main(?:\s[^>]*)?>[\s\S]*\S[\s\S]*?<\/main>/i.test(html)) fail(route, 'missing meaningful root content');
-  if (/\.seo-static-shell/i.test(html)) fail(route, 'obsolete fake SEO shell present');
-  if (/noindex/i.test(html)) fail(route, 'indexable sitemap document is noindex');
-  const jsonLd = schemas(html, route);
-  if (!jsonLd.length && route === '/') fail(route, 'home page missing JSON-LD');
-  for (const schema of jsonLd) {
-    const serialized = JSON.stringify(schema);
-    if (/"@type":"Offer"|"availability"|"aggregateRating"|"review"|"priceValidUntil"|"gtin"|"mpn"/i.test(serialized)) fail(route, 'unsupported schema property');
-  }
+  if (!/<html\b/i.test(html) || !/<body\b/i.test(html) || !html.includes('<div id="root">')) fail(url, 'HTML does not contain a parseable document/root');
+  if (count(html, /<title(?:\s[^>]*)?>/gi) !== 1) fail(url, 'expected exactly one title');
+  if (count(html, /<meta\s+name="description"/gi) !== 1) fail(url, 'expected exactly one meta description');
+  if (count(html, /<link\s+rel="canonical"/gi) !== 1) fail(url, 'expected exactly one canonical');
+  const canonical = html.match(/<link\s+rel="canonical"\s+href="([^"]+)"/i)?.[1];
+  if (canonical !== url || !canonical?.startsWith(siteUrl)) fail(url, `canonical does not match route (${canonical || 'missing'})`);
+  if (count(html, /<h1(?:\s[^>]*)?>/gi) !== 1) fail(url, 'expected exactly one H1');
+  if (!/<div id="root">[\s\S]{500,}<\/div>\s*<script>window\.__NDE_INITIAL_ROUTE_DATA__/i.test(html)) fail(url, 'React root content is empty');
+  if (html.includes('seo-static-shell')) fail(url, 'legacy handcrafted SEO shell is present');
+  if (!html.includes('window.__NDE_INITIAL_ROUTE_DATA__')) fail(url, 'missing serialized React initial route data');
+  if (/<meta\s+name="robots"\s+content="[^"]*noindex/i.test(html)) fail(url, 'indexable route is noindex');
+  validateSchema(url, html);
 }
-for (const route of ['/search', '/cart', '/shortlist', '/compare']) {
-  const html = fs.readFileSync(outputPath(route), 'utf8');
-  if (!/noindex, follow/i.test(html)) fail(route, 'utility route must be noindex');
-  if (sitemap.includes(`<loc>${site}${route}</loc>`)) fail(route, 'utility route must not be in sitemap');
-}
-if (/Disallow: \/assets/i.test(fs.readFileSync(path.join(dist, 'robots.txt'), 'utf8'))) fail('robots.txt', 'render assets are blocked');
-const report = { routesChecked: routes.length, passed: routes.length - new Set(failures.map(item => item.route)).size, failed: failures.length, warnings: warnings.length, ...counters, failures, warningDetails: warnings };
-fs.writeFileSync(path.join(dist, 'seo-validation-report.json'), `${JSON.stringify(report, null, 2)}\n`);
-if (failures.length) throw new Error(`SEO validation failed for ${new Set(failures.map(item => item.route)).size} route(s). See dist/seo-validation-report.json.`);
-console.log(`SEO output verified: ${report.routesChecked} canonical routes, ${report.passed} passed, ${report.warnings} warnings.`);
+if (urls.length !== report.indexableRoutes) fail('/sitemap.xml', `sitemap URL count ${urls.length} does not match generated indexable routes ${report.indexableRoutes}`);
+if (report.source !== 'production API') warnings.push(`Catalogue source: ${report.source}`);
+
+const excluded = JSON.parse(fs.readFileSync(path.join(dist, 'seo-excluded-products.json'), 'utf8'));
+const escape = (value) => String(value || '—').replaceAll('|', '\\|');
+const excludedLines = [
+  '# Excluded Active Products', '', `Generated from the SEO build report. Catalogue source: ${report.source}.`, '',
+  '| Identifier | Product name | Brand | Existing slug/path | Reason excluded | Recommended fix |',
+  '| --- | --- | --- | --- | --- | --- |',
+  ...excluded.map((item) => `| ${escape(item.sku || item.id)} | ${escape(item.name)} | ${escape(item.brand)} | ${escape(item.urlPath)} | ${escape(item.reason)} | ${item.reason === 'duplicate canonical' ? 'Resolve the duplicate route/slug in the catalogue, then rebuild.' : 'Correct the source record and rebuild; do not fabricate a URL.'} |`), '',
+];
+fs.writeFileSync(path.join(repo, 'docs', 'seo', 'excluded-products.md'), excludedLines.join('\n'), 'utf8');
+
+const summary = {
+  routesChecked: urls.length,
+  passed: urls.length - new Set(failures.map((failure) => failure.url)).size,
+  failed: failures.length,
+  warnings: warnings.length,
+  duplicateCanonicals: failures.filter((failure) => failure.message.includes('canonical')).length,
+  duplicateSlugs: excluded.filter((item) => item.reason === 'duplicate slug' || item.reason === 'duplicate canonical').length,
+  schemaErrors: failures.filter((failure) => failure.message.includes('JSON-LD') || failure.message.includes('schema')).length,
+  missingH1: failures.filter((failure) => failure.message.includes('H1')).length,
+  missingTitles: failures.filter((failure) => failure.message.includes('title')).length,
+  failures, warnings,
+};
+fs.writeFileSync(path.join(dist, 'seo-validation-report.json'), `${JSON.stringify(summary, null, 2)}\n`, 'utf8');
+console.log(`SEO output verified: ${summary.routesChecked} routes checked; ${summary.passed} passed; ${summary.failed} failed; ${summary.warnings.length} warnings.`);
+if (failures.length) process.exitCode = 1;

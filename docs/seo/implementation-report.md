@@ -2,10 +2,6 @@
 
 This sprint replaces an all-client-rendered catalogue shell with selective build-time route HTML for canonical public pages. It also corrects canonical/sitemap/indexation architecture, adds factual schema and visible product breadcrumbs, adds non-PII conversion events, removes an unused incompatible build plugin, and changes Vercel routing so unknown public paths can become real 404s after deployment.
 
-## 2026-08-29 release decision
-
-Production was **not deployed**. The SSR recovery has now passed the local build, 1,936-route SEO validation and five representative browser hydration tests. The checked-in handcrafted shell and silent fallback have been replaced by a React server entry and strict production-API build policy. This remains local evidence only; release still needs its separately authorised production validation.
-
 # 1. What Was Wrong
 
 - Live raw HTML for home, category, brand, search, admin and nonexistent URLs was the same 2,498-byte shell.
@@ -81,4 +77,7 @@ Pre-change Lighthouse was collected against the live deployment; final Lighthous
 
 # 8. Next SEO Task
 
-Production validation is complete for the technical release; do not create a Preview solely for this work. Next, obtain Google Search Console access, submit the 1,936-URL sitemap, and use real historical/search data to prioritise content work. Keep the existing non-SEO TypeScript errors as a separate P1 cleanup before making type checking a required release gate.
+Deploy this release to a Vercel preview/production environment and perform a live HTTP + Google Search Console URL Inspection validation of homepage, category, brand, product, search, admin, legacy and nonexistent routes before submitting the sitemap.
+# Rendering implementation update (2026-08-27)
+
+Implemented native Vite SSR generation, a shared browser/server router tree, route-scoped initial catalogue state, escaped state serialization, metadata collection from `SEOHead`, and exhaustive static output validation. Production API build result: 1,990 loaded products, 1,954 canonical products, 6 categories, 5 brands and 1,972 indexable routes.

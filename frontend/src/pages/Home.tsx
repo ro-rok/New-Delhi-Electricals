@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Header from '@/components/layout/Header';
+import CinematicVideoHero from '@/components/home/CinematicVideoHero';
 import PremiumHero from '@/components/home/PremiumHero';
 import BrandMarquee from '@/components/home/BrandMarquee';
 import CategoryGrid from '@/components/catalog/CategoryGrid';
@@ -11,7 +12,6 @@ import RecentlyViewed from '@/components/catalog/RecentlyViewed';
 import WhatsAppFab from '@/components/WhatsAppFab';
 import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
-import PolycabPromoButton from '@/components/home/PolycabPromoButton';
 import { useApp } from '@/contexts/AppContext';
 import { SEOHead } from '@/components/SEOHead';
 import { PAGE_SEO } from '@/lib/seo';
@@ -28,8 +28,8 @@ const Home = () => {
       <SEOHead {...PAGE_SEO.home} />
       <Header />
       <div className="h-16" /> {/* Spacer for fixed header */}
-      <PolycabPromoButton />
       <main>
+        <CinematicVideoHero />
         <PremiumHero />
         <BrandMarquee />
         <CategoryGrid />

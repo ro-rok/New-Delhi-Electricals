@@ -1,22 +1,23 @@
-# Rendering Architecture
+# React prerendering architecture
 
-Canonical public routes are generated from the production catalogue API with genuine React 18 server rendering.
+## Decision
 
-- frontend/src/entry-server.tsx uses react-dom/server with React Router StaticRouter.
-- AppContent is the shared route table. The browser wraps it in BrowserRouter; the build renderer wraps it in StaticRouter.
-- PrerenderRoute is the server-compatible, deterministic initial route component for generated public documents. The browser hydrates this same component with the exact embedded route data; it is not a crawler-only shell and is not discarded after hydration.
-- This is not a full SSR conversion of every legacy page component. The architecture is a deterministic, materially equivalent initial React tree plus a hydrated interactive client application. Header navigation, mobile navigation, product enquiry links, cart additions and known catalogue variant links are usable on that initial hydrated tree. After a client-side route change, the initial payload is deliberately ignored and the existing interactive route component runs for the new URL.
-- The embedded product action uses the current product's SKU/name in its WhatsApp handoff and stores the current product in the local quotation cart. Variant links point to their generated product documents, preserving selected-SKU URL state and the same initial interaction contract.
-- The generator injects rendered React markup into root; no handcrafted crawler shell is used.
-- Each document embeds only its current route data in window.__NDE_INITIAL_ROUTE_DATA__. It escapes HTML-significant characters and U+2028/U+2029 before insertion.
-- main.tsx uses hydrateRoot only when that matching payload and prerendered root exist.
+The catalogue uses native Vite SSR at build time. `frontend/src/entry-server.tsx` renders the production React component tree with React Router's `StaticRouter`; `frontend/src/main.tsx` uses `hydrateRoot` whenever the delivered `#root` already contains React markup.
 
-There is no crawler-only hidden content: the H1, breadcrumbs, visible catalogue/product identity, primary description, product links and JSON-LD are sourced from the same route data before and after hydration. The browser suite compares server and hydrated H1, title, canonical, breadcrumb and visible route identity for home, category, brand, Havells product and Finolex product routes; it also observes no hydration mismatch, root replacement or uncaught page errors. CLS is measured with `PerformanceObserver` across load, hydration and initial settling, excluding entries with recent user input.
+The prior handcrafted `.seo-static-shell` was removed. The generator imports the Vite SSR bundle, passes route-specific catalogue state, and writes that rendered HTML into each clean-URL document.
 
-Metadata and JSON-LD come from getRouteMetadata in frontend/src/lib/routeData.ts, the same model used by the server renderer and hydrated route. Product schema intentionally has no Offer, availability, ratings, reviews, GTIN or MPN.
+## Route and data flow
 
-The build fails if the production API cannot be loaded. A repository catalogue fallback is possible only with SEO_ALLOW_CATALOG_FALLBACK=true; the report then records the API failure, fallback count, file timestamp and SHA-256.
+`AppContent` owns the single route table. The browser entry wraps it in `BrowserRouter`; the server entry wraps the same component in `StaticRouter`. The generator makes one production catalogue request plus two small taxonomy requests, selects only data required for the route, serializes it as `window.__NDE_INITIAL_ROUTE_DATA__`, and the corresponding page consumes it as its first state.
 
-## Production confirmation — 2026-08-29
+Category documents contain the first visible product page and silently revalidate after hydration. Brand documents contain the first visible products per category. Product documents contain the product, related cards, and bounded variant data. Category index documents contain counts rather than the whole catalogue. JSON is escaped for `<`, `>`, `&`, U+2028 and U+2029 before embedding.
 
-Production served the same React-rendered route structure for home, category, brand, Havells product and Finolex product. Raw HTML included the expected route data, metadata and schema; browser hydration retained matching H1/canonical/breadcrumb content with no console diagnostics. The release build used the production API, generated 1,936 indexable routes from 1,918 canonical products, and did not use the explicit fallback.
+## Alternatives considered
+
+- A handcrafted SEO shell was rejected because it creates crawler/user divergence and is removed by `createRoot`.
+- A browser-DOM serialization solution was rejected because it would still not hydrate a compatible React tree.
+- A framework migration was rejected: native Vite SSR keeps the existing React 18, React Router, API and Vercel static-output model.
+
+## Validation
+
+`npm run build` must use the production API and fails if it cannot (unless the explicit review-only `SEO_ALLOW_CATALOG_FALLBACK=true` override is supplied). `npm test` validates every sitemap route, metadata, H1, schema claims, initial-data payload, React root and absence of the retired shell.

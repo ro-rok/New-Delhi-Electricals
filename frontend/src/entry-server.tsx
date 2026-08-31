@@ -1,9 +1,20 @@
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
-import { AppContent, AppProviders } from './App';
-import { getRouteMetadata, type RouteData } from './lib/routeData';
+import { AppContent } from './App';
+import { InitialRouteDataProvider, type InitialRouteData } from './lib/initialRouteData';
+import { SEOCollectorProvider } from './lib/seoCollector';
+import type { SEOMetadata } from './lib/seo';
 
-export function render(url: string, routeData: RouteData) {
-  const html = renderToString(<AppProviders prerender><StaticRouter location={url}><AppContent initialRouteData={routeData} /></StaticRouter></AppProviders>);
-  return { html, metadata: getRouteMetadata(routeData) };
+export function render(url: string, initialData: InitialRouteData) {
+  let metadata: SEOMetadata | null = null;
+  const appHtml = renderToString(
+    <SEOCollectorProvider value={{ set: (value) => { metadata = value; } }}>
+      <InitialRouteDataProvider data={initialData}>
+        <StaticRouter location={url} future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+          <AppContent />
+        </StaticRouter>
+      </InitialRouteDataProvider>
+    </SEOCollectorProvider>,
+  );
+  return { appHtml, metadata };
 }

@@ -2,8 +2,6 @@
 
 Audit date: 2026-08-27. All findings below are based on repository inspection, local production output, direct HTTP responses or recorded command output.
 
-> Recovery addendum — 2026-08-29: the local checkout now has React SSR/prerendering, strict production-API catalogue loading, safe opt-in-only fallback, and browser hydration coverage. The old shell generator was removed. The local build, full route validation and representative browser tests pass; production deployment remains intentionally withheld.
-
 ## Issue
 
 ### Priority
@@ -389,7 +387,6 @@ Partially fixed. Existing lazy catalogue-image behavior was preserved; no image 
 ### How It Was Tested
 
 - Final local-preview Lighthouse reports were captured for home/category/brand/product, but are not a like-for-like replacement for the live baseline and are documented in the implementation report.
+# Rendering architecture update (2026-08-27)
 
-## Production validation update — 2026-08-29
-
-The deployed `main` release was verified on Vercel Production. Canonical home/category/brand/product routes returned 200 with React SSR HTML; invalid public routes returned 404; legacy category and product URLs made one 308 permanent hop. The 1,936-URL sitemap, robots policy, query canonical policy and schema passed the documented checks. Production CORS allowed the preferred `www` origin, and the five representative hydrated pages had no browser console errors. See `production-validation.md` for measured results.
+The crawler/user divergence caused by the generated `.seo-static-shell` has been removed. Static output now comes from the same `AppContent` tree used in the browser, through Vite SSR and `StaticRouter`; pre-rendered documents are hydrated by `hydrateRoot`.

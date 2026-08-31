@@ -8,14 +8,18 @@ import { Link } from 'react-router-dom';
 import switchImage from '@/assets/product-switch-premium.jpg';
 import mcbImage from '@/assets/product-mcb-premium.jpg';
 import wireImage from '@/assets/product-wire-premium.jpg';
+import { useInitialRouteData } from '@/lib/initialRouteData';
 
 const featuredImages = [switchImage, mcbImage, wireImage];
 
 const FeaturedProducts = () => {
-  const [brands, setBrands] = useState<Brand[]>([]);
-  const [brandProducts, setBrandProducts] = useState<Record<string, Product[]>>({});
+  const initialData = useInitialRouteData();
+  const initialHome = initialData?.pathname === '/' ? initialData.home : undefined;
+  const [brands, setBrands] = useState<Brand[]>(() => initialHome?.featuredBrands ?? []);
+  const [brandProducts, setBrandProducts] = useState<Record<string, Product[]>>(() => initialHome?.featuredProducts ?? {});
 
   useEffect(() => {
+    if (initialHome) return;
     const fetchData = async () => {
       try {
         const brandsList = await getBrands();
@@ -32,7 +36,7 @@ const FeaturedProducts = () => {
               }
     };
     fetchData();
-  }, []);
+  }, [initialHome]);
 
   const featuredBrands = brands;
 

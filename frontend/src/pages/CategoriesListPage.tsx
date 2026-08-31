@@ -12,6 +12,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { PAGE_SEO } from '@/lib/seo';
 import { LoadingSpinner } from '@/components/LoadingSpinner';
 import { SHOPPING_CATEGORIES, ShoppingCategory } from '@/config/shoppingCategories';
+import { useInitialRouteData } from '@/lib/initialRouteData';
 
 const iconMap: Record<string, LucideIcon> = {
   'switches-sockets': ToggleRight,
@@ -23,15 +24,20 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 const CategoriesListPage = () => {
+  const initialData = useInitialRouteData();
+  const hasInitialData = initialData?.pathname === '/categories' && Boolean(initialData.categoryCounts);
   const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [categoryCounts, setCategoryCounts] = useState<Record<string, number>>(() => hasInitialData ? initialData?.categoryCounts ?? {} : {});
+  const [loading, setLoading] = useState(!hasInitialData);
 
   useEffect(() => {
+    if (hasInitialData) return;
     const fetchData = async () => {
       setLoading(true);
       try {
         const response = await getProducts({ pageSize: 2000 });
         setProducts(response.items);
+        setCategoryCounts({});
       } catch (error) {
         console.error('Failed to fetch products:', error);
       } finally {
@@ -39,10 +45,10 @@ const CategoriesListPage = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [hasInitialData]);
 
   const getCategoryCount = (cat: ShoppingCategory) => {
-    return products.filter(p => cat.dbCategories.includes(p.category)).length;
+    return categoryCounts[cat.slug] ?? products.filter(p => cat.dbCategories.includes(p.category)).length;
   };
 
   if (loading) {

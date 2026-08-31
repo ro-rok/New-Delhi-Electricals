@@ -48,8 +48,22 @@ import {
 } from '@/config/shoppingCategories';
 import { fetchProductsForShoppingCategory } from '@/lib/categoryUtils';
 import { getCategorySEO } from '@/lib/seo';
+import { useInitialRouteData } from '@/lib/initialRouteData';
 
 type SortOption = 'name-asc' | 'name-desc' | 'price-asc' | 'price-desc';
+
+// Product names in the catalogue are ASCII. A code-point comparison gives the
+// browser and Node prerenderer one deterministic tie-breaker, avoiding a
+// post-hydration reshuffle caused by their different locale defaults.
+const compareProductNames = (left: Product, right: Product) => {
+  const a = left.name.toLowerCase();
+  const b = right.name.toLowerCase();
+  if (a < b) return -1;
+  if (a > b) return 1;
+  const leftKey = String(left.urlPath || left.sku || left.id);
+  const rightKey = String(right.urlPath || right.sku || right.id);
+  return leftKey < rightKey ? -1 : leftKey > rightKey ? 1 : 0;
+};
 
 const iconMap: Record<string, LucideIcon> = {
   ToggleRight,
@@ -68,21 +82,22 @@ const CategoryPage = () => {
   const searchQuery = searchParams.get('search') || '';
   const subTab = searchParams.get('tab') || 'all';
   const { trackCategoryView } = useApp();
+  const initialData = useInitialRouteData();
+  const hasInitialData = initialData?.pathname === location.pathname && Array.isArray(initialData.products);
 
   // Shopping category (new architecture)
   const shoppingCategory = useMemo(() => getShoppingCategory(slug || ''), [slug]);
   // Handle legacy slugs by redirecting to canonical URL
-  const navigate_ref = useRef<ReturnType<typeof useNavigate> extends () => infer R ? R : never>(null);
   const resolvedSlug = useMemo(() => {
     if (!slug) return '';
     if (isLegacySlug(slug)) return getCanonicalSlug(slug);
     return slug;
   }, [slug]);
 
-  const [allProducts, setAllProducts] = useState<Product[]>([]);
-  const [products, setProducts] = useState<Product[]>([]);
-  const [brands, setBrands] = useState<Brand[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [allProducts, setAllProducts] = useState<Product[]>(() => hasInitialData ? initialData?.products ?? [] : []);
+  const [products, setProducts] = useState<Product[]>(() => hasInitialData ? (initialData?.products ?? []).slice(0, 20) : []);
+  const [brands, setBrands] = useState<Brand[]>(() => hasInitialData ? initialData?.brands ?? [] : []);
+  const [loading, setLoading] = useState(!hasInitialData);
   const [filterLoading, setFilterLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -208,7 +223,7 @@ const CategoryPage = () => {
   // Fetch all products for this shopping category
   const fetchInitialData = useCallback(async () => {
     if (!resolvedSlug) return;
-    setLoading(true);
+    setLoading(!hasInitialData);
     setError(null);
 
     try {
@@ -229,11 +244,11 @@ const CategoryPage = () => {
     } finally {
       setLoading(false);
     }
-  }, [resolvedSlug, shoppingCategory]);
+  }, [resolvedSlug, shoppingCategory, hasInitialData]);
 
   useEffect(() => {
     fetchInitialData();
-  }, [fetchInitialData]);
+  }, [fetchInitialData, hasInitialData]);
 
   // Filter products by active tab and filters
   const filteredProducts = useMemo(() => {
@@ -335,17 +350,17 @@ const CategoryPage = () => {
     const sorted = [...filtered];
     if (sortBy === 'price-asc') sorted.sort((a, b) => a.listPrice - b.listPrice);
     else if (sortBy === 'price-desc') sorted.sort((a, b) => b.listPrice - a.listPrice);
-    else if (sortBy === 'name-desc') sorted.sort((a, b) => b.name.localeCompare(a.name));
+    else if (sortBy === 'name-desc') sorted.sort((a, b) => compareProductNames(b, a));
     else if (sortBy === 'name-asc') {
       // Smart sort for shopping categories — natural product order
       if (shoppingCategory?.slug === 'switches-sockets' || shoppingCategory?.slug === 'plates') {
         sorted.sort((a, b) => {
           const priorityDiff = getSmartSortPriority(a) - getSmartSortPriority(b);
           if (priorityDiff !== 0) return priorityDiff;
-          return a.name.localeCompare(b.name);
+          return compareProductNames(a, b);
         });
       } else {
-        sorted.sort((a, b) => a.name.localeCompare(b.name));
+        sorted.sort(compareProductNames);
       }
     }
 

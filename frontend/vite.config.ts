@@ -26,7 +26,7 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
   plugins: [
     react(),
     // Bundle analyzer - only in build mode
-    mode === 'production' && visualizer({
+    !isSsrBuild && mode === 'production' && visualizer({
       filename: './dist/stats.html',
       open: false,
       gzipSize: true,
@@ -47,7 +47,7 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
     sourcemap: mode === "development",
     
     // Configure code splitting
-    rollupOptions: {
+    rollupOptions: !isSsrBuild ? {
       output: {
         // Manual chunks for better code splitting
         ...(isSsrBuild ? {} : { manualChunks: {
@@ -69,7 +69,7 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
         entryFileNames: isSsrBuild ? "[name].js" : "assets/js/[name]-[hash].js",
         assetFileNames: "assets/[ext]/[name]-[hash].[ext]",
       },
-    },
+    } : undefined,
     
     // Optimize chunk size warnings
     chunkSizeWarningLimit: 1000,

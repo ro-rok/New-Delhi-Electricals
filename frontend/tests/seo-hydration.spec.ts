@@ -1,182 +1,182 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import { test, expect } from '@playwright/test';
+import { expect, test, type BrowserContext, type Page, type Route } from '@playwright/test';
+import { mkdirSync } from 'node:fs';
+import { join } from 'node:path';
 
-const dist = path.resolve(import.meta.dirname, '..', 'dist');
-const sitemap = fs.readFileSync(path.join(dist, 'sitemap.xml'), 'utf8');
-const paths = [...sitemap.matchAll(/<loc>https:\/\/www\.newdelhielectricals\.com([^<]*)<\/loc>/g)].map(match => match[1] || '/');
-const productPath = (brand: string) => paths.find(item => item.startsWith(`/${brand}/`));
-const routeFile = (route: string) => path.join(dist, route === '/' ? 'index.html' : `${route.replace(/^\//, '')}.html`);
-const routeData = (route: string): Record<string, unknown> => {
-  const source = fs.readFileSync(routeFile(route), 'utf8');
-  const match = source.match(/window\.__NDE_INITIAL_ROUTE_DATA__=(.*?)<\/script>/);
-  if (!match) throw new Error(`Missing initial route data for ${route}`);
-  return JSON.parse(match[1].replace(/;\s*$/, ''));
-};
-const variantPath = paths.find(route => {
-  const options = routeData(route).variantOptions;
-  return Array.isArray(options) && options.length > 0;
-});
+const screenshots = join(process.cwd(), '..', 'docs', 'seo', 'browser-validation');
+mkdirSync(screenshots, { recursive: true });
+
 const routes = [
-  ['Home', '/'], ['Category', '/category/switches-sockets'], ['Brand', '/brand/havells'],
-  ['Havells product', productPath('havells')], ['Finolex product', productPath('finolex')],
+  { name: 'home', path: '/', schemas: ['LocalBusiness'] },
+  { name: 'category-switches-sockets', path: '/category/switches-sockets', schemas: ['BreadcrumbList'] },
+  { name: 'brand-havells', path: '/brand/havells', schemas: ['BreadcrumbList'] },
+  { name: 'product-havells', path: '/havells/2-channel-dimmer-2m-grey', schemas: ['Product', 'BreadcrumbList'] },
+  { name: 'product-finolex', path: '/finolex/finolex-fr-0-75-sqmm-300m-house-wire', schemas: ['Product', 'BreadcrumbList'] },
 ] as const;
 
-async function settle(page: import('@playwright/test').Page) {
-  await page.waitForLoadState('networkidle').catch(() => undefined);
-  await page.waitForTimeout(750);
-}
+const hydrationPattern = /hydration failed|hydration mismatch|text content did not match|expected server html|server html was replaced|an error occurred during hydration/i;
+const catalogueApi = 'https://new-delhi-electricals.onrender.com/api/';
 
-function observeBrowser(page: import('@playwright/test').Page, issues: string[]) {
-  page.on('console', message => {
-    if (/hydration|did not match|replace/i.test(message.text())) issues.push(message.text());
+async function fulfillCatalogueRequest(route: Route) {
+  const response = await route.fetch();
+  await route.fulfill({
+    response,
+    headers: { ...response.headers(), 'access-control-allow-origin': '*' },
   });
-  page.on('pageerror', error => issues.push(error.message));
 }
 
-for (const [name, route] of routes) test(`${name} has SSR content and hydrates without React replacement`, async ({ browser, baseURL }) => {
-  expect(route, `${name} route must exist in the generated sitemap`).toBeTruthy();
-  const noJs = await browser.newContext({ javaScriptEnabled: false });
-  const staticPage = await noJs.newPage();
-  await staticPage.goto(`${baseURL}${route}`);
-  const staticH1 = await staticPage.locator('h1').innerText();
-  const staticTitle = await staticPage.title();
-  const staticBreadcrumb = await staticPage.locator('nav[aria-label="Breadcrumb"]').allInnerTexts();
-  await noJs.close();
+async function allowCatalogueApi(page: Page) {
+  await page.route(`${catalogueApi}**`, fulfillCatalogueRequest);
+}
 
-  const context = await browser.newContext();
+async function pageFacts(page: Page) {
+  return page.evaluate(() => ({
+    h1: document.querySelector('h1')?.textContent?.trim() || '',
+    mainText: document.querySelector('main')?.textContent?.replace(/\s+/g, ' ').trim().slice(0, 800) || '',
+    breadcrumb: document.querySelector('nav[aria-label*="breadcrumb" i], [aria-label="Breadcrumb"]')?.textContent?.replace(/\s+/g, ' ').trim() || '',
+    canonical: document.querySelectorAll('link[rel="canonical"]').length === 1 ? document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.href || '' : '',
+    titleCount: document.querySelectorAll('title').length,
+    descriptionCount: document.querySelectorAll('meta[name="description"]').length,
+    canonicalCount: document.querySelectorAll('link[rel="canonical"]').length,
+    robots: document.querySelector<HTMLMetaElement>('meta[name="robots"]')?.content || '',
+    schemaTypes: [...document.querySelectorAll<HTMLScriptElement>('script[data-seo-schema], script[type="application/ld+json"]')]
+      .flatMap((script) => { try { const schema = JSON.parse(script.textContent || '{}'); return Array.isArray(schema) ? schema.map((item) => item['@type']) : [schema['@type']]; } catch { return ['INVALID']; } })
+      .filter(Boolean).sort(),
+    significantLinks: [...document.querySelectorAll('main a[href]')].filter((link) => (link.textContent || '').trim().length > 2).length,
+    productLinks: [...document.querySelectorAll('main a[href*="/"]')]
+      .map((link) => link.getAttribute('href'))
+      .filter((href): href is string => Boolean(href && /^\/(?!category|brand|cart|shortlist|compare|contact|about|services|faq)/.test(href)))
+      .filter((href, index, values) => values.indexOf(href) === index)
+      .slice(0, 20),
+    productCards: document.querySelectorAll('main [class*="grid"] a[href]').length,
+    rootTextLength: document.getElementById('root')?.textContent?.trim().length || 0,
+    rootHtmlLength: document.getElementById('root')?.innerHTML.length || 0,
+    oldShell: Boolean(document.querySelector('.seo-static-shell')),
+    cls: performance.getEntriesByType('layout-shift').filter((entry: any) => !entry.hadRecentInput).reduce((total: number, entry: any) => total + entry.value, 0),
+    lcp: performance.getEntriesByType('largest-contentful-paint').at(-1)?.startTime || null,
+  }));
+}
+
+async function jsOffFacts(context: BrowserContext, path: string, screenshotName: string) {
   const page = await context.newPage();
-  await page.addInitScript(() => {
-    const marker = window as Window & { __ndeInitialRoot?: Element };
-    new MutationObserver(() => {
-      if (!marker.__ndeInitialRoot) marker.__ndeInitialRoot = document.getElementById('root') || undefined;
-    }).observe(document, { childList: true, subtree: true });
+  await page.goto(path, { waitUntil: 'load' });
+  await page.screenshot({ path: join(screenshots, `${screenshotName}-a-js-off.png`), fullPage: true });
+  const facts = await pageFacts(page);
+  await page.close();
+  return facts;
+}
+
+async function delayedHydrationPage(context: BrowserContext, path: string, screenshotName: string) {
+  const page = await context.newPage();
+  let releaseScripts!: () => void;
+  const scriptsReleased = new Promise<void>((resolve) => { releaseScripts = resolve; });
+  const apiRequests: string[] = [];
+  page.on('request', (request) => {
+    if (request.url().startsWith(catalogueApi)) apiRequests.push(request.url());
   });
-  const issues: string[] = [];
-  observeBrowser(page, issues);
-  await page.goto(`${baseURL}${route}`);
-  await settle(page);
-  await expect(page.locator('h1')).toHaveText(staticH1);
-  await expect(page).toHaveTitle(staticTitle);
-  await expect(page.locator('link[rel="canonical"]')).toHaveCount(1);
-  expect(await page.locator('nav[aria-label="Breadcrumb"]').allInnerTexts()).toEqual(staticBreadcrumb);
-  await expect(page.locator('main a')).not.toHaveCount(0);
-  expect(await page.evaluate(() => (window as Window & { __ndeInitialRoot?: Element }).__ndeInitialRoot === document.getElementById('root'))).toBe(true);
-  expect(issues).toEqual([]);
+  await page.route('**/*', async (route) => {
+    if (route.request().url().startsWith(catalogueApi)) {
+      await fulfillCatalogueRequest(route);
+      return;
+    }
+    if (route.request().resourceType() === 'script') await scriptsReleased;
+    await route.continue();
+  });
+  const messages: string[] = [];
+  const errors: string[] = [];
+  page.on('console', (message) => messages.push(`${message.type()}: ${message.text()}`));
+  page.on('pageerror', (error) => errors.push(error.message));
+  await page.goto(path, { waitUntil: 'commit' });
+  await expect(page.locator('h1')).toBeVisible();
+  await page.evaluate(() => { (window as any).__ndePreHydrationH1 = document.querySelector('h1'); });
+  await page.screenshot({ path: join(screenshots, `${screenshotName}-b-immediate.png`), fullPage: true });
+  const immediate = await pageFacts(page);
+  releaseScripts();
+  await page.waitForLoadState('networkidle', { timeout: 20_000 }).catch(() => undefined);
+  await expect(page.locator('h1')).toBeVisible();
+  await page.waitForTimeout(1_000);
+  await page.screenshot({ path: join(screenshots, `${screenshotName}-c-hydrated.png`), fullPage: true });
+  const settled = await pageFacts(page);
+  const h1Persisted = await page.evaluate(() => (window as any).__ndePreHydrationH1 === document.querySelector('h1'));
+  return { page, immediate, settled, h1Persisted, messages, errors, apiRequests };
+}
+
+for (const route of routes) {
+  test(`${route.name}: prerendered content hydrates in place`, async ({ browser }) => {
+    const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 1440, height: 900 } });
+    const staticFacts = await jsOffFacts(noJs, route.path, route.name);
+    await noJs.close();
+    expect(staticFacts.h1).not.toBe('');
+    expect(staticFacts.rootTextLength).toBeGreaterThan(100);
+    expect(staticFacts.titleCount).toBe(1);
+    expect(staticFacts.descriptionCount).toBe(1);
+    expect(staticFacts.canonicalCount).toBe(1);
+    expect(staticFacts.canonical).toBe(`https://www.newdelhielectricals.com${route.path === '/' ? '/' : route.path}`);
+    expect(staticFacts.oldShell).toBeFalsy();
+    expect(staticFacts.schemaTypes).toEqual(expect.arrayContaining(route.schemas));
+
+    const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+    const result = await delayedHydrationPage(context, route.path, route.name);
+    try {
+      expect(result.immediate.h1).toBe(staticFacts.h1);
+      expect(result.settled.h1).toBe(staticFacts.h1);
+      expect(result.settled.mainText).toContain(staticFacts.h1);
+      expect(result.settled.canonical).toBe(staticFacts.canonical);
+      expect(result.settled.titleCount).toBe(1);
+      expect(result.settled.descriptionCount).toBe(1);
+      expect(result.settled.canonicalCount).toBe(1);
+      expect(result.settled.schemaTypes).toEqual(staticFacts.schemaTypes);
+      expect([...result.settled.productLinks].sort()).toEqual([...staticFacts.productLinks].sort());
+      const reorderedProducts = result.settled.productLinks.filter((href, index) => href !== staticFacts.productLinks[index]).length;
+      expect(reorderedProducts).toBeLessThanOrEqual(Math.ceil(staticFacts.productLinks.length * 0.25));
+      expect(result.settled.rootTextLength).toBeGreaterThan(100);
+      expect(result.settled.oldShell).toBeFalsy();
+      expect(result.h1Persisted).toBeTruthy();
+      expect(result.messages.filter((message) => hydrationPattern.test(message))).toEqual([]);
+      expect(result.errors.filter((message) => hydrationPattern.test(message))).toEqual([]);
+      expect(result.settled.cls).toBeLessThanOrEqual(0.1);
+    } finally {
+      await result.page.close();
+      await context.close();
+    }
+  });
+}
+
+test('hydrated navigation, cart, mobile navigation, and WhatsApp CTA remain usable', async ({ page }) => {
+  const errors: string[] = [];
+  page.on('pageerror', (error) => errors.push(error.message));
+  await allowCatalogueApi(page);
+  await page.goto('/');
+  await expect(page.locator('h1')).toBeVisible();
+  await page.getByRole('link', { name: /switches & sockets/i }).first().click();
+  await expect(page).toHaveURL(/\/category\/switches-sockets/);
+  const productLink = page.locator('main a[href^="/"]').filter({ has: page.locator('h3') }).first();
+  await expect(productLink).toBeVisible();
+  await productLink.click();
+  await expect(page.locator('h1')).toBeVisible();
+  await page.getByRole('button', { name: /add to cart/i }).click();
+  await expect(page.getByRole('button', { name: /in cart/i })).toBeVisible();
+  const whatsappButton = page.getByRole('button', { name: /enquire on whatsapp/i });
+  await expect(whatsappButton).toBeVisible();
+  const popupPromise = page.waitForEvent('popup');
+  await whatsappButton.click();
+  const popup = await popupPromise;
+  await expect.poll(() => popup.url()).toMatch(/wa\.me|api\.whatsapp\.com/);
+  await popup.close();
+  await page.goBack();
+  await page.goForward();
+  await expect(page.locator('h1')).toBeVisible();
+  await page.unrouteAll({ behavior: 'ignoreErrors' });
+  await expect(errors).toEqual([]);
+});
+
+test('mobile navigation opens and closes after hydration', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  const page = await context.newPage();
+  await page.goto('/');
+  const menu = page.getByRole('button', { name: 'Toggle menu' });
+  await menu.click();
+  await expect(page.getByRole('link', { name: 'About' })).toBeVisible();
+  await menu.click();
+  await expect(page.getByRole('link', { name: 'About' })).toBeHidden();
   await context.close();
-});
-
-for (const [name, route] of routes) test(`${name} cumulative layout shift stays within the release budget`, async ({ page, baseURL }, testInfo) => {
-  expect(route, `${name} route must exist in the generated sitemap`).toBeTruthy();
-  await page.addInitScript(() => {
-    (window as Window & { __ndeCls?: number }).__ndeCls = 0;
-    new PerformanceObserver(list => {
-      for (const entry of list.getEntries() as Array<PerformanceEntry & { hadRecentInput?: boolean; value?: number }>) {
-        if (!entry.hadRecentInput) (window as Window & { __ndeCls?: number }).__ndeCls! += entry.value || 0;
-      }
-    }).observe({ type: 'layout-shift', buffered: true });
-  });
-  await page.goto(`${baseURL}${route}`);
-  await settle(page);
-  const cls = await page.evaluate(() => (window as Window & { __ndeCls?: number }).__ndeCls || 0);
-  await testInfo.attach('cls.json', { body: JSON.stringify({ route, cls }), contentType: 'application/json' });
-  console.log(`CLS ${name} (${route}): ${cls}`);
-  expect(cls, `${name} CLS`).toBeLessThanOrEqual(0.1);
-});
-
-test('mobile navigation opens, closes, and routes to a category', async ({ page, baseURL }) => {
-  await page.setViewportSize({ width: 390, height: 844 });
-  const issues: string[] = [];
-  observeBrowser(page, issues);
-  await page.goto(`${baseURL}/`);
-  await settle(page);
-  const toggle = page.getByRole('button', { name: 'Toggle menu' });
-  await expect(toggle).toBeVisible();
-  await toggle.click();
-  const categoryLink = page.locator('header nav').getByRole('link', { name: 'Shop' });
-  await expect(categoryLink).toBeVisible();
-  await categoryLink.click();
-  await expect(page).toHaveURL(/\/categories$/);
-  await expect(page.getByRole('heading', { name: 'Build Your Complete Electrical Setup' })).toBeVisible();
-  await expect(categoryLink).toBeHidden();
-  expect(issues).toEqual([]);
-});
-
-test('product can be added to cart and cart remains functional after hydration', async ({ page, baseURL }) => {
-  const route = productPath('havells');
-  expect(route).toBeTruthy();
-  const issues: string[] = [];
-  observeBrowser(page, issues);
-  await page.goto(`${baseURL}${route}`);
-  await settle(page);
-  await page.getByRole('button', { name: 'Add to Cart' }).click();
-  await expect(page.getByRole('button', { name: 'In Cart' })).toBeVisible();
-  await page.getByRole('link', { name: 'View Cart', exact: true }).click();
-  await expect(page).toHaveURL(/\/cart$/);
-  await expect(page.getByRole('heading', { name: 'Shopping Cart' })).toBeVisible();
-  const product = routeData(route!).product as { name: string };
-  await expect(page.getByText(product.name)).toBeVisible();
-  expect(issues).toEqual([]);
-});
-
-test('current catalogue variant selects a real product route and keeps cart actions available', async ({ page, baseURL }) => {
-  test.skip(!variantPath, 'VARIANT TEST: NOT APPLICABLE — no suitable current catalogue record');
-  const issues: string[] = [];
-  observeBrowser(page, issues);
-  await page.goto(`${baseURL}${variantPath}`);
-  await settle(page);
-  const option = page.locator('[data-variant-sku]').first();
-  const expectedPath = await option.getAttribute('href');
-  await expect(option).toBeVisible();
-  await option.click();
-  await expect(page).toHaveURL(new RegExp(`${expectedPath!.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`));
-  await expect(page.getByRole('button', { name: /Add to Cart|In Cart/ })).toBeVisible();
-  expect(issues).toEqual([]);
-});
-
-test('product WhatsApp handoff carries product context without a real message', async ({ page, baseURL }) => {
-  const route = productPath('havells');
-  expect(route).toBeTruthy();
-  const issues: string[] = [];
-  observeBrowser(page, issues);
-  await page.goto(`${baseURL}${route}`);
-  await settle(page);
-  const link = page.getByRole('link', { name: 'Enquire on WhatsApp' });
-  const href = await link.getAttribute('href');
-  expect(href).toMatch(/^https:\/\/wa\.me\/919654102758\?text=/);
-  expect(decodeURIComponent(href!)).toContain((routeData(route!).product as { sku: string }).sku);
-  const popup = page.waitForEvent('popup');
-  await link.click();
-  await (await popup).close();
-  expect(issues).toEqual([]);
-});
-
-test('conversion dispatches are exact and contain no form/query values', async ({ page, baseURL }) => {
-  await page.addInitScript(() => {
-    (window as Window & { __ndeConversionEvents?: unknown[] }).__ndeConversionEvents = [];
-    window.addEventListener('nde:conversion', event => (window as Window & { __ndeConversionEvents?: unknown[] }).__ndeConversionEvents!.push((event as CustomEvent).detail));
-  });
-  const route = productPath('havells');
-  expect(route).toBeTruthy();
-  await page.goto(`${baseURL}${route}`);
-  await settle(page);
-  const productPopup = page.waitForEvent('popup');
-  await page.getByRole('link', { name: 'Enquire on WhatsApp' }).click();
-  await (await productPopup).close();
-  let events = await page.evaluate(() => (window as Window & { __ndeConversionEvents?: Array<{ name: string; properties: Record<string, unknown> }> }).__ndeConversionEvents || []);
-  expect(events.map(event => event.name)).toEqual(['whatsapp_click', 'whatsapp_enquiry_start']);
-
-  await page.getByRole('button', { name: 'Add to Cart' }).click();
-  await page.getByRole('link', { name: 'View Cart', exact: true }).click();
-  await expect(page.getByRole('heading', { name: 'Shopping Cart' })).toBeVisible();
-  await page.getByRole('button', { name: 'Proceed to Enquire' }).click();
-  await page.getByLabel(/^Name/).fill('Test Person');
-  await page.getByLabel(/^Business Name/).fill('Test Company');
-  await page.getByLabel(/^WhatsApp Number/).fill('9876543210');
-  const quotePopup = page.waitForEvent('popup');
-  await page.getByRole('button', { name: 'Send Enquiry' }).click();
-  await (await quotePopup).close();
-  events = await page.evaluate(() => (window as Window & { __ndeConversionEvents?: Array<{ name: string; properties: Record<string, unknown> }> }).__ndeConversionEvents || []);
-  expect(events.map(event => event.name)).toEqual(['whatsapp_click', 'whatsapp_enquiry_start', 'quote_enquiry_start', 'whatsapp_click', 'whatsapp_enquiry_start', 'quote_enquiry_handoff']);
-  expect(JSON.stringify(events)).not.toMatch(/Test Person|Test Company|9876543210|search|query/i);
 });

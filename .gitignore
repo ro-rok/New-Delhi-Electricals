@@ -21,4 +21,5 @@ CV_POINTS.md
 .kiro/*
 frontend/audit-baseline/
 frontend/audit-after/
+frontend/dist-ssr-test/
 frontend/*.tsbuildinfo

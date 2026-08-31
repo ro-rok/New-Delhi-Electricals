@@ -1,5 +1,6 @@
 import { useCallback } from 'react';
 import { trackEvent as sendTrackEvent } from '@/api/tracking';
+import { trackConversion } from '@/lib/conversionTracking';
 
 // Cookie-less analytics using localStorage aggregation + server-side tracking
 const STORAGE_KEY = 'nde_analytics';
@@ -17,7 +18,9 @@ const getAnalyticsData = (): AnalyticsData => {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) return JSON.parse(stored);
-  } catch {}
+  } catch {
+    // Storage can be unavailable in restricted browsing contexts.
+  }
   return {
     pageViews: {},
     productViews: {},
@@ -69,6 +72,9 @@ export const useAnalytics = () => {
     saveAnalyticsData(data);
     // Server tracking
     sendTrackEvent({ type: 'whatsapp_click', productId, productName });
+    const properties = { cta_location: productId ? 'product' : 'generic' };
+    trackConversion('whatsapp_click', properties);
+    trackConversion('whatsapp_enquiry_start', properties);
   }, []);
 
   const trackCategoryView = useCallback((category: string) => {

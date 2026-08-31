@@ -3,11 +3,15 @@ import { Link } from 'react-router-dom';
 import { getBrands } from '@/api/products';
 import { Brand } from '@/types/product';
 import { motion } from 'framer-motion';
+import { useInitialRouteData } from '@/lib/initialRouteData';
 
 const BrandShowcase = () => {
-  const [featuredBrands, setFeaturedBrands] = useState<Brand[]>([]);
+  const initialData = useInitialRouteData();
+  const initialBrands = initialData?.pathname === '/' ? initialData.home?.featuredBrands : undefined;
+  const [featuredBrands, setFeaturedBrands] = useState<Brand[]>(() => initialBrands ?? []);
 
   useEffect(() => {
+    if (initialBrands) return;
     const fetchBrands = async () => {
       try {
         const brandsList = await getBrands();
@@ -19,7 +23,7 @@ const BrandShowcase = () => {
       }
     };
     fetchBrands();
-  }, []);
+  }, [initialBrands]);
 
   // Don't render if no brands available
   if (featuredBrands.length === 0) {
