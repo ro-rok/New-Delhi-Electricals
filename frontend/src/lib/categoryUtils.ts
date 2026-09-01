@@ -77,6 +77,12 @@ export async function fetchProductsForShoppingCategory(
     totalCount += result.total;
   }
 
+  // The catalogue can contain multiple records that resolve to one canonical
+  // product URL. Keep the first canonical product so API revalidation cannot
+  // introduce duplicate cards or displace a prerendered first-page product.
+  allItems = [...new Map(allItems.map((item) => [item.urlPath || item.id, item])).values()];
+  totalCount = allItems.length;
+
   // Apply sorting
   if (options?.sortBy === 'price') {
     allItems.sort((a, b) =>

@@ -6,7 +6,9 @@ import { useState, useEffect } from 'react';
  */
 export function useNetworkStatus(): boolean {
   const [isOnline, setIsOnline] = useState<boolean>(
-    typeof navigator !== 'undefined' ? navigator.onLine : true
+    // Node 22+ exposes a partial navigator. Only browser state may influence
+    // the first client render; the SSR default must be deterministic.
+    typeof window !== 'undefined' ? navigator.onLine : true
   );
 
   useEffect(() => {

@@ -15,23 +15,28 @@ import { useApp } from '@/contexts/AppContext';
 import { SEOHead } from '@/components/SEOHead';
 import { getBrandSEO } from '@/lib/seo';
 import { LoadingSpinner } from '@/components/LoadingSpinner';
+import { useInitialRouteData } from '@/lib/initialRouteData';
 
 const BrandPage = () => {
   const { slug } = useParams();
   const location = useLocation();
   const { trackPageView } = useApp();
+  const initialData = useInitialRouteData();
+  const hasInitialData = initialData?.pathname === location.pathname && Array.isArray(initialData.products);
   const [isCatalogOpen, setIsCatalogOpen] = useState(false);
-  const [brand, setBrand] = useState<Brand | null>(null);
-  const [brands, setBrands] = useState<Brand[]>([]);
-  const [brandProducts, setBrandProducts] = useState<Product[]>([]);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [brand, setBrand] = useState<Brand | null>(() => hasInitialData ? initialData?.brands?.find((item) => item.slug === slug) ?? null : null);
+  const [brands, setBrands] = useState<Brand[]>(() => hasInitialData ? initialData?.brands ?? [] : []);
+  const [brandProducts, setBrandProducts] = useState<Product[]>(() => hasInitialData ? initialData?.products ?? [] : []);
+  const [categories, setCategories] = useState<Category[]>(() => hasInitialData ? initialData?.categories ?? [] : []);
+  const [loading, setLoading] = useState(!hasInitialData);
 
   useEffect(() => {
     // Reset state immediately when route params change
-    setBrand(null);
-    setBrandProducts([]);
-    setLoading(true);
+    if (!hasInitialData) {
+      setBrand(null);
+      setBrandProducts([]);
+      setLoading(true);
+    }
 
     const fetchData = async () => {
       if (!slug) {
@@ -44,6 +49,10 @@ const BrandPage = () => {
           getCategories(),
         ]);
         const foundBrand = brandsList.find(b => b.slug === slug);
+        // Keep the prerendered route usable when a background revalidation is
+        // unavailable or stale. Replacing a valid SSR brand page with "not
+        // found" is both a visible flash and a hydration-stability failure.
+        if (!foundBrand && hasInitialData) return;
         setBrand(foundBrand || null);
         setBrands(brandsList);
         setCategories(catsList);
@@ -53,14 +62,16 @@ const BrandPage = () => {
           setBrandProducts(products);
         }
       } catch (error) {
-                setBrand(null);
-        setBrandProducts([]);
+        if (!hasInitialData) {
+          setBrand(null);
+          setBrandProducts([]);
+        }
       } finally {
         setLoading(false);
       }
     };
     fetchData();
-  }, [slug, location.key]);
+  }, [slug, location.key, hasInitialData]);
 
   // Group products by category
   const productsByCategory = useMemo(() => {

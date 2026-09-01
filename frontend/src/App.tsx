@@ -12,29 +12,27 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { OfflineBanner } from "@/components/OfflineBanner";
 import { trackConversion } from "@/lib/conversionTracking";
 import { trackPageView } from "@/api/tracking";
-import { PrerenderRoute } from "@/components/PrerenderRoute";
-import type { RouteData } from "@/lib/routeData";
+import { InitialRouteDataProvider } from "@/lib/initialRouteData";
 
 // Eagerly loaded components (critical path)
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import CategoryPage from "./pages/CategoryPage";
+import BrandPage from "./pages/BrandPage";
+import ProductSlugPage from "./pages/ProductSlugPage";
+import AboutPage from "./pages/AboutPage";
+import ServicesPage from "./pages/ServicesPage";
+import ContactPage from "./pages/ContactPage";
+import FAQPage from "./pages/FAQPage";
+import ShortlistPage from "./pages/ShortlistPage";
+import ComparePage from "./pages/ComparePage";
+import CartPage from "./pages/CartPage";
+import BrandsListPage from "./pages/BrandsListPage";
+import CategoriesListPage from "./pages/CategoriesListPage";
+import SearchResultsPage from "./pages/SearchResultsPage";
+import CommercialHubPage from "./pages/CommercialHubPage";
 
-// Lazy loaded components (code splitting)
-const AboutPage = lazy(() => import("./pages/AboutPage"));
-const ServicesPage = lazy(() => import("./pages/ServicesPage"));
-const ContactPage = lazy(() => import("./pages/ContactPage"));
-const FAQPage = lazy(() => import("./pages/FAQPage"));
-const CategoryPage = lazy(() => import("./pages/CategoryPage"));
-const BrandPage = lazy(() => import("./pages/BrandPage"));
-const CommercialHubPage = lazy(() => import("./pages/CommercialHubPage"));
-const ProductSlugPage = lazy(() => import("./pages/ProductSlugPage"));
-const ShortlistPage = lazy(() => import("./pages/ShortlistPage"));
-const ComparePage = lazy(() => import("./pages/ComparePage"));
-const CartPage = lazy(() => import("./pages/CartPage"));
-const BrandsListPage = lazy(() => import("./pages/BrandsListPage"));
-const CategoriesListPage = lazy(() => import("./pages/CategoriesListPage"));
-const SearchResultsPage = lazy(() => import("./pages/SearchResultsPage"));
-
+// Admin code remains lazy and is never part of the public prerender output.
 const AdminLayout = lazy(() => import("./pages/admin/AdminLayout"));
 const AdminLogin = lazy(() => import("./pages/admin/AdminLogin"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
@@ -74,7 +72,6 @@ const GlobalShortcuts = () => {
 const RouteTracker = () => {
   const location = useLocation();
   useEffect(() => {
-    // Queries can contain customer intent and must not enter page-view analytics.
     trackPageView(location.pathname);
   }, [location.pathname]);
   return null;
@@ -86,13 +83,13 @@ const GlobalConversionTracking = () => {
       const target = event.target instanceof Element ? event.target.closest<HTMLElement>('a,button') : null;
       if (!target) return;
       const href = target instanceof HTMLAnchorElement ? target.href : '';
-      const label = (target.getAttribute('aria-label') || '').trim();
+      const label = (target.getAttribute('aria-label') || target.textContent || '').trim().slice(0, 80);
       if (href.includes('wa.me') || /whats\s*app/i.test(label)) {
-        const properties = { cta_location: target.dataset.ctaLocation || 'whatsapp_cta' };
+        const properties = { cta_location: target.dataset.ctaLocation || label || 'unknown' };
         trackConversion('whatsapp_click', properties);
         trackConversion('whatsapp_enquiry_start', properties);
       } else if (href.startsWith('tel:')) {
-        trackConversion('phone_click', { cta_location: target.dataset.ctaLocation || 'phone_cta' });
+        trackConversion('phone_click', { cta_location: target.dataset.ctaLocation || label || 'unknown' });
       }
     };
     document.addEventListener('click', handleClick, true);
@@ -101,54 +98,38 @@ const GlobalConversionTracking = () => {
   return null;
 };
 
-export const AppProviders = ({ children, prerender = false }: { children: React.ReactNode; prerender?: boolean }) => (
+export const AppContent = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <AppProvider>
         <TooltipProvider>
-          {!prerender && <><Toaster /><Sonner /><Analytics /><OfflineBanner /></>}
-          {children}
-        </TooltipProvider>
-      </AppProvider>
-    </ThemeProvider>
-  </QueryClientProvider>
-);
-
-const InitialOrLegacy = ({ initialRouteData, children }: { initialRouteData?: RouteData; children: React.ReactNode }) => {
-  const location = useLocation();
-  // The embedded payload describes one document only. Once the client navigates,
-  // render the normal interactive route instead of reusing stale initial markup.
-  return initialRouteData?.path === location.pathname
-    ? <PrerenderRoute data={initialRouteData} />
-    : <>{children}</>;
-};
-
-/** One logical route table used by BrowserRouter and StaticRouter. */
-export const AppContent = ({ initialRouteData }: { initialRouteData?: RouteData }) => (
-  <>
-    <GlobalShortcuts />
-    <RouteTracker />
-    <GlobalConversionTracking />
-    <ErrorBoundary>
-      <Suspense fallback={<PageLoader />}>
-        <Routes>
-          <Route path="/" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><Home /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/about" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><AboutPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/services" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ServicesPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/contact" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ContactPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/faq" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><FAQPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/search" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><SearchResultsPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/categories" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><CategoriesListPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/category/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><CategoryPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/brands" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><BrandsListPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/brand/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><BrandPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/brand/:slug/:hub" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><CommercialHubPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/:brand/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ProductSlugPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/product/:brand/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ProductSlugPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/product/:brand/:product_family/:slug" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ProductSlugPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/shortlist" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ShortlistPage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/compare" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><ComparePage /></ErrorBoundary></InitialOrLegacy>} />
-                  <Route path="/cart" element={<InitialOrLegacy initialRouteData={initialRouteData}><ErrorBoundary><CartPage /></ErrorBoundary></InitialOrLegacy>} />
+          <Toaster />
+          <Sonner />
+          <Analytics />
+          <OfflineBanner />
+            <GlobalShortcuts />
+            <RouteTracker />
+            <GlobalConversionTracking />
+            <ErrorBoundary>
+              <Suspense fallback={<PageLoader />}>
+                <Routes>
+                  <Route path="/" element={<ErrorBoundary><Home /></ErrorBoundary>} />
+                  <Route path="/about" element={<ErrorBoundary><AboutPage /></ErrorBoundary>} />
+                  <Route path="/services" element={<ErrorBoundary><ServicesPage /></ErrorBoundary>} />
+                  <Route path="/contact" element={<ErrorBoundary><ContactPage /></ErrorBoundary>} />
+                  <Route path="/faq" element={<ErrorBoundary><FAQPage /></ErrorBoundary>} />
+                  <Route path="/search" element={<ErrorBoundary><SearchResultsPage /></ErrorBoundary>} />
+                  <Route path="/categories" element={<ErrorBoundary><CategoriesListPage /></ErrorBoundary>} />
+                  <Route path="/category/:slug" element={<ErrorBoundary><CategoryPage /></ErrorBoundary>} />
+                  <Route path="/brands" element={<ErrorBoundary><BrandsListPage /></ErrorBoundary>} />
+                  <Route path="/brand/:slug" element={<ErrorBoundary><BrandPage /></ErrorBoundary>} />
+                  <Route path="/brand/:slug/:hub" element={<ErrorBoundary><CommercialHubPage /></ErrorBoundary>} />
+                  <Route path="/:brand/:slug" element={<ErrorBoundary><ProductSlugPage /></ErrorBoundary>} />
+                  <Route path="/product/:brand/:slug" element={<ErrorBoundary><ProductSlugPage /></ErrorBoundary>} />
+                  <Route path="/product/:brand/:product_family/:slug" element={<ErrorBoundary><ProductSlugPage /></ErrorBoundary>} />
+                  <Route path="/shortlist" element={<ErrorBoundary><ShortlistPage /></ErrorBoundary>} />
+                  <Route path="/compare" element={<ErrorBoundary><ComparePage /></ErrorBoundary>} />
+                  <Route path="/cart" element={<ErrorBoundary><CartPage /></ErrorBoundary>} />
 
                   {/* Admin Routes */}
                   <Route path="/admin/login" element={<ErrorBoundary><AdminLogin /></ErrorBoundary>} />
@@ -168,18 +149,21 @@ export const AppContent = ({ initialRouteData }: { initialRouteData?: RouteData 
                   </Route>
 
                   <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
-    </ErrorBoundary>
-  </>
+                </Routes>
+              </Suspense>
+            </ErrorBoundary>
+        </TooltipProvider>
+      </AppProvider>
+    </ThemeProvider>
+  </QueryClientProvider>
 );
 
-const App = ({ initialRouteData }: { initialRouteData?: RouteData }) => (
-  <AppProviders prerender={Boolean(initialRouteData)}>
-    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-      <AppContent initialRouteData={initialRouteData} />
-    </BrowserRouter>
-  </AppProviders>
+const App = () => (
+  <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <InitialRouteDataProvider>
+      <AppContent />
+    </InitialRouteDataProvider>
+  </BrowserRouter>
 );
 
 export default App;

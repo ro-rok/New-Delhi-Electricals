@@ -26,56 +26,78 @@ export const PAGE_SEO: Record<string, SEOMetadata> = {
     description: "Leading supplier of electrical components, switches, wires, MCBs, and industrial equipment in New Delhi. Browse our extensive catalog of premium electrical products.",
     keywords: ["electrical components", "switches", "wires", "MCB", "electrical supplies", "New Delhi"],
     type: "website",
-    image: "/hero-shop.jpg"
+    image: "/hero-shop.jpg",
+    canonicalPath: '/',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'New Delhi Electricals',
+      url: 'https://www.newdelhielectricals.com/',
+      telephone: '+919654102758',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '30 A Corner Market, Malviya Nagar',
+        addressLocality: 'New Delhi',
+        postalCode: '110017',
+        addressCountry: 'IN',
+      },
+    },
   },
   
   products: {
     title: "Products - New Delhi Electricals",
     description: "Browse our extensive catalog of electrical components, switches, MCBs, wires, cables, and more. Quality products from trusted brands.",
     keywords: ["electrical products", "switches", "MCB", "wires", "cables", "electrical catalog"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/products'
   },
   
   services: {
     title: "Services - New Delhi Electricals",
     description: "Professional electrical services including bulk ordering, technical consultation, installation support, warranty services, and custom solutions.",
     keywords: ["electrical services", "bulk ordering", "technical consultation", "installation support"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/services'
   },
   
   contact: {
     title: "Contact Us - New Delhi Electricals",
     description: "Get in touch with New Delhi Electricals for inquiries, quotes, and support. We're here to help with all your electrical component needs.",
     keywords: ["contact", "inquiry", "quote", "support", "electrical supplier"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/contact'
   },
   
   about: {
     title: "About Us - New Delhi Electricals",
     description: "Learn about New Delhi Electricals, your trusted partner for quality electrical components and supplies. Serving customers with excellence since years.",
     keywords: ["about", "company", "electrical supplier", "New Delhi"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/about'
   },
   
   faq: {
     title: "FAQ - Frequently Asked Questions | New Delhi Electricals",
     description: "Find answers to common questions about ordering, shipping, returns, technical specifications, and more at New Delhi Electricals.",
     keywords: ["FAQ", "questions", "help", "support", "ordering", "shipping"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/faq'
   },
   
   categories: {
     title: "Categories - Browse by Category | New Delhi Electricals",
     description: "Explore our product categories including switches, MCBs, wires, cables, lighting, fans, and industrial equipment.",
     keywords: ["categories", "product categories", "electrical categories"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/categories'
   },
   
   brands: {
     title: "Brands - Shop by Brand | New Delhi Electricals",
     description: "Shop electrical products from top brands. We carry a wide selection of trusted manufacturers and premium brands.",
     keywords: ["brands", "manufacturers", "electrical brands"],
-    type: "website"
+    type: "website",
+    canonicalPath: '/brands'
   },
   
   cart: {
@@ -121,16 +143,7 @@ function getSiteUrl(): string {
     return envUrl;
   }
   
-  // In production, use the actual domain
-  if (typeof window !== 'undefined') {
-    const hostname = window.location.hostname;
-    if (hostname === 'www.newdelhielectricals.com' || hostname === 'newdelhielectricals.com') {
-      return 'https://www.newdelhielectricals.com';
-    }
-  }
-  
-  // Fallback for development
-  return 'http://localhost:5173';
+  return 'https://www.newdelhielectricals.com';
 }
 
 /**
@@ -230,6 +243,55 @@ export function getBrandSEO(brandName: string, productCount?: number): SEOMetada
         { '@type': 'ListItem', position: 3, name: brandName },
       ],
     },
+  };
+}
+
+/**
+ * Generate dynamic SEO metadata for a brand x category commercial hub. The hub copy is
+ * authored per page in commercialHubs.ts; this only assembles the shared canonical and
+ * structured-data model so SSR and browser hydration emit the same head.
+ */
+export function getHubSEO(
+  hub: { brandSlug: string; brandName: string; slug: string; categoryName: string; heading: string; title: string; description: string },
+  products: Array<{ name: string; urlPath?: string; brandSlug?: string; slug?: string }> = [],
+): SEOMetadata {
+  const siteUrl = getSiteUrl();
+  const canonicalPath = `/brand/${hub.brandSlug}/${hub.slug}`;
+  const canonical = `${siteUrl}${canonicalPath}`;
+  const structuredData: Record<string, unknown>[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+        { '@type': 'ListItem', position: 2, name: 'Brands', item: `${siteUrl}/brands` },
+        { '@type': 'ListItem', position: 3, name: hub.brandName, item: `${siteUrl}/brand/${hub.brandSlug}` },
+        { '@type': 'ListItem', position: 4, name: hub.categoryName, item: canonical },
+      ],
+    },
+  ];
+  if (products.length) {
+    // The page is the product list this describes; no offers or availability are claimed.
+    structuredData.push({
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: hub.heading,
+      url: canonical,
+      numberOfItems: products.length,
+      itemListElement: products.map((product, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: product.name,
+        url: `${siteUrl}${product.urlPath || `/${product.brandSlug}/${product.slug}`}`,
+      })),
+    });
+  }
+  return {
+    title: hub.title,
+    description: hub.description,
+    type: 'website',
+    canonicalPath,
+    structuredData,
   };
 }
 

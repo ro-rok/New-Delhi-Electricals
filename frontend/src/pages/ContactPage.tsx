@@ -144,6 +144,7 @@ const ContactPageContent = () => {
         title="Contact Us - New Delhi Electricals"
         description="Get in touch with New Delhi Electricals for inquiries, quotes, and support. We're here to help with all your electrical needs."
         type="website"
+        canonicalPath="/contact"
       />
 
       {/* Hero Section */}

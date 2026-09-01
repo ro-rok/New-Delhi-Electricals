@@ -1,31 +1,26 @@
-# Pre-deployment Validation
+# Pre-Deployment Validation
 
-Date: 2026-08-29 (Asia/Calcutta)
+## Decision
 
-## Release decision
+GO
 
-**LOCAL PASS — DO NOT DEPLOY**
+## Release Recommendation
 
-Base commit evaluated: `a94f126da1afc4bc5279759e579ed119f998531a` on `main`, with the local SSR recovery changes uncommitted.
+SAFE TO DEPLOY TO PREVIEW
 
-## Required local checks
+## Summary
 
-| Check | Result | Evidence |
-| --- | --- | --- |
-| `git diff --check` | Pass | No whitespace errors reported. |
-| `npm run build` | Pass | React client bundle, SSR bundle and production-API prerender completed. |
-| `npm test` | Pass | 1,936 canonical sitemap routes passed validation. |
-| `npm run test:browser` | Pass | 5 representative hydration/parity tests passed. |
+The React prerender/hydration implementation has passed browser validation for the homepage, representative category and brand pages, and Havells/Finolex product pages. The production build uses the catalogue API and produces 1,972 indexable routes. Static SEO validation passed for all 1,972 routes and the focused Playwright suite passed 7/7 tests.
 
-## P0 production-safety blockers
+The browser suite verified JavaScript-off content, in-place hydration, H1/main-content/metadata/schema parity, no hydration warnings, no root replacement, stable initial product identities, one canonical/title/description, and key navigation/cart/mobile/WhatsApp paths. Details and screenshots: [browser-validation.md](browser-validation.md).
 
-1. No deployment authority was provided; this validation is local only.
-2. Functional cart/variant/mobile-navigation smoke coverage and measured CLS remain P1 before a production release.
+## Preview Requirements
 
-## Deployment configuration observed
+This is deliberately not a production recommendation. The next deployment must be a Vercel preview, followed by verification of:
 
-- Vercel configuration files: repository-root `vercel.json` and `frontend/vercel.json`.
-- Git remote is GitHub `origin`; no local Vercel project metadata or Vercel CLI was available, so no verified Vercel project root/build-output setting or Production environment override state could be established.
-- Local production-environment variable names: `VITE_API_BASE_URL`, `VITE_SITE_URL`. Values are intentionally not recorded here.
+- clean URL selection, 404s, redirects, and headers;
+- real production-origin CORS behaviour;
+- actual Vercel Analytics custom-event ingestion and duplicate-event counts;
+- preview CLS/LCP and CDN behaviour.
 
-No deployment was triggered, no Preview was created, and no production endpoints were revalidated against this unapproved checkout.
+No production deployment was made and no commercial SEO work was started.

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useSEOCollector } from '@/lib/seoCollector';
 
 export interface SEOHeadProps {
   title: string;
@@ -25,6 +26,11 @@ export function SEOHead({
   canonicalPath,
   structuredData,
 }: SEOHeadProps): null {
+  const collector = useSEOCollector();
+  // The server entry collects this exact model into <head>; the browser effect
+  // below keeps it current for client-side navigation.
+  collector?.set({ title, description, image, url, type, robots, canonicalPath, structuredData });
+
   useEffect(() => {
     // Set document title
     document.title = title;

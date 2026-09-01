@@ -194,6 +194,7 @@ const FAQPageContent = () => {
         title="FAQ - Frequently Asked Questions | New Delhi Electricals"
         description="Find answers to common questions about ordering, shipping, returns, warranties, technical specifications, and payment methods at New Delhi Electricals."
         type="website"
+        canonicalPath="/faq"
       />
       
       <Header />

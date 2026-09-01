@@ -19,11 +19,14 @@ import { getColorHex } from '@/lib/colors';
 import { SEOHead } from '@/components/SEOHead';
 import { getProductSEO } from '@/lib/seo';
 import { ProductImagePlaceholder } from '@/components/ui/ProductImagePlaceholder';
+import { useInitialRouteData } from '@/lib/initialRouteData';
 
 const ProductSlugPage = () => {
   const { brand, slug } = useParams<{ brand?: string; slug?: string; product_family?: string }>();
   const navigate = useNavigate();
   const location = useLocation();
+  const initialData = useInitialRouteData();
+  const hasInitialData = initialData?.pathname === location.pathname && initialData.product !== undefined;
   const {
     addToRecentlyViewed,
     trackProductView,
@@ -36,17 +39,18 @@ const ProductSlugPage = () => {
     isInCart
   } = useApp();
 
-  const [product, setProduct] = useState<Product | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [product, setProduct] = useState<Product | null>(() => hasInitialData ? initialData?.product ?? null : null);
+  const [loading, setLoading] = useState(!hasInitialData);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [similarProducts, setSimilarProducts] = useState<Product[]>([]);
+  const [similarProducts, setSimilarProducts] = useState<Product[]>(() => hasInitialData ? initialData?.similarProducts ?? [] : []);
   const [imageError, setImageError] = useState(false);
   const [copiedSku, setCopiedSku] = useState(false);
-  const [moduleVariants, setModuleVariants] = useState<Product[]>([]);
-  const [colorVariants, setColorVariants] = useState<Product[]>([]);
-  const [variantProducts, setVariantProducts] = useState<Record<string, Product>>({});
+  const [moduleVariants, setModuleVariants] = useState<Product[]>(() => hasInitialData ? initialData?.moduleVariants ?? [] : []);
+  const [colorVariants, setColorVariants] = useState<Product[]>(() => hasInitialData ? initialData?.colorVariants ?? [] : []);
+  const [variantProducts, setVariantProducts] = useState<Record<string, Product>>(() => hasInitialData ? initialData?.variantProducts ?? {} : {});
 
   useEffect(() => {
+    if (hasInitialData) return;
     // Scroll to top when product detail page opens
     window.scrollTo({ top: 0, behavior: 'smooth' });
     
@@ -80,9 +84,10 @@ const ProductSlugPage = () => {
       }
     };
     fetchProduct();
-  }, [brand, slug, location.key]);
+  }, [brand, slug, location.key, hasInitialData]);
 
   useEffect(() => {
+    if (hasInitialData) return;
     if (product) {
       addToRecentlyViewed(product.id);
       trackProductView(product.id, product.name, product.brand, product.category);
@@ -90,6 +95,11 @@ const ProductSlugPage = () => {
   }, [product, addToRecentlyViewed, trackProductView]);
 
   useEffect(() => {
+    // The prerenderer serializes the selected variants. Fetching them again
+    // immediately can replace a complete initial variant state with a partial
+    // API response, causing a post-hydration content change.
+    if (hasInitialData) return;
+
     const fetchVariants = async () => {
       if (!product) {
         setModuleVariants([]);
@@ -209,7 +219,7 @@ const ProductSlugPage = () => {
     };
 
     fetchVariants();
-  }, [product]);
+  }, [product, hasInitialData]);
 
   const productImages = useMemo(() => {
     if (!product) return [];

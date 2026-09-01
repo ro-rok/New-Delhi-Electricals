@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFab from '@/components/WhatsAppFab';
@@ -8,10 +8,17 @@ import { LoadingSpinner } from '@/components/LoadingSpinner';
 import { CommercialHubView } from '@/components/commercial/CommercialHubView';
 import { SEOHead } from '@/components/SEOHead';
 import { getProductsByBrand } from '@/api/products';
-import { findHub, hubPath, selectHubProducts } from '@/lib/commercialHubs';
-import { getRouteMetadata } from '@/lib/routeData';
+import { findHub, selectHubProducts } from '@/lib/commercialHubs';
+import { getHubSEO } from '@/lib/seo';
 import { useApp } from '@/contexts/AppContext';
+import { useInitialRouteData } from '@/lib/initialRouteData';
 import type { Product } from '@/types/product';
+
+/** Deterministic order so the prerendered list and the client fetch hydrate byte-stable. */
+function orderedHubProducts(hub: ReturnType<typeof findHub>, items: Product[]): Product[] {
+  if (!hub) return [];
+  return selectHubProducts(hub, items).slice().sort((a, b) => a.name.localeCompare(b.name));
+}
 
 /**
  * Client route for a brand x category commercial hub. The prerendered document renders the
@@ -19,21 +26,26 @@ import type { Product } from '@/types/product';
  */
 const CommercialHubPage = () => {
   const { slug, hub: hubSlug } = useParams();
+  const location = useLocation();
   const { trackPageView } = useApp();
   const hub = findHub(slug, hubSlug);
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
+  const initialData = useInitialRouteData();
+  const hasInitialData = Boolean(hub)
+    && initialData?.pathname === location.pathname
+    && Array.isArray(initialData?.products);
+  const [products, setProducts] = useState<Product[]>(() => hasInitialData ? initialData?.products ?? [] : []);
+  const [loading, setLoading] = useState(!hasInitialData);
 
   useEffect(() => {
     if (!hub) return;
     let cancelled = false;
-    setLoading(true);
+    if (!hasInitialData) setLoading(true);
     getProductsByBrand(hub.brandName)
-      .then(items => { if (!cancelled) setProducts(selectHubProducts(hub, items)); })
-      .catch(() => { if (!cancelled) setProducts([]); })
+      .then(items => { if (!cancelled) setProducts(orderedHubProducts(hub, items)); })
+      .catch(() => { if (!cancelled && !hasInitialData) setProducts([]); })
       .finally(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };
-  }, [hub]);
+  }, [hub, hasInitialData]);
 
   useEffect(() => {
     if (hub) trackPageView(`hub-${hub.brandSlug}-${hub.slug}`);
@@ -41,17 +53,9 @@ const CommercialHubPage = () => {
 
   if (!hub) return <NotFound />;
 
-  const metadata = getRouteMetadata({
-    kind: 'hub', path: hubPath(hub), title: hub.title, description: hub.description,
-    heading: hub.heading, hub: { brandSlug: hub.brandSlug, slug: hub.slug }, products,
-  });
-
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead
-        title={hub.title} description={hub.description} canonicalPath={hubPath(hub)}
-        structuredData={metadata.schema}
-      />
+      <SEOHead {...getHubSEO(hub, products)} />
       <Header />
       <main className="container mx-auto max-w-7xl px-4 pt-24 pb-16">
         {loading && !products.length

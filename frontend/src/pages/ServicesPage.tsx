@@ -115,6 +115,7 @@ const ServicesPageContent = () => {
         title="Services - New Delhi Electricals"
         description="Professional electrical services including bulk ordering, technical consultation, installation support, warranty assistance, and custom solutions for your projects."
         type="website"
+        canonicalPath="/services"
       />
       
       <Header />

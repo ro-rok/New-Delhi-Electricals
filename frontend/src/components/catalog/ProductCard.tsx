@@ -23,7 +23,7 @@ const badgeConfig = {
 };
 
 const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardProps) => {
-  const { toggleShortlist, isInShortlist } = useApp();
+  const { toggleShortlist, isInShortlist, trackWhatsAppClick } = useApp();
   const heartBtnRef = useMagneticEffect(0.25);
 
   const handleShortlist = (e: React.MouseEvent) => {
@@ -49,6 +49,7 @@ const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardPro
   const handleWhatsApp = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    trackWhatsAppClick(product.id, product.name);
     const msg = encodeURIComponent(`Hi, I'm interested in:\n\n*${product.name}*\nSKU: ${product.sku}\nBrand: ${product.brand}\nPrice: ₹${finalPrice.toLocaleString()} (incl. 18% GST)\n\nPlease share availability and best price.`);
     window.open(`https://wa.me/919654102758?text=${msg}`, '_blank');
   };
@@ -91,7 +92,7 @@ const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardPro
             {/* Quick Actions */}
             <div className="absolute bottom-3 right-3 z-10 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-all duration-200 translate-y-2 group-hover:translate-y-0">
               <Button
-                ref={heartBtnRef as any}
+                ref={heartBtnRef}
                 variant="secondary"
                 size="icon"
                 className={cn(
