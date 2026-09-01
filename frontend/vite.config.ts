@@ -46,11 +46,21 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
     // Disable source maps in production
     sourcemap: mode === "development",
     
-    // Configure code splitting
-    rollupOptions: !isSsrBuild ? {
-      output: {
+    // Configure code splitting.
+    //
+    // assetFileNames MUST match between the client and SSR builds. The
+    // prerendered HTML is produced by the SSR bundle, so if only the client
+    // build carried this pattern the SSR bundle emitted `/assets/foo-HASH.jpg`
+    // while the client actually wrote `/assets/jpg/foo-HASH.jpg` — same file,
+    // same hash, wrong directory — and every statically-imported image 404'd
+    // on the homepage and brand pages.
+    rollupOptions: {
+      output: isSsrBuild ? {
+        entryFileNames: "[name].js",
+        assetFileNames: "assets/[ext]/[name]-[hash].[ext]",
+      } : {
         // Manual chunks for better code splitting
-        ...(isSsrBuild ? {} : { manualChunks: {
+        ...({ manualChunks: {
           // Vendor chunks
           "react-vendor": ["react", "react-dom", "react-router-dom"],
           "ui-vendor": [
@@ -74,10 +84,10 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
         } }),
         // Optimize chunk file names
         chunkFileNames: "assets/js/[name]-[hash].js",
-        entryFileNames: isSsrBuild ? "[name].js" : "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
         assetFileNames: "assets/[ext]/[name]-[hash].[ext]",
       },
-    } : undefined,
+    },
     
     // Optimize chunk size warnings
     chunkSizeWarningLimit: 1000,
