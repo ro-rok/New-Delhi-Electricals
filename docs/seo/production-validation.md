@@ -219,3 +219,151 @@ None.
 - Product data hook probes an always-404 `/api/products/brand/{brand}/{slug}` before falling back to `/api/products/slug/{slug}` — remove the dead probe.
 - Consider sectioning or lazy-rendering the 200+-item Anchor/Havells switch hubs if field CWV data later shows LCP/TBT pressure; keep all anchors crawlable.
 - `/brand/finolex` parent title is a generic "<brand> – N Products" template.
+
+---
+
+# Production Validation — Prompt 3.5 (Performance Cleanup)
+
+Validation date: 2026-09-01 (Asia/Calcutta). This section records the
+performance cleanup deployed on top of Prompt 3. Full cause analysis and
+implementation detail: [performance-optimization.md](performance-optimization.md).
+
+## Deployment identity
+
+- Baseline (Prompt 3): `6a15881`.
+- Delivered: `c4ba08a` (Cloudinary delivery + GSAP unbundling + hero video),
+  `a374bf3` (SSR/client asset-path alignment).
+- Pushed to `main`; Vercel Production (not Preview). Deployment confirmed by
+  matching the live client asset hash `index-DXQ7ASFL.js` and the live
+  `/assets/jpg/hero-premium-CqHmq5bG.jpg` path against the local build.
+- Catalogue source: production API, `https://new-delhi-electricals.onrender.com`.
+
+## Local release gate
+
+| Gate | Result |
+| --- | --- |
+| `npm run build` | passed; React SSR SEO generation used the production API |
+| `npm run test:seo` | passed — **1,972 routes checked, 1,972 passed, 0 failed, 0 warnings** |
+| `npm run test:browser` | 14/15 — the single failure is pre-existing (see below) |
+| `npx tsc --noEmit -p tsconfig.app.json` | 29 errors, **identical to baseline**, 0 new |
+| `git diff --check` | clean |
+
+The `hub-anchor-switches` browser-test failure was reproduced on unmodified
+`6a15881` before any change was made. Two Anchor SKUs differ only by a `-b`
+suffix and sort non-deterministically between the build-time prerender snapshot
+and the live API. It is a catalogue data tie, not a regression.
+
+## Mobile Lighthouse — production
+
+Before = live production at `6a15881`, single run. After = live production at
+`a374bf3`, **median of 3** (an initial single After run was discarded as machine
+noise; run-to-run TBT spread on this host reached 1,500 ms). The Before figures
+match the independently reported Prompt 3 measurements closely, so they are used
+as recorded. SEO scored **100 on every route, before and after**.
+
+| Route | Perf | LCP | CLS | TBT | Speed Index | Bytes |
+| --- | --- | --- | --- | --- | --- | --- |
+| `/` | 70 -> 70 | 4.62 -> 4.69 s | 0 -> 0 | 88 -> 93 ms | 6.04 -> 6.00 s | 15.19 -> 11.93 MB |
+| `/category/wires-cables` | **44 -> 69** | **29.34 -> 4.54 s** | 0 -> 0 | **795 -> 225 ms** | 5.51 -> 5.16 s | **5.27 -> 0.42 MB** |
+| `/category/circuit-protection` | **58 -> 66** | 5.01 -> 4.54 s | 0 -> 0 | **481 -> 315 ms** | 5.38 -> 5.22 s | 0.55 -> 0.43 MB |
+| `/brand/finolex` | 72 -> 72 | 4.55 -> 4.53 s | 0 -> 0 | 24 -> 0 ms | 5.25 -> 5.19 s | 0.45 -> 0.57 MB |
+| `/brand/polycab/wires-cables` | 75 -> 75 | 4.39 -> 4.39 s | 0 -> 0 | 0 -> 0 ms | 4.09 -> 3.94 s | 0.44 -> 0.41 MB |
+| `/brand/anchor/switches-sockets` | 74 -> 74 | 4.34 -> 4.39 s | 0.071 -> 0 | 70 -> 0 ms | 4.19 -> 4.93 s | 0.47 -> 0.44 MB |
+| `/finolex/finolex-fr-1-5-sqmm-90m-house-wire` | 73 -> 73 | 4.54 -> 4.39 s | 0.002 -> 0 | 1 -> 0 ms | 4.37 -> 5.27 s | 0.44 -> 0.41 MB |
+
+The `/category/wires-cables` 29 s LCP is resolved. Routes that were already
+healthy are unchanged or marginally better; none regressed. `/brand/finolex`
+byte weight rose because four hero images that were 404ing now load.
+
+## Image delivery — live
+
+- `/category/wires-cables` image transfer **4,939.4 KB -> 3.6 KB**; largest image
+  **3,210.8 KB -> 2.4 KB**.
+- All 243 unique Cloudinary catalogue images, expanded across every width the
+  helper can emit: **1,944 derivative URLs, 0 non-200**.
+- Live DOM check on `/category/wires-cables`, `/category/circuit-protection`,
+  `/category/plates`, a product page and `/`: **0 broken images, 0 image 4xx/5xx**.
+- Transforms confirmed live: category cards `f_auto,q_auto,w_480,c_limit`,
+  product gallery `w_960` with `fetchpriority="high"`, similar products `w_640`
+  with `loading="lazy"`.
+- Non-Cloudinary catalogue hosts (`smartshop.lk-ea.com`, `jayceeonline.com`,
+  `cdn.moglix.com`, `m.media-amazon.com`, `havells.com`) and backend-relative
+  paths are left untouched by the helper, as are signed and private URLs.
+- The five previously 404ing `/assets/*.jpg` hero images now resolve.
+
+## Animation bundle — live
+
+`animation-vendor` 186.48 -> 116.20 KB (66.13 -> 38.48 KB gzip). GSAP core is now
+a 69.94 KB async-only chunk. Eager script tags on live production: 8 on `/` (the
+only route that uses GSAP), 6 on `/category/wires-cables`,
+`/category/circuit-protection`, `/brand/finolex` and
+`/brand/polycab/wires-cables` — none of which now load GSAP or ScrollTrigger.
+
+## SSR, hydration and navigation — live
+
+- HTTP 200 on `/`, `/category/wires-cables`, `/category/circuit-protection`,
+  `/brand/finolex`, all four commercial hubs, a product page, `/sitemap.xml`,
+  `/robots.txt`.
+- Browser check on `/category/wires-cables`: **0 hydration warnings, 0 root
+  replacements, 0 page errors**.
+- Product navigation works: a grid anchor on `/category/wires-cables` navigates
+  to `/finolex/finolex-fr-0-75-sqmm-300m-house-wire`, which renders its own H1,
+  exactly 1 canonical and `Product` + `BreadcrumbList` schema.
+- Prerendered `/category/wires-cables` still ships 20 SSR product cards with
+  crawlable `<a href>` anchors and no JavaScript required.
+
+## Cinematic homepage — unchanged experience
+
+Verified across three profiles on the built output: desktop keeps the 1440p
+all-intra scrub (ScrollTrigger pinned, `preload` re-armed to `auto`, preloader
+dismissed); mobile autoplays the 720p loop; reduced motion paints the same
+single still frame and loads no GSAP at all. 0 page errors on all three. Mobile
+and reduced motion now issue exactly one `.mp4` request instead of fetching and
+discarding the 1440p master.
+
+## Unaffected
+
+- **CORS**: production API returns
+  `access-control-allow-origin: https://www.newdelhielectricals.com`,
+  `access-control-allow-credentials: true`, `Vary: Origin` — unchanged.
+- **Sitemap**: 1,972 routes, unchanged; no catalogue change was made.
+- **Schema**: unchanged — `Product` + `BreadcrumbList` on products,
+  `BreadcrumbList` + `ItemList` on hubs.
+- **Analytics**: no tracking code touched; conversion and WhatsApp-handoff
+  browser tests pass.
+
+## Remaining issues — Prompt 3.5
+
+### P0
+
+None.
+
+### P1
+
+- **Render-blocking resources are now the entire LCP cost.** LCP phase breakdown
+  shows load delay 0 ms and load time 0 ms — images are off the critical path —
+  with 3,750-3,926 ms of pure render delay. The Google Fonts stylesheet alone
+  accounts for 844-883 ms as a cross-origin blocking request; `index-*.css` adds
+  150-156 ms with ~17 KB unused. Self-hosting or preconnecting the font and
+  splitting critical CSS is the highest-value next action.
+- **`framer-motion` is statically imported by ~45 components**, so
+  `animation-vendor` (116 KB / 38 KB gz) stays eager on every route. Route-scoping
+  it is a real refactor, deliberately out of scope here.
+- Pre-existing: repair the 29 TypeScript app errors and add a typecheck release
+  gate.
+
+### P2
+
+- Homepage mobile video is still 11.48 MB and is the homepage LCP element.
+  Re-encoding, a poster frame, or a save-data gate would each help but alter the
+  owner's visual design; documented rather than changed. `public/` also ships two
+  unreferenced encodes (~28 MB of deploy weight, no user transfer).
+- Pre-existing `hub-anchor-switches` browser-test failure caused by two Anchor
+  SKUs that differ only by a `-b` suffix.
+- Carried over from Prompt 3: dead `/api/products/brand/{brand}/{slug}` probe;
+  generic `/brand/finolex` parent title.
+
+### Closed by this change set
+
+- ~~`/category/wires-cables` Cloudinary images unoptimised~~ — resolved.
+- ~~`animation-vendor` (GSAP) paid on category/brand/hub routes~~ — resolved.
