@@ -52,13 +52,15 @@ Do not create Lauritz Knudsen × category pages yet without measured query deman
 
 ## Days 16–20 — Content that assists commercial rankings
 Publish first:
-1. Best wire for house wiring
-2. MCB vs MCCB
-3. How to choose MCB for home
-4. RCCB explained
-5. How to identify original Finolex wire
+1. Best wire for house wiring — **LIVE** `/guides/best-wire-for-house-wiring` → `/category/wires-cables`
+2. MCB vs MCCB — **LIVE** `/guides/mcb-vs-mccb` → `/category/circuit-protection`
+3. How to choose MCB for home — **LIVE** `/guides/how-to-choose-mcb-for-home` → `/category/circuit-protection`
+4. RCCB explained — **LIVE** `/guides/rccb-explained` → `/category/circuit-protection`
+5. How to identify original Finolex wire — **LIVE** `/guides/genuine-finolex-wire` → `/brand/finolex/wires-cables`
 
-Each guide should link into one primary commercial cluster.
+Each guide should link into one primary commercial cluster. **All five do, and all five
+commercial parents link back.** Index at `/guides`. No sixth guide is planned in this sprint —
+Prompt 4 is closed, and the next content decision waits on GSC evidence (Days 28–30).
 
 ## Days 21–24 — Location decision
 - Homepage remains Delhi/Delhi NCR hub.
@@ -96,3 +98,29 @@ Secondary:
 - indexed quality pages, not raw indexed-page count
 
 The 1,000 visits/month objective remains a target, not a guarantee.
+
+---
+
+## Off-page and measurement — operational, not engineering (added 2026-09-01, Prompt 4.1)
+
+These items were being tracked alongside the build work, which made Prompt 4 look incomplete when
+it was not. **None of them is a code change, and none of them blocks a release.** They are moved
+here as 30-day execution work: still high priority, but owner- and account-driven rather than
+repository-driven. Nothing in the codebase is waiting on any of them.
+
+| # | Item | Owner action | Priority | Blocks code? |
+|---|---|---|---|---|
+| 1 | Manufacturer directory outreach | Ask Havells / Polycab / Finolex / Anchor / Lauritz Knudsen territory contacts to list us in their official retailer directories, linked to the matching brand hub. `partners.havells.com` already lists a competing Corner Market retailer, so the catchment accepts listings. | P0 operational | No |
+| 2 | Sulekha listing | A live listing for New Delhi Electricals, Corner Market, Malviya Nagar exists with **no phone and no website URL**. Claim it, add the phone and the site, correct the address to 30 A. | P0 operational | No |
+| 3 | Tata Nexarc listing | Claim / create the business listing. | P1 operational | No |
+| 4 | Google Business Profile audit | NAP byte-identical to *New Delhi Electricals · 30 A Corner Market, Malviya Nagar, New Delhi 110017*, categories, hours, products, photos. | P0 operational | No |
+| 5 | Search Console connection | Connect the property and export query/page data. **This is the real gate on Days 28–30** and on every "choose batch 2 from actual impressions" decision in this document. | P0 operational | No |
+| 6 | Backlink Gap export | Pull the competitor gap export to prioritise link targets beyond the manufacturer directories. | P1 operational | No |
+
+Two consequences worth stating plainly, so they are not rediscovered later:
+
+- **Measurement is the bottleneck, not content.** Days 28–30, the batch-2 hub decision, the
+  cannibalisation question and any sixth guide all depend on GSC data that does not exist yet.
+  Publishing more pages before that data arrives is guessing.
+- **NAP consistency gates the local work.** Items 2 and 4 must agree byte-for-byte before the
+  directory outreach in item 1 is worth doing, or the citations will conflict with each other.

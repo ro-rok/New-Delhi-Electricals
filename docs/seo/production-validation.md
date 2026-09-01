@@ -468,3 +468,147 @@ None.
 
 - ~~Google Fonts stylesheet blocking render for 844-883 ms~~ — resolved.
 - ~~Hashed build assets served with `max-age=0, must-revalidate`~~ — resolved.
+
+---
+
+# Prompt 4 — Production release + live validation
+
+**Deployed 2026-09-01** to Vercel Production via `main`. No preview deployment was created.
+
+| | |
+|---|---|
+| Commits | `0a5925e` — /guides content layer, Anchor ordering fix, editorial closure, trust claims<br>`7e16f68` — browser-validation baselines |
+| Deployed HEAD | `7e16f688382e8b403966518585912c7ed0e208b7` |
+| Pushed | `18831dc..7e16f68  main -> main` |
+| Working tree at release | clean; `dist/` untracked as per policy |
+| Route total | 1,972 → **1,978** (1,950 products, 6 categories, 5 brands, 4 hubs, 5 guides + index) |
+
+## Local release gate
+
+| Gate | Result |
+|---|---|
+| `npm ci` | clean |
+| `npm run build` | pass — 1,978 indexable routes from the **production** catalogue API (no fallback) |
+| `npm run test:seo` | **1,978/1,978 pass, 0 failures, 0 warnings** |
+| `npm run test:browser` | **32/32 pass** — was 31 pass / 1 fail |
+| `npx tsc --noEmit` | **0 errors** (the Prompt 3.5 note of "29 pre-existing TypeScript errors" is stale) |
+| `git diff --check` | pass — CRLF advisories only |
+
+## Production HTTP
+
+| URL | HTTP | Robots | Canonical |
+|---|---|---|---|
+| `/guides` | 200 | index, follow | self |
+| `/guides/best-wire-for-house-wiring` | 200 | index, follow | self |
+| `/guides/genuine-finolex-wire` | 200 | index, follow | self |
+| `/guides/mcb-vs-mccb` | 200 | index, follow | self |
+| `/guides/how-to-choose-mcb-for-home` | 200 | index, follow | self |
+| `/guides/rccb-explained` | 200 | index, follow | self |
+| `/guides/not-a-real-guide` | **404** | **noindex, nofollow** | `/404` |
+| `/guides/best-wire-for-house-wiring/` | 308 → non-slash canonical | — | — |
+
+## Production raw SSR (JavaScript disabled)
+
+Every guide is a complete crawlable document before any script runs.
+
+| URL | H1 | H2 | Words | Schema | Commercial links | Placeholders | FAQPage |
+|---|---|---|---|---|---|---|---|
+| `/guides` | 1 | 3 | 395 | BreadcrumbList + ItemList | 3 | none | none |
+| `/guides/best-wire-for-house-wiring` | 1 | 11 | 2,762 | Article + BreadcrumbList | 3 | none | none |
+| `/guides/genuine-finolex-wire` | 1 | 11 | 2,394 | Article + BreadcrumbList | 2 | none | none |
+| `/guides/mcb-vs-mccb` | 1 | 11 | 2,040 | Article + BreadcrumbList | 1 | none | none |
+| `/guides/how-to-choose-mcb-for-home` | 1 | 11 | 2,421 | Article + BreadcrumbList | 2 | none | none |
+| `/guides/rccb-explained` | 1 | 11 | 2,396 | Article + BreadcrumbList | 1 | none | none |
+
+`Article.author` is `Organization` — no human author is fabricated. `datePublished` and
+`dateModified` are 2026-09-01, the real authoring date. No `FAQPage` anywhere.
+
+The resolved editorial copy was confirmed present in the live HTML: the Finolex "True Product
+Checker" description and the "scan only the external QR code" instruction, the RCCB no-type
+callout and its IS 12640-1 citation, and the reworded footer trust line. The strings
+`27 Years` / `27 years` / `3000+` return **zero matches** on the live homepage and `/about`.
+
+## Production hydration
+
+| Route | SSR products | Hydrated | Same set | Same **order** | Mismatches | Root replacements | Page errors | CLS |
+|---|---|---|---|---|---|---|---|---|
+| `/guides` | 0 | 0 | yes | identical | 0 | 0 | 0 | 0.0023 |
+| `/guides/best-wire-for-house-wiring` | 6 | 6 | yes | identical | 0 | 0 | 0 | 0.0010 |
+| `/guides/rccb-explained` | 7 | 7 | yes | identical | 0 | 0 | 0 | 0.0077 |
+| `/guides/genuine-finolex-wire` | 6 | 6 | yes | identical | 0 | 0 | 0 | 0.0083 |
+| **`/brand/anchor/switches-sockets`** | **162** | **162** | yes | **identical** | 0 | 0 | 0 | 0.0030 |
+
+The Anchor hub is the case that used to reorder. All 162 records now hydrate in byte-identical
+order in production. One title and one canonical survive hydration on every route; no
+`.seo-static-shell` and no root replacement anywhere.
+
+## Production sitemap
+
+`/sitemap.xml` — HTTP 200, `application/xml`, **1,978 URLs, 0 duplicates**. `/guides` and each
+of the five guides appear **exactly once**. Zero draft/placeholder-looking URLs. `robots.txt`
+points at it.
+
+## Guide performance — production
+
+Network profile of a guide route, measured live: **12 requests, ~130 KB**, of which
+**0 GSAP requests** (`window.gsap` absent; the `animation-vendor` chunk is framer-motion only,
+0 occurrences of `gsap`/`ScrollTrigger`), **0 video/media requests**, **0 images**, and
+**0 catalogue data requests**. The only two API calls are fire-and-forget
+`POST /api/tracking/event` analytics beacons — there is no catalogue fetch, no request loop and
+no fallback-data request.
+
+Lighthouse mobile, one clean same-session comparison run (guides vs pre-existing pages):
+
+| Page | Perf | **SEO** | TBT | LCP | **CLS** |
+|---|---|---|---|---|---|
+| `/guides/rccb-explained` (Prompt 4) | 87 | **100** | 130 ms | 3.1 s | **0.004** |
+| `/guides/best-wire-for-house-wiring` (Prompt 4) | 80 | **100** | 50 ms | 3.9 s | **0** |
+| `/brand/finolex/wires-cables` (Prompt 3) | 82 | 100 | 200 ms | 3.1 s | 0.092 |
+| `/category/circuit-protection` (Prompt 1–3) | 34 | 100 | 6,580 ms | 6.2 s | 0 |
+
+**SEO 100 on both guides. CLS ≤ 0.1 everywhere, and the guides are the best CLS on the site**
+(0–0.004 against the Prompt 3 hub's 0.092, which sits close to the threshold). No performance
+regression is attributable to Prompt 4 — the guides are the lightest and fastest page type here.
+
+> Reading note: earlier back-to-back Lighthouse runs reported TBT of 1,290–2,830 ms on
+> `/guides/rccb-explained`. That was local CPU contention from consecutive runs, not the page:
+> the same URL measures 130 ms TBT in the clean run above. Do not treat contended
+> single-run Lighthouse numbers on this machine as page characteristics.
+
+## Guide analytics — production
+
+Live CTA click on `/guides/genuine-finolex-wire`:
+
+- events dispatched: `whatsapp_click`, then `whatsapp_enquiry_start`
+- **`page_type: "guide"`** — not `product`. `/guides` classifies as `guides-index`.
+- **each event fires exactly once; no duplicates**
+- properties are `page_type`, `page_path`, `cta_location` (`guide_genuine-finolex-wire`).
+  **No PII** — no name, phone, email or free-text enquiry content is attached, and the
+  prefilled WhatsApp text is a product-category request only.
+- no new SEO event names were invented; this is the existing taxonomy.
+
+This proves application dispatch, as before. Vercel account-level ingestion remains unverified.
+
+## Remaining issues after Prompt 4
+
+### P0
+None. No release-blocking engineering item remains.
+
+### P1
+- `/category/circuit-protection` mobile Perf 34, TBT 6.58 s, LCP 6.2 s. **Pre-existing**
+  (Prompt 1–3 territory), not a Prompt 4 regression, and deliberately not reopened here.
+  It is now the slowest page on the site and the strongest performance candidate.
+- `/brand/finolex/wires-cables` CLS 0.092 — passes, but close to the 0.1 threshold. The
+  metric-matched font fallback already specified in the Prompt 3.5 notes would fix it.
+- `src/components/Hero.tsx` and `src/components/home/HeroSection.tsx` still contain the old
+  `27 Years of Trusted Service | 3000+ Happy Customers` wording. **Both are dead code** — no
+  route imports either, so nothing is published from them. Delete or reword before either is
+  ever revived.
+- The Prompt 3.5 note claiming "29 pre-existing TypeScript errors" is stale; `tsc --noEmit`
+  is clean. A typecheck gate in CI would keep it that way.
+
+### Operational, not engineering
+Manufacturer directory outreach, the Sulekha and Tata Nexarc listings, the GBP audit, the
+Search Console connection and the Backlink Gap export are tracked in
+`30-day-commercial-implementation-order.md` § "Off-page and measurement". None blocks code;
+**GSC is the real gate on all Days 28–30 measurement work.**
