@@ -23,6 +23,18 @@ Catalogue basis: production API `https://new-delhi-electricals.onrender.com/api/
 The internal-link and duplicate-title figures are emitted by the build itself
 (`dist/seo-build-report.json` → `internalLinks`) and enforced by `npm test`.
 
+## Production status (2026-09-01)
+
+Deployed to Vercel production in commit `fdb98a7` (on `origin/main` as an ancestor of merge `f98387f`, pushed alongside an unrelated video-hero feature). Live-validated 2026-09-01 — full evidence in `production-validation.md` § "Prompt 3 — Production release + live validation".
+
+- All four approved hubs return **HTTP 200**, indexable (`index, follow`), production canonical, unique title/description, one H1, real SSR product data, `BreadcrumbList` + accurate `ItemList`. Hydration on the live site: 0 mismatches, 0 root replacements, 0 page errors, CLS 0.
+- Hub → product live navigation (click / back / forward / add-to-cart / return) works on the real production API. Production CORS now allows the `www` origin.
+- Rejected URLs (`/brand/havells/wires-cables`, `/brand/havells/circuit-protection`, `/brand/havells/water-heaters`, `/category/wires-cables/house-wires`) and deferred `/gurgaon`, `/noida` all return 404 `noindex`; absent from the sitemap.
+- Route total is now **1,972** (was 1,940 at the 2026-08-31 build) — the live catalogue grew; orphan and duplicate-title gates still pass.
+- Internal links stay contextually scoped: each hub links only its own brand × category slice (8 / 16 / 162 / 212), 100 % on-brand; category pages ~20 curated links; no page carries the full catalogue; orphans 0.
+- Production mobile Lighthouse: new hubs Perf 69–75, LCP 2.9–4.6 s, CLS 0, TBT 0–590 ms — the healthiest pages measured. No performance regression is attributable to Prompt 3. `/category/wires-cables` is slow (Perf ~32) due to pre-existing ~5 MB unoptimised Cloudinary images and the video-hero animation bundle, not the hub/index work.
+- Hub WhatsApp analytics: `whatsapp_click` ×1 + `whatsapp_enquiry_start` ×1, no duplicates, no PII.
+
 ---
 
 ## Phase 2 — Live inventory gate

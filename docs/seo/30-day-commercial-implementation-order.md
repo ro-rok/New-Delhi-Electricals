@@ -7,6 +7,14 @@ This sprint order assumes technical deployment validation is either complete or 
 > remain deferred backlog with no page created. Days 25–27 product indexation: collisions confirmed
 > at 32, duplicate metadata fixed on 136 documents, orphans reduced from 1,752 to 0, no mass noindex.
 > Days 28–30 measurement is blocked on GSC. See `commercial-pages-implemented.md`.
+>
+> **Status 2026-09-01 (Prompt 3 production):** the four approved hubs are deployed to Vercel
+> production (commit `fdb98a7`) and live-validated — 200 / indexable / accurate schema, hydration
+> clean (0 errors, CLS 0), hub→product navigation and cart work on the real production API, CORS
+> passes, sitemap holds all four (route total now 1,972 after catalogue growth), rejected/deferred
+> URLs 404. Production mobile Lighthouse: hubs Perf 69–75, CLS 0, no regression attributable to
+> Prompt 3. Full evidence in `production-validation.md` § "Prompt 3 — Production release + live
+> validation". Prompt 4 not started.
 
 ## Days 1–3 — Existing-page quick wins
 1. Optimize `/brand/finolex` around `finolex dealers in delhi`; preserve authorised-dealer proof. **Done.**
