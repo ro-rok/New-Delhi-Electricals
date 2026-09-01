@@ -367,3 +367,104 @@ None.
 
 - ~~`/category/wires-cables` Cloudinary images unoptimised~~ — resolved.
 - ~~`animation-vendor` (GSAP) paid on category/brand/hub routes~~ — resolved.
+
+---
+
+# Production Validation — Prompt 3.6 (Font / Render-Blocking)
+
+Validation date: 2026-09-01 (Asia/Calcutta). Full detail:
+[font-optimization.md](font-optimization.md).
+
+## Deployment identity
+
+- Baseline: `bd2e0b2` (end of Prompt 3.5).
+- Delivered: `34c6d1a` (self-hosted Inter), `5bb3a04` + `e1793e7` (immutable
+  asset caching; `5bb3a04` edited the repo-root `vercel.json`, but the Vercel
+  Root Directory is `frontend`, so `e1793e7` applied it to the file actually
+  read).
+- Pushed to `main`; Vercel Production, not Preview. Confirmed live by the
+  deployed CSS hash `index-DudNHuSK.css` and by the immutable header appearing
+  on a fresh `/assets` path.
+
+## Local release gate
+
+| Gate | Result |
+| --- | --- |
+| `npm run build` | passed |
+| `npm run test:seo` | **1,972 routes, 1,972 passed, 0 failed, 0 warnings** |
+| `npm run test:browser` | 14/15 — the one failure is the known pre-existing `hub-anchor-switches` SKU sort tie |
+| `npx tsc --noEmit -p tsconfig.app.json` | 29 errors, **identical to baseline, 0 new** |
+| `git diff --check` | clean |
+
+## Font delivery — live
+
+- `fonts.googleapis.com` and `fonts.gstatic.com` appear **0 times** in any built
+  artifact: CSS, `index.html`, and all 1,972 prerendered routes.
+- Both self-hosted woff2 files return 200 on every route tested; **0 font 404s**.
+- Verified across 7 routes x desktop + mobile (14 combinations): Inter applied
+  (never stuck on fallback), ₹ renders, no missing glyphs, no FOIT.
+- Typography identical to the Google-hosted baseline, measured numerically at
+  every weight 200-700 (e.g. `/category/wires-cables`: 681.55 / 681.55 / 695.38
+  / 702.94 / 710.34 / 717.83 both before and after).
+- `@font-face` declarations: 42 -> 2.
+
+## Render-blocking — live
+
+`fonts.googleapis.com` is gone from the render-blocking audit. Estimated
+savings fell from 1,680 ms to 660-692 ms on `/category/wires-cables` and from
+1,450 ms to 685-710 ms on `/brand/polycab/wires-cables`. LCP render delay
+3,750 ms -> 2,523 ms (Polycab hub) and 3,926 ms -> 3,421 ms (wires-cables);
+FCP on wires-cables 3.96 s -> 2.89 s. LCP improved on every route measured, by
+0.32-1.09 s.
+
+TBT and Performance score were unreliable this session because of host
+contention (spreads such as 4867/1253/8591 ms on one route) and should not be
+read as regressions; see the caveat in font-optimization.md.
+
+## Caching — live
+
+All hashed `/assets` files (js, css, woff2, jpg) now return
+`public, max-age=31536000, immutable`. HTML, `sitemap.xml` and `robots.txt`
+correctly remain `public, max-age=0, must-revalidate`.
+
+## SSR, hydration, schema, analytics — live
+
+- HTTP 200 on `/`, both category routes, `/brand/finolex`, all four commercial
+  hubs, a product page, `/sitemap.xml`, `/robots.txt`.
+- Product navigation from a category grid works; destination renders its own H1,
+  exactly 1 canonical, and `Product` + `BreadcrumbList` schema.
+- **0 hydration warnings, 0 root replacements, 0 page errors.**
+- Sitemap unchanged at **1,972** `<loc>` entries.
+- Analytics untouched; `/_vercel/insights/script.js` returns 200.
+
+## Remaining issues — Prompt 3.6
+
+### P0
+
+None.
+
+### P1
+
+- **Font-swap CLS on commercial hubs**: `/brand/polycab/wires-cables` 0.158,
+  `/brand/anchor/switches-sockets` 0.071. Blocking all woff2 drives both to 0,
+  confirming `font-display: swap` reflow as the cause. Pre-existing, not
+  introduced here — the Anchor hub measured 0.071 in the Prompt 3.5 *before*
+  run on Google Fonts — but faster font arrival makes it land in the
+  measurement window more consistently. Remedy is a metric-matched fallback
+  face; the required `size-adjust` values are already measured (Arial 105.26 %,
+  Segoe UI 107.23 %, Roboto 114.42 %; Inter ascent 97, descent 24 at 100 px).
+- **Main CSS is now the only render blocker** (660-710 ms, 20.63 KB gzip,
+  ~18 KB unused). Needs route-level CSS splitting or critical CSS.
+- `framer-motion` static imports across ~45 components (deferred by Phase 7).
+- 29 pre-existing TypeScript errors; no typecheck gate.
+
+### P2
+
+- Homepage mobile video 11.48 MB and is the homepage LCP element.
+- Pre-existing `hub-anchor-switches` browser-test SKU sort tie.
+- `src/App.css` is dead Vite scaffold contributing 0 bytes; deletable.
+
+### Closed by this change set
+
+- ~~Google Fonts stylesheet blocking render for 844-883 ms~~ — resolved.
+- ~~Hashed build assets served with `max-age=0, must-revalidate`~~ — resolved.
