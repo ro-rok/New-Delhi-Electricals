@@ -2,11 +2,11 @@
   "config": {
     "argv": [
       "C:\\Program Files\\nodejs\\node.exe",
-      "D:\\Code\\NEW DELHI ELECTRICALS\\New-Delhi-Electricals\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "C:\\NDE\\New-Delhi-Electricals\\frontend\\node_modules\\@playwright\\test\\cli.js",
       "test"
     ],
-    "configFile": "D:\\Code\\NEW DELHI ELECTRICALS\\New-Delhi-Electricals\\frontend\\playwright.config.ts",
-    "rootDir": "D:/Code/NEW DELHI ELECTRICALS/New-Delhi-Electricals/frontend/tests",
+    "configFile": "C:\\NDE\\New-Delhi-Electricals\\frontend\\playwright.config.ts",
+    "rootDir": "C:/NDE/New-Delhi-Electricals/frontend/tests",
     "failOnFlakyTests": false,
     "forbidOnly": false,
     "fullyParallel": false,
@@ -16,17 +16,21 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {},
+    "metadata": {
+      "actualWorkers": 1
+    },
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "D:/Code/NEW DELHI ELECTRICALS/New-Delhi-Electricals/frontend/test-results",
+        "outputDir": "C:/NDE/New-Delhi-Electricals/frontend/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 1
+        },
         "id": "",
         "name": "",
-        "testDir": "D:/Code/NEW DELHI ELECTRICALS/New-Delhi-Electricals/frontend/tests",
+        "testDir": "C:/NDE/New-Delhi-Electricals/frontend/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -64,19 +68,563 @@
       "timeout": 15000
     }
   },
-  "suites": [],
-  "errors": [
+  "suites": [
     {
-      "message": "Error: Process from config.webServer was not able to start. Exit code: 1",
-      "stack": "Error: Process from config.webServer was not able to start. Exit code: 1"
+      "title": "seo-hydration.spec.ts",
+      "file": "seo-hydration.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "home: prerendered content hydrates in place",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:46:09.019Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-5cdc523f420b282bd1c0",
+          "file": "seo-hydration.spec.ts",
+          "line": 108,
+          "column": 3
+        },
+        {
+          "title": "category-switches-sockets: prerendered content hydrates in place",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7284,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:46:38.903Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-bebd235803fffc41cea5",
+          "file": "seo-hydration.spec.ts",
+          "line": 108,
+          "column": 3
+        },
+        {
+          "title": "brand-havells: prerendered content hydrates in place",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10441,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:46:46.239Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-2fec54b5d786e4518942",
+          "file": "seo-hydration.spec.ts",
+          "line": 108,
+          "column": 3
+        },
+        {
+          "title": "product-havells: prerendered content hydrates in place",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5945,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:46:56.721Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-60aaef2c660994c3f0a4",
+          "file": "seo-hydration.spec.ts",
+          "line": 108,
+          "column": 3
+        },
+        {
+          "title": "product-finolex: prerendered content hydrates in place",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6168,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:47:02.711Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-9a49a726fdeb11d97f1d",
+          "file": "seo-hydration.spec.ts",
+          "line": 108,
+          "column": 3
+        },
+        {
+          "title": "hub-polycab-wires: prerendered content hydrates in place",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6515,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:47:08.921Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-a03400c29368e89312b2",
+          "file": "seo-hydration.spec.ts",
+          "line": 108,
+          "column": 3
+        },
+        {
+          "title": "hub-finolex-wires: prerendered content hydrates in place",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7088,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:47:15.477Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-8b656adbc62299f80fcf",
+          "file": "seo-hydration.spec.ts",
+          "line": 108,
+          "column": 3
+        },
+        {
+          "title": "hub-anchor-switches: prerendered content hydrates in place",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 12804,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -16,7 +16,7 @@\u001b[39m\n\u001b[2m    \"/anchor/16a-dp-c-mini-mcb-gb\",\u001b[22m\n\u001b[2m    \"/anchor/16a-resettable-fuse-unit-240v-1-module\",\u001b[22m\n\u001b[2m    \"/anchor/16a-resettable-fuse-unit-240v-1-module-b\",\u001b[22m\n\u001b[2m    \"/anchor/16a-sp-c-mini-mcb\",\u001b[22m\n\u001b[2m    \"/anchor/16a-sp-c-mini-mcb-gb\",\u001b[22m\n\u001b[32m-   \"/anchor/16ax-1-way-switch-with-indicator-200w-sbl-load-1m-b\",\u001b[39m\n\u001b[31m+   \"/anchor/16ax-1-way-switch-with-indicator-200w-sbl-load-1m\",\u001b[39m\n\u001b[2m  ]\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -16,7 +16,7 @@\u001b[39m\n\u001b[2m    \"/anchor/16a-dp-c-mini-mcb-gb\",\u001b[22m\n\u001b[2m    \"/anchor/16a-resettable-fuse-unit-240v-1-module\",\u001b[22m\n\u001b[2m    \"/anchor/16a-resettable-fuse-unit-240v-1-module-b\",\u001b[22m\n\u001b[2m    \"/anchor/16a-sp-c-mini-mcb\",\u001b[22m\n\u001b[2m    \"/anchor/16a-sp-c-mini-mcb-gb\",\u001b[22m\n\u001b[32m-   \"/anchor/16ax-1-way-switch-with-indicator-200w-sbl-load-1m-b\",\u001b[39m\n\u001b[31m+   \"/anchor/16ax-1-way-switch-with-indicator-200w-sbl-load-1m\",\u001b[39m\n\u001b[2m  ]\u001b[22m\n    at C:\\NDE\\New-Delhi-Electricals\\frontend\\tests\\seo-hydration.spec.ts:132:55",
+                    "location": {
+                      "file": "C:\\NDE\\New-Delhi-Electricals\\frontend\\tests\\seo-hydration.spec.ts",
+                      "column": 55,
+                      "line": 132
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 130 |\u001b[39m       expect(result\u001b[33m.\u001b[39msettled\u001b[33m.\u001b[39mcanonicalCount)\u001b[33m.\u001b[39mtoBe(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 131 |\u001b[39m       expect(result\u001b[33m.\u001b[39msettled\u001b[33m.\u001b[39mschemaTypes)\u001b[33m.\u001b[39mtoEqual(staticFacts\u001b[33m.\u001b[39mschemaTypes)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 132 |\u001b[39m       expect([\u001b[33m...\u001b[39mresult\u001b[33m.\u001b[39msettled\u001b[33m.\u001b[39mproductLinks]\u001b[33m.\u001b[39msort())\u001b[33m.\u001b[39mtoEqual([\u001b[33m...\u001b[39mstaticFacts\u001b[33m.\u001b[39mproductLinks]\u001b[33m.\u001b[39msort())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 133 |\u001b[39m       \u001b[36mconst\u001b[39m reorderedProducts \u001b[33m=\u001b[39m result\u001b[33m.\u001b[39msettled\u001b[33m.\u001b[39mproductLinks\u001b[33m.\u001b[39mfilter((href\u001b[33m,\u001b[39m index) \u001b[33m=>\u001b[39m href \u001b[33m!==\u001b[39m staticFacts\u001b[33m.\u001b[39mproductLinks[index])\u001b[33m.\u001b[39mlength\u001b[33m;\u001b[39m\n \u001b[90m 134 |\u001b[39m       expect(reorderedProducts)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(\u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mceil(staticFacts\u001b[33m.\u001b[39mproductLinks\u001b[33m.\u001b[39mlength \u001b[33m*\u001b[39m \u001b[35m0.25\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 135 |\u001b[39m       expect(result\u001b[33m.\u001b[39msettled\u001b[33m.\u001b[39mrootTextLength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m100\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\NDE\\New-Delhi-Electricals\\frontend\\tests\\seo-hydration.spec.ts",
+                        "column": 55,
+                        "line": 132
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -16,7 +16,7 @@\u001b[39m\n\u001b[2m    \"/anchor/16a-dp-c-mini-mcb-gb\",\u001b[22m\n\u001b[2m    \"/anchor/16a-resettable-fuse-unit-240v-1-module\",\u001b[22m\n\u001b[2m    \"/anchor/16a-resettable-fuse-unit-240v-1-module-b\",\u001b[22m\n\u001b[2m    \"/anchor/16a-sp-c-mini-mcb\",\u001b[22m\n\u001b[2m    \"/anchor/16a-sp-c-mini-mcb-gb\",\u001b[22m\n\u001b[32m-   \"/anchor/16ax-1-way-switch-with-indicator-200w-sbl-load-1m-b\",\u001b[39m\n\u001b[31m+   \"/anchor/16ax-1-way-switch-with-indicator-200w-sbl-load-1m\",\u001b[39m\n\u001b[2m  ]\u001b[22m\n\n  130 |       expect(result.settled.canonicalCount).toBe(1);\n  131 |       expect(result.settled.schemaTypes).toEqual(staticFacts.schemaTypes);\n> 132 |       expect([...result.settled.productLinks].sort()).toEqual([...staticFacts.productLinks].sort());\n      |                                                       ^\n  133 |       const reorderedProducts = result.settled.productLinks.filter((href, index) => href !== staticFacts.productLinks[index]).length;\n  134 |       expect(reorderedProducts).toBeLessThanOrEqual(Math.ceil(staticFacts.productLinks.length * 0.25));\n  135 |       expect(result.settled.rootTextLength).toBeGreaterThan(100);\n    at C:\\NDE\\New-Delhi-Electricals\\frontend\\tests\\seo-hydration.spec.ts:132:55"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:47:22.611Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\NDE\\New-Delhi-Electricals\\frontend\\test-results\\seo-hydration-hub-anchor-s-573ba-d-content-hydrates-in-place\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\NDE\\New-Delhi-Electricals\\frontend\\tests\\seo-hydration.spec.ts",
+                    "column": 55,
+                    "line": 132
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-7336d38cd0c13b4af169",
+          "file": "seo-hydration.spec.ts",
+          "line": 108,
+          "column": 3
+        },
+        {
+          "title": "hydrated navigation, cart, mobile navigation, and WhatsApp CTA remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9281,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:47:36.771Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-26613677e794552c77c2",
+          "file": "seo-hydration.spec.ts",
+          "line": 148,
+          "column": 1
+        },
+        {
+          "title": "mobile navigation opens and closes after hydration",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1724,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:47:46.365Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-3ff14dcc3ab92cce6e08",
+          "file": "seo-hydration.spec.ts",
+          "line": 176,
+          "column": 1
+        },
+        {
+          "title": "commercial hub /brand/polycab/wires-cables keeps its enquiry paths and breadcrumb without JS",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1270,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:47:48.137Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-7f364d7d65354e250a28",
+          "file": "seo-hydration.spec.ts",
+          "line": 188,
+          "column": 3
+        },
+        {
+          "title": "commercial hub /brand/finolex/wires-cables keeps its enquiry paths and breadcrumb without JS",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1244,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:47:49.455Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-47ce3cf81dd17e35df6a",
+          "file": "seo-hydration.spec.ts",
+          "line": 188,
+          "column": 3
+        },
+        {
+          "title": "commercial hub /brand/anchor/switches-sockets keeps its enquiry paths and breadcrumb without JS",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1325,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:47:50.735Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-6d7137fa16f775547c14",
+          "file": "seo-hydration.spec.ts",
+          "line": 188,
+          "column": 3
+        },
+        {
+          "title": "commercial hub is usable on a mobile viewport without horizontal overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1253,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:47:52.091Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-26b41df24d7e30752f07",
+          "file": "seo-hydration.spec.ts",
+          "line": 201,
+          "column": 1
+        },
+        {
+          "title": "commercial hub WhatsApp handoff carries hub context and fires each event once",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2845,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-01T11:47:53.380Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "783b71c090b0a24225c6-308fd30402006bd77781",
+          "file": "seo-hydration.spec.ts",
+          "line": 210,
+          "column": 1
+        }
+      ]
     }
   ],
+  "errors": [],
   "stats": {
-    "startTime": "2026-08-28T11:11:01.505Z",
-    "duration": 514.5439999999999,
-    "expected": 0,
+    "startTime": "2026-09-01T11:46:07.831Z",
+    "duration": 108614.862,
+    "expected": 14,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
