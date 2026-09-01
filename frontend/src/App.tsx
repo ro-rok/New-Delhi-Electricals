@@ -11,6 +11,7 @@ import { PageLoader } from "@/components/ui/PageLoader";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { OfflineBanner } from "@/components/OfflineBanner";
 import { trackConversion } from "@/lib/conversionTracking";
+import { vercelBeforeSend } from "@/lib/internalAnalytics";
 import { trackPageView } from "@/api/tracking";
 import { InitialRouteDataProvider } from "@/lib/initialRouteData";
 
@@ -107,7 +108,7 @@ export const AppContent = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <Analytics />
+          <Analytics beforeSend={vercelBeforeSend} />
           <OfflineBanner />
             <GlobalShortcuts />
             <RouteTracker />

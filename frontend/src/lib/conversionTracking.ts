@@ -1,4 +1,5 @@
 import { track } from '@vercel/analytics/react';
+import { isInternalAnalytics } from './internalAnalytics';
 
 export type ConversionEvent =
   | 'whatsapp_click'
@@ -32,8 +33,13 @@ export function trackConversion(name: ConversionEvent, properties: EventProperti
     page_path: window.location.pathname,
     ...properties,
   };
+  const suppressed = isInternalAnalytics();
   // A local, side-effect-free hook lets browser tests verify the shared analytics
-  // contract without relying on Vercel ingestion.
-  window.dispatchEvent(new CustomEvent('nde:conversion', { detail: { name, properties: event } }));
+  // contract without relying on Vercel ingestion. `suppressed` is true when this is
+  // an internal test device and the event was withheld from the production dataset.
+  window.dispatchEvent(new CustomEvent('nde:conversion', { detail: { name, properties: event, suppressed } }));
+  // Internal QA/testing traffic never enters the production conversion dataset: the
+  // event is not renamed or re-tagged, it is simply not sent.
+  if (suppressed) return;
   track(name, event);
 }

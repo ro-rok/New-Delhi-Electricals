@@ -1,6 +1,11 @@
 import { createRoot, hydrateRoot } from "react-dom/client";
 import App from "./App.tsx";
+import { applyInternalAnalyticsFlag } from "./lib/internalAnalytics";
 import "./index.css";
+
+// Process ?nde_internal=1|0 and clean it from the URL before React mounts, so the
+// first route render and page-view beacon never see the parameter.
+applyInternalAnalyticsFlag();
 
 const root = document.getElementById("root")!;
 

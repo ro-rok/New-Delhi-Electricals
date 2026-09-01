@@ -2,21 +2,33 @@
 
 ## Status
 
-**GSC DATA UNAVAILABLE — STILL PENDING AS OF 2026-08-31 (after Prompt 3).**
+**GSC DATA UNAVAILABLE — STILL PENDING AS OF 2026-09-01 (Prompt 5, Day 0).**
 
-Prompt 3 shipped the commercial architecture without fabricating any GSC metric. The items below
-remain blocked, and the second commercial batch and any product consolidation decision depend on
-this export.
+Nothing here is fabricated. No clicks, impressions, CTR, average-position or URL-Inspection value
+appears anywhere in `docs/seo/` unless it came from a real export.
 
-No Google Search Console connector is exposed to this ChatGPT session, and no Search Console performance export was found among the available SEO files. No clicks, impressions, CTR, average-position or URL-Inspection values are fabricated.
+### What changed at Day 0: the property is almost certainly already verified
 
-This prevents the following Prompt 2 items from being completed with first-party evidence:
-- high-impression / low-CTR opportunities
-- GSC positions 4–20
-- page/query growth or decline
-- GSC cannibalization
-- indexed/excluded coverage
-- URL Inspection conclusions
+Previous prompts recorded "no GSC connector" and stopped there. A DNS check on 2026-09-01 found a
+live verification token on the apex domain:
+
+```
+newdelhielectricals.com  TXT  "google-site-verification=0D5sMkb9kvf4guCF1nvGSIyrYR7FxkzCCX8hQsELSHs"
+```
+
+That token verifies a **Domain property**, not a URL-prefix property. Two consequences:
+
+1. **Use the Domain property `newdelhielectricals.com`** when exporting. It aggregates www and
+   non-www, http and https, into one dataset. A URL-prefix property for
+   `https://www.newdelhielectricals.com/` would silently exclude any data attributed to the other
+   three variants and would understate the baseline.
+2. **The blocker is access, not setup.** Someone holds this property. The export below can be
+   produced today by whoever owns that Google account.
+
+Confirmed alongside it at Day 0: the site has no `gtag.js`, no GTM container and no GA4
+measurement ID. Conversion analytics runs entirely through Vercel Analytics custom events
+(`frontend/src/lib/conversionTracking.ts`). Requests for "GA4 data" cannot be met; ask for the
+Vercel Analytics events view instead.
 
 ## Exact export needed
 

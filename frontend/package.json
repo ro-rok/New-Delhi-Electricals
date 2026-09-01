@@ -13,7 +13,8 @@
     "lighthouse": "lighthouse http://localhost:4173 --output html --output-path ./lighthouse-report.html --view",
     "test": "npm run test:seo",
     "test:seo": "node scripts/test-seo-output.js",
-    "test:browser": "playwright test"
+    "test:browser": "playwright test",
+    "seo:checkpoint": "node scripts/seo-checkpoint.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
