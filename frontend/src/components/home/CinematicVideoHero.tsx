@@ -21,7 +21,7 @@ const SCRUB_SCROLL_PX = 2800;
 
 const TEXT_STAGES = [
   { enter: 0.00, exit: 0.24, label: 'NEW DELHI ELECTRICALS', sub: 'Authorized Partner · Since 1998' },
-  { enter: 0.28, exit: 0.54, label: 'Premium Electrical',    sub: '3000+ products · 27 years of trust' },
+  { enter: 0.28, exit: 0.54, label: 'Premium Electrical',    sub: '1900+ products · 5 authorised brands' },
   { enter: 0.58, exit: 0.84, label: 'Built for India',       sub: 'Switches · MCBs · Wires · Sockets' },
   { enter: 0.88, exit: 1.00, label: 'Explore the Range',     sub: 'Scroll down to shop ↓' },
 ] as const;

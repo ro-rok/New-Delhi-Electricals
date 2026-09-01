@@ -8,7 +8,7 @@ import { LoadingSpinner } from '@/components/LoadingSpinner';
 import { CommercialHubView } from '@/components/commercial/CommercialHubView';
 import { SEOHead } from '@/components/SEOHead';
 import { getProductsByBrand } from '@/api/products';
-import { findHub, selectHubProducts } from '@/lib/commercialHubs';
+import { findHub, orderHubProducts } from '@/lib/commercialHubs';
 import { getHubSEO } from '@/lib/seo';
 import { useApp } from '@/contexts/AppContext';
 import { useInitialRouteData } from '@/lib/initialRouteData';
@@ -17,7 +17,7 @@ import type { Product } from '@/types/product';
 /** Deterministic order so the prerendered list and the client fetch hydrate byte-stable. */
 function orderedHubProducts(hub: ReturnType<typeof findHub>, items: Product[]): Product[] {
   if (!hub) return [];
-  return selectHubProducts(hub, items).slice().sort((a, b) => a.name.localeCompare(b.name));
+  return orderHubProducts(hub, items);
 }
 
 /**

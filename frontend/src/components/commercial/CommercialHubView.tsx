@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import type { Product } from '@/types/product';
 import {
-  type CommercialHub, facetValues, formatInr, perMetrePrice, priceRange, whatsappHref,
+  type CommercialHub, facetValues, formatInr, hubPath, perMetrePrice, priceRange, whatsappHref,
 } from '@/lib/commercialHubs';
+import { GuideLinkCards } from '@/components/guides/GuideLinkCards';
 
 /**
  * The commercial hub body. Rendered identically by the build-time prerender and by the
@@ -135,6 +136,8 @@ export function CommercialHubView({ hub, products }: { hub: CommercialHub; produ
         </div>)}
       </dl>
     </section>}
+
+    <GuideLinkCards commercialPath={hubPath(hub)} heading={`Buying guides for ${hub.categoryName.toLowerCase()}`} />
 
     <nav aria-label="Related pages" className="mt-12 border-t pt-6">
       <h2 className="text-lg font-semibold">Related pages</h2>

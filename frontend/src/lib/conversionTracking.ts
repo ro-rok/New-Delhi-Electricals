@@ -16,6 +16,9 @@ export function getPageType(pathname = typeof window === 'undefined' ? '/' : win
   if (pathname.startsWith('/category/')) return 'category';
   // /brand/<brand>/<hub> is a commercial hub; /brand/<brand> stays a brand page.
   if (pathname.startsWith('/brand/')) return pathname.split('/').filter(Boolean).length === 3 ? 'commercial-hub' : 'brand';
+  // /guides/<slug> would otherwise fall through to the two-segment product rule.
+  if (pathname === '/guides') return 'guides-index';
+  if (pathname.startsWith('/guides/')) return 'guide';
   if (pathname === '/search') return 'search';
   if (pathname === '/cart') return 'cart';
   if (pathname.split('/').filter(Boolean).length === 2) return 'product';

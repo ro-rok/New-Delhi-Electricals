@@ -190,7 +190,7 @@ function outputPathFor(routePath) { return routePath === '/' ? TEMPLATE_PATH : p
 function writeRoute(routePath, html) { const outputPath = outputPathFor(routePath); fs.mkdirSync(path.dirname(outputPath), { recursive: true }); fs.writeFileSync(outputPath, html, 'utf8'); }
 
 const template = fs.readFileSync(TEMPLATE_PATH, 'utf8');
-const { render, COMMERCIAL_HUBS, selectHubProducts } = await import(pathToFileURL(SERVER_ENTRY).href);
+const { render, COMMERCIAL_HUBS, orderHubProducts, GUIDES } = await import(pathToFileURL(SERVER_ENTRY).href);
 const catalogue = await loadCatalogue();
 const excludedProducts = catalogue.products.map((product) => ({ product, reason: exclusionFor(product) })).filter(({ reason }) => reason);
 const routesByPath = new Map();
@@ -207,8 +207,10 @@ const payloadSizes = {};
 
 // Commercial hubs the catalogue can actually fill. A hub with no matching products is
 // suppressed rather than shipped as an empty landing page.
+// Ordering comes from the app bundle, not from this script, so the prerendered list and the
+// client's post-hydration list are produced by the same comparator.
 function orderedHubProducts(hub) {
-  return selectHubProducts(hub, products).slice().sort((a, b) => a.name.localeCompare(b.name));
+  return orderHubProducts(hub, products);
 }
 const activeHubs = COMMERCIAL_HUBS
   .map((hub) => ({ hub, items: orderedHubProducts(hub) }))
@@ -230,6 +232,12 @@ function initialDataFor(pathname, product) {
   }
   if (hubForPath.has(pathname)) {
     return { pathname, products: hubForPath.get(pathname).items };
+  }
+  // The article body travels with the document so the client hydrates it without importing
+  // the guide bodies into the shared bundle. See GuidePage for the other half of this.
+  if (pathname.startsWith('/guides/')) {
+    const guide = GUIDES.find((item) => item.slug === pathname.slice('/guides/'.length));
+    return guide ? { pathname, guide } : { pathname };
   }
   if (pathname.startsWith('/brand/')) {
     const brandProducts = products.filter((item) => item.brandSlug === pathname.slice('/brand/'.length));
@@ -261,6 +269,10 @@ for (const pathname of NOINDEX_PATHS) prerender(pathname);
 for (const categorySlug of ['switches-sockets', 'plates', 'circuit-protection', 'wires-cables', 'boxes', 'geysers']) { const pathname = `/category/${categorySlug}`; prerender(pathname); routeSet.add(pathname); }
 for (const brand of brands) { const pathname = `/brand/${brand.slug}`; prerender(pathname); routeSet.add(pathname); }
 for (const { hub } of activeHubs) { const pathname = `/brand/${hub.brandSlug}/${hub.slug}`; prerender(pathname); routeSet.add(pathname); }
+// Editorial guides. Only guides published in the GUIDES registry are prerendered, so an
+// unfinished draft can never reach the sitemap as a thin indexable page.
+prerender('/guides'); routeSet.add('/guides');
+for (const guide of GUIDES) { const pathname = `/guides/${guide.slug}`; prerender(pathname); routeSet.add(pathname); }
 for (const product of products) { prerender(product.urlPath, product); routeSet.add(product.urlPath); }
 prerender('/404');
 fs.copyFileSync(outputPathFor('/404'), path.join(DIST_DIR, '404.html'));
@@ -268,6 +280,6 @@ fs.copyFileSync(outputPathFor('/404'), path.join(DIST_DIR, '404.html'));
 const sitemapUrls = [...routeSet].sort().map((routePath) => `  <url><loc>${escapeHtml(new URL(routePath, SITE_URL).toString())}</loc></url>`).join('\n');
 fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls}\n</urlset>\n`, 'utf8');
 fs.writeFileSync(path.join(DIST_DIR, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\n\nSitemap: ${SITE_URL}/sitemap.xml\n`, 'utf8');
-fs.writeFileSync(path.join(DIST_DIR, 'seo-build-report.json'), `${JSON.stringify({ source: catalogue.source, apiUrl: catalogue.apiUrl, apiError: catalogue.apiError, fallback: catalogue.fallback, loadedProducts: catalogue.products.length, indexableProducts: products.length, excludedProducts: excludedProducts.length, categories: 6, brands: brands.length, commercialHubs: activeHubs.length, commercialHubPaths: activeHubs.map((entry) => `/brand/${entry.hub.brandSlug}/${entry.hub.slug}`), suppressedHubs: COMMERCIAL_HUBS.filter((hub) => !hubForPath.has(`/brand/${hub.brandSlug}/${hub.slug}`)).map((hub) => `/brand/${hub.brandSlug}/${hub.slug}`), indexableRoutes: routeSet.size, noindexRoutes: NOINDEX_PATHS.length, payloadSizes }, null, 2)}\n`, 'utf8');
+fs.writeFileSync(path.join(DIST_DIR, 'seo-build-report.json'), `${JSON.stringify({ source: catalogue.source, apiUrl: catalogue.apiUrl, apiError: catalogue.apiError, fallback: catalogue.fallback, loadedProducts: catalogue.products.length, indexableProducts: products.length, excludedProducts: excludedProducts.length, categories: 6, brands: brands.length, commercialHubs: activeHubs.length, guides: GUIDES.length, guideRoutes: GUIDES.map((guide) => ({ path: `/guides/${guide.slug}`, parent: guide.primaryParent.path, supporting: guide.supporting.map((link) => link.path) })), commercialHubPaths: activeHubs.map((entry) => `/brand/${entry.hub.brandSlug}/${entry.hub.slug}`), suppressedHubs: COMMERCIAL_HUBS.filter((hub) => !hubForPath.has(`/brand/${hub.brandSlug}/${hub.slug}`)).map((hub) => `/brand/${hub.brandSlug}/${hub.slug}`), indexableRoutes: routeSet.size, noindexRoutes: NOINDEX_PATHS.length, payloadSizes }, null, 2)}\n`, 'utf8');
 fs.writeFileSync(path.join(DIST_DIR, 'seo-excluded-products.json'), `${JSON.stringify(excludedProducts.map(({ product, reason }) => ({ id: product.id || null, sku: product.sku || null, name: product.name || null, brand: product.brand || null, urlPath: product.urlPath || null, reason })), null, 2)}\n`, 'utf8');
-console.log(`React prerender complete: ${routeSet.size} indexable routes (${products.length} products, 6 categories, ${brands.length} brands, ${activeHubs.length} commercial hubs) from ${catalogue.source}.`);
+console.log(`React prerender complete: ${routeSet.size} indexable routes (${products.length} products, 6 categories, ${brands.length} brands, ${activeHubs.length} commercial hubs, ${GUIDES.length} guides) from ${catalogue.source}.`);

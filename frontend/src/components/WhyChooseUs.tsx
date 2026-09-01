@@ -4,8 +4,8 @@ import { CheckCircle2, Shield, Truck, Clock, Award, DollarSign } from "lucide-re
 const reasons = [
   {
     icon: Award,
-    title: "27 Years Legacy",
-    description: "Nearly three decades of trusted service since 1998",
+    title: "Established 1998",
+    description: "A South Delhi electrical counter, run by the same family since",
   },
   {
     icon: Shield,
@@ -24,8 +24,8 @@ const reasons = [
   },
   {
     icon: Clock,
-    title: "3000+ Customers",
-    description: "Serving families, contractors, and builders with excellence",
+    title: "1900+ Catalogue Lines",
+    description: "Serving families, contractors, and builders across Delhi NCR",
   },
   {
     icon: DollarSign,

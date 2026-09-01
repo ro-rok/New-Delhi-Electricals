@@ -2,6 +2,7 @@ import { useEffect, useState, useMemo, useCallback, useRef } from 'react';
 import { useParams, useSearchParams, useLocation } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/Footer';
+import { GuideLinkCards } from '@/components/guides/GuideLinkCards';
 import WhatsAppFab from '@/components/WhatsAppFab';
 import ProductCard from '@/components/catalog/ProductCard';
 import { Button } from '@/components/ui/button';
@@ -48,22 +49,14 @@ import {
 } from '@/config/shoppingCategories';
 import { fetchProductsForShoppingCategory } from '@/lib/categoryUtils';
 import { getCategorySEO } from '@/lib/seo';
+import { compareCatalogueProducts } from '@/lib/commercialHubs';
 import { useInitialRouteData } from '@/lib/initialRouteData';
 
 type SortOption = 'name-asc' | 'name-desc' | 'price-asc' | 'price-desc';
 
-// Product names in the catalogue are ASCII. A code-point comparison gives the
-// browser and Node prerenderer one deterministic tie-breaker, avoiding a
-// post-hydration reshuffle caused by their different locale defaults.
-const compareProductNames = (left: Product, right: Product) => {
-  const a = left.name.toLowerCase();
-  const b = right.name.toLowerCase();
-  if (a < b) return -1;
-  if (a > b) return 1;
-  const leftKey = String(left.urlPath || left.sku || left.id);
-  const rightKey = String(right.urlPath || right.sku || right.id);
-  return leftKey < rightKey ? -1 : leftKey > rightKey ? 1 : 0;
-};
+// One ordering policy for every catalogue list, shared with the commercial hubs so the
+// browser and the Node prerenderer cannot disagree about equal-name records.
+const compareProductNames = compareCatalogueProducts;
 
 const iconMap: Record<string, LucideIcon> = {
   ToggleRight,
@@ -1347,6 +1340,9 @@ const CategoryPage = () => {
                       Showing all {displayedProducts.length} products
                     </div>
                   )}
+
+                  {/* Buying guides that support this category */}
+                  <GuideLinkCards commercialPath={`/category/${slug}`} />
 
                   {/* Next Step CTA */}
                   {nextCategory && displayedProducts.length > 0 && (

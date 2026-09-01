@@ -333,6 +333,43 @@ export function selectHubProducts<T extends { brand: string; category: string }>
   return products.filter(product => product.brand === hub.brandName && hub.categories.includes(product.category));
 }
 
+/** The identity fields a catalogue record can be ordered by, beyond its display name. */
+type OrderableProduct = { name: string; urlPath?: string; sku?: string; id?: string | number };
+
+/**
+ * The single ordering policy for catalogue product lists.
+ *
+ * Display names are not unique. The Anchor switches range alone carries 81 pairs of records
+ * that share a name and differ only by a variant suffix, so a comparison on name alone leaves
+ * each pair in whatever order the source array happened to hold. The prerenderer and the
+ * browser read the catalogue from different snapshots, so that order is not the same on both
+ * sides and the list reshuffles during hydration. Falling back to `urlPath` restores a total
+ * order, because route keys are unique by construction.
+ *
+ * Comparison is by code point rather than `localeCompare`: Node and Chromium resolve different
+ * default collations for the same string, which is a second way the two sides can disagree.
+ */
+export function compareCatalogueProducts(left: OrderableProduct, right: OrderableProduct): number {
+  const a = left.name.toLowerCase();
+  const b = right.name.toLowerCase();
+  if (a < b) return -1;
+  if (a > b) return 1;
+  const leftKey = String(left.urlPath || left.sku || left.id || '');
+  const rightKey = String(right.urlPath || right.sku || right.id || '');
+  return leftKey < rightKey ? -1 : leftKey > rightKey ? 1 : 0;
+}
+
+/**
+ * Hub products in published order. The prerenderer and the client route both call this, so the
+ * two orderings cannot drift apart again.
+ */
+export function orderHubProducts<T extends { brand: string; category: string } & OrderableProduct>(
+  hub: CommercialHub,
+  products: T[],
+): T[] {
+  return selectHubProducts(hub, products).slice().sort(compareCatalogueProducts);
+}
+
 /** Indian-format currency without Intl, so server and browser output are byte-identical. */
 export function formatInr(value: number): string {
   const digits = String(Math.round(Math.abs(value)));

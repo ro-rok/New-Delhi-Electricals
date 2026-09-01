@@ -34,6 +34,7 @@ export const PAGE_SEO: Record<string, SEOMetadata> = {
       name: 'New Delhi Electricals',
       url: 'https://www.newdelhielectricals.com/',
       telephone: '+919654102758',
+      email: 'newdelhielectricals30@gmail.com',
       address: {
         '@type': 'PostalAddress',
         streetAddress: '30 A Corner Market, Malviya Nagar',
@@ -41,6 +42,15 @@ export const PAGE_SEO: Record<string, SEOMetadata> = {
         postalCode: '110017',
         addressCountry: 'IN',
       },
+      // Only facts already published on the site: the counter hours and service area shown
+      // in the footer and on /contact. No second location is claimed.
+      areaServed: 'Delhi NCR',
+      openingHoursSpecification: [{
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '10:00',
+        closes: '19:30',
+      }],
     },
   },
   
@@ -292,6 +302,89 @@ export function getHubSEO(
     type: 'website',
     canonicalPath,
     structuredData,
+  };
+}
+
+const PUBLISHER = {
+  '@type': 'Organization',
+  name: 'New Delhi Electricals',
+  url: 'https://www.newdelhielectricals.com/',
+};
+
+/**
+ * Article metadata for an editorial guide. Only truthful properties are emitted: the author
+ * and publisher are the business itself, the dates come from the guide record, and no image,
+ * rating or review is claimed. FAQ content on guides is visible on the page but is not
+ * emitted as FAQPage data.
+ */
+export function getGuideSEO(guide: {
+  slug: string; title: string; description: string; heading: string;
+  datePublished: string; dateModified: string;
+}): SEOMetadata {
+  const siteUrl = getSiteUrl();
+  const canonicalPath = `/guides/${guide.slug}`;
+  const canonical = `${siteUrl}${canonicalPath}`;
+  return {
+    title: guide.title,
+    description: guide.description,
+    type: 'article',
+    canonicalPath,
+    structuredData: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: guide.heading,
+        description: guide.description,
+        datePublished: guide.datePublished,
+        dateModified: guide.dateModified,
+        author: PUBLISHER,
+        publisher: PUBLISHER,
+        mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+          { '@type': 'ListItem', position: 2, name: 'Guides', item: `${siteUrl}/guides` },
+          { '@type': 'ListItem', position: 3, name: guide.heading, item: canonical },
+        ],
+      },
+    ],
+  };
+}
+
+/** Metadata for the guides index. */
+export function getGuidesIndexSEO(guides: Array<{ slug: string; heading: string }>): SEOMetadata {
+  const siteUrl = getSiteUrl();
+  return {
+    title: 'Electrical Buying Guides | New Delhi Electricals',
+    description: 'Practical selection guidance on house wiring cable, MCBs, RCCBs and circuit protection from an authorised electrical dealer in Delhi NCR.',
+    type: 'website',
+    canonicalPath: '/guides',
+    structuredData: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+          { '@type': 'ListItem', position: 2, name: 'Guides', item: `${siteUrl}/guides` },
+        ],
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Electrical buying guides',
+        url: `${siteUrl}/guides`,
+        numberOfItems: guides.length,
+        itemListElement: guides.map((guide, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: guide.heading,
+          url: `${siteUrl}/guides/${guide.slug}`,
+        })),
+      },
+    ],
   };
 }
 

@@ -14,8 +14,19 @@ const routes = [
   { name: 'hub-polycab-wires', path: '/brand/polycab/wires-cables', schemas: ['BreadcrumbList', 'ItemList'] },
   { name: 'hub-finolex-wires', path: '/brand/finolex/wires-cables', schemas: ['BreadcrumbList', 'ItemList'] },
   { name: 'hub-anchor-switches', path: '/brand/anchor/switches-sockets', schemas: ['BreadcrumbList', 'ItemList'] },
+  { name: 'guides-index', path: '/guides', schemas: ['BreadcrumbList', 'ItemList'] },
+  { name: 'guide-best-wire', path: '/guides/best-wire-for-house-wiring', schemas: ['Article', 'BreadcrumbList'] },
+  { name: 'guide-rccb', path: '/guides/rccb-explained', schemas: ['Article', 'BreadcrumbList'] },
 ] as const;
 const hubPaths = ['/brand/polycab/wires-cables', '/brand/finolex/wires-cables', '/brand/anchor/switches-sockets'];
+// Guide route, the commercial parent it must link to, and the parent's own link back.
+const guideRoutes = [
+  { path: '/guides/best-wire-for-house-wiring', parent: '/category/wires-cables' },
+  { path: '/guides/mcb-vs-mccb', parent: '/category/circuit-protection' },
+  { path: '/guides/how-to-choose-mcb-for-home', parent: '/category/circuit-protection' },
+  { path: '/guides/rccb-explained', parent: '/category/circuit-protection' },
+  { path: '/guides/genuine-finolex-wire', parent: '/brand/finolex/wires-cables' },
+];
 
 const hydrationPattern = /hydration failed|hydration mismatch|text content did not match|expected server html|server html was replaced|an error occurred during hydration/i;
 const catalogueApi = 'https://new-delhi-electricals.onrender.com/api/';
@@ -129,9 +140,11 @@ for (const route of routes) {
       expect(result.settled.descriptionCount).toBe(1);
       expect(result.settled.canonicalCount).toBe(1);
       expect(result.settled.schemaTypes).toEqual(staticFacts.schemaTypes);
-      expect([...result.settled.productLinks].sort()).toEqual([...staticFacts.productLinks].sort());
-      const reorderedProducts = result.settled.productLinks.filter((href, index) => href !== staticFacts.productLinks[index]).length;
-      expect(reorderedProducts).toBeLessThanOrEqual(Math.ceil(staticFacts.productLinks.length * 0.25));
+      // Exact, not a tolerance. Ordering now comes from one shared comparator with a urlPath
+      // tie-break (see compareCatalogueProducts), so equal-name records cannot land in a
+      // different position on the server than in the browser. Any reordering at all is the
+      // hydration bug returning.
+      expect(result.settled.productLinks).toEqual(staticFacts.productLinks);
       expect(result.settled.rootTextLength).toBeGreaterThan(100);
       expect(result.settled.oldShell).toBeFalsy();
       expect(result.h1Persisted).toBeTruthy();
@@ -223,4 +236,87 @@ test('commercial hub WhatsApp handoff carries hub context and fires each event o
   const events = await page.evaluate(() => (window as Window & { __ndeConversionEvents?: Array<{ name: string; properties: Record<string, unknown> }> }).__ndeConversionEvents || []);
   expect(events.map((event) => event.name)).toEqual(['whatsapp_click', 'whatsapp_enquiry_start']);
   expect(events[0].properties.page_type).toBe('commercial-hub');
+});
+
+for (const guide of guideRoutes) {
+  test(`guide ${guide.path} is a complete crawlable article without JS`, async ({ browser }) => {
+    const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 1440, height: 900 } });
+    const page = await noJs.newPage();
+    await page.goto(guide.path, { waitUntil: 'load' });
+    await expect(page.locator('h1')).toHaveCount(1);
+    await expect(page.locator('nav[aria-label="Breadcrumb"]')).toHaveCount(1);
+    await expect(page.locator('main article')).toHaveCount(1);
+    // The article body, not just a shell: several sections of real prose.
+    expect(await page.locator('main article h2').count()).toBeGreaterThanOrEqual(4);
+    expect((await page.locator('main article').innerText()).replace(/\s+/g, ' ').length).toBeGreaterThan(4000);
+    // Conversion path and the money page this guide exists to support.
+    await expect(page.locator('main a[href^="https://wa.me/"]').first()).toBeVisible();
+    await expect(page.locator(`main a[href="${guide.parent}"]`).first()).toBeVisible();
+    await noJs.close();
+  });
+
+  test(`commercial parent ${guide.parent} links back to ${guide.path}`, async ({ browser }) => {
+    const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 1440, height: 900 } });
+    const page = await noJs.newPage();
+    await page.goto(guide.parent, { waitUntil: 'load' });
+    await expect(page.locator(`main a[href="${guide.path}"]`).first()).toBeVisible();
+    await noJs.close();
+  });
+}
+
+test('guide renders on mobile without horizontal overflow and stays visually stable', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  const page = await context.newPage();
+  await page.goto('/guides/how-to-choose-mcb-for-home');
+  await expect(page.locator('h1')).toBeVisible();
+  await page.waitForTimeout(1_000);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
+  const cls = await page.evaluate(() => performance.getEntriesByType('layout-shift')
+    .filter((entry: PerformanceEntry & { hadRecentInput?: boolean }) => !entry.hadRecentInput)
+    .reduce((total: number, entry: PerformanceEntry & { value?: number }) => total + (entry.value || 0), 0));
+  expect(cls).toBeLessThanOrEqual(0.1);
+  await context.close();
+});
+
+test('guide routes load no cinematic or catalogue payload and no images', async ({ page }) => {
+  const requests: string[] = [];
+  page.on('request', (request) => requests.push(request.url()));
+  await page.goto('/guides/mcb-vs-mccb');
+  await expect(page.locator('h1')).toBeVisible();
+  await page.waitForLoadState('networkidle', { timeout: 20_000 }).catch(() => undefined);
+  expect(requests.filter((url) => /gsap|ScrollTrigger/i.test(url))).toEqual([]);
+  expect(requests.filter((url) => /\.mp4($|\?)/i.test(url))).toEqual([]);
+  // The prerendered document carries the whole article, so hydration must not fetch the
+  // catalogue at all. (The shared page-view beacon still fires; that is not a payload.)
+  expect(requests.filter((url) => url.startsWith(`${catalogueApi}products`))).toEqual([]);
+  // And the guide bodies chunk stays unfetched on a search landing: the article came inline.
+  expect(requests.filter((url) => /guides/i.test(url) && url.endsWith('.js'))).toEqual([]);
+});
+
+test('guide WhatsApp handoff is attributed to the guide and fires each event once', async ({ page }) => {
+  await page.addInitScript(() => {
+    (window as Window & { __ndeConversionEvents?: unknown[] }).__ndeConversionEvents = [];
+    window.addEventListener('nde:conversion', (event) => (window as Window & { __ndeConversionEvents?: unknown[] }).__ndeConversionEvents!.push((event as CustomEvent).detail));
+  });
+  await page.goto('/guides/genuine-finolex-wire');
+  await expect(page.locator('h1')).toBeVisible();
+  const link = page.locator('main a[href^="https://wa.me/"]').first();
+  expect(decodeURIComponent((await link.getAttribute('href')) || '')).toContain('Finolex');
+  const popup = page.waitForEvent('popup');
+  await link.click();
+  await (await popup).close();
+  const events = await page.evaluate(() => (window as Window & { __ndeConversionEvents?: Array<{ name: string; properties: Record<string, unknown> }> }).__ndeConversionEvents || []);
+  expect(events.map((event) => event.name)).toEqual(['whatsapp_click', 'whatsapp_enquiry_start']);
+  expect(events[0].properties.page_type).toBe('guide');
+});
+
+test('guides are reachable by crawling from the guides index and the footer', async ({ page }) => {
+  await allowCatalogueApi(page);
+  await page.goto('/');
+  await page.getByRole('link', { name: 'Guides' }).first().click();
+  await expect(page).toHaveURL(/\/guides$/);
+  await expect(page.locator('h1')).toHaveText(/buying guides/i);
+  await page.locator('main a[href^="/guides/"]').first().click();
+  await expect(page).toHaveURL(/\/guides\/[a-z-]+$/);
+  await expect(page.locator('main article h2').first()).toBeVisible();
 });

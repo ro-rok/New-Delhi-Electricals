@@ -1,11 +1,15 @@
 import { Card } from "@/components/ui/card";
-import { Heart, Award, Users, TrendingUp } from "lucide-react";
+import { Heart, Award, Package, MapPin } from "lucide-react";
 
+// Every figure here is countable from the catalogue or the dealer appointments. The previous
+// tiles carried a customer count and a "homes built" figure that nothing in the business
+// record supports; they were removed rather than restated. Do not add a number back without
+// a source behind it.
 const stats = [
-  { icon: Award, value: "27", label: "Years of Service", suffix: "+" },
-  { icon: Users, value: "3000", label: "Happy Customers", suffix: "+" },
+  { icon: Package, value: "1900", label: "Catalogue Products", suffix: "+" },
+  { icon: Award, value: "5", label: "Authorised Brands", suffix: "" },
   { icon: Heart, value: "100", label: "Genuine Products", suffix: "%" },
-  { icon: TrendingUp, value: "1000", label: "Homes Built", suffix: "s" },
+  { icon: MapPin, value: "1", label: "Malviya Nagar Counter", suffix: "" },
 ];
 
 const AboutUs = () => {
@@ -32,8 +36,8 @@ const AboutUs = () => {
               </p>
               
               <p className="text-base leading-relaxed mb-4">
-                Over <span className="font-semibold text-primary">27 years</span>, we've had the privilege of serving 
-                over 3000 customers—from families building their dream homes to contractors constructing major projects. 
+                Since then we've had the privilege of supplying <span className="font-semibold text-primary">families
+                building their dream homes</span> and contractors constructing major projects alike.
                 Each relationship is built on three simple principles: <span className="font-semibold">honesty, quality, and speed</span>.
               </p>
 

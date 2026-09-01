@@ -31,6 +31,8 @@ import BrandsListPage from "./pages/BrandsListPage";
 import CategoriesListPage from "./pages/CategoriesListPage";
 import SearchResultsPage from "./pages/SearchResultsPage";
 import CommercialHubPage from "./pages/CommercialHubPage";
+import GuidesIndexPage from "./pages/GuidesIndexPage";
+import GuidePage from "./pages/GuidePage";
 
 // Admin code remains lazy and is never part of the public prerender output.
 const AdminLayout = lazy(() => import("./pages/admin/AdminLayout"));
@@ -124,6 +126,8 @@ export const AppContent = () => (
                   <Route path="/brands" element={<ErrorBoundary><BrandsListPage /></ErrorBoundary>} />
                   <Route path="/brand/:slug" element={<ErrorBoundary><BrandPage /></ErrorBoundary>} />
                   <Route path="/brand/:slug/:hub" element={<ErrorBoundary><CommercialHubPage /></ErrorBoundary>} />
+                  <Route path="/guides" element={<ErrorBoundary><GuidesIndexPage /></ErrorBoundary>} />
+                  <Route path="/guides/:slug" element={<ErrorBoundary><GuidePage /></ErrorBoundary>} />
                   <Route path="/:brand/:slug" element={<ErrorBoundary><ProductSlugPage /></ErrorBoundary>} />
                   <Route path="/product/:brand/:slug" element={<ErrorBoundary><ProductSlugPage /></ErrorBoundary>} />
                   <Route path="/product/:brand/:product_family/:slug" element={<ErrorBoundary><ProductSlugPage /></ErrorBoundary>} />

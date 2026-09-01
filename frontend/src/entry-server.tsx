@@ -7,7 +7,9 @@ import type { SEOMetadata } from './lib/seo';
 
 // Re-exported so the SEO generator enumerates and fills commercial hub routes from the
 // same definitions the browser bundle renders.
-export { COMMERCIAL_HUBS, hubPath, selectHubProducts } from './lib/commercialHubs';
+export { COMMERCIAL_HUBS, hubPath, selectHubProducts, orderHubProducts } from './lib/commercialHubs';
+// Re-exported so the SEO generator prerenders exactly the guides the app publishes.
+export { GUIDES } from './content/guides';
 
 export function render(url: string, initialData: InitialRouteData) {
   let metadata: SEOMetadata | null = null;

@@ -92,6 +92,69 @@ for (const hubPath of report.commercialHubPaths || []) {
   if (!schemaTypes.includes('ItemList')) fail(url, 'commercial hub missing ItemList schema');
 }
 
+// Editorial guides are the content layer that feeds the money pages. Each published guide
+// must be a crawlable article with truthful Article schema, a working conversion path, and a
+// real link to the commercial parent it exists to support — and every internal link it emits
+// must resolve to a route this build actually generated.
+const guideRoutes = report.guideRoutes || [];
+const guidesIndexUrl = `${siteUrl}/guides`;
+if (guideRoutes.length) {
+  if (!urlSet.has(guidesIndexUrl)) fail(guidesIndexUrl, 'guides index missing from sitemap');
+  else {
+    const indexHtml = fs.readFileSync(routeFile(guidesIndexUrl), 'utf8');
+    for (const guide of guideRoutes) {
+      if (!indexHtml.includes(`href="${guide.path}"`)) fail(guidesIndexUrl, `guides index does not link ${guide.path}`);
+    }
+  }
+}
+for (const guide of guideRoutes) {
+  const url = `${siteUrl}${guide.path}`;
+  if (!urlSet.has(url)) { fail(url, 'guide missing from sitemap'); continue; }
+  const filename = routeFile(url);
+  if (!fs.existsSync(filename)) { fail(url, 'guide has no generated document'); continue; }
+  const html = fs.readFileSync(filename, 'utf8');
+  if (count(html, /<h1(?:\s[^>]*)?>/gi) !== 1) fail(url, 'guide must have exactly one H1');
+  if (!/nav\s+aria-label="Breadcrumb"/i.test(html)) fail(url, 'guide missing breadcrumb nav');
+  if (!/<article\b/i.test(html)) fail(url, 'guide missing article element');
+  if (count(html, /<h2(?:\s[^>]*)?>/gi) < 3) fail(url, 'guide has too little sectioned content to index');
+  if (!/href="https:\/\/wa\.me\//.test(html)) fail(url, 'guide missing WhatsApp conversion path');
+  if (!html.includes(`href="${guide.parent}"`)) fail(url, `guide does not link its commercial parent ${guide.parent}`);
+  for (const supporting of guide.supporting) {
+    if (!html.includes(`href="${supporting}"`)) fail(url, `guide does not link supporting page ${supporting}`);
+  }
+  const schemaTypes = schemaTypesOf(html);
+  if (!schemaTypes.includes('Article')) fail(url, 'guide missing Article schema');
+  if (!schemaTypes.includes('BreadcrumbList')) fail(url, 'guide missing BreadcrumbList schema');
+  if (schemaTypes.includes('FAQPage')) fail(url, 'guide emits FAQPage schema, which this content policy does not use');
+  const article = [...html.matchAll(/<script\s+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)]
+    .map((match) => { try { return JSON.parse(match[1]); } catch { return null; } })
+    .find((schema) => schema && schema['@type'] === 'Article');
+  if (article) {
+    for (const field of ['headline', 'description', 'datePublished', 'dateModified', 'author', 'publisher', 'mainEntityOfPage']) {
+      if (!article[field]) fail(url, `Article schema missing ${field}`);
+    }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(String(article.datePublished))) fail(url, 'Article datePublished is not an ISO date');
+    if (String(article.headline).length > 110) fail(url, 'Article headline exceeds 110 characters');
+  }
+  // Every internal anchor on a guide must resolve to a generated document. Asset and
+  // preload hrefs are excluded: they are build output, not routes.
+  for (const match of html.matchAll(/<a\s[^>]*href="(\/[^"#?]*)"/g)) {
+    const target = match[1];
+    const candidate = target === '/' ? path.join(dist, 'index.html') : path.join(dist, `${target.slice(1)}.html`);
+    if (!fs.existsSync(candidate)) fail(url, `guide links a route with no generated document: ${target}`);
+  }
+}
+
+// Commercial pages must link back into the guides that support them, so the content layer is
+// reachable from the catalogue and not only from the index.
+for (const guide of guideRoutes) {
+  const parentUrl = `${siteUrl}${guide.parent}`;
+  const parentFile = routeFile(parentUrl);
+  if (!fs.existsSync(parentFile)) { fail(parentUrl, `guide parent ${guide.parent} has no generated document`); continue; }
+  const parentHtml = fs.readFileSync(parentFile, 'utf8');
+  if (!parentHtml.includes(`href="${guide.path}"`)) fail(parentUrl, `commercial parent does not link its guide ${guide.path}`);
+}
+
 // Commercial hub titles and descriptions must be unique against each other and against the
 // brand pages they sit beneath; product-page metadata uniqueness is out of scope here.
 const hubMeta = new Map();
@@ -123,6 +186,7 @@ fs.writeFileSync(path.join(repo, 'docs', 'seo', 'excluded-products.md'), exclude
 const summary = {
   routesChecked: urls.length,
   commercialHubs: (report.commercialHubPaths || []).length,
+  guides: guideRoutes.length,
   passed: urls.length - new Set(failures.map((failure) => failure.url)).size,
   failed: failures.length,
   warnings: warnings.length,
@@ -134,5 +198,5 @@ const summary = {
   failures, warnings,
 };
 fs.writeFileSync(path.join(dist, 'seo-validation-report.json'), `${JSON.stringify(summary, null, 2)}\n`, 'utf8');
-console.log(`SEO output verified: ${summary.routesChecked} routes checked; ${summary.passed} passed; ${summary.failed} failed; ${summary.warnings.length} warnings.`);
+console.log(`SEO output verified: ${summary.routesChecked} routes checked (${summary.commercialHubs} commercial hubs, ${summary.guides} guides); ${summary.passed} passed; ${summary.failed} failed; ${summary.warnings.length} warnings.`);
 if (failures.length) process.exitCode = 1;

@@ -86,12 +86,12 @@ const PremiumHero = () => {
             >
               <div className="flex items-center gap-2">
                 <Zap className="h-4 w-4 text-blue-400" />
-                <span className="text-white/70 font-medium">3000+ Products</span>
+                <span className="text-white/70 font-medium">1900+ Products</span>
               </div>
               <div className="w-px h-4 bg-white/20" />
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4 text-blue-400" />
-                <span className="text-white/70 font-medium">27 Years Trust</span>
+                <span className="text-white/70 font-medium">Authorised Dealer</span>
               </div>
               <div className="w-px h-4 bg-white/20" />
               <div className="flex items-center gap-2">

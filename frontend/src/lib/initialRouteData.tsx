@@ -1,5 +1,6 @@
 import { createContext, useContext } from 'react';
 import type { Brand, Category, Product } from '@/types/product';
+import type { Guide } from '@/lib/guides';
 
 export interface InitialRouteData {
   pathname: string;
@@ -8,6 +9,8 @@ export interface InitialRouteData {
   brands?: Brand[];
   categories?: Category[];
   categoryCounts?: Record<string, number>;
+  /** Full guide body, serialised for /guides/<slug> so the article hydrates with no fetch. */
+  guide?: Guide;
   similarProducts?: Product[];
   moduleVariants?: Product[];
   colorVariants?: Product[];

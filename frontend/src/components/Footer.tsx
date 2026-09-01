@@ -57,14 +57,23 @@ const Footer = () => {
               <Link to="/brands" className="hover:text-foreground transition-colors">
                 Brands
               </Link>
+              <Link to="/guides" className="hover:text-foreground transition-colors">
+                Guides
+              </Link>
               <Link to="/faq" className="hover:text-foreground transition-colors">
                 FAQ
               </Link>
             </div>
           </div>
         </div>
+        {/*
+          Trust line. Every claim here is one the business can evidence: the dealer
+          appointments, the counter address and the catalogue itself. Service-year and
+          customer-count figures were removed because nothing in the business record
+          supports them — do not reinstate a number without a source behind it.
+        */}
         <p className="mt-4 text-center text-xs text-muted-foreground">
-          27 Years of Trusted Service · 3000+ Happy Customers
+          Authorised dealer · Malviya Nagar counter, serving Delhi NCR · Genuine branded products
         </p>
       </div>
     </footer>
