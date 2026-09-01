@@ -13,6 +13,7 @@ import { cn, getProductUrl } from '@/lib/utils';
 import { SEOHead } from '@/components/SEOHead';
 import { PAGE_SEO } from '@/lib/seo';
 import { ProductImagePlaceholder } from '@/components/ui/ProductImagePlaceholder';
+import { responsiveImage, CARD_WIDTHS } from '@/lib/imageUrl';
 
 const ComparePage = () => {
   const { comparison, removeFromComparison, maxItems } = useApp();
@@ -94,8 +95,13 @@ const ComparePage = () => {
                     <div className="aspect-square bg-secondary rounded-xl flex items-center justify-center mb-4 overflow-hidden">
                       {product!.images && product!.images.length > 0 ? (
                         <img
-                          src={product!.images[0]}
+                          {...responsiveImage(product!.images[0], 320, CARD_WIDTHS)}
+                          sizes="(min-width: 768px) 240px, 45vw"
                           alt={product!.name}
+                          width={320}
+                          height={320}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-contain"
                         />
                       ) : (

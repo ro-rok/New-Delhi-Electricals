@@ -25,6 +25,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { trackConversion } from '@/lib/conversionTracking';
 import { PAGE_SEO } from '@/lib/seo';
 import { ProductImagePlaceholder } from '@/components/ui/ProductImagePlaceholder';
+import { cloudinaryUrl } from '@/lib/imageUrl';
 
 const CartPage = () => {
   const { cart, removeFromCart, updateQuantity, clearCart, totalPrice, trackWhatsAppClick } = useApp();
@@ -196,8 +197,12 @@ const CartPage = () => {
                       >
                         {item.product.images && item.product.images.length > 0 ? (
                           <img
-                            src={item.product.images[0]}
+                            src={cloudinaryUrl(item.product.images[0], 192)}
                             alt={item.product.name}
+                            width={96}
+                            height={96}
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover"
                           />
                         ) : (

@@ -1310,7 +1310,9 @@ const CategoryPage = () => {
                             exit={{ opacity: 0, scale: 0.9, y: -20 }}
                             transition={{ delay: Math.min(idx * 0.02, 0.5), duration: 0.3 }}
                           >
-                            <ProductCard product={product} index={idx} />
+                            {/* First row is above the fold: it holds the real
+                                LCP candidate, so it loads eagerly. */}
+                            <ProductCard product={product} index={idx} priority={idx < 4} />
                           </motion.div>
                         ))}
                       </AnimatePresence>

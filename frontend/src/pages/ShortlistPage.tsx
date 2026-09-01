@@ -13,6 +13,7 @@ import { getProductUrl } from '@/lib/utils';
 import { SEOHead } from '@/components/SEOHead';
 import { PAGE_SEO } from '@/lib/seo';
 import { ProductImagePlaceholder } from '@/components/ui/ProductImagePlaceholder';
+import { cloudinaryUrl } from '@/lib/imageUrl';
 
 const ShortlistPage = () => {
   const { shortlist, removeFromShortlist, trackWhatsAppClick } = useApp();
@@ -92,8 +93,12 @@ const ShortlistPage = () => {
                     <div className="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden">
                       {product!.images && product!.images.length > 0 ? (
                         <img
-                          src={product!.images[0]}
+                          src={cloudinaryUrl(product!.images[0], 128)}
                           alt={product!.name}
+                          width={64}
+                          height={64}
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-contain"
                         />
                       ) : (

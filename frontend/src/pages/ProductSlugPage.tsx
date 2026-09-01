@@ -19,6 +19,7 @@ import { getColorHex } from '@/lib/colors';
 import { SEOHead } from '@/components/SEOHead';
 import { getProductSEO } from '@/lib/seo';
 import { ProductImagePlaceholder } from '@/components/ui/ProductImagePlaceholder';
+import { responsiveImage, CARD_WIDTHS, DETAIL_WIDTHS } from '@/lib/imageUrl';
 import { useInitialRouteData } from '@/lib/initialRouteData';
 
 const ProductSlugPage = () => {
@@ -348,10 +349,20 @@ const ProductSlugPage = () => {
             <div className="relative min-h-[320px] md:min-h-[420px] lg:min-h-[500px] max-h-[560px] bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black rounded-3xl overflow-hidden flex items-center justify-center shadow-lg border border-gray-100 dark:border-gray-900 p-4 sm:p-6 md:p-8">
               <AnimatePresence mode="wait">
                 {productImages.length > 0 && !imageError ? (
+                  /* Main gallery art is the product-page LCP element. */
                   <motion.img
                     key={currentImageIndex}
-                    src={productImages[currentImageIndex]}
+                    {...responsiveImage(productImages[currentImageIndex], 960, DETAIL_WIDTHS)}
+                    sizes="(min-width: 1024px) 620px, 92vw"
                     alt={product.name}
+                    width={960}
+                    height={960}
+                    {...({
+                      // Not in framer-motion's img prop types; the first
+                      // gallery frame is the product-page LCP element.
+                      fetchpriority: currentImageIndex === 0 ? 'high' : undefined,
+                      decoding: 'async',
+                    } as Record<string, string>)}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
@@ -791,8 +802,13 @@ const ProductSlugPage = () => {
                         <div className="relative aspect-square bg-gray-50 dark:bg-gray-900 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                           {p.images && p.images.length > 0 && p.images[0] ? (
                             <img
-                              src={p.images[0]}
+                              {...responsiveImage(p.images[0], 320, CARD_WIDTHS)}
+                              sizes="(min-width: 1024px) 260px, (min-width: 640px) 40vw, 85vw"
                               alt={p.name}
+                              width={320}
+                              height={320}
+                              loading="lazy"
+                              decoding="async"
                               className="w-full h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
                             />
                           ) : (

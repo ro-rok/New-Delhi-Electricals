@@ -9,7 +9,12 @@ import { useNavigate } from 'react-router-dom';
 // All GSAP usage lives inside useEffect (client-only, never runs on server).
 
 // ─── constants ────────────────────────────────────────────────────────────────
-const VIDEO_SRC       = '/ndehero_1440p_seek.mp4';
+// Desktop scrubs the video frame-by-frame, so it needs the all-intra ("seek")
+// encode at full resolution. Mobile (<768px) never scrubs — it just autoplays a
+// muted loop — so it gets the 720p standard-GOP encode instead: same footage,
+// ~3.3 MB less transfer and far cheaper decode on phone silicon.
+const VIDEO_SRC        = '/ndehero_1440p_seek.mp4';
+const VIDEO_SRC_MOBILE = '/ndehero.mp4';
 const VIDEO_FPS       = 24;
 const FRAME_DURATION  = 1 / VIDEO_FPS;
 const SCRUB_SCROLL_PX = 2800;
@@ -107,6 +112,18 @@ export default function CinematicVideoHero() {
 
     // ── reduced-motion bypass (no GSAP needed) ──────────────────────────
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      // Paint the opening frame without downloading the whole video: fetch
+      // metadata only, then nudge currentTime onto the leading keyframe so the
+      // browser decodes and shows exactly one frame. Uses the 720p source —
+      // nothing is scrubbed here, so the all-intra master buys nothing.
+      // Order matters: assigning preload before src makes the browser start
+      // fetching whatever src currently holds (the 1440p master) only to throw
+      // it away on the next line. Set the source first.
+      video.src     = VIDEO_SRC_MOBILE;
+      video.preload = 'metadata';
+      video.addEventListener('loadedmetadata', () => { video.currentTime = 0.04; }, { once: true });
+      video.load();
+
       if (pre) { pre.style.opacity = '0'; pre.style.pointerEvents = 'none'; }
       if (textRefs.current[0]) {
         textRefs.current[0].style.opacity   = '1';
@@ -152,6 +169,16 @@ export default function CinematicVideoHero() {
         video.playsInline  = true;
         video.loop        = true;
 
+        // Swap to the lighter 720p loop encode. Done here rather than in the
+        // JSX so server and client render identical markup (no hydration
+        // mismatch); preload="metadata" means almost nothing of the 1440p
+        // file has been fetched by this point. The load() below (or the one in
+        // the readyState branch) picks the new source up — never both.
+        // Source before preload — see the reduced-motion branch above.
+        const swappedSource = !video.currentSrc.endsWith(VIDEO_SRC_MOBILE);
+        if (swappedSource) video.src = VIDEO_SRC_MOBILE;
+        video.preload = 'auto';
+
         const onMobileReady = () => {
           if (pre) {
             pre.style.transition = 'opacity 0.6s ease';
@@ -165,7 +192,7 @@ export default function CinematicVideoHero() {
           video.play().catch(() => {});
         };
 
-        if (video.readyState >= 2) {
+        if (!swappedSource && video.readyState >= 2) {
           onMobileReady();
         } else {
           video.addEventListener('canplay', onMobileReady, { once: true });
@@ -259,13 +286,19 @@ export default function CinematicVideoHero() {
       className="cinematic-hero-wrapper"
       style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden', background: '#050a12' }}
     >
-      {/* Video */}
+      {/* Video.
+          preload is "none", not "auto": every branch of the effect below arms
+          preload and calls load() itself once it knows which source it wants.
+          Starting at "auto" made every visitor — mobile and reduced-motion
+          included — eagerly pull the ~15 MB 1440p master in competition with
+          LCP resources, and on mobile that download was then thrown away when
+          the 720p source was selected. */}
       <video
         ref={videoRef}
         src={VIDEO_SRC}
         muted
         playsInline
-        preload="auto"
+        preload="none"
         aria-hidden="true"
         style={{
           position: 'absolute', inset: 0,

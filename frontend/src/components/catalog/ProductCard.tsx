@@ -9,12 +9,23 @@ import { cn, getProductUrl } from '@/lib/utils';
 import { useMagneticEffect } from '@/hooks/useMagneticEffect';
 import { LazyImage } from '@/components/ui/LazyImage';
 import { ProductImagePlaceholder } from '@/components/ui/ProductImagePlaceholder';
+import { responsiveImage, cloudinaryUrl, CARD_WIDTHS } from '@/lib/imageUrl';
 
 interface ProductCardProps {
   product: Product;
   index?: number;
   variant?: 'default' | 'compact';
+  /**
+   * Marks this card's image as an above-the-fold LCP candidate: it renders on
+   * first paint with fetchpriority="high" instead of waiting for the observer.
+   * Only the first row of a grid should ever set this.
+   */
+  priority?: boolean;
 }
+
+// Card image slot: half the viewport on phones (2-col grid), capped at the
+// 4-col desktop track width. Drives which srcset candidate the browser picks.
+const CARD_SIZES = '(min-width: 1024px) 280px, (min-width: 768px) 33vw, 50vw';
 
 const badgeConfig = {
   popular: { label: 'Popular', className: 'bg-accent/10 text-accent border-accent/20' },
@@ -22,7 +33,7 @@ const badgeConfig = {
   new: { label: 'New', className: 'bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950 dark:text-blue-300 dark:border-blue-800' },
 };
 
-const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardProps) => {
+const ProductCard = ({ product, index = 0, variant = 'default', priority = false }: ProductCardProps) => {
   const { toggleShortlist, isInShortlist, trackWhatsAppClick } = useApp();
   const heartBtnRef = useMagneticEffect(0.25);
 
@@ -64,12 +75,20 @@ const ProductCard = ({ product, index = 0, variant = 'default' }: ProductCardPro
         <div className="relative bg-card rounded-2xl border border-border/60 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-accent/20">
           {/* Image */}
           <div className="relative aspect-square bg-gradient-to-b from-secondary/30 to-secondary/10 overflow-hidden">
+            {/* placeholder is a 32px blur-up thumbnail (~1 kB). It used to be
+                the same full-size URL as src, which downloaded the multi-MB
+                catalogue master for every card, eagerly, on first paint. */}
             {product.images && product.images.length > 0 && product.images[0] ? (
               <LazyImage
-                src={product.images[0]}
+                {...responsiveImage(product.images[0], 480, CARD_WIDTHS)}
+                sizes={CARD_SIZES}
                 alt={product.name}
+                width={480}
+                height={480}
+                loading={priority ? 'eager' : 'lazy'}
+                fetchPriority={priority ? 'high' : undefined}
                 className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-                placeholder={product.images[0]}
+                placeholder={cloudinaryUrl(product.images[0], 32)}
               />
             ) : (
               <ProductImagePlaceholder className="w-full h-full" />

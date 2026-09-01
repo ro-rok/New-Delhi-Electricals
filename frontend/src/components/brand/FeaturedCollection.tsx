@@ -4,6 +4,7 @@ import mcbImage from "@/assets/product-mcb-premium.jpg";
 import wireImage from "@/assets/product-wire-premium.jpg";
 import lightImage from "@/assets/product-light-premium.jpg";
 import { Link } from "react-router-dom";
+import { responsiveImage, CARD_WIDTHS } from '@/lib/imageUrl';
 
 interface FeaturedProduct {
   id: string;
@@ -89,9 +90,13 @@ const FeaturedCollection = ({ brandName }: FeaturedCollectionProps) => {
                   {/* Product image with soft gradient overlay */}
                   <div className="aspect-square overflow-hidden bg-gradient-to-br from-muted/30 to-muted/10">
                     <motion.img
-                      src={product.image}
+                      {...responsiveImage(product.image, 640, CARD_WIDTHS)}
+                      sizes="(min-width: 1024px) 420px, (min-width: 640px) 45vw, 92vw"
                       alt={product.name}
+                      width={640}
+                      height={640}
                       loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>

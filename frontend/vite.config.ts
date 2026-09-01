@@ -62,7 +62,15 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
             "@radix-ui/react-popover",
           ],
           "form-vendor": ["react-hook-form", "@hookform/resolvers", "zod"],
-          "animation-vendor": ["framer-motion", "gsap", "lenis"],
+          // framer-motion only. GSAP is deliberately NOT listed here: it is
+          // dynamically imported by CinematicVideoHero (homepage) alone, and
+          // naming it in a manual chunk merged it into a chunk that
+          // framer-motion keeps eager, so every category/brand/hub route
+          // downloaded and parsed the cinematic animation engine. Leaving it
+          // out lets Rollup emit gsap + ScrollTrigger as async-only chunks
+          // fetched by the homepage hero and nowhere else.
+          // `lenis` was also listed but is imported by no shipped component.
+          "animation-vendor": ["framer-motion"],
         } }),
         // Optimize chunk file names
         chunkFileNames: "assets/js/[name]-[hash].js",

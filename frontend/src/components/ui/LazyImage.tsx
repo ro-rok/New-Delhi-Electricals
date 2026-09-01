@@ -5,9 +5,21 @@ import { cn } from '@/lib/utils';
 interface LazyImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   src: string;
   alt: string;
+  /**
+   * Low-resolution blur-up image shown while the real image decodes.
+   * NOTE: this must be a genuinely small derivative — passing the full-size
+   * `src` here downloads the master twice and defeats the whole component.
+   */
   placeholder?: string;
   className?: string;
   onError?: () => void;
+  /**
+   * `eager` opts out of the IntersectionObserver gate entirely and renders the
+   * <img> on first paint. Use it only for a real LCP candidate; everything
+   * below the fold should stay lazy.
+   */
+  loading?: 'lazy' | 'eager';
+  fetchPriority?: 'high' | 'low' | 'auto';
 }
 
 /**
@@ -16,19 +28,30 @@ interface LazyImageProps extends ImgHTMLAttributes<HTMLImageElement> {
  */
 export const LazyImage = ({
   src,
+  srcSet,
+  sizes,
   alt,
   placeholder,
   className,
   onError,
+  loading = 'lazy',
+  fetchPriority,
+  width,
+  height,
   ...props
 }: LazyImageProps) => {
+  const isEager = loading === 'eager';
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+  // Eager images bypass the observer gate so they are in the initial HTML paint
+  // and remain discoverable as an LCP candidate.
+  const [isInView, setIsInView] = useState(isEager);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (isEager) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -51,16 +74,16 @@ export const LazyImage = ({
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [isEager]);
 
-  const handleLoad = () => {
-    setIsLoaded(true);
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
+  // framer-motion's <motion.img> prop types omit some plain DOM image
+  // attributes (notably fetchpriority, which React 18 does not camelCase-map
+  // either), so they are applied as a raw attribute bag.
+  const nativeImgAttrs = {
+    loading,
+    decoding: isEager ? 'sync' : 'async',
+    ...(fetchPriority ? { fetchpriority: fetchPriority } : {}),
+  } as Record<string, string>;
 
   return (
     <div ref={containerRef} className={cn('relative overflow-hidden', className)}>
@@ -77,6 +100,8 @@ export const LazyImage = ({
               <img
                 src={placeholder}
                 alt=""
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover blur-sm scale-110"
                 aria-hidden="true"
               />
@@ -92,15 +117,23 @@ export const LazyImage = ({
         <motion.img
           ref={imgRef}
           src={src}
+          srcSet={srcSet}
+          sizes={sizes}
           alt={alt}
-          onLoad={handleLoad}
-          onError={handleError}
+          width={width}
+          height={height}
+          onLoad={() => setIsLoaded(true)}
+          onError={() => {
+            setHasError(true);
+            onError?.();
+          }}
           className={cn(
             'w-full h-full object-contain transition-opacity duration-300',
             isLoaded ? 'opacity-100' : 'opacity-0',
             className
           )}
           {...props}
+          {...nativeImgAttrs}
         />
       )}
 
@@ -113,4 +146,3 @@ export const LazyImage = ({
     </div>
   );
 };
-
