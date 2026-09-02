@@ -219,8 +219,9 @@ const ContactPageContent = () => {
                     <div>
                       <h3 className="font-semibold mb-1">Operating Hours</h3>
                       <p className="text-sm text-muted-foreground">
-                        Monday – Sunday<br />
-                        10:00 AM – 7:30 PM
+                        Monday to Sunday<br />
+                        10:00 AM to 7:30 PM<br />
+                        Tuesday: half day, open till 4:00 PM
                       </p>
                     </div>
                   </div>

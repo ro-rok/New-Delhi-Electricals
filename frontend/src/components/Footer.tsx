@@ -22,7 +22,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin size={16} className="mt-1 flex-shrink-0" strokeWidth={1.5} />
                 <span className="leading-relaxed">
-                  30 A Corner Market, Malviya Nagar<br />New Delhi – 110017
+                  30 A Corner Market, Malviya Nagar<br />New Delhi 110017
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -36,8 +36,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-3 md:mb-4 text-sm tracking-tight">Operating Hours</h4>
             <div className="text-sm text-muted-foreground space-y-1">
-              <p>Monday – Sunday</p>
-              <p className="font-medium text-foreground">10:00 AM – 7:30 PM</p>
+              <p>Monday to Sunday</p>
+              <p className="font-medium text-foreground">10:00 AM to 7:30 PM</p>
+              <p>Tuesday: half day, open till 4:00 PM</p>
             </div>
             <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-border/50">
               <p className="text-xs text-muted-foreground mb-1">Service Area</p>

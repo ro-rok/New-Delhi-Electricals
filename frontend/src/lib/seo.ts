@@ -45,12 +45,20 @@ export const PAGE_SEO: Record<string, SEOMetadata> = {
       // Only facts already published on the site: the counter hours and service area shown
       // in the footer and on /contact. No second location is claimed.
       areaServed: 'Delhi NCR',
-      openingHoursSpecification: [{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '10:00',
-        closes: '19:30',
-      }],
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '10:00',
+          closes: '19:30',
+        },
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: 'Tuesday',
+          opens: '10:00',
+          closes: '16:00',
+        },
+      ],
     },
   },
   

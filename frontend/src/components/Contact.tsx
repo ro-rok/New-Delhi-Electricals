@@ -6,17 +6,17 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Our Store",
-    details: ["30 A Corner Market, Malviya Nagar", "Maharishi Dayanand Marg", "New Delhi – 110017"],
+    details: ["30 A Corner Market, Malviya Nagar", "Maharishi Dayanand Marg", "New Delhi 110017"],
   },
   {
     icon: Phone,
     title: "Call or WhatsApp",
-    details: ["9654102758", "(10:00 AM – 7:30 PM)"],
+    details: ["9654102758", "(10:00 AM to 7:30 PM)"],
   },
   {
     icon: Clock,
     title: "Operating Hours",
-    details: ["Monday – Sunday", "10:00 AM – 7:30 PM"],
+    details: ["Monday to Sunday", "10:00 AM to 7:30 PM", "Tuesday: half day, open till 4:00 PM"],
   },
 ];
 
