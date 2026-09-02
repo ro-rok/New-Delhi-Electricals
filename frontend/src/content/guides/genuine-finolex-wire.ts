@@ -2,7 +2,7 @@ import type { GuideBody } from '@/lib/guides';
 
 export const genuineFinolexWire: GuideBody = {
   slug: 'genuine-finolex-wire',
-  standfirst: 'The checks worth relying on are documentary, not visual. Three of them actually verify something: buy from an authorised dealer and keep a GST invoice that names the exact product, look up the BIS licence number printed on the product in the Bureau of Indian Standards’ own database using the free BIS CARE app, and use Finolex’s own product-check portal. Everything else — how the print looks, how the packaging feels, whether there is a hologram — is a weak signal, because appearance is the first thing anyone copying a product gets right.',
+  standfirst: 'The checks worth relying on are documentary, not visual. Three of them actually verify something: buy from an authorised dealer and keep a GST invoice that names the exact product, look up the BIS licence number printed on the product in the Bureau of Indian Standards’ own database using the free BIS CARE app, and use Finolex’s own product-check portal. Everything else, such as how the print looks, how the packaging feels, or whether there is a hologram, is a weak signal, because appearance is the first thing anyone copying a product gets right.',
   sections: [
     {
       id: 'why-visual-fails',
@@ -18,7 +18,7 @@ export const genuineFinolexWire: GuideBody = {
         },
         {
           kind: 'p',
-          text: 'What cannot be reproduced is an entry in someone else’s database. That is the principle behind the three checks below: each one asks an independent party — the Bureau of Indian Standards, the manufacturer, or the tax record behind your invoice — to confirm the product, rather than asking you to judge it by eye.',
+          text: 'What cannot be reproduced is an entry in someone else’s database. That is the principle behind the three checks below: each one asks an independent party (the Bureau of Indian Standards, the manufacturer, or the tax record behind your invoice) to confirm the product, rather than asking you to judge it by eye.',
         },
       ],
     },
@@ -33,10 +33,10 @@ export const genuineFinolexWire: GuideBody = {
         {
           kind: 'list',
           items: [
-            'Buy from an authorised dealer for the brand. Authorisation is a relationship with the manufacturer, and it is checkable — ask, and check against the manufacturer’s own dealer listing.',
-            'Insist on a GST invoice that names the exact product: brand, grade, conductor size, coil length. “Wire — 1 coil” on a slip of paper protects nobody.',
+            'Buy from an authorised dealer for the brand. Authorisation is a relationship with the manufacturer, and it is checkable: ask, and check against the manufacturer’s own dealer listing.',
+            'Insist on a GST invoice that names the exact product: brand, grade, conductor size, coil length. “Wire, 1 coil” on a slip of paper protects nobody.',
             'Keep the invoice. If a product ever has to be raised with the manufacturer, an invoice naming the exact SKU from an authorised seller is what makes that conversation possible. Without it there is nothing to investigate.',
-            'Be careful about a price well below the market. There are legitimate reasons a price is lower — bulk, an old price list, a clearing stock line — but every one of them has an explanation the seller can give you. If there is no explanation, that is the signal.',
+            'Be careful about a price well below the market. There are legitimate reasons a price is lower, such as bulk, an old price list or a clearing stock line, but every one of them has an explanation the seller can give you. If there is no explanation, that is the signal.',
           ],
         },
         {
@@ -97,7 +97,7 @@ export const genuineFinolexWire: GuideBody = {
         },
         {
           kind: 'p',
-          text: 'The portal works one way only: it opens your phone camera and reads a QR code. There is no field to type a code into, no SMS number and no scratch panel to reveal — if you are being asked to do any of those for a Finolex product, that is not this check. The portal itself carries one instruction before the camera opens, and it is worth following literally: scan only the external QR code.',
+          text: 'The portal works one way only: it opens your phone camera and reads a QR code. There is no field to type a code into, no SMS number and no scratch panel to reveal. If you are being asked to do any of those for a Finolex product, that is not this check. The portal itself carries one instruction before the camera opens, and it is worth following literally: scan only the external QR code.',
         },
         {
           kind: 'p',
@@ -107,13 +107,13 @@ export const genuineFinolexWire: GuideBody = {
           kind: 'callout',
           tone: 'note',
           heading: 'Where the code sits, and what a failed scan does not prove',
-          body: 'Finolex does not publish which part of a house-wire coil carries the scannable code, and it varies by pack, so follow the verification instructions printed on the product you actually received rather than hunting for a code in a fixed place. A scan that returns nothing is a reason to stop and ask the seller — it is not by itself proof of a counterfeit, because packaging is damaged and codes are already scanned in ordinary handling. The BIS licence lookup in check 2 remains the check that stands on its own.',
+          body: 'Finolex does not publish which part of a house-wire coil carries the scannable code, and it varies by pack, so follow the verification instructions printed on the product you actually received rather than hunting for a code in a fixed place. A scan that returns nothing is a reason to stop and ask the seller. It is not by itself proof of a counterfeit, because packaging is damaged and codes are already scanned in ordinary handling. The BIS licence lookup in check 2 remains the check that stands on its own.',
         },
         {
           kind: 'callout',
           tone: 'note',
           heading: 'A note on holograms and scratch codes',
-          body: 'Anti-counterfeit features change without notice, and describing a feature that has since been retired is worse than describing none — it teaches people to look for the wrong thing. Confirm the current feature with the manufacturer or an authorised dealer rather than relying on an article, this one included.',
+          body: 'Anti-counterfeit features change without notice, and describing a feature that has since been retired is worse than describing none: it teaches people to look for the wrong thing. Confirm the current feature with the manufacturer or an authorised dealer rather than relying on an article, this one included.',
         },
       ],
     },
@@ -123,7 +123,7 @@ export const genuineFinolexWire: GuideBody = {
       blocks: [
         {
           kind: 'p',
-          text: 'Beyond authenticity, the printed information on the coil is how you confirm you were supplied the product you paid for — which, in practice, is the substitution people actually encounter. Read it against your invoice line by line.',
+          text: 'Beyond authenticity, the printed information on the coil is how you confirm you were supplied the product you paid for, which, in practice, is the substitution people actually encounter. Read it against your invoice line by line.',
         },
         {
           kind: 'table',
@@ -166,7 +166,7 @@ export const genuineFinolexWire: GuideBody = {
             'Photograph the coil, the label, the printed markings and the invoice together, before anything is opened further.',
             'Raise it with the seller first and in writing. A legitimate seller can trace the coil back through their own purchase record.',
             'Contact the manufacturer with the invoice and the photographs. This is why check 1 matters: without a traceable invoice there is nothing for anyone to investigate.',
-            'If the product is genuine but is not what you ordered — a grade or a length short of the invoice — that is a supply dispute, and it is resolved the same way, with the same photographs.',
+            'If the product is genuine but is not what you ordered, say a grade or a length short of the invoice, that is a supply dispute, and it is resolved the same way, with the same photographs.',
           ],
         },
         {
@@ -193,7 +193,7 @@ export const genuineFinolexWire: GuideBody = {
     },
     {
       question: 'Is cheaper Finolex wire always fake?',
-      answer: 'No. Bulk quantities, an older price list and stock being cleared are all ordinary reasons for a lower price, and each has an explanation the seller can give you. The signal is not the price by itself — it is a price with no explanation behind it, and no invoice naming the exact product.',
+      answer: 'No. Bulk quantities, an older price list and stock being cleared are all ordinary reasons for a lower price, and each has an explanation the seller can give you. The signal is not the price by itself. It is a price with no explanation behind it, and no invoice naming the exact product.',
     },
     {
       question: 'Do these checks work for other brands?',
@@ -208,10 +208,10 @@ export const genuineFinolexWire: GuideBody = {
     browse: { label: 'Browse Finolex wires & cables', path: '/brand/finolex/wires-cables' },
   },
   sources: [
-    { label: 'BIS CARE app — Bureau of Indian Standards', url: 'https://www.services.bis.gov.in/php/BIS_2.0/BISBlog/bis-care-app/' },
-    { label: 'IS 694 — PVC insulated cables for working voltages up to and including 1100 V', url: 'https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/standard_review/isdetails/MzQ2Nzk' },
-    { label: 'Finolex “True Product Checker” — the manufacturer’s own product verification portal', url: 'https://check.finolex.com/' },
-    { label: 'Finolex Cables — wires and cables product range', url: 'https://www.finolex.com/ProductPage/Cat/Wires-and-cables' },
+    { label: 'BIS CARE app (Bureau of Indian Standards)', url: 'https://www.services.bis.gov.in/php/BIS_2.0/BISBlog/bis-care-app/' },
+    { label: 'IS 694: PVC insulated cables for working voltages up to and including 1100 V', url: 'https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/standard_review/isdetails/MzQ2Nzk' },
+    { label: 'Finolex “True Product Checker”: the manufacturer’s own product verification portal', url: 'https://check.finolex.com/' },
+    { label: 'Finolex Cables: wires and cables product range', url: 'https://www.finolex.com/ProductPage/Cat/Wires-and-cables' },
   ],
   related: ['best-wire-for-house-wiring'],
 };

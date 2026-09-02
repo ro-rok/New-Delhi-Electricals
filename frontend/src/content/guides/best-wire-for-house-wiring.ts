@@ -2,11 +2,11 @@ import type { GuideBody } from '@/lib/guides';
 
 export const bestWireForHouseWiring: GuideBody = {
   slug: 'best-wire-for-house-wiring',
-  standfirst: 'For domestic wiring in India the answer is almost always the same product family: single-core, multi-strand copper house wire made to IS 694 in the 1100 V grade, with a flame-retardant insulation grade, sized circuit by circuit. The brand is the last decision you make, not the first — conductor size, insulation grade and buying a genuine ISI-marked product matter far more than the name printed on the coil.',
+  standfirst: 'For domestic wiring in India the answer is almost always the same product family: single-core, multi-strand copper house wire made to IS 694 in the 1100 V grade, with a flame-retardant insulation grade, sized circuit by circuit. The brand is the last decision you make, not the first. Conductor size, insulation grade and buying a genuine ISI-marked product matter far more than the name printed on the coil.',
   sections: [
     {
       id: 'four-decisions',
-      heading: 'There is no single “best wire” — there are four decisions',
+      heading: 'There is no single “best wire”: there are four decisions',
       blocks: [
         {
           kind: 'p',
@@ -18,7 +18,7 @@ export const bestWireForHouseWiring: GuideBody = {
           columns: ['Decision', 'Answer for a typical Indian home', 'Room for debate'],
           rows: [
             ['Conductor material', 'Copper, multi-strand, for all internal circuits', 'Very little'],
-            ['Conductor size', 'Set circuit by circuit from the load, run length and protective device', 'None — this is design, not preference'],
+            ['Conductor size', 'Set circuit by circuit from the load, run length and protective device', 'None. This is design, not preference'],
             ['Insulation grade', 'Flame retardant as a minimum; a low-smoke grade where evacuation is harder', 'Some, and it is a real safety decision'],
             ['Brand', 'Any ISI-marked manufacturer to IS 694, bought from an authorised source', 'This is where preference legitimately lives'],
           ],
@@ -38,7 +38,7 @@ export const bestWireForHouseWiring: GuideBody = {
       blocks: [
         {
           kind: 'p',
-          text: 'For circuits inside a home — lights, fans, sockets, geyser and air-conditioner points — the practical answer in India is copper. Copper carries more current for a given cross-section, so the conductor is physically smaller for the same duty, and it behaves better at the screw terminals inside switchboards and distribution boards, which is where domestic wiring problems usually start.',
+          text: 'For circuits inside a home (lights, fans, sockets, geyser and air-conditioner points) the practical answer in India is copper. Copper carries more current for a given cross-section, so the conductor is physically smaller for the same duty, and it behaves better at the screw terminals inside switchboards and distribution boards, which is where domestic wiring problems usually start.',
         },
         {
           kind: 'p',
@@ -56,7 +56,7 @@ export const bestWireForHouseWiring: GuideBody = {
       blocks: [
         {
           kind: 'p',
-          text: 'Size is quoted in square millimetres of conductor cross-section — 0.75, 1.0, 1.5, 2.5, 4, 6 sq mm and upwards. It is decided by the design current of the circuit, the length of the run, how the cables are grouped and installed, and the rating of the MCB protecting them. A circuit schedule prepared by your electrician or consultant fixes these. A table on a website cannot.',
+          text: 'Size is quoted in square millimetres of conductor cross-section: 0.75, 1.0, 1.5, 2.5, 4, 6 sq mm and upwards. It is decided by the design current of the circuit, the length of the run, how the cables are grouped and installed, and the rating of the MCB protecting them. A circuit schedule prepared by your electrician or consultant fixes these. A table on a website cannot.',
         },
         {
           kind: 'p',
@@ -64,15 +64,15 @@ export const bestWireForHouseWiring: GuideBody = {
         },
         {
           kind: 'table',
-          caption: 'Sizes commonly seen on Indian domestic circuit schedules — indicative only',
+          caption: 'Sizes commonly seen on Indian domestic circuit schedules, indicative only',
           columns: ['Circuit', 'Size usually seen', 'Why'],
           rows: [
-            ['Light and fan points', '1.0 – 1.5 sq mm', 'Low, steady current spread across many points'],
-            ['General 6 A socket circuits', '1.5 – 2.5 sq mm', 'Small appliances, several outlets on one circuit'],
-            ['16 A power sockets, kitchen appliance points', '2.5 – 4 sq mm', 'Higher continuous current, often over a long run to a kitchen'],
+            ['Light and fan points', '1.0 to 1.5 sq mm', 'Low, steady current spread across many points'],
+            ['General 6 A socket circuits', '1.5 to 2.5 sq mm', 'Small appliances, several outlets on one circuit'],
+            ['16 A power sockets, kitchen appliance points', '2.5 to 4 sq mm', 'Higher continuous current, often over a long run to a kitchen'],
             ['Dedicated geyser and air-conditioner points', '4 sq mm and above', 'High continuous load on a circuit of its own'],
-            ['Submains and distribution-board feeds', '6 – 16 sq mm', 'Carries the sum of every circuit behind it'],
-            ['Main incomer from the meter', '10 – 35 sq mm', 'Sized against the sanctioned load, not against any one circuit'],
+            ['Submains and distribution-board feeds', '6 to 16 sq mm', 'Carries the sum of every circuit behind it'],
+            ['Main incomer from the meter', '10 to 35 sq mm', 'Sized against the sanctioned load, not against any one circuit'],
           ],
           note: 'Indicative sizes to help you read a quotation, not a substitute for a circuit design. If a quotation gives you a size well below this band, ask why before accepting it.',
         },
@@ -103,7 +103,7 @@ export const bestWireForHouseWiring: GuideBody = {
       blocks: [
         {
           kind: 'p',
-          text: 'Every house wire has a PVC layer over the copper. The obvious job is electrical — PVC is a good insulator, so it keeps the conductor separated from whatever it touches. The less obvious jobs matter just as much: it protects the copper from moisture and abrasion while the wire is pulled through conduit, it is flexible enough to survive being drawn around bends, and its colour is how an electrician tells line from neutral from earth years later.',
+          text: 'Every house wire has a PVC layer over the copper. The obvious job is electrical: PVC is a good insulator, so it keeps the conductor separated from whatever it touches. The less obvious jobs matter just as much: it protects the copper from moisture and abrasion while the wire is pulled through conduit, it is flexible enough to survive being drawn around bends, and its colour is how an electrician tells line from neutral from earth years later.',
         },
         {
           kind: 'p',
@@ -114,11 +114,11 @@ export const bestWireForHouseWiring: GuideBody = {
           caption: 'Flame-retardant grades you will see on Indian house wire',
           columns: ['Grade', 'What is modified', 'Where it is usually specified'],
           rows: [
-            ['FR — flame retardant', 'The compound resists ignition and is formulated not to sustain a flame along the run', 'The normal baseline for domestic circuits'],
-            ['FRLS / FR-LSH — flame retardant, low smoke (and halogen)', 'Adds reduced smoke density and reduced halogen acid-gas emission during burning', 'High-rise flats, shared corridors and stairwells, offices, hotels, hospitals — anywhere getting people out takes longer'],
-            ['HFFR / LSZH — halogen free', 'A different, non-PVC compound that removes halogen from the insulation entirely', 'Specified projects with an explicit halogen-free requirement; not a normal domestic grade'],
+            ['FR: flame retardant', 'The compound resists ignition and is formulated not to sustain a flame along the run', 'The normal baseline for domestic circuits'],
+            ['FRLS / FR-LSH: flame retardant, low smoke (and halogen)', 'Adds reduced smoke density and reduced halogen acid-gas emission during burning', 'High-rise flats, shared corridors and stairwells, offices, hotels and hospitals: anywhere getting people out takes longer'],
+            ['HFFR / LSZH: halogen free', 'A different, non-PVC compound that removes halogen from the insulation entirely', 'Specified projects with an explicit halogen-free requirement; not a normal domestic grade'],
           ],
-          note: 'Naming is not standardised across manufacturers. Finolex lists FR and FRLS; Polycab lists FR-LSH. Specify the manufacturer’s own grade name alongside the IS number rather than the acronym on its own — that is how you avoid being supplied a grade below the one you priced.',
+          note: 'Naming is not standardised across manufacturers. Finolex lists FR and FRLS; Polycab lists FR-LSH. Specify the manufacturer’s own grade name alongside the IS number rather than the acronym on its own. That is how you avoid being supplied a grade below the one you priced.',
         },
         { kind: 'h3', text: 'How to decide between them' },
         {
@@ -142,7 +142,7 @@ export const bestWireForHouseWiring: GuideBody = {
       blocks: [
         {
           kind: 'p',
-          text: 'This is the question most people start with, and it is the one with the least at stake — provided you buy a genuine, ISI-marked product from an authorised source. PVC-insulated cable for working voltages up to and including 1100 V is covered by IS 694, and ISI certification against it is mandatory for manufacturers. A wire carrying a valid ISI mark has been certified against the same conductor resistance, insulation thickness, high-voltage and flammability requirements regardless of whose name is on the drum.',
+          text: 'This is the question most people start with, and it is the one with the least at stake, provided you buy a genuine, ISI-marked product from an authorised source. PVC-insulated cable for working voltages up to and including 1100 V is covered by IS 694, and ISI certification against it is mandatory for manufacturers. A wire carrying a valid ISI mark has been certified against the same conductor resistance, insulation thickness, high-voltage and flammability requirements regardless of whose name is on the drum.',
         },
         {
           kind: 'p',
@@ -153,10 +153,10 @@ export const bestWireForHouseWiring: GuideBody = {
           caption: 'What actually differs between the house wire ranges we carry',
           columns: ['', 'Finolex', 'Polycab'],
           rows: [
-            ['Grades in our catalogue', 'FR (0.75 – 6 sq mm) and FRLS (10 – 35 sq mm)', 'FR-LSH across the whole listed range'],
+            ['Grades in our catalogue', 'FR (0.75 to 6 sq mm) and FRLS (10 to 35 sq mm)', 'FR-LSH across the whole listed range'],
             ['Size range listed', '0.75 to 35 sq mm', '0.75 to 16 sq mm'],
             ['Coil lengths listed', '90 m, 100 m, 200 m and 300 m', '200 m and 300 m'],
-            ['Short-coil option for small jobs', 'Yes — 90 m coils in the smaller sizes', 'Not in the current listing'],
+            ['Short-coil option for small jobs', 'Yes, 90 m coils in the smaller sizes', 'Not in the current listing'],
             ['Conductor and insulation', 'Copper, PVC, 1100 V, single core', 'Copper, PVC, 1100 V, single core'],
           ],
           note: 'Based on the records live in our catalogue. This reflects what we carry, not the manufacturers’ full national ranges.',
@@ -167,10 +167,10 @@ export const bestWireForHouseWiring: GuideBody = {
           ordered: true,
           items: [
             'Start from the grade your specification or your own risk tolerance requires. If it calls for low smoke, the shortlist is already narrower.',
-            'Check that the manufacturer lists every size on your schedule. Buying one size from a second brand because the first is short of it is normal and harmless — there is no compatibility issue between brands.',
+            'Check that the manufacturer lists every size on your schedule. Buying one size from a second brand because the first is short of it is normal and harmless. There is no compatibility issue between brands.',
             'Match coil length to the job. A single room does not need a 300 m coil, and a full rewire bought in 90 m coils means more joints and more offcuts.',
             'Compare the price quoted for the whole list rather than the price of one coil. Coil lengths differ between sizes and between brands, so a coil-to-coil comparison is not comparing like with like.',
-            'Confirm the product is genuine before you accept delivery. See [how to check a Finolex coil is genuine](/guides/genuine-finolex-wire) — the same principles apply to any brand.',
+            'Confirm the product is genuine before you accept delivery. See [how to check a Finolex coil is genuine](/guides/genuine-finolex-wire); the same principles apply to any brand.',
           ],
         },
       ],
@@ -206,11 +206,11 @@ export const bestWireForHouseWiring: GuideBody = {
     },
     {
       question: 'Is a more expensive brand of wire safer?',
-      answer: 'Not by itself. PVC-insulated cable up to 1100 V is covered by IS 694 and ISI certification against it is mandatory, so a genuine ISI-marked wire from any certified manufacturer has been tested against the same requirements. Price differences usually reflect the insulation grade, the copper content of the size you chose and the coil length — not a safety gap between certified brands.',
+      answer: 'Not by itself. PVC-insulated cable up to 1100 V is covered by IS 694 and ISI certification against it is mandatory, so a genuine ISI-marked wire from any certified manufacturer has been tested against the same requirements. Price differences usually reflect the insulation grade, the copper content of the size you chose and the coil length, not a safety gap between certified brands.',
     },
     {
       question: 'Do I need FRLS wire in a normal flat?',
-      answer: 'It is a judgement call rather than a rule. FR is the normal baseline for domestic circuits. The low-smoke grades are worth specifying where escape from the building is slower — a high-rise flat, an internal corridor, a single staircase — because smoke inhalation rather than flame is usually the danger. If a project specification names a grade, follow the specification.',
+      answer: 'It is a judgement call rather than a rule. FR is the normal baseline for domestic circuits. The low-smoke grades are worth specifying where escape from the building is slower, such as a high-rise flat, an internal corridor or a single staircase, because smoke inhalation rather than flame is usually the danger. If a project specification names a grade, follow the specification.',
     },
     {
       question: 'Can I use wire from two different brands in one house?',
@@ -229,9 +229,9 @@ export const bestWireForHouseWiring: GuideBody = {
     browse: { label: 'Browse wires & cables', path: '/category/wires-cables' },
   },
   sources: [
-    { label: 'IS 694 — PVC insulated cables for working voltages up to and including 1100 V (Bureau of Indian Standards)', url: 'https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/standard_review/isdetails/MzQ2Nzk' },
-    { label: 'Finolex Cables — wires and cables product range', url: 'https://www.finolex.com/ProductPage/Cat/Wires-and-cables' },
-    { label: 'Polycab — house wires', url: 'https://polycab.com/products/wires/' },
+    { label: 'IS 694: PVC insulated cables for working voltages up to and including 1100 V (Bureau of Indian Standards)', url: 'https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/standard_review/isdetails/MzQ2Nzk' },
+    { label: 'Finolex Cables: wires and cables product range', url: 'https://www.finolex.com/ProductPage/Cat/Wires-and-cables' },
+    { label: 'Polycab house wires', url: 'https://polycab.com/products/wires/' },
   ],
   related: ['genuine-finolex-wire', 'how-to-choose-mcb-for-home'],
 };

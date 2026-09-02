@@ -2,7 +2,7 @@ import type { GuideBody } from '@/lib/guides';
 
 export const howToChooseMcbForHome: GuideBody = {
   slug: 'how-to-choose-mcb-for-home',
-  standfirst: 'You do not choose one MCB for a house — you choose one per circuit. The rating has to sit between two numbers: at or above the design current of what is on the circuit, and at or below the current-carrying capacity of the cable protecting it. For most Indian homes that means a C curve MCB at 6 A for lighting, 16 A for general socket circuits, and 16 to 20 A on a dedicated 1.5 ton air-conditioner point. Because the cable sets the upper limit, an MCB cannot honestly be chosen without knowing what cable is behind it.',
+  standfirst: 'You do not choose one MCB for a house; you choose one per circuit. The rating has to sit between two numbers: at or above the design current of what is on the circuit, and at or below the current-carrying capacity of the cable protecting it. For most Indian homes that means a C curve MCB at 6 A for lighting, 16 A for general socket circuits, and 16 to 20 A on a dedicated 1.5 ton air-conditioner point. Because the cable sets the upper limit, an MCB cannot honestly be chosen without knowing what cable is behind it.',
   sections: [
     {
       id: 'the-rule',
@@ -19,8 +19,8 @@ export const howToChooseMcbForHome: GuideBody = {
         {
           kind: 'list',
           items: [
-            'At or above the design current of the circuit — otherwise it trips during normal use and everyone learns to ignore it.',
-            'At or below the current-carrying capacity of the cable in its actual installed conditions — otherwise the cable can overheat while the MCB sits there perfectly happy.',
+            'At or above the design current of the circuit, or it trips during normal use and everyone learns to ignore it.',
+            'At or below the current-carrying capacity of the cable in its actual installed conditions, or the cable can overheat while the MCB sits there perfectly happy.',
           ],
         },
         {
@@ -47,7 +47,7 @@ export const howToChooseMcbForHome: GuideBody = {
         { kind: 'h3', text: '2. Find the ceiling the cable sets' },
         {
           kind: 'p',
-          text: 'This is the step people skip. The cable already run to that point has a capacity, and the MCB cannot exceed it. If the circuit is being designed now, the two are chosen together — the load sets the cable, the cable sets the ceiling, and the MCB lands between them.',
+          text: 'This is the step people skip. The cable already run to that point has a capacity, and the MCB cannot exceed it. If the circuit is being designed now, the two are chosen together: the load sets the cable, the cable sets the ceiling, and the MCB lands between them.',
         },
         { kind: 'h3', text: '3. Pick the nearest standard rating in between' },
         {
@@ -57,12 +57,12 @@ export const howToChooseMcbForHome: GuideBody = {
         { kind: 'h3', text: '4. Choose the trip curve' },
         {
           kind: 'p',
-          text: 'C curve is the general-purpose choice for Indian homes and covers mixed sockets, motors and air conditioners. B curve suits purely resistive loads such as lighting and heating. D curve is for heavy inductive starting loads and is unusual in a home. The MCBs we carry are C curve. Curve and rating are separate decisions — [see the fuller explanation in our MCB vs MCCB guide](/guides/mcb-vs-mccb).',
+          text: 'C curve is the general-purpose choice for Indian homes and covers mixed sockets, motors and air conditioners. B curve suits purely resistive loads such as lighting and heating. D curve is for heavy inductive starting loads and is unusual in a home. The MCBs we carry are C curve. Curve and rating are separate decisions. [See the fuller explanation in our MCB vs MCCB guide](/guides/mcb-vs-mccb).',
         },
         { kind: 'h3', text: '5. Choose the number of poles' },
         {
           kind: 'p',
-          text: 'Single pole switches the live conductor only, and is the usual choice for lighting and general socket circuits on a single-phase supply. Double pole switches live and neutral together, which is what you want on a dedicated high-load appliance point — a geyser, an air conditioner — because it isolates the appliance completely. Triple and four pole devices belong on three-phase circuits and board incomers.',
+          text: 'Single pole switches the live conductor only, and is the usual choice for lighting and general socket circuits on a single-phase supply. Double pole switches live and neutral together, which is what you want on a dedicated high-load appliance point such as a geyser or an air conditioner, because it isolates the appliance completely. Triple and four pole devices belong on three-phase circuits and board incomers.',
         },
       ],
     },
@@ -72,15 +72,15 @@ export const howToChooseMcbForHome: GuideBody = {
       blocks: [
         {
           kind: 'table',
-          caption: 'What appears on most Indian domestic board schedules — indicative, not prescriptive',
+          caption: 'What appears on most Indian domestic board schedules, indicative not prescriptive',
           columns: ['Circuit', 'Usual MCB', 'Poles', 'Notes'],
           rows: [
             ['Lighting and fan points', '6 A, C curve', 'Single pole', 'Several points share one circuit'],
-            ['General 6 A socket circuit', '10 – 16 A, C curve', 'Single pole', 'Rating follows the cable size on the circuit'],
-            ['16 A power sockets, kitchen appliances', '16 – 20 A, C curve', 'Single or double pole', 'Kitchens often get a circuit of their own'],
+            ['General 6 A socket circuit', '10 to 16 A, C curve', 'Single pole', 'Rating follows the cable size on the circuit'],
+            ['16 A power sockets, kitchen appliances', '16 to 20 A, C curve', 'Single or double pole', 'Kitchens often get a circuit of their own'],
             ['Geyser / water heater point', '16 A, C curve (for a 3 kW heater)', 'Double pole', 'Dedicated circuit; double pole so it isolates fully'],
-            ['1.5 ton air-conditioner point', '16 – 20 A, C curve', 'Double pole', 'See the section below'],
-            ['Distribution board incomer', '40 – 63 A, or an isolator', 'Double or four pole', 'Sized against the board, not any one circuit'],
+            ['1.5 ton air-conditioner point', '16 to 20 A, C curve', 'Double pole', 'See the section below'],
+            ['Distribution board incomer', '40 to 63 A, or an isolator', 'Double or four pole', 'Sized against the board, not any one circuit'],
           ],
           note: 'These are the ratings that recur on domestic schedules. The rating for your circuit comes from its design current and its cable, which is why your electrician’s board schedule beats any table.',
         },
@@ -92,7 +92,7 @@ export const howToChooseMcbForHome: GuideBody = {
       blocks: [
         {
           kind: 'p',
-          text: 'A 16 A or 20 A C curve MCB, double pole, on a dedicated circuit — that is the answer on most Indian domestic schedules. The reasoning behind it is more useful than the number, because it tells you when the number is wrong.',
+          text: 'A 16 A or 20 A C curve MCB, double pole, on a dedicated circuit: that is the answer on most Indian domestic schedules. The reasoning behind it is more useful than the number, because it tells you when the number is wrong.',
         },
         {
           kind: 'p',
@@ -100,12 +100,12 @@ export const howToChooseMcbForHome: GuideBody = {
         },
         {
           kind: 'table',
-          caption: 'Air-conditioner points — the pattern, with the caveat that the nameplate wins',
+          caption: 'Air-conditioner points: the pattern, with the caveat that the nameplate wins',
           columns: ['Unit', 'Approximate running current', 'Usually specified'],
           rows: [
-            ['1.0 ton split', 'around 5 – 7 A', '16 A C curve, double pole'],
-            ['1.5 ton split', 'around 7 – 10 A', '16 A C curve, double pole; 20 A where the unit’s rated current is higher'],
-            ['2.0 ton split', 'around 10 – 13 A', '20 A C curve, double pole'],
+            ['1.0 ton split', 'around 5 to 7 A', '16 A C curve, double pole'],
+            ['1.5 ton split', 'around 7 to 10 A', '16 A C curve, double pole; 20 A where the unit’s rated current is higher'],
+            ['2.0 ton split', 'around 10 to 13 A', '20 A C curve, double pole'],
           ],
           note: 'Read the rated and maximum current from the unit’s nameplate or manual and use those, plus the cable size on the circuit. Tonnage is a cooling rating, not an electrical one, and two 1.5 ton units can differ.',
         },
@@ -114,7 +114,7 @@ export const howToChooseMcbForHome: GuideBody = {
           items: [
             'Give the air conditioner a dedicated circuit. Sharing it with sockets means one appliance can trip the other, and it makes the rating harder to choose.',
             'Use a double pole device on that circuit so the point can be isolated completely for service.',
-            'Check the cable. A 20 A MCB on a circuit wired for less is not a fix for tripping — it removes the protection the cable relies on.',
+            'Check the cable. A 20 A MCB on a circuit wired for less is not a fix for tripping: it removes the protection the cable relies on.',
             'If the unit trips the breaker only on start-up, that is a curve and coordination question. If it trips at random during running, treat it as a fault and have it looked at.',
           ],
         },
@@ -186,7 +186,7 @@ export const howToChooseMcbForHome: GuideBody = {
   faqs: [
     {
       question: 'Which MCB is best for a home?',
-      answer: 'There is no single answer, because a home needs several. Lighting circuits are usually 6 A, general socket circuits 10 to 16 A, and dedicated geyser and air-conditioner points 16 to 20 A on a double pole device — all C curve. Each rating has to fit the cable on that circuit, which is why the board schedule matters more than any general recommendation.',
+      answer: 'There is no single answer, because a home needs several. Lighting circuits are usually 6 A, general socket circuits 10 to 16 A, and dedicated geyser and air-conditioner points 16 to 20 A on a double pole device, all C curve. Each rating has to fit the cable on that circuit, which is why the board schedule matters more than any general recommendation.',
     },
     {
       question: 'Which MCB is required for a 1.5 ton AC?',
@@ -206,7 +206,7 @@ export const howToChooseMcbForHome: GuideBody = {
     },
     {
       question: 'Why does my MCB trip only when the AC starts?',
-      answer: 'That points at the starting surge rather than the running load — usually a curve or coordination question rather than a rating question. Have your electrician check the curve, the rating and the cable together. Fitting a larger device to make the symptom stop is the wrong fix.',
+      answer: 'That points at the starting surge rather than the running load, usually a curve or coordination question rather than a rating question. Have your electrician check the curve, the rating and the cable together. Fitting a larger device to make the symptom stop is the wrong fix.',
     },
   ],
   cta: {
@@ -217,9 +217,9 @@ export const howToChooseMcbForHome: GuideBody = {
     browse: { label: 'Browse circuit protection', path: '/category/circuit-protection' },
   },
   sources: [
-    { label: 'IEC 60898-1:2015 — Circuit-breakers for overcurrent protection for household and similar installations', url: 'https://webstore.iec.ch/en/publication/21972' },
-    { label: 'IS 732 — Code of practice for electrical wiring installations (Bureau of Indian Standards)', url: 'https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/standard_review/isdetails/MTA1NDU' },
-    { label: 'Lauritz Knudsen — how to choose an MCB for an air conditioner', url: 'https://smartshop.lk-ea.com/blog-articles/post/how-to-choose-mcb-for-ac.html' },
+    { label: 'IEC 60898-1:2015: Circuit-breakers for overcurrent protection for household and similar installations', url: 'https://webstore.iec.ch/en/publication/21972' },
+    { label: 'IS 732: Code of practice for electrical wiring installations (Bureau of Indian Standards)', url: 'https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/standard_review/isdetails/MTA1NDU' },
+    { label: 'Lauritz Knudsen: how to choose an MCB for an air conditioner', url: 'https://smartshop.lk-ea.com/blog-articles/post/how-to-choose-mcb-for-ac.html' },
   ],
   related: ['mcb-vs-mccb', 'rccb-explained'],
 };

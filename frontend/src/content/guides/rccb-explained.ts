@@ -2,7 +2,7 @@ import type { GuideBody } from '@/lib/guides';
 
 export const rccbExplained: GuideBody = {
   slug: 'rccb-explained',
-  standfirst: 'An RCCB — residual current circuit breaker — continuously compares the current flowing out along the live conductor with the current returning along the neutral. In a healthy circuit those are equal. If they differ by more than the device’s sensitivity rating, current is leaving the circuit somewhere it should not: through damaged insulation, through a wet appliance, or through a person. The RCCB disconnects the supply in a few tens of milliseconds. It is the device in a distribution board that exists to protect people rather than cables, and it does nothing at all about overload or short circuit — that is still the MCB’s job.',
+  standfirst: 'An RCCB (residual current circuit breaker) continuously compares the current flowing out along the live conductor with the current returning along the neutral. In a healthy circuit those are equal. If they differ by more than the device’s sensitivity rating, current is leaving the circuit somewhere it should not: through damaged insulation, through a wet appliance, or through a person. The RCCB disconnects the supply in a few tens of milliseconds. It is the device in a distribution board that exists to protect people rather than cables, and it does nothing at all about overload or short circuit; that is still the MCB’s job.',
   sections: [
     {
       id: 'how-it-works',
@@ -17,21 +17,21 @@ export const rccbExplained: GuideBody = {
           ordered: true,
           items: [
             'Both the live and neutral conductors of the circuit pass through a ring-shaped magnetic core inside the device.',
-            'Current flowing out on the live conductor and back on the neutral produces magnetic effects that cancel each other exactly — as long as every electron that left comes back the way it should.',
+            'Current flowing out on the live conductor and back on the neutral produces magnetic effects that cancel each other exactly, as long as every electron that left comes back the way it should.',
             'A third winding on that core senses whether the cancellation is complete. In a healthy circuit it sees nothing.',
-            'If some current leaves the circuit by another route — through a fault to earth, or through a person touching a live part — the outgoing and returning currents no longer match. That difference is the residual current the device is named after.',
+            'If some current leaves the circuit by another route, through a fault to earth or a person touching a live part, the outgoing and returning currents no longer match. That difference is the residual current the device is named after.',
             'Once the residual current exceeds the device’s rated sensitivity, the sensing winding operates a tripping mechanism and the contacts open. The disconnection happens in a few tens of milliseconds, which is fast enough to matter.',
           ],
         },
         {
           kind: 'p',
-          text: 'That is why an RCCB catches a fault an MCB cannot see. A person touching a live conductor may draw only a few tens of milliamps — nowhere near enough to look like an overload on a 16 A circuit — but it is a glaring imbalance, and imbalance is the only thing the RCCB is watching.',
+          text: 'That is why an RCCB catches a fault an MCB cannot see. A person touching a live conductor may draw only a few tens of milliamps, nowhere near enough to look like an overload on a 16 A circuit, but it is a glaring imbalance, and imbalance is the only thing the RCCB is watching.',
         },
         {
           kind: 'callout',
           tone: 'safety',
           heading: 'Understanding, not installation',
-          body: 'This page explains what the device does so you can specify and buy the right one. Installing, replacing or testing a residual current device in a live board is work for a licensed electrician. An RCCB that trips repeatedly, or that will not reset, is reporting a fault in the installation — treat it as information, not as an inconvenience to be worked around.',
+          body: 'This page explains what the device does so you can specify and buy the right one. Installing, replacing or testing a residual current device in a live board is work for a licensed electrician. An RCCB that trips repeatedly, or that will not reset, is reporting a fault in the installation. Treat it as information, not as an inconvenience to be worked around.',
         },
       ],
     },
@@ -48,7 +48,7 @@ export const rccbExplained: GuideBody = {
           caption: 'The two numbers on the front of the device',
           columns: ['Rating', 'What it means', 'Typical values'],
           rows: [
-            ['Current rating, in amps', 'How much load current the device can carry continuously. It is a switch rating, not a protection setting — the RCCB will not trip on overload at all.', '25 A, 40 A, 63 A'],
+            ['Current rating, in amps', 'How much load current the device can carry continuously. It is a switch rating, not a protection setting: the RCCB will not trip on overload at all.', '25 A, 40 A, 63 A'],
             ['Sensitivity, in milliamps', 'The residual current at which it trips. This is the protective setting, and it is the number that decides what the device is actually for.', '30 mA, 100 mA, 300 mA'],
           ],
           note: 'A “40 A 30 mA” RCCB carries up to 40 A of load and trips at 30 mA of leakage. The two numbers are unrelated to each other.',
@@ -59,11 +59,11 @@ export const rccbExplained: GuideBody = {
           caption: 'Sensitivity ratings and what each is intended to do',
           columns: ['Sensitivity', 'Intended job', 'Where it is normally used'],
           rows: [
-            ['30 mA', 'Additional protection against electric shock — the level chosen because it acts below the current that causes serious harm', 'Domestic final circuits, bathrooms, kitchens, outdoor sockets, anywhere people handle appliances'],
+            ['30 mA', 'Additional protection against electric shock: the level chosen because it acts below the current that causes serious harm', 'Domestic final circuits, bathrooms, kitchens, outdoor sockets, anywhere people handle appliances'],
             ['100 mA', 'Fire risk from sustained leakage, and stability where small natural leakage is normal', 'Sub-distribution and grouped circuits, installations with many electronic loads'],
             ['300 mA', 'Fire protection at a higher level, and discrimination so an upstream device does not trip before a downstream one', 'Main incomers and upstream boards'],
           ],
-          note: 'The higher ratings are not weaker versions of a 30 mA device — they are for a different job. Only 30 mA is regarded as additional protection for people.',
+          note: 'The higher ratings are not weaker versions of a 30 mA device; they are for a different job. Only 30 mA is regarded as additional protection for people.',
         },
         {
           kind: 'p',
@@ -82,14 +82,14 @@ export const rccbExplained: GuideBody = {
           rows: [
             ['MCB', 'Overload and short circuit', 'Earth leakage', 'One per final circuit'],
             ['RCCB', 'Earth leakage (residual current)', 'Overload or short circuit', 'Covers a group of circuits behind it'],
-            ['RCBO', 'Both — earth leakage and overcurrent in one unit', '—', 'One per circuit, where the circuit needs its own leakage protection'],
-            ['ELCB', 'Historically a voltage-operated earth leakage device; in Indian catalogues the term is now widely used for RCCBs', '—', 'Read it as “RCCB” unless the schedule says otherwise'],
+            ['RCBO', 'Both: earth leakage and overcurrent in one unit', 'Not applicable', 'One per circuit, where the circuit needs its own leakage protection'],
+            ['ELCB', 'Historically a voltage-operated earth leakage device; in Indian catalogues the term is now widely used for RCCBs', 'Not applicable', 'Read it as “RCCB” unless the schedule says otherwise'],
           ],
           note: 'Our own catalogue lists this family as “Residual Current Circuit Breakers (RCCBs/ELCBs)”, which reflects how the two terms are used interchangeably in the Indian trade. If a schedule specifies an ELCB, confirm which device is meant before ordering.',
         },
         {
           kind: 'p',
-          text: 'The important consequence: an RCCB is never a substitute for MCBs. It has no overload protection of its own, and it depends on the devices around it. A board is normally MCBs plus an RCCB, or RCBOs — see [how to choose an MCB for home circuits](/guides/how-to-choose-mcb-for-home) for how the two arrangements compare in practice.',
+          text: 'The important consequence: an RCCB is not a substitute for MCBs. It has no overload protection of its own, and it depends on the devices around it. A board is normally MCBs plus an RCCB, or RCBOs. See [how to choose an MCB for home circuits](/guides/how-to-choose-mcb-for-home) for how the two arrangements compare in practice.',
         },
       ],
     },
@@ -100,12 +100,12 @@ export const rccbExplained: GuideBody = {
         { kind: 'h3', text: 'Two pole or four pole' },
         {
           kind: 'p',
-          text: 'A two pole RCCB is the single-phase device: live and neutral through the core, and both switched when it trips. That is the domestic case. A four pole device handles three phases plus neutral and belongs on a three-phase supply — a larger house with a three-phase connection, a shop, an office floor. The pole count follows the supply, not the sensitivity.',
+          text: 'A two pole RCCB is the single-phase device: live and neutral through the core, and both switched when it trips. That is the domestic case. A four pole device handles three phases plus neutral and belongs on a three-phase supply: a larger house with a three-phase connection, a shop, an office floor. The pole count follows the supply, not the sensitivity.',
         },
         { kind: 'h3', text: 'Type AC and Type A' },
         {
           kind: 'p',
-          text: 'Residual current devices are also classified by the kind of leakage current they can detect. A Type AC device responds to sinusoidal alternating residual current. A Type A device additionally responds to pulsating DC residual current, which is what electronic loads with rectifier front ends can produce — variable-speed drives, inverter air conditioners, LED drivers, EV charging equipment.',
+          text: 'Residual current devices are also classified by the kind of leakage current they can detect. A Type AC device responds to sinusoidal alternating residual current. A Type A device additionally responds to pulsating DC residual current, which is what electronic loads with rectifier front ends can produce: variable-speed drives, inverter air conditioners, LED drivers, EV charging equipment.',
         },
         {
           kind: 'p',
@@ -115,7 +115,7 @@ export const rccbExplained: GuideBody = {
           kind: 'callout',
           tone: 'note',
           heading: 'We do not state a type for the devices below, and here is why',
-          body: 'The residual current type is a marked characteristic of a specific device, not something you can work out from its current rating, its sensitivity, its pole count or its catalogue name. Lauritz Knudsen’s published technical data for the catalogue numbers we carry lists conformance to IS 12640-1 along with the full electrical specification, but does not state a residual current type, so we will not assign one on the manufacturer’s behalf. If your design calls for a specific type, tell us before you order and we will confirm the marked type against the manufacturer’s datasheet for that exact catalogue number — and the device itself carries the marking, so it can be checked on delivery.',
+          body: 'The residual current type is a marked characteristic of a specific device, not something you can work out from its current rating, its sensitivity, its pole count or its catalogue name. Lauritz Knudsen’s published technical data for the catalogue numbers we carry lists conformance to IS 12640-1 along with the full electrical specification, but does not state a residual current type, so we will not assign one on the manufacturer’s behalf. If your design calls for a specific type, tell us before you order and we will confirm the marked type against the manufacturer’s datasheet for that exact catalogue number, and the device itself carries the marking, so it can be checked on delivery.',
         },
       ],
     },
@@ -125,7 +125,7 @@ export const rccbExplained: GuideBody = {
       blocks: [
         {
           kind: 'p',
-          text: 'Our [circuit protection catalogue](/category/circuit-protection) lists Lauritz Knudsen residual current devices across all three sensitivities, in two and four pole, at 25, 40 and 63 A — plus RCBOs that combine leakage and overcurrent protection in a single device.',
+          text: 'Our [circuit protection catalogue](/category/circuit-protection) lists Lauritz Knudsen residual current devices across all three sensitivities, in two and four pole, at 25, 40 and 63 A, plus RCBOs that combine leakage and overcurrent protection in a single device.',
         },
         {
           kind: 'catalogue',
@@ -157,14 +157,14 @@ export const rccbExplained: GuideBody = {
           items: [
             'A genuine fault. Damaged insulation, water where it should not be, or a failing appliance letting current to earth. This is the case the device exists for, and the fix is finding the fault.',
             'Accumulated natural leakage. Many electronic appliances leak a very small current to earth by design. Put enough of them behind one 30 mA device and the total can approach the trip threshold on its own, especially in humid weather. This is a design problem, usually solved by splitting circuits across devices rather than by fitting a less sensitive one.',
-            'A device at the end of its life. Residual current devices are mechanical and they do wear. That is why manufacturers fit a test button and specify how often it should be pressed — follow the instructions supplied with your device.',
+            'A device at the end of its life. Residual current devices are mechanical and they do wear. That is why manufacturers fit a test button and specify how often it should be pressed: follow the instructions supplied with your device.',
           ],
         },
         {
           kind: 'callout',
           tone: 'safety',
           heading: 'What not to do',
-          body: 'Do not replace a 30 mA device with a 100 mA one to stop it tripping. The higher rating is for a different job and is not regarded as protection for people. If a device trips repeatedly, get a licensed electrician to find the cause — an insulation problem that is being masked will not stay harmless.',
+          body: 'Do not replace a 30 mA device with a 100 mA one to stop it tripping. The higher rating is for a different job and is not regarded as protection for people. If a device trips repeatedly, get a licensed electrician to find the cause; an insulation problem that is being masked will not stay harmless.',
         },
       ],
     },
@@ -172,15 +172,15 @@ export const rccbExplained: GuideBody = {
   faqs: [
     {
       question: 'What is an RCCB in electrical terms?',
-      answer: 'A residual current circuit breaker: a device that compares the current flowing out on the live conductor with the current returning on the neutral, and disconnects the supply when the difference exceeds its sensitivity rating. That difference means current is escaping the circuit — through a fault to earth, or through a person. It is shock and leakage protection, and it does not protect against overload or short circuit.',
+      answer: 'A residual current circuit breaker: a device that compares the current flowing out on the live conductor with the current returning on the neutral, and disconnects the supply when the difference exceeds its sensitivity rating. That difference means current is escaping the circuit: through a fault to earth, or through a person. It is shock and leakage protection, and it does not protect against overload or short circuit.',
     },
     {
       question: 'What is the difference between an RCCB and an MCB?',
-      answer: 'They watch for different faults. An MCB reacts to too much current in the circuit — overload and short circuit — and protects the cable. An RCCB reacts to current leaving the circuit and protects people. A board needs both; an RCBO combines them into a single device.',
+      answer: 'They watch for different faults. An MCB reacts to too much current in the circuit, meaning overload and short circuit, and protects the cable. An RCCB reacts to current leaving the circuit and protects people. A board needs both; an RCBO combines them into a single device.',
     },
     {
       question: 'Should I fit a 30 mA or a 100 mA RCCB?',
-      answer: '30 mA is the rating used for additional protection against electric shock and it is what domestic final circuits are normally specified with. 100 mA and 300 mA devices are for limiting fire risk from sustained leakage and for coordinating with devices below them, typically upstream. They are not gentler versions of a 30 mA device — they are for a different job.',
+      answer: '30 mA is the rating used for additional protection against electric shock and it is what domestic final circuits are normally specified with. 100 mA and 300 mA devices are for limiting fire risk from sustained leakage and for coordinating with devices below them, typically upstream. They are not gentler versions of a 30 mA device; they are for a different job.',
     },
     {
       question: 'Does an RCCB protect against overload?',
@@ -188,7 +188,7 @@ export const rccbExplained: GuideBody = {
     },
     {
       question: 'Two pole or four pole?',
-      answer: 'Two pole for a single-phase supply, which covers most homes. Four pole for a three-phase supply — a larger house with a three-phase connection, a shop or an office floor. The pole count follows the supply arrangement, not the sensitivity.',
+      answer: 'Two pole for a single-phase supply, which covers most homes. Four pole for a three-phase supply: a larger house with a three-phase connection, a shop or an office floor. The pole count follows the supply arrangement, not the sensitivity.',
     },
     {
       question: 'How often should the test button be pressed?',
@@ -203,11 +203,11 @@ export const rccbExplained: GuideBody = {
     browse: { label: 'Browse circuit protection', path: '/category/circuit-protection' },
   },
   sources: [
-    { label: 'IS 12640 (Part 1) — Residual current operated circuit-breakers for household and similar uses, RCCBs: the standard the devices we carry are declared to (Bureau of Indian Standards product manual)', url: 'https://bis.gov.in/wp-content/uploads/2018/11/IS-12640_P1_PM_revised.pdf' },
-    { label: 'IEC 61008-1:2024 — Residual current operated circuit-breakers without integral overcurrent protection (the international equivalent)', url: 'https://webstore.iec.ch/en/publication/67980' },
-    { label: 'IS 732 — Code of practice for electrical wiring installations (Bureau of Indian Standards)', url: 'https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/standard_review/isdetails/MTA1NDU' },
-    { label: 'Lauritz Knudsen — residual current circuit breaker (RCCB) range', url: 'https://www.lk-ea.com/products/mcb-rccb-distribution-boards/residual-current-circuit-breaker-rccb' },
-    { label: 'Lauritz Knudsen — residual current operated circuit breaker (RCBO) range', url: 'https://www.lk-ea.com/products/mcb-rccb-distribution-boards/residual-current-operated-circuit-breaker-rcbo' },
+    { label: 'IS 12640 (Part 1): Residual current operated circuit-breakers for household and similar uses (RCCBs). The standard the devices we carry are declared to (Bureau of Indian Standards product manual)', url: 'https://bis.gov.in/wp-content/uploads/2018/11/IS-12640_P1_PM_revised.pdf' },
+    { label: 'IEC 61008-1:2024: Residual current operated circuit-breakers without integral overcurrent protection (the international equivalent)', url: 'https://webstore.iec.ch/en/publication/67980' },
+    { label: 'IS 732: Code of practice for electrical wiring installations (Bureau of Indian Standards)', url: 'https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/standard_review/isdetails/MTA1NDU' },
+    { label: 'Lauritz Knudsen: residual current circuit breaker (RCCB) range', url: 'https://www.lk-ea.com/products/mcb-rccb-distribution-boards/residual-current-circuit-breaker-rccb' },
+    { label: 'Lauritz Knudsen: residual current operated circuit breaker (RCBO) range', url: 'https://www.lk-ea.com/products/mcb-rccb-distribution-boards/residual-current-operated-circuit-breaker-rcbo' },
   ],
   related: ['how-to-choose-mcb-for-home', 'mcb-vs-mccb'],
 };

@@ -11,8 +11,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "lighthouse": "lighthouse http://localhost:4173 --output html --output-path ./lighthouse-report.html --view",
-    "test": "npm run test:seo",
+    "test": "npm run test:guides && npm run test:seo",
     "test:seo": "node scripts/test-seo-output.js",
+    "test:guides": "node scripts/test-guides-editorial.js",
     "test:browser": "playwright test",
     "seo:checkpoint": "node scripts/seo-checkpoint.js"
   },

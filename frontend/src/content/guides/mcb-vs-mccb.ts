@@ -2,7 +2,7 @@ import type { GuideBody } from '@/lib/guides';
 
 export const mcbVsMccb: GuideBody = {
   slug: 'mcb-vs-mccb',
-  standfirst: 'Both are circuit breakers that disconnect a circuit on overload and short circuit. An MCB — miniature circuit breaker — is a small DIN-rail device with fixed trip settings, used on the final circuits and submains of homes and light commercial installations. An MCCB — moulded case circuit breaker — is a larger device with a much higher current and fault-breaking capability and, usually, adjustable trip settings, used at the main incomer and on distribution boards feeding heavy loads. If you are wiring a flat or a floor, you need MCBs. MCCBs turn up further upstream, where the building supply is switched.',
+  standfirst: 'Both are circuit breakers that disconnect a circuit on overload and short circuit. An MCB (miniature circuit breaker) is a small DIN-rail device with fixed trip settings, used on the final circuits and submains of homes and light commercial installations. An MCCB (moulded case circuit breaker) is a larger device with a much higher current and fault-breaking capability and, usually, adjustable trip settings, used at the main incomer and on distribution boards feeding heavy loads. If you are wiring a flat or a floor, you need MCBs. MCCBs turn up further upstream, where the building supply is switched.',
   sections: [
     {
       id: 'comparison',
@@ -16,8 +16,8 @@ export const mcbVsMccb: GuideBody = {
             ['Full name', 'Miniature circuit breaker', 'Moulded case circuit breaker'],
             ['Product standard', 'IS/IEC 60898-1 for household and similar installations', 'IEC 60947-2 for industrial switchgear'],
             ['Typical current ratings', 'A few amps up to around 125 A', 'Around 16 A up to 2500 A and beyond'],
-            ['Fault-breaking capacity', 'Commonly in the 6 – 10 kA range', 'Far higher, and selected against the fault level at that point'],
-            ['Trip settings', 'Fixed by the manufacturer — you choose them by choosing the device', 'Usually adjustable, thermal and often magnetic'],
+            ['Fault-breaking capacity', 'Commonly in the 6 to 10 kA range', 'Far higher, and selected against the fault level at that point'],
+            ['Trip settings', 'Fixed by the manufacturer: you choose them by choosing the device', 'Usually adjustable, thermal and often magnetic'],
             ['Mounting', 'Snaps onto DIN rail, sized in modules', 'Bolted or plugged into a panel, much larger'],
             ['Poles', 'Single, double, triple and four pole', 'Usually triple or four pole'],
             ['Where it belongs', 'Final circuits and submains in homes, shops and offices', 'Main incomers, heavy feeders, industrial panels'],
@@ -42,13 +42,13 @@ export const mcbVsMccb: GuideBody = {
         {
           kind: 'list',
           items: [
-            'Overload protection. A current somewhat above the rating, sustained for a while — too many appliances on one circuit, a motor working harder than it should. A bimetallic strip heats, bends and trips the mechanism. This is deliberately slow, because a brief overload is normal and tripping on it would be useless.',
-            'Short-circuit protection. A very large current, effectively instantly — line touching neutral, or a fault to earth on the phase conductor. An electromagnetic element trips the mechanism in a fraction of a cycle.',
+            'Overload protection. A current somewhat above the rating, sustained for a while: too many appliances on one circuit, or a motor working harder than it should. A bimetallic strip heats, bends and trips the mechanism. This is deliberately slow, because a brief overload is normal and tripping on it would be useless.',
+            'Short-circuit protection. A very large current, effectively instantly: line touching neutral, or a fault to earth on the phase conductor. An electromagnetic element trips the mechanism in a fraction of a cycle.',
           ],
         },
         {
           kind: 'p',
-          text: 'Neither device protects a person against electric shock. Both are there to protect the cable and the installation from current the cable was not sized to carry. Shock and earth-leakage protection is a separate device — see [what an RCCB does and how it works](/guides/rccb-explained).',
+          text: 'Neither device protects a person against electric shock. Both are there to protect the cable and the installation from current the cable was not sized to carry. Shock and earth-leakage protection is a separate device. See [what an RCCB does and how it works](/guides/rccb-explained).',
         },
       ],
     },
@@ -58,7 +58,7 @@ export const mcbVsMccb: GuideBody = {
       blocks: [
         {
           kind: 'p',
-          text: 'People usually describe the difference as “MCCBs handle more current”, and that is true but incomplete. The parameter that actually decides which family you are in is breaking capacity — the largest fault current the device can interrupt safely and still be a working device afterwards.',
+          text: 'People usually describe the difference as “MCCBs handle more current”, and that is true but incomplete. The parameter that actually decides which family you are in is breaking capacity: the largest fault current the device can interrupt safely and still be a working device afterwards.',
         },
         {
           kind: 'p',
@@ -71,7 +71,7 @@ export const mcbVsMccb: GuideBody = {
         },
         {
           kind: 'p',
-          text: 'An MCCB usually has an adjustable thermal setting, and often an adjustable magnetic setting too. That matters upstream, where the same frame size has to be tuned to a particular feeder and coordinated with the devices below it so that a fault trips the nearest breaker rather than the main one — discrimination, in the trade. Adjustability is a commissioning tool for an engineer, not a convenience feature.',
+          text: 'An MCCB usually has an adjustable thermal setting, and often an adjustable magnetic setting too. That matters upstream, where the same frame size has to be tuned to a particular feeder and coordinated with the devices below it so that a fault trips the nearest breaker rather than the main one, called discrimination in the trade. Adjustability is a commissioning tool for an engineer, not a convenience feature.',
         },
       ],
     },
@@ -88,15 +88,15 @@ export const mcbVsMccb: GuideBody = {
           caption: 'What the MCB curve letter means',
           columns: ['Curve', 'Tolerates', 'Typical use'],
           rows: [
-            ['B', 'Least inrush', 'Resistive loads — lighting, heating, long cable runs'],
+            ['B', 'Least inrush', 'Resistive loads: lighting, heating, long cable runs'],
             ['C', 'Moderate inrush', 'The general-purpose domestic and commercial curve: mixed sockets, motors, air conditioners'],
-            ['D', 'Highest inrush', 'Heavy inductive starting loads — transformers, large motors, welding sets'],
+            ['D', 'Highest inrush', 'Heavy inductive starting loads: transformers, large motors, welding sets'],
           ],
           note: 'The MCBs listed in our [circuit protection catalogue](/category/circuit-protection) are C curve, which is the curve most Indian domestic and light-commercial schedules are written around.',
         },
         {
           kind: 'p',
-          text: 'A device that keeps tripping when an appliance starts is often a curve problem rather than a rating problem, and going up a rating to stop nuisance tripping is the wrong fix — it leaves the cable protected at a level it was not sized for. That is a conversation to have with your electrician before you change anything.',
+          text: 'A device that keeps tripping when an appliance starts is often a curve problem rather than a rating problem, and going up a rating to stop nuisance tripping is the wrong fix: it leaves the cable protected at a level it was not sized for. That is a conversation to have with your electrician before you change anything.',
         },
       ],
     },
@@ -153,7 +153,7 @@ export const mcbVsMccb: GuideBody = {
           ordered: true,
           items: [
             'Current rating in amps, per device.',
-            'Number of poles — single, double, triple or four.',
+            'Number of poles: single, double, triple or four.',
             'Trip curve, for MCBs. If nobody has specified one, C is the usual domestic and light-commercial default.',
             'Breaking capacity, if the design states one. If it does, do not treat it as optional.',
             'Quantity per line, and whether the devices have to share a board with existing equipment.',
@@ -183,11 +183,11 @@ export const mcbVsMccb: GuideBody = {
     },
     {
       question: 'Do MCBs protect against electric shock?',
-      answer: 'No. An MCB reacts to overload and short circuit — current the cable was not sized to carry. It cannot detect the small leakage current that flows through a person. That needs a residual current device: an RCCB, or an RCBO which combines both functions in one unit. See [our RCCB guide](/guides/rccb-explained).',
+      answer: 'No. An MCB reacts to overload and short circuit, meaning current the cable was not sized to carry. It cannot detect the small leakage current that flows through a person. That needs a residual current device: an RCCB, or an RCBO which combines both functions in one unit. See [our RCCB guide](/guides/rccb-explained).',
     },
     {
       question: 'What does the C on my MCB mean?',
-      answer: 'It is the trip curve — how much brief starting surge the device tolerates before treating the current as a short circuit. C is the general-purpose curve for mixed domestic and light-commercial loads including motors and air conditioners. B is for resistive loads, D for heavy inductive starting loads.',
+      answer: 'It is the trip curve: how much brief starting surge the device tolerates before treating the current as a short circuit. C is the general-purpose curve for mixed domestic and light-commercial loads including motors and air conditioners. B is for resistive loads, D for heavy inductive starting loads.',
     },
   ],
   cta: {
@@ -198,9 +198,9 @@ export const mcbVsMccb: GuideBody = {
     browse: { label: 'Browse circuit protection', path: '/category/circuit-protection' },
   },
   sources: [
-    { label: 'IEC 60898-1:2015 — Circuit-breakers for overcurrent protection for household and similar installations', url: 'https://webstore.iec.ch/en/publication/21972' },
-    { label: 'IEC 60947-2:2016 — Low-voltage switchgear and controlgear: circuit-breakers', url: 'https://webstore.iec.ch/en/publication/25040' },
-    { label: 'Lauritz Knudsen — MCB and MCCB product information', url: 'https://www.lk-ea.com/' },
+    { label: 'IEC 60898-1:2015: Circuit-breakers for overcurrent protection for household and similar installations', url: 'https://webstore.iec.ch/en/publication/21972' },
+    { label: 'IEC 60947-2:2016: Low-voltage switchgear and controlgear, circuit-breakers', url: 'https://webstore.iec.ch/en/publication/25040' },
+    { label: 'Lauritz Knudsen: MCB and MCCB product information', url: 'https://www.lk-ea.com/' },
   ],
   related: ['how-to-choose-mcb-for-home', 'rccb-explained'],
 };

@@ -4,7 +4,7 @@ import type { GuideSummary } from '@/lib/guides';
  * The guide manifest: titles, descriptions and the commercial pages each guide supports.
  *
  * This is the only guide module that non-guide routes import, so it deliberately carries no
- * prose. It is also the single source of truth for these fields — the body files in this
+ * prose. It is also the single source of truth for these fields; the body files in this
  * directory hold the article text and nothing else, and the build fails if a body has no
  * matching entry here.
  *
@@ -33,7 +33,7 @@ export const GUIDE_SUMMARIES: GuideSummary[] = [
   {
     slug: 'genuine-finolex-wire',
     title: 'How to Check Finolex Wire Is Original: Verifiable Checks',
-    description: 'How to confirm a Finolex wire coil is genuine using checks that can actually be verified — BIS licence lookup, the manufacturer’s own product check, and a traceable purchase record.',
+    description: 'How to confirm a Finolex wire coil is genuine using checks that can actually be verified: BIS licence lookup, the manufacturer’s own product check, and a traceable purchase record.',
     heading: 'How to check that Finolex wire is original',
     summary: 'Verify the BIS licence in the official database and keep a traceable invoice. Looks are the weakest check.',
     cluster: 'wires-cables',
@@ -53,7 +53,7 @@ export const GUIDE_SUMMARIES: GuideSummary[] = [
     title: 'MCB vs MCCB: The Difference, and Which One You Need',
     description: 'MCB vs MCCB explained for buyers: current and breaking capacity, fixed versus adjustable trip settings, poles, standards, and where each one belongs in a real installation.',
     heading: 'MCB vs MCCB: what is the difference, and which do you need?',
-    summary: 'The dividing line is not size — it is current rating, fault-breaking capacity and whether the trip settings can be adjusted.',
+    summary: 'The dividing line is not size. It is current rating, fault-breaking capacity and whether the trip settings can be adjusted.',
     cluster: 'circuit-protection',
     primaryParent: {
       label: 'Circuit protection',
@@ -85,7 +85,7 @@ export const GUIDE_SUMMARIES: GuideSummary[] = [
   {
     slug: 'rccb-explained',
     title: 'RCCB Explained: What It Does, How It Works, Which Rating',
-    description: 'What an RCCB is in an electrical installation, how residual current detection works, and how to read the two ratings — 25/40/63 A and 30/100/300 mA sensitivity.',
+    description: 'What an RCCB is in an electrical installation, how residual current detection works, and how to read the two ratings: 25/40/63 A and 30/100/300 mA sensitivity.',
     heading: 'RCCB explained: what it does, how it works, and which rating to specify',
     summary: 'The device that detects current leaking to earth and disconnects before it becomes a shock or a fire.',
     cluster: 'circuit-protection',
